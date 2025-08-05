@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "f9bdf42190ba96fd",
+        "id": "a63aeccd980f7d29",
         "type": "tabs",
         "children": [
           {
-            "id": "f0fab43865eee231",
+            "id": "7673e4f60439638f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Pentest/Linux/🛡️ Privilege Escalation.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "🛡️ Privilege Escalation"
             }
           }
         ]
@@ -138,17 +142,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Pentest/Web/🛠️ Pentest Tools.md",
+                "file": "Pentest/Linux/🛡️ Privilege Escalation.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 🛠️ Pentest Tools"
+              "title": "Outline of 🛡️ Privilege Escalation"
             }
           },
           {
-            "id": "6a0a9fd381e539b8",
+            "id": "b2df2f989f0d244a",
             "type": "leaf",
             "state": {
               "type": "git-view",
@@ -176,7 +180,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f0fab43865eee231",
+  "active": "e43ade40ea0bfc9b",
   "lastOpenFiles": [
     "Pentest/Web/🛠️ Pentest Tools.md",
     "Pentest/Web/📂 Word List.md",
