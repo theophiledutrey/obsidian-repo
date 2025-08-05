@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pentest/Web/🛠️ Pentest Tools.md",
+                "file": "Command/Linux.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "🛠️ Pentest Tools"
+              "title": "Linux"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Pentest/Web/🛠️ Pentest Tools.md",
+                "file": "Command/Linux.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 🛠️ Pentest Tools"
+              "title": "Outline of Linux"
             }
           },
           {
@@ -182,9 +182,13 @@
   },
   "active": "7673e4f60439638f",
   "lastOpenFiles": [
+    "Pentest/Web/🛠️ Pentest Tools.md",
+    "Command/Linux.md",
+    "Command/Linux/Untitled.md",
+    "Command/Linux",
+    "Command",
     "Pentest/General Tools/🔗 Resources.md",
     "Pentest/Linux/🛡️ Privilege Escalation.md",
-    "Pentest/Web/🛠️ Pentest Tools.md",
     "Pentest/Web/📂 Word List.md",
     "2025-08-05.md",
     "Untitled.canvas",
