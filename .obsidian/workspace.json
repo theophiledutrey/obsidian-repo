@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pentest/Linux/🛡️ Privilege Escalation.md",
+                "file": "Pentest/Web/🛠️ Pentest Tools.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "🛡️ Privilege Escalation"
+              "title": "🛠️ Pentest Tools"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Pentest/Linux/🛡️ Privilege Escalation.md",
+                "file": "Pentest/Web/🛠️ Pentest Tools.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 🛡️ Privilege Escalation"
+              "title": "Outline of 🛠️ Pentest Tools"
             }
           },
           {
@@ -180,11 +180,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e43ade40ea0bfc9b",
+  "active": "7673e4f60439638f",
   "lastOpenFiles": [
+    "Pentest/General Tools/🔗 Resources.md",
+    "Pentest/Linux/🛡️ Privilege Escalation.md",
     "Pentest/Web/🛠️ Pentest Tools.md",
     "Pentest/Web/📂 Word List.md",
-    "Pentest/Linux/🛡️ Privilege Escalation.md",
     "2025-08-05.md",
     "Untitled.canvas",
     "Pentest/General Tools",
