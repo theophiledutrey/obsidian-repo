@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "612db98ef2f1843a",
+        "id": "f9bdf42190ba96fd",
         "type": "tabs",
         "children": [
           {
-            "id": "20d1b6a4467c9755",
+            "id": "f0fab43865eee231",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Pentest/Web/🛠️ Pentest Tools.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "🛠️ Pentest Tools"
+              "title": "New tab"
             }
           }
         ]
@@ -180,12 +176,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "20d1b6a4467c9755",
+  "active": "f0fab43865eee231",
   "lastOpenFiles": [
+    "Pentest/Web/🛠️ Pentest Tools.md",
     "Pentest/Web/📂 Word List.md",
     "Pentest/Linux/🛡️ Privilege Escalation.md",
     "2025-08-05.md",
-    "Pentest/Web/🛠️ Pentest Tools.md",
     "Untitled.canvas",
     "Pentest/General Tools",
     "Pentest/Write up",
