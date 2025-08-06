@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Command/Linux.md",
+                "file": "Pentest/General Tools/Crypto.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Linux"
+              "title": "Crypto"
             }
           }
         ]
@@ -181,12 +181,23 @@
   },
   "active": "7673e4f60439638f",
   "lastOpenFiles": [
-    "Pasted image 20250807003127.png",
-    "Pentest/Linux/🛡️ Privilege Escalation.md",
-    "Pentest/Web/🛠️ Pentest Tools.md",
-    "Pentest/General Tools/🔗 Resources.md",
-    "Pentest/Web/📂 Word List.md",
+    "Infra/Wireguard.md",
+    "Infra/Samba.md",
     "Command/Linux.md",
+    "Pentest/Linux/Privilege Escalation.md",
+    "Pentest/General Tools/Crypto.md",
+    "Infra",
+    "Pentest/General Tools/Site Web.md",
+    "Pentest/General Tools/Nmap.md",
+    "Pentest/General Tools/Metasploit.md",
+    "Pentest/Linux/Analyse.md",
+    "Pentest/Active Directory",
+    "Pentest/Web/Pentest Tools.md",
+    "Achievement.md",
+    "Pasted image 20250807003127.png",
+    "Photos",
+    "Photos/Pasted image 20250807010146.png",
+    "Pentest/Web/Word List.md",
     "Command/Linux/Untitled.md",
     "Command/Linux",
     "Command",
@@ -197,7 +208,6 @@
     "Pentest/Web",
     "Pentest/Linux/Write up",
     "Pentest",
-    "Pentest/Linux",
     "🛡️ Linux Privilege Escalation🛡️ Linux Privilege EscalationUntitled.md",
     "Welcome.md"
   ]
