@@ -21,6 +21,7 @@
 - `finger @<ip>` : Liste les utilisateurs d'une machine distante
 - `finger fabiano@<ip>` : Obtenir des informations spécifiques sur un utilisateur (parfois mdp)
 - `wget <url>` : Télécharge un fichier via HTTP/HTTPS/FTP
+- `wget -r -np -nH --cut-dirs=0 http://192.168.1.100:8000/`:  Récupérer tous les fichiers/dossiers d un repertoire sur lequel tourne un web serveur en python
 
 ## Crypto & certificats
 - `openssl x509 -in key.pem -text -noout` : Analyse un certificat X.509
