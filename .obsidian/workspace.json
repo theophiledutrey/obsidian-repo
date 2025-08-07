@@ -11,10 +11,14 @@
             "id": "a9f7126b8f8e514c",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "Pentest/Linux/Privilege Escalation.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Privilege Escalation"
             }
           }
         ]
@@ -177,16 +181,16 @@
   },
   "active": "a9f7126b8f8e514c",
   "lastOpenFiles": [
+    "Pentest/Linux/Analyse.md",
+    "Pentest/General Tools/Site Web.md",
+    "Pentest/General Tools/Nmap.md",
+    "Pentest/General Tools/Metasploit.md",
     "Pentest/General Tools/Crypto.md",
     "Infra/Wireguard.md",
     "Infra/Samba.md",
     "Command/Linux.md",
     "Pentest/Linux/Privilege Escalation.md",
     "Infra",
-    "Pentest/General Tools/Site Web.md",
-    "Pentest/General Tools/Nmap.md",
-    "Pentest/General Tools/Metasploit.md",
-    "Pentest/Linux/Analyse.md",
     "Pentest/Active Directory",
     "Pentest/Web/Pentest Tools.md",
     "Achievement.md",
