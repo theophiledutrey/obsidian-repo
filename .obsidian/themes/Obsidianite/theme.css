@@ -71,7 +71,7 @@
   --interactive-accent-rgb: #3dd7fb;
   --font-family-editor: 'Rubik';
   --font-family-preview: 'Rubik';
-  --bg-sub-accent-55: rgba(244, 86, 157, 0.55);
+  --bg-sub-accent-55: rgba(15, 182, 214, 0.55);
   --bg-accent-55: rgba(14, 210, 247, 0.55);
   --bg-accent-25: rgba(14, 210, 247, 0.25);
   --text-highlight-bg: rgba(244, 86, 157, 0.25);
@@ -509,8 +509,10 @@ h6 {
   border-bottom: 1px solid;
   border-width: 1px;
   border-image-slice: 1;
-  border-image-source: linear-gradient(to right, var(--text-sub-accent), #100e17, #100e17, #100e17);
+  border-image-source: linear-gradient(to right, #9bb7f5, #100e17, #100e17);
+
 }
+
 
 .HyperMD-header {
   padding: 20px;
@@ -552,21 +554,57 @@ h6 {
   color: var(--text-title-h5);
 }
 
-/** headings */
-.markdown-preview-view h2,
-.markdown-preview-view h3,
-.markdown-preview-view h4,
-.markdown-preview-view h5,
-.markdown-preview-view h6 {
-  /* padding-top: 1.25rem; */
+
+
+.markdown-preview-view h2 {
   margin: 45px 0 20px 0;
   position: relative;
   padding-bottom: 10px;
-  border-bottom: 1px solid;
+  border-bottom: 2px solid;
   border-width: 35%;
   border-image-slice: 1;
-  border-image-source: linear-gradient(to right, var(--text-sub-accent), #100e17, #100e17, #100e17);
+  border-image-source: linear-gradient(to right, var(--text-sub-accent), #100e17, #100e17);
 }
+
+
+.markdown-preview-view h3,
+.markdown-preview-section h3,
+.cm-header-3,
+.HyperMD-header.HyperMD-header-3,
+.markdown-preview-view h4,
+.markdown-preview-section h4,
+.cm-header-4,
+.HyperMD-header.HyperMD-header-4,
+.markdown-preview-view h5,
+.markdown-preview-section h5,
+.cm-header-5,
+.HyperMD-header.HyperMD-header-5,
+.markdown-preview-view h6,
+.markdown-preview-section h6,
+.cm-header-6,
+.HyperMD-header.HyperMD-header-6 {
+  border: none !important;
+  border-bottom: none !important;
+  border-image: none !important;
+  border-width: 0 !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.markdown-preview-view h3::before,
+.markdown-preview-view h4::before,
+.markdown-preview-view h5::before,
+.markdown-preview-view h6::before {
+  content: "🔹 ";
+  color: var(--text-accent);
+  margin-right: 6px;
+}
+
+
+
+
+
 
 .view-header-icon {
   color: var(--text-accent);
@@ -1479,3 +1517,5 @@ pre.line-numbers > code {
   padding-right: 0.8em;
   text-align: right;
 }
+
+

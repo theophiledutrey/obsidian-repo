@@ -11,14 +11,12 @@
             "id": "493a6b4ebb92829e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Pentest/Write up/Environment Hack The Box.md",
-                "mode": "source",
-                "source": false
+                "file": "Photos/Pasted image 20250807010146.png"
               },
-              "icon": "lucide-file",
-              "title": "Environment Hack The Box"
+              "icon": "lucide-image",
+              "title": "Pasted image 20250807010146"
             }
           }
         ]
@@ -87,7 +85,7 @@
       {
         "id": "9a3a8fb4c104de22",
         "type": "tabs",
-        "dimension": 42.27099236641222,
+        "dimension": 50.667938931297705,
         "children": [
           {
             "id": "bb5eef37b01767eb",
@@ -168,7 +166,7 @@
       {
         "id": "2a8d66524501d258",
         "type": "tabs",
-        "dimension": 57.72900763358778,
+        "dimension": 49.33206106870229,
         "children": [
           {
             "id": "a9f7126b8f8e514c",
@@ -200,20 +198,20 @@
   "active": "493a6b4ebb92829e",
   "lastOpenFiles": [
     "Pasted image 20250808011546.png",
-    "Pentest/Web/Word List.md",
-    "Pentest/Write up/Environment Hack The Box.md",
-    "Pentest/Web/Pentest Tools.md",
+    "Achievement.md",
     "Pentest/Linux/Privilege Escalation.md",
-    "Command/Linux.md",
-    "Infra/Samba.md",
+    "Pentest/General Tools/Site Web.md",
+    "Pentest/Web/Pentest Tools.md",
+    "Pentest/Web/Word List.md",
     "Infra/Wireguard.md",
+    "Infra/Samba.md",
+    "Command/Linux.md",
+    "Pentest/Write up/Environment Hack The Box.md",
     "Pentest/General Tools/Crypto.md",
     "Pentest/General Tools/Metasploit.md",
     "Pentest/General Tools/Nmap.md",
-    "Pentest/General Tools/Site Web.md",
     "Pentest/Linux/Analyse.md",
     "Photos/Pasted image 20250807010146.png",
-    "Achievement.md",
     "Untitled",
     "Infra",
     "Pentest/Active Directory",
