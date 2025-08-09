@@ -11,12 +11,14 @@
             "id": "493a6b4ebb92829e",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Photos/Pasted image 20250807010146.png"
+                "file": "Pentest/Write up/Environment Hack The Box.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20250807010146"
+              "icon": "lucide-file",
+              "title": "Environment Hack The Box"
             }
           }
         ]
@@ -197,12 +199,23 @@
   },
   "active": "493a6b4ebb92829e",
   "lastOpenFiles": [
-    "Pasted image 20250808011546.png",
-    "Achievement.md",
-    "Pentest/Linux/Privilege Escalation.md",
-    "Pentest/General Tools/Site Web.md",
+    "Pasted image 20250809022234.png",
+    "Pasted image 20250809022210.png",
+    "Pasted image 20250809022150.png",
+    "Pasted image 20250809022119.png",
+    "Pasted image 20250809022115.png",
+    "Pasted image 20250809022023.png",
+    "Pasted image 20250809022001.png",
+    "Pasted image 20250809021909.png",
+    "Pasted image 20250809021821.png",
+    "Pasted image 20250809021804.png",
+    "Pasted image 20250809021651.png",
     "Pentest/Web/Pentest Tools.md",
     "Pentest/Web/Word List.md",
+    "Pentest/Linux/Privilege Escalation.md",
+    "Pentest/Linux/Analyse.md",
+    "Achievement.md",
+    "Pentest/General Tools/Site Web.md",
     "Infra/Wireguard.md",
     "Infra/Samba.md",
     "Command/Linux.md",
@@ -210,12 +223,9 @@
     "Pentest/General Tools/Crypto.md",
     "Pentest/General Tools/Metasploit.md",
     "Pentest/General Tools/Nmap.md",
-    "Pentest/Linux/Analyse.md",
-    "Photos/Pasted image 20250807010146.png",
     "Untitled",
     "Infra",
     "Pentest/Active Directory",
-    "Pasted image 20250807003127.png",
     "Photos",
     "Command/Linux/Untitled.md",
     "Command/Linux",
