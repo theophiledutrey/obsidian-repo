@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "ca76581db70d02e9",
+        "id": "46595b47e38133b4",
         "type": "tabs",
         "children": [
           {
-            "id": "493a6b4ebb92829e",
+            "id": "835caf5e833f673c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 301.5
   },
   "right": {
     "id": "e4e6a1b5b121b38c",
@@ -87,7 +87,7 @@
       {
         "id": "9a3a8fb4c104de22",
         "type": "tabs",
-        "dimension": 50.667938931297705,
+        "dimension": 45.896946564885496,
         "children": [
           {
             "id": "bb5eef37b01767eb",
@@ -161,6 +161,16 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
+          },
+          {
+            "id": "8f01d0e0fde1edd5",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
           }
         ],
         "currentTab": 4
@@ -168,7 +178,7 @@
       {
         "id": "2a8d66524501d258",
         "type": "tabs",
-        "dimension": 49.33206106870229,
+        "dimension": 54.103053435114504,
         "children": [
           {
             "id": "a9f7126b8f8e514c",
@@ -184,7 +194,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 433.5
+    "width": 412.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -197,29 +207,34 @@
       "graph:Open graph view": false
     }
   },
-  "active": "493a6b4ebb92829e",
+  "active": "835caf5e833f673c",
   "lastOpenFiles": [
-    "Pasted image 20250809022234.png",
-    "Pasted image 20250809022210.png",
-    "Pasted image 20250809022150.png",
-    "Pasted image 20250809022119.png",
-    "Pasted image 20250809022115.png",
-    "Pasted image 20250809022023.png",
-    "Pasted image 20250809022001.png",
-    "Pasted image 20250809021909.png",
-    "Pasted image 20250809021821.png",
-    "Pasted image 20250809021804.png",
-    "Pasted image 20250809021651.png",
-    "Pentest/Web/Pentest Tools.md",
+    "2025-08-09.md",
+    "Pentest/Write up/Environment Hack The Box.md",
+    "Achievement.md",
+    "Photos/Achievement/Pasted image 20250807010146.png",
     "Pentest/Web/Word List.md",
+    "IMG-20250809032331373.png.md",
+    "Photos/Achievement/IMG-20250809032331373.png",
+    "Photos/Achievement",
+    "Photos/Pentest/Write up/Environment Hack The Box/Pasted image 20250809022234.png",
+    "Photos/Pentest/Write up/Environment Hack The Box/IMG-20250809032143767.png",
+    "Photos/Pentest/Write up/Environment Hack The Box",
+    "Photos/Pentest/Write up",
+    "Photos/Pentest",
+    "Photos/Pentest/Write up/Environment Hack The Box/IMG-20250809032016734.png",
+    "Photos/Pentest/Write up/Environment Hack The Box/Pasted image 20250809021651.png",
+    "Photos/Pentest/Write up/Environment Hack The Box/Pasted image 20250809021804.png",
+    "Photos/Pentest/Write up/Environment Hack The Box/Pasted image 20250809021821.png",
+    "Photos/Pentest/Write up/Environment Hack The Box/Pasted image 20250809021540.png",
+    "Photos/Pasted image 20250809030932.png",
+    "Pentest/Web/Pentest Tools.md",
     "Pentest/Linux/Privilege Escalation.md",
     "Pentest/Linux/Analyse.md",
-    "Achievement.md",
     "Pentest/General Tools/Site Web.md",
     "Infra/Wireguard.md",
     "Infra/Samba.md",
     "Command/Linux.md",
-    "Pentest/Write up/Environment Hack The Box.md",
     "Pentest/General Tools/Crypto.md",
     "Pentest/General Tools/Metasploit.md",
     "Pentest/General Tools/Nmap.md",
@@ -232,10 +247,6 @@
     "Command",
     "2025-08-05.md",
     "Untitled.canvas",
-    "Pentest/General Tools",
-    "Pentest/Write up",
-    "Pentest/Web",
-    "Pentest/Linux/Write up",
     "🛡️ Linux Privilege Escalation🛡️ Linux Privilege EscalationUntitled.md",
     "Welcome.md"
   ]
