@@ -21,6 +21,11 @@
 - `finger @<ip>` : List the users on a remote machine.
 - `finger fabiano@<ip>` : Get specific information about a user.
 - `wget -r -np -nH --cut-dirs=0 http://192.168.1.100:8000/` : Download all files/folders from a directory hosted on a Python web server.
+- `ss -tulpn`: Display all the open port.
+
+
+## System
+- `kill {pid}`: Kill a process
 
 ## Crypto & Certificates
 - `openssl x509 -in key.pem -text -noout` : Analyze a X.509 certificate.
