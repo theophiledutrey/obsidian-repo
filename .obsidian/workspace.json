@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pentest/Linux/Analyse.md",
+                "file": "Pentest/General Tools/Metasploit.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Analyse"
+              "title": "Metasploit"
             }
           }
         ]
@@ -209,6 +209,8 @@
   },
   "active": "1be69427025c5275",
   "lastOpenFiles": [
+    "Photos/Pasted image 20250811011817.png",
+    "Pentest/Linux/Analyse.md",
     "Pentest/Linux/Privilege Escalation.md",
     "Infra/Samba.md",
     "Infra/Wireguard.md",
@@ -216,7 +218,6 @@
     "Pentest/General Tools/Nmap.md",
     "Pentest/General Tools/Metasploit.md",
     "Pentest/General Tools/Crypto.md",
-    "Pentest/Linux/Analyse.md",
     "Pentest/Write up/Environment Hack The Box.md",
     "Command/Linux.md",
     "Pentest/Web/Word List.md",
