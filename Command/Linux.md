@@ -1,36 +1,35 @@
-## Recherche et navigation
-- `pwd` : Affiche le chemin courant
-- `ls` : Liste les fichiers du dossier courant
-- `lsblk` : Liste les disques et partitions montées
-- `locate <nom_du_fichier>` : Recherche un fichier dans le système
-- `which <nom_de_commande>` : Donne le chemin de l'exécutable d'une commande
+## Search and Navigation
+- `pwd` : Display the current working directory.
+- `ls` : List files in the current directory.
+- `lsblk` : List mounted disks and partitions.
+- `locate <file_name>` : Search for a file in the system.
+- `which <command_name>` : Show the path of a command's executable.
 
-## Historique & Enregistrement
-- `history` : Affiche l'historique des commandes
-- `script mon_fichier_log.txt` : Enregistre toute la session dans un fichier texte
+## History & Logging
+- `history` : Display the history of executed commands.
+- `script my_log_file.txt` : Record the entire terminal session into a text file.
 
-## Réseau & Services
-- `telnet <host> 80` : Teste la connexion à un service
-  - Exemple :
+## Networking & Services
+- `telnet <host> 80` : Test connection to a service.
+  - Example:
     ```
     telnet example.com 80
     GET / HTTP/1.1
     Host: example.com
     ```
 
-- `finger @<ip>` : Liste les utilisateurs d'une machine distante
-- `finger fabiano@<ip>` : Obtenir des informations spécifiques sur un utilisateur 
-- `wget -r -np -nH --cut-dirs=0 http://192.168.1.100:8000/`:  Récupérer tous les fichiers/dossiers d un repertoire sur lequel tourne un web serveur en python
+- `finger @<ip>` : List the users on a remote machine.
+- `finger fabiano@<ip>` : Get specific information about a user.
+- `wget -r -np -nH --cut-dirs=0 http://192.168.1.100:8000/` : Download all files/folders from a directory hosted on a Python web server.
 
-## Crypto & certificats
-- `openssl x509 -in key.pem -text -noout` : Analyse un certificat X.509
+## Crypto & Certificates
+- `openssl x509 -in key.pem -text -noout` : Analyze a X.509 certificate.
 
-## Bases de données
-- `sqlite3 filedb.sqlite` : Lance une session SQLite sur un fichier `.sqlite`
+## Databases
+- `sqlite3 filedb.sqlite` : Start an SQLite session on a `.sqlite` file.
 
-## Fichiers
-- `file <nom_du_fichier>` : Donne le type du fichier
+## File Information
+- `file <file_name>` : Display the file type.
 
-
-
----
+## Reverse Shell
+- `python3 -c 'import pty; pty.spawn("/bin/bash")'` : Upgrade a reverse shell to a fully interactive shell.
