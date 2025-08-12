@@ -26,6 +26,7 @@
 
 ## System
 - `kill {pid}`: Kill a process
+- `find / -name "*...*" 2>/dev/null`: Search a word in the system 
 
 ## Crypto & Certificates
 - `openssl x509 -in key.pem -text -noout` : Analyze a X.509 certificate.
