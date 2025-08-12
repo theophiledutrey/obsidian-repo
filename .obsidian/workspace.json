@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pentest/Write up/Environment Hack The Box.md",
+                "file": "Pentest/Linux/Privilege Escalation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Environment Hack The Box"
+              "title": "Privilege Escalation"
             }
           },
           {
@@ -35,8 +35,7 @@
               "title": "Linux"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -222,30 +221,30 @@
       "daily-notes:Open today's daily note": false
     }
   },
-  "active": "1a2edeb82b305e0f",
+  "active": "26dc1c3072deb39f",
   "lastOpenFiles": [
-    "Infra/Wireguard.md",
+    "Pentest/General Tools/Site Web.md",
+    "Pentest/Web/Pentest Tools.md",
     "Pentest/Write up/Environment Hack The Box.md",
+    "Photos/Pasted image 20250812194127.png",
+    "Photos/Pasted image 20250812194045.png",
+    "Photos/Pasted image 20250812193444.png",
+    "Command/Linux.md",
+    "Photos/Pasted image 20250812192259.png",
+    "Photos/Pasted image 20250812192246.png",
+    "Infra/Wireguard.md",
     "Photos/Pasted image 20250812184021.png",
     "Photos/Pasted image 20250812183941.png",
     "Photos/Pasted image 20250812183928.png",
-    "Command/Linux.md",
     "Pentest/Linux/Analyse.md",
     "Pentest/General Tools/Crypto.md",
     "Pentest/Web/Word List.md",
-    "Pentest/Web/Pentest Tools.md",
     "Pentest/Linux/Privilege Escalation.md",
     "Pentest/General Tools/Metasploit.md",
-    "Pentest/General Tools/Site Web.md",
     "Photos/Pasted image 20250811011817.png",
     "Infra/Samba.md",
     "Pentest/General Tools/Nmap.md",
     "Photos/Pentest/Write up/Environment Hack The Box/IMG-20250810175522917.png",
-    "Photos/Achievement/Pasted image 20250807010146.png",
-    "Photos/Pentest/Write up/Environment Hack The Box/IMG-20250810031303762.png",
-    "Photos/Pentest/Write up/Environment Hack The Box/IMG-20250810030937066.png",
-    "Photos/Pentest/Write up/Environment Hack The Box/IMG-20250810030856632.png",
-    "Photos/Pentest/Write up/Environment Hack The Box/IMG-20250810030815638.png",
     "Achievement.md",
     "2025-08-09.md",
     "IMG-20250809032331373.png.md",

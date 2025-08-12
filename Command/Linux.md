@@ -18,10 +18,10 @@
 
 ## Crypto & Certificates
 - `openssl x509 -in key.pem -text -noout` : Analyze a X.509 certificate.
-- `gpg -d file.gpg` : Decrypt a GPG-encrypted file (requires the corresponding private key or passphrase).  
+- `gpg --homedir /your/path/to/gpg_key -d file.gpg` : Decrypt a GPG-encrypted file (requires the corresponding private key or passphrase).  
 - `gpg --encrypt -r <recipient> file.txt` : Encrypt a file for a specific recipient using their public key.
 
-## Databases
+## Databases--homedir
 - `sqlite3 filedb.sqlite` : Start an SQLite session on a `.sqlite` file.
 
 ## File Information
