@@ -10,6 +10,7 @@ python3.10 -c 'import os; os.setuid(0); os.system("/bin/bash")'
 
 ##  LD\_PRELOAD + sudo
 
+`LD_PRELOAD` is an environment variable used by the dynamic linker to load a custom shared library before any others.  This allows overriding standard library functions — useful for debugging, but exploitable for privilege escalation if preserved by `sudo`.
 ### 🔹 Exploit example
 
 ```c
@@ -41,10 +42,10 @@ sudo LD_PRELOAD=./exploit.so /usr/bin/ping
 
 ## BASH_ENV + sudo
 
+`BASH_ENV` is an environment variable read by **bash** before executing any non-interactive script.  
 ### 🔹 Exploit example
 
-`BASH_ENV` is an environment variable read by **bash** before executing any non-interactive script.  
-If `/etc/sudoers` contains:
+If `sudo -l` contains:
 
 ```bash
 env_keep+="BASH_ENV"
