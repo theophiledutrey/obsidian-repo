@@ -14,7 +14,8 @@
 - `ss -tulpn`: Display all the open port.
 
 ## System
-- `kill {pid}`: Kill a process
+- `kill {pid}`: Kill a process.
+- `export VAR=value` : Create or modify an environment variable and make it available to child processes.
 
 ## Crypto & Certificates
 - `openssl x509 -in key.pem -text -noout` : Analyze a X.509 certificate.
