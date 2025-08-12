@@ -106,11 +106,11 @@ int main() {
 }
 ```
 
-> Compiles a binary that spawns a root shell when executed by a script with SUID.
+> Compiles a binary that spawns a root shell when executed by a script with SUID. Look [[UID]] for more details
 
 ---
 
-## Reverse Shell via C binary (signed)
+## Reverse Shell via C binary 
 
 ```c
 #include <unistd.h>
@@ -120,7 +120,7 @@ int main() {
 }
 ```
 
-> Compiles a binary that spawns a  reverse shell on port 1337 when executed by a root srcipt like cronjob
+> Compiles a binary that spawns a  reverse shell on port 1337 when executed by a root srcipt like cronjob (RUID = 0)
 
 ---
 ## ELF Signing Tool
