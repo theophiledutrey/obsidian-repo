@@ -70,7 +70,7 @@ execl("/bin/bash", "bash", "-p", NULL);
 
 ---
 
-## **5 Special Case: Sudo and Interpreted Scripts**
+## 5 Special Case: Sudo and Interpreted Scripts
 
 - When running a script with `sudo`, **the interpreter** (e.g., `/bin/bash` in `#!/bin/bash`) is **launched directly by `sudo`** with full root privileges.
 - This means:
