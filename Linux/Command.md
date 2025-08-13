@@ -25,8 +25,9 @@
 ## Databases--homedir
 - `sqlite3 filedb.sqlite` : Start an SQLite session on a `.sqlite` file.
 
-## File Information
+## File
 - `file <file_name>` : Display the file type.
+- `ln -s /path/to/target /path/to/symlink`: Creat a symlink.
 
 ## Reverse Shell
 - `python3 -c 'import pty; pty.spawn("/bin/bash")'` : Upgrade a reverse shell to a fully interactive shell.
