@@ -65,8 +65,10 @@ execl("/bin/bash", "bash", "-p", NULL);
 - If a script starts with `#!/bin/bash` (or any interpreter):
   - The kernel launches the **interpreter** as a new process.
   - For security reasons, the kernel **drops the SUID effect** for interpreted scripts.
+  - Without these protections, a simple environment variable like `BASH_ENV` could inject malicious code **before** the intended script runs.
   - Result: The interpreter runs with the **original user’s UID**, not root.
 - That’s why SUID works reliably only with **compiled ELF binaries**.
+
 
 ---
 
