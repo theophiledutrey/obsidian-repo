@@ -54,6 +54,26 @@
 - `zip -r archive.zip folder/` : Create a ZIP archive containing a folder and its contents. 
 - `unzip archive.zip` : Extract the contents of a ZIP archive.  
 
+## Docker
+- `docker ps` : List all running containers.
+- `docker ps -a` : List all containers (running and stopped).
+- `docker images` : List all available Docker images.
+- `docker build -t <image_name> .` : Build an image from a Dockerfile in the current directory.
+- `docker run -it --rm <image_name>` : Run a container interactively and remove it after exit.
+- `docker run -d --name <container_name> <image_name>` : Run a container in detached mode with a specific name.
+- `docker exec -it <container_name> /bin/bash` : Open an interactive shell inside a running container.
+- `docker stop <container_name>` : Stop a running container.
+- `docker start <container_name>` : Start a stopped container.
+- `docker restart <container_name>` : Restart a container.
+- `docker rm <container_name>` : Remove a stopped container.
+- `docker rmi <image_name>` : Remove a Docker image.
+- `docker logs <container_name>` : Show the logs of a container.
+- `docker inspect <container_name>` : Show detailed information about a container.
+- `docker cp <container_name>:/path/in/container /path/on/host` : Copy a file from a container to the host.
+- `docker cp /path/on/host <container_name>:/path/in/container` : Copy a file from the host to a container.
+- `docker-compose up -d` : Start all services defined in a `docker-compose.yml` in detached mode.
+- `docker-compose down` : Stop and remove containers, networks, and volumes created by `docker-compose up`.
+- `docker system prune -a` : Remove all stopped containers, unused images, and unused networks.
 
 
 

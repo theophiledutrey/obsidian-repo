@@ -123,7 +123,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Linux/Command.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +132,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Command"
+              "title": "Backlinks"
             }
           },
           {
@@ -142,12 +141,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Linux/Command.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Command"
+              "title": "Outgoing links"
             }
           },
           {
@@ -171,13 +169,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Linux/Command.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Command"
+              "title": "Outline"
             }
           }
         ],
@@ -216,11 +213,11 @@
       "daily-notes:Open today's daily note": false
     }
   },
-  "active": "1a2edeb82b305e0f",
+  "active": "a9f7126b8f8e514c",
   "lastOpenFiles": [
+    "Linux/Command.md",
     "Linux/Privilege Escalation.md",
     "Linux/UID.md",
-    "Linux/Command.md",
     "Linux/Analyse.md",
     "Write up/Environment Hack The Box.md",
     "Pentest Tools/Site Web.md",
