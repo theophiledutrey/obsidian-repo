@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/Command.md",
+                "file": "Linux/Privilege Escalation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Command"
+              "title": "Privilege Escalation"
             }
           }
         ]
@@ -96,7 +96,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "http.",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -215,13 +215,13 @@
   },
   "active": "a9f7126b8f8e514c",
   "lastOpenFiles": [
-    "Linux/Command.md",
     "Linux/Privilege Escalation.md",
-    "Linux/UID.md",
     "Linux/Analyse.md",
-    "Write up/Environment Hack The Box.md",
     "Pentest Tools/Site Web.md",
     "Pentest Tools/Nmap.md",
+    "Linux/Command.md",
+    "Linux/UID.md",
+    "Write up/Environment Hack The Box.md",
     "Photos/Pasted image 20250813004615.png",
     "Photos/Pasted image 20250813004558.png",
     "Pentest Tools/Metasploit.md",
