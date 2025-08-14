@@ -273,7 +273,7 @@ After obtaining the foothold, I started exploring the file system to look for po
 
 ![[IMG-20250812200058969.png]]
 
-I attempted to decrypt the file with `gpg -d keyvault.gpg`, but the operation failed because the corresponding private key was not available on the system. This meant I had to search for `.gnupg` data belonging to the user `hish`. Once located, I archived the entire `.gnupg` folder and exfiltrated it to my attacking machine using `tar` piped through `nc`. Yor more information about these commands, refer to [[Command]].
+I attempted to decrypt the file with `gpg -d keyvault.gpg`, but the operation failed because the corresponding private key was not available on the system. This meant I had to search for `.gnupg` data belonging to the user `hish`. Once located, I archived the entire `.gnupg` folder and exfiltrated it to my attacking machine using `tar` piped through `nc`. Yor more information about these commands, refer to [[Linux/Command]].
 
 **HTB machine:***
 ![[IMG-20250812200058984.png]]
@@ -301,7 +301,7 @@ To exploit this, I created a malicious script `/tmp/root.sh` containing a simple
 sudo BASH_ENV=/tmp/root.sh /usr/bin/systeminfo
 ```
 
-Look at [[Privilege Escalation]] for more details.
+Look at [[Linux/Privilege Escalation]] for more details.
 
 ![[IMG-20250813003008463.png]]
 
