@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pentest Tools/Link.md",
+                "file": "Write up/CodeTwo Hack The Box.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Link"
+              "title": "CodeTwo Hack The Box"
             }
           }
         ]
@@ -214,6 +214,11 @@
   },
   "active": "82e93f219e4b228c",
   "lastOpenFiles": [
+    "Photos/Write up/CodeTwo Hack The Box",
+    "Photos/Write up",
+    "Photos/Write up/CodeTwo Hack The Box/IMG-20250817194237447.png",
+    "Pentest Tools/Link.md",
+    "Write up/CodeTwo Hack The Box.md",
     "Linux/UID.md",
     "Linux/Privilege Escalation.md",
     "Pentest Tools/Nmap.md",
@@ -222,7 +227,6 @@
     "Linux/Command.md",
     "Achievement.md",
     "Write up/Environment Hack The Box.md",
-    "Pentest Tools/Link.md",
     "Active Directory/Command.md",
     "Active Directory/Privilege Escalation.md",
     "Assets/AD-mindmap.svg",
@@ -250,16 +254,12 @@
     "Web/Tools.md",
     "Assets/Pasted image 20250812222047.png",
     "Infra/Wireguard.md",
-    "Command/Linux.md",
     "Assets/Write up/Environment Hack The Box",
     "Assets/Write up",
     "Assets/Write up/Environment Hack The Box/IMG-20250812200059039.png",
-    "Assets/Write up/Environment Hack The Box/IMG-20250812200059059.png",
-    "Web/Word List.md",
     "Assets/Achievement",
     "Assets/Pentest/Write up/Environment Hack The Box",
     "Assets/Pentest/Write up",
-    "Assets/Pentest",
     "Untitled.canvas"
   ]
 }
