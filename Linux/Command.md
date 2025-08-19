@@ -75,5 +75,10 @@
 - `docker-compose down` : Stop and remove containers, networks, and volumes created by `docker-compose up`.
 - `docker system prune -a` : Remove all stopped containers, unused images, and unused networks.
 
+## SSH
+
+- `chmod 600 id_rsa`: Restricts permissions so only the owner can read/write the private key (600: 110 000 000 = rw- --- ---).
+- `ssh -i id_rsa root@<ip>`: Connect as root using the private key.
+
 
 

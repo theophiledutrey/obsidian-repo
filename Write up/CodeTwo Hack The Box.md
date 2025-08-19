@@ -163,7 +163,31 @@ global_options:
   auto_upgrade_group: ${MACHINE_GROUP}
 ```
 
+Create an other config file `npbackup-root.conf` and change this:
+
+```json
+backup_opts:
+      paths:
+      - /root
+```
+
+![[IMG-20250819152139980.png]]
+`Error: Backup is smaller than configured minmium backup size`
+
+Then we can change the field `minimum_backup_size_error`
+
+```json
+      minimum_backup_size_error: 0 MiB
+```
+
+![[IMG-20250819152446818.png]]
+
 ![[IMG-20250819144449343.png]]
 
-![[IMG-20250819144613033.png]]
+![[IMG-20250819152609261.png]]
+
+![[IMG-20250819152924602.png]]
+
+![[IMG-20250819152944681.png]]
+
 Root Flag: 2f562058d672272ac5f130215f5e74eb
