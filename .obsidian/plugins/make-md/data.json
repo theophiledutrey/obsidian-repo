@@ -40,11 +40,10 @@
   "expandedSpaces": [
     "/",
     "//Linux",
-    "//Write up",
     "//Active Directory",
-    "//Active Directory/Active Directory/ADMR",
     "//Tags",
-    "//Infra"
+    "//Infra",
+    "//Active Directory/Active Directory/ADMR"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
