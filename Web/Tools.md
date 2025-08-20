@@ -133,5 +133,6 @@ ssrfmap.py -r request.txt -p url -m portscan
 ```
 > Exploits SSRF via given request, fuzzes the 'url' parameter, and runs internal port scanning
 
-
+--- 
+## Semgrep
 

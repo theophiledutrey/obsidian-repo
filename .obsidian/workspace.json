@@ -13,24 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Write up/CodeTwo Hack The Box.md",
+                "file": "Write up/Environment Hack The Box.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CodeTwo Hack The Box"
-            }
-          },
-          {
-            "id": "32cf62a3cfcff02d",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.9.10"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.9.10"
+              "title": "Environment Hack The Box"
             }
           },
           {
@@ -39,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/Command.md",
+                "file": "Web/Tools.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Command"
+              "title": "Tools"
             }
           }
         ],
@@ -239,12 +227,12 @@
       "graph:Open graph view": false
     }
   },
-  "active": "32cf62a3cfcff02d",
+  "active": "65eee04ed16e120e",
   "lastOpenFiles": [
+    "Linux/Command.md",
     "Write up/Environment Hack The Box.md",
     "Write up/CodeTwo Hack The Box.md",
     "Linux/Privilege Escalation.md",
-    "Linux/Command.md",
     "Linux/Analyse.md",
     "Pentest Tools/Link.md",
     "Photos/Write up/CodeTwo Hack The Box/IMG-20250819152944681.png",
