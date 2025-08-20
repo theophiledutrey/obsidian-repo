@@ -39,9 +39,12 @@
   "deleteFileOption": "trash",
   "expandedSpaces": [
     "/",
-    "//Tags",
     "//Linux",
-    "//Write up"
+    "//Write up",
+    "//Active Directory",
+    "//Active Directory/Active Directory/ADMR",
+    "//Tags",
+    "//Infra"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
