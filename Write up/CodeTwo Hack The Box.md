@@ -1,7 +1,7 @@
 ![[IMG-20250817194237447.png]]
 
 [CVE  2024-39205](https://github.com/Marven11/CVE-2024-39205-Pyload-RCE/tree/main?tab=readme-ov-file)
-Payload:
+Payload:https://github.com/Imp0sters/ADMR.git
 
 ```js
 // [+] command goes here:

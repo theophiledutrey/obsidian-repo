@@ -106,7 +106,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "capa",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -208,7 +208,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 548.5
+    "width": 471.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -226,17 +226,19 @@
   },
   "active": "e90d077bf3605919",
   "lastOpenFiles": [
+    "Write up/CodeTwo Hack The Box.md",
+    "Linux/UID.md",
+    "Linux/Analyse.md",
+    "Linux/Privilege Escalation.md",
     "Photos/INTERACTIVE-MAP 2.canvas",
     "//Untitled 1.canvas",
     "Untitled 1.canvas",
     "//Untitled.canvas",
     "Untitled.canvas",
     "Photos/INTERACTIVE-MAP 1.canvas",
-    "Linux/Privilege Escalation.md",
     "Write up/Environment Hack The Box.md",
     "Achievement.md",
     "Pentest Tools/Metasploit.md",
-    "Write up/CodeTwo Hack The Box.md",
     "Assets/Achievement/Pasted image 20250807010146.png",
     "Assets/Pasted image 20250812222047.png",
     "Pentest Tools/Link.md",
@@ -246,7 +248,6 @@
     "Active Directory/Active Directory.md",
     "Active Directory/ADMR/INTERACTIVE-MAP.canvas",
     "Active Directory/ADMR/ANNEXE.canvas",
-    "Linux/UID.md",
     "Infra/Wireguard.md",
     "Active Directory/ADMR/assets/img/image.png",
     "Active Directory/ADMR/assets/img",
@@ -255,7 +256,6 @@
     "Active Directory/ADMR/LICENSE",
     "Active Directory/ADMR/ATTACKS/TRUST ABUSE.canvas",
     "Active Directory/ADMR/ATTACKS/PERSISTANCE.canvas",
-    "Active Directory/ADMR/ATTACKS/PERMISSIONS ABUSE.canvas",
     "Active Directory/ADMR/ATTACKS",
     "Active Directory/ADMR",
     "Infra/Samba.md",
@@ -264,7 +264,6 @@
     "Active Directory/Privilege Escalation.md",
     "Active Directory/ADMR/Untitled.md",
     "Web/Tools.md",
-    "Linux/Analyse.md",
     "Photos/Write up/CodeTwo Hack The Box/IMG-20250819152944681.png",
     "Photos/Write up/CodeTwo Hack The Box/IMG-20250819152924602.png",
     "Photos/Write up/CodeTwo Hack The Box/IMG-20250819152609261.png",
