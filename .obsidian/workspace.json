@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "e49303e0ed4b2cb3",
+        "id": "e65bf14a91d2e2f0",
         "type": "tabs",
         "children": [
           {
-            "id": "dbfeb9c35bafcd8b",
+            "id": "e90d077bf3605919",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pentest Tools/Link.md",
+                "file": "Linux/Privilege Escalation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Link"
+              "title": "Privilege Escalation"
             }
           }
         ]
@@ -224,12 +224,26 @@
       "graph:Open graph view": false
     }
   },
-  "active": "dbfeb9c35bafcd8b",
+  "active": "e90d077bf3605919",
   "lastOpenFiles": [
+    "Photos/INTERACTIVE-MAP 2.canvas",
+    "//Untitled 1.canvas",
+    "Untitled 1.canvas",
+    "//Untitled.canvas",
+    "Untitled.canvas",
+    "Photos/INTERACTIVE-MAP 1.canvas",
+    "Linux/Privilege Escalation.md",
+    "Write up/Environment Hack The Box.md",
+    "Achievement.md",
+    "Pentest Tools/Metasploit.md",
+    "Write up/CodeTwo Hack The Box.md",
+    "Assets/Achievement/Pasted image 20250807010146.png",
+    "Assets/Pasted image 20250812222047.png",
+    "Pentest Tools/Link.md",
+    "Tags",
     "Linux/Command.md",
     "Active Directory/Command.md",
     "Active Directory/Active Directory.md",
-    "Achievement.md",
     "Active Directory/ADMR/INTERACTIVE-MAP.canvas",
     "Active Directory/ADMR/ANNEXE.canvas",
     "Linux/UID.md",
@@ -242,25 +256,15 @@
     "Active Directory/ADMR/ATTACKS/TRUST ABUSE.canvas",
     "Active Directory/ADMR/ATTACKS/PERSISTANCE.canvas",
     "Active Directory/ADMR/ATTACKS/PERMISSIONS ABUSE.canvas",
-    "Active Directory/ADMR/ATTACKS/NO CREDENTIALS VULNS.canvas",
-    "Active Directory/ADMR/ATTACKS/NEED CREDENTIALS VULNS.canvas",
-    "Active Directory/ADMR/ATTACKS/MITM (LISTEN & RELAY).canvas",
-    "Active Directory/ADMR/ATTACKS/LATERAL MOVE.canvas",
-    "Active Directory/ADMR/ATTACKS/KERBEROS DELEGATION ABUSE.canvas",
     "Active Directory/ADMR/ATTACKS",
     "Active Directory/ADMR",
     "Infra/Samba.md",
     "Untitled.md",
-    "Tags",
     "Active Directory/ADMR/ADMR.md",
     "Active Directory/Privilege Escalation.md",
     "Active Directory/ADMR/Untitled.md",
-    "Write up/Environment Hack The Box.md",
-    "Write up/CodeTwo Hack The Box.md",
-    "Linux/Privilege Escalation.md",
     "Web/Tools.md",
     "Linux/Analyse.md",
-    "Pentest Tools/Link.md",
     "Photos/Write up/CodeTwo Hack The Box/IMG-20250819152944681.png",
     "Photos/Write up/CodeTwo Hack The Box/IMG-20250819152924602.png",
     "Photos/Write up/CodeTwo Hack The Box/IMG-20250819152609261.png",
@@ -269,8 +273,6 @@
     "Photos/Write up/CodeTwo Hack The Box/IMG-20250819145804665.png",
     "Photos/Achievement",
     "Photos/Achievement/IMG-20250819145512300.png",
-    "Photos/Write up/CodeTwo Hack The Box/IMG-20250819144613033.png",
-    "Photos/Write up/CodeTwo Hack The Box/IMG-20250819144449343.png",
     "Web/Word List.md",
     "Photos/Write up/CodeTwo Hack The Box",
     "Photos/Write up",
@@ -279,8 +281,6 @@
     "Active Directory/Link.md",
     "fille.md",
     "Excalidraw/Drawing 2025-08-14 23.34.49.excalidraw.md",
-    "Excalidraw",
-    "Active Directory/Mindmap Command.md",
-    "Excalidraw/Drawing 2025-08-14 23.16.08.excalidraw.md"
+    "Excalidraw"
   ]
 }

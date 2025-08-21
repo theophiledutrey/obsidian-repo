@@ -43,7 +43,9 @@
     "//Active Directory",
     "//Tags",
     "//Infra",
-    "//Pentest Tools"
+    "//Pentest Tools",
+    "//Assets/Assets/Achievement",
+    "//Write up"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
