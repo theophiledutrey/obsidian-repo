@@ -5,6 +5,7 @@
 - `which <command_name>` : Show the path of a command's executable.
 - `history` : Display the history of executed commands.
 - `find / -name "*...*" 2>/dev/null`: Search a file in the system 
+- `tldr <tool>`: Display exemples of use for different tools
 
 ## Networking & Services
 - `telnet <host> 80` : Test connection to a service.

@@ -39,13 +39,9 @@
   "deleteFileOption": "trash",
   "expandedSpaces": [
     "/",
-    "//Linux",
-    "//Active Directory",
     "//Tags",
-    "//Infra",
-    "//Pentest Tools",
     "//Assets/Assets/Achievement",
-    "//Write up"
+    "//Linux"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
