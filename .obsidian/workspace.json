@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/Command.md",
+                "file": "Linux/Analyse.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Command"
+              "title": "Analyse"
             }
           }
         ]
@@ -59,16 +59,13 @@
             }
           },
           {
-            "id": "871fbc28f9ac7b5d",
+            "id": "358c0d0b77aa8dc0",
             "type": "leaf",
             "state": {
-              "type": "file-explorer",
-              "state": {
-                "sortOrder": "alphabetical",
-                "autoReveal": false
-              },
-              "icon": "lucide-folder-closed",
-              "title": "Files"
+              "type": "mk-path-view",
+              "state": {},
+              "icon": "layout-grid",
+              "title": "Navigator"
             }
           }
         ],
@@ -229,12 +226,12 @@
   },
   "active": "e90d077bf3605919",
   "lastOpenFiles": [
+    "Linux/Command.md",
     "Pentest Tools/Crypto.md",
     "Pentest Tools/Nmap.md",
     "Pentest Tools/Link.md",
     "Write up/CodeTwo Hack The Box.md",
     "Photos/INTERACTIVE-MAP 1.canvas",
-    "Linux/Command.md",
     "Linux/UID.md",
     "Linux/Privilege Escalation.md",
     "Linux/Analyse.md",
