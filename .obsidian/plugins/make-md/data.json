@@ -41,7 +41,8 @@
     "/",
     "//Tags",
     "//Assets/Assets/Achievement",
-    "//Linux"
+    "//Linux",
+    "//Infra"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",

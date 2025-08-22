@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/Analyse.md",
+                "file": "Infra/Samba.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Analyse"
+              "title": "Samba"
             }
           }
         ]
@@ -59,7 +59,7 @@
             }
           },
           {
-            "id": "358c0d0b77aa8dc0",
+            "id": "43cf4766f2f09fa2",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -226,6 +226,7 @@
   },
   "active": "e90d077bf3605919",
   "lastOpenFiles": [
+    "Linux/Analyse.md",
     "Linux/Command.md",
     "Pentest Tools/Crypto.md",
     "Pentest Tools/Nmap.md",
@@ -234,7 +235,6 @@
     "Photos/INTERACTIVE-MAP 1.canvas",
     "Linux/UID.md",
     "Linux/Privilege Escalation.md",
-    "Linux/Analyse.md",
     "Photos/INTERACTIVE-MAP 2.canvas",
     "//Untitled 1.canvas",
     "Untitled 1.canvas",
