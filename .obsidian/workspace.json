@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Web/Tools.md",
+                "file": "Write up/Previous Hack The Box.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tools"
+              "title": "Previous Hack The Box"
             }
           },
           {
@@ -50,7 +50,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -253,11 +253,15 @@
       "graph:Open graph view": false
     }
   },
-  "active": "c084e190d00856c3",
+  "active": "f27e9149a1e47733",
   "lastOpenFiles": [
+    "Photos/Write up/Previous Hack The Box/IMG-20250824013047596.png",
+    "Photos/Write up/Previous Hack The Box/IMG-20250824012954799.png",
+    "Photos/Write up/Previous Hack The Box/IMG-20250824012910247.png",
+    "Photos/Write up/Previous Hack The Box/IMG-20250824012840494.png",
     "Web/Tools.md",
-    "Web/Word List.md",
     "Write up/Previous Hack The Box.md",
+    "Web/Word List.md",
     "Photos/Write up/Previous Hack The Box",
     "Photos/Write up/Previous Hack The Box/IMG-20250823234029175.png",
     "Write up/Environment Hack The Box.md",
@@ -302,9 +306,6 @@
     "Photos/Write up/CodeTwo Hack The Box/IMG-20250819152944681.png",
     "Photos/Write up/CodeTwo Hack The Box/IMG-20250819152924602.png",
     "Photos/Write up/CodeTwo Hack The Box/IMG-20250819152609261.png",
-    "Photos/Write up/CodeTwo Hack The Box/IMG-20250819152446818.png",
-    "Photos/Write up/CodeTwo Hack The Box/IMG-20250819152139980.png",
-    "Photos/Write up/CodeTwo Hack The Box/IMG-20250819145804665.png",
     "Photos/Achievement",
     "Photos/Write up/CodeTwo Hack The Box",
     "Photos/Write up",
