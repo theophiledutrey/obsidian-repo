@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Infra/Samba.md",
+                "file": "Write up/CodeTwo Hack The Box.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Samba"
+              "title": "CodeTwo Hack The Box"
             }
           }
         ]
@@ -59,7 +59,7 @@
             }
           },
           {
-            "id": "43cf4766f2f09fa2",
+            "id": "c6488c562288ce80",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -226,6 +226,7 @@
   },
   "active": "e90d077bf3605919",
   "lastOpenFiles": [
+    "Infra/Samba.md",
     "Linux/Analyse.md",
     "Linux/Command.md",
     "Pentest Tools/Crypto.md",
@@ -260,7 +261,6 @@
     "Active Directory/ADMR/ATTACKS/PERSISTANCE.canvas",
     "Active Directory/ADMR/ATTACKS",
     "Active Directory/ADMR",
-    "Infra/Samba.md",
     "Untitled.md",
     "Active Directory/ADMR/ADMR.md",
     "Active Directory/Privilege Escalation.md",
