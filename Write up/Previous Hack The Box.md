@@ -6,7 +6,7 @@
 
 ![[IMG-20250824012910247.png]]
 USE:
-```bash
+```
 x-middleware-subrequest: middleware:middleware:middleware:middleware:middleware
 ```
 
@@ -24,3 +24,6 @@ x-middleware-subrequest: middleware:middleware:middleware:middleware:middleware
 
 ![[IMG-20250824172115997.png]]
 
+```
+NEXTAUTH_SECRET=82a464f1c3509a81d5c973c31a23c61a
+```
