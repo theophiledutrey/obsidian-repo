@@ -27,3 +27,6 @@ x-middleware-subrequest: middleware:middleware:middleware:middleware:middleware
 ```
 NEXTAUTH_SECRET=82a464f1c3509a81d5c973c31a23c61a
 ```
+
+![[IMG-20250824185523162.png]]
+
