@@ -5,7 +5,22 @@
 ![[IMG-20250824012840494.png]]
 
 ![[IMG-20250824012910247.png]]
+USE:
+```bash
+x-middleware-subrequest: middleware:middleware:middleware:middleware:middleware
+```
 
 ![[IMG-20250824012954799.png]]
 
 ![[IMG-20250824013047596.png]]
+
+![[IMG-20250824172304583.png]]
+
+![[IMG-20250824171318691.png]]
+
+
+
+![[IMG-20250824171346486.png]]
+
+![[IMG-20250824172115997.png]]
+
