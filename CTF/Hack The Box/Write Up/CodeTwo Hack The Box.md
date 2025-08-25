@@ -1,4 +1,4 @@
-![[IMG-20250817194237447.png]]
+![[IMG-20250825192315442.png]]
 
 [CVE  2024-39205](https://github.com/Marven11/CVE-2024-39205-Pyload-RCE/tree/main?tab=readme-ov-file)
 Payload:https://github.com/Imp0sters/ADMR.git
@@ -37,23 +37,23 @@ function f() {
 }
 ```
 
-![[IMG-20250819023447281.png]]
+![[IMG-20250825192315489.png]]
 
 
-![[IMG-20250819012840908.png]]
+![[IMG-20250825192315591.png]]
 
-![[IMG-20250819013501470.png]]
+![[IMG-20250825192315688.png]]
 
 ### ssh
 login: marco
 password: sweetangelbabylove
 
-![[IMG-20250819013642504.png]]
+![[IMG-20250825192315783.png]]
 
 
-![[IMG-20250819144310960.png]]
+![[IMG-20250825192315850.png]]
 
-![[IMG-20250819145804665.png]]
+![[IMG-20250825192315916.png]]
 
 Default Config File (npbackup.conf):
 
@@ -171,7 +171,7 @@ backup_opts:
       - /root
 ```
 
-![[IMG-20250819152139980.png]]
+![[IMG-20250825192316002.png]]
 `Error: Backup is smaller than configured minmium backup size`
 
 Then we can change the field `minimum_backup_size_error`
@@ -180,14 +180,14 @@ Then we can change the field `minimum_backup_size_error`
       minimum_backup_size_error: 0 MiB
 ```
 
-![[IMG-20250819152446818.png]]
+![[IMG-20250825192316065.png]]
 
-![[IMG-20250819144449343.png]]
+![[IMG-20250825192316740.png]]
 
-![[IMG-20250819152609261.png]]
+![[IMG-20250825192317328.png]]
 
-![[IMG-20250819152924602.png]]
+![[IMG-20250825192318165.png]]
 
-![[IMG-20250819152944681.png]]
+![[IMG-20250825192318301.png]]
 
 Root Flag: 2f562058d672272ac5f130215f5e74eb

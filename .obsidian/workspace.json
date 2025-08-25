@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "67cfade9a25dfe49",
+        "id": "6688f902d9b57bde",
         "type": "tabs",
         "children": [
           {
-            "id": "cf0d70501287e1b7",
+            "id": "d21c4c0a4cd4af85",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Pentest Tools/Metasploit.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Metasploit"
             }
           }
         ]
@@ -102,7 +106,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "http.s",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -129,6 +133,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Pentest Tools/Metasploit.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,7 +143,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Metasploit"
             }
           },
           {
@@ -175,16 +180,17 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Pentest Tools/Metasploit.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Metasploit"
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 2
       },
       {
         "id": "eb0479b9bf7b888d",
@@ -204,7 +210,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 471.5
+    "width": 471.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -220,10 +227,33 @@
       "graph:Open graph view": false
     }
   },
-  "active": "cf0d70501287e1b7",
+  "active": "d21c4c0a4cd4af85",
   "lastOpenFiles": [
+    "Pentest Tools/Crypto.md",
+    "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
+    "CTF/CTF.md",
+    "test/test.md",
+    "test",
+    "Web/Web.md",
+    "Untitled.md",
+    "CTF/Hack The Box/Hack The Box.md",
+    "Vault.md",
+    "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
+    "Assets/CTF/Hack The Box/Achievement",
+    "Assets/CTF/Hack The Box/Write Up/Environment Hack The Box",
+    "Assets/CTF/Hack The Box/Write Up/CodeTwo Hack The Box",
+    "Assets/CTF/Hack The Box/Write Up/Previous Hack The Box",
+    "Assets/CTF/Hack The Box/Write Up",
+    "CTF/Hack The Box/Write Up/Write Up.md",
+    "CTF/Hack The Box/Write Up",
+    "Assets/CTF/Hack The Box/Environment Hack The Box",
+    "Assets/CTF/Hack The Box/Previous Hack The Box",
+    "Assets/CTF/Hack The Box/CodeTwo Hack The Box",
+    "Write up/Hack The Box/Hack The Box.md",
+    "Write up/Write up.md",
+    "CTF/Hack The Box/Achievement.md",
+    "Assets/CTF/Hack The Box/Achievement/IMG-20250825192333600.png",
     "Assets/Achievement/Untitled.md",
-    "Achievement.md",
     "Photos/Write up/CodeTwo Hack The Box/IMG-20250819152139980.png",
     "Photos/Write up/CodeTwo Hack The Box/IMG-20250819145804665.png",
     "Photos/Write up/CodeTwo Hack The Box/IMG-20250819144613033.png",
@@ -233,50 +263,27 @@
     "Photos/Write up/CodeTwo Hack The Box/IMG-20250819013642504.png",
     "Photos/Write up/CodeTwo Hack The Box/IMG-20250819013501470.png",
     "Photos/Write up/CodeTwo Hack The Box/IMG-20250819013050399.png",
-    "Photos/Write up/CodeTwo Hack The Box/IMG-20250819012840908.png",
-    "Photos/Write up/CodeTwo Hack The Box",
-    "Photos/Write up",
-    "Photos/Achievement",
-    "Photos",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
-    "Pentest Tools/Crypto.md",
     "Photos/Write up/Write up.md",
-    "Assets/Write up/Environment Hack The Box",
     "Pentest Tools/Link.md",
-    "Write up/Environment Hack The Box.md",
-    "Write up/Previous Hack The Box.md",
     "Tags/Tags.md",
     "Linux/Privilege Escalation.md",
-    "Write up/CodeTwo Hack The Box.md",
+    "CTF/Hack The Box/Write Up/CodeTwo Hack The Box.md",
     "Linux/Command.md",
     "Linux/Analyse.md",
     "Web/Word List.md",
     "Web/Tools.md",
-    "Assets/Write up/Previous Hack The Box",
     "Active Directory/Active Directory.md",
     "Linux/UID.md",
     "Infra/Samba.md",
-    "Pentest Tools/Nmap.md",
     "Assets/INTERACTIVE-MAP 1.canvas",
     "Assets/INTERACTIVE-MAP 2.canvas",
     "//Untitled 1.canvas",
     "Untitled 1.canvas",
     "//Untitled.canvas",
     "Untitled.canvas",
-    "Pentest Tools/Metasploit.md",
-    "Tags",
-    "Active Directory/Command.md",
     "Active Directory/ADMR/INTERACTIVE-MAP.canvas",
-    "Active Directory/ADMR/ANNEXE.canvas",
-    "Infra/Wireguard.md",
-    "Active Directory/ADMR/assets/img",
-    "Active Directory/ADMR/assets",
-    "Active Directory/ADMR/README.md",
-    "Active Directory/ADMR/LICENSE",
-    "Untitled.md",
-    "Active Directory/ADMR/ADMR.md",
-    "Active Directory/Privilege Escalation.md",
-    "Active Directory/ADMR/Untitled.md"
+    "Active Directory/ADMR/ANNEXE.canvas"
   ]
 }

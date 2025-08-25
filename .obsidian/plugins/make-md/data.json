@@ -38,16 +38,18 @@
   "vaultSelector": true,
   "deleteFileOption": "trash",
   "expandedSpaces": [
-    "//Tags",
     "//Assets/Assets/Active Directory/Assets/Active Directory/Mindmap Command",
-    "//Assets",
     "/",
     "//Photos",
-    "//Pentest Tools",
     "//Photos/Photos/Write up",
     "//Photos/Photos/Write up/Photos/Write up/CodeTwo Hack The Box",
     "//Photos/Photos/Achievement",
-    "//Assets/Assets/Achievement"
+    "//Tags",
+    "//Write up/Write up/Hack The Box",
+    "//CTF/CTF/Hack The Box",
+    "//CTF/CTF/Hack The Box/CTF/Hack The Box/Write Up",
+    "//CTF",
+    "//Pentest Tools"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",

