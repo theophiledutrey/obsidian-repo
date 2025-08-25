@@ -50,7 +50,8 @@
     "//Assets/Assets/CTF/Assets/CTF/Hack The Box/Assets/CTF/Hack The Box/Write Up",
     "//CTF",
     "//Infra",
-    "//Linux"
+    "//Linux",
+    "//CTF/CTF/Hack The Box"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",

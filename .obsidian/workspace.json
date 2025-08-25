@@ -48,9 +48,23 @@
               "icon": "lucide-file",
               "title": "Command"
             }
+          },
+          {
+            "id": "a1c1db9d4ac41c22",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Previous Hack The Box"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -162,7 +176,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Linux/Capabilities.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -172,7 +185,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Capabilities"
+              "title": "Backlinks"
             }
           },
           {
@@ -209,13 +222,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Linux/Capabilities.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Capabilities"
+              "title": "Outline"
             }
           }
         ]
@@ -254,19 +266,20 @@
       "graph:Open graph view": false
     }
   },
-  "active": "070d689caade34fa",
+  "active": "e2aa3986dab62d71",
   "lastOpenFiles": [
+    "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
+    "Linux/Privilege Escalation.md",
+    "CTF/Hack The Box/Achievement.md",
+    "Linux/Command.md",
+    "Linux/UID.md",
+    "Linux/Capabilities.md",
     "ECE/ECE.md",
     "ECE",
-    "Linux/Command.md",
     "Infra/Github.md",
     "Pentest Tools/Metasploit.md",
     "CTF/Hack The Box/Hack The Box.md",
-    "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
     "Linux/Analyse.md",
-    "Linux/Capabilities.md",
-    "Linux/UID.md",
-    "Linux/Privilege Escalation.md",
     "Active Directory/Privilege Escalation.md",
     "Active Directory/Command.md",
     "Pentest Tools/Nmap.md",
@@ -290,7 +303,6 @@
     "Assets/CTF/Hack The Box/Previous Hack The Box",
     "Write up/Hack The Box/Hack The Box.md",
     "Write up/Write up.md",
-    "CTF/Hack The Box/Achievement.md",
     "Assets/CTF/Hack The Box/Achievement/IMG-20250825192333600.png",
     "Assets/Achievement/Untitled.md",
     "Photos/Write up/CodeTwo Hack The Box/IMG-20250819152139980.png",
