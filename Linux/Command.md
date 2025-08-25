@@ -5,7 +5,7 @@
 - `which <command_name>` : Show the path of a command's executable.
 - `history` : Display the history of executed commands.
 - `find / -name "*...*" 2>/dev/null`: Search a file in the system 
-- `tldr <tool>`: Display exemples of use for different tools
+- `tldr <tool>`: Display examples of use for different tools
 
 ## Networking & Services
 - `telnet <host> 80` : Test connection to a service.
@@ -83,5 +83,24 @@
 
 ## Github
 
+- `git init` : initialize a repository in the current directory.  
+- `git remote add origin <url>` : link the local folder to a remote repository.  
+- `git branch -M main` : rename the main branch to `main` (optional).  
+- `git push -u origin main` : first push and set the default upstream branch.  
+- `git clone <url>` : clone a remote repository.  
+- `git status` : show the state of working directory and staging area.  
+- `git add <file|folder>` : add a file or folder to the staging area.  
+- `git commit -m "message"` : create a commit with a message.  
+- `git pull` : fetch and merge changes from the remote.  
+- `git push` : push local commits to the remote repository.  
+- `git log` : show commit history.  
+- `git log -- <path>` : show commit history for a specific file or folder.  
+- `git log --diff-filter=D --summary` : list deletions in history.  
+- `git log --all --name-status | grep "Achievement"` : search for adds/modifies/deletes of a file across all history.  
+- `git show --name-status <commit_id>` : show files changed in a commit (A/M/D/R).  
+- `git show <commit_id>:<path>` : display the content of a file as it was in that commit.  
+- `git checkout <commit_id>^ -- <path>` : restore the state just before that commit (useful for rename/deletion).  
+- `git restore --source=<commit_id> -- <path>` : modern variant to restore a file/folder.  
+- `git remote -v` : show configured remotes.  
 
 

@@ -64,7 +64,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -176,7 +176,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
+                "file": "Linux/Command.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -186,7 +186,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Previous Hack The Box"
+              "title": "Backlinks for Command"
             }
           },
           {
@@ -223,13 +223,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
+                "file": "Linux/Command.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Previous Hack The Box"
+              "title": "Outline of Command"
             }
           }
         ]
@@ -268,12 +268,12 @@
       "graph:Open graph view": false
     }
   },
-  "active": "a1c1db9d4ac41c22",
+  "active": "24f6f1f5dd9e3677",
   "lastOpenFiles": [
+    "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
     "Assets/Pasted image 20250825232529.png",
     "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
     "Linux/Command.md",
-    "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
     "Assets/Pasted image 20250825230713.png",
     "Assets/Pasted image 20250825230708.png",
     "Linux/Privilege Escalation.md",
@@ -315,7 +315,6 @@
     "Photos/Write up/CodeTwo Hack The Box/IMG-20250819144449343.png",
     "Photos/Write up/CodeTwo Hack The Box/IMG-20250819144310960.png",
     "Photos/Write up/CodeTwo Hack The Box/IMG-20250819023447281.png",
-    "Photos/Write up/CodeTwo Hack The Box/IMG-20250819013642504.png",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",
