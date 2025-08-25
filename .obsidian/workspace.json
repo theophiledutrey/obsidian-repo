@@ -4,24 +4,49 @@
     "type": "split",
     "children": [
       {
-        "id": "6688f902d9b57bde",
+        "id": "dc86db962fe0e1bb",
         "type": "tabs",
         "children": [
           {
-            "id": "d21c4c0a4cd4af85",
+            "id": "4d304ee0a6a34bfb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pentest Tools/Metasploit.md",
+                "file": "Linux/UID.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Metasploit"
+              "title": "UID"
+            }
+          },
+          {
+            "id": "786252c0a701e6e8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Linux/UID.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "UID"
+            }
+          },
+          {
+            "id": "266c893ee72580ac",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -133,7 +158,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Pentest Tools/Metasploit.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,7 +167,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Metasploit"
+              "title": "Backlinks"
             }
           },
           {
@@ -180,17 +204,15 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Pentest Tools/Metasploit.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Metasploit"
+              "title": "Outline"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       },
       {
         "id": "eb0479b9bf7b888d",
@@ -210,8 +232,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 471.5,
-    "collapsed": true
+    "width": 381.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -227,10 +248,16 @@
       "graph:Open graph view": false
     }
   },
-  "active": "d21c4c0a4cd4af85",
+  "active": "266c893ee72580ac",
   "lastOpenFiles": [
-    "Pentest Tools/Crypto.md",
+    "Linux/UID.md",
     "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
+    "Active Directory/Privilege Escalation.md",
+    "Active Directory/Command.md",
+    "Pentest Tools/Nmap.md",
+    "Pentest Tools/Link.md",
+    "Pentest Tools/Metasploit.md",
+    "Pentest Tools/Crypto.md",
     "CTF/CTF.md",
     "test/test.md",
     "test",
@@ -266,17 +293,11 @@
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Photos/Write up/Write up.md",
-    "Pentest Tools/Link.md",
     "Tags/Tags.md",
     "Linux/Privilege Escalation.md",
     "CTF/Hack The Box/Write Up/CodeTwo Hack The Box.md",
     "Linux/Command.md",
     "Linux/Analyse.md",
-    "Web/Word List.md",
-    "Web/Tools.md",
-    "Active Directory/Active Directory.md",
-    "Linux/UID.md",
-    "Infra/Samba.md",
     "Assets/INTERACTIVE-MAP 1.canvas",
     "Assets/INTERACTIVE-MAP 2.canvas",
     "//Untitled 1.canvas",

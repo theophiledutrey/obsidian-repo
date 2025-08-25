@@ -6,7 +6,15 @@
   "hideUnresolved": true,
   "showOrphans": true,
   "collapse-color-groups": false,
-  "colorGroups": [],
+  "colorGroups": [
+    {
+      "query": "path:CTF ",
+      "color": {
+        "a": 1,
+        "rgb": 14701138
+      }
+    }
+  ],
   "collapse-display": false,
   "showArrow": false,
   "textFadeMultiplier": -0.3,
@@ -17,6 +25,6 @@
   "repelStrength": 8.64583333333333,
   "linkStrength": 1,
   "linkDistance": 140,
-  "scale": 0.4959037989681071,
-  "close": true
+  "scale": 0.36587184548580504,
+  "close": false
 }
