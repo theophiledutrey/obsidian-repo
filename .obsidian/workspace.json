@@ -63,8 +63,7 @@
               "title": "Link"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -266,14 +265,15 @@
       "graph:Open graph view": false
     }
   },
-  "active": "f27e9149a1e47733",
+  "active": "e90d077bf3605919",
   "lastOpenFiles": [
+    "Write up/Previous Hack The Box.md",
+    "Photos/Write up/Previous Hack The Box/IMG-20250825173844708.png",
     "Photos/Write up/Previous Hack The Box/IMG-20250825172605435.png",
     "Photos/Write up/Previous Hack The Box/IMG-20250825172549609.png",
     "Write up/Environment Hack The Box.md",
     "Pentest Tools/Link.md",
     "Write up/CodeTwo Hack The Box.md",
-    "Write up/Previous Hack The Box.md",
     "Linux/Privilege Escalation.md",
     "Photos/Write up/Previous Hack The Box/IMG-20250825165336107.png",
     "Linux/Command.md",
@@ -286,8 +286,6 @@
     "Photos/Write up/Previous Hack The Box/IMG-20250824192312766.png",
     "Photos/Write up/Previous Hack The Box/IMG-20250824185523162.png",
     "Photos/Write up/Previous Hack The Box/IMG-20250824172304583.png",
-    "Photos/Write up/Previous Hack The Box/IMG-20250824172115997.png",
-    "Photos/Write up/Previous Hack The Box/IMG-20250824171346486.png",
     "Photos/Write up/Previous Hack The Box",
     "Active Directory/Active Directory.md",
     "Linux/UID.md",
