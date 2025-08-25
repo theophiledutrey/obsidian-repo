@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
+                "file": "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Environment Hack The Box"
+              "title": "Previous Hack The Box"
             }
           }
         ],
@@ -176,7 +176,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
+                "file": "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -186,7 +186,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Environment Hack The Box"
+              "title": "Backlinks for Previous Hack The Box"
             }
           },
           {
@@ -223,13 +223,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
+                "file": "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Environment Hack The Box"
+              "title": "Outline of Previous Hack The Box"
             }
           }
         ]
@@ -270,8 +270,9 @@
   },
   "active": "a1c1db9d4ac41c22",
   "lastOpenFiles": [
-    "Linux/Command.md",
+    "Assets/Pasted image 20250825232529.png",
     "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
+    "Linux/Command.md",
     "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
     "Assets/Pasted image 20250825230713.png",
     "Assets/Pasted image 20250825230708.png",
