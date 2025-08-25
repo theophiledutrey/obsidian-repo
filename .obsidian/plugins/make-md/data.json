@@ -39,13 +39,15 @@
   "deleteFileOption": "trash",
   "expandedSpaces": [
     "//Tags",
-    "//Assets/Assets/Write up",
     "//Assets/Assets/Active Directory/Assets/Active Directory/Mindmap Command",
     "//Assets",
     "/",
     "//Photos",
+    "//Pentest Tools",
     "//Photos/Photos/Write up",
-    "//Pentest Tools"
+    "//Photos/Photos/Write up/Photos/Write up/CodeTwo Hack The Box",
+    "//Photos/Photos/Achievement",
+    "//Assets/Assets/Achievement"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
