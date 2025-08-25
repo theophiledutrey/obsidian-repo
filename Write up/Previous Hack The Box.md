@@ -65,5 +65,12 @@ password: MyNameIsJeremyAndILovePancakes
 
 ![[IMG-20250825144931061.png]]
 
+![[IMG-20250825172605435.png]]
+
+[Doc Terraform](https://developer.hashicorp.com/terraform/cli/config/environment-variables)
+
+![[IMG-20250825172549609.png]]
+
+
 
 ![[IMG-20250825165336107.png]]

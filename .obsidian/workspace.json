@@ -34,6 +34,34 @@
               "icon": "lucide-file",
               "title": "Previous Hack The Box"
             }
+          },
+          {
+            "id": "d14191d3b80020fc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Write up/Environment Hack The Box.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Environment Hack The Box"
+            }
+          },
+          {
+            "id": "45ff85aed57e26d3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Pentest Tools/Link.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Link"
+            }
           }
         ],
         "currentTab": 1
@@ -83,7 +111,8 @@
               "title": "Navigator"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       },
       {
         "id": "21aabb3032ca0851",
@@ -239,14 +268,16 @@
   },
   "active": "f27e9149a1e47733",
   "lastOpenFiles": [
-    "Photos/Write up/Previous Hack The Box/IMG-20250825165336107.png",
+    "Photos/Write up/Previous Hack The Box/IMG-20250825172605435.png",
+    "Photos/Write up/Previous Hack The Box/IMG-20250825172549609.png",
+    "Write up/Environment Hack The Box.md",
+    "Pentest Tools/Link.md",
+    "Write up/CodeTwo Hack The Box.md",
+    "Write up/Previous Hack The Box.md",
     "Linux/Privilege Escalation.md",
+    "Photos/Write up/Previous Hack The Box/IMG-20250825165336107.png",
     "Linux/Command.md",
     "Linux/Analyse.md",
-    "Pentest Tools/Link.md",
-    "Write up/Previous Hack The Box.md",
-    "Write up/Environment Hack The Box.md",
-    "Write up/CodeTwo Hack The Box.md",
     "Photos/Write up/Previous Hack The Box/IMG-20250825144931061.png",
     "Photos/Write up/Previous Hack The Box/IMG-20250825144743209.png",
     "Photos/Write up/Previous Hack The Box/IMG-20250825144128893.png",
@@ -257,8 +288,6 @@
     "Photos/Write up/Previous Hack The Box/IMG-20250824172304583.png",
     "Photos/Write up/Previous Hack The Box/IMG-20250824172115997.png",
     "Photos/Write up/Previous Hack The Box/IMG-20250824171346486.png",
-    "Photos/Write up/Previous Hack The Box/IMG-20250824171318691.png",
-    "Photos/Write up/Previous Hack The Box/IMG-20250824013047596.png",
     "Photos/Write up/Previous Hack The Box",
     "Active Directory/Active Directory.md",
     "Linux/UID.md",
