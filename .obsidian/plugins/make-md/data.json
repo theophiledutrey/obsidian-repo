@@ -45,7 +45,8 @@
     "//Infra",
     "//Write up",
     "//Web",
-    "//Active Directory"
+    "//Active Directory",
+    "//Pentest Tools"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
