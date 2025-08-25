@@ -57,7 +57,7 @@ let o = {
         secret: process.env.NEXTAUTH_SECRET
       };
 ```
-MyNameIsJeremyAndILovePancakes
+
 ```
 user: jeremy
 password: MyNameIsJeremyAndILovePancakes
