@@ -38,15 +38,11 @@
   "vaultSelector": true,
   "deleteFileOption": "trash",
   "expandedSpaces": [
-    "/",
     "//Tags",
-    "//Assets/Assets/Achievement",
-    "//Linux",
-    "//Infra",
-    "//Write up",
-    "//Web",
-    "//Active Directory",
-    "//Pentest Tools"
+    "//Assets/Assets/Write up",
+    "//Assets/Assets/Active Directory/Assets/Active Directory/Mindmap Command",
+    "//Assets",
+    "/"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",

