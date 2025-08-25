@@ -35,7 +35,8 @@
               "title": "Previous Hack The Box"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -82,8 +83,7 @@
               "title": "Navigator"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       },
       {
         "id": "21aabb3032ca0851",
@@ -120,7 +120,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "capa",
+                "query": "python http",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -201,8 +201,7 @@
               "title": "Outline"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "eb0479b9bf7b888d",
@@ -238,19 +237,21 @@
       "graph:Open graph view": false
     }
   },
-  "active": "e90d077bf3605919",
+  "active": "f27e9149a1e47733",
   "lastOpenFiles": [
+    "Photos/Write up/Previous Hack The Box/IMG-20250825165336107.png",
+    "Linux/Privilege Escalation.md",
+    "Linux/Command.md",
+    "Linux/Analyse.md",
     "Pentest Tools/Link.md",
     "Write up/Previous Hack The Box.md",
     "Write up/Environment Hack The Box.md",
     "Write up/CodeTwo Hack The Box.md",
-    "Linux/Privilege Escalation.md",
     "Photos/Write up/Previous Hack The Box/IMG-20250825144931061.png",
     "Photos/Write up/Previous Hack The Box/IMG-20250825144743209.png",
     "Photos/Write up/Previous Hack The Box/IMG-20250825144128893.png",
     "Web/Word List.md",
     "Web/Tools.md",
-    "Linux/Analyse.md",
     "Photos/Write up/Previous Hack The Box/IMG-20250824192312766.png",
     "Photos/Write up/Previous Hack The Box/IMG-20250824185523162.png",
     "Photos/Write up/Previous Hack The Box/IMG-20250824172304583.png",
@@ -262,7 +263,6 @@
     "Active Directory/Active Directory.md",
     "Linux/UID.md",
     "Infra/Samba.md",
-    "Linux/Command.md",
     "Pentest Tools/Crypto.md",
     "Pentest Tools/Nmap.md",
     "Photos/INTERACTIVE-MAP 1.canvas",

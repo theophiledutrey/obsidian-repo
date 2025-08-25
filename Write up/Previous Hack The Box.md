@@ -66,3 +66,4 @@ password: MyNameIsJeremyAndILovePancakes
 ![[IMG-20250825144931061.png]]
 
 
+![[IMG-20250825165336107.png]]
