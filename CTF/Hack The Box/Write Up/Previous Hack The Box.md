@@ -29,10 +29,12 @@ x-middleware-subrequest: middleware:middleware:middleware:middleware:middleware
 NEXTAUTH_SECRET=82a464f1c3509a81d5c973c31a23c61a
 ```
 
-![[IMG-20250825192313265.png]]
+### [Doc Next Auth/api/auth/[...nextauth]": "p](https://next-auth.js.org/getting-started/example)
+
+![[Pasted image 20250825230713.png]]
 
 ```
-  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
+  pages/api/auth/[...nextauth].js
 ```
 
 ![[IMG-20250825192313327.png]]

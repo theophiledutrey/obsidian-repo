@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
+                "file": "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Previous Hack The Box"
+              "title": "Environment Hack The Box"
             }
           }
         ],
@@ -176,6 +176,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -185,7 +186,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Environment Hack The Box"
             }
           },
           {
@@ -222,12 +223,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Environment Hack The Box"
             }
           }
         ]
@@ -266,12 +268,15 @@
       "graph:Open graph view": false
     }
   },
-  "active": "e2aa3986dab62d71",
+  "active": "a1c1db9d4ac41c22",
   "lastOpenFiles": [
+    "Linux/Command.md",
+    "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
     "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
+    "Assets/Pasted image 20250825230713.png",
+    "Assets/Pasted image 20250825230708.png",
     "Linux/Privilege Escalation.md",
     "CTF/Hack The Box/Achievement.md",
-    "Linux/Command.md",
     "Linux/UID.md",
     "Linux/Capabilities.md",
     "ECE/ECE.md",
@@ -291,7 +296,6 @@
     "Web/Web.md",
     "Untitled.md",
     "Vault.md",
-    "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
     "Assets/CTF/Hack The Box/Achievement",
     "Assets/CTF/Hack The Box/Write Up/Environment Hack The Box",
     "Assets/CTF/Hack The Box/Write Up/CodeTwo Hack The Box",
@@ -304,7 +308,6 @@
     "Write up/Hack The Box/Hack The Box.md",
     "Write up/Write up.md",
     "Assets/CTF/Hack The Box/Achievement/IMG-20250825192333600.png",
-    "Assets/Achievement/Untitled.md",
     "Photos/Write up/CodeTwo Hack The Box/IMG-20250819152139980.png",
     "Photos/Write up/CodeTwo Hack The Box/IMG-20250819145804665.png",
     "Photos/Write up/CodeTwo Hack The Box/IMG-20250819144613033.png",
@@ -312,8 +315,6 @@
     "Photos/Write up/CodeTwo Hack The Box/IMG-20250819144310960.png",
     "Photos/Write up/CodeTwo Hack The Box/IMG-20250819023447281.png",
     "Photos/Write up/CodeTwo Hack The Box/IMG-20250819013642504.png",
-    "Photos/Write up/CodeTwo Hack The Box/IMG-20250819013501470.png",
-    "Photos/Write up/CodeTwo Hack The Box/IMG-20250819013050399.png",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",
