@@ -42,7 +42,10 @@
     "//Assets/Assets/Write up",
     "//Assets/Assets/Active Directory/Assets/Active Directory/Mindmap Command",
     "//Assets",
-    "/"
+    "/",
+    "//Photos",
+    "//Photos/Photos/Write up",
+    "//Pentest Tools"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
