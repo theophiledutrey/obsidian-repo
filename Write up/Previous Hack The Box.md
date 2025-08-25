@@ -28,7 +28,41 @@ x-middleware-subrequest: middleware:middleware:middleware:middleware:middleware
 NEXTAUTH_SECRET=82a464f1c3509a81d5c973c31a23c61a
 ```
 
+![[IMG-20250825144128893.png]]
 
+```
+  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
+```
 
+![[IMG-20250825144743209.png]]
+
+```js
+let o = {
+        session: { strategy: "jwt" },
+        providers: [
+          r.n(CredentialsProvider)()({
+            name: "Credentials",
+            credentials: {
+              username: { label: "User", type: "username" },
+              password: { label: "Password", type: "password" }
+            },
+            authorize: async e =>
+              e?.username === "jeremy" &&
+              e.password === (process.env.ADMIN_SECRET ?? "MyNameIsJeremyAndILovePancakes")
+                ? { id: "1", name: "Jeremy" }
+                : null
+          })
+        ],
+        pages: { signIn: "/signin" },
+        secret: process.env.NEXTAUTH_SECRET
+      };
+```
+MyNameIsJeremyAndILovePancakes
+```
+user: jeremy
+password: MyNameIsJeremyAndILovePancakes
+```
+
+![[IMG-20250825144931061.png]]
 
 

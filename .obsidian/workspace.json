@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Write up/Previous Hack The Box.md",
+                "file": "Pentest Tools/Link.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Previous Hack The Box"
+              "title": "Link"
             }
           },
           {
@@ -254,11 +254,15 @@
   },
   "active": "e90d077bf3605919",
   "lastOpenFiles": [
+    "Linux/Privilege Escalation.md",
+    "Write up/Previous Hack The Box.md",
+    "Photos/Write up/Previous Hack The Box/IMG-20250825144931061.png",
+    "Photos/Write up/Previous Hack The Box/IMG-20250825144743209.png",
+    "Photos/Write up/Previous Hack The Box/IMG-20250825144128893.png",
     "Write up/Environment Hack The Box.md",
     "Write up/CodeTwo Hack The Box.md",
     "Pentest Tools/Link.md",
     "Web/Word List.md",
-    "Write up/Previous Hack The Box.md",
     "Web/Tools.md",
     "Linux/Analyse.md",
     "Photos/Write up/Previous Hack The Box/IMG-20250824192312766.png",
@@ -268,13 +272,9 @@
     "Photos/Write up/Previous Hack The Box/IMG-20250824171346486.png",
     "Photos/Write up/Previous Hack The Box/IMG-20250824171318691.png",
     "Photos/Write up/Previous Hack The Box/IMG-20250824013047596.png",
-    "Photos/Write up/Previous Hack The Box/IMG-20250824012954799.png",
-    "Photos/Write up/Previous Hack The Box/IMG-20250824012910247.png",
-    "Photos/Write up/Previous Hack The Box/IMG-20250824012840494.png",
     "Photos/Write up/Previous Hack The Box",
     "Active Directory/Active Directory.md",
     "Linux/UID.md",
-    "Linux/Privilege Escalation.md",
     "Infra/Samba.md",
     "Linux/Command.md",
     "Pentest Tools/Crypto.md",
