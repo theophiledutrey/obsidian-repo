@@ -1,5 +1,5 @@
 ![[IMG-20250825192312409.png]]
-## Foothold
+## User Flag
 
 ### [CVE-2025-29927](https://github.com/lirantal/vulnerable-nextjs-14-CVE-2025-29927)
 
@@ -59,7 +59,6 @@ let o = {
       };
 ```
 
-## User Flag
 
 ```
 user: jeremy

@@ -81,5 +81,7 @@
 - `chmod 600 id_rsa`: Restricts permissions so only the owner can read/write the private key (600: 110 000 000 = rw- --- ---).
 - `ssh -i id_rsa root@<ip>`: Connect as root using the private key.
 
+## Github
+
 
 

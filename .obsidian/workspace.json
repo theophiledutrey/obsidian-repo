@@ -27,26 +27,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/UID.md",
+                "file": "Linux/Capabilities.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "UID"
+              "title": "Capabilities"
             }
           },
           {
-            "id": "266c893ee72580ac",
+            "id": "24f6f1f5dd9e3677",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "Linux/Command.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Command"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -158,6 +162,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Linux/Capabilities.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -167,7 +172,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Capabilities"
             }
           },
           {
@@ -204,12 +209,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Linux/Capabilities.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Capabilities"
             }
           }
         ]
@@ -248,22 +254,29 @@
       "graph:Open graph view": false
     }
   },
-  "active": "266c893ee72580ac",
+  "active": "070d689caade34fa",
   "lastOpenFiles": [
-    "Linux/UID.md",
+    "ECE/ECE.md",
+    "ECE",
+    "Linux/Command.md",
+    "Infra/Github.md",
+    "Pentest Tools/Metasploit.md",
+    "CTF/Hack The Box/Hack The Box.md",
     "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
+    "Linux/Analyse.md",
+    "Linux/Capabilities.md",
+    "Linux/UID.md",
+    "Linux/Privilege Escalation.md",
     "Active Directory/Privilege Escalation.md",
     "Active Directory/Command.md",
     "Pentest Tools/Nmap.md",
     "Pentest Tools/Link.md",
-    "Pentest Tools/Metasploit.md",
     "Pentest Tools/Crypto.md",
     "CTF/CTF.md",
     "test/test.md",
     "test",
     "Web/Web.md",
     "Untitled.md",
-    "CTF/Hack The Box/Hack The Box.md",
     "Vault.md",
     "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
     "Assets/CTF/Hack The Box/Achievement",
@@ -275,7 +288,6 @@
     "CTF/Hack The Box/Write Up",
     "Assets/CTF/Hack The Box/Environment Hack The Box",
     "Assets/CTF/Hack The Box/Previous Hack The Box",
-    "Assets/CTF/Hack The Box/CodeTwo Hack The Box",
     "Write up/Hack The Box/Hack The Box.md",
     "Write up/Write up.md",
     "CTF/Hack The Box/Achievement.md",
@@ -292,12 +304,6 @@
     "Photos/Write up/CodeTwo Hack The Box/IMG-20250819013050399.png",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
-    "Photos/Write up/Write up.md",
-    "Tags/Tags.md",
-    "Linux/Privilege Escalation.md",
-    "CTF/Hack The Box/Write Up/CodeTwo Hack The Box.md",
-    "Linux/Command.md",
-    "Linux/Analyse.md",
     "Assets/INTERACTIVE-MAP 1.canvas",
     "Assets/INTERACTIVE-MAP 2.canvas",
     "//Untitled 1.canvas",

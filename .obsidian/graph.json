@@ -8,7 +8,7 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "path:CTF ",
+      "query": "",
       "color": {
         "a": 1,
         "rgb": 14701138
@@ -21,10 +21,10 @@
   "nodeSizeMultiplier": 1.14635416666667,
   "lineSizeMultiplier": 0.865625,
   "collapse-forces": false,
-  "centerStrength": 0.427083333333333,
+  "centerStrength": 0.416666666666667,
   "repelStrength": 8.64583333333333,
   "linkStrength": 1,
   "linkDistance": 140,
   "scale": 0.36587184548580504,
-  "close": false
+  "close": true
 }

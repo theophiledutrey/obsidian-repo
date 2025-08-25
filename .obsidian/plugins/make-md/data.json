@@ -46,9 +46,10 @@
     "//Photos/Photos/Achievement",
     "//Tags",
     "//Write up/Write up/Hack The Box",
-    "//CTF/CTF/Hack The Box",
     "//CTF/CTF/Hack The Box/CTF/Hack The Box/Write Up",
     "//Assets/Assets/CTF/Assets/CTF/Hack The Box/Assets/CTF/Hack The Box/Write Up",
+    "//CTF",
+    "//Infra",
     "//Linux"
   ],
   "expandFolderOnClick": true,
