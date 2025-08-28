@@ -52,7 +52,8 @@
     "//Infra",
     "//Linux",
     "//CTF/CTF/Hack The Box",
-    "//Web"
+    "//Web",
+    "//Pentest Tools"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
