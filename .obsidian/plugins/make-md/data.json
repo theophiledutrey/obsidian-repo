@@ -51,7 +51,8 @@
     "//CTF",
     "//Infra",
     "//Linux",
-    "//CTF/CTF/Hack The Box"
+    "//CTF/CTF/Hack The Box",
+    "//Web"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
