@@ -36,20 +36,6 @@
             }
           },
           {
-            "id": "a1c1db9d4ac41c22",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Pentest Tools/Link.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Link"
-            }
-          },
-          {
             "id": "0f8fe36509dca0f0",
             "type": "leaf",
             "state": {
@@ -64,7 +50,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -169,7 +155,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Pentest Tools/Link.md",
+                "file": "Linux/Capabilities.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -179,7 +165,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Link"
+              "title": "Backlinks for Capabilities"
             }
           },
           {
@@ -216,13 +202,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Pentest Tools/Link.md",
+                "file": "Linux/Capabilities.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Link"
+              "title": "Outline of Capabilities"
             }
           }
         ],
@@ -263,11 +249,18 @@
       "graph:Open graph view": false
     }
   },
-  "active": "a1c1db9d4ac41c22",
+  "active": "786252c0a701e6e8",
   "lastOpenFiles": [
+    "Infra/Samba.md",
+    "Infra/Github.md",
+    "Pentest Tools/Nmap.md",
+    "Pentest Tools/Link.md",
+    "Pentest Tools/Crypto.md",
+    "Pentest Tools/Metasploit.md",
+    "Linux/Command.md",
+    "Web/Tools.md",
     "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
     "CTF/Hack The Box/Write Up/CodeTwo Hack The Box.md",
-    "Pentest Tools/Link.md",
     "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
     "Linux/UID.md",
     "Web/Web.md",
@@ -276,20 +269,14 @@
     "2025-08-30.md",
     "Linux/Privilege Escalation.md",
     "Linux/Analyse.md",
-    "Linux/Command.md",
-    "Infra/Samba.md",
     "Assets/Pasted image 20250825232529.png",
     "Assets/Pasted image 20250825230713.png",
     "Assets/Pasted image 20250825230708.png",
     "ECE/ECE.md",
     "ECE",
-    "Infra/Github.md",
-    "Pentest Tools/Metasploit.md",
     "CTF/Hack The Box/Hack The Box.md",
     "Active Directory/Privilege Escalation.md",
     "Active Directory/Command.md",
-    "Pentest Tools/Nmap.md",
-    "Pentest Tools/Crypto.md",
     "CTF/CTF.md",
     "test/test.md",
     "test",
@@ -300,7 +287,6 @@
     "Assets/CTF/Hack The Box/Write Up/CodeTwo Hack The Box",
     "Assets/CTF/Hack The Box/Write Up/Previous Hack The Box",
     "Assets/CTF/Hack The Box/Write Up",
-    "CTF/Hack The Box/Write Up/Write Up.md",
     "CTF/Hack The Box/Write Up",
     "Assets/CTF/Hack The Box/Environment Hack The Box",
     "Assets/CTF/Hack The Box/Previous Hack The Box",

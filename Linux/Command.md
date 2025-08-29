@@ -104,3 +104,40 @@
 - `git remote -v` : show configured remotes.  
 
 
+## Curl
+
+- `curl <url>` : Perform a simple GET request.
+- `curl -I <url>` : Fetch only the headers (HEAD request).
+- `curl -v <url>` : Verbose mode (show request/response details).
+- `curl -L <url>` : Follow redirects.
+- `curl -k <url>` : Ignore SSL certificate errors (insecure).
+- `curl -s <url>` : Silent mode (no progress bar/errors).
+- `curl -o file.txt <url>` : Save output to a file.
+- `curl -X POST <url>` : Force a POST request.
+- `curl -d "param=value&param2=value2" <url>` : Send POST data (form-encoded).
+- `curl -d @file.json -H "Content-Type: application/json" <url>` : Send JSON data from file.
+- `curl -H "Header: value" <url>` : Add a custom header.
+- `curl -A "User-Agent-Here" <url>` or `curl --user-agent "..." <url>` : Change the User-Agent.
+- `curl -u user:pass <url>` : Send HTTP Basic Authentication.
+- `curl --cookie "name=value" <url>` : Send cookies.
+- `curl -c cookie.txt -b cookie.txt <url>` : Save and reuse cookies.
+- `curl --proxy http://127.0.0.1:8080 <url>` : Route through a proxy (useful for BurpSuite).
+- `curl --http2 <url>` : Force HTTP/2.
+- `curl --interface <ip> <url>` : Use a specific network interface/IP.
+- `curl -w "%{http_code}\n" -o /dev/null -s <url>` : Show only the HTTP status code.
+
+## Echo & Output Tricks
+
+- `echo "hello"` : Print text with a trailing newline (`\n`).
+- `echo -n "hello"` : Print text **without** a trailing newline.
+- `echo -e "line1\nline2"` : Enable interpretation of backslash escapes (`\n`, `\t`, etc.).
+- `echo -n "dGVzdA==" | base64 -d` : Decode a Base64 string (`test`).
+- `echo -n '{"username":"admin"}' | jq .` : Pretty-print JSON with `jq`.
+- `echo -n "SGVsbG8=" | base64 -d | hexdump -C` : Decode Base64 and view in hex.
+- `echo -n "<jwt>" | cut -d "." -f1 | base64 -d 2>/dev/null | jq .` : Decode JWT header.
+- `echo -n "<jwt>" | cut -d "." -f2 | base64 -d 2>/dev/null | jq .` : Decode JWT payload.
+- `echo "text" > file.txt` : Overwrite file with text.
+- `echo "text" >> file.txt` : Append text to file.
+- `echo -n "GET / HTTP/1.1\r\nHost: target\r\n\r\n" | nc target 80` : Manual HTTP request with netcat.
+- `echo password | sudo -S command` : Provide password to sudo from stdin.
+- `echo -n "68656c6c6f" | xxd -r -p` : Convert hex string to binary.

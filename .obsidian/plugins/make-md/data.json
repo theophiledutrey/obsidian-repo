@@ -39,7 +39,6 @@
   "deleteFileOption": "trash",
   "expandedSpaces": [
     "//Assets/Assets/Active Directory/Assets/Active Directory/Mindmap Command",
-    "/",
     "//Photos",
     "//Photos/Photos/Write up",
     "//Photos/Photos/Write up/Photos/Write up/CodeTwo Hack The Box",
@@ -53,7 +52,8 @@
     "//Linux",
     "//CTF/CTF/Hack The Box",
     "//Web",
-    "//Pentest Tools"
+    "//Pentest Tools",
+    "/"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
