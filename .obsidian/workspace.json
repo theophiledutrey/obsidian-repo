@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/Capabilities.md",
+                "file": "Web/Word List.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Capabilities"
+              "title": "Word List"
             }
           },
           {
@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
+                "file": "CTF/Hack The Box/Write Up/Soulmate.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Previous Hack The Box"
+              "title": "Soulmate"
             }
           },
           {
@@ -55,16 +55,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/Command.md",
+                "file": "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Command"
+              "title": "Environment Hack The Box"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -263,11 +263,17 @@
       "graph:Open graph view": false
     }
   },
-  "active": "0f8fe36509dca0f0",
+  "active": "786252c0a701e6e8",
   "lastOpenFiles": [
+    "Linux/Capabilities.md",
+    "CTF/Hack The Box/Write Up/Soulmate.md",
+    "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
+    "Linux/Command.md",
+    "Assets/CTF/Hack The Box/Write Up/Soulmate",
+    "Assets/CTF/Hack The Box/Write Up/Soulmate/IMG-20250907234052613.png",
+    "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
     "Tags",
     "CTF/Hack The Box/Write Up/Guardian Hack The Box.md",
-    "Linux/Command.md",
     "Assets/Pasted image 20250901005742.png",
     "Assets/Pasted image 20250901005443.png",
     "Assets/Pasted image 20250901005424.png",
@@ -278,11 +284,8 @@
     "CTF/Hack The Box/Write Up/.md",
     "Web/Word List.md",
     "Web/Tools.md",
-    "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
     "CTF/Hack The Box/Write Up/CodeTwo Hack The Box.md",
-    "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
     "Linux/UID.md",
-    "Linux/Capabilities.md",
     "Infra/Samba.md",
     "Infra/Github.md",
     "Pentest Tools/Nmap.md",
@@ -300,7 +303,6 @@
     "ECE/ECE.md",
     "ECE",
     "CTF/Hack The Box/Hack The Box.md",
-    "Active Directory/Privilege Escalation.md",
     "test",
     "Assets/CTF/Hack The Box/Achievement",
     "Assets/CTF/Hack The Box/Write Up/Environment Hack The Box",
@@ -308,9 +310,6 @@
     "Assets/CTF/Hack The Box/Write Up/Previous Hack The Box",
     "Assets/CTF/Hack The Box/Write Up",
     "CTF/Hack The Box/Write Up",
-    "Assets/CTF/Hack The Box/Environment Hack The Box",
-    "Assets/CTF/Hack The Box/Previous Hack The Box",
-    "Assets/CTF/Hack The Box/Achievement/IMG-20250825192333600.png",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",

@@ -1,4 +1,4 @@
-When a process runs on Linux, it doesn’t just have UIDs — it can also have **Capabilities**, which define fine-grained privileges normally reserved for `root`.
+fWhen a process runs on Linux, it doesn’t just have UIDs — it can also have **Capabilities**, which define fine-grained privileges normally reserved for `root`.
 
 ---
 
