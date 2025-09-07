@@ -101,19 +101,6 @@
             }
           },
           {
-            "id": "070d689caade34fa",
-            "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {
-                "sortOrder": "alphabetical",
-                "autoReveal": false
-              },
-              "icon": "lucide-folder-closed",
-              "title": "Files"
-            }
-          },
-          {
             "id": "34c3eab5039f8088",
             "type": "leaf",
             "state": {
@@ -129,9 +116,19 @@
               "icon": "lucide-search",
               "title": "Search"
             }
+          },
+          {
+            "id": "e23e31920d569dca",
+            "type": "leaf",
+            "state": {
+              "type": "mk-path-view",
+              "state": {},
+              "icon": "layout-grid",
+              "title": "Navigator"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -268,6 +265,7 @@
   },
   "active": "0f8fe36509dca0f0",
   "lastOpenFiles": [
+    "Tags",
     "CTF/Hack The Box/Write Up/Guardian Hack The Box.md",
     "Linux/Command.md",
     "Assets/Pasted image 20250901005742.png",
