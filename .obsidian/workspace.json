@@ -115,7 +115,7 @@
             }
           },
           {
-            "id": "fdaf3f9fbdcd4f33",
+            "id": "2c6759405e529b65",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -260,8 +260,11 @@
       "graph:Open graph view": false
     }
   },
-  "active": "4d304ee0a6a34bfb",
+  "active": "2c6759405e529b65",
   "lastOpenFiles": [
+    "ECE/Cloud/Entra ID/Entra ID.md",
+    "ECE/Cloud/Entra ID",
+    "Linux/UID.md",
     "ECE/Cloud/Untitled.md",
     "ECE/Cloud/AWS/AWS.md",
     "ECE/Cloud/AWS",
@@ -289,7 +292,6 @@
     "CTF/Hack The Box/Write Up/.md",
     "Web/Tools.md",
     "CTF/Hack The Box/Write Up/CodeTwo Hack The Box.md",
-    "Linux/UID.md",
     "Infra/Samba.md",
     "Infra/Github.md",
     "Pentest Tools/Nmap.md",
@@ -298,7 +300,6 @@
     "Pentest Tools/Metasploit.md",
     "Web/Web.md",
     "CTF/Hack The Box/Achievement.md",
-    "2025-08-30.md",
     "Assets/Pasted image 20250825232529.png",
     "Assets/Pasted image 20250825230713.png",
     "Assets/Pasted image 20250825230708.png",
@@ -307,7 +308,6 @@
     "Assets/CTF/Hack The Box/Achievement",
     "Assets/CTF/Hack The Box/Write Up/Environment Hack The Box",
     "Assets/CTF/Hack The Box/Write Up/CodeTwo Hack The Box",
-    "Assets/CTF/Hack The Box/Write Up/Previous Hack The Box",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",
