@@ -53,18 +53,16 @@
             "id": "b21803cbe83e2794",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "mk-space",
               "state": {
-                "file": "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
-                "mode": "source",
-                "source": false
+                "path": "ECE/Cloud"
               },
               "icon": "lucide-file",
-              "title": "Environment Hack The Box"
+              "title": "Cloud"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -263,11 +261,18 @@
       "graph:Open graph view": false
     }
   },
-  "active": "786252c0a701e6e8",
+  "active": "e23e31920d569dca",
   "lastOpenFiles": [
-    "Linux/Capabilities.md",
-    "CTF/Hack The Box/Write Up/Soulmate.md",
+    "ECE/Cloud/AWS/AWS.md",
+    "ECE/Cloud/AWS",
+    "ECE/Cloud/Cloud.md",
+    "ECE/Cloud",
+    "ECE/ECE.md",
+    "ECE/Untitled.md",
     "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
+    "CTF/Hack The Box/Write Up/Soulmate.md",
+    "Web/Word List.md",
+    "Linux/Capabilities.md",
     "Linux/Command.md",
     "Assets/CTF/Hack The Box/Write Up/Soulmate",
     "Assets/CTF/Hack The Box/Write Up/Soulmate/IMG-20250907234052613.png",
@@ -282,7 +287,6 @@
     "Assets/Pasted image 20250901001838.png",
     "CTF/Hack The Box/Write Up/Write Up.md",
     "CTF/Hack The Box/Write Up/.md",
-    "Web/Word List.md",
     "Web/Tools.md",
     "CTF/Hack The Box/Write Up/CodeTwo Hack The Box.md",
     "Linux/UID.md",
@@ -296,20 +300,15 @@
     "CTF/Hack The Box/Achievement.md",
     "2025-08-30.md",
     "Linux/Privilege Escalation.md",
-    "Linux/Analyse.md",
     "Assets/Pasted image 20250825232529.png",
     "Assets/Pasted image 20250825230713.png",
     "Assets/Pasted image 20250825230708.png",
-    "ECE/ECE.md",
     "ECE",
-    "CTF/Hack The Box/Hack The Box.md",
     "test",
     "Assets/CTF/Hack The Box/Achievement",
     "Assets/CTF/Hack The Box/Write Up/Environment Hack The Box",
     "Assets/CTF/Hack The Box/Write Up/CodeTwo Hack The Box",
     "Assets/CTF/Hack The Box/Write Up/Previous Hack The Box",
-    "Assets/CTF/Hack The Box/Write Up",
-    "CTF/Hack The Box/Write Up",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",
