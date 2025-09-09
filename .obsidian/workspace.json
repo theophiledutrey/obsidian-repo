@@ -61,8 +61,7 @@
               "title": "Cloud"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -116,7 +115,7 @@
             }
           },
           {
-            "id": "e23e31920d569dca",
+            "id": "fdaf3f9fbdcd4f33",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -261,8 +260,9 @@
       "graph:Open graph view": false
     }
   },
-  "active": "e23e31920d569dca",
+  "active": "4d304ee0a6a34bfb",
   "lastOpenFiles": [
+    "ECE/Cloud/Untitled.md",
     "ECE/Cloud/AWS/AWS.md",
     "ECE/Cloud/AWS",
     "ECE/Cloud/Cloud.md",
@@ -299,7 +299,6 @@
     "Web/Web.md",
     "CTF/Hack The Box/Achievement.md",
     "2025-08-30.md",
-    "Linux/Privilege Escalation.md",
     "Assets/Pasted image 20250825232529.png",
     "Assets/Pasted image 20250825230713.png",
     "Assets/Pasted image 20250825230708.png",
