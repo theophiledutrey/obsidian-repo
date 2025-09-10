@@ -56,7 +56,8 @@
     "//ECE",
     "//ECE/ECE/Cloud",
     "//ECE/ECE/SecuSI",
-    "//ECE/ECE/Cloud/ECE/Cloud/AWS"
+    "//ECE/ECE/Cloud/ECE/Cloud/AWS",
+    "//ECE/ECE/SecuSI/ECE/SecuSI/Stego"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
@@ -68,6 +69,8 @@
     "_assets",
     "_blocks"
   ],
+  "newFileLocation": "root",
+  "newFileFolderPath": "",
   "inlineBacklinks": false,
   "inlineContext": true,
   "inlineBacklinksExpanded": false,
