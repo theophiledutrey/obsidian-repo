@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/UID.md",
+                "file": "ECE/SecuSI/Stego/Cours 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "UID"
+              "title": "Cours 1"
             }
           },
           {
@@ -260,21 +260,28 @@
       "graph:Open graph view": false
     }
   },
-  "active": "e2aa3986dab62d71",
+  "active": "4d304ee0a6a34bfb",
   "lastOpenFiles": [
+    "ECE/Cloud/AWS/Cours 1.md",
+    "ECE/SecuSI/Stego/Cours 1.md",
+    "ECE/SecuSI/Stego/Stego.md",
+    "ECE/SecuSI/Stego",
+    "ECE/SecuSI/Stego.md",
+    "ECE/SecuSI/SecuSI.md",
     "Linux/UID.md",
+    "ECE/SecuSI",
+    "Web/Word List.md",
+    "CTF/Hack The Box/Write Up/Soulmate.md",
+    "ECE/Cloud/Cloud.md",
     "ECE/Cloud/Entra ID/Entra ID.md",
     "ECE/Cloud/Entra ID",
     "ECE/Cloud/Untitled.md",
     "ECE/Cloud/AWS/AWS.md",
     "ECE/Cloud/AWS",
-    "ECE/Cloud/Cloud.md",
     "ECE/Cloud",
     "ECE/ECE.md",
     "ECE/Untitled.md",
     "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
-    "CTF/Hack The Box/Write Up/Soulmate.md",
-    "Web/Word List.md",
     "Linux/Capabilities.md",
     "Linux/Command.md",
     "Assets/CTF/Hack The Box/Write Up/Soulmate",
@@ -295,19 +302,12 @@
     "Infra/Samba.md",
     "Infra/Github.md",
     "Pentest Tools/Nmap.md",
-    "Pentest Tools/Link.md",
-    "Pentest Tools/Crypto.md",
-    "Pentest Tools/Metasploit.md",
-    "Web/Web.md",
-    "CTF/Hack The Box/Achievement.md",
     "Assets/Pasted image 20250825232529.png",
     "Assets/Pasted image 20250825230713.png",
     "Assets/Pasted image 20250825230708.png",
     "ECE",
     "test",
     "Assets/CTF/Hack The Box/Achievement",
-    "Assets/CTF/Hack The Box/Write Up/Environment Hack The Box",
-    "Assets/CTF/Hack The Box/Write Up/CodeTwo Hack The Box",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",

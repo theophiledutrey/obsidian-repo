@@ -54,7 +54,9 @@
     "//Pentest Tools",
     "/",
     "//ECE",
-    "//ECE/ECE/Cloud"
+    "//ECE/ECE/Cloud",
+    "//ECE/ECE/SecuSI",
+    "//ECE/ECE/Cloud/ECE/Cloud/AWS"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
