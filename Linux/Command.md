@@ -102,6 +102,9 @@
 - `git checkout <commit_id>^ -- <path>` : restore the state just before that commit (useful for rename/deletion).  
 - `git restore --source=<commit_id> -- <path>` : modern variant to restore a file/folder.  
 - `git remote -v` : show configured remotes.  
+- `git fetch origin`: Retrieve all information of remote repo 
+- `git reset --hard origin/master`: Reset the local repository to match the remote repository
+
 
 
 ## Curl

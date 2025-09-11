@@ -54,12 +54,12 @@
     "//Pentest Tools",
     "/",
     "//ECE",
-    "//ECE/ECE/Cloud",
-    "//ECE/ECE/SecuSI",
     "//ECE/ECE/Cloud/ECE/Cloud/AWS",
     "//ECE/ECE/SecuSI/ECE/SecuSI/Stego",
     "//CTF",
-    "//ECE/ECE/SecuSI/ECE/SecuSI/Stego/ECE/SecuSI/Stego/Lab"
+    "//ECE/ECE/SecuSI/ECE/SecuSI/Stego/ECE/SecuSI/Stego/Lab",
+    "//ECE/ECE/SecuSI/ECE/SecuSI/Stego/ECE/SecuSI/Stego/Lesson",
+    "//ECE/ECE/SecuLinux"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
@@ -71,8 +71,6 @@
     "_assets",
     "_blocks"
   ],
-  "newFileLocation": "root",
-  "newFileFolderPath": "",
   "inlineBacklinks": false,
   "inlineContext": true,
   "inlineBacklinksExpanded": false,
