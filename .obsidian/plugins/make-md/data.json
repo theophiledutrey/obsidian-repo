@@ -47,25 +47,23 @@
     "//Write up/Write up/Hack The Box",
     "//CTF/CTF/Hack The Box/CTF/Hack The Box/Write Up",
     "//Assets/Assets/CTF/Assets/CTF/Hack The Box/Assets/CTF/Hack The Box/Write Up",
-    "//Infra",
-    "//Linux",
     "//CTF/CTF/Hack The Box",
-    "//Web",
-    "//Pentest Tools",
     "/",
     "//ECE",
     "//ECE/ECE/Cloud/ECE/Cloud/AWS",
     "//ECE/ECE/SecuSI/ECE/SecuSI/Stego",
-    "//CTF",
     "//ECE/ECE/SecuSI/ECE/SecuSI/Stego/ECE/SecuSI/Stego/Lab",
     "//ECE/ECE/SecuSI/ECE/SecuSI/Stego/ECE/SecuSI/Stego/Lesson",
-    "//ECE/ECE/SecuLinux"
+    "//ECE/ECE/SecuLinux",
+    "//Linux"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
   "suppressedWarnings": [],
   "spaceSubFolder": ".space",
-  "hiddenFiles": [],
+  "hiddenFiles": [
+    "Tags"
+  ],
   "hiddenExtensions": [
     ".mdb",
     "_assets",
