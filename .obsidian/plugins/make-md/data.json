@@ -58,7 +58,9 @@
     "//ECE/ECE/SecuWindows",
     "//Assets",
     "//Assets/Assets/CTF",
-    "//Linux"
+    "//Linux",
+    "//ECE/ECE/SecuWindows/ECE/SecuWindows/Lesson",
+    "//ECE/ECE/SecuWindows/ECE/SecuWindows/Lab"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
