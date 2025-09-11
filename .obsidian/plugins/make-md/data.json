@@ -54,7 +54,10 @@
     "//ECE/ECE/SecuSI/ECE/SecuSI/Stego",
     "//ECE/ECE/SecuSI/ECE/SecuSI/Stego/ECE/SecuSI/Stego/Lab",
     "//ECE/ECE/SecuSI/ECE/SecuSI/Stego/ECE/SecuSI/Stego/Lesson",
-    "//ECE/ECE/SecuLinux",
+    "//CTF",
+    "//ECE/ECE/SecuWindows",
+    "//Assets",
+    "//Assets/Assets/CTF",
     "//Linux"
   ],
   "expandFolderOnClick": true,
