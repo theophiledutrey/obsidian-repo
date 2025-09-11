@@ -249,8 +249,11 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "e2aa3986dab62d71",
+  "active": "0f8fe36509dca0f0",
   "lastOpenFiles": [
+    "Assets/ECE/SecuWindows/Lab/Lab 1",
+    "Assets/ECE/SecuWindows/Lab",
+    "Assets/ECE/SecuWindows/Lab/Lab 1/IMG-20250911165851938.png",
     "ECE/SecuWindows/Lab/Lab 1.md",
     "ECE/SecuWindows/Lab/Lab.md",
     "ECE/SecuWindows/Lesson/Lesson.md",
@@ -282,7 +285,6 @@
     "Web/Word List.md",
     "Linux/Privilege Escalation.md",
     "Infra/Samba.md",
-    "Assets/Linux security_part 1_Grp01_v2.0.pdf",
     "ECE/SecuLinux/SecuLinux.md",
     "ECE/SecuSI/Stego/Lesson/Lesson 1 .md",
     "ECE/SecuSI/Stego/Lab/Lab 1.md",
@@ -293,10 +295,8 @@
     "Pentest Tools/Nmap.md",
     "Pentest Tools/Metasploit.md",
     "Pentest Tools/Link.md",
-    "Pentest Tools/Crypto.md",
     "Assets/CTF/Hack The Box/Write Up/Soulmate/IMG-20250907234052613.png",
     "Assets/CTF/Hack The Box/Write Up/Previous Hack The Box/IMG-20250825192313920.png",
-    "Assets/CTF/Hack The Box/Write Up/Previous Hack The Box/IMG-20250825192313844.png",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",
