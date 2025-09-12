@@ -25,13 +25,40 @@ Using the network capture filtered on the SAMR frames, list the SAM remote proce
 ## Task 2: Remediate weak SAM remote configuration
 ### Questions
 What settings did you apply to fix the vulnerable environment? List all changes you performed on the configuration. Then, for each parameter, explain why you defined it.
+
 ![[IMG-20250912110216267.png]]
+
+1. Network access: Do not allow anonymous enumeration of SAM accounts and shares
+
+Cette option empêche les connexions anonymes de lister les comptes et partages via le service SAM/LSASS. Sans cela, un attaquant pourrait facilement récolter des usernames valides pour lancer des attaques par force brute ou par dictionnaire.
 
 ![[IMG-20250912110152513.png]]
 
+
+
+2. Network access: Let Everyone permissions apply to anonymous users
+
+Par défaut, le groupe spécial Everyone incluait aussi les connexions anonymes. En désactivant ce paramètre, on évite que des utilisateurs anonymes héritent de permissions prévues pour des comptes authentifiés, réduisant fortement la surface d’attaque.
+
 ![[IMG-20250912110310830.png]]
 
+
+
+3. Network access: Restrict anonymous access to Named Pipes and Shares
+
+Les pipes nommés sont souvent utilisés par des services Windows (par ex. SMB, RPC). Les bloquer aux anonymes empêche l’ouverture de canaux IPC (Inter-Process Communication) non authentifiés, qui pourraient servir à des escalades ou de l’énumération.
+
 ![[IMG-20250912110432834.png]]
+
+
+
+4. Suppression de "ANONYMOUS LOGON" du groupe “Pre-Windows 2000 Compatible Access”
+
+Sur un contrôleur de domaine, la base SAM est en réalité l’ADDS. Ici, les sessions anonymes étaient autorisées via l’appartenance du compte “ANONYMOUS LOGON” à ce groupe hérité pour compatibilité avec d’anciens systèmes. En retirant ce membre, on empêche toute session anonyme d’accéder aux ressources AD.
+
+![[IMG-20250912111621792.png]]
+
+![[IMG-20250912111634788.png]]
 
 
 
