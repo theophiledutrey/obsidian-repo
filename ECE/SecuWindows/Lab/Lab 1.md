@@ -1,8 +1,8 @@
-‍ Student name: ……………………………………………………………………………………………………………………………....
-️ Student class: ……………………………………………………………………………………………………………………………......
- Date: ……………………………………………………………………………………………………………………………....................
+‍ Student name: Théophile Dutrey, Arthur Berret 
+️ Student class: Cyber Groupe 1
+ Date: 12/09/2025
 
-## Exercise 1 - Prevent anonymous enumeration of accounts
+# Exercise 1 - Prevent anonymous enumeration of accounts
 ## Task 1: Assess the existing
 ### Questions
 What nmap commands did you use to perform the enumeration?
@@ -80,41 +80,38 @@ Les requêtes anonymes sur le port SMB (445/tcp) sont bien interceptées.
 Les paramètres de GPO appliqués (interdiction d’énumération SAM, exclusion des anonymes du groupe Everyone, restriction des pipes nommés, suppression de ANONYMOUS LOGON du groupe Pre-Windows 2000 Compatible Access) empêchent désormais l’énumération anonyme.
 
 La réponse du serveur ne fournit plus d’informations exploitables à un attaquant (comme la liste des comptes utilisateurs de domaine), ce qui confirme que la configuration vulnérable a bien été corrigée.
-## Exercise 2 - Fill-in-the-gaps – code a simplified whoami utility
+# Exercise 2 - Fill-in-the-gaps – code a simplified whoami utility
 
 ## Task 1: Open the project
 
 ![[IMG-20250912114424105.png]]
 
 ## Task 2: Fill missing code parts
+
 ### Questions
 Attach the whoami.cpp file with your answer sheet.
+![[IMG-20250912122322275.png]]
+Cet extrait montre l’ouverture du jeton de sécurité du processus courant. OpenProcessToken(hThisProcess, TOKEN_QUERY, &hMyToken) (après GetCurrentProcess()) rend un handle (hMyToken) qui permettra de lire les informations du jeton (groupes, SIDs, etc.) via GetTokenInformation. Le droit TOKEN_QUERY suffit ici car on ne modifie rien, on ne fait que lister.
 
-## Exercise 3 - Observe the effects of UAC
+![[IMG-20250912122349437.png]]
+
+Ici, on convertit le SID de chaque groupe du jeton en libellés humains avec LookupAccountSidW. L’appel utilise uniquement les variables imposées : le SID courant pTokenGroups->Groups[i].Sid, les buffers wszName et wszDomain (tailles dwNameSize, dwDomainSize), et retourne le type dans sidType. En cas de succès, on peut afficher Domaine\Nom du groupe au lieu d’un SID brut.
+
+![[IMG-20250912122637475.png]]
+
+Le programme liste les groupes du jeton : on voit des noms traduits (ex. NORTHWIND\Domain Users, BUILTIN\Users, NT AUTHORITY\Authenticated Users) avec leurs SIDs. Cela prouve que l’ouverture du jeton, l’énumération (GetTokenInformation) et la traduction SID→nom fonctionnent correctement. Le code de sortie 0 confirme une exécution sans erreur.
+# Exercise 3 - Observe the effects of UAC
 ## Task 1: Token of administrator accounts
 ### Questions
 Using only the whoami output, how can you tell if the current user is the built-in Administrator account?
+On ne se base pas sur le nom du compte, mais sur son SID. L’Administrateur intégré a toujours le RID 500 : le SID se termine donc par …-500 (ex. S-1-5-21-<DomainOrMachineSID>-500). Si le SID affiché par whoami /all se termine par 500, l’utilisateur courant est le compte Administrateur intégré, même s’il a été renommé.
+
 Is the current user the built-in Administrator account?
+Non. Dans la sortie whoami /all fournie, le SID de l’utilisateur se termine par …-1001 (et non …-500). Cela signifie qu’il s’agit d’un autre compte (ici “karen”), pas du compte Administrateur intégré.
+
 From the whoami output, what is the meaning of the "Group used for deny only" attribute for the BUILTIN\Administrators alias?
+Cet attribut indique que l’utilisateur est bien membre de BUILTIN\Administrators, mais que, dans ce jeton, ce groupe est désactivé pour les autorisations (token UAC “restreint”). Son SID ne sert qu’à évaluer des règles deny et ne donne aucun droit d’administrateur tant que le processus n’est pas élevé (“Run as administrator”), cas dans lequel le groupe apparaîtra comme Enabled group.
 
-## Task 2: Token of administrator accounts
-### Questions
-Explain why attempting to access the folder resulted in a dialog box informing you that don't have access to the folder.
-What happened to the folder's DACL when you clicked on Continue?
-Explain why the change in the DACL was necessary
-
-## Task 3: Token of a built-in Administrator account
-### Questions
-From the whoami output, how can you tell that the current user is a built-in Administrator user account?
-How the BUILTIN\Administrators group is processed differently for this user?
-## Exercise 4 - Configure a service to use a gMSA
-## Task 2: Create a gMSA account in the Active Directory domain
-### Questions
-Copy-paste here the commands used to accomplish the task and their respective output. For each command, explain its role and why it is needed.
-
-## Task 3: Assign gMSA to the IIS application pool
-### Questions
-Explain the benefits of using a gMSA instead of a standard user account or the computer's identity.
 
 
 
