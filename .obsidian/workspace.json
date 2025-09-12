@@ -11,12 +11,14 @@
             "id": "4d304ee0a6a34bfb",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Assets/Pasted image 20250825232529.png"
+                "file": "Pentest Tools/Link.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20250825232529"
+              "icon": "lucide-file",
+              "title": "Link"
             }
           },
           {
@@ -25,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ECE/SecuWindows/Lab/Lab 1.md",
+                "file": "Linux/Command.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lab 1"
+              "title": "Command"
             }
           },
           {
@@ -251,11 +253,17 @@
   },
   "active": "0f8fe36509dca0f0",
   "lastOpenFiles": [
+    "Web/Word List.md",
+    "Pentest Tools/Link.md",
+    "Linux/Command.md",
+    "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
+    "CTF/Hack The Box/Write Up/CodeTwo Hack The Box.md",
+    "Assets/Pasted image 20250825232529.png",
+    "Web/Tools.md",
+    "ECE/SecuWindows/Lab/Lab 1.md",
     "Assets/ECE/SecuWindows/Lab/Lab 1/IMG-20250911174849949.png",
     "Assets/ECE/SecuWindows/Lab/Lab 1/IMG-20250911174136867.png",
-    "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
     "Linux/UID.md",
-    "ECE/SecuWindows/Lab/Lab 1.md",
     "Assets/ECE/SecuWindows/Lab/Lab 1/IMG-20250911173038359.png",
     "Assets/ECE/SecuWindows/Lab/Lab 1",
     "Assets/ECE/SecuWindows/Lab",
@@ -270,21 +278,17 @@
     "ECE/SecuWindows/Lesson",
     "ECE/SecuWindows/Lab",
     "ECE/SecuSI/Stego/Stego.md",
-    "Assets/Pasted image 20250825232529.png",
     "ECE/SecuLinux/Lesson 1.md",
     "Assets/Pasted image 20250901005742.png",
     "Assets/Pasted image 20250901005443.png",
     "Assets/Pasted image 20250901005424.png",
     "Assets/Pasted image 20250901005313.png",
     "Assets/Pasted image 20250901005258.png",
-    "Assets/Pasted image 20250901001838.png",
     "Assets/ECE/SecuWindows/Lesson/Lesson 1/IMG-20250911164743827.pdf",
     "Assets/Windows Security - Module 1 - Section 1.pptx",
     "ECE/SecuWindows/SecuWindows.md",
     "ECE/Cloud/Cloud.md",
     "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
-    "Linux/Command.md",
-    "Web/Word List.md",
     "Linux/Privilege Escalation.md",
     "Infra/Samba.md",
     "ECE/SecuLinux/SecuLinux.md",
@@ -293,10 +297,8 @@
     "ECE/SecuSI/Stego/Cours 1.md",
     "conflict-files-obsidian-git.md",
     "Web/Web.md",
-    "Web/Tools.md",
     "Pentest Tools/Nmap.md",
     "Pentest Tools/Metasploit.md",
-    "Pentest Tools/Link.md",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",

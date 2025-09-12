@@ -106,7 +106,6 @@
 - `git reset --hard origin/master`: Reset the local repository to match the remote repository
 
 
-
 ## Curl
 
 - `curl <url>` : Perform a simple GET request.
@@ -144,3 +143,38 @@
 - `echo -n "GET / HTTP/1.1\r\nHost: target\r\n\r\n" | nc target 80` : Manual HTTP request with netcat.
 - `echo password | sudo -S command` : Provide password to sudo from stdin.
 - `echo -n "68656c6c6f" | xxd -r -p` : Convert hex string to binary.
+
+## Rights & Permissions
+
+- `ls -l` : List files with their permissions.
+- `chmod 644 file.txt` : Set file permissions using octal notation (`rw-r--r--`).
+- `chmod u+x script.sh` : Add execute permission to the user (owner).
+- `chmod g-w file.txt` : Remove write permission from the group.
+- `chmod o-r file.txt` : Remove read permission from others.
+- `chown user1 file.txt` : Change the owner of a file to `user1`.
+- `chown user1:group1 file.txt` : Change the owner to `user1` and group to `group1`.
+- `chgrp group1 file.txt` : Change only the group of a file.
+- `umask 022` : Define the default permission mask for newly created files (here, files will be `644`).
+- `getfacl file.txt` : Show ACL (Access Control List) entries for a file.
+- `setfacl -m u:user1:rw file.txt` : Give `user1` read & write permissions on `file.txt` (without affecting others).
+- `setfacl -m g:group1:r file.txt` : Give `group1` read-only access.
+- `setfacl -x u:user1 file.txt` : Remove ACL entry for `user1`.
+- `setfacl -R -m u:user1:rwx folder/` : Recursively give full access (rwx) to `user1` on a folder.
+- `setfacl -m d:u:user1:rwx folder/` : Set default ACLs so all new files in the folder inherit these rights.
+
+## User Management
+
+- `adduser alice` : Create a new user `alice` (Debian/Ubuntu style).
+- `useradd -m alice` : Create a new user `alice` with a home directory (RHEL/Fedora style).
+- `passwd alice` : Set or change the password for `alice`.
+- `usermod -aG sudo alice` : Add `alice` to the `sudo` group (Debian/Ubuntu).
+- `usermod -aG wheel alice` : Add `alice` to the `wheel` group (RHEL/Fedora).
+- `usermod -l newname alice` : Change the username from `alice` to `newname`.
+- `usermod -d /new/home alice` : Change the home directory of `alice`.
+- `deluser alice` : Delete the user `alice` (Debian/Ubuntu).
+- `userdel -r alice` : Delete the user `alice` and remove their home directory (RHEL/Fedora).
+- `groupadd devs` : Create a new group called `devs`.
+- `usermod -aG devs alice` : Add `alice` to the `devs` group.
+- `gpasswd -d alice devs` : Remove `alice` from the `devs` group.
+- `getent passwd alice` : Display account information from `/etc/passwd`.
+- `getent group devs` : Display information about the `devs` group.
