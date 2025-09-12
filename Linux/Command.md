@@ -80,6 +80,12 @@
 
 - `chmod 600 id_rsa`: Restricts permissions so only the owner can read/write the private key (600: 110 000 000 = rw- --- ---).
 - `ssh -i id_rsa root@<ip>`: Connect as root using the private key.
+- `ssh-keygen -t rsa -b 4096 -C "alice@example.com"` : Generate a new SSH key pair (public/private).
+- `ssh-copy-id alice@<server_ip>` : Copy the public key to the remote server for passwordless login.
+- `mkdir -p /home/alice/.ssh && chmod 700 /home/alice/.ssh` : Create the `.ssh` directory with correct permissions.
+- `echo "<public_key>" >> /home/alice/.ssh/authorized_keys` : Manually add a public key to `alice`’s authorized keys.
+- `chmod 600 /home/alice/.ssh/authorized_keys` : Set correct permissions for the `authorized_keys` file.
+- `ssh -i id_rsa alice@<server_ip>` : Connect to the server as `alice` using the private key.
 
 ## Github
 
