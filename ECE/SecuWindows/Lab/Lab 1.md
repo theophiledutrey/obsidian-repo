@@ -54,7 +54,7 @@ Les pipes nommés sont souvent utilisés par des services Windows (par ex. SMB, 
 
 4. Suppression de "ANONYMOUS LOGON" du groupe “Pre-Windows 2000 Compatible Access”
 
-Sur un contrôleur de domaine, la base SAM est en réalité l’ADDS. Ici, les sessions anonymes étaient autorisées via l’appartenance du compte “ANONYMOUS LOGON” à ce groupe hérité pour compatibilité avec d’anciens systèmes. En retirant ce membre, on empêche toute session anonyme d’accéder aux ressources AD.
+Sur un contrôleur de domaine, la base SAM est en réalité l’ADDS. Ici, les sessions anonymes étaient autorisées via l’appartenance du compte “ANONYMOUS LOGON” à ce groupe hérité pour compatibilité avec d’anciens systèmes. En retirant ce membre, on empêche toute session anonyme d’accéder aux ressources AD. 
 
 ![[IMG-20250912111621792.png]]
 
@@ -65,7 +65,27 @@ Sur un contrôleur de domaine, la base SAM est en réalité l’ADDS. Ici, les s
 ## Task 3: Assess remediated configuration
 ### Questions
 Using the network capture, explain how the server is now refusing anonymous enumeration of SAM accounts.
+
+![[IMG-20250912113803202.png]]
+Dans cette capture, un scan Nmap avec le script smb-enum-users a été exécuté sur le serveur WIN-SRV1 en utilisant une connexion anonyme (null session).
+
+Avant la remédiation, ce type de requête permettait d’énumérer les comptes du SAM et retournait la liste complète des utilisateurs locaux ou de domaine.
+
+Dans le résultat affiché ici, on constate que le serveur ne retourne plus la liste des utilisateurs : seules les entrées intégrées (Administrator, Guest, DefaultAccount, WDAGUtilityAccount) apparaissent, et toutes les tentatives d’accès aux comptes de domaine échouent.
+
+Cela démontre que :
+
+Les requêtes anonymes sur le port SMB (445/tcp) sont bien interceptées.
+
+Les paramètres de GPO appliqués (interdiction d’énumération SAM, exclusion des anonymes du groupe Everyone, restriction des pipes nommés, suppression de ANONYMOUS LOGON du groupe Pre-Windows 2000 Compatible Access) empêchent désormais l’énumération anonyme.
+
+La réponse du serveur ne fournit plus d’informations exploitables à un attaquant (comme la liste des comptes utilisateurs de domaine), ce qui confirme que la configuration vulnérable a bien été corrigée.
 ## Exercise 2 - Fill-in-the-gaps – code a simplified whoami utility
+
+## Task 1: Open the project
+
+![[IMG-20250912114424105.png]]
+
 ## Task 2: Fill missing code parts
 ### Questions
 Attach the whoami.cpp file with your answer sheet.
