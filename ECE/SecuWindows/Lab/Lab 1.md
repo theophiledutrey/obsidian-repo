@@ -25,6 +25,15 @@ Using the network capture filtered on the SAMR frames, list the SAM remote proce
 ## Task 2: Remediate weak SAM remote configuration
 ### Questions
 What settings did you apply to fix the vulnerable environment? List all changes you performed on the configuration. Then, for each parameter, explain why you defined it.
+![[IMG-20250912110216267.png]]
+
+![[IMG-20250912110152513.png]]
+
+![[IMG-20250912110310830.png]]
+
+![[IMG-20250912110432834.png]]
+
+
 
 ## Task 3: Assess remediated configuration
 ### Questions

@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/Command.md",
+                "file": "ECE/SecuWindows/Lab/Lab 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Command"
+              "title": "Lab 1"
             }
           },
           {
@@ -253,9 +253,13 @@
   },
   "active": "0f8fe36509dca0f0",
   "lastOpenFiles": [
+    "Assets/ECE/SecuWindows/Lab/Lab 1/IMG-20250912110432834.png",
+    "Assets/ECE/SecuWindows/Lab/Lab 1/IMG-20250912110310830.png",
+    "Assets/ECE/SecuWindows/Lab/Lab 1/IMG-20250912110216267.png",
+    "Assets/ECE/SecuWindows/Lab/Lab 1/IMG-20250912110152513.png",
+    "Linux/Command.md",
     "Web/Word List.md",
     "Pentest Tools/Link.md",
-    "Linux/Command.md",
     "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
     "CTF/Hack The Box/Write Up/CodeTwo Hack The Box.md",
     "Assets/Pasted image 20250825232529.png",
@@ -281,9 +285,6 @@
     "ECE/SecuLinux/Lesson 1.md",
     "Assets/Pasted image 20250901005742.png",
     "Assets/Pasted image 20250901005443.png",
-    "Assets/Pasted image 20250901005424.png",
-    "Assets/Pasted image 20250901005313.png",
-    "Assets/Pasted image 20250901005258.png",
     "Assets/ECE/SecuWindows/Lesson/Lesson 1/IMG-20250911164743827.pdf",
     "Assets/Windows Security - Module 1 - Section 1.pptx",
     "ECE/SecuWindows/SecuWindows.md",
@@ -298,7 +299,6 @@
     "conflict-files-obsidian-git.md",
     "Web/Web.md",
     "Pentest Tools/Nmap.md",
-    "Pentest Tools/Metasploit.md",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",

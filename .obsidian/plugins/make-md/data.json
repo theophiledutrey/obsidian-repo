@@ -55,13 +55,13 @@
     "//ECE/ECE/SecuSI/ECE/SecuSI/Stego/ECE/SecuSI/Stego/Lab",
     "//ECE/ECE/SecuSI/ECE/SecuSI/Stego/ECE/SecuSI/Stego/Lesson",
     "//CTF",
-    "//ECE/ECE/SecuWindows",
     "//Assets/Assets/CTF",
     "//ECE/ECE/SecuWindows/ECE/SecuWindows/Lesson",
     "//ECE/ECE/SecuWindows/ECE/SecuWindows/Lab",
     "//Web",
     "//Pentest Tools",
-    "//Linux"
+    "//Linux",
+    "//ECE/ECE/SecuWindows"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
