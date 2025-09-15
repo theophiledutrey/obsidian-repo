@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
+                "file": "ECE/Cloud/AWS/Lesson 2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Environment Hack The Box"
+              "title": "Lesson 2"
             }
           }
         ],
@@ -253,10 +253,13 @@
   },
   "active": "9a3ee7443a7a7859",
   "lastOpenFiles": [
+    "ECE/Cloud/AWS/Lesson 1.md",
+    "ECE/Cloud/AWS/Lesson 2.md",
+    "ECE/Cloud/Cloud.md",
+    "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
     "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
     "CTF/Hack The Box/Write Up/Soulmate Hack The Box.md",
     "CTF/Hack The Box/Write Up/Guardian Hack The Box.md",
-    "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
     "CTF/Hack The Box/Write Up/CodeTwo Hack The Box.md",
     "Linux/UID.md",
     "Assets/CTF/Hack The Box/Write Up/Soulmate Hack The Box",
@@ -290,15 +293,12 @@
     "ECE/SecuLinux/Lesson 1.md",
     "Assets/ECE/SecuWindows/Lesson/Lesson 1/IMG-20250911164743827.pdf",
     "ECE/SecuWindows/SecuWindows.md",
-    "ECE/Cloud/Cloud.md",
     "Linux/Privilege Escalation.md",
     "Infra/Samba.md",
     "ECE/SecuLinux/SecuLinux.md",
     "ECE/SecuSI/Stego/Lesson/Lesson 1 .md",
     "ECE/SecuSI/Stego/Lab/Lab 1.md",
     "ECE/SecuSI/Stego/Cours 1.md",
-    "conflict-files-obsidian-git.md",
-    "Web/Web.md",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",

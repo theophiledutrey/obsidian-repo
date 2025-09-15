@@ -61,7 +61,8 @@
     "//Web",
     "//Pentest Tools",
     "//Linux",
-    "//ECE/ECE/SecuWindows"
+    "//ECE/ECE/SecuWindows",
+    "//ECE/ECE/Cloud"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
