@@ -163,3 +163,137 @@ Fonctionnalités :
 - **AWS Cost Explorer** : analyse des coûts.  
 - **AWS Budgets** : suivi des budgets.  
 - **Rapports d’utilisation et de coûts**  
+
+---
+
+## Section 4 : Outils de gestion des coûts et facturation
+
+### Tableau de bord de facturation AWS
+
+> Permet de consulter l’état de vos dépenses AWS en cours et de suivre les tendances.
+
+- **Récapitulatif des dépenses** : montre combien a été dépensé le mois précédent, estime les coûts actuels et prédit les dépenses futures.  
+- **Dépenses mensuelles par service** : indique la part de chaque service dans les coûts totaux.  
+
+### Outils disponibles
+
+- **AWS Budgets**  
+- **Rapport d’utilisation et de coût AWS**  
+- **AWS Cost Explorer**  
+
+---
+
+### Factures mensuelles
+
+- Répertorie les coûts encourus par service AWS pour le mois précédent.  
+- Ventilation par **région** et par **compte lié**.  
+- Inclut la facture mensuelle + distribution détaillée des services utilisés.  
+
+---
+
+### AWS Cost Explorer
+
+> Console de visualisation et d’analyse des coûts.  
+
+- Rapports par défaut pour visualiser les coûts et leur évolution.  
+- Prévisions de dépenses (jusqu’à 3 mois).  
+- Analyse des coûts par service, par région, par compte.  
+- Suivi des 13 mois précédents.  
+
+**Fonctionnalités clés :**
+- Identifier les services les plus coûteux.  
+- Repérer les tendances et anomalies.  
+- Prévoir les dépenses à venir.  
+- Filtrer par zone de disponibilité, trafic réseau, comptes les plus actifs.  
+
+---
+
+### AWS Budgets
+
+> Suivi et notifications sur le respect de vos budgets.  
+
+- Basé sur la visualisation des coûts de Cost Explorer.  
+- Permet de créer des **alertes de dépassement** via **Amazon SNS**.  
+- Budgets suivis sur base **mensuelle, trimestrielle ou annuelle**.  
+- Personnalisation des dates de début/fin.  
+
+---
+
+### Rapport d’utilisation et de coût AWS (CUR)
+
+> Fournit une vue complète de l’utilisation AWS.
+
+- Ventilation par **catégorie de service**, **compte**, **utilisateurs**.  
+- Détail jusqu’aux **actions API individuelles**.  
+- Rapports exportables dans **Amazon S3**.  
+- Mise à jour quotidienne possible.  
+
+---
+
+## Section 5 : Support technique AWS
+
+### AWS Support
+
+- Mise à disposition d’**outils et expertise** pour accompagner clients :  
+  - Expérimentation.  
+  - Production.  
+  - Usage stratégique.  
+
+**Types d’assistance :**
+- **Technical Account Manager (TAM)** : conseils et suivi proactif.  
+- **AWS Trusted Advisor** : recommandations de bonnes pratiques (optimisation coûts, sécurité, tolérance aux pannes).  
+- **Support Concierge** : expert en facturation et gestion des comptes.  
+
+---
+
+### Plans de support
+
+- **Basique** :  
+  - Gratuit.  
+  - Accès documentation, Service Health Dashboard, forums.  
+  - Accès limité à Trusted Advisor (6 vérifications).  
+
+- **Développeur** :  
+  - Support pour clients en phase de test.  
+  - Assistance technique, conseils, accélération des déploiements.  
+
+- **Business** :  
+  - 24/7 pour charges de production.  
+  - Assistance sur incidents, diagnostic, optimisation.  
+
+- **Enterprise** :  
+  - 24/7, pour charges critiques.  
+  - Accès TAM, support stratégique, personnalisation avancée.  
+
+---
+
+### Gravité des cas & temps de réponse
+
+| Gravité   | Description                                                                 | Délais de réponse max |
+|-----------|-----------------------------------------------------------------------------|------------------------|
+| **Critique** | Application critique indisponible, activité compromise.                    | 15 min (Enterprise), 1h (Business) |
+| **Urgente**  | Fonction importante affectée.                                              | 1h (Enterprise), 4h (Business) |
+| **Élevée**   | Fonction dégradée ou défaillante.                                          | 4h ou moins |
+| **Normale**  | Fonction non critique avec comportement anormal ou question générale.      | 12 à 24h |
+| **Faible**   | Question générale de développement.                                        | 24h ou moins |
+
+---
+
+## Section 6 : Conclusion du module
+
+### Résumé
+
+- Fondamentaux de la tarification AWS.  
+- Concepts du TCO et comparatif On-premises vs Cloud.  
+- Estimation avec le **Calculateur de prix AWS**.  
+- Suivi via **tableau de bord de facturation, factures, Cost Explorer, Budgets, CUR**.  
+- Support AWS : plans, fonctionnalités, délais de réponse.  
+
+### Objectifs atteints
+
+- Compréhension de la politique de tarification AWS.  
+- Capacité à comparer les coûts et identifier économies.  
+- Connaissance des outils de suivi et optimisation.  
+- Maîtrise des offres de support et de leur utilité selon les besoins.  
+
+---
