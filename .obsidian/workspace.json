@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ECE/Cloud/AWS/Lesson 3.md",
+                "file": "ECE/Cloud/AWS/Lesson 2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lesson 3"
+              "title": "Lesson 2"
             }
           },
           {
@@ -267,8 +267,8 @@
   },
   "active": "9a3ee7443a7a7859",
   "lastOpenFiles": [
-    "ECE/Cloud/AWS/Lesson 2.md",
     "ECE/Cloud/AWS/Lesson 3.md",
+    "ECE/Cloud/AWS/Lesson 2.md",
     "Pentest Tools/Link.md",
     "CTF/Hack The Box/Write Up/Soulmate Hack The Box.md",
     "Linux/Analyse.md",
