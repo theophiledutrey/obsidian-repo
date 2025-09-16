@@ -39,14 +39,12 @@
             "id": "9a3ee7443a7a7859",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "mk-space",
               "state": {
-                "file": "ECE/Cloud/AWS/Lesson 2.md",
-                "mode": "source",
-                "source": false
+                "path": "ECE/Cloud"
               },
               "icon": "lucide-file",
-              "title": "Lesson 2"
+              "title": "Cloud"
             }
           },
           {
@@ -118,7 +116,7 @@
             }
           },
           {
-            "id": "2c5cefa3d7dd68c0",
+            "id": "87a9f583b75291c5",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -267,15 +265,16 @@
   },
   "active": "9a3ee7443a7a7859",
   "lastOpenFiles": [
-    "ECE/Cloud/AWS/QCM.md",
+    "ECE/Cloud/Cloud.md",
+    "ECE/ECE.md",
     "ECE/Cloud/AWS/Lesson 2.md",
+    "ECE/Cloud/AWS/QCM.md",
     "pull.sh",
     "ECE/Cloud/AWS/Lesson 3.md",
     "Pentest Tools/Link.md",
     "CTF/Hack The Box/Write Up/Soulmate Hack The Box.md",
     "Linux/Analyse.md",
     "ECE/Cloud/AWS/Lesson 1.md",
-    "ECE/Cloud/Cloud.md",
     "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
     "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
     "CTF/Hack The Box/Write Up/Guardian Hack The Box.md",
