@@ -118,7 +118,7 @@
             }
           },
           {
-            "id": "dc73534ef7feb3e5",
+            "id": "2c5cefa3d7dd68c0",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -267,8 +267,10 @@
   },
   "active": "9a3ee7443a7a7859",
   "lastOpenFiles": [
-    "ECE/Cloud/AWS/Lesson 3.md",
+    "ECE/Cloud/AWS/QCM.md",
     "ECE/Cloud/AWS/Lesson 2.md",
+    "pull.sh",
+    "ECE/Cloud/AWS/Lesson 3.md",
     "Pentest Tools/Link.md",
     "CTF/Hack The Box/Write Up/Soulmate Hack The Box.md",
     "Linux/Analyse.md",
@@ -307,12 +309,9 @@
     "ECE/SecuWindows/Lab",
     "ECE/SecuSI/Stego/Stego.md",
     "ECE/SecuLinux/Lesson 1.md",
-    "Assets/ECE/SecuWindows/Lesson/Lesson 1/IMG-20250911164743827.pdf",
     "ECE/SecuWindows/SecuWindows.md",
     "Linux/Privilege Escalation.md",
     "Infra/Samba.md",
-    "ECE/SecuLinux/SecuLinux.md",
-    "ECE/SecuSI/Stego/Lesson/Lesson 1 .md",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",

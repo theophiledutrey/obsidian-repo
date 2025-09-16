@@ -69,7 +69,8 @@
   "suppressedWarnings": [],
   "spaceSubFolder": ".space",
   "hiddenFiles": [
-    "Tags"
+    "Tags",
+    "pull.sh"
   ],
   "hiddenExtensions": [
     ".mdb",
