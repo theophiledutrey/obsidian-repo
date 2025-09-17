@@ -1,5 +1,3 @@
-# QCM AWS – Module 2 : Tarification, Facturation & Support
-
 > Chaque question comporte la **réponse correcte**, puis **toutes les autres options fausses avec explication**.
 
 ---
