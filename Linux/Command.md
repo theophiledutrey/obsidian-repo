@@ -184,3 +184,12 @@
 - `gpasswd -d alice devs` : Remove `alice` from the `devs` group.
 - `getent passwd alice` : Display account information from `/etc/passwd`.
 - `getent group devs` : Display information about the `devs` group.
+## SELinux
+
+- `getenforce` : Show current mode (`Enforcing`, `Permissive`, `Disabled`).
+- `setenforce 1` : Enable **Enforcing** mode (block violations).
+- `setenforce 0` : Switch to **Permissive** mode (log violations only).
+- `sestatus` : Display SELinux status and policy details.
+- `ls -Z file` : Show SELinux context of a file.
+- `chcon -t container_file_t file` : Temporarily change context.
+- `restorecon -Rv /path` : Restore default contexts recursively.

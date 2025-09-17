@@ -49,7 +49,6 @@
     "//Assets/Assets/CTF/Assets/CTF/Hack The Box/Assets/CTF/Hack The Box/Write Up",
     "//CTF/CTF/Hack The Box",
     "/",
-    "//ECE",
     "//ECE/ECE/SecuSI/ECE/SecuSI/Stego",
     "//ECE/ECE/SecuSI/ECE/SecuSI/Stego/ECE/SecuSI/Stego/Lab",
     "//ECE/ECE/SecuSI/ECE/SecuSI/Stego/ECE/SecuSI/Stego/Lesson",
@@ -76,8 +75,6 @@
     "_assets",
     "_blocks"
   ],
-  "newFileLocation": "root",
-  "newFileFolderPath": "",
   "inlineBacklinks": false,
   "inlineContext": true,
   "inlineBacklinksExpanded": false,
