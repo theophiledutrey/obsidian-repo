@@ -22,7 +22,7 @@ Un VPC est le conteneur réseau. Il se découpe en sous‑réseaux, chacun ratta
 
 **Insertion du schéma « Topologie de VPC » ici**  
 Collez votre image illustrant deux régions avec VPC, sous-réseaux publics et privés répartis sur plusieurs AZ :
-![[IMG-20250922093852334.png]]
+![[IMG-20250922152223080.png]]
 **Description explicative** : la figure met en évidence qu’un VPC vit dans une région et se décline en plusieurs sous‑réseaux. Chaque sous‑réseau appartient à une AZ précise. Les sous‑réseaux « Public Subnet » accueillent les ressources exposées (par exemple les équilibreurs de charge) tandis que les « Private Subnet » hébergent les composants internes. La redondance vient du fait que l’on réplique ces sous‑réseaux sur au moins deux AZ.
 
 ### 3. Adressage IP du VPC et des sous‑réseaux
@@ -44,7 +44,7 @@ Au moment de la création, vous assignez au VPC un **bloc CIDR IPv4** qui déter
 
 **Insertion du schéma « Bloc CIDR et taille du VPC » ici**  
 Collez votre image montrant la relation entre le préfixe et le nombre d’adresses (ex. /28 = 16, /27 = 32, /16 = 65 536) :
-![[IMG-20250922093925603.png]]
+![[IMG-20250922152223176.png]]
 
 **Description explicative** : la figure illustre que plus le préfixe est grand (ex. /28), plus l’espace d’adresses est petit ; à l’inverse, un préfixe court (ex. /16) donne un vaste espace. Ce choix doit anticiper la croissance (nombre de sous‑réseaux, machines, endpoints) sans gaspiller d’adresses.
 

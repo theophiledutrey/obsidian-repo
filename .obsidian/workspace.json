@@ -11,13 +11,44 @@
             "id": "68735edd8099a02b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "ECE/Cloud/AWS/QCM.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "QCM"
+            }
+          },
+          {
+            "id": "209e0ace6ac8b014",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ECE/Cloud/AWS/Lesson/Lesson 3.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Lesson 3"
+            }
+          },
+          {
+            "id": "b0cff76fe74a5980",
+            "type": "leaf",
+            "state": {
+              "type": "mk-space",
+              "state": {
+                "path": "ECE"
+              },
+              "icon": "lucide-file",
+              "title": "ECE"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -218,8 +249,17 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "68735edd8099a02b",
+  "active": "ac84125c3f9464c8",
   "lastOpenFiles": [
+    "ECE/ECE.md",
+    "ECE/Cloud/AWS/QCM.md",
+    "ECE/Cloud/AWS/Lesson/Lesson 5.md",
+    "ECE/Cloud/AWS/Lesson/Lesson 2.md",
+    "Assets/ECE/Cloud/AWS/Lesson/Lesson 5",
+    "Assets/ECE/Cloud/AWS/Lesson",
+    "ECE/Cloud/AWS/Lesson/Lesson 3.md",
+    "ECE/Cloud/AWS/Lesson/Lesson.md",
+    "ECE/Cloud/AWS/Lesson",
     "ECE/Cloud/AWS/Lab/Lab Lambda.md",
     "Pentest Tools/Link.md",
     "ECE/Cloud/AWS/Lab/Lab Elastic BeanStalk.md",
@@ -238,22 +278,15 @@
     "Assets/ECE/Cloud/AWS/Lab",
     "ECE/Cloud/AWS/Lab/Lab.md",
     "CTF/Hack The Box/Write Up/Soulmate Hack The Box.md",
-    "ECE/Cloud/AWS/Lesson 2.md",
-    "ECE/Cloud/AWS/QCM.md",
     "ECE/Cloud/AWS/Lab",
-    "ECE/Cloud/AWS/Lesson 5.md",
     "Assets/ECE/Cloud/AWS/Lesson 5",
     "Assets/ECE/Cloud/AWS",
     "Assets/ECE/Cloud",
-    "ECE/Cloud/AWS/Lesson 3.md",
     "conflict-files-obsidian-git.md",
     "ECE/Cloud/AWS/Lab/Lab 1.md",
-    "Assets/ECE/Cloud/AWS/Lab/Lab 1",
     "ECE/Cloud/AWS/Lab 1.md",
     "ECE/Cloud/AWS/AWS.md",
     "ECE/Cloud/Cloud.md",
-    "ECE/ECE.md",
-    "pull.sh",
     "Linux/Analyse.md",
     "ECE/Cloud/AWS/Lesson 1.md",
     "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
@@ -261,10 +294,8 @@
     "CTF/Hack The Box/Write Up/Guardian Hack The Box.md",
     "CTF/Hack The Box/Write Up/CodeTwo Hack The Box.md",
     "Linux/UID.md",
-    "Assets/CTF/Hack The Box/Write Up/Soulmate Hack The Box",
     "ECE/SecuWindows/Lab/Lab 1.md",
     "Linux/Command.md",
-    "Web/Word List.md",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",
