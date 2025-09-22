@@ -60,7 +60,9 @@
     "//Pentest Tools",
     "//Linux",
     "//ECE/ECE/SecuWindows",
-    "//ECE/ECE/Cloud"
+    "//ECE/ECE/Cloud",
+    "//ECE",
+    "//ECE/ECE/Cloud/ECE/Cloud/AWS"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
@@ -75,6 +77,8 @@
     "_assets",
     "_blocks"
   ],
+  "newFileLocation": "root",
+  "newFileFolderPath": "",
   "inlineBacklinks": false,
   "inlineContext": true,
   "inlineBacklinksExpanded": false,
