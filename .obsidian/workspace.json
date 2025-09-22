@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ECE/Cloud/AWS/Lesson 5.md",
+                "file": "ECE/Cloud/AWS/QCM.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lesson 5"
+              "title": "QCM"
             }
           }
         ],
@@ -253,6 +253,7 @@
   },
   "active": "9a3ee7443a7a7859",
   "lastOpenFiles": [
+    "ECE/Cloud/AWS/Lesson 5.md",
     "Assets/ECE/Cloud/AWS/Lesson 5/IMG-20250922093925603.png",
     "Assets/ECE/Cloud/AWS/Lesson 5/IMG-20250922093852334.png",
     "Assets/ECE/Cloud/AWS/Lesson 5",
@@ -260,7 +261,6 @@
     "Assets/ECE/Cloud",
     "Assets/ECE/Cloud/AWS/Lesson 5/IMG-20250922093248939.png",
     "ECE/Cloud/AWS/Lesson 2.md",
-    "ECE/Cloud/AWS/Lesson 5.md",
     "ECE/Cloud/AWS/Lesson 3.md",
     "ECE/Cloud/AWS/QCM.md",
     "conflict-files-obsidian-git.md",
@@ -272,7 +272,6 @@
     "Assets/ECE/Cloud/AWS/Lab/Lab 1/IMG-20250916102402203.png",
     "Assets/ECE/Cloud/AWS/Lab/Lab 1/IMG-20250916102217968.png",
     "Assets/ECE/Cloud/AWS/Lab/Lab 1/IMG-20250916102147227.png",
-    "Assets/ECE/Cloud/AWS/Lab/Lab 1/IMG-20250916102004635.png",
     "Assets/ECE/Cloud/AWS/Lab/Lab 1",
     "Assets/ECE/Cloud/AWS/Lab",
     "ECE/Cloud/AWS/Lab 1.md",
