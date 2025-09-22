@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ECE/Cloud/AWS/Lab/Lab Lambda.md",
+                "file": "ECE/Cloud/AWS/Lab/Lab Elastic BeanStalk.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lab Lambda"
+              "title": "Lab Elastic BeanStalk"
             }
           }
         ],
@@ -239,6 +239,10 @@
   },
   "active": "0f8fe36509dca0f0",
   "lastOpenFiles": [
+    "ECE/Cloud/AWS/Lab/Lab Lambda.md",
+    "ECE/Cloud/AWS/Lab/Lab Elastic BeanStalk.md",
+    "Assets/ECE/Cloud/AWS/Lab/Lab Lambda/IMG-20250922133816805.png",
+    "Assets/ECE/Cloud/AWS/Lab/Lab Lambda/IMG-20250922133532453.png",
     "Assets/ECE/Cloud/AWS/Lab/Lab Lambda/IMG-20250922132353316.png",
     "Assets/ECE/Cloud/AWS/Lab/Lab Lambda",
     "Assets/ECE/Cloud/AWS/Lab",
@@ -251,14 +255,10 @@
     "Assets/Pasted image 20250901005313.png",
     "Assets/Pasted image 20250901005258.png",
     "Assets/Pasted image 20250901001838.png",
-    "Assets/Pasted image 20250825232529.png",
     "ECE/Cloud/AWS/Lesson 2.md",
-    "ECE/Cloud/AWS/Lab/Lab Lambda.md",
     "ECE/Cloud/AWS/QCM.md",
     "ECE/Cloud/AWS/Lab",
     "ECE/Cloud/AWS/Lesson 5.md",
-    "Assets/ECE/Cloud/AWS/Lesson 5/IMG-20250922093925603.png",
-    "Assets/ECE/Cloud/AWS/Lesson 5/IMG-20250922093852334.png",
     "Assets/ECE/Cloud/AWS/Lesson 5",
     "Assets/ECE/Cloud/AWS",
     "Assets/ECE/Cloud",
