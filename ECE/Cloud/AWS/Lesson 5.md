@@ -98,3 +98,134 @@ Exemple minimal de table de routage (sans sortie Internet, qui sera traitée dan
 | 10.0.0.0/16 | local | Routage intra‑VPC : toutes les IP du VPC sont joignables |
 
 Chaque sous‑réseau doit être **associé à une seule table de routage**. En revanche, une même table peut être partagée par plusieurs sous‑réseaux, ce qui simplifie l’administration lorsque leurs besoins en connectivité sont identiques.
+
+## Section 2 – Mise en réseau de VPC (ex‑Section 3 du support)
+
+Dans cette partie, nous allons au‑delà de la simple définition d’un VPC et de ses sous‑réseaux. L’objectif est de comprendre les différentes **options de connectivité** et d’acheminement disponibles dans AWS. Chaque composant est illustré par un schéma que vous pouvez insérer pour documenter vos notes Obsidian.
+
+---
+
+### 1. Passerelle Internet (Internet Gateway)
+
+Une **passerelle Internet (IGW)** est un composant VPC hautement disponible et scalable qui permet la communication entre les instances d’un VPC et Internet.  
+Elle a deux rôles principaux :
+- Servir de **cible dans les tables de routage** pour le trafic destiné à Internet.
+- Réaliser la **traduction d’adresses réseau** (NAT) pour les instances auxquelles une adresse IPv4 publique est attribuée.
+
+Pour qu’un sous‑réseau soit considéré comme **public**, il doit :
+1. Être rattaché à une table de routage contenant une entrée `0.0.0.0/0 → IGW-ID`.
+2. Avoir une passerelle Internet attachée au VPC.
+
+**Description du schéma** : le diagramme montre un VPC avec un sous‑réseau public et un sous‑réseau privé. La table de routage du subnet public envoie le trafic non local (0.0.0.0/0) vers l’IGW, ce qui permet aux instances d’accéder à Internet.
+
+---
+
+### 2. Passerelle NAT (NAT Gateway)
+
+Une **passerelle NAT** permet aux instances situées dans un sous‑réseau privé de **sortir vers Internet** (par exemple pour télécharger des mises à jour) sans qu’Internet puisse initier une connexion entrante vers ces instances.
+
+Caractéristiques principales :
+- La NAT Gateway doit être placée dans un **sous‑réseau public**.
+- Une adresse IP Elastic doit être associée à la NAT Gateway.
+- Les tables de routage des sous‑réseaux privés doivent contenir une route par défaut `0.0.0.0/0` pointant vers la NAT Gateway.
+
+**Comparaison avec une instance NAT** :
+
+| Caractéristique | NAT Gateway | Instance NAT |
+|---|---|---|
+| Administration | Entièrement managée par AWS | Nécessite configuration et maintenance |
+| Scalabilité | Automatique, jusqu’à 45 Gbps | Dépend du type d’instance |
+| Disponibilité | Haute disponibilité par AZ | Il faut configurer une redondance manuelle |
+| Coût | Payant par heure et par Go traité | Payant comme une EC2 + transfert |
+
+**Description du schéma** : on observe un sous‑réseau public contenant une NAT Gateway reliée à une IGW. La table de routage publique contient la route vers l’IGW. La table de routage privée redirige le trafic non local vers la NAT Gateway.
+
+---
+
+### 3. Partage de VPC
+
+Le **partage de VPC** permet de partager des sous‑réseaux entre plusieurs comptes AWS appartenant à la même organisation (AWS Organizations).  
+Un compte « propriétaire » crée et administre le VPC, tandis que les comptes « participants » peuvent lancer des ressources (EC2, RDS, Lambda, etc.) dans les sous‑réseaux partagés.
+
+**Avantages** :
+- **Séparation des responsabilités** : le propriétaire gère le réseau et la sécurité, les participants gèrent leurs ressources.
+- **Simplification** : pas besoin de peering complexe entre VPC de la même organisation.
+- **Économie** : meilleure densité des ressources, mutualisation des passerelles et endpoints.
+- **Contrôle centralisé** : les routes et règles de sécurité sont définies de manière unique.
+
+**Description du schéma** : le diagramme illustre un VPC « Compte A » propriétaire, avec un sous‑réseau privé et un sous‑réseau public. Les comptes B et C participants déploient des instances dans ces sous‑réseaux partagés, mais n’ont pas la possibilité de modifier les éléments du VPC.
+
+---
+
+### 4. Appairage de VPC (VPC Peering)
+
+L’**appairage de VPC** permet de connecter deux VPC (dans le même compte, entre comptes ou même entre régions) pour échanger du trafic de manière privée. Les ressources de chaque VPC peuvent communiquer comme si elles faisaient partie du même réseau.
+
+**Restrictions** :
+- Les plages CIDR des deux VPC ne doivent pas se chevaucher.
+- L’appairage transitif n’est pas supporté : si A est appairé à B, et B à C, alors A n’est pas automatiquement connecté à C.
+- Une seule connexion d’appairage est possible entre deux VPC donnés.
+
+**Description du schéma** : deux VPC distincts (A et B) sont reliés par une connexion de peering. Les tables de routage de chaque VPC incluent une entrée vers l’autre VPC via l’ID de connexion d’appairage.
+
+---
+
+### 5. AWS Site‑to‑Site VPN
+
+Le service **Site‑to‑Site VPN** relie un VPC AWS à un réseau sur site au travers d’un tunnel VPN chiffré IPSec.  
+Il nécessite :
+1. La création d’une **passerelle de réseau privé virtuel (VGW)** dans le VPC.
+2. La configuration d’un périphérique VPN côté client (pare‑feu, routeur, appliance).  
+3. Une table de routage adaptée pour diriger le trafic du VPC vers le périphérique client via la VGW.
+
+**Description du schéma** : on voit un VPC connecté à un data center distant. La passerelle VPN côté AWS est reliée à la passerelle client. Le trafic circule à travers le tunnel chiffré, et la table de routage du VPC est configurée pour envoyer le trafic vers la VGW.
+
+---
+
+### 6. AWS Direct Connect
+
+**Direct Connect (DX)** fournit une **connexion réseau privée dédiée** entre un data center client et AWS.  
+Caractéristiques :
+- Réduction de la latence par rapport à Internet.
+- Débit garanti et plus stable.
+- Utilise des VLAN 802.1q pour séparer les connexions.
+
+**Description du schéma** : un data center est relié directement au VPC via un lien privé. La connexion ne transite pas par Internet, garantissant une meilleure performance et une plus grande sécurité.
+
+---
+
+### 7. Points de terminaison de VPC (Endpoints)
+
+Les **VPC Endpoints** permettent d’accéder aux services AWS **sans passer par Internet**, en restant dans le réseau privé AWS.
+
+Deux types existent :
+- **Endpoints d’interface (Interface Endpoints)** : basés sur AWS PrivateLink, créent une ENI avec une IP privée dans votre VPC pour atteindre des services AWS, APN ou Marketplace.
+- **Endpoints de passerelle (Gateway Endpoints)** : utilisables avec S3 et DynamoDB, sans frais supplémentaires.
+
+**Description du schéma** : un sous‑réseau public et un sous‑réseau privé sont reliés à un point de terminaison VPC, représenté comme une ressource rattachée à un service (exemple : Amazon S3). Les tables de routage incluent des entrées pointant vers ce point de terminaison.
+
+---
+
+### 8. AWS Transit Gateway
+
+**Transit Gateway (TGW)** est une solution de connectivité en étoile. Elle permet de relier plusieurs VPC et réseaux sur site à une passerelle centrale.  
+Avantages principaux :
+- Simplifie la topologie réseau par rapport à l’appairage de VPC point‑à‑point.
+- Centralise les politiques de routage et de sécurité.
+- Évolue facilement pour gérer des dizaines voire des centaines de VPC.
+
+**Description du schéma** : le premier diagramme illustre un maillage complexe d’appairages entre VPC. Le second schéma montre comment un Transit Gateway simplifie cette architecture : chaque VPC et chaque VPN se connecte directement à la TGW, ce qui réduit le nombre de connexions nécessaires.
+
+---
+
+### 9. Activité : solution complète
+
+Le schéma récapitulatif combine tous les éléments vus : sous‑réseaux publics et privés, IGW, NAT Gateway, tables de routage, Elastic IP, interfaces réseau élastiques.  
+Il illustre le modèle de référence typique d’un VPC hybride (public/privé) bien conçu.
+
+---
+
+## Points clés à retenir de la section
+- Les options de mise en réseau incluent : Internet Gateway, NAT Gateway, VPC Endpoints, VPC Peering, VPC Sharing, Site‑to‑Site VPN, Direct Connect, Transit Gateway.  
+- Le choix dépend des besoins en **sécurité**, **latence**, **coût** et **simplicité de gestion**.  
+- L’assistant VPC peut être utilisé pour implémenter rapidement une topologie conforme aux bonnes pratiques.
