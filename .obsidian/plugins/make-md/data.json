@@ -62,7 +62,9 @@
     "//ECE/ECE/SecuWindows",
     "//ECE/ECE/Cloud",
     "//ECE",
-    "//ECE/ECE/Cloud/ECE/Cloud/AWS"
+    "//ECE/ECE/Cloud/ECE/Cloud/AWS",
+    "//Assets",
+    "//ECE/ECE/Cloud/ECE/Cloud/AWS/ECE/Cloud/AWS/Lab"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
