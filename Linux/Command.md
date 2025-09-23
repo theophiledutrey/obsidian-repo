@@ -193,3 +193,26 @@
 - `ls -Z file` : Show SELinux context of a file.
 - `chcon -t container_file_t file` : Temporarily change context.
 - `restorecon -Rv /path` : Restore default contexts recursively.
+
+## AWS 
+
+- `df -h` : View available storage on your instance.
+- `sudo mkfs -t ext3 /dev/sdf` : Create an ext3 file system on a new volume.
+- `sudo mkdir /mnt/data-store` : Create a directory for mounting the volume.
+- `sudo mount /dev/sdf /mnt/data-store` : Mount the volume.
+- `echo "/dev/sdf /mnt/data-store ext3 defaults,noatime 1 2" | sudo tee -a /etc/fstab` : Configure auto-mount at startup.
+- `cat /etc/fstab` : Verify configuration file.
+- `sudo sh -c "echo some text has been written > /mnt/data-store/file.txt"` : Write data to the mounted volume.
+- `aws configure` : Configure l’AWS CLI (clé d’accès, secret, région par défaut, format de sortie JSON/text/table).
+- `aws s3 ls` : Liste les buckets S3 du compte.
+- `aws s3 ls s3://mon-bucket` : Liste le contenu d’un bucket.
+- `aws s3 cp file.txt s3://mon-bucket/` : Copie un fichier local vers un bucket S3.
+- `aws s3 sync ./local-folder s3://mon-bucket/` : Synchronise un dossier local avec un bucket S3.
+- `aws ec2 describe-instances` : Affiche toutes les instances EC2 (ID, état, IP, etc.).
+- `aws ec2 start-instances --instance-ids i-1234567890abcdef0` : Démarre une instance EC2.
+- `aws ec2 stop-instances --instance-ids i-1234567890abcdef0` : Arrête une instance EC2.
+- `aws ec2 terminate-instances --instance-ids i-1234567890abcdef0` : Supprime définitivement une instance EC2.
+- `aws iam list-users` : Liste les utilisateurs IAM.
+- `aws iam list-groups` : Liste les groupes IAM.
+- `aws cloudwatch list-metrics` : Liste les métriques disponibles (CPU, mémoire, etc.).
+- `aws logs describe-log-groups` : Liste les groupes de logs CloudWatch.
