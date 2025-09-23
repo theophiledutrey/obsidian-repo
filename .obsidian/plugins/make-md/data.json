@@ -63,7 +63,8 @@
     "//ECE/ECE/Cloud",
     "//ECE/ECE/Cloud/ECE/Cloud/AWS",
     "//Assets",
-    "//ECE"
+    "//ECE",
+    "//ECE/ECE/Cloud/ECE/Cloud/AWS/ECE/Cloud/AWS/Lab"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
