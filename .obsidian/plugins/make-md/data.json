@@ -64,6 +64,7 @@
     "//ECE/ECE/Cloud/ECE/Cloud/AWS",
     "//Assets",
     "//ECE",
+    "//ECE/ECE/Cloud/ECE/Cloud/AWS/ECE/Cloud/AWS/Lesson",
     "//ECE/ECE/Cloud/ECE/Cloud/AWS/ECE/Cloud/AWS/Lab"
   ],
   "expandFolderOnClick": true,
