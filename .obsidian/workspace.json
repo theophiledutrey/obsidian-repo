@@ -39,12 +39,14 @@
             "id": "f218cac6207bb17c",
             "type": "leaf",
             "state": {
-              "type": "mk-space",
+              "type": "markdown",
               "state": {
-                "path": "ECE/Cloud/AWS/Lab"
+                "file": "ECE/Cloud/AWS/Lab/Lab EBS.md",
+                "mode": "source",
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "Lab"
+              "title": "Lab EBS"
             }
           }
         ],
@@ -102,7 +104,7 @@
             }
           },
           {
-            "id": "b633d08d0c695f4f",
+            "id": "34007f7fbb842419",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -253,6 +255,19 @@
   },
   "active": "f218cac6207bb17c",
   "lastOpenFiles": [
+    "Assets/ECE/Cloud/AWS/Lab/Lab EBS/IMG-20250923105843360.png",
+    "Assets/ECE/Cloud/AWS/Lab/Lab EBS/IMG-20250923105759063.png",
+    "Assets/ECE/Cloud/AWS/Lab/Lab EBS/IMG-20250923105738464.png",
+    "Assets/ECE/Cloud/AWS/Lab/Lab EBS/IMG-20250923105717326.png",
+    "Assets/ECE/Cloud/AWS/Lab/Lab EBS/IMG-20250923105652586.png",
+    "Assets/ECE/Cloud/AWS/Lab/Lab EBS/IMG-20250923105610466.png",
+    "Assets/ECE/Cloud/AWS/Lab/Lab EBS/IMG-20250923105547427.png",
+    "Assets/ECE/Cloud/AWS/Lab/Lab EBS/IMG-20250923105527290.png",
+    "Assets/ECE/Cloud/AWS/Lab/Lab EBS/IMG-20250923105502099.png",
+    "Assets/ECE/Cloud/AWS/Lab/Lab EBS/IMG-20250923105431134.png",
+    "Assets/ECE/Cloud/AWS/Lab/Lab EBS/IMG-20250923105409220.png",
+    "Assets/ECE/Cloud/AWS/Lab/Lab EBS",
+    "ECE/Cloud/AWS/Lab/Lab EBS.md",
     "ECE/Cloud/AWS/Lab/Lab.md",
     "Linux/Command.md",
     "ECE/Cloud/AWS/QCM.md",
@@ -266,24 +281,13 @@
     "ECE/Cloud/AWS/Lab/Lab Lambda.md",
     "ECE/Cloud/AWS/Lab/Lab Elastic BeanStalk.md",
     "ECE/Cloud/AWS/Lab",
-    "Assets/ECE/Cloud/AWS/Lesson/Lesson 5/IMG-20250922152223176.png",
-    "Assets/ECE/Cloud/AWS/Lesson/Lesson 5/IMG-20250922152223080.png",
     "Assets/ECE/Cloud/AWS/Lesson/Lesson 5",
     "Assets/ECE/Cloud/AWS/Lesson",
-    "Assets/ECE/Cloud/AWS/Lesson 5/IMG-20250922093248939.png",
     "Assets/ECE/Cloud/AWS/Lesson 5",
-    "Assets/ECE/Cloud/AWS/Lab/Lab Lambda/IMG-20250922133816805.png",
-    "Assets/ECE/Cloud/AWS/Lab/Lab Lambda/IMG-20250922133532453.png",
-    "Assets/ECE/Cloud/AWS/Lab/Lab Lambda/IMG-20250922132353316.png",
-    "Assets/ECE/Cloud/AWS/Lab/Lab Lambda/IMG-20250922131825832.png",
     "Assets/ECE/Cloud/AWS/Lab/Lab Lambda",
-    "Assets/ECE/Cloud/AWS/Lab/Lab Elastic BeanStalk/IMG-20250922142841096.png",
-    "Assets/ECE/Cloud/AWS/Lab/Lab Elastic BeanStalk/IMG-20250922142719775.png",
-    "Assets/ECE/Cloud/AWS/Lab/Lab Elastic BeanStalk/IMG-20250922142649246.png",
     "Assets/ECE/Cloud/AWS/Lab/Lab Elastic BeanStalk",
     "Assets/ECE/Cloud/AWS/Lab",
     "Assets/ECE/Cloud/AWS",
-    "Assets/ECE/Cloud",
     "Pentest Tools/Link.md",
     "CTF/Hack The Box/Write Up/Soulmate Hack The Box.md",
     "Web/Word List.md",
@@ -297,8 +301,6 @@
     "ECE/SecuWindows/Lab/Lab.md",
     "ECE/SecuWindows/Lab/Lab 1.md",
     "ECE/SecuWindows/SecuWindows.md",
-    "ECE/SecuSI/Stego/Lesson/Lesson.md",
-    "ECE/SecuSI/Stego/Lesson/Lesson 1 .md",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",
