@@ -39,12 +39,14 @@
             "id": "f218cac6207bb17c",
             "type": "leaf",
             "state": {
-              "type": "mk-space",
+              "type": "markdown",
               "state": {
-                "path": "ECE/Cloud/AWS/Lab"
+                "file": "Linux/Command.md",
+                "mode": "source",
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "Lab"
+              "title": "Command"
             }
           }
         ],
@@ -251,7 +253,7 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "b633d08d0c695f4f",
+  "active": "f218cac6207bb17c",
   "lastOpenFiles": [
     "ECE/Cloud/AWS/Lab/Lab.md",
     "ECE/Cloud/AWS/QCM.md",
