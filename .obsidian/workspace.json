@@ -39,14 +39,12 @@
             "id": "f218cac6207bb17c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "mk-space",
               "state": {
-                "file": "ECE/Cloud/AWS/QCM.md",
-                "mode": "source",
-                "source": false
+                "path": "ECE/Cloud/AWS/Lab"
               },
               "icon": "lucide-file",
-              "title": "QCM"
+              "title": "Lab"
             }
           }
         ],
@@ -253,8 +251,10 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "f218cac6207bb17c",
+  "active": "b633d08d0c695f4f",
   "lastOpenFiles": [
+    "ECE/Cloud/AWS/Lab/Lab.md",
+    "ECE/Cloud/AWS/QCM.md",
     "conflict-files-obsidian-git.md",
     "Linux/UID.md",
     "ECE/Cloud/AWS/Lesson/Lesson.md",
@@ -262,7 +262,6 @@
     "ECE/Cloud/AWS/Lesson/Lesson 3.md",
     "ECE/Cloud/AWS/Lesson/Lesson 2.md",
     "ECE/Cloud/AWS/Lesson",
-    "ECE/Cloud/AWS/Lab/Lab.md",
     "ECE/Cloud/AWS/Lab/Lab Lambda.md",
     "ECE/Cloud/AWS/Lab/Lab Elastic BeanStalk.md",
     "ECE/Cloud/AWS/Lab",
@@ -292,7 +291,6 @@
     "ECE/Cloud/AWS/Lesson 2.md",
     "ECE/Cloud/AWS/Untitled.md",
     "ECE/Cloud/AWS/Lesson 3.md",
-    "ECE/Cloud/AWS/QCM.md",
     "ECE/SecuSI/Stegano/Lab/Lab 1.md",
     "ECE/SecuWindows/Lesson/Lesson.md",
     "ECE/SecuWindows/Lesson/Lesson 1.md",
