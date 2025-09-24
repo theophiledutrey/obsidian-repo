@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/Command.md",
+                "file": "CTF/Hack The Box/Write Up/Expressway Hack The Box .md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Command"
+              "title": "Expressway Hack The Box"
             }
           }
         ],
@@ -239,6 +239,13 @@
   },
   "active": "b0cff76fe74a5980",
   "lastOpenFiles": [
+    "Assets/CTF/Hack The Box/Write Up/Expressway Hack The Box /IMG-20250924173038958.png",
+    "Assets/CTF/Hack The Box/Write Up/Expressway Hack The Box ",
+    "Assets/CTF/Hack The Box/Write Up/Expressway Hack The Box /IMG-20250924173021100.png",
+    "Linux/Analyse.md",
+    "CTF/Hack The Box/Write Up/Expressway Hack The Box .md",
+    "Linux/Privilege Escalation.md",
+    "Linux/Command.md",
     "ECE/SecuSI/Stego/Lesson/Lesson 2.md",
     "ECE/SecuSI/Stego/Lab/Lab 2.md",
     "ECE/SecuSI/Stego/Lab/Lab 1.md",
@@ -268,7 +275,6 @@
     "Assets/ECE/Cloud/AWS/Lab/Lab EBS/IMG-20250923105610466.png",
     "Assets/ECE/Cloud/AWS/Lab/Lab EBS/IMG-20250923105547427.png",
     "Assets/ECE/Cloud/AWS/Lab/Lab EBS/IMG-20250923105527290.png",
-    "Assets/ECE/Cloud/AWS/Lab/Lab EBS/IMG-20250923105502099.png",
     "Assets/ECE/Cloud/AWS/Lab/Lab EBS",
     "Assets/ECE/Cloud/AWS/Lab/Lab BDD",
     "ECE/ECE.md",
@@ -278,13 +284,7 @@
     "Assets/ECE/Cloud/AWS/Lesson",
     "ECE/Cloud/AWS/Lesson/Lesson.md",
     "ECE/Cloud/AWS/Lesson",
-    "ECE/Cloud/AWS/Lab/Lab Lambda.md",
-    "Pentest Tools/Link.md",
     "Assets/ECE/Cloud/AWS/Lab/Lab Elastic BeanStalk",
-    "Assets/ECE/Cloud/AWS/Lab/Lab Lambda",
-    "ECE/Cloud/AWS/Lab/Lab.md",
-    "CTF/Hack The Box/Write Up/Soulmate Hack The Box.md",
-    "conflict-files-obsidian-git.md",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",

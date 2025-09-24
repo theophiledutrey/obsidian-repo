@@ -62,7 +62,8 @@
     "//ECE",
     "//ECE/ECE/Cloud/ECE/Cloud/AWS/ECE/Cloud/AWS/Lesson",
     "//ECE/ECE/Cloud/ECE/Cloud/AWS/ECE/Cloud/AWS/Lab",
-    "//ECE/ECE/SecuSI"
+    "//ECE/ECE/SecuSI",
+    "//CTF"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
