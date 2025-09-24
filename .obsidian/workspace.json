@@ -39,12 +39,14 @@
             "id": "b0cff76fe74a5980",
             "type": "leaf",
             "state": {
-              "type": "mk-space",
+              "type": "markdown",
               "state": {
-                "path": "ECE"
+                "file": "ECE/SecuSI/Stego/Lesson/Lesson 2.md",
+                "mode": "source",
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "ECE"
+              "title": "Lesson 2"
             }
           }
         ],
@@ -249,11 +251,20 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "b2df2f989f0d244a",
+  "active": "ac84125c3f9464c8",
   "lastOpenFiles": [
+    "ECE/SecuSI/Stego/Lesson/Lesson 1 .md",
+    "Assets/1 - ECE Cybersecurity - Steganography.pdf",
+    "ECE/SecuSI/Stego/Lesson/Lesson 2.md",
+    "ECE/SecuSI/Stego/Lab/Lab 1.md",
+    "Assets/TP_Theophile_Dutrey_Cyb_Gr1.pdf",
+    "ECE/SecuWindows/Lesson/Lesson 1.md",
+    "ECE/SecuWindows/Lab/Lab 1.md",
+    "ECE/Cloud/AWS/AWS.md",
+    "ECE/Cloud/AWS/Lab/Lab BDD.md",
+    "ECE/Cloud/AWS/Lab/Lab Elastic BeanStalk.md",
     "ECE/Cloud/AWS/Lesson/Lesson 7.md",
     "ECE/Cloud/AWS/Lab/Lab EBS.md",
-    "ECE/Cloud/AWS/Lab/Lab BDD.md",
     "Assets/ECE/Cloud/AWS/Lab/Lab EBS/IMG-20250923105843360.png",
     "Assets/ECE/Cloud/AWS/Lab/Lab EBS/IMG-20250923105759063.png",
     "Assets/ECE/Cloud/AWS/Lab/Lab EBS/IMG-20250923105738464.png",
@@ -277,26 +288,16 @@
     "ECE/Cloud/AWS/Lesson",
     "ECE/Cloud/AWS/Lab/Lab Lambda.md",
     "Pentest Tools/Link.md",
-    "ECE/Cloud/AWS/Lab/Lab Elastic BeanStalk.md",
     "Assets/ECE/Cloud/AWS/Lab/Lab Elastic BeanStalk",
     "Assets/ECE/Cloud/AWS/Lab/Lab Lambda",
     "Assets/ECE/Cloud/AWS/Lab",
     "ECE/Cloud/AWS/Lab/Lab.md",
     "CTF/Hack The Box/Write Up/Soulmate Hack The Box.md",
-    "ECE/Cloud/AWS/Lab",
-    "Assets/ECE/Cloud/AWS/Lesson 5",
     "conflict-files-obsidian-git.md",
     "ECE/Cloud/AWS/Lab/Lab 1.md",
     "ECE/Cloud/AWS/Lab 1.md",
-    "ECE/Cloud/AWS/AWS.md",
     "ECE/Cloud/Cloud.md",
     "Linux/Analyse.md",
-    "ECE/Cloud/AWS/Lesson 1.md",
-    "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
-    "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
-    "CTF/Hack The Box/Write Up/Guardian Hack The Box.md",
-    "CTF/Hack The Box/Write Up/CodeTwo Hack The Box.md",
-    "Linux/UID.md",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",
