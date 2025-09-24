@@ -27,15 +27,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ECE/SecuSI/Stego/Lesson/Lesson 2.md",
+                "file": "Linux/Command.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lesson 2"
+              "title": "Command"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -89,7 +90,7 @@
             }
           },
           {
-            "id": "f11cd3837bfad313",
+            "id": "7ab26582fbf10b8a",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -236,11 +237,13 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "68735edd8099a02b",
+  "active": "b0cff76fe74a5980",
   "lastOpenFiles": [
-    "Assets/2 - Lab ECE Cybersecurity - Database security.pdf",
-    "ECE/SecuSI/Stego/Lab/Lab 1.md",
+    "ECE/SecuSI/Stego/Lesson/Lesson 2.md",
     "ECE/SecuSI/Stego/Lab/Lab 2.md",
+    "ECE/SecuSI/Stego/Lab/Lab 1.md",
+    "CTF/Hack The Box/Write Up/CodeTwo Hack The Box.md",
+    "Assets/2 - Lab ECE Cybersecurity - Database security.pdf",
     "ECE/SecuSI/Stego/Lesson/Lesson 1 .md",
     "Assets/1 - ECE Cybersecurity - Steganography.pdf",
     "Assets/TP_Theophile_Dutrey_Cyb_Gr1.pdf",
@@ -253,7 +256,6 @@
     "ECE/Cloud/AWS/AWS.md",
     "ECE/Cloud/AWS/QCM.md",
     "ECE/Cloud/AWS/Lesson/Lesson 3.md",
-    "ECE/SecuSI/Stego/Lesson/Lesson 2.md",
     "ECE/Cloud/AWS/Lab/Lab BDD.md",
     "ECE/Cloud/AWS/Lab/Lab Elastic BeanStalk.md",
     "ECE/Cloud/AWS/Lesson/Lesson 7.md",
@@ -280,7 +282,6 @@
     "Pentest Tools/Link.md",
     "Assets/ECE/Cloud/AWS/Lab/Lab Elastic BeanStalk",
     "Assets/ECE/Cloud/AWS/Lab/Lab Lambda",
-    "Assets/ECE/Cloud/AWS/Lab",
     "ECE/Cloud/AWS/Lab/Lab.md",
     "CTF/Hack The Box/Write Up/Soulmate Hack The Box.md",
     "conflict-files-obsidian-git.md",

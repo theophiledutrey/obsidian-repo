@@ -23,9 +23,6 @@
 - `gpg --homedir /your/path/to/gpg_key -d file.gpg` : Decrypt a GPG-encrypted file (requires the corresponding private key or passphrase).  
 - `gpg --encrypt -r <recipient> file.txt` : Encrypt a file for a specific recipient using their public key.
 
-## Databases--homedir
-- `sqlite3 filedb.sqlite` : Start an SQLite session on a `.sqlite` file.
-
 ## File
 - `file <file_name>` : Display the file type.
 - `ln -s /path/to/target /path/to/symlink`: Creat a symlink.
@@ -216,3 +213,21 @@
 - `aws iam list-groups` : Liste les groupes IAM.
 - `aws cloudwatch list-metrics` : Liste les métriques disponibles (CPU, mémoire, etc.).
 - `aws logs describe-log-groups` : Liste les groupes de logs CloudWatch.
+
+## Lamp & Databases
+
+- `sudo dnf install mariadb-server` : Installer MariaDB.
+- `sudo systemctl start mariadb` : Démarrer MariaDB.
+- `sudo systemctl enable mariadb` : Activer au démarrage.
+- `sudo systemctl status mariadb` : Vérifier l’état.
+- `sudo mysql_secure_installation` : Sécuriser l’installation.
+- `mysql -u root -p` : Se connecter à la base en root.
+- `SHOW DATABASES;` : Lister les bases de données.
+- `CREATE DATABASE testdb;` : Créer une base.
+- `CREATE USER 'user'@'localhost' IDENTIFIED BY 'password';` : Créer un utilisateur.
+- `GRANT ALL PRIVILEGES ON testdb.* TO 'user'@'localhost';` : Donner les droits.
+- `FLUSH PRIVILEGES;` : Recharger les droits.
+- `sudo firewall-cmd --add-service=http --permanent` : Autoriser HTTP.
+- `sudo firewall-cmd --add-service=https --permanent` : Autoriser HTTPS.
+- `sudo firewall-cmd --reload` : Recharger les règles.
+- `sqlite3 filedb.sqlite` : Start an SQLite session on a `.sqlite` file.
