@@ -29,7 +29,7 @@ id         # check your groups
 find / -group yourgroup -type f 2>/dev/null
 ```
 
-> Search for files owned by a group you are a member of.
+getcap -r / 2>/dev/null | grep '/bin/'> Search for files owned by a group you are a member of.
 
 ## Useful directories to investigate
 
