@@ -12,6 +12,6 @@
 ![[IMG-20250924174424624.png]]
 
 ![[IMG-20250924174452572.png]]
-freakingrockstarontheroadsw
+freakingrockstarontheroad
 
 ![[IMG-20250924174505608.png]] 
