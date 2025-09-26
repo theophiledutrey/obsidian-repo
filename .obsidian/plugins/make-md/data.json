@@ -57,12 +57,12 @@
     "//ECE/ECE/SecuWindows/ECE/SecuWindows/Lab",
     "//Web",
     "//Pentest Tools",
-    "//Linux",
     "//ECE",
     "//ECE/ECE/Cloud/ECE/Cloud/AWS/ECE/Cloud/AWS/Lesson",
     "//ECE/ECE/Cloud/ECE/Cloud/AWS/ECE/Cloud/AWS/Lab",
     "//CTF",
-    "//ECE/ECE/SecuWindows"
+    "//ECE/ECE/Forensic",
+    "//ECE/ECE/Forensic/ECE/Forensic/TP"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
@@ -77,6 +77,8 @@
     "_assets",
     "_blocks"
   ],
+  "newFileLocation": "root",
+  "newFileFolderPath": "",
   "inlineBacklinks": false,
   "inlineContext": true,
   "inlineBacklinksExpanded": false,
