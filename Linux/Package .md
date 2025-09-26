@@ -1,0 +1,2 @@
+- `pavucontrol` : Control the computer's sound 
+- 
