@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/Package .md",
+                "file": "ECE/SecuWindows/Lab/Lab 2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Package"
+              "title": "Lab 2"
             }
           }
         ],
@@ -255,8 +255,10 @@
   },
   "active": "f218cac6207bb17c",
   "lastOpenFiles": [
-    "Linux/Command.md",
+    "Assets/Windows Security - Lab2 - Answer sheet.pdf",
     "Linux/Package .md",
+    "ECE/SecuWindows/Lab/Lab 2.md",
+    "Linux/Command.md",
     "ECE/Cloud/Cloud.md",
     "ECE/SecuLinux/Lesson 1.md",
     "ECE/SecuSI/Stego/Lab/Lab 1.md",
@@ -299,8 +301,6 @@
     "Pentest Tools/Link.md",
     "CTF/Hack The Box/Write Up/Soulmate Hack The Box.md",
     "Web/Word List.md",
-    "Web/Tools.md",
-    "ECE/Cloud/AWS/Lesson 2.md",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",
