@@ -82,3 +82,20 @@ exiftool -gps:all -DateTimeOriginal -Model -Make -a -G1 -s /mnt/usb2/reperage.jp
 Lien OpenStreetMap :  
 [https://www.openstreetmap.org/?mlat=52.358200&mlon=4.881019#map=18/52.35820/4.88102](https://www.openstreetmap.org/?mlat=52.358200&mlon=4.881019#map=18/52.35820/4.88102)
 
+## Retrouver l'arme avec PhotoREC
+![[Pasted image 20250926154652.png]]
+
+![[Pasted image 20250926154808.png]]
+
+![[Pasted image 20250926154817.png]]
+
+![[Pasted image 20250926154826.png]]
+
+![[Pasted image 20250926154834.png]]
+
+![[Pasted image 20250926154903.png]]
+
+![[Pasted image 20250926154922.png]]
+
+![[Pasted image 20250926155142.png]]
+

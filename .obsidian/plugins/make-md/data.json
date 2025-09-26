@@ -62,7 +62,8 @@
     "//ECE/ECE/Cloud/ECE/Cloud/AWS/ECE/Cloud/AWS/Lab",
     "//CTF",
     "//ECE/ECE/Forensic",
-    "//ECE/ECE/Forensic/ECE/Forensic/TP"
+    "//ECE/ECE/Forensic/ECE/Forensic/TP",
+    "//Linux"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
