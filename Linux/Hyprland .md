@@ -1,4 +1,4 @@
-## 🖥️ Gestion des fenêtres
+## Gestion des fenêtres
 
 -   **Super + Q** → Fermer la fenêtre active (script `dontkillsteam.sh`)
 -   **Alt + F4** → Fermer la fenêtre active
@@ -12,7 +12,7 @@
 
 ------------------------------------------------------------------------
 
-## 🪟 Déplacement & focus fenêtres
+## Déplacement & focus fenêtres
 
 -   **Super + Flèches** → Changer le focus de fenêtre
     (gauche/droite/haut/bas)
@@ -24,7 +24,7 @@
 
 ------------------------------------------------------------------------
 
-## 📂 Applications rapides
+## Applications rapides
 
 -   **Super + T** → Terminal (kitty)
 -   **Super + E** → Gestionnaire de fichiers (dolphin)
@@ -33,7 +33,7 @@
 
 ------------------------------------------------------------------------
 
-## 🔄 Workspaces (bureaux)
+## Workspaces (bureaux)
 
 -   **Super + \[1--0\]** → Aller au workspace 1--10
 -   **Super + Ctrl + → / ←** → Aller au workspace suivant/précédent
@@ -50,26 +50,14 @@
 
 ------------------------------------------------------------------------
 
-## 🎵 Audio & multimédia
-
--   **F10 / XF86AudioMute** → Mute le son
--   **F11 / XF86AudioLowerVolume** → Baisser le volume
--   **F12 / XF86AudioRaiseVolume** → Monter le volume
--   **XF86AudioMicMute** → Mute micro
--   **XF86AudioPlay / Pause** → Lecture / Pause
--   **XF86AudioNext** → Piste suivante
--   **XF86AudioPrev** → Piste précédente
-
-------------------------------------------------------------------------
-
-## 💡 Écran & luminosité
+## Écran & luminosité
 
 -   **XF86MonBrightnessUp** → Augmenter luminosité
 -   **XF86MonBrightnessDown** → Diminuer luminosité
 
 ------------------------------------------------------------------------
 
-## 📸 Screenshots
+## Screenshots
 
 -   **Super + P** → Capture d'écran partielle
 -   **Super + Ctrl + P** → Capture partielle avec freeze
@@ -78,7 +66,7 @@
 
 ------------------------------------------------------------------------
 
-## ⚙️ Scripts & divers
+## Scripts & divers
 
 -   **Super + Alt + G** → Mode jeu (désactive effets)
 -   **Super + Alt + → / ←** → Wallpaper suivant/précédent
@@ -90,14 +78,16 @@
 -   **Super + V** → Historique presse-papier
 -   **Super + K** → Changer layout clavier
 
-------------------------------------------------------------------------
+---
 
-⚡ **Rappel** :\
-- `Super` = Touche **Windows / ⌘ Command**\
-- `Alt` = Alt classique\
-- `Ctrl` = Contrôle classique
+## Mes fonds d'écran
 
-------------------------------------------------------------------------
+1117170220 = Heaven
+2825099639 = cyberpunk
+2860565319 = chill
+2134276902 = ice
+2128589917 = peaceful
+2309327378 = pink mountain
 
-📌 Tu peux copier ce fichier directement dans Obsidian
-(`Hyprland_Binds.md`).
+
+`./setwall.sh` = script pour changer le fond d'écran
