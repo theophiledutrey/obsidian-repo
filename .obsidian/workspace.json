@@ -75,7 +75,7 @@
             }
           },
           {
-            "id": "2f468244c82777b3",
+            "id": "e50085f33a96fde1",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -224,10 +224,10 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "64891dbd4bfc67fe",
+  "active": "e2aa3986dab62d71",
   "lastOpenFiles": [
-    "Linux/Bug.md",
     "Linux/Hyprland .md",
+    "Linux/Bug.md",
     "Linux/Package .md",
     "Vault.md",
     "ECE/Forensic/TP/TP.md",
