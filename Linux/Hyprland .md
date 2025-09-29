@@ -29,7 +29,8 @@
 -   **Super + T** → Terminal (kitty)
 -   **Super + E** → Gestionnaire de fichiers (dolphin)
 -   **Super + C** → Éditeur (VS Code)
--   **Super + F** → Navigateur (Firefox)
+-   **Super + F** → Navigateur (google)
+-   **Super + N** → Text editor (Kwrite)
 
 ------------------------------------------------------------------------
 
@@ -41,7 +42,7 @@
 -   **Super + Molette souris** → Changer de workspace (scroll)
 -   **Super + Shift + \[1--0\]** → Déplacer la fenêtre active vers le
     workspace choisi
--   **Super + Ctrl + Alt + → / ←** → Déplacer la fenêtre active vers
+-   **Super + Alt + → / ←** → Déplacer la fenêtre active vers
     workspace suivant/précédent
 -   **Super + Alt + \[1--0\]** → Déplacer la fenêtre vers workspace
     choisi (silencieusement)
@@ -69,7 +70,7 @@
 ## Scripts & divers
 
 -   **Super + Alt + G** → Mode jeu (désactive effets)
--   **Super + Alt + → / ←** → Wallpaper suivant/précédent
+-   **Super + Alt + Ctrl → / ←** → Wallpaper suivant/précédent
 -   **Super + Alt + ↑ / ↓** → Changer mode Waybar
 -   **Super + Shift + R** → Menu de sélection de thème (Wallbash)
 -   **Super + Shift + T** → Menu de sélection de thème
