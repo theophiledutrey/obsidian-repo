@@ -1,14 +1,12 @@
 ## Gestion des fenêtres
 
 -   **Super + Q** → Fermer la fenêtre active (script `dontkillsteam.sh`)
--   **Alt + F4** → Fermer la fenêtre active
 -   **Super + W** → Basculer une fenêtre en flottante / tiling
 -   **Super + G** → Grouper/Dégrouper la fenêtre
 -   **Alt + Entrée** → Plein écran sur la fenêtre active
 -   **Super + L** → Verrouiller l'écran (`swaylock`)
 -   **Super + Shift + F** → Épingler la fenêtre active
 -   **Super + Backspace** → Menu de déconnexion
--   **Super + Delete** → Quitter Hyprland
 
 ------------------------------------------------------------------------
 
