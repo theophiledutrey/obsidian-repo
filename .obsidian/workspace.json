@@ -4,11 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "64884e5319fdbe98",
+        "id": "4248e1a7f5dd808d",
         "type": "tabs",
         "children": [
           {
-            "id": "64891dbd4bfc67fe",
+            "id": "68735edd8099a02b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CTF/Hack The Box/Write Up/Expressway Hack The Box .md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Expressway Hack The Box"
+            }
+          },
+          {
+            "id": "b0cff76fe74a5980",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Linux/Analyse.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Analyse"
+            }
+          },
+          {
+            "id": "4829a55e4ff3c55c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -21,7 +49,8 @@
               "title": "Hyprland"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -75,7 +104,7 @@
             }
           },
           {
-            "id": "6177b08004822bbc",
+            "id": "70612aec694ae348",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -98,8 +127,60 @@
       {
         "id": "9a3a8fb4c104de22",
         "type": "tabs",
-        "dimension": 34.9236641221374,
+        "dimension": 38.07251908396946,
         "children": [
+          {
+            "id": "b2df2f989f0d244a",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          },
+          {
+            "id": "8f01d0e0fde1edd5",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          },
+          {
+            "id": "33ee360992d886d3",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Previous Hack The Box"
+            }
+          },
+          {
+            "id": "6e637d2d734a85fa",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
           {
             "id": "4a7da6dbe8f30743",
             "type": "leaf",
@@ -121,75 +202,21 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ECE/SecuSI/Stegano/Lab/Lab 1.md",
+                "file": "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Lab 1"
-            }
-          },
-          {
-            "id": "f1e546866269d508",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
-            }
-          },
-          {
-            "id": "818c06f95e1c4a1e",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
-            }
-          },
-          {
-            "id": "4173f5cb82426f19",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "ECE/Cloud/AWS/QCM.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-coming-in",
-              "title": "Backlinks for QCM"
-            }
-          },
-          {
-            "id": "5af8100864a954f2",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "ECE/Cloud/AWS/QCM.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-going-out",
-              "title": "Outgoing links from QCM"
+              "title": "Outline of Previous Hack The Box"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       },
       {
         "id": "eb0479b9bf7b888d",
         "type": "tabs",
-        "dimension": 65.07633587786259,
+        "dimension": 61.92748091603053,
         "children": [
           {
             "id": "e2aa3986dab62d71",
@@ -205,38 +232,38 @@
       }
     ],
     "direction": "horizontal",
-    "width": 433.5
+    "width": 381.5
   },
   "left-ribbon": {
     "hiddenItems": {
-      "pdf-plus:PDF++: Toggle auto-copy": false,
-      "pdf-plus:PDF++: Toggle auto-focus": false,
-      "pdf-plus:PDF++: Toggle auto-paste": false,
       "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "canvas:Create new canvas": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "daily-notes:Open today's daily note": false,
-      "graph:Open graph view": false,
       "obsidian-git:Open Git source control": false,
+      "daily-notes:Open today's daily note": false,
       "oz-clear-unused-images:Clear Unused Images": false,
-      "obsidian-excalidraw-plugin:New drawing": false
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "graph:Open graph view": false,
+      "pdf-plus:PDF++: Toggle auto-copy": false,
+      "pdf-plus:PDF++: Toggle auto-focus": false,
+      "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "64891dbd4bfc67fe",
+  "active": "4829a55e4ff3c55c",
   "lastOpenFiles": [
-    "Linux/Privilege Escalation.md",
+    "Linux/Command.md",
     "Linux/Hyprland .md",
     "Linux/Bug.md",
     "Linux/Package .md",
-    "Vault.md",
-    "ECE/Forensic/TP/TP.md",
+    "Linux/Privilege Escalation.md",
+    "Linux/Analyse.md",
+    "Linux/Capabilities.md",
+    "CTF/Hack The Box/Write Up/Expressway Hack The Box .md",
+    "Pentest Tools/Link.md",
     "ECE/Forensic/TP/TP 1.md",
-    "ECE/Forensic/TP",
-    "ECE/Forensic/Forensic.md",
-    "ECE/Forensic",
-    "Assets/TP_USB.pdf",
+    "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
     "Assets/Pasted image 20250926155142.png",
     "Assets/Pasted image 20250926154922.png",
     "Assets/Pasted image 20250926154903.png",
@@ -245,33 +272,33 @@
     "Assets/Pasted image 20250926154826.png",
     "Assets/Pasted image 20250926154817.png",
     "Assets/Pasted image 20250926154808.png",
+    "Assets/TP_USB.pdf",
     "Assets/Pasted image 20250926154652.png",
-    "Pentest Tools/Link.md",
-    "ECE/Cloud/AWS/Lesson/Lesson 7.md",
-    "Linux/Command.md",
+    "ECE/Forensic/TP/TP.md",
+    "ECE/Forensic/TP",
+    "ECE/Forensic/Forensic.md",
+    "Vault.md",
+    "ECE/Forensic",
+    "ECE/foren.md",
     "ECE/SecuWindows/Lab/Lab 2.md",
     "Assets/Windows Security - Lab2 - Answer sheet.pdf",
-    "ECE/Cloud/Cloud.md",
-    "ECE/SecuLinux/Lesson 1.md",
-    "ECE/SecuSI/Stego/Lab/Lab 1.md",
+    "Web/Word List.md",
+    "Pentest Tools/Metasploit.md",
+    "Pentest Tools/Nmap.md",
     "ECE/SecuSI/Stego/Lab/Lab 2.md",
-    "ECE/Cloud/AWS/Lab/Lab BDD.md",
-    "ECE/SecuSI/Stego/Lesson/Lesson 2.md",
-    "CTF/Hack The Box/Write Up/Expressway Hack The Box .md",
-    "Assets/TP_Theophile_Dutrey_Cyb_Gr1.pdf",
     "Assets/CTF/Hack The Box/Write Up/Expressway Hack The Box /IMG-20250924174505608.png",
     "Assets/CTF/Hack The Box/Write Up/Expressway Hack The Box ",
+    "ECE/SecuSI/Stego/Lesson/Lesson 2.md",
+    "ECE/SecuSI/Stego/Lab/Lab 1.md",
+    "CTF/Hack The Box/Write Up/CodeTwo Hack The Box.md",
     "Assets/2 - Lab ECE Cybersecurity - Database security.pdf",
+    "ECE/SecuSI/Stego/Lesson/Lesson 1 .md",
     "Assets/1 - ECE Cybersecurity - Steganography.pdf",
-    "Assets/ECE/Cloud/AWS/Lab/Lab BDD",
-    "Linux/UID.md",
-    "ECE/Cloud/AWS/Lab/Lab EBS.md",
+    "Assets/TP_Theophile_Dutrey_Cyb_Gr1.pdf",
+    "ECE/SecuWindows/Lesson/Lesson 1.md",
+    "ECE/SecuWindows/Lab/Lab 1.md",
     "Assets/ECE/Cloud/AWS/Lab/Lab EBS",
-    "ECE/Cloud/AWS/Lab/Lab.md",
-    "ECE/Cloud/AWS/QCM.md",
-    "conflict-files-obsidian-git.md",
-    "ECE/Cloud/AWS/Lesson/Lesson.md",
-    "ECE/Cloud/AWS/Lesson/Lesson 5.md",
+    "Assets/ECE/Cloud/AWS/Lab/Lab BDD",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",
