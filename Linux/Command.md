@@ -26,6 +26,7 @@
 ## File
 - `file <file_name>` : Display the file type.
 - `ln -s /path/to/target /path/to/symlink`: Creat a symlink.
+- `du -sh` : Volume of a file.
 
 ## Reverse Shell
 - `python3 -c 'import pty; pty.spawn("/bin/bash")'` : Upgrade a reverse shell to a fully interactive shell.
