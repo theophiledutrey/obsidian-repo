@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/Analyse.md",
+                "file": "Web/Word List.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Analyse"
+              "title": "Word List"
             }
           }
         ],
@@ -253,6 +253,8 @@
   },
   "active": "4829a55e4ff3c55c",
   "lastOpenFiles": [
+    "Web/Tools.md",
+    "Linux/Analyse.md",
     "Linux/Privilege Escalation.md",
     "Infra/Wireguard.md",
     "conflict-files-obsidian-git.md",
@@ -260,7 +262,6 @@
     "Linux/Hyprland .md",
     "Linux/Bug.md",
     "Linux/Package .md",
-    "Linux/Analyse.md",
     "Linux/Capabilities.md",
     "CTF/Hack The Box/Write Up/Expressway Hack The Box .md",
     "Pentest Tools/Link.md",
@@ -294,7 +295,6 @@
     "ECE/SecuSI/Stego/Lab/Lab 1.md",
     "CTF/Hack The Box/Write Up/CodeTwo Hack The Box.md",
     "Assets/2 - Lab ECE Cybersecurity - Database security.pdf",
-    "ECE/SecuSI/Stego/Lesson/Lesson 1 .md",
     "Assets/1 - ECE Cybersecurity - Steganography.pdf",
     "Assets/TP_Theophile_Dutrey_Cyb_Gr1.pdf",
     "Assets/ECE/Cloud/AWS/Lab/Lab EBS",
