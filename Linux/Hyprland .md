@@ -89,4 +89,4 @@
 2309327378 = pink mountain
 
 
-`./setwall.sh` = script pour changer le fond d'écran
+`./.setwall.sh` = script pour changer le fond d'écran
