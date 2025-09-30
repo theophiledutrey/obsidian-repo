@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/Hyprland .md",
+                "file": "Linux/Analyse.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Hyprland"
+              "title": "Analyse"
             }
           }
         ],
@@ -104,7 +104,7 @@
             }
           },
           {
-            "id": "94a9544696258c2a",
+            "id": "f947c3f9577718dd",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -253,11 +253,13 @@
   },
   "active": "4829a55e4ff3c55c",
   "lastOpenFiles": [
+    "Linux/Privilege Escalation.md",
+    "Infra/Wireguard.md",
+    "conflict-files-obsidian-git.md",
     "Linux/Command.md",
     "Linux/Hyprland .md",
     "Linux/Bug.md",
     "Linux/Package .md",
-    "Linux/Privilege Escalation.md",
     "Linux/Analyse.md",
     "Linux/Capabilities.md",
     "CTF/Hack The Box/Write Up/Expressway Hack The Box .md",
@@ -295,8 +297,6 @@
     "ECE/SecuSI/Stego/Lesson/Lesson 1 .md",
     "Assets/1 - ECE Cybersecurity - Steganography.pdf",
     "Assets/TP_Theophile_Dutrey_Cyb_Gr1.pdf",
-    "ECE/SecuWindows/Lesson/Lesson 1.md",
-    "ECE/SecuWindows/Lab/Lab 1.md",
     "Assets/ECE/Cloud/AWS/Lab/Lab EBS",
     "Assets/ECE/Cloud/AWS/Lab/Lab BDD",
     "Photos/INTERACTIVE-MAP.canvas",

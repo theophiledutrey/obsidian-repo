@@ -55,3 +55,4 @@ ssh -L 8000:127.0.0.1:8000 enzo@10.10.11.68
 - Check AppArmor profiles and restrictions in `/etc/apparmor.d/`
 
 ---
+
