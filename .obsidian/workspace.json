@@ -75,7 +75,7 @@
             }
           },
           {
-            "id": "a5c9f2efca4153a6",
+            "id": "49368176399636fa",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -224,6 +224,7 @@
   },
   "active": "bbcdb2974b1a03e6",
   "lastOpenFiles": [
+    "Linux/Privilege Escalation.md",
     "Linux/Command.md",
     "Linux/Hyprland .md",
     "Linux/Package .md",
@@ -232,7 +233,6 @@
     "Infra/Wireguard.md",
     "conflict-files-obsidian-git.md",
     "Linux/Bug.md",
-    "Linux/Privilege Escalation.md",
     "Linux/Capabilities.md",
     "Pentest Tools/Link.md",
     "ECE/Forensic/TP/TP 1.md",
