@@ -50,6 +50,11 @@ netstat -tulnp
 ssh -L 8000:127.0.0.1:8000 enzo@10.10.11.68
 ```
 
+## Find the version
+
+```
+/usr/local/bin/[binary] --version 2>/dev/null 
+```
 ## AppArmor
 
 - Check AppArmor profiles and restrictions in `/etc/apparmor.d/`

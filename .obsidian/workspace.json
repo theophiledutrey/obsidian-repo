@@ -35,8 +35,7 @@
               "title": "Expressway Hack The Box"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -237,17 +236,19 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "fbfc0e85c328caaa",
+  "active": "bbcdb2974b1a03e6",
   "lastOpenFiles": [
+    "CTF/Hack The Box/Write Up/Expressway Hack The Box .md",
+    "Assets/CTF/Hack The Box/Write Up/Expressway Hack The Box /IMG-20251001235922568.png",
+    "Assets/CTF/Hack The Box/Write Up/Expressway Hack The Box /IMG-20251001235757656.png",
+    "Linux/Command.md",
     "Linux/Analyse.md",
     "Linux/Privilege Escalation.md",
     "Web/Tools.md",
     "Pentest Tools/Crypto.md",
     "Pentest Tools/Link.md",
-    "CTF/Hack The Box/Write Up/Expressway Hack The Box .md",
     "Linux/Hyprland .md",
     "Web/Web.md",
-    "Linux/Command.md",
     "ECE/SecuSI/Stego/Lesson/Lesson 1 .md",
     "CTF/Hack The Box/Write Up/CodeTwo Hack The Box.md",
     "ECE/Forensic/TP/TP 1.md",
@@ -266,7 +267,6 @@
     "Assets/Pasted image 20250926154817.png",
     "Assets/Pasted image 20250926154808.png",
     "Assets/TP_USB.pdf",
-    "Assets/Pasted image 20250926154652.png",
     "ECE/Forensic/TP/TP.md",
     "ECE/Forensic/TP",
     "ECE/Forensic/Forensic.md",
@@ -277,8 +277,6 @@
     "Assets/Windows Security - Lab2 - Answer sheet.pdf",
     "Web/Word List.md",
     "Pentest Tools/Metasploit.md",
-    "Pentest Tools/Nmap.md",
-    "Assets/CTF/Hack The Box/Write Up/Expressway Hack The Box /IMG-20250924174505608.png",
     "Assets/CTF/Hack The Box/Write Up/Expressway Hack The Box ",
     "Assets/2 - Lab ECE Cybersecurity - Database security.pdf",
     "Assets/1 - ECE Cybersecurity - Steganography.pdf",

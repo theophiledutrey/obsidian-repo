@@ -16,3 +16,13 @@ freakingrockstarontheroad
 
 
 ![[IMG-20250924174505608.png]] 
+
+# [CVE-2025-32463](https://github.com/kh4sh3i/CVE-2025-32463)
+
+
+![[IMG-20251001235922568.png]]
+
+
+
+![[IMG-20251001235757656.png]]
+
