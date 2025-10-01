@@ -75,7 +75,7 @@
             }
           },
           {
-            "id": "49368176399636fa",
+            "id": "54956d2492926648",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -224,9 +224,13 @@
   },
   "active": "bbcdb2974b1a03e6",
   "lastOpenFiles": [
-    "Linux/Privilege Escalation.md",
+    "Web/Web.md",
     "Linux/Command.md",
+    "ECE/SecuSI/Stego/Lesson/Lesson 1 .md",
+    "CTF/Hack The Box/Write Up/CodeTwo Hack The Box.md",
+    "ECE/Forensic/TP/TP 1.md",
     "Linux/Hyprland .md",
+    "Linux/Privilege Escalation.md",
     "Linux/Package .md",
     "CTF/Hack The Box/Write Up/Expressway Hack The Box .md",
     "Linux/Analyse.md",
@@ -235,7 +239,6 @@
     "Linux/Bug.md",
     "Linux/Capabilities.md",
     "Pentest Tools/Link.md",
-    "ECE/Forensic/TP/TP 1.md",
     "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
     "Assets/Pasted image 20250926155142.png",
     "Assets/Pasted image 20250926154922.png",
@@ -262,10 +265,7 @@
     "Assets/CTF/Hack The Box/Write Up/Expressway Hack The Box /IMG-20250924174505608.png",
     "Assets/CTF/Hack The Box/Write Up/Expressway Hack The Box ",
     "ECE/SecuSI/Stego/Lesson/Lesson 2.md",
-    "ECE/SecuSI/Stego/Lab/Lab 1.md",
-    "CTF/Hack The Box/Write Up/CodeTwo Hack The Box.md",
     "Assets/2 - Lab ECE Cybersecurity - Database security.pdf",
-    "ECE/SecuSI/Stego/Lesson/Lesson 1 .md",
     "Assets/1 - ECE Cybersecurity - Steganography.pdf",
     "Assets/TP_Theophile_Dutrey_Cyb_Gr1.pdf",
     "Assets/ECE/Cloud/AWS/Lab/Lab EBS",

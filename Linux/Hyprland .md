@@ -61,7 +61,6 @@
 -   **Super + P** → Capture d'écran partielle
 -   **Super + Ctrl + P** → Capture partielle avec freeze
 -   **Super + Alt + P** → Capture écran du moniteur actif
--   **Print** → Capture de tous les moniteurs
 
 ------------------------------------------------------------------------
 
