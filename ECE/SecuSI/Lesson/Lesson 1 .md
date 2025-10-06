@@ -1,5 +1,5 @@
 
-![[1 - ECE Cybersecurity - Steganography.pdf]]
+![[IMG-20251006100002707.pdf]]
 
 ## 1  Definition and Purpose
 - **Steganography** = hiding secret data inside a medium without raising suspicion.  
