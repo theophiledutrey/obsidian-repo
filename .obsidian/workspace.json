@@ -22,18 +22,6 @@
             }
           },
           {
-            "id": "620a9d5d091f7e97",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.9.14"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.9.14"
-            }
-          },
-          {
             "id": "4829a55e4ff3c55c",
             "type": "leaf",
             "state": {
@@ -250,14 +238,24 @@
   },
   "active": "68735edd8099a02b",
   "lastOpenFiles": [
+    "Assets/Pasted image 20251008120716.png",
+    "Assets/Pasted image 20251008120657.png",
+    "Assets/Pasted image 20251008120641.png",
+    "Assets/Pasted image 20251008120259.png",
+    "Assets/Pasted image 20251008120230.png",
+    "Assets/TP_RAM 2.pdf",
+    "Assets/TP_RAM 1.pdf",
     "Assets/TP_RAM.pdf",
+    "Web/Word List.md",
+    "ECE/Forensic/TP /TP 2.md",
+    "Assets/Pasted image 20251008115722.png",
+    "Assets/Pasted image 20251008115720.png",
     "Assets/ECE/Forensic/TP /TP 1",
     "Assets/ECE/Forensic/TP ",
     "Assets/ECE/Forensic/TP 2/TP 1",
     "Assets/ECE/Forensic/TP 2",
     "Assets/ECE/Forensic",
     "Linux/Command.md",
-    "ECE/Forensic/TP /TP 2.md",
     "ECE/Forensic/TP/TP2/TP2.md",
     "ECE/Forensic/TP/TP2",
     "conflict-files-obsidian-git.md",
@@ -270,17 +268,11 @@
     "ECE/SecuSI/Lab/Lab.md",
     "ECE/SecuSI/Lab/Lab 2.md",
     "ECE/SecuSI/Lab/Lab 1.md",
-    "ECE/SecuSI/Lab",
-    "Assets/ECE/SecuSI/Lesson/Lesson 1 /IMG-20251006100002707.pdf",
-    "Assets/ECE/SecuSI/Lab/Lab 2/IMG-20251006095959961.pdf",
     "Assets/CTF/Hack The Box/Write Up/Expressway Hack The Box /IMG-20251008105956764.png",
     "Assets/CTF/Hack The Box/Write Up/Expressway Hack The Box /IMG-20251008105955407.png",
     "CTF/Hack The Box/Write Up/Expressway Hack The Box .md",
     "Web/Tools.md",
-    "Web/Word List.md",
     "Linux/Analyse.md",
-    "Assets/CTF/Hack The Box/Write Up/Expressway Hack The Box /IMG-20251002163458854.png",
-    "Assets/CTF/Hack The Box/Write Up/Expressway Hack The Box /IMG-20251002163458470.png",
     "Linux/Privilege Escalation.md",
     "Infra/Wireguard.md",
     "Linux/Hyprland .md",
@@ -290,10 +282,6 @@
     "Pentest Tools/Link.md",
     "ECE/Forensic/TP /TP 1.md",
     "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
-    "Assets/ECE/Forensic/TP /TP 1/IMG-20251008111132501.png",
-    "Assets/ECE/Forensic/TP /TP 1/IMG-20251008111132065.png",
-    "Assets/ECE/Forensic/TP /TP 1/IMG-20251008111131988.png",
-    "Assets/ECE/Forensic/TP /TP 1/IMG-20251008111131886.png",
     "ECE/Forensic/TP /TP .md",
     "ECE/Forensic/Forensic.md",
     "Photos/INTERACTIVE-MAP.canvas",
