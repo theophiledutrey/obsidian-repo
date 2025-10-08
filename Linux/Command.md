@@ -217,7 +217,6 @@
 
 ## Lamp & Databases
 
-- `sudo dnf install mariadb-server` : Installer MariaDB.
 - `sudo systemctl start mariadb` : Démarrer MariaDB.
 - `sudo systemctl enable mariadb` : Activer au démarrage.
 - `sudo systemctl status mariadb` : Vérifier l’état.

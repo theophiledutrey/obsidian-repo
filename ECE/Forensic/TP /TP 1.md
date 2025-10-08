@@ -1,5 +1,5 @@
 
-![[TP_USB.pdf]]
+![[IMG-20251008111131218.pdf]]
 
 
 ## Étapes de montage
@@ -83,19 +83,19 @@ Lien OpenStreetMap :
 [https://www.openstreetmap.org/?mlat=52.358200&mlon=4.881019#map=18/52.35820/4.88102](https://www.openstreetmap.org/?mlat=52.358200&mlon=4.881019#map=18/52.35820/4.88102)
 
 ## Retrouver l'arme avec PhotoREC
-![[Pasted image 20250926154652.png]]
+![[IMG-20251008111131262.png]]
 
-![[Pasted image 20250926154808.png]]
+![[IMG-20251008111131338.png]]
 
-![[Pasted image 20250926154817.png]]
+![[IMG-20251008111131648.png]]
 
-![[Pasted image 20250926154826.png]]
+![[IMG-20251008111131817.png]]
 
-![[Pasted image 20250926154834.png]]
+![[IMG-20251008111131886.png]]
 
-![[Pasted image 20250926154903.png]]
+![[IMG-20251008111131988.png]]
 
-![[Pasted image 20250926154922.png]]
+![[IMG-20251008111132065.png]]
 
-![[Pasted image 20250926155142.png]]
+![[IMG-20251008111132501.png]]
 
