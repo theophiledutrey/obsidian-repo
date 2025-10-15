@@ -58,7 +58,6 @@
     "//ECE/ECE/Cloud/ECE/Cloud/AWS/ECE/Cloud/AWS/Lab",
     "//CTF",
     "//ECE/ECE/Forensic/ECE/Forensic/TP",
-    "//ECE/ECE/SecuSI",
     "//ECE/ECE/SecuSI/ECE/SecuSI/Stego",
     "//ECE/ECE/SecuSI/ECE/SecuSI/Lab",
     "//ECE/ECE/SecuSI/ECE/SecuSI/Lesson",
@@ -70,7 +69,8 @@
     "//ECE/ECE/Forensic",
     "//ECE/ECE/Forensic/ECE/Forensic/TP 2",
     "//ECE/ECE/Forensic/ECE/Forensic/TP ",
-    "//Assets"
+    "//Assets",
+    "//ECE/ECE/SecuWindows"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
