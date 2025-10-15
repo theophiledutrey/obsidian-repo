@@ -1,8 +1,21 @@
+
+Théophile Dutrey
+Arthur Berret 
+Ingé5 
+Cyber groupe 1
+## Exercice 1
+
+### Task 1
+
 ![[Pasted image 20251015172854.png]]
 
 ![[Pasted image 20251015172913.png]]
 
+### Task 2
+
 ![[Pasted image 20251015173933.png]]
+
+### Task 3
 
 ![[Pasted image 20251015174640.png]]
 
@@ -57,6 +70,8 @@
     ➤ **Purpose:**  
     Displays the current BitLocker configuration and encryption progress for each drive, confirming that the TPM and recovery protectors are active and that encryption is ongoing.
 
+### Task 4
+
 ![[Pasted image 20251015175916.png]]
 
 ### **1. Explain why you are not able to access the VM’s drive anymore**
@@ -88,6 +103,8 @@ When the VM is shut down and the `.vhdx` file is mounted offline (for example, f
 
 BitLocker effectively protects the VM’s disk by binding the encryption keys to the TPM and/or recovery password.  
 Without one of those, accessing or tampering with the `.vhdx` file offline is **nearly impossible** — this is precisely the security goal of BitLocker.
+
+### Task 5
 
 ![[Pasted image 20251015180235.png]]
 
@@ -122,6 +139,9 @@ BitLocker seals its Volume Master Key (VMK) to TPM PCR values that describe a �
 **Why did Windows ask for the recovery key?**  
 Between boots, the Secure Boot configuration changed (e.g., Secure Boot disabled or policy altered). That changed **PCR 7**, causing a **PCR mismatch** against what BitLocker expected. Because the TPM refused to release the VMK, Windows entered **BitLocker recovery** and therefore prompted for the **48-digit recovery key**.
 
+## Exercice 2
+
+### Task 1
 
 ![[Pasted image 20251015182657.png]]
 
@@ -154,6 +174,7 @@ This can happen if:
 
 In short, **“Configured but not Running” = planned/expected, but not yet enforced in the active system state.**
 
+### Task 2
 
 ![[Pasted image 20251015184149.png]]
 
@@ -173,6 +194,8 @@ Disabling VBS simply requires:
 - Access to the OS or registry (administrative rights),
 - Modifying a policy or boot setting, and
 - Rebooting the system.
+
+### Task 3
 
 ![[Pasted image 20251015185632.png]]
 
