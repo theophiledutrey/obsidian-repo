@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
+                "file": "CTF/Hack The Box/Write Up/Imagery.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Environment Hack The Box"
+              "title": "Imagery"
             }
           }
         ]
@@ -224,6 +224,8 @@
   },
   "active": "88e9bc414e495b72",
   "lastOpenFiles": [
+    "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
+    "CTF/Hack The Box/Write Up/Imagery.md",
     "CTF/Hack The Box/Write Up/Expressway Hack The Box .md",
     "CTF/Hack The Box/Write Up/Guardian Hack The Box.md",
     "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
@@ -266,8 +268,6 @@
     "Linux/Privilege Escalation.md",
     "Linux/Bug.md",
     "Linux/UID.md",
-    "Linux/Capabilities.md",
-    "Linux/Analyse.md",
     "Assets/ECE/SecuSI/Lesson/Lesson 1 ",
     "Assets/ECE/SecuSI/Lesson",
     "Photos/INTERACTIVE-MAP.canvas",

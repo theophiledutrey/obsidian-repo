@@ -56,7 +56,6 @@
     "//Pentest Tools",
     "//ECE/ECE/Cloud/ECE/Cloud/AWS/ECE/Cloud/AWS/Lesson",
     "//ECE/ECE/Cloud/ECE/Cloud/AWS/ECE/Cloud/AWS/Lab",
-    "//CTF",
     "//ECE/ECE/Forensic/ECE/Forensic/TP",
     "//ECE/ECE/SecuSI/ECE/SecuSI/Stego",
     "//ECE/ECE/SecuSI/ECE/SecuSI/Lab",
@@ -69,8 +68,8 @@
     "//ECE/ECE/Forensic",
     "//ECE/ECE/Forensic/ECE/Forensic/TP 2",
     "//ECE/ECE/Forensic/ECE/Forensic/TP ",
-    "//Assets",
-    "//ECE/ECE/SecuWindows"
+    "//ECE/ECE/SecuWindows",
+    "//CTF"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
