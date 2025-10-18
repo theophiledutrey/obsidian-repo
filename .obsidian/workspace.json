@@ -75,7 +75,7 @@
             }
           },
           {
-            "id": "7e55b4d2dbc87903",
+            "id": "ff01f2c223fb1f73",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -224,6 +224,9 @@
   },
   "active": "88e9bc414e495b72",
   "lastOpenFiles": [
+    "Assets/CTF/Hack The Box/Write Up/Imagery/IMG-20251019010816231.png",
+    "Assets/CTF/Hack The Box/Write Up/Imagery",
+    "Assets/CTF/Hack The Box/Write Up/Imagery/IMG-20251019010758982.png",
     "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
     "CTF/Hack The Box/Write Up/Imagery.md",
     "CTF/Hack The Box/Write Up/Expressway Hack The Box .md",
@@ -241,7 +244,6 @@
     "Assets/Pasted image 20251015183106.png",
     "Assets/Pasted image 20251015182657.png",
     "Assets/Pasted image 20251015181655.png",
-    "Assets/Pasted image 20251015181634.png",
     "Linux/Package .md",
     "conflict-files-obsidian-git.md",
     "ECE/Forensic/TP /TP 2.md",
@@ -267,9 +269,7 @@
     "Linux/Hyprland .md",
     "Linux/Privilege Escalation.md",
     "Linux/Bug.md",
-    "Linux/UID.md",
     "Assets/ECE/SecuSI/Lesson/Lesson 1 ",
-    "Assets/ECE/SecuSI/Lesson",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",
