@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Web/Word List.md",
+                "file": "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Word List"
+              "title": "Environment Hack The Box"
             }
           }
         ]
@@ -75,7 +75,7 @@
             }
           },
           {
-            "id": "e89b72115e8137da",
+            "id": "7e55b4d2dbc87903",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -224,8 +224,11 @@
   },
   "active": "88e9bc414e495b72",
   "lastOpenFiles": [
-    "Web/Tools.md",
+    "CTF/Hack The Box/Write Up/Expressway Hack The Box .md",
+    "CTF/Hack The Box/Write Up/Guardian Hack The Box.md",
+    "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
     "Web/Word List.md",
+    "Web/Tools.md",
     "ECE/SecuWindows/Lab/Lab 3.md",
     "Assets/Pasted image 20251015190259.png",
     "Assets/Pasted image 20251015185632.png",
@@ -238,7 +241,6 @@
     "Assets/Pasted image 20251015181655.png",
     "Assets/Pasted image 20251015181634.png",
     "Linux/Package .md",
-    "CTF/Hack The Box/Write Up/Expressway Hack The Box .md",
     "conflict-files-obsidian-git.md",
     "ECE/Forensic/TP /TP 2.md",
     "ECE/Forensic/TP /TP 1.md",
