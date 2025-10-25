@@ -68,7 +68,8 @@
     "//ECE/ECE/Forensic/ECE/Forensic/TP 2",
     "//ECE/ECE/Forensic/ECE/Forensic/TP ",
     "//ECE/ECE/SecuWindows",
-    "//CTF"
+    "//CTF",
+    "//Linux"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
