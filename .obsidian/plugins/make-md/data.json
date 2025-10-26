@@ -62,14 +62,13 @@
     "//Infra",
     "//CTF/CTF/Hack The Box/CTF/Hack The Box/Write Up",
     "//CTF/CTF/Hack The Box",
-    "//ECE",
     "//ECE/ECE/Cloud/ECE/Cloud/AWS",
     "//ECE/ECE/Forensic",
     "//ECE/ECE/Forensic/ECE/Forensic/TP 2",
     "//ECE/ECE/Forensic/ECE/Forensic/TP ",
     "//ECE/ECE/SecuWindows",
-    "//CTF",
-    "//Linux"
+    "//Linux",
+    "//Pentest Tools"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
