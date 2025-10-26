@@ -49,8 +49,7 @@
               "title": "Command"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -251,27 +250,29 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "04c7059997a42f18",
+  "active": "4829a55e4ff3c55c",
   "lastOpenFiles": [
-    "CTF/Hack The Box/Write Up/Imagery.md",
-    "Web/Tools.md",
+    "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026020817048.png",
+    "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026020756569.png",
+    "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026020630992.png",
+    "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026020544163.png",
+    "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026020518429.png",
+    "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026020440508.png",
+    "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026020321897.png",
+    "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026020253537.png",
+    "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026020229942.png",
+    "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026020123687.png",
+    "Linux/Command.md",
     "CTF/Hack The Box/Write Up/Conversor.md",
+    "Web/Tools.md",
+    "CTF/Hack The Box/Write Up/Imagery.md",
     "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026005028303.png",
-    "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026005016048.png",
     "Assets/CTF/Hack The Box/Write Up/Conversor",
-    "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026004956482.png",
     "Infra/Wireguard.md",
     "Web/Word List.md",
     "ECE/Forensic/TP /TP 2.md",
     "conflict-files-obsidian-git.md",
     "ECE/SecuWindows/Lab/Lab 3.md",
-    "Assets/Pasted image 20251015190259.png",
-    "Assets/Pasted image 20251015185632.png",
-    "Assets/Pasted image 20251015184934.png",
-    "Assets/Pasted image 20251015184919.png",
-    "Assets/Pasted image 20251015184321.png",
-    "Assets/Pasted image 20251015184149.png",
-    "Assets/Pasted image 20251015183106.png",
     "Assets/CTF/Hack The Box/Write Up/Imagery",
     "Assets/TP_RAM 2.pdf",
     "Assets/TP_RAM 1.pdf",
@@ -281,7 +282,6 @@
     "Assets/ECE/Forensic/TP 2/TP 1",
     "Assets/ECE/Forensic/TP 2",
     "Assets/ECE/Forensic",
-    "Linux/Command.md",
     "ECE/Forensic/TP/TP2/TP2.md",
     "ECE/SecuSI/Lesson/Lesson.md",
     "ECE/SecuSI/Lesson/Lesson 2.md",
