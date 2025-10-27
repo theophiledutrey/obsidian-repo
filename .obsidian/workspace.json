@@ -41,15 +41,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/Command.md",
+                "file": "CTF/Hack The Box/Write Up/Imagery.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Command"
+              "title": "Imagery"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -103,7 +104,7 @@
             }
           },
           {
-            "id": "fffa743c2d0496bb",
+            "id": "baabd654aa7052b2",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -250,8 +251,11 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "4829a55e4ff3c55c",
+  "active": "04c7059997a42f18",
   "lastOpenFiles": [
+    "CTF/Hack The Box/Write Up/Expressway Hack The Box .md",
+    "Linux/Command.md",
+    "CTF/Hack The Box/Write Up/Conversor.md",
     "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026024441704.png",
     "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026024349653.png",
     "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026024333845.png",
@@ -260,19 +264,16 @@
     "Linux/UID.md",
     "Linux/Capabilities.md",
     "Linux/Analyse.md",
-    "Linux/Command.md",
     "Linux/Package .md",
     "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
     "CTF/Hack The Box/Write Up/CodeTwo Hack The Box.md",
     "Web/Tools.md",
-    "CTF/Hack The Box/Write Up/Conversor.md",
     "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026023313071.png",
     "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026022517912.png",
     "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026022417513.png",
     "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026022342491.png",
     "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026022328364.png",
     "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026020817048.png",
-    "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026020756569.png",
     "CTF/Hack The Box/Write Up/Imagery.md",
     "Assets/CTF/Hack The Box/Write Up/Conversor",
     "Infra/Wireguard.md",
@@ -296,7 +297,6 @@
     "ECE/SecuSI/Lab/Lab.md",
     "ECE/SecuSI/Lab/Lab 2.md",
     "ECE/SecuSI/Lab/Lab 1.md",
-    "CTF/Hack The Box/Write Up/Expressway Hack The Box .md",
     "Linux/Privilege Escalation.md",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
