@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ECE/Reverse/Cours 1.md",
+                "file": "ECE/Reverse/TP1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Cours 1"
+              "title": "TP1"
             }
           },
           {
@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pentest Tools/Link.md",
+                "file": "ECE/Reverse/Cours 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Link"
+              "title": "Cours 1"
             }
           },
           {
@@ -49,7 +49,8 @@
               "title": "Imagery"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -250,14 +251,16 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "4829a55e4ff3c55c",
+  "active": "6c049e2ec767c3dc",
   "lastOpenFiles": [
+    "Pentest Tools/Link.md",
+    "ECE/Reverse/TP1.md",
+    "ECE/Reverse/Cours 1.md",
     "Assets/ECE/Reverse/Cours 1/IMG-20251029150758523.png",
     "Assets/ECE/Reverse/Cours 1/IMG-20251029145745866.png",
     "Assets/ECE/Reverse/Cours 1",
     "Assets/ECE/Reverse",
     "Assets/ECE/Reverse/Cours 1/IMG-20251029144023000.png",
-    "ECE/Reverse/Cours 1.md",
     "ECE/Reverse/Reverse.md",
     "CTF/Hack The Box/Write Up/Conversor.md",
     "ECE/Reverse",
@@ -270,7 +273,6 @@
     "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026024349653.png",
     "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026024333845.png",
     "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026024309505.png",
-    "Pentest Tools/Link.md",
     "Linux/UID.md",
     "Linux/Capabilities.md",
     "Linux/Analyse.md",
@@ -281,7 +283,6 @@
     "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026023313071.png",
     "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026022517912.png",
     "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026022417513.png",
-    "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026022342491.png",
     "Assets/CTF/Hack The Box/Write Up/Conversor",
     "Infra/Wireguard.md",
     "Web/Word List.md",

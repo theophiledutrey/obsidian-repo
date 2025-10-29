@@ -312,3 +312,131 @@ Ensuite, deux instructions supplémentaires en rouge :
 |Logique binaire|`AND`, `XOR`|Manipulation de bits|
 |Incrémentation|`INC`|+1|
 |Adresse mémoire|`LEA`, `MOV [ ]`|Calcul ou accès mémoire|
+
+## Instructions
+
+## 1) Déplacement de données (Data movement)
+
+|Instruction|Syntaxe|Description / Effet|Flags|
+|---|---|---|---|
+|`MOV`|`MOV r, r/m/imm`|Copie valeur → registre/mémoire (`MOV eax, 1`, `MOV eax, [ebx]`). Ne modifie pas (normalement) les flags.|—|
+|`MOVZX`|`MOVZX r, r/m`|Move with zero-extend : copie et étend en zéro (ex : byte→word).|—|
+|`MOVSX`|`MOVSX r, r/m`|Move with sign-extend : étend le signe (signed).|—|
+|`LEA`|`LEA r, [base + index*scale + disp]`|Charge l'**adresse effective** calculée dans `r`. N’accède pas à la mémoire. (ex : `lea eax, [ebx+8]` → `eax=ebx+8`).|—|
+|`XCHG`|`XCHG r, r/m`|Échange deux opérandes.|—|
+|`PUSH`|`PUSH r/m/imm`|Empile sur la pile (décrémente `ESP/RSP`, écrit mémoire).|—|
+|`POP`|`POP r/m`|Dépile (lit mémoire, incrémente `ESP/RSP`).|—|
+|`MOVSB/MOVSW/MOVSD/MOVSQ`|`MOVSx`|Copie blocs mémoire source→dest (utilisé avec `ESI`/`EDI` et `REP`).|—|
+
+---
+
+## 2) Arithmétique de base
+
+|Instruction|Syntaxe|Description / Effet|Flags|
+|---|---|---|---|
+|`ADD`|`ADD r/m, r/imm`|Additionne, stocke dans destination.|ZF, SF, CF, OF|
+|`SUB`|`SUB r/m, r/imm`|Soustrait.|ZF, SF, CF, OF|
+|`INC`|`INC r/m`|+1 (n’altère pas CF sur x86|64, mais modifie OV/ZF/SF).|
+|`DEC`|`DEC r/m`|-1.|ZF, SF, OF (pas CF)|
+|`NEG`|`NEG r/m`|Change signe (0 - x).|ZF, SF, CF, OF|
+|`IMUL`|`IMUL r, r/m/imm` / mul variants|Multiplication signée (différentes formes). Résultat wide selon variante.|OF, CF (selon variante)|
+|`MUL`|`MUL r/m`|Multiplication non signée (unsigned).|OF, CF|
+|`IDIV` / `DIV`|`IDIV r/m` / `DIV r/m`|Division signée/unsigned (opérande implicite en eax:edx).|Exceptions CPU si div par 0 ou overflow|
+|`ADC`|`ADC dst, src`|Add with carry (utilise CF).|ZF,SF,CF,OF|
+|`SBB`|`SBB dst, src`|Sub with borrow (utilise CF).|ZF,SF,CF,OF|
+
+---
+
+## 3) Logique binaire & bitwise
+
+|Instruction|Syntaxe|Description / Effet|Flags|
+|---|---|---|---|
+|`AND`|`AND dst, src`|ET binaire.|ZF, SF, CF=0, OF=0|
+|`OR`|`OR dst, src`|OU binaire.|ZF, SF, CF=0, OF=0|
+|`XOR`|`XOR dst, src`|OU exclusif. Souvent `XOR eax,eax` met 0 et clear flags.|ZF, SF, CF=0, OF=0|
+|`NOT`|`NOT r/m`|Bitwise NOT (complément).|—|
+|`TEST`|`TEST a, b`|AND sans stocker, met flags (utile pour conditions).|ZF, SF, PF|
+
+---
+
+## 4) Décalages & rotations (bit shifts)
+
+|Instruction|Syntaxe|Description|Flags|
+|---|---|---|---|
+|`SHL` / `SAL`|`SHL dst, count`|Shift left (multiplication par 2^n).|CF, OF, ZF, SF|
+|`SHR`|`SHR dst, count`|Logical shift right (insère 0 à gauche).|CF, OF, ZF, SF|
+|`SAR`|`SAR dst, count`|Arithmetic shift right (préserve signe).|CF, OF, ZF, SF|
+|`ROL` / `ROR`|`ROL dst, count`|Rotate left / right (bits circulent).|CF (et OF parfois)|
+
+---
+
+## 5) Comparaison & branchement conditionnel
+
+|Instruction|Syntaxe|Description / Effet|Flags|
+|---|---|---|---|
+|`CMP`|`CMP a, b`|Compare (a - b) : met les flags, n’écrit pas le résultat.|ZF, SF, CF, OF|
+|`TEST`|`TEST a, b`|Bitwise AND -> flags.|ZF, SF, PF|
+|`JMP`|`JMP label`|Jump inconditionnel (near/short/indirect).|—|
+|`JE / JZ`|`JE label`|Jump if equal / zero (`ZF=1`).|dépend des flags|
+|`JNE / JNZ`|`JNE label`|Jump if not equal (`ZF=0`).|—|
+|`JG / JNLE`|`JG label`|Jump if greater (signed).|—|
+|`JGE`|`JGE label`|Jump if greater or equal (signed).|—|
+|`JL / JNGE`|`JL label`|Jump if less (signed).|—|
+|`JA / JNBE`|`JA label`|Jump if above (unsigned, CF=0 & ZF=0).|—|
+|`JB / JC`|`JB label`|Jump if below (unsigned, CF=1).|—|
+|`SETcc`|`SETZ/SETNZ/SETG...`|Stocke 0/1 dans un octet selon condition (ex : `SETZ al`).|—|
+
+---
+
+## 6) Appels / retours / gestion de pile (control transfer)
+
+|Instruction|Syntaxe|Description / Effet|Flags|
+|---|---|---|---|
+|`CALL`|`CALL label` / `CALL r/m`|Appel de fonction : empile adresse de retour (EIP/RIP) puis jump.|—|
+|`RET`|`RET` / `RET imm`|Retour d’un appel : dépile adresse de retour dans EIP/RIP. `RET imm` ajuste la pile.|—|
+|`ENTER` / `LEAVE`|création/démontage de frame locale (`enter 16,0` / `leave`)|Facilite frames de fonctions (EBP/ESP).|—|
+|`INT`|`INT 0x80` / `INT n`|Interruption logicielle (syscalls en mode legacy).|—|
+|`SYSCALL` / `SYSENTER`|appels système rapides (64-bit / fast)|Utilisé pour appels kernel modernes.|—|
+
+---
+
+## 7) Instructions de pile rapides (32-bit / 64-bit)
+
+|Instruction|Syntaxe|Remarques|
+|---|---|---|
+|`PUSHAD` / `POPAD`|32-bit only|Sauvegarde/restaure tous registres généraux (legacy).|
+|`PUSHF` / `POPF`|Empile/dépile flags|Utile pour sauver flags.|
+
+---
+
+## 8) Instructions floating-point / SIMD (FPU / SSE / AVX) — essentielles à connaître
+
+|Instruction|Syntaxe|Description|
+|---|---|---|
+|`FPU` (ex: `FLD`, `FSTP`)|instructions x87|Ancienne FPU stack (floating point).|
+|`MOVSD`|`MOVSD xmm, xmm/m64`|Move scalar double (SSE2) — déplacer un double flottant.|
+|`MOVSS`|`MOVSS xmm, xmm/m32`|Move scalar single float.|
+|`MOVDQA` / `MOVDQU`|move SIMD aligned/unaligned|Pour vecteurs 128-bit.|
+|`ADDSD`, `SUBSD`, `MULSD`, `DIVSD`|opérations floating SSE|Opérations en virgule flottante sur xmm.|
+
+> Dans ton extrait on voit `movsd` : c’est **MOV scalar double** (SSE2) — copie un `double` en mémoire/registre XMM.
+
+---
+
+## 9) Instructions de conversion / extension
+
+|Instruction|Syntaxe|Description|
+|---|---|---|
+|`CVTSI2SD` / `CVTSI2SS`|convert int → double/float|Conversion entiers → flottants.|
+|`CVTSD2SI`|convert double → int|etc.|
+
+---
+
+## 10) Instructions système / utilitaires
+
+| Instruction | Syntaxe | Remarques                                     |
+| ----------- | ------- | --------------------------------------------- |
+| `NOP`       | `NOP`   | No operation — parfois alignement ou timing.  |
+| `HLT`       | `HLT`   | Arrête le CPU jusqu’à interruption.           |
+| `CPUID`     | `CPUID` | Récupère infos processeur (vendor, features). |
+| `RDTSC`     | `RDTSC` | Lire time-stamp counter (cycle counter).      |
