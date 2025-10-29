@@ -52,7 +52,6 @@
     "//Assets/Assets/CTF",
     "//ECE/ECE/SecuWindows/ECE/SecuWindows/Lesson",
     "//ECE/ECE/SecuWindows/ECE/SecuWindows/Lab",
-    "//Web",
     "//ECE/ECE/Cloud/ECE/Cloud/AWS/ECE/Cloud/AWS/Lesson",
     "//ECE/ECE/Cloud/ECE/Cloud/AWS/ECE/Cloud/AWS/Lab",
     "//ECE/ECE/Forensic/ECE/Forensic/TP",
@@ -63,13 +62,10 @@
     "//CTF/CTF/Hack The Box/CTF/Hack The Box/Write Up",
     "//CTF/CTF/Hack The Box",
     "//ECE/ECE/Cloud/ECE/Cloud/AWS",
-    "//ECE/ECE/Forensic",
     "//ECE/ECE/Forensic/ECE/Forensic/TP 2",
     "//ECE/ECE/Forensic/ECE/Forensic/TP ",
-    "//ECE/ECE/SecuWindows",
-    "//Linux",
-    "//Pentest Tools",
-    "//CTF"
+    "//ECE",
+    "//ECE/ECE/Reverse"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
