@@ -139,7 +139,176 @@ int main(void) {
 - ⚠️ Vérification des valeurs de retour `scanf` absente.  
 - ℹ️ `mov eax, 0` avant les appels variadiques (`printf`, `scanf`) est exigé par la convention d’appel SysV.  
 
+
+
+![[IMG-20251029150758523.png]]
+
+Les **registres** sont de petites zones de mémoire **ultra-rapides** intégrées directement dans le processeur.  
+Ils servent à stocker temporairement des données pendant l’exécution des instructions machine (valeurs, adresses, résultats intermédiaires…).
+
+Sur une architecture **x86 32 bits**, les registres généraux ont une largeur de **32 bits** et sont nommés ainsi :
+
+|Nom 32 bits|Nom 16 bits|8 bits hauts|8 bits bas|Description|
+|---|---|---|---|---|
+|**EAX**|AX|AH|AL|Registre d’accumulateur — utilisé pour les opérations arithmétiques et logiques|
+|**EBX**|BX|BH|BL|Registre de base — souvent utilisé pour contenir des adresses mémoire|
+|**ECX**|CX|CH|CL|Registre compteur — souvent utilisé dans les boucles et les décalages|
+|**EDX**|DX|DH|DL|Registre de données — utilisé pour les opérations d’E/S et multiplications|
+|**ESI**|SI|—|—|Registre source d’index (Source Index), souvent pour le traitement de chaînes|
+|**EDI**|DI|—|—|Registre destination d’index (Destination Index)|
+|**ESP**|SP|—|—|**Stack Pointer** — pointeur de pile (adresse du sommet de la pile)|
+|**EBP**|BP|—|—|**Base Pointer** — pointeur de base du cadre de pile courant|
+
 ---
 
-**Auteur :** ChatGPT (analyse du code IDA pour Obsidian)  
-**Date :** 2025-10-29
+## 🧩 Structure hiérarchique des registres
+
+Chaque registre 32 bits (EAX, EBX, ECX, EDX) peut être découpé en plus petites parties :
+
+- **16 bits de poids faible** : accessibles via le nom sans le “E” → ex : `AX`
+    
+- **8 bits de poids faible** : `AL` (Low)
+    
+- **8 bits de poids fort** : `AH` (High)
+    
+
+---
+
+## Exemple concret
+
+Supposons :
+
+`mov eax, 0x12345678`
+
+Alors :
+
+- `EAX = 0x12345678`
+    
+- `AX = 0x5678`
+    
+- `AH = 0x56`
+    
+- `AL = 0x78`
+    
+
+---
+
+## 🧭 Registres spéciaux (ESP / EBP)
+
+- **ESP (Stack Pointer)** : pointe sur le haut de la pile (dernier élément poussé).  
+    → utilisé dans les fonctions pour empiler les variables et les adresses de retour.
+    
+- **EBP (Base Pointer)** : marque la base du cadre de pile de la fonction courante.  
+    → permet d’accéder aux variables locales et arguments via des offsets (`[ebp-4]`, `[ebp+8]`, etc.).
+
+
+## **ASSEMBLY LANGUAGE (INTEL X86)**
+
+|Instruction|Effet|
+|---|---|
+|`MOV EAX, 1`|EAX = 1|
+|`ADD EBX, 5`|EBX = EBX + 5|
+|`SUB EBX, 2`|EBX = EBX - 2|
+|`AND ECX, 0`|ECX = ECX & 0 → ECX = 0|
+|`XOR EDX, 4`|EDX = EDX ⊕ 4 (opération XOR binaire)|
+|`INC ECX`|ECX = ECX + 1|
+
+Ensuite, deux instructions supplémentaires en rouge :
+
+- `lea eax, [ebx+8]`
+    
+- `mov eax, [ebx]`
+    
+
+---
+
+## 🔍 **Explication ligne par ligne**
+
+### 1. `MOV EAX, 1`
+
+- **MOV** copie une valeur.
+    
+- Ici on met la valeur immédiate `1` dans le registre `EAX`.
+    
+- 👉 Résultat : `EAX = 1`.
+    
+
+### 2. `ADD EBX, 5`
+
+- **ADD** additionne une valeur au contenu du registre.
+    
+- 👉 `EBX = EBX + 5`.
+    
+
+### 3. `SUB EBX, 2`
+
+- **SUB** soustrait la valeur donnée du registre.
+    
+- 👉 `EBX = EBX - 2`.
+    
+
+### 4. `AND ECX, 0`
+
+- **AND** fait une opération ET binaire entre `ECX` et `0`.
+    
+- Tout bit ET 0 = 0 → donc `ECX` devient `0`.
+    
+
+### 5. `XOR EDX, 4`
+
+- **XOR** (OU exclusif) compare chaque bit :
+    
+    - 0 ⊕ 0 = 0
+        
+    - 1 ⊕ 0 = 1
+        
+    - 0 ⊕ 1 = 1
+        
+    - 1 ⊕ 1 = 0
+        
+- C’est souvent utilisé pour :
+    
+    - inverser certains bits,
+        
+    - ou remettre un registre à zéro si on fait `XOR EAX, EAX`.
+        
+
+### 6. `INC ECX`
+
+- **INC** (increment) augmente de 1.
+    
+- 👉 `ECX = ECX + 1`.
+    
+
+---
+### `lea eax, [ebx+8]`
+
+- **LEA** = _Load Effective Address_ (charge une adresse calculée).
+    
+- Elle **ne lit pas la mémoire**, elle calcule simplement une adresse.
+    
+- Ici, `EAX = EBX + 8`.
+    
+- ⚙️ Très utile pour faire des calculs d’adresse ou d’offset rapidement sans affecter les flags.
+    
+
+### `mov eax, [ebx]`
+
+- **MOV** lit la valeur contenue à l’adresse pointée par `EBX`.
+    
+- Les crochets `[ ]` signifient _“contenu à l’adresse de”_.
+    
+- 👉 `EAX = *(uint32_t*)EBX` (en C).
+    
+
+---
+
+## 🧩 **Résumé visuel**
+
+|Type d’instruction|Exemple|Effet principal|
+|---|---|---|
+|Affectation|`MOV EAX, 1`|Met une valeur dans un registre|
+|Addition/Soustraction|`ADD`, `SUB`|Opérations arithmétiques|
+|Logique binaire|`AND`, `XOR`|Manipulation de bits|
+|Incrémentation|`INC`|+1|
+|Adresse mémoire|`LEA`, `MOV [ ]`|Calcul ou accès mémoire|
