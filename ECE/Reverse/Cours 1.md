@@ -372,19 +372,19 @@ Ensuite, deux instructions supplémentaires en rouge :
 
 ## 5) Comparaison & branchement conditionnel
 
-|Instruction|Syntaxe|Description / Effet|Flags|
-|---|---|---|---|
-|`CMP`|`CMP a, b`|Compare (a - b) : met les flags, n’écrit pas le résultat.|ZF, SF, CF, OF|
-|`TEST`|`TEST a, b`|Bitwise AND -> flags.|ZF, SF, PF|
-|`JMP`|`JMP label`|Jump inconditionnel (near/short/indirect).|—|
-|`JE / JZ`|`JE label`|Jump if equal / zero (`ZF=1`).|dépend des flags|
-|`JNE / JNZ`|`JNE label`|Jump if not equal (`ZF=0`).|—|
-|`JG / JNLE`|`JG label`|Jump if greater (signed).|—|
-|`JGE`|`JGE label`|Jump if greater or equal (signed).|—|
-|`JL / JNGE`|`JL label`|Jump if less (signed).|—|
-|`JA / JNBE`|`JA label`|Jump if above (unsigned, CF=0 & ZF=0).|—|
-|`JB / JC`|`JB label`|Jump if below (unsigned, CF=1).|—|
-|`SETcc`|`SETZ/SETNZ/SETG...`|Stocke 0/1 dans un octet selon condition (ex : `SETZ al`).|—|
+| Instruction | Syntaxe              | Description / Effet                                        | Flags            |
+| ----------- | -------------------- | ---------------------------------------------------------- | ---------------- |
+| `CMP`       | `CMP a, b`           | Compare (a - b) : met les flags, n’écrit pas le résultat.  | ZF, SF, CF, OF   |
+| `TEST`      | `TEST a, b`          | Bitwise AND -> flags.                                      | ZF, SF, PF       |
+| `JMP`       | `JMP label`          | Jump inconditionnel (near/short/indirect).                 | —                |
+| `JE / JZ`   | `JE label`           | Jump if equal / zero (`ZF=1`).                             | dépend des flags |
+| `JNE / JNZ` | `JNE label`          | Jump if not equal (`ZF=0`).                                | —                |
+| `JG / JNLE` | `JG label`           | Jump if greater (signed).                                  | —                |
+| `JGE`       | `JGE label`          | Jump if greater or equal (signed).                         | —                |
+| `JL / JNGE` | `JL label`           | Jump if less (signed).                                     | —                |
+| `JA / JNBE` | `JA label`           | Jump if above (unsigned, CF=0 & ZF=0).                     | —                |
+| `JB / JC`   | `JB label`           | Jump if below (unsigned, CF=1).                            | —                |
+| `SETcc`     | `SETZ/SETNZ/SETG...` | Stocke 0/1 dans un octet selon condition (ex : `SETZ al`). | —                |
 
 ---
 
