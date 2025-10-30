@@ -65,7 +65,9 @@
     "//ECE/ECE/Forensic/ECE/Forensic/TP 2",
     "//ECE/ECE/Forensic/ECE/Forensic/TP ",
     "//ECE",
-    "//ECE/ECE/Reverse"
+    "//ECE/ECE/Reverse",
+    "//Web",
+    "//ECE/ECE/SecuWindows"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",

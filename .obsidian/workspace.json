@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ECE/Reverse/Cours 1.md",
+                "file": "ECE/SecuWindows/Lab/Lab4.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Cours 1"
+              "title": "Lab4"
             }
           },
           {
@@ -253,9 +253,12 @@
   },
   "active": "6c049e2ec767c3dc",
   "lastOpenFiles": [
+    "Web/Word List.md",
+    "ECE/SecuWindows/Lab/Lab4.md",
+    "Web/Tools.md",
+    "ECE/Reverse/Cours 1.md",
     "Pentest Tools/Link.md",
     "ECE/Reverse/TP1.md",
-    "ECE/Reverse/Cours 1.md",
     "Assets/ECE/Reverse/Cours 1/IMG-20251029150758523.png",
     "Assets/ECE/Reverse/Cours 1/IMG-20251029145745866.png",
     "Assets/ECE/Reverse/Cours 1",
@@ -279,13 +282,11 @@
     "Linux/Package .md",
     "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
     "CTF/Hack The Box/Write Up/CodeTwo Hack The Box.md",
-    "Web/Tools.md",
     "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026023313071.png",
     "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026022517912.png",
     "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026022417513.png",
     "Assets/CTF/Hack The Box/Write Up/Conversor",
     "Infra/Wireguard.md",
-    "Web/Word List.md",
     "ECE/Forensic/TP /TP 2.md",
     "ECE/SecuWindows/Lab/Lab 3.md",
     "Assets/CTF/Hack The Box/Write Up/Imagery",
@@ -298,7 +299,6 @@
     "ECE/SecuSI/Lesson/Lesson.md",
     "ECE/SecuSI/Lesson/Lesson 2.md",
     "ECE/SecuSI/Lesson/Lesson 1 .md",
-    "ECE/SecuSI/Lab/Lab.md",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",
