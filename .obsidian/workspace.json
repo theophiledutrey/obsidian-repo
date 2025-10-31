@@ -4,25 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "4248e1a7f5dd808d",
+        "id": "f64cecc193676834",
         "type": "tabs",
         "children": [
           {
-            "id": "4829a55e4ff3c55c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ECE/Reverse/TP1.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "TP1"
-            }
-          },
-          {
-            "id": "6c049e2ec767c3dc",
+            "id": "88e9bc414e495b72",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -36,21 +22,20 @@
             }
           },
           {
-            "id": "04c7059997a42f18",
+            "id": "d9d2dbe394be4a18",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/Hack The Box/Write Up/Imagery.md",
+                "file": "CTF/Hack The Box/Write Up/Conversor.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Imagery"
+              "title": "Conversor"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -104,7 +89,7 @@
             }
           },
           {
-            "id": "ff053d41424b55f7",
+            "id": "e187641c2f0a53ef",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -232,7 +217,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 383.5
+    "width": 381.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -251,54 +236,54 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "6c049e2ec767c3dc",
+  "active": "88e9bc414e495b72",
   "lastOpenFiles": [
-    "Web/Word List.md",
+    "Assets/Pasted image 20251031110736.png",
+    "Assets/Pasted image 20251031110707.png",
+    "Assets/Pasted image 20251031110224.png",
+    "CTF/Hack The Box/Write Up/Imagery.md",
     "ECE/SecuWindows/Lab/Lab4.md",
-    "Web/Tools.md",
-    "ECE/Reverse/Cours 1.md",
-    "Pentest Tools/Link.md",
     "ECE/Reverse/TP1.md",
+    "ECE/Reverse/Reverse.md",
+    "ECE/Reverse/Cours 1.md",
+    "ECE/Reverse",
     "Assets/ECE/Reverse/Cours 1/IMG-20251029150758523.png",
     "Assets/ECE/Reverse/Cours 1/IMG-20251029145745866.png",
+    "Assets/ECE/Reverse/Cours 1/IMG-20251029144023000.png",
     "Assets/ECE/Reverse/Cours 1",
     "Assets/ECE/Reverse",
-    "Assets/ECE/Reverse/Cours 1/IMG-20251029144023000.png",
-    "ECE/Reverse/Reverse.md",
     "CTF/Hack The Box/Write Up/Conversor.md",
-    "ECE/Reverse",
-    "ECE/Reverse.md",
     "conflict-files-obsidian-git.md",
-    "CTF/Hack The Box/Write Up/Imagery.md",
-    "CTF/Hack The Box/Write Up/Expressway Hack The Box .md",
-    "Linux/Command.md",
     "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026024441704.png",
     "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026024349653.png",
     "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026024333845.png",
     "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026024309505.png",
-    "Linux/UID.md",
-    "Linux/Capabilities.md",
-    "Linux/Analyse.md",
-    "Linux/Package .md",
-    "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
-    "CTF/Hack The Box/Write Up/CodeTwo Hack The Box.md",
     "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026023313071.png",
-    "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026022517912.png",
-    "Assets/CTF/Hack The Box/Write Up/Conversor/IMG-20251026022417513.png",
     "Assets/CTF/Hack The Box/Write Up/Conversor",
-    "Infra/Wireguard.md",
-    "ECE/Forensic/TP /TP 2.md",
-    "ECE/SecuWindows/Lab/Lab 3.md",
+    "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
     "Assets/CTF/Hack The Box/Write Up/Imagery",
+    "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
+    "CTF/Hack The Box/Write Up/Expressway Hack The Box .md",
+    "CTF/Hack The Box/Write Up/Guardian Hack The Box.md",
+    "Web/Word List.md",
+    "Web/Tools.md",
+    "ECE/SecuWindows/Lab/Lab 3.md",
+    "Linux/Package .md",
+    "ECE/Forensic/TP /TP 2.md",
+    "ECE/Forensic/TP /TP 1.md",
+    "ECE/Forensic/TP /TP .md",
+    "ECE/Forensic/TP ",
+    "Assets/TP_RAM.pdf",
     "Assets/TP_RAM 2.pdf",
     "Assets/TP_RAM 1.pdf",
-    "Assets/TP_RAM.pdf",
-    "Assets/ECE/Forensic/TP /TP 1",
-    "Assets/ECE/Forensic/TP ",
-    "ECE/Forensic/TP/TP2/TP2.md",
-    "ECE/SecuSI/Lesson/Lesson.md",
-    "ECE/SecuSI/Lesson/Lesson 2.md",
-    "ECE/SecuSI/Lesson/Lesson 1 .md",
+    "Assets/ECE/Forensic/TP /TP 1/IMG-20251008111131218.pdf",
+    "Linux/Command.md",
+    "ECE/Cloud/AWS/Lesson/Lesson 7.md",
+    "CTF/Hack The Box/Achievement.md",
+    "Infra/Samba.md",
+    "Infra/Wireguard.md",
+    "Pentest Tools/Nmap.md",
+    "Pentest Tools/Metasploit.md",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",
