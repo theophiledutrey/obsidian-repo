@@ -67,7 +67,11 @@
     "//ECE",
     "//ECE/ECE/Reverse",
     "//Web",
-    "//ECE/ECE/SecuWindows"
+    "//ECE/ECE/SecuWindows",
+    "//ECE/ECE/Cloud",
+    "//ECE/ECE/Cloud/ECE/Cloud/Entra ID",
+    "//Linux",
+    "//Pentest Tools"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
