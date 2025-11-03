@@ -13,6 +13,34 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "ECE/Stage/Stage ITRACING.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Stage ITRACING"
+            }
+          },
+          {
+            "id": "44358ed6a120edbc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ECE/Stage/Key Vocabulary English.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Key Vocabulary English"
+            }
+          },
+          {
+            "id": "69e549c764e0f351",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "ECE/Stage/List.md",
                 "mode": "source",
                 "source": false
@@ -21,7 +49,8 @@
               "title": "List"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -222,11 +251,25 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "6bca8e86526490ea",
+  "active": "69e549c764e0f351",
   "lastOpenFiles": [
+    "ECE/Stage/Key Vocabulary English.md",
+    "ECE/Stage/Stage ITRACING.md",
+    "ECE/Stage/List.md",
+    "Assets/ECE/Stage/Stage ITRACING/IMG-20251103163748996.png",
+    "Assets/ECE/Stage/Stage ITRACING/IMG-20251103163718969.png",
+    "Assets/ECE/Stage/Stage ITRACING/IMG-20251103163647774.png",
+    "Assets/ECE/Stage/Stage ITRACING/IMG-20251103163632452.png",
+    "Assets/ECE/Stage/Stage ITRACING/IMG-20251103163621065.png",
+    "Assets/ECE/Stage/Stage ITRACING/IMG-20251103163550270.png",
+    "Assets/ECE/Stage/Stage ITRACING/IMG-20251103163550148.png",
+    "Assets/ECE/Stage/Stage ITRACING/IMG-20251103163524493.png",
+    "Assets/ECE/Stage/Stage ITRACING/IMG-20251103163510155.png",
+    "Assets/ECE/Stage/Stage ITRACING/IMG-20251103163502501.png",
+    "Assets/ECE/Stage/Stage ITRACING",
+    "Assets/ECE/Stage",
     "ECE/Stage/Lettre de motivation.md",
     "ECE/Stage/CV.md",
-    "ECE/Stage/List.md",
     "Assets/Lettre_AMOSSYS_Hyperviseurs_Theophile_Dutrey.pdf",
     "Assets/Lettre_AMOSSYS_Bypass_EDR_Theophile_Dutrey.pdf",
     "Assets/Lettre_Motivation_Theophile_Dutrey_Rolex.pdf",
@@ -255,20 +298,7 @@
     "Active Directory/Privilege Escalation.md",
     "Active Directory/Command.md",
     "CTF/Hack The Box/Write Up/Conversor.md",
-    "Assets/Pasted image 20251031121449.png",
-    "Assets/Pasted image 20251031121429.png",
-    "Assets/Pasted image 20251031120911.png",
-    "Assets/Pasted image 20251031120854.png",
-    "Assets/Pasted image 20251031120525.png",
-    "Assets/Pasted image 20251031113652.png",
-    "Assets/Pasted image 20251031113632.png",
-    "Assets/Pasted image 20251031113551.png",
-    "Assets/Pasted image 20251031113435.png",
-    "Assets/Pasted image 20251031110736.png",
-    "CTF/Hack The Box/Write Up/Imagery.md",
     "ECE/Reverse",
-    "Assets/ECE/Reverse/Cours 1",
-    "Assets/ECE/Reverse",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",
