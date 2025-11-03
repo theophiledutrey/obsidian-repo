@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pentest Tools/Link.md",
+                "file": "CTF/Hack The Box/Write Up/GiveBack.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Link"
+              "title": "GiveBack"
             }
           }
         ]
@@ -75,7 +75,7 @@
             }
           },
           {
-            "id": "8d2e9c238a3daeb2",
+            "id": "2ee7189029b4d631",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -224,6 +224,8 @@
   },
   "active": "8932c7d6a139e947",
   "lastOpenFiles": [
+    "Pentest Tools/Link.md",
+    "CTF/Hack The Box/Write Up/GiveBack.md",
     "Linux/UID.md",
     "Linux/Bug.md",
     "Linux/Privilege Escalation.md",
@@ -263,8 +265,6 @@
     "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
     "Assets/CTF/Hack The Box/Write Up/Imagery",
     "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
-    "CTF/Hack The Box/Write Up/Expressway Hack The Box .md",
-    "CTF/Hack The Box/Write Up/Guardian Hack The Box.md",
     "ECE/Forensic/TP ",
     "Assets/TP_RAM.pdf",
     "Assets/TP_RAM 2.pdf",

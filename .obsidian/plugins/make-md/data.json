@@ -71,7 +71,8 @@
     "//ECE/ECE/Cloud",
     "//ECE/ECE/Cloud/ECE/Cloud/Entra ID",
     "//Linux",
-    "//Pentest Tools"
+    "//Pentest Tools",
+    "//CTF"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
