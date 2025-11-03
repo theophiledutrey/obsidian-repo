@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "8fe3ad56156b2247",
+        "id": "e0d191598198ffab",
         "type": "tabs",
         "children": [
           {
-            "id": "8932c7d6a139e947",
+            "id": "6bca8e86526490ea",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/Hack The Box/Write Up/GiveBack.md",
+                "file": "ECE/Stage/List.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GiveBack"
+              "title": "List"
             }
           }
         ]
@@ -222,10 +222,14 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "8932c7d6a139e947",
+  "active": "6bca8e86526490ea",
   "lastOpenFiles": [
-    "Pentest Tools/Link.md",
+    "ECE/Stage/List.md",
+    "ECE/Stage/Stage.md",
+    "ECE/Stage",
+    "ECE/ECE.md",
     "CTF/Hack The Box/Write Up/GiveBack.md",
+    "Pentest Tools/Link.md",
     "Linux/UID.md",
     "Linux/Bug.md",
     "Linux/Privilege Escalation.md",
@@ -260,16 +264,12 @@
     "ECE/Reverse",
     "Assets/ECE/Reverse/Cours 1",
     "Assets/ECE/Reverse",
-    "conflict-files-obsidian-git.md",
     "Assets/CTF/Hack The Box/Write Up/Conversor",
-    "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
     "Assets/CTF/Hack The Box/Write Up/Imagery",
-    "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
     "ECE/Forensic/TP ",
     "Assets/TP_RAM.pdf",
     "Assets/TP_RAM 2.pdf",
     "Assets/TP_RAM 1.pdf",
-    "Assets/ECE/Forensic/TP /TP 1/IMG-20251008111131218.pdf",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",
