@@ -67,7 +67,8 @@
     "//ECE",
     "//ECE/ECE/Stage",
     "//CTF",
-    "//Linux"
+    "//Linux",
+    "//Web"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
