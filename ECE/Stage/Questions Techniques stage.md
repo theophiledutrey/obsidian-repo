@@ -326,9 +326,892 @@
   - **PoC non destructif** : preuve montrant la faille sans endommager le système.
   - **Rules of engagement** : conditions légales/contractuelles définissant ce qu’on a le droit de tester.
 
+
+# Crypto 
+
+
+## 1) Différence entre chiffrement symétrique et asymétrique
+
+- **Chiffrement symétrique**
+  - Même clé pour chiffrer et déchiffrer (ex: AES).
+  - Avantages : rapide, adapté aux données volumineuses.
+  - Inconvénients : distribution de la clé (problème de partage sécurisé).
+- **Chiffrement asymétrique**
+  - Paire de clés : publique (partagée) et privée (gardée secrète) (ex: RSA, ECC).
+  - Avantages : permet d’échanger des clés en toute sécurité (ex: échange de clé), signatures numériques.
+  - Inconvénients : plus lent, souvent utilisé pour chiffrer de petites données ou pour établir un canal sécurisé.
+- **Scénarios d’usage**
+  - Hybride : utiliser asymétrique pour échanger une clé symétrique, puis AES pour le flux de données.
+- **Glossaire rapide**
+  - **AES** : algorithme de chiffrement symétrique courant.
+  - **RSA / ECC** : algorithmes asymétriques (ECC = courbes elliptiques, plus efficaces pour clés courtes).
+  - **Signature numérique** : preuve qu’un message vient du détenteur de la clé privée.
+
 ---
 
-### Notes d'utilisation
-- Exporte ce fichier dans ton vault Obsidian, nomme-le `web_redteam_fiche.md`.
-- Tu peux ajouter des backlinks Obsidian (ex: `[[JWT]]`, `[[XSS]]`) pour créer des pages détaillées sur chaque terme.
-- Si tu veux, je génère aussi une version "flashcards" (question + 3 bullets) ou des réponses orales 15–20s.
+## 2) Rôle des IV et modes d’opération (CBC vs GCM). Problème si IV réutilisé
+
+- **IV (Initialization Vector)**
+  - Valeur initiale utilisée pour rendre le chiffrement non déterministe et empêcher répétition des motifs.
+  - Doit être unique (et parfois aléatoire) selon le mode utilisé.
+- **Modes d’opération**
+  - **CBC (Cipher Block Chaining)** : chaque bloc chiffré dépend du bloc précédent XORé avec l’IV ; nécessite padding.
+  - **GCM (Galois/Counter Mode)** : mode par compteur fournissant chiffrement + authentification (AEAD — Authenticated Encryption with Associated Data) ; protège intégrité et confidentialité.
+- **IV réutilisé**
+  - En **CBC**, réutiliser un IV peut permettre des attaques par pattern ou padding oracle (selon contexte).
+  - En **GCM**, réutiliser un nonce/IV est catastrophique : peut conduire à récupération de la clé ou à falsification des messages.
+- **Glossaire rapide**
+  - **IV / nonce** : valeur d'initialisation/compteur; nonce = number used once.
+  - **AEAD** : chiffrement qui assure à la fois confidentialité et intégrité.
+  - **Padding** : ajout de données pour compléter un bloc obligatoire (ex: PKCS#7).
+
+---
+
+## 3) Fonction de hachage sécurisée vs faiblesse (MD5). Exemples
+
+- **Fonction de hachage**
+  - Transforme des données en empreinte (digest) de taille fixe.
+  - Doit être rapide à calculer, mais **résistante aux collisions** (deux entrées différentes donnant même digest) et résistante aux préimages.
+- **Exemples**
+  - **Sécurisées** : SHA-2 (SHA-256, SHA-512), SHA-3.
+  - **Faibles** : MD5, SHA-1 (collisions démontrées).
+- **Usage**
+  - Intégrité, signatures, dérivation de clés (avec KDFs adaptés).
+- **Glossaire rapide**
+  - **Collision** : deux messages différents qui produisent le même hash.
+  - **Préimage** : trouver un message qui correspond à un hash donné.
+  - **KDF (Key Derivation Function)** : fonction qui dérive une clé à partir d’un secret (ex: PBKDF2, Argon2).
+
+---
+
+## 4) Forward secrecy — concept et mise en place dans TLS
+
+- **Forward Secrecy (Perfect Forward Secrecy, PFS)**
+  - Propriété qui empêche qu’une compromission future d’une clé longue durée (ex: clé privée du serveur) ne permette de déchiffrer des sessions passées.
+  - Réalisée via l’utilisation d’échanges de clés éphémères (ex: Diffie-Hellman éphémère — DHE, ou ECDHE pour ECC).
+- **Dans TLS**
+  - Préférer suites chiffrées avec `ECDHE`/`DHE` plutôt que RSA key exchange.
+  - Configurez le serveur pour privilégier PFS et retirez suites obsolètes.
+- **Glossaire rapide**
+  - **Diffie-Hellman (DH)** : protocole d’échange de clé.
+  - **DHE / ECDHE** : versions éphémères (DHE = DH éphémère, ECDHE = DH sur courbes elliptiques).
+  - **Suite cryptographique** : combinaison d’algorithmes pour chiffrement, hash, échange de clé.
+
+---
+
+## 5) Padding oracle attack — explication et exemple contre CBC
+
+- **Principe**
+  - Si une application révèle (par message d’erreur, timing) si le padding d’un message déchiffré est valide, un attaquant peut déchiffrer ou forger des messages sans connaître la clé.
+- **Exemple (CBC)**
+  - L’attaquant modifie un bloc chiffré et observe la réponse ; en itérant et en testant valeurs, il peut retrouver byte par byte le plaintext.
+- **Mitigations**
+  - Ne pas renvoyer d’erreurs détaillées sur le padding ; utiliser AEAD (ex: GCM) plutôt que CBC+padding ; valider intégrité avant de signaler erreurs.
+- **Glossaire rapide**
+  - **Padding oracle** : oracle = source d’information; oracle de padding = retour d’info sur validité du padding.
+  - **AEAD** : chiffrement authentifié évitant ce type d’attaque.
+
+---
+
+## 6) Attaquer un système qui stocke des mots de passe — attaques et défenses
+
+- **Attaques**
+  - **Hash bruteforce** : tenter mots de passe jusqu’à correspondance.
+  - **Rainbow tables** : tables pré-calculées de hash↔mot de passe (contre hashes sans salt).
+  - **Credential stuffing** : réutiliser mots de passe compromis d’autres fuites.
+- **Défenses**
+  - **Salt** : ajouter donnée aléatoire par utilisateur avant hash pour rendre rainbow tables inefficaces.
+  - **KDFs adaptatifs** : BCrypt, Argon2, PBKDF2 avec coût configurable pour ralentir attaques.
+  - **Rate limiting / MFA** : limiter essais et demander second facteur.
+- **Glossaire rapide**
+  - **Salt** : valeur aléatoire qui modifie le hash pour chaque utilisateur.
+  - **Argon2 / BCrypt / PBKDF2** : fonctions lentes conçues pour rendre bruteforce coûteux.
+  - **Rainbow table** : table pré-calculée facilitant inversion de hash simple.
+
+---
+
+## 7) Kerberos — chiffrement, tickets, et vecteurs exploitables
+
+- **Concept de base**
+  - Service d'authentification utilisant **tickets** : TGT (Ticket Granting Ticket) et TGS (Ticket Granting Service).
+  - Tickets cryptés avec clés dérivées des mots de passe des comptes (ou clés de service).
+- **Vecteurs d’attaque courants**
+  - **Kerberoasting** : demander un ticket pour un service (TGS) chiffré avec la clé de service (basée sur mot de passe du service), puis brute-forcer hors ligne ce ticket pour récupérer le mot de passe du compte de service.
+  - **AS-REP roasting** : si un compte n'exige pas d'auth pré-auth (pre-auth), on peut demander AS-REP et brute-forcer hors-ligne.
+- **Mitigations**
+  - Mots de passe forts pour comptes de service, rotation des clés, utiliser Managed Service Accounts et Kerberos armoring (FAST).
+- **Glossaire rapide**
+  - **TGT** : ticket initial obtenu après authentification utilisateur auprès du KDC.
+  - **TGS** : ticket pour accéder à un service spécifique.
+  - **Kerberoasting** : extraction hors-ligne des secrets de comptes de service via tickets TGS.
+
+---
+
+## 8) Attaque sur PKI (compromission CA, certificate pinning bypass)
+
+- **Vecteurs**
+  - **Compromission d’une CA** : obtenir accès à la clé privée d’une autorité de certification permet générer certificats valides pour n’importe quel domaine.
+  - **Man-in-the-middle via certificat frauduleux** : utiliser certificat signé par CA compromise ou mal configurée.
+  - **Certificate pinning bypass** : si pinning mal implémenté ou si l’app accepte fallback à le store système, possibilité de bypass.
+- **Détections & mitigations**
+  - Surveillance des certificats émis (CT logs — Certificate Transparency), implémenter pinning strict correctement, révoquer(certificates via CRL/OCSP) et monitorer CAs.
+- **Glossaire rapide**
+  - **CA (Certificate Authority)** : autorité qui signe/émet des certificats.
+  - **CT logs** : journaux publics de certificats émis pour transparence.
+  - **OCSP / CRL** : mécanismes de révocation de certificats.
+
+---
+
+## 9) Pourquoi le "rolling your own crypto" est dangereux
+
+- **Risques**
+  - Erreurs subtiles dans conception/protocoles qui affaiblissent la sécurité (ex: mauvaise gestion d’IV, chiffrement sans authentification).
+  - Difficulté de révision formelle et tests cryptographiques.
+- **Bonnes pratiques**
+  - Utiliser primitives reconnues (libs auditée : libsodium, OpenSSL avec API higher-level), suivre standards (TLS, NaCl), faire valider par pair-review cryptographique.
+- **Glossaire rapide**
+  - **Primitive cryptographique** : composant de base (ex: AES, SHA-256).
+  - **Libsodium** : bibliothèque moderne fournissant primitives sécurisées faciles à utiliser.
+
+---
+
+## 10) Attaque contre TLS (downgrade, mauvais ciphersuites) et détection
+
+- **Attaques courantes**
+  - **Downgrade** : forcer négociation sur versions/ciphersuites faibles (ex: SSLv3) si serveur mal configuré.
+  - **Ciphersuites faibles** : utiliser suites avec RC4, MD5, ou sans PFS, vulnérables aux attaques.
+  - **Man-in-the-middle avec certificats compromis**.
+- **Détection**
+  - Scanner les endpoints TLS (ex: `sslyze`, `testssl.sh`) pour repérer suites obsolètes, absence de PFS, support de TLS < 1.2.
+  - Surveiller logs et anomalies de handshake.
+- **Mitigations**
+  - Désactiver anciens protocoles, prioriser suites avec ECDHE et AEAD (GCM/ChaCha20-Poly1305).
+- **Glossaire rapide**
+  - **Downgrade attack** : forcer utilisation d’une version/chiffre affaiblie.
+  - **ChaCha20-Poly1305** : algorithme AEAD alternatif performant pour CPU sans accélération AES.
+  - **sslyze/testssl.sh** : outils d’audit de configuration TLS.
+
+
+# Linux 
+
+## 1) Processus de démarrage (systemd) et où regarder pour services mal configurés
+
+- **Étapes du démarrage (simplifié)**
+  - BIOS/UEFI -> chargeur d'amorçage (GRUB) -> kernel -> `init`/`systemd`.
+  - `systemd` démarre les services définis par des unit files (`.service`, `.timer`, `.socket`).
+- **Où regarder pour malconfigurations**
+  - `/etc/systemd/system/` et `/lib/systemd/system/` : unit files personnalisés et systèmes.
+  - Journaux : `journalctl -b` (logs du boot) et `journalctl -u <service>` pour un service.
+  - Fichiers de configuration : `/etc/` (ex: `/etc/ssh/sshd_config`), scripts init, cron jobs.
+- **Recherches utiles**
+  - chercher services démarrant avec privilèges root, chemins absolus non sécurisés, ExecStart pointant vers scripts modifiables.
+- **Glossaire rapide**
+  - **systemd** : système d'init moderne gérant services, dépendances et timers.
+  - **Unit file** : fichier de configuration pour `systemd` (ex: `nginx.service`).
+  - **journalctl** : outil pour lire les logs système fournis par `systemd`/journald.
+
+---
+
+## 2) Escalade de privilèges sur Linux — 5 vecteurs courants
+
+- **SUID (Set UID)**
+  - Binaire marqué SUID s'exécute avec l'UID du propriétaire (souvent root) même si lancé par un utilisateur non privilégié.
+  - Recherche : `find / -perm -4000 -type f 2>/dev/null`
+  - Exploitation : si le binaire a une vuln ou permet exécution de commandes, il peut permettre root.
+- **Cron jobs mal configurés**
+  - Jobs planifiés exécutés par root qui lancent scripts/modifient fichiers dans des répertoires écrits par l'utilisateur.
+  - Exploitation : remplacer script ou modifier PATH pour exécuter code arbitraire.
+- **Noyau vulnérable (kernel exploit)**
+  - Failles locales dans le kernel peuvent permettre escalation si exploit disponible et compatible.
+- **PATH/LD_LIBRARY_PATH manipulation**
+  - Services qui exécutent /usr/bin/tool sans chemin absolu peuvent être trompés en plaçant un binaire du même nom dans un répertoire plus haut dans PATH.
+  - LD_PRELOAD/LD_LIBRARY_PATH peuvent forcer le chargement de bibliothèques arbitraires si un binaire charge des libs dynamiquement sans clearance.
+- **Misconfiguration sudo**
+  - Permissions sudo trop permissives (ex: `NOPASSWD: /bin/bash` ou scripts éditables) ou utilisation dangereuse de `visudo`.
+  - Vérifier `sudo -l` pour la liste des commandes autorisées.
+- **Glossaire rapide**
+  - **SUID** : bit setuid ; exécution d’un binaire avec l’UID du propriétaire.
+  - **Cron** : planificateur de tâches périodiques (`crontab`).
+  - **LD_PRELOAD** : variable d’environnement forçant le chargement de bibliothèques partagées.
+  - **sudo -l** : liste des commandes sudo autorisées pour l’utilisateur.
+
+---
+
+## 3) Qu’est-ce qu’un binaire SUID et comment l’exploiter (exemple pratique)
+
+- **Concept**
+  - Binaire possédant le bit SUID (`rwsr-xr-x`) s'exécute avec les privilèges du propriétaire, souvent root.
+- **Méthode d’exploitation (exemple)**
+  - Identifier binaire SUID vulnérable (ex: `find` version ancienne permettant `--exec` ou `less` avec `!` command).
+  - Si le binaire appelle `system()` ou permet l'injection de commandes, utiliser pour exécuter shell (`/bin/sh`) ou déposer une reverse shell.
+  - Exemple concret : SUID sur un script perl qui appelle `system($ENV{EDITOR})` et l'attaquant modifie `EDITOR` pour `/bin/sh`.
+- **Mitigations**
+  - Minimiser binaires SUID, appliquer updates, utiliser allowlist et auditing.
+- **Glossaire rapide**
+  - **system()** : appel en C lançant une commande shell depuis un programme.
+  - **Reverse shell** : connexion sortante depuis la victime vers un attaquant donnant shell interactif.
+
+---
+
+## 4) Installer un accès persistant discret (persistence) en minimisant la détection
+
+- **Options courantes**
+  - `crontab -e` ou ajouter job dans `/etc/cron.d/` ou `/etc/cron.hourly/`.
+  - `systemd` : créer un service `.service` ou `systemd` timer (moins évident car consigné dans journalctl).
+  - SSH authorized_keys : ajouter clé publique à `~/.ssh/authorized_keys` (mais visible).
+  - Kernel module / rootkit (risqué et détectable par SIEM/Integrity checks).
+- **Conseils OPSEC pour discrétion**
+  - éviter modifications massives; utiliser techniques living-off-the-land (binaries système) ; masquer via timestamps, minimiser connexions externes.
+  - préférer persistence éphémère et rotation plutôt qu'installer backdoor permanente si règles d’engagement l'exigent.
+- **Glossaire rapide**
+  - **systemd timer** : alternative à cron dans `systemd` pour lancer tâches planifiées.
+  - **SIEM** : système de gestion et corrélation de logs (Security Information and Event Management).
+
+---
+
+## 5) Trouver des secrets (configs, variables d’environnement, credentials en clair)
+
+- **Emplacements typiques**
+  - Fichiers de config : `/etc/`, `/home/*/.config/`, applications web (`config.php`, `.env`).
+  - Variables d’environnement : `printenv`, `cat /proc/<pid>/environ` (si permissions le permettent).
+  - Historiques : `~/.bash_history`, `~/.mysql_history`.
+  - Services : fichiers unit systemd avec credentials en clair, scripts de déploiement.
+- **Techniques**
+  - Rechercher patterns (`API_KEY`, `PASSWORD`, `SECRET`, `TOKEN`) via `grep -R`.
+  - Lister processus et inspecter `/proc/<pid>/fd` et `/proc/<pid>/cmdline` pour arguments en clair.
+- **Glossaire rapide**
+  - **.env** : fichier contenant variables d’environnement pour l’application.
+  - **/proc** : pseudo-filesystem exposant informations processus et système.
+  - **fd (file descriptor)** : pointeur vers un flux ouvert utilisé par un processus (fichiers, sockets).
+
+---
+
+## 6) Utilisation de `strace` / `ltrace` pour reverse engineering d’un binaire
+
+- **`strace`**
+  - Trace appels système (syscalls) : `strace -f -o trace.txt ./program` pour voir open/read/write/execve.
+  - Utile pour identifier fichiers lus, commandes exécutées, et interactions réseau.
+- **`ltrace`**
+  - Trace appels de bibliothèques (fonctions libc) : montrer fonctions comme `system()`, `strcpy`, `sprintf`.
+- **Méthodologie**
+  - Exécuter binaire avec `strace` en environnement contrôlé, filtrer syscalls intéressantes (`open`, `execve`, `connect`).
+  - Coupler avec `gdb` pour breakpoint et analyse plus fine si nécessaire.
+- **Glossaire rapide**
+  - **syscall** : appel système — interface entre application et kernel.
+  - **gdb** : débogueur natif pour analyser exécution pas à pas.
+
+---
+
+## 7) Bypasser AppArmor/SELinux ou utiliser pour détection
+
+- **Principes**
+  - AppArmor/SELinux : Mandatory Access Control (MAC) limitant actions processus via politiques.
+  - Bypasser est difficile sans privilèges; souvent les erreurs de politique (permissive mode) ou politiques trop larges exposent vecteurs.
+- **Approche**
+  - Vérifier mode (`getenforce` pour SELinux) et logs (`/var/log/audit/audit.log`).
+  - Chercher politiques en `permissive` ou règles `allow` trop générales ; utiliser misconfigurations pour écrire dans répertoires restreints ou exécuter chaines.
+  - Plutôt que bypass, utiliser politiques pour détecter comportements anormaux (alerte sur denied).
+- **Glossaire rapide**
+  - **MAC (Mandatory Access Control)** : contrôle d’accès basé sur politiques centrales (opposé à DAC).
+  - **getenforce** : commande pour voir état SELinux (`Enforcing`, `Permissive`, `Disabled`).
+  - **audit.log** : journal d’audit SELinux/AppArmor.
+
+---
+
+## 8) Récupérer des infos utiles depuis la mémoire et outils (`/proc`, `ss`, `netstat`, `ps`, `lsof`)
+
+- **Commandes clés**
+  - `ps aux` : lister processus.
+  - `ss -tulpen` : sockets open (TCP/UDP), processus associés et ports.
+  - `netstat -tulpn` : similaire (si installé).
+  - `lsof -i` : lister fichiers/sockets réseau ouverts.
+  - Inspecter `/proc/<pid>/environ`, `/proc/<pid>/cmdline`, `/proc/<pid>/maps` pour bibliothèques/mémoire mappée.
+- **Usage**
+  - Trouver connexions sortantes suspectes (C2), processus forkés, fichiers ouverts par un service.
+  - Identifier PID LSASS equivalent on Linux (processus stockant secrets) — varies by distro/app.
+- **Glossaire rapide**
+  - **ss** : utilitaire moderne pour lister sockets.
+  - **lsof** : list open files — montre fichiers, sockets et processus associés.
+  - **/proc/pid/maps** : zones mémoire mappées pour un processus (librairies, segments).
+
+## 9) Outils de post-exploitation (meterpreter, socat, netcat, cron, systemd timers) et pourquoi
+
+- **Meterpreter**
+  - Payload interactif (Metasploit) offrant modules pour pivot, dump credentials, upload/download, etc.
+- **Netcat (`nc`)**
+  - Outil polyvalent pour créer reverse/bind shells, transférer fichiers, ou tunneling simple.
+- **Socat**
+  - Plus puissant que netcat : permet redirection bidirectionnelle, TLS, proxys, et multiplexing.
+- **Cron / systemd timers**
+  - Utilisés pour persistance et exécution programmée d’actions malicieuses.
+- **Pourquoi les utiliser**
+  - Simplicité, disponibilité sur la plupart des systèmes, flexibilité pour pivoting et tunneling.
+- **Glossaire rapide**
+  - **C2 (Command and Control)** : infrastructure utilisée pour contrôler machines compromises.
+  - **Bind shell vs reverse shell** : bind = machine victime écoute, attacker se connecte; reverse = victime se connecte à l'attaquant.
+
+---
+
+## 10) Parler d’une expérience où tu as durci ou contourné des protections Linux (auditing/EDR)
+
+- **Structure pour l’entretien**
+  - Situation : expliquer le contexte (box/engagement, scope).
+  - Action : étapes techniques (audit, outils utilisés, tests non destructifs).
+  - Résultat : découverte, remédiation proposée, réduction du risque mesurable.
+- **Points à mettre en avant**
+  - Utilisation de logs (`journalctl`, auditd), baselines, configuration d’EDR (ex: Osquery, Wazuh).
+  - Expliquer tradeoffs (sécurité vs performance), recommandations pratiques (limiter SUID, chroot, renforcer sudoers).
+- **Glossaire rapide**
+  - **EDR (Endpoint Detection and Response)** : solution pour surveiller et répondre aux menaces sur endpoints.
+  - **auditd** : démon d'audit Linux collectant événements système pour analyse.
+
+---
+
+
+# Windows 
+
+
+## 1) Modèle de sécurité Windows (tokens, UAC, SID) et contournement UAC
+
+- **Modèle de sécurité**
+  - Chaque processus Windows s’exécute sous un **token d’accès** contenant l’identité, les groupes et privilèges.
+  - Chaque ressource (fichier, registre, etc.) a une **ACL (Access Control List)** définissant qui peut y accéder.
+  - **SID (Security Identifier)** : identifiant unique attribué à chaque compte/utilisateur/groupe.
+  - **UAC (User Account Control)** : mécanisme qui sépare exécution utilisateur et élévation admin pour réduire la surface d’attaque.
+- **Contournement UAC**
+  - Exploiter applications whitelisted ou auto-élevées (autoElevate=true dans manifest).
+  - Attaques typiques : *fodhelper*, *eventvwr*, *sdclt.exe*, *computerdefaults.exe* (appelent des clés registre contrôlables).
+- **Glossaire rapide**
+  - **Token d’accès** : structure qui décrit les droits d’un processus.
+  - **ACL** : liste des permissions sur un objet.
+  - **SID** : identifiant unique d’un utilisateur/groupe.
+  - **UAC bypass** : élévation sans prompt via mécanismes Windows mal configurés.
+
+---
+
+## 2) Méthodes d’escalade de privilèges sous Windows
+
+- **Services mal configurés**
+  - Service lancé avec privilèges SYSTEM mais exécutable modifiable → remplacer binaire.
+- **DLL hijacking**
+  - Si une DLL est chargée depuis un chemin non sécurisé (PATH), placer une DLL malveillante prioritaire.
+- **Token impersonation**
+  - Utiliser tokens d’un processus avec privilèges élevés (via `incognito`, `mimikatz`, `SeImpersonatePrivilege`).
+- **Unquoted service paths**
+  - Chemin sans guillemets contenant des espaces, ex: `"C:\Program Files\Vulnerable Service\service.exe"` → Windows peut tenter d’exécuter `C:\Program.exe` si présent.
+- **Glossaire rapide**
+  - **SYSTEM** : compte le plus privilégié sous Windows.
+  - **DLL hijacking** : exécution de code arbitraire en plaçant une DLL contrôlée.
+  - **Token impersonation** : se faire passer pour un autre utilisateur en réutilisant son token.
+
+---
+
+## 3) Fonctionnement AMSI (Antimalware Scan Interface) et méthodes de contournement
+
+- **Fonctionnement**
+  - AMSI inspecte le contenu en mémoire avant exécution (scripts PowerShell, VBA, etc.).
+  - Fournit une API que les AV/EDR peuvent hooker pour scanner le contenu.
+- **Contournements**
+  - Modifier la mémoire du processus pour désactiver `AmsiScanBuffer`.
+  - Charger PowerShell sans AMSI (`powershell -version 2` ou via CLR injection).
+  - Obfuscation de scripts pour éviter détection (variable substitution, split strings).
+- **Glossaire rapide**
+  - **AMSI** : interface d’analyse antimalware intégrée à Windows.
+  - **EDR** : Endpoint Detection & Response (outil de surveillance en temps réel).
+
+---
+
+## 4) LSASS / Credential Guard — but et attaques possibles
+
+- **LSASS (Local Security Authority Subsystem Service)**
+  - Stocke et gère authentifications locales et réseau (hashs NTLM, tickets Kerberos).
+- **Credential Guard**
+  - Fonction Windows 10+ isolant secrets LSASS dans un conteneur sécurisé via Virtualization-Based Security (VBS).
+- **Attaques**
+  - Dump mémoire LSASS via `procdump`, `mimikatz`, ou lecture directe `/dev/mem` (nécessite SYSTEM).
+  - Bypass Credential Guard : injection directe dans mémoire (non triviale, mitigée par HVCI/VBS).
+- **Glossaire rapide**
+  - **NTLM** : protocole d’authentification challenge-response hérité.
+  - **VBS / HVCI** : isolation basée sur virtualisation empêchant lecture directe mémoire sensible.
+
+---
+
+## 5) Création d’un implant C2 (Command & Control) et contournement AV/EDR
+
+- **Implant C2**
+  - Programme discret communiquant avec serveur C2 pour exécuter commandes, exfiltrer données, etc.
+  - Exemples : Empire agent, Covenant, custom implant HTTP/HTTPS/DNS.
+- **Techniques d’évasion**
+  - Obfuscation de chaînes, chiffrement des communications, polymorphisme.
+  - Signature numérique valide (signing), exécution via processus légitime (*LOLBin* : living-off-the-land binary).
+- **Glossaire rapide**
+  - **C2** : serveur de Command & Control.
+  - **LOLBin** : binaire Windows légitime utilisé à des fins malveillantes.
+  - **Polymorphisme** : modification dynamique du code pour échapper détection.
+
+---
+
+## 6) OPSEC lors d’une campagne Windows (logs, nettoyage, LoL)
+
+- **Bonnes pratiques OPSEC**
+  - Limiter bruit réseau et journaux : désactiver logging PowerShell (`Set-ExecutionPolicy` contrôlé), effacer événements (`wevtutil cl`).
+  - Utiliser outils natifs (LoLBins) au lieu d’outils externes.
+  - Nettoyer artefacts : fichiers temporaires, services créés, clés de registre.
+- **Glossaire rapide**
+  - **wevtutil** : outil CLI pour gérer journaux Windows.
+  - **LoLBins** : binaires Windows utilisables pour exécution arbitraire (ex: `mshta`, `certutil`, `regsvr32`).
+
+---
+
+## 7) Persistance (Scheduled Tasks, Services, Run Keys, WMI)
+
+- **Méthodes courantes**
+  - **Scheduled Tasks** : planifier exécution d’un binaire au démarrage (`schtasks /create`).
+  - **Services** : créer un nouveau service ou modifier un service existant pour exécuter code arbitraire.
+  - **Run Keys** : clés registre `HKCU/HKLM\Software\Microsoft\Windows\CurrentVersion\Run`.
+  - **WMI Event Subscription** : déclenche exécution lors d’événement système.
+- **Glossaire rapide**
+  - **HKCU / HKLM** : hives de registre (Current User / Local Machine).
+  - **WMI (Windows Management Instrumentation)** : interface d’administration système scriptable.
+
+---
+
+## 8) PowerShell pour intrusion (modules, encodage, AMSI bypass)
+
+- **Usage offensif**
+  - Télécharger & exécuter scripts en mémoire (`IEX (New-Object Net.WebClient).DownloadString()`).
+  - Encoder scripts (`-EncodedCommand`), obfuscation (`Out-String`, split, base64).
+  - Charger modules offensifs : PowerView, PowerUp, Nishang, etc.
+- **AMSI bypass (rappel)**
+  - Modifier fonction `AmsiScanBuffer` ou utiliser PowerShell v2 (non AMSI).
+- **Glossaire rapide**
+  - **IEX** : alias PowerShell pour `Invoke-Expression` (exécution d’une chaîne comme code).
+  - **PowerView / PowerUp** : modules PowerShell d’audit et d’escalade de privilèges.
+
+---
+
+## 9) Analyser un dump LSASS pour récupérer credentials
+
+- **Méthodes**
+  - `procdump.exe -ma lsass.exe lsass.dmp` ou `rundll32 comsvcs.dll, MiniDump`.
+  - Analyse avec `mimikatz`, `pypykatz`, ou `LaZagne` pour extraire hash/cleartext.
+- **Limitations**
+  - Besoin de privilèges SYSTEM.
+  - Credential Guard ou EDR peuvent bloquer l’accès ou détecter tentative.
+- **Glossaire rapide**
+  - **procdump** : outil Sysinternals pour dumper mémoire d’un processus.
+  - **mimikatz** : outil open-source d’extraction de credentials.
+
+---
+
+## 10) Détection et contournement EDR (principes)
+
+- **Détection**
+  - EDR surveille appels API, injections mémoire, création de processus, comportements anormaux.
+- **Contournement**
+  - Injection dans processus signés (`explorer.exe`, `svchost.exe`), désactivation hooks via `syscall` direct, chiffrement du payload.
+  - Utiliser exécution indirecte (ex: `rundll32`, `wmic`, `regsvr32`) pour masquer l’origine.
+- **Glossaire rapide**
+  - **Hook** : interception d’un appel API par un programme tiers.
+  - **Syscall direct** : appel système sans passer par API hookée.
+  - **Process injection** : insérer code dans un autre processus légitime.
+
+
+
+
+# Active Directory (AD) — Fiche Red Team
+
+
+## 1) Flux d'authentification Kerberos dans AD (TGT, TGS)
+
+- **Étapes principales**
+  - **Authentification initiale (AS - Authentication Service)** : l'utilisateur prouve son identité au KDC (Key Distribution Center) et reçoit un **TGT** (Ticket Granting Ticket) chiffré avec la clé du TGS.
+  - **Obtention de ticket de service (TGS - Ticket Granting Service)** : le client présente le TGT au TGS pour obtenir un ticket pour un service spécifique (TGS response), chiffré avec la clé du service.
+  - **Accès au service** : le client présente le ticket de service au serveur cible ; ce serveur le déchiffre avec sa clé et autorise l'accès.
+- **Glossaire rapide**
+  - **KDC** : Key Distribution Center (composant Kerberos, souvent DC dans AD) qui émet/valide tickets.
+  - **TGT** : ticket servant à demander d'autres tickets sans re-saisir mot de passe.
+  - **TGS** : service délivrant tickets pour services spécifiques.
+
+---
+
+## 2) Kerberoasting — concept et méthode
+
+- **Principe**
+  - Cibler comptes de service avec SPN (Service Principal Name). Lorsque l’on demande un ticket de service pour un SPN, le TGS renvoie un ticket chiffré avec la clé liée au mot de passe du compte de service.
+  - L’attaquant extrait ce ticket et le brute-force hors-ligne pour récupérer le mot de passe du compte de service.
+- **Étapes pratiques**
+  - Lister les SPNs (`setspn -T domain -Q */*` ou via PowerView `Get-NetUser -SPN`).
+  - Demander ticket TGS pour le SPN (normal client behavior).
+  - Exporter ticket (Rubeus, mimikatz) et lancer bruteforce/wordlist pour casser le hash.
+- **Mitigations**
+  - Utiliser mots de passe forts pour comptes de service, rotation régulière, Managed Service Accounts (MSAs) ou gMSA.
+- **Glossaire rapide**
+  - **SPN** : identifiant unique d’un service dans AD (ex: `HTTP/webserver.domain`).
+  - **Kerberoasting** : attaque hors-ligne contre tickets TGS pour casser mots de passe de services.
+
+---
+
+## 3) AS-REP roasting — quand applicable et comment
+
+- **Principe**
+  - Si un compte utilisateur/service n’exige pas l’authentification pre-auth (PreAuthentication disabled), on peut demander un AS-REP qui est chiffré avec une clé dérivée du mot de passe du compte ; cet AS-REP peut être bruteforcé hors-ligne.
+- **Détection**
+  - Vérifier l’attribut `DONT_REQUIRE_PREAUTH` sur les comptes (`Get-ADUser -Properties * | where { $_.UserAccountControl -band 4194304 }`).
+- **Mitigations**
+  - Activer pre-auth pour tous les comptes, forcer mots de passe forts, monitoring des requêtes AS-REP.
+- **Glossaire rapide**
+  - **Pre-auth** : mécanisme où le client prouve son identité avant que le KDC délivre des tickets.
+  - **AS-REP roasting** : extraction brute-force hors-ligne d’un AS-REP pour retrouver mot de passe.
+
+---
+
+## 4) Pass-the-Hash (PtH) et Pass-the-Ticket (PtT)
+
+- **Pass-the-Hash**
+  - Réutiliser le NTLM hash d’un compte pour s’authentifier sans connaître le mot de passe en clair.
+  - Exécution typique : extraire hash (mimikatz, secretsdump) et utiliser `psexec`, `wmiexec` ou outils équivalents pour s’authentifier.
+- **Pass-the-Ticket**
+  - Réutiliser un ticket Kerberos (TGT/TGS) obtenu pour s’authentifier sur d’autres services sans mot de passe.
+  - Golden Ticket = ticket forgé en utilisant la clé du domaine (`krbtgt`) permettant accès quasi-illimité.
+- **Mitigations**
+  - LSA protection, rotation régulière du compte `krbtgt` (double rotation recommended), limiter privilèges d’administration locale, use of Protected Users group and Credential Guard.
+- **Glossaire rapide**
+  - **Golden Ticket** : TGT forgé avec la clé Kerberos du domaine (`krbtgt`) donnant accès complet.
+  - **Credential Guard** : protection Microsoft isolant secrets d'authentification.
+
+---
+
+## 5) DCSync / DCSync abuse — ce que c’est et permissions nécessaires
+
+- **Principe**
+  - Fonctionnalité native (replication) permise aux DCs : un compte ayant `Replicating Directory Changes` et `Replicating Directory Changes All` peut demander des données de réplication (comportement DCSync).
+  - Un attaquant qui obtient ces droits peut demander et extraire les hash/passwords de comptes sans compromettre DC directement.
+- **Détection**
+  - Surveiller requêtes LDAP anormales et l’utilisation de droits de réplication hors heure normale.
+  - Utiliser bloodhound pour détecter entités avec ces droits.
+- **Mitigations**
+  - Restreindre droits de réplication, utiliser GPOs restrictifs, monitorer les changements d’ACL.
+- **Glossaire rapide**
+  - **DCSync** : simulation de comportement de réplication pour extraire secrets via RPC/LDAP.
+  - **Replicating Directory Changes** : permission AD permettant lecture de changements.
+
+---
+
+## 6) Reconnaissance AD discrète (BloodHound, LDAP queries)
+
+- **Techniques discrètes**
+  - Utiliser commandes natives (nltest, net, dsquery) ou LDAP queries pour récupérer info sans déclencher alertes bruyantes.
+  - BloodHound (avec SharpHound collector) mappe relations (sessions, group memberships, ACLs) ; exécuter collection en "spider" mode ou via SMB to avoid noisy LDAP queries.
+- **Bonnes pratiques lors d’un engagement**
+  - Limiter fréquence des requêtes, récolter données incrémentales, masquer sources (relay via pivot).
+- **Glossaire rapide**
+  - **BloodHound** : outil d’analyse de graph AD pour trouver chemins d’élévation de privilèges.
+  - **LDAP** : protocole d’accès à l’annuaire (Lightweight Directory Access Protocol).
+
+---
+
+## 7) Vecteurs pour obtenir comptes privilégiés (GPO misconfigurés, SPNs, ACLs faibles)
+
+- **Exemples de vecteurs**
+  - GPO avec scripts ou preferences stockant credentials en clair.
+  - SPN permettant kerberoast.
+  - ACLs faibles sur objets AD (par ex: ability to set `msDS-ManagedPassword`).
+  - Shadow credentials in gMSA or service accounts with weak passwords.
+- **Recommandations**
+  - Auditer GPO/policies, restreindre accès sur objets sensibles, utiliser tiered admin model (PAM/PAW).
+- **Glossaire rapide**
+  - **GPO** : Group Policy Object — configuration centralisée appliquée aux machines et utilisateurs.
+  - **gMSA / MSA** : comptes de service gérés permettant rotation automatique de mot de passe.
+
+---
+
+## 8) Over-pass the Hash / Golden Ticket / Silver Ticket — différences
+
+- **Over-pass the Hash**
+  - Attaque combinant techniques Kerberos/NTLM pour demander un TGT via NTLM-derived credentials (complexe et spécifique).
+- **Golden Ticket**
+  - Forgé en manipulant la clé du service `krbtgt` pour générer TGT valides pour n’importe quel utilisateur.
+  - Permet accès durable et quasi-total au domaine (until krbtgt rotated twice).
+- **Silver Ticket**
+  - Ticket TGS forgé pour un service spécifique (chiffré avec clé de service), limite portée à ce service seulement.
+- **Mitigations**
+  - Rotation du compte `krbtgt`, monitoring for abnormal ticket lifetimes, use of constrained delegation, disable unconstrained delegation where possible.
+- **Glossaire rapide**
+  - **Silver Ticket** : TGS forgé ciblant un service précis (moins puissant que Golden Ticket).
+  - **Constrained delegation** : delegation limitée aux services explicitement autorisés.
+
+---
+
+## 9) Méthodologie pour compromettre un domaine depuis un poste utilisateur compromis
+
+- **Étapes courantes**
+  - **Initial foothold** : accès user local via phishing/exploit.
+  - **Credential harvesting** : dump caches, browsers, LSASS, Mimikatz, credentials in scripts.
+  - **Lateral movement** : Pass-the-Hash, Pass-the-Ticket, WMI/PSExec/SMB relay.
+  - **Privilege escalation** : kerberoast, exploit poorly configured services, ACL abuse, DCSync.
+  - **Domain persistence & cleanup** : Golden Ticket, create backdoor accounts with limited naming, adjust logs/OPSEC.
+- **Glossaire rapide**
+  - **Foothold** : point d’ancrage initial dans le réseau.
+  - **Lateral movement** : déplacement latéral entre machines pour étendre accès.
+
+---
+
+## 10) Stratégies de mitigation et détection après engagement Red Team
+
+- **Actions immédiates**
+  - Rotation des secrets (mots de passe, clés service, krbtgt double-rotation).
+  - Revue et durcissement des ACLs, restreindre rights (Replicating Directory Changes).
+- **Détection & monitoring**
+  - Activer alerting sur DCSync, high volume of AS-REP/kerberoast requests, abnormal account usage, long-lived tickets.
+  - Deploy EDR detections for suspicious Kerberos usage, bloodhound-like queries.
+- **Long-term**
+  - Mise en place d’un modèle d’administration en étages (Tiered Access), PAM (Privileged Access Management), bastion hosts (PAW).
+  - Formation et testing régulier (Red Team/Blue Team exercises).
+- **Glossaire rapide**
+  - **PAM** : Privileged Access Management — solution pour gérer accès privilégiés.
+  - **PAW** : Privileged Access Workstation — poste isolé pour opérations sensibles.
+
+## 11) Qu’est-ce que NTLM
+
+- **Concept**
+  - NTLM (NT LAN Manager) est un protocole d’authentification challenge-response historique utilisé par Windows pour authentifier clients et services lorsque Kerberos n’est pas disponible.
+  - Fonctionnement simplifié :
+    - Le client demande une ressource.
+    - Le serveur envoie un **challenge** (nonce aléatoire).
+    - Le client calcule une **réponse** en chiffrant le challenge avec le hash du mot de passe (NT hash) et renvoie la réponse.
+    - Le serveur (ou un contrôleur) vérifie la réponse et autorise l’accès si elle est correcte.
+- **Versions & limitations**
+  - **LM** (LanManager) : obsolète et très faible (séparait mot de passe en deux moitiés, facilement cassable).
+  - **NTLMv1** : amélioration partielle, vulnérable au relay et bruteforce.
+  - **NTLMv2** : plus robuste (meilleur challenge/response), mais reste sujet à certaines attaques (relay, pass-the-hash) si le réseau n’est pas bien durci.
+- **Propriétés importantes**
+  - NTLM repose sur des **hashs de mot de passe** (NT hash) — le mot de passe en clair n’est pas envoyé, mais le hash suffit souvent pour s’authentifier.
+  - Présent dans beaucoup d’environnements legacy ; activé par défaut sur certains chemins/compatibilités.
+- **Glossaire rapide**
+  - **Challenge-response** : méthode où le serveur envoie un défi que le client signe pour prouver son identité.
+  - **NT hash (NTLM hash)** : empreinte dérivée du mot de passe Windows; réutilisable pour authentification.
+  - **SMB / HTTP Negotiate** : protocoles/points d’entrée où NTLM peut être utilisé.
+
+---
+
+## 12) Exemple d’attaque basée sur NTLM (Pass-the-Hash / NTLM relay)
+
+- **But de l’attaque**
+  - Authentifier sur une autre machine/service en réutilisant un **NT hash** ou en relayant une authentification NTLM capturée, sans connaître le mot de passe en clair.
+- **Étapes (Pass-the-Hash — PtH)**
+  1. **Récupérer le NT hash** d’un compte sur une machine compromise (ex: via `mimikatz`, `secretsdump.py` d’Impacket, ou en extrayant `SAM`/`NTDS.dit` si accès possible).
+  2. **Importer / utiliser le hash** avec un outil (ex: `psexec.py`, `wmiexec.py`, `smbexec` d’Impacket, ou `pth-toolkit`) pour s’authentifier à distance contre d’autres hôtes en présentant le hash comme preuve d’identité.
+  3. **Exécuter commandes / se propager** : lancer payloads, déposer backdoors, ou escalader latéralement sur d’autres systèmes en bénéficiant des droits du compte dont le hash a été volé.
+- **Étapes (NTLM Relay)**
+  1. **Intercepter une tentative NTLM** d’un client vers un service (ex: via LLMNR/NBT-NS poisoning ou sur un segment réseau accessible).
+  2. **Relayer la tentative** vers un service cible qui accepte NTLM (ex: SMB, HTTP, LDAP) : l’attaquant fait suivre la preuve d’authentification captée au service cible.
+  3. **Authentification réussie** : si le service cible accepte NTLM et n’exige pas signing / extended protections, l’attaquant est authentifié au nom du client sans jamais connaître son mot de passe.
+  4. **Exploitation** : exécution de commandes, accès fichiers partagés, ou écriture de service/clé de registre pour persistance.
+- **Exemple concret**
+  - Compromis d’un poste utilisateur → extraction NT hash du compte `DOMAIN\user` via `mimikatz` → utilisation de `wmiexec.py DOMAIN/user@target` avec le NT hash pour obtenir une session shell sur `target` → utilisation des credentials pour accéder à d’autres ressources internes.
+  - Ou : LLMNR spoofing (Responder) capte une auth NTLM → `ntlmrelayx` relaye cette auth vers un serveur SMB habilité → l'attaquant obtient accès immédiat au partage réseau.
+- **Mitigations**
+  - **Désactiver / limiter NTLM** (encourager Kerberos), activer et exiger **SMB signing**, implémenter **Extended Protection for Authentication (EPA)**, bloquer LLMNR/NBT-NS et utiliser DNS sécurisé, déployer MFA, restreindre droits des comptes de service et monitorer utilisations anormales d’authentifications.
+- **Glossaire rapide**
+  - **Pass-the-Hash (PtH)** : réutilisation d’un hash NTLM pour s’authentifier sans mot de passe.
+  - **NTLM relay** : redirection d’une authentification NTLM captée vers un autre service pour s’authentifier au nom de la victime.
+  - **LLMNR/NBT-NS poisoning** : techniques de spoofing de résolution de noms locales permettant de capturer authentifications.
+
+
+
+
+
+# Forensic 
+
+
+- **1) Méthodologie pour collecter des preuves sur une machine compromise**
+  - Préserver la scène : limiter modifications sur la machine (documenter actions).
+  - Acquisition bit-for-bit : utiliser outils (dd, FTK Imager, `ewfacquire`) pour cloner le disque.
+  - Capturer la mémoire vive (RAM) avant reboot si possible (`winpmem`, `volatility` compatible dumps).
+  - Collecte de logs (Event Logs Windows, syslog Linux) et export des configurations.
+  - Chain of custody : documenter qui, quand, comment chaque artefact a été copié.
+- **Glossaire rapide**
+  - **Acquisition bit-for-bit** : copie exacte de tous les secteurs d’un disque (image forensic).
+  - **Chain of custody** : traçabilité légale des preuves (qui a touché quoi et quand).
+  - **RAM dump** : capture du contenu de la mémoire vive, utile pour credentials/clé C2.
+
+- **2) Artefacts Windows pour établir une timeline**
+  - Event Logs : Security, System, Application (`wevtutil`/Event Viewer).
+  - MFT (Master File Table) : timestamps de fichiers (création, modification, accès).
+  - Prefetch & Amcache : informations sur exécutables récemment lancés.
+  - Scheduled Tasks, Services, Run keys (registre) pour persistance.
+  - Browser history, LNK files, Recent Items pour actions utilisateurs.
+- **Glossaire rapide**
+  - **MFT** : table principale NTFS listant métadonnées fichiers.
+  - **Prefetch** : mécanisme Windows qui accélère lancement d’apps et garde traces.
+  - **LNK** : raccourci Windows qui contient chemin, timestamps et parfois volume serial.
+
+- **3) Analyser une image disque Linux pour traces d’intrusion**
+  - Monter image en lecture seule (`mount -o ro,loop`), ou utiliser outils (`ewfmount`, `autopsy`).
+  - Examiner `/var/log/` (auth.log, syslog), cron jobs, unit files systemd, `.bash_history`.
+  - Inspecter `/etc/passwd`, `/etc/shadow` (si accessible dans l’image) et permissions.
+  - Rechercher fichiers modifiés, nouveaux comptes, clés SSH dans `/home/*/.ssh`.
+- **Glossaire rapide**
+  - **ewfmount / Autopsy** : outils pour monter / analyser images forensic.
+  - **auth.log** : fichier de logs d’authentification sur distributions Linux.
+
+- **4) Détecter un implant persistant déguisé**
+  - Scanner services et drivers installés (`sc query`, `lsmod`), comparer signatures binaires.
+  - Rechercher objets autorun (Run keys, Scheduled Tasks, systemd services non standards).
+  - Vérifier modules noyau suspects et binaires sans signature ou modifiés récemment.
+  - Analyse comportementale : connexions réseau périodiques, beacons, processus enfants inhabituels.
+- **Glossaire rapide**
+  - **Driver / Kernel module** : composant chargé au niveau noyau (fort privilège).
+  - **Beacon** : signal périodique d’un implant vers son C2.
+
+- **5) Extraire secrets depuis la mémoire (limitations éthiques/légales)**
+  - Privilèges & légalité : n’extraire que si autorisé; respect de la confidentialité.
+  - Outils : `volatility`, `rekall`, `mimikatz` (Windows) pour extraire credentials/cleartext.
+  - Limites : chiffrement en mémoire, Credential Guard, mémoire paginée, EDR protections.
+- **Glossaire rapide**
+  - **Volatility / Rekall** : frameworks d’analyse mémoire.
+  - **Credential Guard** : mécanisme Windows qui isolte secrets pour empêcher dumping.
+
+- **6) Outils d’analyse réseau/pcap et indicateurs recherchés**
+  - Outils : Wireshark (GUI), `tshark`/`tcpdump` (CLI), Zeek (surveillance), NetworkMiner.
+  - Rechercher : connexions persistantes à IP/Domaines inconnus, motifs de beaconing (intervalle régulier), DNS anomalies (longues sous-domaines, TXT exfil).
+  - Extraction de fichiers via HTTP/FTP, analyse de flux chiffrés (SNI, JA3 fingerprints).
+- **Glossaire rapide**
+  - **PCAP** : format de capture de paquets réseau.
+  - **Zeek** : moteur de détection réseau fournissant logs analytiques (conn.log, dns.log).
+  - **JA3** : fingerprint TLS client basé sur la suite chiffrage/extension, utile pour détecter C2.
+
+- **7) Corrélation logs réseau & hôte pour reconstituer parcours**
+  - Aligner timestamps (convertir zones, synchronisation NTP) et normaliser formats.
+  - Identifier pivot points : connexions sorties d’une machine, hops via jump hosts, cred reuse.
+  - Utiliser SIEM/ELK pour corréler événements (EventID, Netflow, pcap alerts) et produire timeline.
+- **Glossaire rapide**
+  - **SIEM / ELK** : plateformes de collecte et corrélation de logs (Splunk, ELK Stack).
+  - **Netflow** : méta-données de flux réseau (qui a parlé à qui et combien).
+
+- **8) Analyse d’un binaire suspect (statique & dynamique)**
+  - Statique : `strings`, `objdump`, `readelf`, hash du binaire, vérifier signatures / compilation date.
+  - Dynamique : sandbox (Cuckoo), exécution instrumentée (`strace`, `ltrace`, `gdb`) pour observer comportements.
+  - Network callbacks : surveiller DNS/HTTP/HTTPS vers domaines suspects, extraits d’URLs.
+- **Glossaire rapide**
+  - **Cuckoo** : sandbox d’analyse automatique de malware.
+  - **strings / readelf** : outils pour extraire chaînes et métadonnées d’un binaire.
+
+- **9) Usage de hash (MD5/SHA) pour l’intégrité des preuves**
+  - Calculer hash (MD5, SHA256) sur images et fichiers pour prouver intégrité lors de transfert et analyse.
+  - Documenter les valeurs et conserver copies sécurisées (write-once if possible).
+- **Glossaire rapide**
+  - **Hashing forensic** : pratique standard pour garantir immutabilité d’une preuve.
+
+- **10) Exemple de rapport forensique — sections & niveau de détail**
+  - Résumé exécutif (impact, portée), méthodologie, timeline détaillée, artefacts extraits, PoC, recommandations techniques et steps de remediation, annexes (hashes, commandes utilisées).
+  - Niveau technique : fournir données exploitables (IOCs, queries SIEM, requêtes YARA) sans divulguer données sensibles.
+- **Glossaire rapide**
+  - **IOC (Indicator of Compromise)** : signatures/actions permettant d’identifier intrusion (IP, hash, domain).
+  - **YARA** : langage pour décrire patterns de malware.
+
+---
+
+# Réseau 
+
+- **1) Pile TCP/IP : différences TCP vs UDP, handshake, flags importants**
+  - **TCP**
+    - Connexion orientée (handshake 3-way SYN,SYN-ACK,ACK) ; fiable, retransmission, ordering.
+    - Flags importants : SYN (init), ACK (acknowledge), FIN (close), RST (reset), PSH (push), URG.
+  - **UDP**
+    - Sans état, pas de handshake, faible overhead, utilisé pour DNS, VoIP, streaming.
+  - **Glossaire rapide**
+    - **Handshake 3-way** : SYN → SYN-ACK → ACK pour établir connexion TCP.
+    - **Port** : identifiant logique pour service (80 HTTP, 443 HTTPS).
+
+- **2) MITM (Man-in-the-Middle) : ARP spoofing, DHCP spoofing, DNS spoofing**
+  - **ARP spoofing**
+    - Usurpation d’ARP pour rediriger trafic local via l’attaquant (require being on same L2).
+  - **DHCP spoofing**
+    - Fournir réponses DHCP malicieuses pour contrôler gateway/DNS attribués aux clients.
+  - **DNS spoofing / poisoning**
+    - Répondre avec de fausses IPs pour des domaines ciblés ; utiliser `dnsspoof`, rogue DNS servers.
+  - **Mitigations**
+    - DHCP snooping, ARP inspection (switch features), DNSSEC, monitoring ARP tables.
+  - **Glossaire rapide**
+    - **L2** : couche 2 (liaison) du modèle OSI — LAN local.
+    - **DHCP snooping** : protection réseau empêchant serveurs DHCP non autorisés.
+
+- **3) NAT / PAT et fonctionnement de la translation de ports**
+  - **NAT (Network Address Translation)**
+    - Traduction d’adresses privées en adresse publique ; permet réutilisation d’espaces d’adresses.
+  - **PAT (Port Address Translation)**
+    - Multiplexe plusieurs connexions internes sur une seule IP publique en différenciant par ports source.
+  - **Glossaire rapide**
+    - **NAT table** : mapping entre (IP,port) interne et externe.
+    - **Cone NAT / Symmetric NAT** : types de NAT impactant connectivité P2P.
+
+- **4) Port forwarding / pivoting depuis hôte compromis**
+  - **SSH tunneling**
+    - `ssh -R` (reverse tunnel) ou `ssh -L` (local forwarding) pour forwarder ports via SSH.
+  - **socat / proxychains / RPort**
+    - Utiliser `socat` pour rediriger sockets, ou proxychains to chain proxies; `rport` for remote port forwarding frameworks.
+  - **Pivoting**
+    - Utiliser compromised host as jump to reach internal-only networks (proxychains+sshuttle).
+  - **Glossaire rapide**
+    - **Reverse tunnel** : tunnel initié par la victime vers l’attaquant (permet de bypass NAT/firewall).
+    - **sshuttle** : VPN-like tool for tunneling TCP over SSH.
+
+- **5) MTU / fragmentation et abus pour contourner détection**
+  - **MTU (Maximum Transmission Unit)**
+    - Taille maximale d’un paquet sur un lien ; fragmentation découpe paquets trop grands.
+  - **Abus**
+    - Fragmenter payloads pour casser signatures IDS, utiliser overlapping fragments or tiny fragments to evade pattern matching.
+  - **Mitigations**
+    - Reassemble fragments at IPS, inspect fragment reassembly, tune MTU and detection rules.
+  - **Glossaire rapide**
+    - **Fragmentation** : division d’un paquet IP en plusieurs fragments.
+    - **Overlapping fragments** : fragments recouvrants pouvant corrompre inspection simple.
+
+- **6) Que regarder dans un PCAP pour repérer un C2**
+  - Chercher beacons périodiques (interval régulier), DNS anomalies (queries pour domaines générés), connexions à IPs rare/externes, pattern of small regular payloads.
+  - Inspecter User-Agent oddities, TLS SNI vs certificate mismatch, JA3/JA3S fingerprints.
+  - Extraire fichiers via reassembly of HTTP/FTP flows.
+  - **Glossaire rapide**
+    - **Beaconing** : pattern périodique indiquant check-in d’un implant.
+    - **SNI** : Server Name Indication — nom de domaine envoyé en clair dans handshake TLS.
+
+- **7) Contournement IDS/IPS (encodage, fragmentation, tunneling chiffré)**
+  - Techniques : base64/URL encode payloads, chunking, use of HTTPS to hide content, DNS/ICMP tunneling to exfiltrate.
+  - Tradeoffs : furtivité vs bande passante/latency ; tunneling chiffré augmente difficulté de détection.
+  - **Glossaire rapide**
+    - **DNS tunneling** : encapsuler données dans requêtes DNS (exfiltration possible).
+    - **ICMP tunneling** : utiliser paquets ICMP pour transporter données.
+
+- **8) DNS exfiltration et détection**
+  - **Principe**
+    - Encodage de données dans sous-domaines d’une zone contrôlée par l’attaquant (ex: `AAABBB.attacker.com`).
+  - **Détection**
+    - Rechercher sous-domaines très longs, haut taux de NXDOMAIN, volumes anormaux de requêtes DNS, patterns d’encodage (base32/base64).
+  - **Mitigations**
+    - DNS logging, rate-limiting, use of DNS proxy/inspection, block dynamic DNS if not needed.
+  - **Glossaire rapide**
+    - **NXDOMAIN** : réponse DNS indiquant que le nom n’existe pas.
+    - **Dynamic DNS** : services permettant mise à jour DNS dynamique (peuvent faciliter exfiltration).
+
+- **9) Canal covert (DNS, ICMP, HTTPs) — tradeoffs OPSEC**
+  - **DNS** : furtif et souvent autorisé, faible bande passante.
+  - **ICMP** : souvent filtré mais parfois autorisé, cadence détectable.
+  - **HTTPS** : sûr pour masquer, mais nécessite C2 infra et peut être détecté via JA3/timing/anomalies.
+  - **Choix** : HTTPS pour usage covert haute bande passante; DNS pour petits paquets/commande.
+  - **Glossaire rapide**
+    - **Covert channel** : canal de communication caché utilisé pour exfiltrer/donner commandes.
+    - **JA3** : client TLS fingerprint utile pour détection.
+
+- **10) Concevoir règles de détection réseau pour comportements Red Team**
+  - Détecter beacons via anomaly detection (periodic connections, regular intervals).
+  - Détecter DNS anomalies (volume, length, entropy, NXDOMAIN spikes).
+  - Monitor for uncommon ports/protocols, unusual certificate fingerprints, suspicious SNI mismatches, long-lived sessions from user endpoints.
+  - Fournir playbook de réponse (isoler hôte, capturer pcap, dump mémoire).
+  - **Glossaire rapide**
+    - **Entropy** : mesure d’aléa dans un string (utilisée pour détecter encodage ou data exfiltrée).
+    - **Playbook** : procédure étape par étape pour réponse aux incidents.
+
+---
+
