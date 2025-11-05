@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ECE/Stage/List.md",
+                "file": "ECE/Reverse/Cours 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "List"
+              "title": "Cours 1"
             }
           }
         ]
@@ -224,9 +224,11 @@
   },
   "active": "8b8537e9c7b41c81",
   "lastOpenFiles": [
+    "Assets/ECE/Reverse/Cours 1/IMG-20251105111303984.png",
+    "ECE/Reverse/TP1.md",
+    "ECE/Stage/List.md",
     "ECE/Stage/CV.md",
     "conflict-files-obsidian-git.md",
-    "ECE/Stage/List.md",
     "ECE/Stage/Stage Intrinsec.md",
     "ECE/Stage/Stage ITRACING.md",
     "Assets/ECE/Stage/Stage Intrinsec/IMG-20251104014857048.png",
@@ -240,7 +242,6 @@
     "Assets/ECE/Stage/Stage Intrinsec/IMG-20251104014415734.png",
     "Assets/ECE/Stage/Stage Intrinsec/IMG-20251104014403508.png",
     "Assets/ECE/Stage/Stage Intrinsec",
-    "ECE/Reverse/TP1.md",
     "ECE/SecuWindows/Lab/Lab4.md",
     "ECE/Stage/Stage.md",
     "ECE/Stage/Lettre de motivation.md",
@@ -269,7 +270,6 @@
     "Linux/Capabilities.md",
     "Linux/Analyse.md",
     "Linux/Package .md",
-    "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",
