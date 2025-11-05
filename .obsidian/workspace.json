@@ -20,8 +20,23 @@
               "icon": "lucide-file",
               "title": "Questions Techniques stage"
             }
+          },
+          {
+            "id": "3b27412d0ca3ac8e",
+            "type": "leaf",
+            "state": {
+              "type": "split-diff-view",
+              "state": {
+                "aFile": ".space/context.mdb",
+                "bFile": ".space/context.mdb",
+                "aRef": ""
+              },
+              "icon": "diff",
+              "title": "Diff: context.mdb"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -222,16 +237,17 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "6f5c5916da1653af",
+  "active": "3b27412d0ca3ac8e",
   "lastOpenFiles": [
-    "Linux/Bug.md",
+    "conflict-files-obsidian-git.md",
     "ECE/Stage/Questions Techniques stage.md",
+    "Assets/ECE/Reverse/Cours 1/IMG-20251105190638459.png",
+    "Linux/Bug.md",
     "ECE/Stage/List.md",
     "ECE/Stage/Stage Intrinsec.md",
     "ECE/Stage/Stage ITRACING.md",
     "Linux/Command.md",
     "CTF/Hack The Box/Write Up/GiveBack.md",
-    "conflict-files-obsidian-git.md",
     "ECE/Stage/Key Vocabulary English.md",
     "ECE/Stage/Lettre de motivation.md",
     "ECE/Stage/CV.md",
@@ -244,7 +260,6 @@
     "Assets/ECE/Stage/Stage Intrinsec/IMG-20251104014511337.png",
     "Assets/ECE/Stage/Stage Intrinsec/IMG-20251104014432520.png",
     "Assets/ECE/Stage/Stage Intrinsec/IMG-20251104014415734.png",
-    "Assets/ECE/Stage/Stage Intrinsec/IMG-20251104014403508.png",
     "Assets/ECE/Stage/Stage Intrinsec",
     "Web/Word List.md",
     "Web/Tools.md",
@@ -269,7 +284,6 @@
     "ECE/Cloud/AWS/Lesson/Lesson 2.md",
     "ECE/Cloud/AWS/Lesson/Lesson 7.md",
     "ECE/Cloud/AWS/Lesson/Lesson 5.md",
-    "ECE/Cloud/AWS/Lesson/Lesson 3.md",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",

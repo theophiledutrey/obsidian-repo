@@ -440,3 +440,5 @@ Ensuite, deux instructions supplémentaires en rouge :
 | `HLT`       | `HLT`   | Arrête le CPU jusqu’à interruption.           |
 | `CPUID`     | `CPUID` | Récupère infos processeur (vendor, features). |
 | `RDTSC`     | `RDTSC` | Lire time-stamp counter (cycle counter).      |
+
+![[IMG-20251105190638459.png]]
