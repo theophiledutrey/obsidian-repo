@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ECE/Stage/List.md",
+                "file": "ECE/Stage/Questions Techniques stage.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "List"
+              "title": "Questions Techniques stage"
             }
           }
         ]
@@ -222,8 +222,10 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "e2aa3986dab62d71",
+  "active": "6f5c5916da1653af",
   "lastOpenFiles": [
+    "Linux/Bug.md",
+    "ECE/Stage/Questions Techniques stage.md",
     "ECE/Stage/List.md",
     "ECE/Stage/Stage Intrinsec.md",
     "ECE/Stage/Stage ITRACING.md",
@@ -261,7 +263,6 @@
     "ECE/ECE.md",
     "Pentest Tools/Link.md",
     "Linux/UID.md",
-    "Linux/Bug.md",
     "Linux/Hyprland .md",
     "Linux/Package .md",
     "ECE/SecuWindows/Lab/Lab4.md",
@@ -269,7 +270,6 @@
     "ECE/Cloud/AWS/Lesson/Lesson 7.md",
     "ECE/Cloud/AWS/Lesson/Lesson 5.md",
     "ECE/Cloud/AWS/Lesson/Lesson 3.md",
-    "Active Directory/Privilege Escalation.md",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",
