@@ -20,3 +20,7 @@
 | Thales                           | Candidature spontanée                           | Pas de réponse        | Singuapour     | None                                                                                                                                                                                         |
 | Thales                           | Candidature spontanée                           | Pas de réponse        | Dubai          | None                                                                                                                                                                                         |
 | Schneider                        | Pentest                                         | Pas de réponse        | Grenoble       | https://careers.se.com/jobs/100972?lang=fr-fr&iis=Job+Board&iisn=linkedin&src=linkedin                                                                                                       |
+
+![[IMG-20251106115313719.png]]
+![[IMG-20251106115332236.png]]
+

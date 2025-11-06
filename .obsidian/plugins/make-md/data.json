@@ -67,9 +67,7 @@
     "//ECE",
     "//ECE/ECE/Stage",
     "//CTF",
-    "//Linux",
-    "//Web",
-    "//ECE/ECE/Reverse"
+    "//Linux"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
@@ -84,6 +82,8 @@
     "_assets",
     "_blocks"
   ],
+  "newFileLocation": "root",
+  "newFileFolderPath": "",
   "inlineBacklinks": false,
   "inlineContext": true,
   "inlineBacklinksExpanded": false,
