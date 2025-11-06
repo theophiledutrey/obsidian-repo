@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ECE/Reverse/Cours 1.md",
+                "file": "ECE/Stage/Questions Techniques stage.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Cours 1"
+              "title": "Questions Techniques stage"
             }
           },
           {
@@ -41,16 +41,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ECE/Stage/Questions Techniques stage.md",
+                "file": "Linux/Capabilities.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Questions Techniques stage"
+              "title": "Capabilities"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -251,14 +250,18 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "b2df2f989f0d244a",
+  "active": "8b8537e9c7b41c81",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
+    "ECE/Reverse/Cours 1.md",
     "ECE/Stage/List.md",
+    "Linux/Capabilities.md",
+    "Linux/Analyse.md",
+    "Linux/Package .md",
+    "Linux/Command.md",
     "ECE/Stage/Questions Techniques stage.md",
+    "conflict-files-obsidian-git.md",
     "Assets/ECE/Reverse/Cours 1/IMG-20251106092415641.png",
     "ECE/Stage/Stage Intrinsec.md",
-    "ECE/Reverse/Cours 1.md",
     "Assets/ECE/Reverse/Cours 1/IMG-20251105111303984.png",
     "ECE/Reverse/TP1.md",
     "ECE/Stage/CV.md",
@@ -294,11 +297,7 @@
     "ECE/Reverse.md",
     "CTF/Hack The Box/Write Up/Imagery.md",
     "CTF/Hack The Box/Write Up/Expressway Hack The Box .md",
-    "Linux/Command.md",
     "Linux/UID.md",
-    "Linux/Capabilities.md",
-    "Linux/Analyse.md",
-    "Linux/Package .md",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",
