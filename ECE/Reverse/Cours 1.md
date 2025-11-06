@@ -441,4 +441,4 @@ Ensuite, deux instructions supplémentaires en rouge :
 | `CPUID`     | `CPUID` | Récupère infos processeur (vendor, features). |
 | `RDTSC`     | `RDTSC` | Lire time-stamp counter (cycle counter).      |
 
-![[IMG-20251105111303984.png]]
+![[IMG-20251106092415641.png]]
