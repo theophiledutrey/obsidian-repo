@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ECE/Stage/Stage Amossys.md",
+                "file": "ECE/Stage/List.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Stage Amossys"
+              "title": "List"
             }
           }
         ],
@@ -253,13 +253,13 @@
   },
   "active": "cb7cc96941eb58e5",
   "lastOpenFiles": [
+    "ECE/Stage/Stage Amossys.md",
     "ECE/Stage/List.md",
     "ECE/Stage/Key Vocabulary English.md",
     "ECE/Stage/Questions Techniques stage.md",
     "ECE/Stage/CV.md",
     "ECE/Stage/Lettre de motivation.md",
     "ECE/Stage/Stage ITRACING.md",
-    "ECE/Stage/Stage Amossys.md",
     "Infra/Wireguard.md",
     "conflict-files-obsidian-git.md",
     "Assets/ECE/Stage/List/IMG-20251106230118982.png",
