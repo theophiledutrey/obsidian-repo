@@ -65,10 +65,9 @@
     "//ECE/ECE/Forensic/ECE/Forensic/TP ",
     "//ECE/ECE/Cloud/ECE/Cloud/Entra ID",
     "//ECE",
-    "//ECE/ECE/Stage",
-    "//CTF",
-    "//Linux",
-    "//Infra"
+    "//Infra",
+    "//Web",
+    "//CTF"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",

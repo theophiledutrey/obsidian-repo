@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/Command.md",
+                "file": "CTF/Hack The Box/Write Up/NanoCorp.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Command"
+              "title": "NanoCorp"
             }
           }
         ]
@@ -224,6 +224,13 @@
   },
   "active": "1aeb44d507874dea",
   "lastOpenFiles": [
+    "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251110182159311.png",
+    "Assets/CTF/Hack The Box/Write Up/NanoCorp",
+    "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251110181820897.png",
+    "Web/Word List.md",
+    "CTF/Hack The Box/Write Up/NanoCorp.md",
+    "Web/Tools.md",
+    "Linux/Command.md",
     "Linux/Analyse.md",
     "Linux/Privilege Escalation.md",
     "ECE/Stage/Key Vocabulary English.md",
@@ -242,17 +249,13 @@
     "Assets/ECE/Reverse/Cours 1/IMG-20251105190638459.png",
     "Linux/Bug.md",
     "ECE/Stage/Stage Intrinsec.md",
-    "Linux/Command.md",
     "CTF/Hack The Box/Write Up/GiveBack.md",
     "Assets/ECE/Stage/Stage Intrinsec/IMG-20251104014857048.png",
     "Assets/ECE/Stage/Stage Intrinsec/IMG-20251104014846517.png",
     "Assets/ECE/Stage/Stage Intrinsec/IMG-20251104014817252.png",
     "Assets/ECE/Stage/Stage Intrinsec/IMG-20251104014619864.png",
     "Assets/ECE/Stage/Stage Intrinsec/IMG-20251104014526427.png",
-    "Assets/ECE/Stage/Stage Intrinsec/IMG-20251104014518487.png",
     "Assets/ECE/Stage/Stage Intrinsec",
-    "Web/Word List.md",
-    "Web/Tools.md",
     "Assets/ECE/Stage/Stage ITRACING",
     "Assets/ECE/Stage",
     "Assets/Lettre_AMOSSYS_Hyperviseurs_Theophile_Dutrey.pdf",
@@ -260,7 +263,6 @@
     "Assets/Lettre_Motivation_Theophile_Dutrey_Rolex.pdf",
     "Assets/Lettre_Motivation_Deloitte_Theophile_Dutrey.pdf",
     "Assets/CV Théophile Dutrey 1.pdf",
-    "Assets/CV Théophile Dutrey.pdf",
     "ECE/Stage/Stage.md",
     "ECE/ECE.md",
     "Pentest Tools/Link.md",
@@ -268,8 +270,6 @@
     "Linux/Hyprland .md",
     "Linux/Package .md",
     "ECE/SecuWindows/Lab/Lab4.md",
-    "ECE/Cloud/AWS/Lesson/Lesson 2.md",
-    "ECE/Cloud/AWS/Lesson/Lesson 7.md",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",
