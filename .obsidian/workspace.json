@@ -22,6 +22,18 @@
             }
           },
           {
+            "id": "c8653d208f7a249d",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.10.3"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.10.3"
+            }
+          },
+          {
             "id": "22cf66c46e5b11ae",
             "type": "leaf",
             "state": {
@@ -48,8 +60,23 @@
               "icon": "lucide-file",
               "title": "Command"
             }
+          },
+          {
+            "id": "f06178f3eceb4faa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ECE/Stage/Questions Techniques stage.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Questions Techniques stage"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -103,7 +130,7 @@
             }
           },
           {
-            "id": "00d3aa2c526f2512",
+            "id": "e34ec0cb032aac6f",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -250,13 +277,14 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "1aeb44d507874dea",
+  "active": "c8653d208f7a249d",
   "lastOpenFiles": [
+    "ECE/Stage/Questions Techniques stage.md",
+    "Linux/Command.md",
+    "CTF/Hack The Box/Write Up/Imagery.md",
+    "CTF/Hack The Box/Write Up/NanoCorp.md",
     "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251111022743321.png",
     "CTF/Hack The Box/Write Up/CodeTwo Hack The Box.md",
-    "CTF/Hack The Box/Write Up/Imagery.md",
-    "Linux/Command.md",
-    "CTF/Hack The Box/Write Up/NanoCorp.md",
     "CTF/Hack The Box/Write Up/GiveBack.md",
     "Web/Word List.md",
     "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251111010442485.png",
@@ -269,7 +297,6 @@
     "ECE/Stage/Key Vocabulary English.md",
     "ECE/Stage/List.md",
     "ECE/Stage/Stage Amossys.md",
-    "ECE/Stage/Questions Techniques stage.md",
     "ECE/Stage/CV.md",
     "ECE/Stage/Lettre de motivation.md",
     "ECE/Stage/Stage ITRACING.md",
@@ -284,7 +311,6 @@
     "ECE/Stage/Stage Intrinsec.md",
     "Assets/ECE/Stage/Stage Intrinsec/IMG-20251104014857048.png",
     "Assets/ECE/Stage/Stage Intrinsec/IMG-20251104014846517.png",
-    "Assets/ECE/Stage/Stage Intrinsec/IMG-20251104014817252.png",
     "Assets/ECE/Stage/Stage Intrinsec",
     "Assets/ECE/Stage/Stage ITRACING",
     "Assets/ECE/Stage",
