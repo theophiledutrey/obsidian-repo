@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Web/Word List.md",
+                "file": "CTF/Hack The Box/Write Up/Imagery.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Word List"
+              "title": "Imagery"
             }
           },
           {
@@ -103,7 +103,7 @@
             }
           },
           {
-            "id": "c40c9cb0244c10fe",
+            "id": "00d3aa2c526f2512",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -252,10 +252,14 @@
   },
   "active": "1aeb44d507874dea",
   "lastOpenFiles": [
-    "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251111010442485.png",
+    "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251111022743321.png",
+    "CTF/Hack The Box/Write Up/CodeTwo Hack The Box.md",
+    "CTF/Hack The Box/Write Up/Imagery.md",
     "Linux/Command.md",
-    "Web/Word List.md",
     "CTF/Hack The Box/Write Up/NanoCorp.md",
+    "CTF/Hack The Box/Write Up/GiveBack.md",
+    "Web/Word List.md",
+    "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251111010442485.png",
     "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251110182159311.png",
     "Assets/CTF/Hack The Box/Write Up/NanoCorp",
     "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251110181820897.png",
@@ -278,11 +282,9 @@
     "Assets/ECE/Reverse/Cours 1/IMG-20251105190638459.png",
     "Linux/Bug.md",
     "ECE/Stage/Stage Intrinsec.md",
-    "CTF/Hack The Box/Write Up/GiveBack.md",
     "Assets/ECE/Stage/Stage Intrinsec/IMG-20251104014857048.png",
     "Assets/ECE/Stage/Stage Intrinsec/IMG-20251104014846517.png",
     "Assets/ECE/Stage/Stage Intrinsec/IMG-20251104014817252.png",
-    "Assets/ECE/Stage/Stage Intrinsec/IMG-20251104014619864.png",
     "Assets/ECE/Stage/Stage Intrinsec",
     "Assets/ECE/Stage/Stage ITRACING",
     "Assets/ECE/Stage",
@@ -296,8 +298,6 @@
     "Pentest Tools/Link.md",
     "Linux/UID.md",
     "Linux/Hyprland .md",
-    "Linux/Package .md",
-    "ECE/SecuWindows/Lab/Lab4.md",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",
