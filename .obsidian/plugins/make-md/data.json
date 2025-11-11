@@ -67,7 +67,8 @@
     "//ECE",
     "//Infra",
     "//Web",
-    "//CTF"
+    "//CTF",
+    "//Linux"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
