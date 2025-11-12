@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "Exo"
             }
+          },
+          {
+            "id": "d60a6f21f0f0d87c",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.10.3"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.10.3"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -78,10 +91,13 @@
             "id": "81ff47f229fd4cfe",
             "type": "leaf",
             "state": {
-              "type": "mk-path-view",
-              "state": {},
-              "icon": "layout-grid",
-              "title": "Navigator"
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           }
         ],
@@ -222,7 +238,7 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "d89abf61668a1ece",
+  "active": "d60a6f21f0f0d87c",
   "lastOpenFiles": [
     "ECE/Reverse/Exo.md",
     "Linux/Capabilities.md",
