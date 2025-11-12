@@ -13,28 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ECE/Reverse/Exo.md",
+                "file": "ECE/Reverse/Lab2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Exo"
-            }
-          },
-          {
-            "id": "d60a6f21f0f0d87c",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.10.3"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.10.3"
+              "title": "Lab2"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -88,16 +75,13 @@
             }
           },
           {
-            "id": "81ff47f229fd4cfe",
+            "id": "52ba8d9c51926189",
             "type": "leaf",
             "state": {
-              "type": "file-explorer",
-              "state": {
-                "sortOrder": "alphabetical",
-                "autoReveal": false
-              },
-              "icon": "lucide-folder-closed",
-              "title": "Files"
+              "type": "mk-path-view",
+              "state": {},
+              "icon": "layout-grid",
+              "title": "Navigator"
             }
           }
         ],
@@ -238,9 +222,10 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "d60a6f21f0f0d87c",
+  "active": "d89abf61668a1ece",
   "lastOpenFiles": [
     "ECE/Reverse/Exo.md",
+    "ECE/Reverse/Lab2.md",
     "Linux/Capabilities.md",
     "ECE/Stage/List.md",
     "ECE/Stage/Questions Techniques stage.md",
@@ -285,7 +270,6 @@
     "Pentest Tools/Link.md",
     "ECE/Reverse/Reverse.md",
     "CTF/Hack The Box/Write Up/Conversor.md",
-    "ECE/Reverse.md",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",
