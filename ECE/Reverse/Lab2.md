@@ -104,3 +104,17 @@ Quand on ouvre IE :
     - appelle `DllGetClassObject(...)`
     - instancie l’objet COM (la classe BHO)
 4. Ensuite IE appelle **les méthodes de cet objet** (SetSite, Invoke, etc.)
+
+--- 
+
+## DLLMain
+
+![[IMG-20251113203953952.png]]
+
+Les valeurs possibles de `fdwReason` dans un DllMain sont :
+
+- `0` = DLL_PROCESS_DETACH
+- `1` = DLL_PROCESS_ATTACH
+- `2` = DLL_THREAD_ATTACH
+- `3` = DLL_THREAD_DETACH
+
