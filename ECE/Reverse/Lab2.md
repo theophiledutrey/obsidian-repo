@@ -45,10 +45,7 @@ HKEY_CLASSES_ROOT
 - **Clé `InProcServer32`** :
     - indique à COM que la classe est un **serveur en-proc**, c.-à-d. implémentée dans une DLL chargée dans le même processus que le client.
 - **Valeur `(Default)` = `"C:\Windows\atidrv.dll"`** :
-    - c’est l’info **la plus importante** :
-    
-     “Quand quelqu’un demande le CLSID {GUID}, charge la DLL `C:\Windows\atidrv.dll`.”
-    
+    - c’est l’info **la plus importante** : “Quand quelqu’un demande le CLSID {GUID}, charge la DLL `C:\Windows\atidrv.dll`.”
     - COM utilise cette valeur pour savoir **quel fichier DLL charger**.
 
 - **Valeur `"ThreadingModel" = "Apartment"`** :
@@ -58,9 +55,7 @@ HKEY_CLASSES_ROOT
 
 👉 En clair :
 
-> Ici, la DLL dit à Windows :  
-> “Mon composant COM {GUID} est implémenté dans `C:\Windows\atidrv.dll`,  
-> et il doit être utilisé avec le modèle de threading COM `Apartment`.”
+> Ici, la DLL dit à Windows :  “Mon composant COM {GUID} est implémenté dans `C:\Windows\atidrv.dll`,  et il doit être utilisé avec le modèle de threading COM `Apartment`.”
 
 ---
 
@@ -94,3 +89,18 @@ HKEY_LOCAL_MACHINE
 
 > Ici, la DLL s’enregistre comme **extension de navigateur (BHO)** d’Internet Explorer, valable pour tout le système,  
 > et précise que ce composant **ne doit pas être chargé dans Explorer.exe**, seulement dans IE.
+
+---
+
+## cycle de vie d’une DLL COM/BHO
+
+Quand on ouvre IE :
+
+1. IE lit `Browser Helper Objects` → voit ton `{GUID}`
+2. COM regarde `HKCR\CLSID\{GUID}\InProcServer32` → trouve `C:\Windows\atidrv.dll`
+3. COM fait :
+    - `LoadLibrary("atidrv.dll")`
+    - appelle `DllMain(hinstDLL, DLL_PROCESS_ATTACH, ...)`
+    - appelle `DllGetClassObject(...)`
+    - instancie l’objet COM (la classe BHO)
+4. Ensuite IE appelle **les méthodes de cet objet** (SetSite, Invoke, etc.)
