@@ -4,11 +4,25 @@
     "type": "split",
     "children": [
       {
-        "id": "6e299238eaac9e20",
+        "id": "d6a0f6c76e182f00",
         "type": "tabs",
         "children": [
           {
-            "id": "d89abf61668a1ece",
+            "id": "1aeb44d507874dea",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CTF/Hack The Box/Write Up/NanoCorp.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "NanoCorp"
+            }
+          },
+          {
+            "id": "f6de2283f6801ab4",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -21,7 +35,8 @@
               "title": "Lab2"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -75,11 +90,7 @@
             }
           },
           {
-<<<<<<< HEAD
             "id": "d6848e5c5ecd8e06",
-=======
-            "id": "3b88d0027c5dc754",
->>>>>>> origin/master
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -207,7 +218,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 383.5
+    "width": 376.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -226,54 +237,53 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "d89abf61668a1ece",
+  "active": "f6de2283f6801ab4",
   "lastOpenFiles": [
-    "Assets/ECE/Reverse/Lab2/IMG-20251113143626217.png",
-    "CTF/Hack The Box/Write Up/CodeTwo Hack The Box.md",
-    "Linux/Privilege Escalation.md",
-    "ECE/Reverse/Lab2.md",
-    "ECE/Reverse/TP1.md",
-    "ECE/Reverse/Exo.md",
-    "Assets/ECE/Reverse/Lab2",
-    "Assets/ECE/Reverse/Lab2/IMG-20251112161511354.png",
-    "Linux/Capabilities.md",
-    "ECE/Stage/List.md",
-    "ECE/Stage/Questions Techniques stage.md",
     "conflict-files-obsidian-git.md",
-    "ECE/Stage/Stage Amossys.md",
+    "ECE/Reverse/Lab2.md",
+    "Assets/ECE/Reverse/Lab2/IMG-20251113203953952.png",
+    "Assets/ECE/Reverse/Lab2/IMG-20251113014843068.png",
+    "Assets/ECE/Reverse/Lab2/IMG-20251113014805915.png",
+    "Assets/ECE/Reverse/Lab2/IMG-20251113014733993.png",
     "CTF/Hack The Box/Write Up/NanoCorp.md",
-    "Assets/ECE/Reverse/Cours 1/IMG-20251106225948913.png",
+    "ECE/Reverse/Exo.md",
+    "Assets/ECE/Reverse/Lab2/IMG-20251113014659959.png",
+    "Assets/ECE/Reverse/Lab2",
+    "ECE/Stage/Questions Techniques stage.md",
+    "Linux/Command.md",
+    "CTF/Hack The Box/Write Up/Imagery.md",
     "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251111022743321.png",
+    "CTF/Hack The Box/Write Up/CodeTwo Hack The Box.md",
+    "CTF/Hack The Box/Write Up/GiveBack.md",
+    "Web/Word List.md",
     "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251111010442485.png",
     "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251110182159311.png",
-    "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251110181820897.png",
     "Assets/CTF/Hack The Box/Write Up/NanoCorp",
-    "Assets/ECE/Stage/List/IMG-20251106115332236.png",
-    "Assets/ECE/Stage/List",
-    "Assets/ECE/Stage/List/IMG-20251106115313719.png",
-    "ECE/Reverse/Cours 1.md",
+    "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251110181820897.png",
+    "Web/Tools.md",
     "Linux/Analyse.md",
-    "Linux/Package .md",
-    "Linux/Command.md",
-    "Assets/ECE/Reverse/Cours 1/IMG-20251106092415641.png",
-    "ECE/Stage/Stage Intrinsec.md",
-    "Assets/ECE/Reverse/Cours 1/IMG-20251105111303984.png",
-    "ECE/Stage/CV.md",
-    "ECE/Stage/Stage ITRACING.md",
-    "Assets/ECE/Stage/Stage Intrinsec",
-    "ECE/SecuWindows/Lab/Lab4.md",
-    "ECE/Stage/Stage.md",
-    "ECE/Stage/Lettre de motivation.md",
+    "Linux/Privilege Escalation.md",
     "ECE/Stage/Key Vocabulary English.md",
-    "ECE/Stage",
-    "CTF/Hack The Box/Write Up/GiveBack.md",
-    "Assets/Lettre_Motivation_Theophile_Dutrey_Rolex.pdf",
-    "Assets/Lettre_Motivation_Deloitte_Theophile_Dutrey.pdf",
+    "ECE/Stage/List.md",
+    "ECE/Stage/Stage Amossys.md",
+    "ECE/Stage/CV.md",
+    "ECE/Stage/Lettre de motivation.md",
+    "ECE/Stage/Stage ITRACING.md",
+    "Infra/Wireguard.md",
+    "Assets/ECE/Stage/List/IMG-20251106230118982.png",
+    "Assets/ECE/Stage/List",
+    "Linux/Bug.md",
+    "ECE/Stage/Stage Intrinsec.md",
+    "Assets/ECE/Stage/Stage Intrinsec",
+    "Assets/ECE/Stage/Stage ITRACING",
+    "Assets/ECE/Stage",
     "Assets/Lettre_AMOSSYS_Hyperviseurs_Theophile_Dutrey.pdf",
     "Assets/Lettre_AMOSSYS_Bypass_EDR_Theophile_Dutrey.pdf",
-    "Assets/ECE/Stage/Stage ITRACING",
-    "Web/Word List.md",
-    "Web/Tools.md",
+    "Assets/Lettre_Motivation_Theophile_Dutrey_Rolex.pdf",
+    "Assets/Lettre_Motivation_Deloitte_Theophile_Dutrey.pdf",
+    "ECE/Stage/Stage.md",
+    "ECE/ECE.md",
+    "Pentest Tools/Link.md",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",
