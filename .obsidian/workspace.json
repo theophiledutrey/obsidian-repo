@@ -34,9 +34,37 @@
               "icon": "lucide-file",
               "title": "Lab2"
             }
+          },
+          {
+            "id": "c116deb26ede16c1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Linux/Command.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Command"
+            }
+          },
+          {
+            "id": "5bbc4bddc4edf0b3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Linux/Analyse.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Analyse"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -90,7 +118,7 @@
             }
           },
           {
-            "id": "327085ea9c97a3b1",
+            "id": "4dbc583dcc0dbb5c",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -237,20 +265,24 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "f6de2283f6801ab4",
+  "active": "c116deb26ede16c1",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
+    "Linux/Analyse.md",
+    "Linux/Privilege Escalation.md",
+    "Pentest Tools/Metasploit.md",
+    "Web/Tools.md",
+    "CTF/Hack The Box/Write Up/NanoCorp.md",
     "ECE/Reverse/Lab2.md",
+    "Linux/Command.md",
+    "conflict-files-obsidian-git.md",
     "Assets/ECE/Reverse/Lab2/IMG-20251113203953952.png",
     "Assets/ECE/Reverse/Lab2/IMG-20251113014843068.png",
     "Assets/ECE/Reverse/Lab2/IMG-20251113014805915.png",
     "Assets/ECE/Reverse/Lab2/IMG-20251113014733993.png",
-    "CTF/Hack The Box/Write Up/NanoCorp.md",
     "ECE/Reverse/Exo.md",
     "Assets/ECE/Reverse/Lab2/IMG-20251113014659959.png",
     "Assets/ECE/Reverse/Lab2",
     "ECE/Stage/Questions Techniques stage.md",
-    "Linux/Command.md",
     "CTF/Hack The Box/Write Up/Imagery.md",
     "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251111022743321.png",
     "CTF/Hack The Box/Write Up/CodeTwo Hack The Box.md",
@@ -260,9 +292,6 @@
     "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251110182159311.png",
     "Assets/CTF/Hack The Box/Write Up/NanoCorp",
     "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251110181820897.png",
-    "Web/Tools.md",
-    "Linux/Analyse.md",
-    "Linux/Privilege Escalation.md",
     "ECE/Stage/Key Vocabulary English.md",
     "ECE/Stage/List.md",
     "ECE/Stage/Stage Amossys.md",

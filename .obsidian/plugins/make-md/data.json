@@ -70,7 +70,8 @@
     "//CTF",
     "//Linux",
     "//ECE/ECE/Stage",
-    "//ECE/ECE/Reverse"
+    "//ECE/ECE/Reverse",
+    "//Pentest Tools"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
