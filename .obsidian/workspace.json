@@ -63,8 +63,7 @@
               "title": "Analyse"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -265,15 +264,18 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "c116deb26ede16c1",
+  "active": "1aeb44d507874dea",
   "lastOpenFiles": [
+    "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251114153011461.png",
+    "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251114152929514.png",
+    "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251114152916183.png",
+    "Linux/Command.md",
     "Linux/Analyse.md",
     "Linux/Privilege Escalation.md",
     "Pentest Tools/Metasploit.md",
     "Web/Tools.md",
     "CTF/Hack The Box/Write Up/NanoCorp.md",
     "ECE/Reverse/Lab2.md",
-    "Linux/Command.md",
     "conflict-files-obsidian-git.md",
     "Assets/ECE/Reverse/Lab2/IMG-20251113203953952.png",
     "Assets/ECE/Reverse/Lab2/IMG-20251113014843068.png",
@@ -291,7 +293,6 @@
     "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251111010442485.png",
     "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251110182159311.png",
     "Assets/CTF/Hack The Box/Write Up/NanoCorp",
-    "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251110181820897.png",
     "ECE/Stage/Key Vocabulary English.md",
     "ECE/Stage/List.md",
     "ECE/Stage/Stage Amossys.md",
@@ -299,7 +300,6 @@
     "ECE/Stage/Lettre de motivation.md",
     "ECE/Stage/Stage ITRACING.md",
     "Infra/Wireguard.md",
-    "Assets/ECE/Stage/List/IMG-20251106230118982.png",
     "Assets/ECE/Stage/List",
     "Linux/Bug.md",
     "ECE/Stage/Stage Intrinsec.md",
@@ -312,7 +312,6 @@
     "Assets/Lettre_Motivation_Deloitte_Theophile_Dutrey.pdf",
     "ECE/Stage/Stage.md",
     "ECE/ECE.md",
-    "Pentest Tools/Link.md",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",
