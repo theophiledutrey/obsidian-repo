@@ -242,10 +242,6 @@ Questions:
 
 Comment tu sais que t as les droitsd d ajouter ton user au groupe IT_Support
 
-Questions sur ce schéma:
-![[IMG-20251114193653159.png]]
-
-
 ADMR a quoi ça sert?
 
 Comment vérifier que ton mdp est bien changé?
