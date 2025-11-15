@@ -117,7 +117,7 @@
             }
           },
           {
-            "id": "4dbc583dcc0dbb5c",
+            "id": "70f05c000eb59f74",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -266,6 +266,7 @@
   },
   "active": "1aeb44d507874dea",
   "lastOpenFiles": [
+    "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251114193653159.png",
     "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251114170505871.png",
     "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251114170414692.png",
     "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251114170340507.png",
@@ -284,7 +285,6 @@
     "CTF/Hack The Box/Write Up/NanoCorp.md",
     "ECE/Reverse/Lab2.md",
     "conflict-files-obsidian-git.md",
-    "Assets/ECE/Reverse/Lab2/IMG-20251113203953952.png",
     "ECE/Reverse/Exo.md",
     "Assets/ECE/Reverse/Lab2",
     "ECE/Stage/Questions Techniques stage.md",
