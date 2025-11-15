@@ -235,6 +235,8 @@ Il faudra exploiter un **service**, une **application**, ou
 
 ```
 
+Vérification du mdp
+![[IMG-20251115125838454.png]]
 
 Questions:
 
