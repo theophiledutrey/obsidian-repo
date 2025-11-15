@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/Hack The Box/Write Up/NanoCorp.md",
+                "file": "ECE/Reverse/Lab2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "NanoCorp"
+              "title": "Lab2"
             }
           },
           {
@@ -266,23 +266,23 @@
   },
   "active": "1aeb44d507874dea",
   "lastOpenFiles": [
-    "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251115125838454.png",
-    "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251114193653159.png",
-    "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251114170505871.png",
-    "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251114170414692.png",
-    "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251114170340507.png",
-    "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251114170256840.png",
-    "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251114170138066.png",
-    "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251114170034439.png",
-    "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251114165833769.png",
-    "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251114153011461.png",
-    "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251114152929514.png",
+    "Assets/ECE/Reverse/Lab2/IMG-20251115163815567.png",
+    "Assets/ECE/Reverse/Lab2/IMG-20251115163645479.png",
+    "Assets/ECE/Reverse/Lab2/IMG-20251115163425699.png",
+    "Assets/ECE/Reverse/Lab2/IMG-20251115163308783.png",
+    "Assets/ECE/Reverse/Lab2/IMG-20251115163221742.png",
+    "Assets/ECE/Reverse/Lab2/IMG-20251115163150126.png",
+    "Assets/ECE/Reverse/Lab2/IMG-20251115163130967.png",
+    "Assets/ECE/Reverse/Lab2/IMG-20251115163120044.png",
+    "Assets/ECE/Reverse/Lab2/IMG-20251115163059993.png",
+    "Assets/ECE/Reverse/Lab2/IMG-20251115163042652.png",
+    "Assets/ECE/Reverse/Lab2/IMG-20251115163005981.png",
+    "CTF/Hack The Box/Write Up/NanoCorp.md",
     "Linux/Command.md",
     "Linux/Analyse.md",
     "Linux/Privilege Escalation.md",
     "Pentest Tools/Metasploit.md",
     "Web/Tools.md",
-    "CTF/Hack The Box/Write Up/NanoCorp.md",
     "ECE/Reverse/Lab2.md",
     "conflict-files-obsidian-git.md",
     "ECE/Reverse/Exo.md",
