@@ -70,7 +70,6 @@
     "//CTF",
     "//Linux",
     "//ECE/ECE/Stage",
-    "//ECE/ECE/Reverse",
     "//Pentest Tools"
   ],
   "expandFolderOnClick": true,
