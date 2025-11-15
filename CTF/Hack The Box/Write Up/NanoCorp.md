@@ -254,3 +254,6 @@ estce ce que ces commandes sont bonnes:
 [Nov 14, 2025 - 19:41:28 (CET)] exegol-htb-vpn /workspace # 
 
  bloodhound fonctionne que lorsqu on a des acces sur l annulaire ldap?
+ ```
+ exh set creds
+ ```
