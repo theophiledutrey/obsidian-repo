@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ECE/Stage/Questions Techniques stage.md",
+                "file": "Linux/UID.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Questions Techniques stage"
+              "title": "UID"
             }
           }
         ],
@@ -104,7 +104,7 @@
             }
           },
           {
-            "id": "863c9f34ff9ee2af",
+            "id": "cfc24a5a2c413022",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -251,8 +251,10 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "cbf25a44b7734205",
+  "active": "e2aa3986dab62d71",
   "lastOpenFiles": [
+    "Linux/UID.md",
+    "ECE/Stage/Questions Techniques stage.md",
     "ECE/Reverse/Cours 1.md",
     "ECE/Reverse/Exo.md",
     "ECE/Reverse/Lab2.md",
@@ -274,7 +276,6 @@
     "Web/Tools.md",
     "conflict-files-obsidian-git.md",
     "Assets/ECE/Reverse/Lab2",
-    "ECE/Stage/Questions Techniques stage.md",
     "CTF/Hack The Box/Write Up/Imagery.md",
     "CTF/Hack The Box/Write Up/CodeTwo Hack The Box.md",
     "CTF/Hack The Box/Write Up/GiveBack.md",
@@ -298,7 +299,6 @@
     "Assets/Lettre_Motivation_Theophile_Dutrey_Rolex.pdf",
     "Assets/Lettre_Motivation_Deloitte_Theophile_Dutrey.pdf",
     "ECE/Stage/Stage.md",
-    "ECE/ECE.md",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",
