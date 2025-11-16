@@ -1,4 +1,4 @@
-![[IMG-20251113014659959.png]]
+<![[IMG-20251113014659959.png]]
 
 Outil pour extraire atidrv.dll:
 

@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Web/Word List.md",
+                "file": "ECE/Reverse/Lab2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Word List"
+              "title": "Lab2"
             }
           },
           {
@@ -50,7 +50,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -251,15 +251,15 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "cbf25a44b7734205",
+  "active": "5bbc4bddc4edf0b3",
   "lastOpenFiles": [
+    "Web/Word List.md",
+    "CTF/Hack The Box/Write Up/Eighteen.md",
     "Assets/CTF/Hack The Box/Write Up/Eighteen/IMG-20251116030744401.png",
     "Assets/CTF/Hack The Box/Write Up/Eighteen/IMG-20251116025649568.png",
     "Assets/CTF/Hack The Box/Write Up/Eighteen/IMG-20251116025637730.png",
     "Assets/CTF/Hack The Box/Write Up/Eighteen/IMG-20251116024156095.png",
     "Assets/CTF/Hack The Box/Write Up/Eighteen/IMG-20251116023228745.png",
-    "Web/Word List.md",
-    "CTF/Hack The Box/Write Up/Eighteen.md",
     "Assets/CTF/Hack The Box/Write Up/Eighteen/IMG-20251116021817712.png",
     "CTF/Hack The Box/Write Up/NanoCorp.md",
     "Web/Tools.md",
@@ -274,7 +274,6 @@
     "ECE/Reverse/Lab2.md",
     "Assets/ECE/Reverse/Lab2/IMG-20251115230611873.png",
     "Assets/ECE/Reverse/Lab2/IMG-20251115230525273.png",
-    "Assets/ECE/Reverse/Lab2/IMG-20251115230447212.png",
     "Linux/Command.md",
     "Linux/Privilege Escalation.md",
     "Pentest Tools/Metasploit.md",
