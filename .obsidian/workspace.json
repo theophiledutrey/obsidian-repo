@@ -50,7 +50,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -251,12 +251,14 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "5bbc4bddc4edf0b3",
+  "active": "cbf25a44b7734205",
   "lastOpenFiles": [
+    "Assets/CTF/Hack The Box/Write Up/Eighteen/IMG-20251116024156095.png",
+    "Assets/CTF/Hack The Box/Write Up/Eighteen/IMG-20251116023228745.png",
+    "Web/Word List.md",
     "CTF/Hack The Box/Write Up/Eighteen.md",
     "Assets/CTF/Hack The Box/Write Up/Eighteen/IMG-20251116021817712.png",
     "CTF/Hack The Box/Write Up/NanoCorp.md",
-    "Web/Word List.md",
     "Web/Tools.md",
     "Linux/Analyse.md",
     "Assets/CTF/Hack The Box/Write Up/Eighteen/IMG-20251116020113319.png",
@@ -273,7 +275,6 @@
     "Assets/ECE/Reverse/Lab2/IMG-20251115230434319.png",
     "Assets/ECE/Reverse/Lab2/IMG-20251115230411402.png",
     "Assets/ECE/Reverse/Lab2/IMG-20251115230355456.png",
-    "Assets/ECE/Reverse/Lab2/IMG-20251115230344308.png",
     "Linux/Command.md",
     "Linux/Privilege Escalation.md",
     "Pentest Tools/Metasploit.md",
