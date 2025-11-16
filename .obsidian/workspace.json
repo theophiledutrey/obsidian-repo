@@ -41,16 +41,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/UID.md",
+                "file": "CTF/Hack The Box/Write Up/Eighteen.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "UID"
+              "title": "Eighteen"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -251,8 +250,13 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "e2aa3986dab62d71",
+  "active": "c116deb26ede16c1",
   "lastOpenFiles": [
+    "CTF/Hack The Box/Write Up/Eighteen.md",
+    "CTF/Hack The Box/Write Up/NanoCorp.md",
+    "Assets/CTF/Hack The Box/Write Up/Eighteen/IMG-20251116020113319.png",
+    "Assets/CTF/Hack The Box/Write Up/Eighteen",
+    "Assets/CTF/Hack The Box/Write Up/Eighteen/IMG-20251116015855318.png",
     "Linux/UID.md",
     "ECE/Stage/Questions Techniques stage.md",
     "ECE/Reverse/Cours 1.md",
@@ -266,10 +270,7 @@
     "Assets/ECE/Reverse/Lab2/IMG-20251115230355456.png",
     "Assets/ECE/Reverse/Lab2/IMG-20251115230344308.png",
     "Linux/Analyse.md",
-    "CTF/Hack The Box/Write Up/NanoCorp.md",
     "Assets/Pasted image 20251115192201.png",
-    "Assets/Pasted image 20251115192040.png",
-    "Assets/Pasted image 20251115192005.png",
     "Linux/Command.md",
     "Linux/Privilege Escalation.md",
     "Pentest Tools/Metasploit.md",
@@ -290,15 +291,12 @@
     "Infra/Wireguard.md",
     "Assets/ECE/Stage/List",
     "Linux/Bug.md",
-    "ECE/Stage/Stage Intrinsec.md",
     "Assets/ECE/Stage/Stage Intrinsec",
     "Assets/ECE/Stage/Stage ITRACING",
     "Assets/ECE/Stage",
     "Assets/Lettre_AMOSSYS_Hyperviseurs_Theophile_Dutrey.pdf",
     "Assets/Lettre_AMOSSYS_Bypass_EDR_Theophile_Dutrey.pdf",
     "Assets/Lettre_Motivation_Theophile_Dutrey_Rolex.pdf",
-    "Assets/Lettre_Motivation_Deloitte_Theophile_Dutrey.pdf",
-    "ECE/Stage/Stage.md",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",
