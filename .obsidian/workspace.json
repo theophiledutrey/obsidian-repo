@@ -50,7 +50,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -251,10 +251,11 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "5bbc4bddc4edf0b3",
+  "active": "cbf25a44b7734205",
   "lastOpenFiles": [
-    "CTF/Hack The Box/Write Up/NanoCorp.md",
+    "Assets/CTF/Hack The Box/Write Up/Eighteen/IMG-20251117021131362.png",
     "ECE/Reverse/Lab2.md",
+    "CTF/Hack The Box/Write Up/NanoCorp.md",
     "ECE/Stage/List.md",
     "ECE/Stage/Questions Techniques stage.md",
     "ECE/Stage/Stage Amossys.md",
