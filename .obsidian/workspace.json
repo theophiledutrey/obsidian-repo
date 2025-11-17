@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/Hack The Box/Write Up/NanoCorp.md",
+                "file": "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "NanoCorp"
+              "title": "Previous Hack The Box"
             }
           },
           {
@@ -49,8 +49,7 @@
               "title": "List"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -104,7 +103,7 @@
             }
           },
           {
-            "id": "20fa113db981659e",
+            "id": "2b110c91c7dc96f0",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -251,13 +250,16 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "e2aa3986dab62d71",
+  "active": "c116deb26ede16c1",
   "lastOpenFiles": [
+    "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
+    "CTF/Hack The Box/Write Up/Expressway Hack The Box .md",
+    "CTF/Hack The Box/Write Up/Imagery.md",
+    "CTF/Hack The Box/Write Up/NanoCorp.md",
     "ECE/Stage/List.md",
     "CTF/Hack The Box/Write Up/Eighteen.md",
     "Assets/CTF/Hack The Box/Write Up/Eighteen/IMG-20251117021131362.png",
     "ECE/Reverse/Lab2.md",
-    "CTF/Hack The Box/Write Up/NanoCorp.md",
     "ECE/Stage/Questions Techniques stage.md",
     "ECE/Stage/Stage Amossys.md",
     "Web/Word List.md",
@@ -281,7 +283,6 @@
     "Pentest Tools/Metasploit.md",
     "conflict-files-obsidian-git.md",
     "Assets/ECE/Reverse/Lab2",
-    "CTF/Hack The Box/Write Up/Imagery.md",
     "CTF/Hack The Box/Write Up/CodeTwo Hack The Box.md",
     "CTF/Hack The Box/Write Up/GiveBack.md",
     "Assets/CTF/Hack The Box/Write Up/NanoCorp",
@@ -291,7 +292,6 @@
     "ECE/Stage/Stage ITRACING.md",
     "Infra/Wireguard.md",
     "Assets/ECE/Stage/List",
-    "Linux/Bug.md",
     "Assets/ECE/Stage/Stage Intrinsec",
     "Assets/ECE/Stage/Stage ITRACING",
     "Assets/ECE/Stage",
