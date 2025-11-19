@@ -64,14 +64,13 @@
     "//ECE/ECE/Forensic/ECE/Forensic/TP 2",
     "//ECE/ECE/Forensic/ECE/Forensic/TP ",
     "//ECE/ECE/Cloud/ECE/Cloud/Entra ID",
-    "//ECE",
     "//Infra",
     "//Web",
     "//CTF",
-    "//Linux",
     "//ECE/ECE/Stage",
     "//Pentest Tools",
-    "//ECE/ECE/Reverse"
+    "//ECE/ECE/Reverse",
+    "//Portswigger"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
