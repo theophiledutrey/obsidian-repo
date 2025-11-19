@@ -49,7 +49,8 @@
               "title": "List"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -103,7 +104,7 @@
             }
           },
           {
-            "id": "2b110c91c7dc96f0",
+            "id": "f9ddc18971e071eb",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -250,8 +251,10 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "c116deb26ede16c1",
+  "active": "cbf25a44b7734205",
   "lastOpenFiles": [
+    "ECE/Reverse/Lab2.md",
+    "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
     "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
     "CTF/Hack The Box/Write Up/Expressway Hack The Box .md",
     "CTF/Hack The Box/Write Up/Imagery.md",
@@ -259,7 +262,6 @@
     "ECE/Stage/List.md",
     "CTF/Hack The Box/Write Up/Eighteen.md",
     "Assets/CTF/Hack The Box/Write Up/Eighteen/IMG-20251117021131362.png",
-    "ECE/Reverse/Lab2.md",
     "ECE/Stage/Questions Techniques stage.md",
     "ECE/Stage/Stage Amossys.md",
     "Web/Word List.md",
@@ -290,7 +292,6 @@
     "ECE/Stage/CV.md",
     "ECE/Stage/Lettre de motivation.md",
     "ECE/Stage/Stage ITRACING.md",
-    "Infra/Wireguard.md",
     "Assets/ECE/Stage/List",
     "Assets/ECE/Stage/Stage Intrinsec",
     "Assets/ECE/Stage/Stage ITRACING",
