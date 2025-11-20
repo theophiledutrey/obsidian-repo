@@ -70,7 +70,9 @@
     "//ECE/ECE/Stage",
     "//Pentest Tools",
     "//ECE/ECE/Reverse",
-    "//Portswigger"
+    "//Portswigger",
+    "//ECE",
+    "//ECE/ECE/SOC"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
