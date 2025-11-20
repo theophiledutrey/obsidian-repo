@@ -4,39 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "d6a0f6c76e182f00",
+        "id": "9a22172af089f050",
         "type": "tabs",
         "children": [
           {
-            "id": "c116deb26ede16c1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Previous Hack The Box"
-            }
-          },
-          {
-            "id": "5bbc4bddc4edf0b3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ECE/Reverse/Lab2.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Lab2"
-            }
-          },
-          {
-            "id": "cbf25a44b7734205",
+            "id": "18f35b1b7d08ca7b",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -49,8 +21,7 @@
               "title": "SQLi"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -104,7 +75,7 @@
             }
           },
           {
-            "id": "b169cd37354faae6",
+            "id": "f2bec4d72c4f0542",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -232,7 +203,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 376.5
+    "width": 383.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -251,54 +222,54 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "cbf25a44b7734205",
+  "active": "18f35b1b7d08ca7b",
   "lastOpenFiles": [
-    "Assets/Portswigger/SQLi/IMG-20251119222631801.png",
-    "Assets/Portswigger/SQLi",
-    "Assets/Portswigger",
-    "Assets/Portswigger/SQLi/IMG-20251119222608846.png",
-    "ECE/Stage/List.md",
+    "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251114152929514.png",
+    "Assets/CTF/Hack The Box/Write Up/NanoCorp/IMG-20251114152916183.png",
+    "Assets/ECE/Reverse/Lab2/IMG-20251113203953952.png",
+    "CTF/Hack The Box/Write Up/Eighteen.md",
+    "conflict-files-obsidian-git.md",
     "Portswigger/SQLi.md",
     "Portswigger/Portswigger.md",
     "Portswigger",
-    "Untitled.md",
+    "Assets/Portswigger/SQLi/IMG-20251119222631801.png",
+    "Assets/Portswigger/SQLi/IMG-20251119222608846.png",
+    "Assets/Portswigger/SQLi",
+    "Assets/Portswigger",
+    "Assets/Pasted image 20251115192201.png",
+    "Assets/Pasted image 20251115192040.png",
+    "Assets/Pasted image 20251115192005.png",
+    "Assets/Pasted image 20251115191909.png",
+    "Assets/Pasted image 20251115191854.png",
+    "Assets/Pasted image 20251115191755.png",
+    "Assets/CTF/Hack The Box/Write Up/Eighteen",
     "ECE/Reverse/Lab2.md",
-    "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
-    "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
-    "CTF/Hack The Box/Write Up/Expressway Hack The Box .md",
-    "CTF/Hack The Box/Write Up/Imagery.md",
-    "CTF/Hack The Box/Write Up/NanoCorp.md",
-    "CTF/Hack The Box/Write Up/Eighteen.md",
-    "Assets/CTF/Hack The Box/Write Up/Eighteen/IMG-20251117021131362.png",
+    "CTF/Hack The Box/Write Up/CodeTwo Hack The Box.md",
+    "Linux/Privilege Escalation.md",
+    "ECE/Reverse/TP1.md",
+    "ECE/Reverse/Exo.md",
+    "Assets/ECE/Reverse/Lab2",
+    "Linux/Capabilities.md",
+    "ECE/Stage/List.md",
     "ECE/Stage/Questions Techniques stage.md",
     "ECE/Stage/Stage Amossys.md",
-    "Web/Word List.md",
-    "Assets/CTF/Hack The Box/Write Up/Eighteen/IMG-20251116030744401.png",
-    "Assets/CTF/Hack The Box/Write Up/Eighteen/IMG-20251116025649568.png",
-    "Assets/CTF/Hack The Box/Write Up/Eighteen/IMG-20251116025637730.png",
-    "Assets/CTF/Hack The Box/Write Up/Eighteen/IMG-20251116024156095.png",
-    "Assets/CTF/Hack The Box/Write Up/Eighteen/IMG-20251116023228745.png",
-    "Assets/CTF/Hack The Box/Write Up/Eighteen/IMG-20251116021817712.png",
-    "Web/Tools.md",
-    "Linux/Analyse.md",
-    "Assets/CTF/Hack The Box/Write Up/Eighteen/IMG-20251116020113319.png",
-    "Assets/CTF/Hack The Box/Write Up/Eighteen",
-    "Assets/CTF/Hack The Box/Write Up/Eighteen/IMG-20251116015855318.png",
-    "Linux/UID.md",
-    "ECE/Reverse/Cours 1.md",
-    "ECE/Reverse/Exo.md",
-    "Linux/Command.md",
-    "Linux/Privilege Escalation.md",
-    "Pentest Tools/Metasploit.md",
-    "conflict-files-obsidian-git.md",
-    "Assets/ECE/Reverse/Lab2",
-    "CTF/Hack The Box/Write Up/CodeTwo Hack The Box.md",
-    "CTF/Hack The Box/Write Up/GiveBack.md",
+    "CTF/Hack The Box/Write Up/NanoCorp.md",
     "Assets/CTF/Hack The Box/Write Up/NanoCorp",
     "Assets/ECE/Stage/List",
+    "ECE/Reverse/Cours 1.md",
+    "Linux/Analyse.md",
+    "Linux/Package .md",
+    "Linux/Command.md",
+    "ECE/Stage/Stage Intrinsec.md",
+    "ECE/Stage/CV.md",
+    "ECE/Stage/Stage ITRACING.md",
     "Assets/ECE/Stage/Stage Intrinsec",
-    "Assets/ECE/Stage/Stage ITRACING",
-    "Assets/ECE/Stage",
+    "ECE/SecuWindows/Lab/Lab4.md",
+    "ECE/Stage/Stage.md",
+    "ECE/Stage/Lettre de motivation.md",
+    "ECE/Stage/Key Vocabulary English.md",
+    "ECE/Stage",
+    "Assets/Lettre_Motivation_Theophile_Dutrey_Rolex.pdf",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",
