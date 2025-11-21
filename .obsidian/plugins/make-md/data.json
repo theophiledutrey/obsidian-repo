@@ -67,12 +67,11 @@
     "//Infra",
     "//Web",
     "//CTF",
-    "//ECE/ECE/Stage",
     "//Pentest Tools",
-    "//ECE/ECE/Reverse",
     "//Portswigger",
     "//ECE",
-    "//ECE/ECE/SOC"
+    "//ECE/ECE/SecuLinux",
+    "//ECE/ECE/Reverse"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
