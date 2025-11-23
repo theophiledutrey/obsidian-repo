@@ -55,7 +55,7 @@ On observe que la règle s'applique à 8 logs récupéré sur la VM:
 
 Voici un exemple parmis les 8 logs ressorties par la commande Chainsaw:
 ![[IMG-20251123203757697.png]]
-
+Les événements 4624 mis en évidence par Chainsaw correspondent ici à des authentifications NTLM réseau (LogonType = 3) réalisées lorsque je me connecte légitimement au partage SMB depuis ma machine Linux. Ce type d’événement est strictement identique à celui généré lors d’une attaque Pass-the-Hash moderne : Windows ne journalise pas la différence entre une authentification effectuée avec un mot de passe réel et une authentification réalisée directement à partir d’un hash NTLM. Ainsi, même si ma règle Sigma ne permet pas à elle seule de distinguer une connexion légitime d’une véritable attaque Pass-the-Hash, elle reste parfaitement valide et fonctionnelle dans le cadre de ce TP, car elle détecte précisément toutes les ouvertures de session NTLM réseau vers le partage Samba de ma VM. Cela illustre néanmoins une limitation structurelle du journal Windows Security : le Pass-the-Hash ne laisse aucune signature unique dans l’événement 4624, ce qui nécessite en pratique des corrélations supplémentaires pour obtenir une détection fiable.
 # **3) Expliquez synthétiquement la différence conceptuelle entre YARA et Sigma.**
 
 **YARA** sert à détecter des patterns dans des fichiers (strings, hex, structures binaires).  
