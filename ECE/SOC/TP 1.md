@@ -18,11 +18,11 @@ D’autres événements pertinents peuvent être :
 - **4634** (Déconnnexion)
 
 Pour illustrer le fonctionnement de ma règle Sigma, j’ai d’abord activé SMB sur ma machine virtuelle Windows, puis je me suis connecté au partage depuis ma machine en utilisant la commande suivante :
-![[IMG-20251123194515800.png]]
+![[IMG-20251123202805248.png]]
 
 Cette commande établit une authentification réseau NTLM depuis Linux vers Windows. Une fois connecté, j’ai ouvert l’Observateur d’événements sur Windows afin d’examiner les journaux de sécurité. On observe immédiatement une série d’événements caractéristiques, générés automatiquement par Windows lors de la connexion SMB :
 
-![[IMG-20251123194709105.png]]
+![[IMG-20251123202805579.png]]
 
 On retrouve notamment :
 
@@ -32,8 +32,8 @@ On retrouve notamment :
 
 2) Donnez la règle Sigma complète et fonctionnelle. Indiquez quelles clés Sigma vous avez utilisées et pourquoi.
 
-![[IMG-20251123195250631.png]]
-![[IMG-20251123195315954.png]]
+![[IMG-20251123202805778.png]]
+![[IMG-20251123202805968.png]]
 
 ### **Explication des clés Sigma :**
 
@@ -42,9 +42,19 @@ On retrouve notamment :
 - **LogonType** : 3 → logon réseau, typique du PtH.
 - **AuthenticationPackageName** : NTLM → authentification NTLM.
 - **LogonProcessName** : NtLmSsp → processus NTLM interne.
-- **KeyLength** : 0 → indicateur fréquent de PtH.
 - **condition** : applique uniquement la sélection.
 - **tags** : références MITRE pour contextualiser la détection.
+
+### **Validation automatique de la règle à l’aide de Chainsaw**
+
+Pour vérifier de manière automatique que la règle Sigma fonctionne réellement sur les logs Windows, j’ai utilisé l’outil **Chainsaw**, qui permet d’appliquer des règles Sigma sur des fichiers `.evtx`.  
+La commande suivante permet d’analyser le fichier `security.evtx` exporté depuis la machine Windows, en utilisant ma règle Sigma personnalisée et le fichier de mapping fourni par Chainsaw :
+![[IMG-20251123202806265.png]]
+On observe que la règle s'applique à 8 logs récupéré sur la VM:
+![[IMG-20251123202806473.png]]
+
+Voici un example parmis les 8 logs ressorties par la commande Chainsaw:
+![[IMG-20251123201927944.png]]
 
 # **3) Expliquez synthétiquement la différence conceptuelle entre YARA et Sigma.**
 
