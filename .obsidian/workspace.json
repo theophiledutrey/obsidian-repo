@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ECE/SecuLinux/Lesson 4.md",
+                "file": "ECE/SOC/TP 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lesson 4"
+              "title": "TP 1"
             }
           }
         ]
@@ -224,9 +224,15 @@
   },
   "active": "18f35b1b7d08ca7b",
   "lastOpenFiles": [
+    "Assets/ECE/SOC/TP 1/IMG-20251123195315954.png",
+    "Assets/ECE/SOC/TP 1/IMG-20251123195250631.png",
+    "Assets/ECE/SOC/TP 1/IMG-20251123194709105.png",
+    "Assets/ECE/SOC/TP 1",
+    "Assets/ECE/SOC/TP 1/IMG-20251123194515800.png",
+    "ECE/SecuLinux/Lesson 4.md",
+    "ECE/SOC/TP 1.md",
     "ECE/Reverse/Cours 1.md",
     "ECE/Reverse/Reverse.md",
-    "ECE/SecuLinux/Lesson 4.md",
     "ECE/Forensic/TP /TP 1.md",
     "Assets/ECE/Stage/List",
     "Assets/ECE/Stage/Lettre de motivation",
@@ -237,7 +243,6 @@
     "Assets/ECE/SOC/Stage/CV",
     "Assets/ECE/SOC/Stage",
     "Assets/ECE/SOC",
-    "Assets/Linux security_part 4_v1.0.pdf",
     "ECE/SecuLinux/Untitled.md",
     "ECE/SecuLinux/Lesson 3.md",
     "ECE/SecuLinux/Lesson 2.md",
@@ -259,17 +264,12 @@
     "Assets/Portswigger/SQLi/IMG-20251119222608846.png",
     "Assets/Pasted image 20251115192201.png",
     "Assets/Pasted image 20251115192040.png",
-    "Assets/Pasted image 20251115192005.png",
-    "Assets/Pasted image 20251115191909.png",
-    "Assets/Pasted image 20251115191854.png",
     "ECE/Reverse/Lab2.md",
     "CTF/Hack The Box/Write Up/CodeTwo Hack The Box.md",
     "Linux/Privilege Escalation.md",
     "ECE/Reverse/TP1.md",
     "ECE/Reverse/Exo.md",
     "Linux/Capabilities.md",
-    "ECE/Stage/List.md",
-    "ECE/Stage/Stage Amossys.md",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",

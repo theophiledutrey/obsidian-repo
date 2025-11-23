@@ -71,7 +71,8 @@
     "//Portswigger",
     "//ECE",
     "//ECE/ECE/SecuLinux",
-    "//ECE/ECE/Reverse"
+    "//ECE/ECE/Reverse",
+    "//ECE/ECE/SOC"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
