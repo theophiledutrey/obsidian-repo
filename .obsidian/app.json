@@ -5,7 +5,7 @@
   "autoConvertHtml": true,
   "pdfExportSettings": {
     "includeName": false,
-    "pageSize": "A4",
+    "pageSize": "A3",
     "landscape": true,
     "margin": "0",
     "downscalePercent": 100

@@ -1,8 +1,8 @@
 1) Expliquez brièvement ce qu’est un « pass the hash », et pourquoi utiliser l’évènement 4624. Quels autres évènements pourraient être utiles ici ?
-Un **Pass-the-Hash (PtH)** est une attaque où un adversaire utilise directement le **hash NTLM** d’un utilisateur pour s’authentifier à sa place, sans connaître son mot de passe en clair. Windows accepte cela car, dans une authentification NTLM, le hash du mot de passe sert déjà de secret.  
-Cette technique est couramment utilisée pour le **mouvement latéral** ou la **prise de contrôle d’un compte privilégié** après compromission.
+Un Pass-the-Hash (PtH) est une attaque où un adversaire utilise directement le hash NTLM d’un utilisateur pour s’authentifier à sa place, sans connaître son mot de passe en clair. Windows accepte cela car, dans une authentification NTLM, le hash du mot de passe sert déjà de secret.  
+Cette technique est couramment utilisée pour le mouvement latéralnou la prise de contrôle d’un compte privilégiénaprès compromission.
 
-L’événement **4624** est utilisé car il correspond à une **authentification réussie**, et dans le cas d’un PtH, plusieurs champs caractéristiques apparaissent :
+L’événement 4624 est utilisé car il correspond à une **authentification réussie**, et dans le cas d’un PtH, plusieurs champs caractéristiques apparaissent :
 
 - **LogonType = 3** → connexion réseau (SMB, WinRM, etc.)
 - **AuthenticationPackage = NTLM**
@@ -53,8 +53,8 @@ La commande suivante permet d’analyser le fichier `security.evtx` exporté dep
 On observe que la règle s'applique à 8 logs récupéré sur la VM:
 ![[IMG-20251123202806473.png]]
 
-Voici un example parmis les 8 logs ressorties par la commande Chainsaw:
-![[IMG-20251123201927944.png]]
+Voici un exemple parmis les 8 logs ressorties par la commande Chainsaw:
+![[IMG-20251123203757697.png]]
 
 # **3) Expliquez synthétiquement la différence conceptuelle entre YARA et Sigma.**
 
