@@ -47,3 +47,8 @@ Code: anonym0us
 
 ![[Pasted image 20251124173532.png]]
 
+![[Pasted image 20251124234737.png]]
+
+![[Pasted image 20251124234748.png]]
+
+![[Pasted image 20251124234759.png]]
