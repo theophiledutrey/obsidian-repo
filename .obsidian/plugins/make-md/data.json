@@ -70,7 +70,9 @@
     "//Pentest Tools",
     "//Portswigger",
     "//ECE",
-    "//ECE/ECE/SecuLinux"
+    "//ECE/ECE/SecuLinux",
+    "//ECE/ECE/Stage",
+    "//ECE/ECE/SOC"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
