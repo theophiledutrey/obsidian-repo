@@ -31,7 +31,7 @@
 
 ### **Structure d'un soc:**
 
-N1: Surveillance basique et escalade 
+N1: Surveillance basique et Triage (faux positifs / vrais positifs)
 N2: Analyse appronfondie
 N3: Réponse à incident
 
