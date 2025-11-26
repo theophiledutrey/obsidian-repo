@@ -28,3 +28,19 @@
 - **Rôle :** N1–N3, détection, réponse, gestion outils.
 - **+** Contrôle total, confidentialité.
 - **–** Très coûteux, difficile à maintenir.
+
+### **Structure d'un soc:**
+
+N1: Surveillance basique et escalade 
+N2: Analyse appronfondie
+N3: Réponse à incident
+
+### **Outils Principaux du SOC**
+
+- EDR (Endpoint Detection and Response)
+- XDR («Extended» Detection & Response)
+- SIEM (Security Information and Event Management)
+- SOAR (Security Orchestration, Automation and Response)
+
+
+
