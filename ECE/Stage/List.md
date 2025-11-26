@@ -20,7 +20,7 @@
 | Thales                           | Candidature spontanée                           | Pas de réponse        | Dubai          | None                                                                                                                                                                                         |
 | Schneider                        | Pentest                                         | Pas de réponse        | Grenoble       | https://careers.se.com/jobs/100972?lang=fr-fr&iis=Job+Board&iisn=linkedin&src=linkedin                                                                                                       |
 
-![[IMG-20251121122758839.png]]
-![[IMG-20251121122759536.png]]
+
+
 
 https://www.linkedin.com/jobs/search/?alertAction=viewjobs&currentJobId=4334687493&distance=25&f_TPR=a1762523139-&geoId=105015875&keywords=stage%20cybers%C3%A9curit%C3%A9&origin=JOB_ALERT_IN_APP_NOTIFICATION&originToLandingJobPostings=4334748272%2C4294412468%2C4334776870%2C4338054783%2C4334687493%2C4334870017&savedSearchId=8257813074&sortBy=R

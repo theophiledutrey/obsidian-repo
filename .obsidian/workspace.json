@@ -35,7 +35,8 @@
               "title": "Cours 2"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -236,11 +237,12 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "18f35b1b7d08ca7b",
+  "active": "f6d88f0ac929ded7",
   "lastOpenFiles": [
+    "ECE/Stage/List.md",
+    "ECE/SOC/Cours 1.md",
     "ECE/Stage/CTF OCD.md",
     "ECE/SOC/Cours 2.md",
-    "ECE/SOC/Cours 1.md",
     "ECE/SOC/Cours 4.md",
     "ECE/SOC/Cours 3.md",
     "ECE/SOC/TP 1.md",
