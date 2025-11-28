@@ -1446,3 +1446,106 @@ Ce document résumé est prêt pour Obsidian. Il regroupe :
     - **Dé-encapsulation** : processus inverse lors de la réception.
     - **TCP/IP** : modèle plus simple, pratique et implémenté dans tous les systèmes modernes.
     - **OSI** : modèle conceptuel utile pour enseigner et diagnostiquer (décomposition par couche).
+
+
+# Processus complet : Du nom de domaine au chargement d’une page web
+
+## Étape 1 : Obtention d'une adresse IP – **DHCP**
+1. Le client vérifie s’il dispose déjà d’une adresse IP valide.  
+2. S’il n’en a pas, il envoie un **DHCP Discover** en broadcast.  
+3. Le serveur DHCP répond avec un **DHCP Offer** contenant une adresse IP proposée.  
+4. Le client envoie un **DHCP Request** pour confirmer son choix.  
+5. Le serveur répond par un **DHCP ACK**, attribuant officiellement :
+   - une adresse IP,
+   - un masque de sous-réseau,
+   - une passerelle par défaut,
+   - des serveurs DNS,
+   - une durée de bail.
+
+Cette configuration permet au client d’être pleinement opérationnel sur le réseau.
+
+---
+
+## Étape 2 : Résolution de nom – **DNS**
+1. L’utilisateur saisit `exemple.com` dans son navigateur.  
+2. Le système vérifie d'abord :
+   - le cache DNS du navigateur,
+   - le cache DNS de l’OS,
+   - le fichier *hosts* local.  
+3. S’il n’a pas l’adresse IP, il envoie une requête DNS au résolveur configuré (FAI ou DNS public).  
+4. Le résolveur suit une résolution hiérarchique :
+   - serveurs racine (.),  
+   - serveurs du TLD (`.com`),  
+   - serveur faisant autorité pour `exemple.com`.  
+5. Une fois l’adresse IP obtenue, elle est renvoyée au client et mise en cache.
+
+---
+
+## Étape 3 : Détermination de la destination – **ARP**
+1. Le client compare sa propre adresse IP et son masque avec l’IP du serveur distant.  
+2. Deux cas :  
+   - **Même réseau local** → ARP pour obtenir directement l’adresse MAC du serveur.  
+   - **Réseau distant** → ARP pour obtenir l’adresse MAC de la *passerelle par défaut*.  
+3. ARP fonctionne via un **broadcast** : *“Qui a cette adresse IP ? Donne-moi ton adresse MAC.”*  
+4. L’hôte ciblé répond avec une réponse ARP contenant son adresse MAC.  
+5. Le client peut maintenant encapsuler les trames Ethernet destinées au bon destinataire.
+
+---
+
+## Étape 4 : Établissement du transport – **TCP 3-Way Handshake et routage**
+### Three-Way Handshake
+1. **SYN** : le client demande l'ouverture d'une connexion.  
+2. **SYN-ACK** : le serveur confirme la demande.  
+3. **ACK** : le client confirme la confirmation.
+
+La connexion TCP est alors ouverte.
+
+### NAT & PAT
+- Si l’utilisateur est derrière un routeur (réseau domestique ou entreprise), le routeur effectue :
+  - **NAT** : remplace l’IP privée du client par l’IP publique.
+  - **PAT** : crée une association *port interne → port externe* pour permettre le suivi des connexions.
+
+### Routage & transport
+- La trame sort du réseau local et traverse plusieurs routeurs.  
+- Chaque routeur :
+  - lit l’adresse IP de destination,
+  - choisit le meilleur chemin via sa table de routage,
+  - décrémente le **TTL (Time To Live)** pour éviter les boucles infinies.  
+- Si TTL = 0 → paquet détruit + message ICMP "Time Exceeded".
+
+Le paquet finit par atteindre le serveur cible.
+
+---
+
+## Étape 5 : Sécurisation – **TLS**
+1. Le client et le serveur initient un **TLS Handshake**, qui contient notamment :
+   - la sélection de la version TLS et des suites cryptographiques,
+   - l’envoi du certificat du serveur,
+   - la vérification du certificat par le client,
+   - un échange de clés (souvent via **Diffie-Hellman**),
+   - la génération d’une clé symétrique de session.
+2. Une fois terminé, **toutes les données sont chiffrées** entre le client et le serveur.
+
+---
+
+## Étape 6 : Requête HTTP – **GET**
+1. Le navigateur construit une requête HTTP **GET /page**.  
+2. La requête traverse de nouveau :
+   - les couches applicatives → transport → réseau → liaison → physique,
+   - les routeurs intermédiaires,
+   - le serveur cible.  
+3. Le serveur reçoit la requête, remonte les couches et l’interprète.
+
+---
+
+## Étape 7 : Réponse & finalisation
+1. Le serveur renvoie une **réponse HTTP 200 OK** avec le contenu de la page (HTML, CSS, JS…).  
+2. Le navigateur :
+   - déchiffre les données via TLS,
+   - traite le HTML,
+   - télécharge les ressources additionnelles (images, scripts, polices),
+   - construit le DOM,
+   - affiche la page à l’utilisateur.
+3. Une fois les échanges terminés, la connexion TCP peut être fermée via un **4-way handshake** (FIN/ACK).
+
+---
