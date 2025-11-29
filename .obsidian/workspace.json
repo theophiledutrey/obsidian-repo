@@ -13,6 +13,20 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "CTF/Hack The Box/Write Up/NanoCorp.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "NanoCorp"
+            }
+          },
+          {
+            "id": "c536b250696f792a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "ECE/Stage/Questions Techniques stage.md",
                 "mode": "source",
                 "source": false
@@ -20,8 +34,21 @@
               "icon": "lucide-file",
               "title": "Questions Techniques stage"
             }
+          },
+          {
+            "id": "53abeac6ba1b362a",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.10.6"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.10.6"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -75,7 +102,7 @@
             }
           },
           {
-            "id": "54dd2753961f2c95",
+            "id": "d194c3b2ba522a5b",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -222,8 +249,10 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "a71db1a82a0fbd90",
+  "active": "53abeac6ba1b362a",
   "lastOpenFiles": [
+    "CTF/Hack The Box/Write Up/NanoCorp.md",
+    "ECE/Stage/Questions Techniques stage.md",
     "ECE/SOC/TP 1.md",
     "ECE/SOC/Cours 4.md",
     "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
@@ -264,9 +293,7 @@
     "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
     "CTF/Hack The Box/Write Up/Expressway Hack The Box .md",
     "CTF/Hack The Box/Write Up/Imagery.md",
-    "CTF/Hack The Box/Write Up/NanoCorp.md",
     "CTF/Hack The Box/Write Up/Eighteen.md",
-    "ECE/Stage/Questions Techniques stage.md",
     "ECE/Stage/Stage Amossys.md",
     "Web/Word List.md",
     "Web/Tools.md",
