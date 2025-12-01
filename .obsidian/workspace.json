@@ -13,44 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/Hack The Box/Write Up/NanoCorp.md",
+                "file": "ECE/llm/llm-cybesecurity-labs-project/starter-project/llm-sec-final-project-starter/README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "NanoCorp"
+              "title": "README"
             }
           },
           {
-            "id": "a00824d973e8cfe0",
+            "id": "c62b81721aeab3e1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ECE/SOC/TP 1.md",
+                "file": "ECE/llm/llm-cybesecurity-labs-project/starter-project/llm-sec-final-project-starter/README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "TP 1"
-            }
-          },
-          {
-            "id": "45b6c3760616c5c8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "IA/Source.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Source"
+              "title": "README"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -104,7 +90,7 @@
             }
           },
           {
-            "id": "77e5e542057fb66b",
+            "id": "c708f44ea907a1e3",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -251,19 +237,45 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "e2aa3986dab62d71",
+  "active": "c62b81721aeab3e1",
   "lastOpenFiles": [
-    "IA/Source.md",
-    "ECE/Stage/Entretien SOC OCD.md",
-    "IA/IA.md",
-    "IA",
-    "Untitled.md",
-    "ECE/SOC/TP 1.md",
-    "ECE/SOC/Cours 4.md",
-    "ECE/SOC/Cours 3.md",
-    "ECE/SOC/Cours 2.md",
-    "ECE/SOC/Cours 1.md",
     "Web/Portswigger/SQLi.md",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-project/llm-sec-final-project-starter/README.md",
+    "ECE/llm/llm-cybesecurity-labs-project/README.md",
+    "ECE/llm/llm-cybesecurity-labs-project/Makefile",
+    "ECE/llm/llm-cybesecurity-labs-project/docs/structured-outline-llm-cybersecurity-course.md",
+    "ECE/llm/llm-cybesecurity-labs-project/docs/llm-course-mindmap.html",
+    "ECE/llm/llm-cybesecurity-labs-project/docs",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-project/llm-sec-final-project-starter/tests/prompts/rag_question.txt",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-project/llm-sec-final-project-starter/tests/prompts/attack_prompt.txt",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-project/llm-sec-final-project-starter/src/rag/app.py",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-project/llm-sec-final-project-starter/src/common/logger.py",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-project/llm-sec-final-project-starter/src/common/guards.py",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-project/llm-sec-final-project-starter/src/agent/app.py",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-project/llm-sec-final-project-starter/data/corpus/005.txt",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-final-project-starter/README.md",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-final-project-starter/README-student.md",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab4-starter/llm-sec-lab4/config/nemo/README.md",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab4-starter/llm-sec-lab4/README.md",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab4-starter/llm-sec-lab4/README-student.md",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab3-starter/llm-sec-lab3/reports/summary.md",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab3-starter/llm-sec-lab3/README.md",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab3-starter/llm-sec-lab3/README-student.md",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab2-starter/llm-sec-lab2/README.md",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab2-starter/llm-sec-lab2/README-student.md",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab1-starter/README.md",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab1-starter/llm-sec-lab1/docs/images/redarena-home.png",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab1-starter/llm-sec-lab1/docs/images/gandalf-agent-breaker.png",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab1-starter/llm-sec-lab1/reports/validation-notes.md",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab1-starter/llm-sec-lab1/reports/redarena_notes.md",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab1-starter/llm-sec-lab1/reports/model-comparison.md",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab1-starter/llm-sec-lab1/reports/gandalf_notes.md",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab1-starter/llm-sec-lab1/setup_commands.md",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab1-starter/llm-sec-lab1/README.md",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab1-starter/llm-sec-lab1/README-student.md",
+    "Portswigger/SQLi.md",
+    "Web/Portswigger/Portswigger.md",
+    "IA/Source.md",
     "Assets/Web/Portswigger/SQLi/IMG-20251129163248024.png",
     "Assets/Web/Portswigger/SQLi/IMG-20251129163241862.png",
     "Assets/Web/Portswigger/SQLi/IMG-20251129163211917.png",
@@ -272,33 +284,6 @@
     "Assets/Web/Portswigger/SQLi/IMG-20251129163138280.png",
     "Assets/Web/Portswigger/SQLi/IMG-20251129163119950.png",
     "Assets/Web/Portswigger/SQLi/IMG-20251129163113417.png",
-    "Assets/Web/Portswigger/SQLi/IMG-20251129162533836.png",
-    "Assets/Web/Portswigger/SQLi/IMG-20251129162436606.png",
-    "Assets/Web/Portswigger/SQLi",
-    "Assets/Web/Portswigger",
-    "Assets/Web",
-    "Assets/2025-47757 - Ingénieur.e Analyste en Cyber Sécurité.pdf",
-    "Assets/2025-47764 - Stage ingénieur.e analyst SOC.pdf",
-    "Assets/SOC_Module1 - Définition et rôle.pdf",
-    "Assets/Linux security_part 3_v1.0.pdf",
-    "Assets/Linux security_part 2_v1.0.pdf",
-    "ECE/Stage/List.md",
-    "CTF/Hack The Box/Write Up/NanoCorp.md",
-    "ECE/Stage/Questions Techniques stage.md",
-    "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
-    "ECE/Reverse/Lab2.md",
-    "conflict-files-obsidian-git.md",
-    "ECE/Stage/CTF OCD.md",
-    "ECE/SecuLinux/Lesson 4.md",
-    "ECE/SecuLinux/Lesson 3.md",
-    "ECE/SecuLinux/Lesson 2.md",
-    "ECE/SOC/SOC.md",
-    "ECE/SOC",
-    "Web/Portswigger/Portswigger.md",
-    "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
-    "CTF/Hack The Box/Write Up/Expressway Hack The Box .md",
-    "CTF/Hack The Box/Write Up/Imagery.md",
-    "CTF/Hack The Box/Write Up/Eighteen.md",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",

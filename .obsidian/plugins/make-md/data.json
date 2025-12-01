@@ -64,7 +64,6 @@
     "//ECE/ECE/Forensic/ECE/Forensic/TP ",
     "//ECE/ECE/Cloud/ECE/Cloud/Entra ID",
     "//Infra",
-    "//CTF",
     "//Pentest Tools",
     "//ECE/ECE/SecuLinux",
     "//ECE/ECE/SOC",
@@ -72,7 +71,12 @@
     "//Assets/Assets/Portswigger/Assets/Portswigger/SQLi",
     "//Web",
     "//Web/Web/Portswigger",
-    "//IA"
+    "//IA",
+    "//ECE",
+    "//ECE/ECE/llm",
+    "//ECE/ECE/llm/ECE/llm/llm-cybesecurity-labs-project",
+    "//ECE/ECE/llm/ECE/llm/llm-cybesecurity-labs-project/ECE/llm/llm-cybesecurity-labs-project/starter-project/ECE/llm/llm-cybesecurity-labs-project/starter-project/llm-sec-final-project-starter",
+    "//ECE/ECE/llm/ECE/llm/llm-cybesecurity-labs-project/ECE/llm/llm-cybesecurity-labs-project/starter-labs"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
@@ -87,6 +91,8 @@
     "_assets",
     "_blocks"
   ],
+  "newFileLocation": "root",
+  "newFileFolderPath": "",
   "inlineBacklinks": false,
   "inlineContext": true,
   "inlineBacklinksExpanded": false,
