@@ -103,7 +103,45 @@ FLAG{http://home-2025-12-02-tdu3-b60612.wannatry.fr/abhnjlma6g0p1jeaw0yg3ekytvv4
 
 ## Chall 3
 
+Dans ce challenge, on dispose d’une fonctionnalité permettant de **mettre à jour sa photo de profil** en uploadant un fichier.  
+J’ai donc commencé par tester un fichier arbitraire, avec différentes extensions, pour observer le comportement du serveur.
+
+Très rapidement, je constate que **peu importe l’extension du fichier que j’essaie d’ajouter (.txt, .php, .jpg, etc.)**, l’application renvoie une erreur indiquant que **le type de fichier est incorrect**.  
+Cela suggère fortement que le serveur ne se base pas uniquement sur l’extension, mais réalise un contrôle plus strict : **une vérification du “magic number” du fichier**.
+
+Les magic numbers correspondent aux premiers octets d’un fichier, utilisés pour identifier son format réel.  
+Par exemple, pour le format PNG :
+
 ![[IMG-20251202232830158.png]]
 
-![[IMG-20251202232849220.png]]
+Ainsi, même si je renomme un fichier en `.png`, si son contenu ne commence pas par `89 50 4E 47`, l’application le rejettera.
+
+Ce comportement indique donc que pour bypasser la vérification et uploader un fichier malveillant, je dois **fabriquer un fichier contenant un magic number valide**, puis y insérer du code arbitraire derrière.
+
+Pour contourner la vérification du type de fichier réalisée côté serveur, j’ai créé un fichier dont les **premiers octets correspondent à la signature d’un vrai fichier PNG**
+
+![[IMG-20251202233926481.png]]
+
+- `89504E47` → signature hexadécimale du format PNG
+- `xxd -r -p` → convertit l’hex en données binaires
+- `poc.php` → fichier final (extension PHP pour la suite du bypass)
+
+Une fois mon fichier forgé avec un magic number PNG valide, je procède à l’upload.  
+Cette fois-ci, **le fichier passe la vérification du serveur** et l’application affiche un message confirmant que la photo de profil a été mise à jour.
+
+J’ouvre alors **Burp Suite** pour observer ce qui se passe après l’envoi du formulaire.  
+En interceptant la requête et le trafic suivant, je remarque immédiatement qu’une requête GET est effectuée automatiquement vers :
+
+```
+/uploads/profile-picture.php
+```
+
+![[IMG-20251202234205659.png]]
+
+Quand je vais sur la page, 
+![[IMG-20251202234823095.png]]
+
+![[IMG-20251202234844788.png]]
+
+![[IMG-20251202234944708.png]]
 
