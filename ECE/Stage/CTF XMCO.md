@@ -36,7 +36,7 @@ Je trouve le flag et l'affiche:
 FLAG CHALL 1:
 
 ```
-'FLAG': 'FLAG{http://home-2025-12-02-tdu3-b60612.wannatry.fr/j418w8w9cep09bc559jm427jare4aiz9-end.html}'
+FLAG{http://home-2025-12-02-tdu3-b60612.wannatry.fr/j418w8w9cep09bc559jm427jare4aiz9-end.html}
 ```
 
 ## Chall 2
