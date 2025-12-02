@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ECE/SOC/TP 1.md",
+                "file": "Pentest Tools/Link.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "TP 1"
+              "title": "Link"
             }
           },
           {
@@ -253,11 +253,20 @@
   },
   "active": "45b6c3760616c5c8",
   "lastOpenFiles": [
+    "Assets/ECE/Stage/CTF XMCO/IMG-20251202161952789.png",
+    "Assets/ECE/Stage/CTF XMCO/IMG-20251202161921671.png",
+    "Pentest Tools/Link.md",
+    "Web/Word List.md",
+    "Linux/Privilege Escalation.md",
+    "Web/Tools.md",
+    "ECE/SOC/TP 1.md",
+    "ECE/Stage/CTF XMCO.md",
+    "Assets/ECE/Stage/CTF XMCO/IMG-20251202161148281.png",
+    "Assets/ECE/Stage/CTF XMCO/IMG-20251202161043032.png",
     "Assets/ECE/Stage/CTF XMCO/IMG-20251202153237760.png",
     "Assets/ECE/Stage/CTF XMCO/IMG-20251202152530398.png",
     "Assets/ECE/Stage/CTF XMCO",
     "Assets/ECE/Stage/CTF XMCO/IMG-20251202152508040.png",
-    "ECE/Stage/CTF XMCO.md",
     "ECE/Stage/Entretien SOC OCD.md",
     "conflict-files-obsidian-git.md",
     "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab4-starter/llm-sec-lab4/config/nemo/rails.yaml",
@@ -288,17 +297,8 @@
     "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab2-starter/llm-sec-lab2/README-student.md",
     "ECE/llm/llm-cybesecurity-labs-project/starter-project/llm-sec-final-project-starter/README.md",
     "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab1-starter/README.md",
-    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-final-project-starter/README.md",
-    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-final-project-starter/README-student.md",
-    "ECE/llm/llm-cybesecurity-labs-project/docs/structured-outline-llm-cybersecurity-course.md",
-    "ECE/llm/llm-cybesecurity-labs-project/README.md",
-    "ECE/Stage/CV.md",
     "Assets/Web/Portswigger/SQLi/IMG-20251129163248024.png",
     "Assets/Web/Portswigger/SQLi/IMG-20251129163241862.png",
-    "Assets/Web/Portswigger/SQLi/IMG-20251129163211917.png",
-    "Assets/Web/Portswigger/SQLi/IMG-20251129163206195.png",
-    "Assets/Web/Portswigger/SQLi/IMG-20251129163144218.png",
-    "Assets/Web/Portswigger/SQLi/IMG-20251129163138280.png",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",
