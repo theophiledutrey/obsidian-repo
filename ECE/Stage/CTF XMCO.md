@@ -41,3 +41,9 @@ FLAG{http://home-2025-12-02-tdu3-b60612.wannatry.fr/j418w8w9cep09bc559jm427jare4
 
 ## Chall 2
 
+![[IMG-20251202194419296.png]]
+
+![[IMG-20251202194519522.png]]
+
+![[IMG-20251202194539440.png]]
+
