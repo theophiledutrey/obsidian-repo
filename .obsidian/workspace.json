@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ECE/Stage/Entretien SOC OCD.md",
+                "file": "ECE/Stage/CTF XMCO.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Entretien SOC OCD"
+              "title": "CTF XMCO"
             }
           }
         ],
@@ -251,8 +251,9 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "e2aa3986dab62d71",
+  "active": "45b6c3760616c5c8",
   "lastOpenFiles": [
+    "ECE/Stage/CTF XMCO.md",
     "ECE/Stage/Entretien SOC OCD.md",
     "conflict-files-obsidian-git.md",
     "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab4-starter/llm-sec-lab4/config/nemo/rails.yaml",
@@ -290,7 +291,6 @@
     "ECE/llm/llm-cybesecurity-labs-project/README.md",
     "ECE/Stage/CV.md",
     "ECE/Stage/CTF OCD.md",
-    "ECE/SOC/TP 1.md",
     "Assets/Web/Portswigger/SQLi/IMG-20251129163248024.png",
     "Assets/Web/Portswigger/SQLi/IMG-20251129163241862.png",
     "Assets/Web/Portswigger/SQLi/IMG-20251129163211917.png",
