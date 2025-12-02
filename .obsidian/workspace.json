@@ -50,7 +50,7 @@
             }
           },
           {
-            "id": "a0443283dd5e4c28",
+            "id": "231b338f7ec1f910",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -64,7 +64,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -265,18 +265,21 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "a0443283dd5e4c28",
+  "active": "45b6c3760616c5c8",
   "lastOpenFiles": [
-    "CTF/Hack The Box/Write Up/Eighteen.md",
-    "CTF/Hack The Box/Write Up/Conversor.md",
+    "Assets/ECE/Stage/CTF XMCO/IMG-20251202232849220.png",
+    "Assets/ECE/Stage/CTF XMCO/IMG-20251202232830158.png",
+    "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
+    "ECE/Stage/CTF XMCO.md",
     "CTF/Hack The Box/Write Up/CodeTwo Hack The Box.md",
-    "CTF/Hack The Box/Write Up/Soulmate Hack The Box.md",
+    "CTF/Hack The Box/Write Up/Conversor.md",
     "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
+    "CTF/Hack The Box/Write Up/Soulmate Hack The Box.md",
+    "CTF/Hack The Box/Write Up/Eighteen.md",
     "CTF/Hack The Box/Write Up/NanoCorp.md",
     "CTF/Hack The Box/Write Up/GiveBack.md",
     "CTF/Hack The Box/Write Up/Expressway Hack The Box .md",
     "CTF/Hack The Box/Write Up/Guardian Hack The Box.md",
-    "ECE/Stage/CTF XMCO.md",
     "Assets/ECE/Stage/CTF XMCO/IMG-20251202202014666.png",
     "Assets/ECE/Stage/CTF XMCO/IMG-20251202201955467.png",
     "Assets/ECE/Stage/CTF XMCO/IMG-20251202195801528.png",
@@ -286,7 +289,6 @@
     "Assets/ECE/Stage/CTF XMCO/IMG-20251202194442401.png",
     "Assets/ECE/Stage/CTF XMCO/IMG-20251202194419296.png",
     "Assets/ECE/Stage/CTF XMCO/IMG-20251202161952789.png",
-    "Assets/ECE/Stage/CTF XMCO/IMG-20251202161921671.png",
     "Pentest Tools/Link.md",
     "Web/Word List.md",
     "Linux/Privilege Escalation.md",
@@ -311,8 +313,6 @@
     "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab1-starter/llm-sec-lab1/reports/model-comparison.md",
     "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab1-starter/llm-sec-lab1/reports/gandalf_notes.md",
     "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab3-starter/llm-sec-lab3/README.md",
-    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab3-starter/llm-sec-lab3/README-student.md",
-    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab4-starter/llm-sec-lab4/README.md",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",

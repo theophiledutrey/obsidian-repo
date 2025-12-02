@@ -103,3 +103,7 @@ FLAG{http://home-2025-12-02-tdu3-b60612.wannatry.fr/abhnjlma6g0p1jeaw0yg3ekytvv4
 
 ## Chall 3
 
+![[IMG-20251202232830158.png]]
+
+![[IMG-20251202232849220.png]]
+
