@@ -138,10 +138,21 @@ En interceptant la requête et le trafic suivant, je remarque immédiatement qu�
 
 ![[IMG-20251202234205659.png]]
 
-Quand je vais sur la page, 
+Lorsque j’accède directement au fichier que j’ai uploadé, je constate que le navigateur affiche bien le début du fichier, incluant le magic number PNG:
+
 ![[IMG-20251202234823095.png]]
 
+Juste après cette signature, tout le contenu est interprété comme du PHP par le serveur.  
+Je décide donc d’y injecter un webshell minimaliste à la suite du magic number, afin d’exécuter des commandes arbitraires :
+
 ![[IMG-20251202234844788.png]]
+Ce fichier est toujours accepté comme une image par le mécanisme de vérification (grâce au magic number), mais **le serveur continue de l’exécuter comme un script PHP**, car son extension reste `.php`.
+Une fois uploadé, on obtient le flag dans /uploads/profile-picture.php
 
 ![[IMG-20251202234944708.png]]
+
+```
+FLAG{http://home-2025-12-02-tdu3-b60612.wannatry.fr/rigfw8y3wyo257buunoro1w1kb3g0968-end.html}
+```
+## Chall 4
 
