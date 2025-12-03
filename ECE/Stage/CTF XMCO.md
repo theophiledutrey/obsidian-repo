@@ -156,3 +156,4 @@ FLAG{http://home-2025-12-02-tdu3-b60612.wannatry.fr/rigfw8y3wyo257buunoro1w1kb3g
 ```
 ## Chall 4
 
+https://oauth.tools/?ref=jwt_tools

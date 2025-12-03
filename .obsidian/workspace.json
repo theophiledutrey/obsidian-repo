@@ -64,7 +64,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -265,8 +265,9 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "353d41d9fb4993f0",
+  "active": "45b6c3760616c5c8",
   "lastOpenFiles": [
+    "Web/Portswigger/SQLi.md",
     "Web/Portswigger/Portswigger.md",
     "Pentest Tools/Link.md",
     "ECE/Stage/CTF XMCO.md",
@@ -312,7 +313,6 @@
     "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab1-starter/llm-sec-lab1/reports/validation-notes.md",
     "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab1-starter/llm-sec-lab1/reports/redarena_notes.md",
     "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab1-starter/llm-sec-lab1/reports/model-comparison.md",
-    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab1-starter/llm-sec-lab1/reports/gandalf_notes.md",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",
