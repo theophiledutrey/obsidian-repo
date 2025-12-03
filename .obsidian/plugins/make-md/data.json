@@ -72,7 +72,8 @@
     "//Linux",
     "//Web",
     "//Web/Web/Portswigger",
-    "//ECE/ECE/Stage"
+    "//ECE/ECE/Stage",
+    "//ECE/ECE/SOC"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
