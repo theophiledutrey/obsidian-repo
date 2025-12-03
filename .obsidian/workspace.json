@@ -4,39 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "1a1ee1d305b597be",
+        "id": "26e5d7692cbce307",
         "type": "tabs",
         "children": [
           {
-            "id": "a71db1a82a0fbd90",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CTF/Hack The Box/Write Up/NanoCorp.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "NanoCorp"
-            }
-          },
-          {
-            "id": "a00824d973e8cfe0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Pentest Tools/Link.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Link"
-            }
-          },
-          {
-            "id": "45b6c3760616c5c8",
+            "id": "7319ce8dad385df2",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -48,23 +20,8 @@
               "icon": "lucide-file",
               "title": "CTF XMCO"
             }
-          },
-          {
-            "id": "353d41d9fb4993f0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Web/Portswigger/SQLi.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "SQLi"
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -118,7 +75,7 @@
             }
           },
           {
-            "id": "78ea8eb2ae80fbc7",
+            "id": "543c9fbccc42628e",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -265,14 +222,10 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "45b6c3760616c5c8",
+  "active": "7319ce8dad385df2",
   "lastOpenFiles": [
-    "Web/Portswigger/SQLi.md",
-    "Web/Portswigger/Portswigger.md",
-    "Pentest Tools/Link.md",
+    "ECE/SOC/Cours 2.md",
     "ECE/Stage/CTF XMCO.md",
-    "Linux/Hyprland .md",
-    "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
     "Assets/ECE/Stage/CTF XMCO/IMG-20251202234944708.png",
     "Assets/ECE/Stage/CTF XMCO/IMG-20251202234844788.png",
     "Assets/ECE/Stage/CTF XMCO/IMG-20251202234823095.png",
@@ -280,39 +233,43 @@
     "Assets/ECE/Stage/CTF XMCO/IMG-20251202233926481.png",
     "Assets/ECE/Stage/CTF XMCO/IMG-20251202232849220.png",
     "Assets/ECE/Stage/CTF XMCO/IMG-20251202232830158.png",
-    "CTF/Hack The Box/Write Up/CodeTwo Hack The Box.md",
-    "CTF/Hack The Box/Write Up/Conversor.md",
-    "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
-    "CTF/Hack The Box/Write Up/Soulmate Hack The Box.md",
-    "CTF/Hack The Box/Write Up/Eighteen.md",
-    "CTF/Hack The Box/Write Up/NanoCorp.md",
-    "CTF/Hack The Box/Write Up/GiveBack.md",
-    "CTF/Hack The Box/Write Up/Expressway Hack The Box .md",
-    "CTF/Hack The Box/Write Up/Guardian Hack The Box.md",
     "Assets/ECE/Stage/CTF XMCO/IMG-20251202202014666.png",
     "Assets/ECE/Stage/CTF XMCO/IMG-20251202201955467.png",
     "Assets/ECE/Stage/CTF XMCO/IMG-20251202195801528.png",
-    "Web/Word List.md",
-    "Linux/Privilege Escalation.md",
-    "Web/Tools.md",
-    "ECE/SOC/TP 1.md",
     "Assets/ECE/Stage/CTF XMCO",
-    "ECE/Stage/Entretien SOC OCD.md",
-    "conflict-files-obsidian-git.md",
-    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab4-starter/llm-sec-lab4/config/nemo/rails.yaml",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-project/llm-sec-final-project-starter/README.md",
+    "Web/Portswigger/SQLi.md",
+    "ECE/llm/llm-cybesecurity-labs-project/README.md",
+    "ECE/llm/llm-cybesecurity-labs-project/Makefile",
+    "ECE/llm/llm-cybesecurity-labs-project/docs/structured-outline-llm-cybersecurity-course.md",
+    "ECE/llm/llm-cybesecurity-labs-project/docs/llm-course-mindmap.html",
+    "ECE/llm/llm-cybesecurity-labs-project/docs",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-project/llm-sec-final-project-starter/tests/prompts/rag_question.txt",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-project/llm-sec-final-project-starter/tests/prompts/attack_prompt.txt",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-project/llm-sec-final-project-starter/src/rag/app.py",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-project/llm-sec-final-project-starter/src/common/logger.py",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-project/llm-sec-final-project-starter/src/common/guards.py",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-project/llm-sec-final-project-starter/src/agent/app.py",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-final-project-starter/README.md",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-final-project-starter/README-student.md",
     "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab4-starter/llm-sec-lab4/config/nemo/README.md",
-    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab2-starter/llm-sec-lab2/tests/data/sample_results.json",
-    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab2-starter/llm-sec-lab2/snippets/python/10_xss_escape.py",
-    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab2-starter/llm-sec-lab2/snippets/python/09_xss_flask.py",
-    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab2-starter/llm-sec-lab2/snippets/python/08_eval_guard.py",
-    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab2-starter/llm-sec-lab2/snippets/python/07_eval.py",
-    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab2-starter/llm-sec-lab2/snippets/python/06_hash.py",
-    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab2-starter/llm-sec-lab2/snippets/python/05_deser.py",
-    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab2-starter/llm-sec-lab2/snippets/python/04_os_cmd_safe.py",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab4-starter/llm-sec-lab4/README.md",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab4-starter/llm-sec-lab4/README-student.md",
     "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab3-starter/llm-sec-lab3/reports/summary.md",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab3-starter/llm-sec-lab3/README.md",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab3-starter/llm-sec-lab3/README-student.md",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab2-starter/llm-sec-lab2/README.md",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab2-starter/llm-sec-lab2/README-student.md",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab1-starter/README.md",
     "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab1-starter/llm-sec-lab1/reports/validation-notes.md",
     "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab1-starter/llm-sec-lab1/reports/redarena_notes.md",
     "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab1-starter/llm-sec-lab1/reports/model-comparison.md",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab1-starter/llm-sec-lab1/reports/gandalf_notes.md",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab1-starter/llm-sec-lab1/setup_commands.md",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab1-starter/llm-sec-lab1/README.md",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab1-starter/llm-sec-lab1/README-student.md",
+    "Portswigger/SQLi.md",
+    "Web/Portswigger/Portswigger.md",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",

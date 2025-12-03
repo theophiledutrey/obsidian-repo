@@ -71,7 +71,8 @@
     "//Pentest Tools",
     "//Linux",
     "//Web",
-    "//Web/Web/Portswigger"
+    "//Web/Web/Portswigger",
+    "//ECE/ECE/Stage"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
@@ -86,6 +87,8 @@
     "_assets",
     "_blocks"
   ],
+  "newFileLocation": "root",
+  "newFileFolderPath": "",
   "inlineBacklinks": false,
   "inlineContext": true,
   "inlineBacklinksExpanded": false,
