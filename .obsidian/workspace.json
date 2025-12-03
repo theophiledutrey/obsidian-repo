@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ECE/SOC/Cours 2.md",
+                "file": "ECE/SOC/Cours 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Cours 2"
+              "title": "Cours 1"
             }
           }
         ],
@@ -267,6 +267,7 @@
   },
   "active": "353d41d9fb4993f0",
   "lastOpenFiles": [
+    "ECE/SOC/Cours 2.md",
     "ECE/Stage/Entretien SOC OCD.md",
     "Web/Tools.md",
     "conflict-files-obsidian-git.md",
@@ -312,7 +313,6 @@
     "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab3-starter/llm-sec-lab3/reports/summary.md",
     "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab1-starter/llm-sec-lab1/reports/validation-notes.md",
     "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab1-starter/llm-sec-lab1/reports/redarena_notes.md",
-    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab1-starter/llm-sec-lab1/reports/model-comparison.md",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",

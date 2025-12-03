@@ -50,3 +50,16 @@ N3: Réponse à incident
 - Volumétrie des incidents: Gérer le nombre d’alertes que le SOC reçoit chaque jour.
 - Criticités des incidents: Déterminer le niveau d’importance des incidents
 - Classification des incidents: Savoir ce que signifie réellement une alerte.
+
+
+YARA/SIGMA
+
+Kernel space/User Land/Hooking
+
+Deux exercice pratique
+
+Process trie:
+faire du sequentiel
+
+Process trie
+
