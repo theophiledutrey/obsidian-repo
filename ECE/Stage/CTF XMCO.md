@@ -274,7 +274,7 @@ Après execution du script, j'obtiens ce résultat:
 Le mot de passe récupéré est un hash MD5. Je le met dans crackstation et récupère le mot de passe admin associé:
 
 ![[Pasted image 20251204180730.png]]
-
+yerramshettysumlok
 Enfin je me connect entant qu'admin au site, et j'accède au flag:
 
 ![[Pasted image 20251204180802.png]]
