@@ -317,4 +317,11 @@ FLAG{http://home-2025-12-02-tdu3-b60612.wannatry.fr/qk7gi3xb2a3rzsx9edxylqczm4xv
 
 ## Chall 6
 
+![[IMG-20251205221651925.png]]
+
+![[IMG-20251205221937938.png]]
+
+![[IMG-20251205221625977.png]]
+
+
 
