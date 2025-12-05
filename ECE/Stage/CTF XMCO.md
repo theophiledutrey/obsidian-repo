@@ -285,3 +285,8 @@ FLAG{http://home-2025-12-02-tdu3-b60612.wannatry.fr/mwex0emeea7ycbs4pwjim2k1jrof
 
 ## Chall 5
 
+![[IMG-20251205031810382.png]]
+
+```
+FLAG{http://home-2025-12-02-tdu3-b60612.wannatry.fr/qk7gi3xb2a3rzsx9edxylqczm4xvq9xm-end.html}
+```
