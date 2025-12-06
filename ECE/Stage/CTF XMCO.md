@@ -436,3 +436,5 @@ flag{http://home-2025-12-02-tdu3-b60612.wannatry.fr/3nwhe9e1bdq7lc7uqueo4kmcasiz
 
 ## Chall 7
 
+
+![[IMG-20251206011701360.png]]
