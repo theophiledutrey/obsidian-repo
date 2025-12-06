@@ -118,7 +118,7 @@
             }
           },
           {
-            "id": "9ef98f874b6d2158",
+            "id": "6f65e6de94d69d1f",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -267,6 +267,8 @@
   },
   "active": "353d41d9fb4993f0",
   "lastOpenFiles": [
+    "Assets/ECE/Stage/CTF XMCO/IMG-20251206151859333.png",
+    "Assets/ECE/Stage/CTF XMCO/IMG-20251206151740244.png",
     "Assets/ECE/Stage/CTF XMCO/IMG-20251206140436308.png",
     "Assets/ECE/Stage/CTF XMCO/IMG-20251206140425794.png",
     "Assets/ECE/Stage/CTF XMCO/IMG-20251206140411778.png",
@@ -276,8 +278,6 @@
     "Assets/ECE/Stage/CTF XMCO/IMG-20251206003812552.png",
     "Assets/ECE/Stage/CTF XMCO/IMG-20251205232138373.png",
     "Assets/ECE/Stage/CTF XMCO/IMG-20251205231633285.png",
-    "Assets/ECE/Stage/CTF XMCO/IMG-20251205223413193.png",
-    "Assets/ECE/Stage/CTF XMCO/IMG-20251205221937938.png",
     "Web/JWT.md",
     "ECE/Stage/CTF XMCO.md",
     "conflict-files-obsidian-git.md",

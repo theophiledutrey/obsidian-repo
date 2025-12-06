@@ -442,3 +442,5 @@ flag{http://home-2025-12-02-tdu3-b60612.wannatry.fr/3nwhe9e1bdq7lc7uqueo4kmcasiz
 
 ![[IMG-20251206140436308.png]]
 
+![[IMG-20251206151859333.png]]
+
