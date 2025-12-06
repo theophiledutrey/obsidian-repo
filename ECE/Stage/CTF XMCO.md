@@ -479,4 +479,7 @@ Header TTF: \x00\x01\x00\x00\x00\x10\x00\x80
 
 ![[IMG-20251206185246929.png]]
 
+```
+FLAG{http://home-2025-12-02-tdu3-b60612.wannatry.fr/c2w8i3ydokm6de4x92dogxfwnr9sa1lx-end.html}
+```
 ## Chall 8
