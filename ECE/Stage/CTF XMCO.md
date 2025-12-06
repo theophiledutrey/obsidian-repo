@@ -442,6 +442,8 @@ flag{http://home-2025-12-02-tdu3-b60612.wannatry.fr/3nwhe9e1bdq7lc7uqueo4kmcasiz
 
 ![[IMG-20251206140436308.png]]
 
+CVE-2022-28368
+
 https://www.optiv.com/insights/discover/blog/exploiting-rce-vulnerability-dompdf
 
 
