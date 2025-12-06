@@ -283,7 +283,7 @@ FLAG{http://home-2025-12-02-tdu3-b60612.wannatry.fr/mwex0emeea7ycbs4pwjim2k1jrof
 
 ## Chall 5
 
-Ce challenge reprend une structure très similaire au **challenge numéro 4**, mais cette fois-ci l’exploitation est plus complexe et nécessite l’utilisation d’une technique d’exfiltration hors-bande (_Out-Of-Band_, ou **OAST**).
+Ce challenge reprend une structure très similaire au **challenge numéro 4**, mais cette fois-ci l’exploitation est plus complexe et nécessite l’utilisation d’une technique d’exfiltration hors-bande (_Out-Of-Band_).
 
 Comme pour le 4ème challenge, on observe un formulaire qui envoie en arrière-plan une requête contenant un champ nommé `xml`, dont la valeur est tout simplement une chaîne **encodée en Base64** représentant un document XML.
 En réinjectant du XML contrôlé par l’utilisateur, il est possible d'ajouter une déclaration `<!DOCTYPE>` afin de définir des **entités externes**. 
@@ -297,9 +297,8 @@ Pour exploiter cette vulnérabilité, on utilise une technique de **Blind XXE Ou
 Il accepte cependant de charger des **DTD externes**, ce qui permet d’exécuter du XML plus complexe.
 On commence par créer un fichier `.dtd` contenant la _vraie_ payload XXE : lecture du fichier `/flag` et exfiltration de son contenu vers un server qu'on contôle.
 On ne peut **pas** envoyer cette payload directement via le champ `xml` du formulaire car le parseur PHP interdit les paramètres internes contenant des `%`, ce qui provoquait immédiatement des erreurs (`PEReferences forbidden`, `entity not defined`, etc.).
-Ensuite j'envoie dans le champ XML une payload qui charge la DTD hébergée et exécute ce qu’elle contient. Ainsi, le fichier `/flag` est lu et envoyé notre server en arrière-plan grâce à la DTD.
-Pour recevoir le contenu exfiltré, j’aurais pu ouvrir un port sur ma box et configurer un port-forwarding vers un serveur local, mais cela demande une configuration réseau inutilement complexe.  
-Pour simplifier, j’ai utilisé **Interactsh**, un service conçu pour capturer des requêtes sans aucune configuration : il fournit un domaine unique et enregistre automatiquement toutes les connexions entrantes.  
+Ensuite j'envoie dans le champ XML une payload qui charge la DTD hébergée et exécute ce qu’elle contient. Ainsi, le fichier `/flag` est lu et envoyé vers mon server en arrière-plan grâce à la DTD.
+Pour recevoir le contenu exfiltré, j’aurais pu ouvrir un port sur ma box et configurer un port-forwarding vers un serveur local, mais cela demande une configuration réseau inutilement complexe.  Pour simplifier, j’ai utilisé **Interactsh**, un service conçu pour capturer des requêtes sans aucune configuration : il fournit un domaine unique et enregistre automatiquement toutes les connexions entrantes.  
 En plaçant ce domaine dans ma DTD malveillante, le serveur vulnérable envoie directement le contenu du fichier `/flag` vers Interactsh, ce qui me permet de le récupérer même en situation de Blind XXE.
 
 Avant d’exploiter la vulnérabilité, il fallait d’abord vérifier que le serveur hébergeant l’application pouvait effectuer des connexions sortantes. Pour cela, j’envoie une première payload XXE très simple, dont le seul objectif est de forcer le serveur à effectuer une requête vers mon domaine Interactsh :
@@ -330,7 +329,7 @@ Une fois chargée, c’est **la DTD elle-même** qui effectue toute l’exfiltra
 J'encode ma payload en base64 et l'envoie dans le champ XML:
 ![[IMG-20251205034011844.png]]
 
-Une fois la DTD chargée, le serveur tente de construire l’URL d’exfiltration contenant directement le contenu du fichier `/flag`. Le problème est que le flag inclut des caractères spéciaux (`{`, `}`, `/`, etc.) qui rendent l’URL générée invalide aux yeux du parseur XML de PHP. Lorsqu’il essaie d’interpréter cette URI malformée, `simplexml_load_string()` déclenche une erreur et affiche l’URL fautive dans le message d’erreur. Comme cette URL contient le flag en clair dans ses paramètres, celui-ci apparaît directement dans la réponse HTTP.  
+On observe que une fois la DTD chargée, le serveur tente de construire l’URL d’exfiltration contenant directement le contenu du fichier `/flag`. Le problème est que le flag inclut des caractères spéciaux (`{`, `}`, `/`, etc.) qui rendent l’URL générée invalide aux yeux du parseur XML de PHP. Lorsqu’il essaie d’interpréter cette URI malformée, `simplexml_load_string()` déclenche une erreur et affiche l’URL fautive dans le message d’erreur. Comme cette URL contient le flag en clair dans ses paramètres, celui-ci apparaît directement dans la réponse HTTP.  
 Dans un scénario réel, ou pour obtenir une exfiltration propre dans Interactsh, il aurait fallu encoder le contenu récupéré (par exemple en Base64 via `php://filter/convert.base64-encode/resource=/flag`) afin d’éviter que les caractères spéciaux ne cassent la construction de l’URL. Cela permettrait de transmettre le flag silencieusement, sans générer d’erreur côté serveur.  
 Cependant, pour ce challenge, cette erreur nous a été utile : elle confirme que l’attaque XXE fonctionne, que la DTD externe est bien interprétée, et qu’elle permet effectivement de lire le fichier `/flag`. Le flag est donc récupéré malgré l’erreur, ce qui suffit à valider complètement l’exploitation.
 
@@ -373,12 +372,7 @@ La payload suivante est envoyée dans le champ _username_ :
 
 La réponse obtenue confirme que la table **`post`** existe bien dans la base de données : en effet, la requête injectée ne génère aucune erreur et l’API retourne un message _« Logged in »_.
 
-Le fait que la commande **`UNION SELECT null,null`** fonctionne sans erreur indique également que la table `post` possède **exactement deux colonnes exploitables** dans la requête injectée.  
-Cela confirme à la fois :
-- l’existence de la table,
-- **et** le nombre de champs attendus lors de la construction du résultat SQL.
-
-L’objectif à présent est donc de déterminer **le nom  de ces colonnes**. Pour cela j'utilise cette payload:
+L’objectif à présent de déterminer **le nom  de deux colonnes dans la tables post qui pourraient nous servir pour la SQLi blind**. Je teste donc plusieurs couples possible et trouve deux champ évident pour une table de ce genre: {id, content}
 
 ![[IMG-20251205221625977.png]]
 Le serveur renvoyant une réponse **“Logged in”** lorsque j’utilise les colonnes `id` et `content` dans l’injection SQL, je peux désormais construire une payload permettant d’extraire le contenu de chaque article de manière ciblée.
