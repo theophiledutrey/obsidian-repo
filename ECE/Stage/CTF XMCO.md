@@ -430,24 +430,57 @@ flag{http://home-2025-12-02-tdu3-b60612.wannatry.fr/3nwhe9e1bdq7lc7uqueo4kmcasiz
 
 ## Chall 7
 
+En observant le site du challenge, on remarque la présence d’un formulaire permettant de générer un PDF à partir de quatre champs : **nom**, **prénom**, **date de naissance** et **commentaires**.  
+Avant de tester des attaques côté serveur, il est pertinent d’inspecter le **code source client**, à la recherche de commentaires oubliés, de fonctionnalités internes ou d’indices laissés par les développeurs.
 
+En consultant le JavaScript embarqué dans la page, on tombe sur une fonction inhabituelle : **`getJob()`**.
+La fonction semble volontairement **obfusquée** :
+- mélange de caractères dans une chaîne,
+- substitutions successives,
+- opérations mathématiques sans signification apparente.
+
+En l’exécutant localement via Node.js :
 ![[IMG-20251206135000254.png]]
+On obtient:
+```
+https://www.xmco.fr/rejoindre-xmco/
+```
+Il s’agit  d’un **easter-egg** laissé par le développeur du chalenge :) 
 
-
-![[IMG-20251206140401059.png]]
+En examinant le code JavaScript présent sur la page principale, on observe une autre fonction entièrement commentée :
 
 ![[IMG-20251206140411778.png]]
 
+Plusieurs éléments importants apparaissent ici.
+La fonction réalise une requête vers :
+```
+generate_pdf.php?remote
+```
+Ce paramètre n’est renseigné nulle part ailleurs dans l’application.  
+Il s’agit donc très probablement d’un mécanisme interne utilisé par les développeurs. De plus, le commentaire indique clairement que cette fonction n'aurait pas dû être présente dans l’environnement de production. Cela suggère que la requête POST pour créer un PDF peut avoir un autre type de sortie lorsqu’elle est executé avec le paramètre `remote`.
+J'intercepte donc avec burpsuite la requête POST et ajoute le paramètre remote:
 ![[IMG-20251206140425794.png]]
-
+On observe une différence dans la réponse. En effet, un nouveau Header est présent: 
 ![[IMG-20251206140436308.png]]
-
-CVE-2022-28368
-
+Cela indique que DOMPDF est configuré pour autoriser le chargement de ressources externes (polices, CSS…).  
+On remarque également la version du moteur PDF :
+![[IMG-20251206140401059.png]]
+Cette version est importante : DOMPDF 1.2.0 est affecté par une vulnérabilité critique permettant une **Remote Code Execution** via le mécanisme d’import de polices distantes (CVE-2022-28368).
+DOMPDF peut télécharger une police indiquée dans un fichier CSS, puis la met en cache dans `/lib/fonts/<fontname>_normal_<hash>.php`.
+Le fichier est ensuite interprété par PHP si son extension est `.php`.  Ainsi, en fournissant une fausse police contenant du code PHP valide, il est possible de créer un fichier malveillant dans ce répertoire et de l’exécuter directement depuis le serveur.
+Pour réaliser cette exploit, je me suis aidé de ce article:
 https://www.optiv.com/insights/discover/blog/exploiting-rce-vulnerability-dompdf
+Il explique en détail comment DOMPDF gère les polices distantes, comment elles sont mises en cache sous la forme de fichiers `.php`, et comment détourner ce mécanisme pour exécuter du code sur la machine cible.
 
+Pour mener à bien cet exploit, il faut exposer deux fichiers accessibles depuis l’extérieur, que DOMPDF pourra récupérer grâce au paramètre `remote` ajouté dans la requête. Pour éviter d’ouvrir un port sur ma box ou de mettre en place un serveur local accessible depuis Internet, j’ai choisi de créer une petite application web sur **PythonAnywhere**.
 
-![[IMG-20251206184037540.png]]
+Cette plateforme me fournit directement un nom de domaine public, ce qui me permet d’héberger mes fichiers malveillants et de laisser DOMPDF les télécharger sans difficulté.
+
+![[IMG-20251206210527505.png]]
+
+J’y dépose donc deux fichiers essentiels à l’exploitation :
+- **style.css**, qui charge automatiquement la police distante ;
+- **exploit.php**, une version polyglotte servant à la fois de police TTF valide _et_ de payload PHP.
 
 ```css
 @font-face {
