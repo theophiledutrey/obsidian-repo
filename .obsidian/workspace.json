@@ -4,39 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "1a1ee1d305b597be",
+        "id": "8c433e87b2938261",
         "type": "tabs",
         "children": [
           {
-            "id": "a71db1a82a0fbd90",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CTF/Hack The Box/Write Up/NanoCorp.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "NanoCorp"
-            }
-          },
-          {
-            "id": "a00824d973e8cfe0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Pentest Tools/Link.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Link"
-            }
-          },
-          {
-            "id": "45b6c3760616c5c8",
+            "id": "841efe9287ead98a",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -49,8 +21,7 @@
               "title": "CTF XMCO"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -251,22 +222,26 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "a00824d973e8cfe0",
+  "active": "841efe9287ead98a",
   "lastOpenFiles": [
     "CTF/Hack The Box/Write Up/NanoCorp.md",
+    "Assets/Pasted image 20250901005258.png",
+    "Assets/ECE/Stage/CTF XMCO/IMG-20251206185246929.png",
+    "Assets/ECE/Stage/CTF XMCO/IMG-20251206184116463.png",
+    "Assets/ECE/Stage/CTF XMCO/IMG-20251206140425794.png",
+    "Assets/ECE/Stage/CTF XMCO/IMG-20251206140411778.png",
+    "Assets/ECE/Stage/CTF XMCO/IMG-20251206135000254.png",
+    "Assets/ECE/Stage/CTF XMCO/IMG-20251206140401059.png",
+    "Assets/ECE/Stage/CTF XMCO/IMG-20251206003812552.png",
+    "Assets/ECE/Stage/CTF XMCO/IMG-20251205221937938.png",
+    "Assets/ECE/Stage/CTF XMCO/IMG-20251206210527505.png",
     "ECE/Stage/CTF XMCO.md",
+    "Assets/Linux security_part 1_Grp01_v2.0.pdf",
+    "Assets/2025-47764 - Stage ingénieur.e analyst SOC.pdf",
+    "Assets/2025-47757 - Ingénieur.e Analyste en Cyber Sécurité.pdf",
+    "Pentest Tools/Link.md",
     "ECE/Stage/rapport.tex",
-    "Assets/Pasted image 20251207220733.png",
-    "Assets/Pasted image 20251207220715.png",
-    "Assets/Pasted image 20251207184411.png",
-    "Assets/Pasted image 20251207181341.png",
-    "Assets/Pasted image 20251207181339.png",
-    "Assets/ECE/Stage/CTF XMCO/IMG-20251207180746759.png",
-    "Assets/ECE/Stage/CTF XMCO/IMG-20251207180646884.png",
     "ECE/Stage/CTF OCD.md",
-    "Assets/ECE/Stage/CTF XMCO/IMG-20251207172609597.png",
-    "Assets/ECE/Stage/CTF XMCO/IMG-20251207171419920.png",
-    "Assets/ECE/Stage/CTF XMCO/IMG-20251207170610778.png",
     "Linux/Hyprland .md",
     "Web/JWT.md",
     "conflict-files-obsidian-git.md",
@@ -280,7 +255,6 @@
     "ECE/Stage/Entretien SOC OCD.md",
     "Web/Portswigger/SQLi.md",
     "Web/Portswigger/Portswigger.md",
-    "Pentest Tools/Link.md",
     "CTF/Hack The Box/Write Up/Environment Hack The Box.md",
     "CTF/Hack The Box/Write Up/CodeTwo Hack The Box.md",
     "CTF/Hack The Box/Write Up/Conversor.md",
@@ -295,9 +269,6 @@
     "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab2-starter/llm-sec-lab2/tests/data/sample_results.json",
     "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab2-starter/llm-sec-lab2/snippets/python/10_xss_escape.py",
     "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab2-starter/llm-sec-lab2/snippets/python/09_xss_flask.py",
-    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab2-starter/llm-sec-lab2/snippets/python/08_eval_guard.py",
-    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab2-starter/llm-sec-lab2/snippets/python/07_eval.py",
-    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab2-starter/llm-sec-lab2/snippets/python/06_hash.py",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",
