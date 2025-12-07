@@ -532,3 +532,64 @@ FLAG{http://home-2025-12-02-tdu3-b60612.wannatry.fr/c2w8i3ydokm6de4x92dogxfwnr9s
 
 ## Chall 8
 
+Ce challenge présente un formulaire permettant de générer un CV. Celui-ci contient plusieurs champs textuels ainsi qu’un champ d’upload pour une photo.  
+Ma première intuition a été de tester l’upload d’un fichier `.php`. Voici l’erreur affichée :
+
+![[IMG-20251207172609597.png]]
+On comprend donc qu’une vérification côté serveur est effectuée, soit sur l’extension, soit sur le magic number.  
+Après avoir essayé d’uploader un fichier `.php` contenant un header PNG valide (bon magic number), la même erreur apparaît. Cela confirme que la validation est **uniquement basée sur l’extension du fichier**.
+
+En testant le formulaire **sans sélectionner de fichier**, l’erreur suivante apparaît :
+![[IMG-20251207170543176.png]]
+
+Cette erreur est essentielle : elle révèle comment fonctionne l’upload côté serveur.
+- Le serveur tente systématiquement de supprimer un fichier via `unlink()`.
+- Le chemin utilisé est :  
+    `/usr/share/nginx/html/tmp/<timestamp>.<extension>`
+
+Ce qui implique que lors d’un upload :
+1. Le fichier est tout d’abord **déplacé dans `/tmp/`** sous le nom :  
+    `<timestamp-actuel>.<extension>`
+2. Ensuite, si l’extension n’est pas autorisée, il est **supprimé à la ligne 117**.
+Dans ce cas précis, aucun fichier n’a été uploadé → `move_uploaded_file()` n’a rien créé → `unlink()` échoue → warning affiché.
+Cette information est importante car l’upload d’un fichier `.php` crée réellement un fichier `timestamp.php` dans `/tmp/` avant de potentiellement être supprimé.
+Étant donné que le fichier est uploadé avant vérification de l’extension, j’ai envisagé l’existence d’une petite fenêtre de tir:
+- entre le moment où `/tmp/<timestamp>.php` est créé,
+- et le moment où il est supprimé par `unlink()`.
+
+L’idée aurait été :
+1. Processus A : upload continu d’un fichier `shell.php`
+2. Processus B : spam des GET sur `/tmp/<timestamp>.php` pour tenter de l’exécuter **avant** sa suppression
+
+Cette approche repose sur une race condition très serrée (probablement de l’ordre de la milliseconde), et nécessite un envoi simultané de POST/GET.
+J’ai donc développé un script Python pour tester cette technique (POST dans un thread, GET dans un autre).  
+Malheureusement, cette approche ne s’est avérée **pas exploitable** ici.
+Je poursuis donc l’analyse en examinant d’autres erreurs renvoyées par le serveur, susceptibles de fournir des indices supplémentaires sur le fonctionnement du backend. En particulier, je remarque une erreur différente lorsque je modifie volontairement le champ _birthdate_ avec une valeur qui n’est pas au bon format.  
+J’obtiens alors l’erreur suivante :
+
+![[IMG-20251207170610778.png]]
+
+On observe ici que le code backend s'interrompt brutalement à partir de la ligne 95.  
+Donc j'emet l'hypothèse suivante. Si l’upload du fichier est effectué **avant** cette ligne 95, alors celui-ci ne sera jamais supprimé puisque la suppression intervient à la ligne 117, c’est-à-dire **après** la vérification de la date.
+Ainsi en provoquant volontairement une erreur avant la ligne 117, on peut potentiellement empêcher la suppression d’un fichier uploadé en extension interdite (ex : `.php`).
+Pour exploiter cette situation, j’envoie un formulaire contenant :
+- un champ `birthdate` volontairement invalide (par exemple `2020a`) afin de provoquer l’exception à la ligne 95,
+- un fichier `shell.php` comme photo, contenant un simple webshell PHP :
+![[Pasted image 20251207181341.png]]
+
+Échantillon de la requête POST :
+![[IMG-20251207180646884.png]]
+
+En parallèle, je lance un petit script Python pour obtenir le timestamp du serveur (identique au mien à 1 seconde près), ce qui me permet de deviner le nom du fichier créé :
+![[IMG-20251207180746759.png]]
+J’envoie donc la requête POST contenant `shell.php` et la date invalide.
+Le fichier PHP est désormais accessible, puisqu’il n’a pas été supprimé à cause du crash provoqué dans le code backend.
+J’exécute alors la commande via le webshell:
+![[IMG-20251207171419920.png]]
+
+```
+FLAG{http://home-2025-12-02-tdu3-b60612.wannatry.fr/gsa8aa3llsmzickzspkk1st1h5pjotim-end.html}
+```
+
+
+![[IMG-20251207170241191.png]]
