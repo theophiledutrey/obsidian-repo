@@ -544,14 +544,12 @@ En testant le formulaire **sans sélectionner de fichier**, l’erreur suivante 
 
 Cette erreur est essentielle : elle révèle comment fonctionne l’upload côté serveur.
 - Le serveur tente systématiquement de supprimer un fichier via `unlink()`.
-- Le chemin utilisé est :  
-    `/usr/share/nginx/html/tmp/<timestamp>.<extension>`
+- Le chemin utilisé est `/usr/share/nginx/html/tmp/<timestamp>.<extension>`
 
 Ce qui implique que lors d’un upload :
-1. Le fichier est tout d’abord **déplacé dans `/tmp/`** sous le nom :  
-    `<timestamp-actuel>.<extension>`
-2. Ensuite, si l’extension n’est pas autorisée, il est **supprimé à la ligne 117**.
-Dans ce cas précis, aucun fichier n’a été uploadé → `move_uploaded_file()` n’a rien créé → `unlink()` échoue → warning affiché.
+- Le fichier est tout d’abord **déplacé dans `/tmp/`** sous le nom  `<timestamp-actuel>.<extension>`
+- Ensuite, si l’extension n’est pas autorisée, il est **supprimé à la ligne 117**.
+Dans ce cas précis, aucun fichier n’a été uploadé → auncun fichier n'est créé côté server → `unlink()` échoue → warning affiché.
 Cette information est importante car l’upload d’un fichier `.php` crée réellement un fichier `timestamp.php` dans `/tmp/` avant de potentiellement être supprimé.
 Étant donné que le fichier est uploadé avant vérification de l’extension, j’ai envisagé l’existence d’une petite fenêtre de tir:
 - entre le moment où `/tmp/<timestamp>.php` est créé,
@@ -581,7 +579,8 @@ Pour exploiter cette situation, j’envoie un formulaire contenant :
 ![[IMG-20251207180646884.png]]
 
 En parallèle, je lance un petit script Python pour obtenir le timestamp du serveur (identique au mien à 1 seconde près), ce qui me permet de deviner le nom du fichier créé :
-![[IMG-20251207180746759.png]]
+![[Pasted image 20251207184411.png]]
+
 J’envoie donc la requête POST contenant `shell.php` et la date invalide.
 Le fichier PHP est désormais accessible, puisqu’il n’a pas été supprimé à cause du crash provoqué dans le code backend.
 J’exécute alors la commande via le webshell:
@@ -590,6 +589,7 @@ J’exécute alors la commande via le webshell:
 ```
 FLAG{http://home-2025-12-02-tdu3-b60612.wannatry.fr/gsa8aa3llsmzickzspkk1st1h5pjotim-end.html}
 ```
+
 
 
 ![[IMG-20251207170241191.png]]
