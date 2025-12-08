@@ -73,8 +73,7 @@
     "//Web",
     "//Web/Web/Portswigger",
     "//Assets/Assets/ECE",
-    "//Assets/Assets/ECE/Assets/ECE/Stage",
-    "//CTF"
+    "//Assets/Assets/ECE/Assets/ECE/Stage"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
