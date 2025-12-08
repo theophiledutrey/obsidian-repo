@@ -75,7 +75,7 @@
             }
           },
           {
-            "id": "8a9901c0e2e703f3",
+            "id": "eb9ca35b5d0bb72b",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -222,8 +222,9 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "841efe9287ead98a",
+  "active": "e2aa3986dab62d71",
   "lastOpenFiles": [
+    "ECE/Stage/CTF XMCO.md",
     "CTF/Hack The Box/Write Up/NanoCorp.md",
     "Assets/Pasted image 20250901005258.png",
     "Assets/ECE/Stage/CTF XMCO/IMG-20251206185246929.png",
@@ -235,7 +236,6 @@
     "Assets/ECE/Stage/CTF XMCO/IMG-20251206003812552.png",
     "Assets/ECE/Stage/CTF XMCO/IMG-20251205221937938.png",
     "Assets/ECE/Stage/CTF XMCO/IMG-20251206210527505.png",
-    "ECE/Stage/CTF XMCO.md",
     "Assets/Linux security_part 1_Grp01_v2.0.pdf",
     "Assets/2025-47764 - Stage ingénieur.e analyst SOC.pdf",
     "Assets/2025-47757 - Ingénieur.e Analyste en Cyber Sécurité.pdf",

@@ -585,7 +585,6 @@ J’envoie donc la requête POST contenant `shell.php` et la date invalide.
 Le fichier PHP est désormais accessible, puisqu’il n’a pas été supprimé à cause du crash provoqué dans le code backend.
 J’exécute alors la commande via le webshell:
 ![[IMG-20251207171419920.png]]
-
 ```
 FLAG{http://home-2025-12-02-tdu3-b60612.wannatry.fr/gsa8aa3llsmzickzspkk1st1h5pjotim-end.html}
 ```
