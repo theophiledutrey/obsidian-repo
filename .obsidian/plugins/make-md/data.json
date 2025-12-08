@@ -72,11 +72,9 @@
     "//Linux",
     "//Web",
     "//Web/Web/Portswigger",
-    "//ECE/ECE/Stage",
-    "//ECE/ECE/SOC",
     "//Assets/Assets/ECE",
     "//Assets/Assets/ECE/Assets/ECE/Stage",
-    "//Assets"
+    "//CTF"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
