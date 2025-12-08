@@ -573,13 +573,13 @@ Ainsi en provoquant volontairement une erreur avant la ligne 117, on peut potent
 Pour exploiter cette situation, j’envoie un formulaire contenant :
 - un champ `birthdate` volontairement invalide (par exemple `2020a`) afin de provoquer l’exception à la ligne 95,
 - un fichier `shell.php` comme photo, contenant un simple webshell PHP :
-![[Pasted image 20251207181341.png]]
+![[IMG-20251208023728790.png]]
 
 Échantillon de la requête POST :
 ![[IMG-20251207180646884.png]]
 
 En parallèle, je lance un petit script Python pour obtenir le timestamp du serveur (identique au mien à 1 seconde près), ce qui me permet de deviner le nom du fichier créé :
-![[Pasted image 20251207184411.png]]
+![[IMG-20251208023728848.png]]
 
 J’envoie donc la requête POST contenant `shell.php` et la date invalide.
 Le fichier PHP est désormais accessible, puisqu’il n’a pas été supprimé à cause du crash provoqué dans le code backend.
