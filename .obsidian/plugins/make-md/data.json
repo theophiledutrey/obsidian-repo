@@ -76,7 +76,7 @@
     "//ECE/ECE/SOC",
     "//Assets/Assets/ECE",
     "//Assets/Assets/ECE/Assets/ECE/Stage",
-    "//Assets/Assets/ECE/Assets/ECE/Stage/Assets/ECE/Stage/CTF XMCO"
+    "//Assets"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
