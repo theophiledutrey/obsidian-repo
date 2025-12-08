@@ -12,7 +12,7 @@ Injection de la payload :
 Cela signifie que la chaîne `{{7*7}}` a été **interprétée** par le backend et non affichée telle quelle -> SSTI
 Le nom du challenge est **“Serpent”**, ce qui suggère fortement un backend en **Python** qui utilise certainement un framework Flask.
 
-Je recherche donc une payload qui me permet d'avoir une RCE pour una app Flask vulnérable au SSTI et je trouve ça:
+Je recherche donc une payload qui me permet d'avoir une RCE pour une app Flask vulnérable au SSTI et je trouve ça:
 
 ![[IMG-20251202161148281.png]]
 

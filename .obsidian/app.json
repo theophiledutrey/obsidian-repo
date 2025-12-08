@@ -4,8 +4,8 @@
   "attachmentFolderPath": "Assets",
   "autoConvertHtml": true,
   "pdfExportSettings": {
-    "includeName": false,
-    "pageSize": "A3",
+    "includeName": true,
+    "pageSize": "A4",
     "landscape": true,
     "margin": "0",
     "downscalePercent": 100
