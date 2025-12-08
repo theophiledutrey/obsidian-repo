@@ -1,18 +1,270 @@
-\documentclass{article}
+\documentclass[12pt,a4paper]{article}
 
-\usepackage[utf8]{inputenc}
+\usepackage[margin=2.5cm]{geometry}
 \usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{lmodern}
+\usepackage{titlesec}
+\usepackage{tcolorbox}
+\usepackage{float}
+\usepackage{url}
+\usepackage{breakurl}
+\usepackage[hyphens]{url}
 \usepackage{hyperref}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{seqsplit}
+\usepackage{listings}
+\usepackage{xcolor}
+\tcbuselibrary{skins,breakable}
 
-\title{Mon Rapport CTF}
-\author{Stéphane Dutré}
-\date{\today}
+
+\tcbuselibrary{skins,breakable}
+\newtcolorbox{darkcode}{
+  breakable,
+  listing only,
+  colback=black!60,
+  coltext=white,
+  colframe=black!80,
+  boxrule=0pt,
+  arc=2mm,
+  left=4mm,
+  right=4mm,
+  top=2mm,
+  bottom=2mm
+}
+
+\newtcolorbox{flagbox}{
+  breakable,
+  enhanced,
+  colback={blue!20},
+  colframe={blue!40},
+  coltext=black,
+  boxrule=0pt,
+  arc=3mm,
+  left=4mm,
+  right=4mm,
+  top=2mm,
+  bottom=2mm,
+  fontupper=\ttfamily,
+  before skip=10pt,
+  after skip=10pt
+}
+
+\lstdefinestyle{code}{
+    backgroundcolor=\color{gray!10},
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    columns=fullflexible,
+    tabsize=2,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    showstringspaces=false
+}
+
+
+\setlength{\parindent}{0pt}  
+\setlength{\parskip}{0.8em}   
+\titleformat{\section}
+  {\normalfont\Large\bfseries}
+  {\thesection}
+  {1em}
+  {\underline}
+
+
+\newcommand{\HRule}{\rule{\linewidth}{0.6pt}}
 
 \begin{document}
+\thispagestyle{empty}
 
-\maketitle
+\begin{center}
+    {\Large \textbf{XMCO – Rapport Technique}}\\[0.3cm]
+\end{center}
 
-\section{Introduction}
-Ceci est un test de compilation LaTeX.
+\vspace{2.5cm}
 
+\begin{center}
+    \HRule\\[0.8cm]
+
+    {\Huge \bfseries Rapport Technique}\\[0.4cm]
+    {\Large \bfseries CTF XMCO}
+
+    \HRule
+\end{center}
+
+\vspace{3cm}
+
+\begin{flushleft}
+\begin{spacing}{1.6}
+\large
+\textbf{Rédigé par :}\\
+Théophile \textsc{Dutrey}\\[1cm]
+
+\textbf{Entreprise :}\\
+XMCO\\[1cm]
+\end{spacing}
+\end{flushleft}
+
+\vfill
+
+\clearpage
+
+
+\section*{Challenge 1}
+L'application affiche une bannière "Hello guest" et un champ texte permettant d'envoyer un paramètre GET \verb|username|.\\
+Injection de la payload:
+\begin{darkcode}
+\{\{7*7\}\}
+\end{darkcode}
+\begin{figure}[h]
+    \centering
+    \fbox{\includegraphics[width=\textwidth]{CTF_XMCO/IMG-20251202152530398.png}}
+\end{figure}
+Cela signifie que la chaîne \{\{7*7\}\} a été interprétée par le backend et non affichée telle quelle, révélant ainsi une vulnérabilité de type SSTI.\\
+Le nom du challenge est Serpent, ce qui suggère fortement un backend en Python utilisant le framework Flask.
+Je recherche donc une payload permettant d'obtenir une RCE sur un Flask vulnérable et je tombe sur la ressource suivante :
+\begin{figure}[h]
+    \centering
+    \fbox{\includegraphics[width=\textwidth]{CTF_XMCO/IMG-20251202161148281.png}}
+\end{figure}
+\newpage
+\subsection*{Test de la payload}
+Je test ensuite cette payload directement dans l'application :
+\begin{figure}[h]
+    \centering
+    \fbox{\includegraphics[width=\textwidth]{CTF_XMCO/IMG-20251202161043032.png}}
+\end{figure} \\
+J'affiche les fichiers présent dans le repertoire de l'app:
+\begin{figure}[h]
+    \centering
+    \fbox{\includegraphics[width=\textwidth]{CTF_XMCO/IMG-20251202161921671.png}}
+\end{figure} \\
+Je trouve le flag et l'affiche:
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[width=\textwidth]{CTF_XMCO/IMG-20251202161952789.png}}
+\end{figure}
+\begin{flagbox}
+FLAG\{\href{http://home-2025-12-02-tdu3-b60612.wannatry.fr/j418w8w9cep09bc559jm427jare4aiz9-end.html}{lien-vers-challenge2}\}
+\end{flagbox}
+\newpage
+\section*{Challenge 2}
+À l’ouverture du challenge, on découvre une interface très simple : une unique zone de texte permettant d’envoyer un message au serveur.\\
+\begin{figure}[h]
+    \centering
+    \fbox{\includegraphics[width=\textwidth]{CTF_XMCO/IMG-20251202194419296.png}}
+\end{figure} \\
+Pour comprendre ce que l’application envoie réellement au serveur, j’intercepte la requête avec Burp Suite.\\
+On observe immédiatement que le formulaire n’envoie pas simplement la chaîne saisie par l’utilisateur, en effet le champ message est intégré dans un document XML complet, puis encodé en Base64 avant d’être transmis:\\
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[width=\textwidth,trim=0 130 0 0,clip]{CTF_XMCO/IMG-20251202194519522.png}}
+\end{figure}
+En explorant le code JavaScript du site (`main.js`), on trouve la logique complète utilisée pour construire la requête POST.\\  
+Ce code est important pour comprendre comment l’application traite l’entrée utilisateur.
+\begin{figure}[h]
+    \centering
+    \fbox{\includegraphics[width=\textwidth]{CTF_XMCO/IMG-20251202194539440.png}}
+\end{figure} \\
+En analysant le code JavaScript, je comprends que l’application envoie en réalité un document XML complet via un POST.\\  
+Ce XML est généré côté client, inséré dans la variable xml\_payload, puis encodé en Base64 grâce à la fonction btoa() avant d’être transmis au serveur.\\\\
+Comme le serveur décode ce Base64 et exécute ensuite un simplexml\_load\_string(), il parse donc un XML entièrement contrôlable par l’utilisateur.\\  
+À ce stade, une idée me vient immédiatement : cela ressemble fortement à une vulnérabilité de type XXE (XML eXternal Entity).\\\\
+Pour tester l’hypothèse, je construis un XML contenant :
+\begin{enumerate}
+    \item une déclaration \texttt{DOCTYPE},
+    \item une entité externe \texttt{xxe} pointant vers \texttt{/flag},
+    \item et l’appel de cette entité dans la balise \texttt{<message>}.
+\end{enumerate}
+Voici la payload:
+\begin{lstlisting}[style=code]
+<?xml version="1.0"?>
+<!DOCTYPE document [
+  <!ENTITY xxe SYSTEM "file:///flag">
+]>
+<document>
+  <message>&xxe;</message>
+</document>
+\end{lstlisting}
+\begin{itemize}
+    \item \texttt{file:///flag}\\
+        indique au parser XML de charger le contenu du fichier \texttt{/flag} présent sur le serveur (indice dans le code source \texttt{main.js}).
+
+    \item \texttt{<!ENTITY xxe SYSTEM "...">}\\
+        définit une entité externe, donc une ressource dont le contenu sera récupéré lors du parsing XML.
+
+    \item \texttt{\&xxe;}\\
+        est remplacée \textbf{dynamiquement}, au moment du parsing, par le contenu du fichier chargé via \texttt{file:///}.
+\end{itemize}
+J'encode ensuite ma payload en base 64 en pensant à encoder les caractères spéciaux aussi pour m’assurer qu’aucun caractère réservé (+, =, /, etc.) ne sera modifié lors de l’envoi en POST.\\
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[width=\textwidth]{CTF_XMCO/IMG-20251202201955467.png}}
+\end{figure}
+Cela me donne la chaîne que je devrai injecter dans le paramètre `xml=` lors de l’attaque. Ainsi, le serveur recevra un flux identique à celui qu’envoie le front-end, mais contenant ma propre structure XML exploitant la vulnérabilité XXE:\\
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[width=\textwidth,trim=0 100 0 0,clip]{CTF_XMCO/IMG-20251202202014666.png}}
+\end{figure} 
+Cela me permet d'obtenir le flag du deuxième challenge:
+\begin{flagbox}
+FLAG\{\href{http://home-2025-12-02-tdu3-b60612.wannatry.fr/abhnjlma6g0p1jeaw0yg3ekytvv4lb3o-end.html}{lien-vers-challenge3}\}
+\end{flagbox}
+\newpage
+\section*{Challenge 3}
+Dans ce challenge, on dispose d’une fonctionnalité permettant de mettre à jour sa photo de profil en uploadant un fichier.\\  
+J’ai donc commencé par tester un fichier arbitraire, avec différentes extensions, pour observer le comportement du serveur.\\\\
+Très rapidement, je constate que peu importe l’extension du fichier que j’essaie d’ajouter (.txt, .php, .jpg, etc.), l’application renvoie une erreur indiquant que le type de fichier est incorrect.\\  
+Cela suggère fortement que le serveur ne se base pas uniquement sur l’extension, mais réalise un contrôle plus strict : une vérification du magic number du fichier.\\\\
+Les magic numbers correspondent aux premiers octets d’un fichier, utilisés pour identifier son format réel.\\  
+Par exemple, pour le format PNG :
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[width=\textwidth]{CTF_XMCO/IMG-20251202232830158.png}}
+\end{figure}
+Ainsi, même si je renomme un fichier en .png, si son contenu ne commence pas par 89 50 4E 47, l’application le rejettera.\\\\
+Ce comportement indique donc que pour bypasser la vérification et uploader un fichier malveillant, je dois fabriquer un fichier contenant un magic number valide, puis y insérer du code arbitraire derrière.\\\\
+Pour contourner la vérification du type de fichier réalisée côté serveur, j’ai créé un fichier dont les premiers octets correspondent à la signature d’un vrai fichier PNG:\\
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[width=\textwidth]{CTF_XMCO/IMG-20251202233926481.png}}
+\end{figure}
+
+\begin{itemize}
+    \item 89504E47 : signature hexadécimale du format PNG
+    \item xxd -r -p : convertit l’hex en données binaires
+    \item poc.php : fichier final (extension PHP pour la suite du bypass)
+\end{itemize}
+
+Une fois mon fichier forgé avec un magic number PNG valide, je procède à l’upload.\\  
+Cette fois-ci, le fichier passe la vérification du serveur et l’application affiche un message confirmant que la photo de profil a été mise à jour.\\\\
+J’ouvre alors Burp Suite pour observer ce qui se passe après l’envoi du formulaire.\\  
+En interceptant la requête et le trafic suivant, je remarque immédiatement qu’une requête GET est effectuée automatiquement vers l’URL du fichier uploadé:
+\begin{darkcode}
+/uploads/profile-picture.php
+\end{darkcode}
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[width=\textwidth]{CTF_XMCO/IMG-20251202234205659.png}}
+\end{figure}
+Lorsque j’accède directement au fichier que j’ai uploadé, je constate que le navigateur affiche bien le début du fichier, incluant le magic number PNG:\\
+\begin{figure}[H]
+    \left
+    \fbox{\includegraphics[width=0.2\textwidth]{CTF_XMCO/IMG-20251202234823095.png}}
+\end{figure}
+Juste après cette signature, tout le contenu est interprété comme du PHP par le serveur.\\
+Je décide donc d’y injecter un webshell minimaliste à la suite du magic number, afin d’exécuter des commandes arbitraires.
+\begin{figure}[H]
+    \left
+    \fbox{\includegraphics[width=0.6\textwidth]{CTF_XMCO/IMG-20251202234844788.png}}
+\end{figure}
+Ce fichier est toujours accepté comme une image par le mécanisme de vérification grâce au magic number, mais le serveur continue de l’exécuter comme un script PHP, car son extension reste .php.\\
+Une fois uploadé, on obtient le flag dans /uploads/profile-picture.php:
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[width=\textwidth]{CTF_XMCO/IMG-20251202234944708.png}}
+\end{figure}
+\begin{flagbox}
+FLAG\{\href{http://home-2025-12-02-tdu3-b60612.wannatry.fr/rigfw8y3wyo257buunoro1w1kb3g0968-end.html}{lien-vers-challenge4}\}
+\end{flagbox}
 \end{document}
