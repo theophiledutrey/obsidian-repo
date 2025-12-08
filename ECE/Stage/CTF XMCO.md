@@ -551,7 +551,7 @@ Ce qui implique que lors d’un upload :
 - Ensuite, si l’extension n’est pas autorisée, il est **supprimé à la ligne 117**.
 Dans ce cas précis, aucun fichier n’a été uploadé → auncun fichier n'est créé côté server → `unlink()` échoue → warning affiché.
 Cette information est importante car l’upload d’un fichier `.php` crée réellement un fichier `timestamp.php` dans `/tmp/` avant de potentiellement être supprimé.
-Étant donné que le fichier est uploadé avant vérification de l’extension, j’ai envisagé l’existence d’une petite fenêtre de tir:
+Étant donné que le fichier est uploadé avant vérification de l’extension, j’ai envisagé l’existence d’une fenêtre de tir:
 - entre le moment où `/tmp/<timestamp>.php` est créé,
 - et le moment où il est supprimé par `unlink()`.
 
