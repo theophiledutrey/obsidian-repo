@@ -1,4 +1,4 @@
-![[Pasted image 20251208190300.png]]
+![[IMG-20251209120247761.png]]
 ![[Pasted image 20251208190315.png]]
 
 ![[Pasted image 20251208190330.png]]
@@ -52,4 +52,9 @@ Le recours systématique à `===` pour les vérifications de tokens, hachages, i
 ![[Pasted image 20251209003253.png]]
 
 ![[Pasted image 20251209004847.png]]
+
+![[Pasted image 20251209120245.png]]
+
+
+![[Pasted image 20251209120607.png]]
 
