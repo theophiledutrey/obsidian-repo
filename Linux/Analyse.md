@@ -1,4 +1,4 @@
-##  Find SUID/SGID files
+ ##  Find SUID/SGID files
 
 ```bash
 find / -perm -4000 2>/dev/null

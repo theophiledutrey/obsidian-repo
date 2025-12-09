@@ -162,7 +162,7 @@ GET /api/posts/<id-post>?<timestamp> HTTP/2
 ```
 Ici, `<id-post>` représente l’identifiant numérique de l’article.
 La réponse associe bien l’ID à un contenu retourner sous format JSON :
-![[Pasted image 20251204234022.png]]
+![[IMG-20251209105352308.png]]
 Cela indique  que l’API récupère l’article correspondant depuis la base de données en fonction de l’ID fourni dans l’URL.
 Pour tester la robustesse du paramètre, on remplace l’ID numérique par une chaîne arbitraire :
 
@@ -170,7 +170,7 @@ Pour tester la robustesse du paramètre, on remplace l’ID numérique par une c
 GET /api/posts/test?1764887814058 HTTP/2
 ```
 
-![[Pasted image 20251204174836.png]]
+![[IMG-20251209105351162.png]]
 
 Dans Burp Suite, on observe une erreur renvoyée par le serveur.  Elle **provient directement du moteur MySQL**, et révèle plusieurs éléments importants :
 - l’application insère la valeur située après `/posts/` **directement dans une requête SQL**,
@@ -214,7 +214,7 @@ Pour cela, j’envoie la payload suivante :
 
 J'obtiens cette erreur remonté par le server:
 
-![[Pasted image 20251204235633.png]]
+![[IMG-20251209105352876.png]]
 
 Cela confirme que la table `users` n’existe pas dans la base de données.  
 Je poursuis donc mes tests en ciblant une table potentiellement nommée `user`.  
@@ -267,15 +267,15 @@ print("password:", result)
 ```
 
 Après execution du script, j'obtiens ce résultat:
-![[Pasted image 20251205000419.png]]
+![[IMG-20251209105353463.png]]
 
 Le mot de passe récupéré est un hash MD5. Je le met dans crackstation et récupère le mot de passe admin associé:
 
-![[Pasted image 20251204180730.png]]
+![[IMG-20251209105351432.png]]
 
 Enfin je me connect entant qu'admin au site, et j'accède au flag:
 
-![[Pasted image 20251204180802.png]]
+![[IMG-20251209105351666.png]]
 
 ```
 FLAG{http://home-2025-12-02-tdu3-b60612.wannatry.fr/mwex0emeea7ycbs4pwjim2k1jrof6utu-end.html}
@@ -291,7 +291,7 @@ Cependant, contrairement à l’exercice précédent, **le serveur ne renvoie ja
 Ainsi, même en tentant d’inclure une ressource locale comme `file:///flag`, aucune donnée utile n’est affichée côté client.
 Cela signifie que nous sommes face à une **XXE Blind**, c’est-à-dire que l’on peut forcer le serveur à lire des fichiers, mais **on ne peut pas voir directement le contenu dans la réponse HTTP**.
 Je cherche donc des exploits associé à cette vulnérabilité et je trouve cette exploit sur le site de PortSwigger. 
-![[IMG-20251205031810382.png]]
+![[IMG-20251209105339899.png]]
 
 Pour exploiter cette vulnérabilité, on utilise une technique de **Blind XXE Out-Of-Band**, car le serveur ne renvoie jamais le contenu du fichier demandé.  
 Il accepte cependant de charger des **DTD externes**, ce qui permet d’exécuter du XML plus complexe.
@@ -310,12 +310,12 @@ Avant d’exploiter la vulnérabilité, il fallait d’abord vérifier que le se
 ```
 
 On peut observer sur Interactsh qu'une connexion a bien été établie depuis le server, donc l'exploit expliqué avant peut être mise en place.
-![[IMG-20251206003812552.png]]
+![[IMG-20251209105341770.png]]
 
 Je crée ensuite mon fichier DTD malveillant, contenant la véritable payload XXE, puis je décide de l’héberger sur le site _paste.c-net.org_.  
 Ce service permet d’héberger un fichier texte publiquement, accessible via une URL directe, sans restrictions particulières et sans nécessiter de configuration serveur. 
 
-![[IMG-20251205033822725.png]]
+![[IMG-20251209105340349.png]]
 
 Je crée ensuite la payload XML qui va charger automatiquement la DTD hébergée à l’URL ci-dessus:
 ```xml
@@ -327,7 +327,7 @@ Je crée ensuite la payload XML qui va charger automatiquement la DTD hébergée
 
 Une fois chargée, c’est **la DTD elle-même** qui effectue toute l’exfiltration du fichier `/flag`.
 J'encode ma payload en base64 et l'envoie dans le champ XML:
-![[IMG-20251205034011844.png]]
+![[IMG-20251209105340513.png]]
 
 On observe que une fois la DTD chargée, le serveur tente de construire l’URL d’exfiltration contenant directement le contenu du fichier `/flag`. Le problème est que le flag inclut des caractères spéciaux (`{`, `}`, `/`, etc.) qui rendent l’URL générée invalide aux yeux du parseur XML de PHP. Lorsqu’il essaie d’interpréter cette URI malformée, `simplexml_load_string()` déclenche une erreur et affiche l’URL fautive dans le message d’erreur. Comme cette URL contient le flag en clair dans ses paramètres, celui-ci apparaît directement dans la réponse HTTP.  
 Dans un scénario réel, ou pour obtenir une exfiltration propre dans Interactsh, il aurait fallu encoder le contenu récupéré (par exemple en Base64 via `php://filter/convert.base64-encode/resource=/flag`) afin d’éviter que les caractères spéciaux ne cassent la construction de l’URL. Cela permettrait de transmettre le flag silencieusement, sans générer d’erreur côté serveur.  
@@ -356,25 +356,25 @@ Lors de tests initiaux, l’envoi d’un couple de valeurs arbitraires déclench
 ```
 
 Afin d’évaluer la robustesse du paramètre _username_, J'ai testé la requête suivante :
-![[IMG-20251205221651925.png]]
+![[IMG-20251209105340870.png]]
 
 Le serveur renvoie cette fois une authentification **réussie**, indiquant clairement que l’expression transmise dans `username` a interrompu la requête SQL -> SQLi. 
 Aucune erreur n’est remontée lorsque la requête injectée casse la structure SQL côté serveur. L’application ne fournit qu’une réponse binaire (“error”: true/false), ce qui indique clairement qu’il s’agit d’une **injection SQL en mode blind booléen**, où la seule information exploitable pour orienter les tests est l’état de réussite ou d’échec de l’authentification.
 
 Une fois connecté sur la dashboard j'aperçois ce message:
-![[IMG-20251205231633285.png]]
+![[IMG-20251209105341307.png]]
 Je comprends alors que le but de ce challenge va être de récupérer le contenu des articles pour trouver le flag en utilisant la SQLi blind.
 
 Dans un premier temps, l’objectif est de déterminer dans quelle table de la base de données sont stockés les différents articles.  
 Pour cela, une requête SQL injectée de type **UNION SELECT** est utilisée afin de tester l’existence d’une table suspectée.
 La payload suivante est envoyée dans le champ _username_ :
-![[IMG-20251205221937938.png]]
+![[IMG-20251209105341084.png]]
 
 La réponse obtenue confirme que la table **`post`** existe bien dans la base de données : en effet, la requête injectée ne génère aucune erreur et l’API retourne un message _« Logged in »_.
 
 L’objectif à présent de déterminer **le nom  de deux colonnes dans la tables post qui pourraient nous servir pour la SQLi blind**. Je teste donc plusieurs couples possible et trouve deux champ évident pour une table de ce genre: {id, content}
 
-![[IMG-20251205221625977.png]]
+![[IMG-20251209105340673.png]]
 Le serveur renvoyant une réponse **“Logged in”** lorsque j’utilise les colonnes `id` et `content` dans l’injection SQL, je peux désormais construire une payload permettant d’extraire le contenu de chaque article de manière ciblée.
 Pour effectuer cette extraction, j’utilise une requête SQL booléenne basée sur la fonction `substr()` afin de tester le contenu **caractère par caractère** :
 
@@ -422,7 +422,7 @@ while True:
 
 J’ai ensuite exécuté mon script sur chaque article en modifiant simplement l’ID ciblé.  
 Les premiers articles ne contenaient rien d’utile, mais lors de l’extraction du contenu de **l’article 5**, le script a révélé le message :
-![[IMG-20251205232138373.png]]
+![[IMG-20251209105341547.png]]
 En laissant le script tourner, j’ai obtenu l’intégralité du flag:
 ```
 flag{http://home-2025-12-02-tdu3-b60612.wannatry.fr/3nwhe9e1bdq7lc7uqueo4kmcasizwvuw-end.html}   
@@ -436,7 +436,7 @@ Avant de tester des attaques côté serveur, il est pertinent d’inspecter le *
 En consultant le JavaScript embarqué dans la page, on tombe sur une fonction inhabituelle : **`getJob()`**.
 La fonction semble volontairement **obfusquée**.
 En l’exécutant localement via Node.js :
-![[IMG-20251206135000254.png]]
+![[IMG-20251209105342453.png]]
 On obtient:
 ```
 https://www.xmco.fr/rejoindre-xmco/
@@ -445,7 +445,7 @@ Il s’agit  d’un **easter-egg** laissé par le développeur du chalenge :)
 
 En examinant le code JavaScript présent sur la page principale, on observe une autre fonction entièrement commentée :
 
-![[IMG-20251206140411778.png]]
+![[IMG-20251209105343821.png]]
 
 Plusieurs éléments importants apparaissent ici.
 La fonction réalise une requête vers :
@@ -455,12 +455,12 @@ generate_pdf.php?remote
 
 Il s’agit très probablement d’un mécanisme interne utilisé par les développeurs. De plus, le commentaire indique clairement que cette fonction n'aurait pas dû être présente dans l’environnement de production. Cela suggère que la requête POST pour créer un PDF peut avoir un autre type de sortie lorsqu’elle est executé avec le paramètre `remote`.
 J'intercepte donc avec burpsuite la requête POST et ajoute le paramètre remote:
-![[IMG-20251206140425794.png]]
+![[IMG-20251209105344176.png]]
 On observe une différence dans la réponse. En effet, un nouveau Header est présent: 
-![[IMG-20251206140436308.png]]
+![[IMG-20251209105346076.png]]
 Cela indique que DOMPDF est configuré pour autoriser le chargement de ressources externes (polices, CSS…).  
 On remarque également la version du moteur PDF :
-![[IMG-20251206140401059.png]]
+![[IMG-20251209105342814.png]]
 Cette version est importante : DOMPDF 1.2.0 est affecté par une vulnérabilité critique permettant une **Remote Code Execution** via le mécanisme d’import de polices distantes (CVE-2022-28368).
 DOMPDF peut télécharger une police indiquée dans un fichier CSS, puis la met en cache dans `/lib/fonts/<fontname>_normal_<hash>.php`.
 Le fichier est ensuite interprété par PHP si son extension est `.php`.  Ainsi, en fournissant une fausse police contenant du code PHP valide, il est possible de créer un fichier malveillant dans ce répertoire et de l’exécuter directement depuis le serveur.
@@ -472,7 +472,7 @@ Pour mener à bien cet exploit, il faut exposer deux fichiers accessibles depuis
 
 Cette plateforme me fournit directement un nom de domaine public, ce qui me permet d’héberger mes fichiers malveillants et de laisser DOMPDF les télécharger sans difficulté.
 
-![[IMG-20251206210527505.png]]
+![[IMG-20251209105347734.png]]
 
 J’y dépose donc deux fichiers essentiels à l’exploitation :
 - **style.css**, qui charge automatiquement la police distante ;
@@ -505,26 +505,26 @@ body {
 ```
 
 A présent je génère le PDF avec le paramètre `remote`:
-![[IMG-20251206184116463.png]]
+![[IMG-20251209105346284.png]]
 Dans le champ _commentaires_, j’injecte une balise `<style>` qui force DOMPDF à charger mon fichier `style.css`.
 Une fois la génération du PDF déclenchée avec le paramètre `remote`, DOMPDF télécharge automatiquement ces deux fichiers depuis mon serveur. Le polyglotte est alors stocké dans la bibliothèque interne des police mais avec l’extension `.php`.  
 On peut également confirmer dans les logs de mon serveur que la machine du challenge est bien venue télécharger `style.css`, puis le fichier `exploit.php`:
-![[IMG-20251206225026943.png]]
+![[IMG-20251209105347945.png]]
 
 À partir de là, l'exploit est en place, il ne reste plus qu’à retrouver le nom sous lequel DOMPDF a enregistré notre “police” et exécuter du code via `?cmd=`.
 Pour cela, la réponse renvoyée par BurpSuite est très utile. On y voit clairement comment le fichier a été enregistré dans le dossier des polices :
-![[IMG-20251206225913305.png]]
+![[IMG-20251209105348400.png]]
 DOMPDF génère toujours ce type de nom en suivant le schéma :
 ```
 <fontname>_normal_<md5 du contenu>
 ```
 
 Pour accéder à notre fichier une fois qu’il a été enregistré par le serveur, il faut déterminer dans quel dossier DOMPDF l’a rangé. En cherchant un peu, on découvre que les polices générées se retrouvent habituellement dans /dompdf/lib/fonts/. Cependant, un indice présent sur la page permet de connaitre le vrai chemin vers le fichier .php.
-![[IMG-20251206185412714.png]]
+![[IMG-20251209105347209.png]]
 On en déduit donc que notre fichier est accessible via : /librairies/dompdf/lib/fonts/exploit_normal_5e368b03ec49ffe9e308dfca4b8caec6.php.
 
 On a ainsi accès à un web shell direct qui nous permet de retrouver le flag sur le server:
-![[IMG-20251206185246929.png]]
+![[IMG-20251209105346861.png]]
 
 ```
 FLAG{http://home-2025-12-02-tdu3-b60612.wannatry.fr/c2w8i3ydokm6de4x92dogxfwnr9sa1lx-end.html}
@@ -535,12 +535,12 @@ FLAG{http://home-2025-12-02-tdu3-b60612.wannatry.fr/c2w8i3ydokm6de4x92dogxfwnr9s
 Ce challenge présente un formulaire permettant de générer un CV. Celui-ci contient plusieurs champs textuels ainsi qu’un champ d’upload pour une photo.  
 Ma première intuition a été de tester l’upload d’un fichier `.php`. Voici l’erreur affichée :
 
-![[IMG-20251207172609597.png]]
+![[IMG-20251209105349740.png]]
 On comprend donc qu’une vérification côté serveur est effectuée, soit sur l’extension, soit sur le magic number.  
 Après avoir essayé d’uploader un fichier `.php` contenant un header PNG valide (bon magic number), la même erreur apparaît. Cela confirme que la validation est **uniquement basée sur l’extension du fichier**.
 
 En testant le formulaire **sans sélectionner de fichier**, l’erreur suivante apparaît :
-![[IMG-20251207170543176.png]]
+![[IMG-20251209105348913.png]]
 
 Cette erreur est essentielle : elle révèle comment fonctionne l’upload côté serveur.
 - Le serveur tente systématiquement de supprimer un fichier via `unlink()`.
@@ -565,7 +565,7 @@ Malheureusement, cette approche ne s’est avérée **pas exploitable** ici.
 Je poursuis donc l’analyse en examinant d’autres erreurs renvoyées par le serveur, susceptibles de fournir des indices supplémentaires sur le fonctionnement du backend. En particulier, je remarque une erreur différente lorsque je modifie volontairement le champ _birthdate_ avec une valeur qui n’est pas au bon format.  
 J’obtiens alors l’erreur suivante :
 
-![[IMG-20251207170610778.png]]
+![[IMG-20251209105349212.png]]
 
 On observe ici que le code backend s'interrompt brutalement à partir de la ligne 95.  
 Donc j'emet l'hypothèse suivante. Si l’upload du fichier est effectué **avant** cette ligne 95, alors celui-ci ne sera jamais supprimé puisque la suppression intervient à la ligne 117, c’est-à-dire **après** la vérification de la date.
@@ -573,22 +573,22 @@ Ainsi en provoquant volontairement une erreur avant la ligne 117, on peut potent
 Pour exploiter cette situation, j’envoie un formulaire contenant :
 - un champ `birthdate` volontairement invalide (par exemple `2020a`) afin de provoquer l’exception à la ligne 95,
 - un fichier `shell.php` comme photo, contenant un simple webshell PHP :
-![[IMG-20251208023728790.png]]
+![[IMG-20251209105350823.png]]
 
 Échantillon de la requête POST :
-![[IMG-20251207180646884.png]]
+![[IMG-20251209105350432.png]]
 
 En parallèle, je lance un petit script Python pour obtenir le timestamp du serveur (identique au mien à 1 seconde près), ce qui me permet de deviner le nom du fichier créé :
-![[IMG-20251208023728848.png]]
+![[IMG-20251209105350957.png]]
 
 J’envoie donc la requête POST contenant `shell.php` et la date invalide.
 Le fichier PHP est désormais accessible, puisqu’il n’a pas été supprimé à cause du crash provoqué dans le code backend.
 J’exécute alors la commande via le webshell:
-![[IMG-20251207171419920.png]]
+![[IMG-20251209105349587.png]]
 ```
 FLAG{http://home-2025-12-02-tdu3-b60612.wannatry.fr/gsa8aa3llsmzickzspkk1st1h5pjotim-end.html}
 ```
 
 
 
-![[IMG-20251207170241191.png]]
+![[IMG-20251209105348729.png]]

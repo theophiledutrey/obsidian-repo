@@ -73,7 +73,8 @@
     "//Web",
     "//Web/Web/Portswigger",
     "//Assets/Assets/ECE",
-    "//Assets/Assets/ECE/Assets/ECE/Stage"
+    "//Assets/Assets/ECE/Assets/ECE/Stage",
+    "//CTF"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
@@ -88,6 +89,8 @@
     "_assets",
     "_blocks"
   ],
+  "newFileLocation": "root",
+  "newFileFolderPath": "",
   "inlineBacklinks": false,
   "inlineContext": true,
   "inlineBacklinksExpanded": false,
