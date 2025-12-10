@@ -1549,3 +1549,151 @@ Le paquet finit par atteindre le serveur cible.
 3. Une fois les échanges terminés, la connexion TCP peut être fermée via un **4-way handshake** (FIN/ACK).
 
 ---
+# **Ports réseau incontournables à connaître**
+
+## 🌐 **Services Web**
+
+|Port|Protocole|Description|
+|---|---|---|
+|**80**|HTTP|Web non chiffré|
+|**443**|HTTPS|Web chiffré TLS|
+|**8080**|HTTP alt|Proxy, Tomcat, API|
+|**8443**|HTTPS alt|Admin panels, APIs|
+
+---
+
+## 🖥️ **Administration / Remote**
+
+| Port     | Protocole | Description               |
+| -------- | --------- | ------------------------- |
+| **22**   | SSH       | Accès distant sécurisé    |
+| **23**   | Telnet    | Accès distant non chiffré |
+| **3389** | RDP       | Remote Desktop Windows    |
+| **5900** | VNC       | Bureau à distance         |
+| 123/UDP  | NTP       | Synchronisation horaire   |
+
+---
+
+## 📁 **Fichiers / Partage**
+
+|Port|Protocole|Description|
+|---|---|---|
+|**21**|FTP|Transfert fichiers|
+|**20**|FTP-data|Mode actif|
+|**22**|SFTP|FTP over SSH|
+|**69**|TFTP|FTP simplifié (UDP)|
+|**137-139**|NetBIOS|Partage Windows legacy|
+|**445**|SMB|Partages Windows moderne|
+|**2049**|NFS|Partage Linux|
+
+---
+
+## 🖧 **DNS / Réseau**
+
+|Port|Protocole|Description|
+|---|---|---|
+|**53**|DNS|Résolution de noms|
+|**67/68**|DHCP|Attribution IP|
+|**161/162**|SNMP|Supervision d’équipements|
+|**179**|BGP|Routing inter-AS|
+
+---
+
+## 💳 **Directory / Auth**
+
+|Port|Protocole|Description|
+|---|---|---|
+|**389**|LDAP|Annuaire non chiffré|
+|**636**|LDAPS|Annuaire chiffré|
+|**88**|Kerberos|Authentification AD|
+|**464**|Kerberos passwd|Changement mot de passe|
+
+---
+
+## 🧪 **Bases de données**
+
+|Port|Protocole|Description|
+|---|---|---|
+|**3306**|MySQL / MariaDB|Base SQL|
+|**5432**|PostgreSQL|Base SQL|
+|**1433**|MSSQL|Base SQL Windows|
+|**27017**|MongoDB|Base NoSQL|
+|**6379**|Redis|Cache / KV store|
+
+---
+
+## 🔧 **Divers importants**
+
+| Port                   | Protocole     | Description       |
+| ---------------------- | ------------- | ----------------- |
+| **1883**               | MQTT          | IoT               |
+| **11211**              | Memcached     | Cache             |
+| **5000 / 8000 / 3000** | Web dev       | APIs / frameworks |
+| **9200**               | Elasticsearch | Search DB         |
+| **5601**               | Kibana        | Interface ELK     |
+
+## 🔐 **Authentification & Kerberos**
+
+|Port|Protocole|Description|
+|---|---|---|
+|**88/TCP-UDP**|Kerberos|Authentification AD (tickets TGT / TGS)|
+|**464/TCP-UDP**|kpasswd|Changement / reset de mot de passe Kerberos|
+
+---
+
+## 📚 **Annuaire LDAP (recherche d’objets AD)**
+
+|Port|Protocole|Description|
+|---|---|---|
+|**389/TCP-UDP**|LDAP|Annuaire non chiffré|
+|**636/TCP**|LDAPS|LDAP chiffré TLS|
+|**3268/TCP**|Global Catalog|Requêtes LDAP sur tout le domaine|
+|**3269/TCP**|Global Catalog SSL|GC via LDAPS|
+
+---
+
+## 🖧 **RPC, DCE/RPC et services AD distribués**
+
+|Port|Protocole|Description|
+|---|---|---|
+|**135/TCP**|RPC Endpoint Mapper|Découverte des services RPC|
+|**49152–65535/TCP**|RPC Dynamic Ports|Ports dynamiques RPC utilisés par AD, DRSUAPI, etc.|
+
+👉 Très utilisé pour la réplication AD (DRS), l’admin distante, la gestion des objets.
+
+---
+
+## 🗂️ **Partage & Découverte Windows**
+
+|Port|Protocole|Description|
+|---|---|---|
+|**137/UDP**|NetBIOS Name Service|Résolution de noms legacy|
+|**138/UDP**|NetBIOS Datagram|Services SMB liés|
+|**139/TCP**|NetBIOS Session|SMB ancien|
+|**445/TCP**|SMB|Partage fichiers, authentification NTLM, opérations AD|
+
+➡️ **445** est _critique_ pour l’authentification NTLM + beaucoup d’attaques (Pass-the-Hash, SMB relay…).
+
+---
+
+## 🕒 **Synchronisation temporelle (indispensable AD)**
+
+|Port|Protocole|Description|
+|---|---|---|
+|**123/UDP**|NTP|Synchronisation des DC — crucial pour Kerberos|
+
+---
+
+## 📢 **Group Policy (GPO)**
+
+|Port|Protocole|Description|
+|---|---|---|
+|**445/TCP**|SMB|Téléchargement des policies (SYSVOL)|
+|**135 + RPC dynamiques**|RPC|Application et traitement des GPO|
+
+# **WINRM – Windows Remote Management**
+
+|Port|Protocole|Description|
+|---|---|---|
+|**5985/TCP**|WinRM HTTP|Remote management non chiffré (HTTP)|
+|**5986/TCP**|WinRM HTTPS|Remote management chiffré (HTTPS)|
