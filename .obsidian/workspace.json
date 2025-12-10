@@ -8,34 +8,35 @@
         "type": "tabs",
         "children": [
           {
-            "id": "ceea1af6d4a57b7e",
+            "id": "3951b61a0de08dad",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ECE/Stage/Questions Techniques stage.md",
+                "file": "ECE/Stage/CTF XMCO.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Questions Techniques stage"
+              "title": "CTF XMCO"
             }
           },
           {
-            "id": "915f349eef5597cc",
+            "id": "605cd34e8b69f213",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ECE/Stage/Stage ITRACING.md",
+                "file": "ECE/Stage/CTF OCD PENTEST.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Stage ITRACING"
+              "title": "CTF OCD PENTEST"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -89,7 +90,7 @@
             }
           },
           {
-            "id": "2a41c055f507e9b5",
+            "id": "bb8d9f577e8dde07",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -236,25 +237,26 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "ceea1af6d4a57b7e",
+  "active": "605cd34e8b69f213",
   "lastOpenFiles": [
-    "ECE/Stage/Stage ITRACING.md",
-    "ECE/Stage/Questions Techniques stage.md",
-    "ECE/Stage/CTF XMCO.md",
+    "ECE/Stage/CTF OCD.md",
+    "ECE/Stage/CTF OCD PENTEST.md",
+    "CTF/Hack The Box/Write Up/CTF OCD.md",
+    "Assets/CTF/Hack The Box/Write Up/MonitorsFour/IMG-20251210183604842.png",
+    "Assets/CTF/Hack The Box/Write Up/MonitorsFour/IMG-20251210183604792.png",
+    "Assets/CTF/Hack The Box/Write Up/MonitorsFour/IMG-20251210183604714.png",
+    "Assets/CTF/Hack The Box/Write Up/MonitorsFour/IMG-20251210183604664.png",
+    "Assets/CTF/Hack The Box/Write Up/MonitorsFour/IMG-20251210183604574.png",
+    "Assets/CTF/Hack The Box/Write Up/MonitorsFour/IMG-20251210183604501.png",
+    "Assets/CTF/Hack The Box/Write Up/MonitorsFour/IMG-20251210183603782.png",
+    "Assets/CTF/Hack The Box/Write Up/MonitorsFour/IMG-20251210183603693.png",
+    "conflict-files-obsidian-git.md",
+    "Assets/CTF/Hack The Box/Write Up/MonitorsFour/IMG-20251210104636895.png",
+    "Assets/CTF/Hack The Box/Write Up/MonitorsFour/IMG-20251210104636867.png",
     "CTF/Hack The Box/Write Up/MonitorsFour.md",
-    "Assets/CTF/Hack The Box/Write Up/MonitorsFour/IMG-20251210101502193.png",
-    "Assets/CTF/Hack The Box/Write Up/MonitorsFour/IMG-20251210101502168.png",
-    "Assets/CTF/Hack The Box/Write Up/MonitorsFour/IMG-20251210101502129.png",
-    "Assets/CTF/Hack The Box/Write Up/MonitorsFour/IMG-20251210101502092.png",
-    "Assets/CTF/Hack The Box/Write Up/MonitorsFour/IMG-20251210101502056.png",
-    "Assets/CTF/Hack The Box/Write Up/MonitorsFour/IMG-20251210101502016.png",
-    "Assets/CTF/Hack The Box/Write Up/MonitorsFour/IMG-20251210101501946.png",
-    "Assets/CTF/Hack The Box/Write Up/MonitorsFour/IMG-20251210101501891.png",
-    "Assets/Pasted image 20251210004848.png",
-    "Assets/Pasted image 20251210004746.png",
-    "Web/Vuln.md",
+    "ECE/Stage/CTF XMCO.md",
     "Web/Tools.md",
-    "Web/Untitled.canvas",
+    "Web/Vuln.md",
     "Assets/CTF/Hack The Box/Write Up/MonitorsFour",
     "Web/Word List.md",
     "ECE/Stage/rapport_CTF_XMCO_Theophile_Dutrey .pdf",
@@ -264,10 +266,8 @@
     "Assets/2025-47757 - Ingénieur.e Analyste en Cyber Sécurité.pdf",
     "Pentest Tools/Link.md",
     "ECE/Stage/rapport.tex",
-    "ECE/Stage/CTF OCD.md",
     "Linux/Hyprland .md",
     "Web/JWT.md",
-    "conflict-files-obsidian-git.md",
     "ECE/SOC/Cours 5.md",
     "Assets/SOC_Module5- Gestion de Crise - Réponse à Incident.pdf",
     "Web/Web.md",
@@ -293,6 +293,7 @@
     "Untitled 1.canvas",
     "//Untitled.canvas",
     "Untitled.canvas",
-    "Active Directory/ADMR/INTERACTIVE-MAP.canvas"
+    "Active Directory/ADMR/INTERACTIVE-MAP.canvas",
+    "Active Directory/ADMR/ANNEXE.canvas"
   ]
 }
