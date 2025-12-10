@@ -10,3 +10,6 @@ Dans un contexte de pentest réel,  ce type de scan ne doit pas être utilisé s
 Voici le résultat du scan:
 ![[Pasted image 20251210235338.png]]
 
+Le scan révèle 3 services importants:
+- Un service SSH qui tourne sur le port 22. La version de OpenSSH est stable, elle ne laisse aucune attaque directe possible sur le service. Dans le cadre d'un exercice technique, je devine qu'on pourra s'authentifier en SSH via des credentials récupérés après une potentielle RCE.
+- Un service web sur le port 80. On observe déjà une information importante, on a accès depuis 
