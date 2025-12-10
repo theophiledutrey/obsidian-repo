@@ -12,4 +12,5 @@ Voici le résultat du scan:
 
 Le scan révèle 3 services importants:
 - Un service SSH qui tourne sur le port 22. La version de OpenSSH est stable, elle ne laisse aucune attaque directe possible sur le service. Dans le cadre d'un exercice technique, je devine qu'on pourra s'authentifier en SSH via des credentials récupérés après une potentielle RCE.
-- Un service web sur le port 80. On observe déjà une information importante, on a accès depuis 
+- Un service web est exposé sur le port 80. On observe déjà une information importante : le site web donne accès à un dépôt GitHub, probablement le dépôt de l’application web qui tourne sur ce port.
+- Un service web est egalement  
