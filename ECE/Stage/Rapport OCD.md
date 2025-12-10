@@ -15,4 +15,10 @@ Le scan révèle 3 services importants:
 - Un service web est exposé sur le port 80. On observe déjà une information importante : le site web donne accès à un dépôt GitHub, probablement le dépôt de l’application web qui tourne sur ce port.
 - Un service web est egalement disponible sur le port 8080. Cela donne l'accès à une page login intitulée “Testa Motors - Employees Listing”, ce qui suggère une application interne potentiellement destinée aux employés , probablement exposée via un reverse proxy.
 
-Je commence donc une analyse du site web sur le port 80. A première vu, aucun chemin suggère une exploit
+Je commence donc une analyse du site web sur le port 80. À première vue, aucun chemin ne suggère une exploitation directe. Je décide donc de fuzz les différent end point du site. Cela me permet de confirmer la présence d’un dépôt Git accessible via l’URL, déjà identifié lors du scan Nmap.
+Je décide donc de récupérer l'intégralité du repo avec la commande:
+
+```
+git-dumper http://15.237.216.194/.git/ ./dump
+```
+
