@@ -68,14 +68,12 @@
     "//ECE",
     "//ECE/ECE/llm/ECE/llm/llm-cybesecurity-labs-project",
     "//ECE/ECE/llm/ECE/llm/llm-cybesecurity-labs-project/ECE/llm/llm-cybesecurity-labs-project/starter-project/ECE/llm/llm-cybesecurity-labs-project/starter-project/llm-sec-final-project-starter",
-    "//Pentest Tools",
-    "//Linux",
-    "//Web",
     "//Web/Web/Portswigger",
     "//Assets/Assets/ECE",
     "//Assets/Assets/ECE/Assets/ECE/Stage",
     "//CTF",
-    "//ECE/ECE/Stage"
+    "//ECE/ECE/Stage",
+    "//Active Directory"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
