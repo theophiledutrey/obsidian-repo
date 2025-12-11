@@ -68,7 +68,7 @@ J'execute donc ma commande qui me retourne 1. Je confirme donc le fait que je pu
 ajax.php?action=save_settings
 ```
 
-Il ne me manque plus qu’à identifier l’endpoint ou le chemin exact vers lequel le fichier uploadé a été stocké afin de pouvoir y accéder directement et poursuivre l’exploitation.
+Il ne me manque plus qu’à identifier le chemin exact vers lequel le fichier uploadé a été stocké afin de pouvoir y accéder directement et poursuivre l’exploitation.
 Pour cela j'analyse cette partie du code source:
 ```
 if($_FILES['img']['tmp_name'] != ''){
@@ -77,7 +77,7 @@ if($_FILES['img']['tmp_name'] != ''){
 	$data .= ", avatar = '$fname' ";
 }
 ```
-Je comprends alors que mon fichier est stocké dans le répertoire assets/uploads/, sous un nom composé de l’horodatage courant suivi du nom original du fichier uploadé. Je créé donc un script python qui me permet de récupérer le timestamp actuel:
+Je comprends alors que mon fichier est stocké dans le répertoire assets/uploads/, sous un nom composé de l’horodatage suivi du nom original du fichier uploadé. Je créé donc un script python qui me permet de récupérer le timestamp actuel dans le bon format:
 ```
 import time
 from datetime import datetime
@@ -97,7 +97,35 @@ Malheureusement, je ne parviens pas à retrouver mon fichier à cette URL et j�
 
 II. Hypothèse
 
-Je suppose que je n'avais pas encore les droits d'accéder au fichier upload. En effet après analyse des résultats de mon fuzzing, je remarque bien l'end point asstes mais pas assets/uploads. Cela suggère donc 
+Je suppose que je n'avais pas encore les droits d'accéder au fichier upload. En effet après analyse des résultats de mon fuzzing, je remarque bien l'end point assets mais pas assets/uploads. Cela suggère donc  que le répertoire contenant les fichiers envoyés n’est pas directement exposé pour un utilisateur non authentifié. Il faut donc que je trouve un moyen de m'authentifier. Parmi les fonctions disponibles dans  admin_class.php on retrouve aussi deux fonctions interessantes: signup() et save_user(). Ces deux fonctions sont accessibles via le même endpoint AJAX vulnérable, et peuvent potentiellement m’offrir un accès authentifié à l’application, voire des privilèges d’administrateur.
 
-III. Question technique
+Hypothèse 1 : Créer un compte utilisateur et accéder au service du port 8080.
 
+La fonction signup() permet la création d’un compte utilisateur sans authentification préalable, puis appelle automatiquement login2(), ce qui authentifie directement le nouvel utilisateur.
+Si l'application située sur le port 8080 utilise les mêmes sessions utilisateur, il serait alors possible de s’y connecter avec le compte créé. Cela pourrait donner accès à des fonctionnalités internes permettant d’obtenir des informations supplémentaires ou de retrouver l’emplacement exact du fichier uploadé.
+En théorie, une requête curl permettant d’appeler cette fonction ressemblerait à ceci :
+```
+curl -X POST "http://15.237.216.194/admin/ajax.php?action=signup" \
+  -d "firstname=User" \
+  -d "lastname=User" \
+  -d "email=user@test.com" \
+  -d "password=Test123"
+```
+
+Hypothèse 2 : Créer un compte administrateur via la fonction save_user().
+
+La fonction save_user() permet la création ou la modification d’un utilisateur. On observe dans le code source le champ type qui peut être lié au niveau de privilège qu'on donne à l'utilisateur modifié. Comme cette fonction est aussi accessible sans authentification préalable via l’endpoint AJAX, il serait théoriquement possible de créer un compte administrateur complet en définissant simplement type=1.
+Si l’application utilise ce rôle pour contrôler l’accès au panneau d’administration, ce compte pourrait alors permettre de s’y connecter directement. Cela donnerait potentiellement accès à des fonctionnalités avancées, notamment à la gestion des fichiers, ce qui faciliterait la localisation ou l’exécution du fichier uploadé.
+En théorie, une requête curl permettant d’appeler cette fonction ressemblerait à ceci :
+```
+curl -X POST "http://15.237.216.194/admin/ajax.php?action=save_user" \
+  -d "name=test" \
+  -d "username=test" \
+  -d "password=test123" \
+  -d "type=1" \
+  -d "establishment_id=0"
+```
+
+III. Questions technique
+
+La deuxième partie de l'entretien s'est tourné sur une série de questions techniques associées à mon parcours et mes conaissances. 
