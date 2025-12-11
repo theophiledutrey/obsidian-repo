@@ -92,3 +92,6 @@ Malheureusement, je ne parviens pas à retrouver mon fichier à cette URL et j�
 II. Hypothèse
 
 Je suppose que je n'avais pas encore les droits d'accéder au fichier upload. En effet après analyse des résultats de mon fuzzing, je remarque bien l'end point asstes mais pas assets/uploads. Cela suggère donc 
+
+III. Question technique
+
