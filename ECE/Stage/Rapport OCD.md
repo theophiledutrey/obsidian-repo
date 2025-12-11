@@ -99,7 +99,7 @@ II. Hypothèse
 
 Je suppose que je n'avais pas encore les droits d'accéder au fichier upload. En effet après analyse des résultats de mon fuzzing, je remarque bien l'end point assets mais pas assets/uploads. Cela suggère donc  que le répertoire contenant les fichiers envoyés n’est pas directement exposé pour un utilisateur non authentifié. Il faut donc que je trouve un moyen de m'authentifier. Parmi les fonctions disponibles dans  admin_class.php on retrouve aussi deux fonctions interessantes: signup() et save_user(). Ces deux fonctions sont accessibles via le même endpoint AJAX vulnérable, et peuvent potentiellement m’offrir un accès authentifié à l’application, voire des privilèges d’administrateur.
 
-Hypothèse 1 : Créer un compte utilisateur et accéder au service du port 8080.
+Hypothèse 1 : Créer un compte utilisateur via la fonction signup() et accéder au service du port 8080.
 
 La fonction signup() permet la création d’un compte utilisateur sans authentification préalable, puis appelle automatiquement login2(), ce qui authentifie directement le nouvel utilisateur.
 Si l'application située sur le port 8080 utilise les mêmes sessions utilisateur, il serait alors possible de s’y connecter avec le compte créé. Cela pourrait donner accès à des fonctionnalités internes permettant d’obtenir des informations supplémentaires ou de retrouver l’emplacement exact du fichier uploadé.
