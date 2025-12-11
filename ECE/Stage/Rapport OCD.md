@@ -2,7 +2,7 @@ I. Test Technique:
 
 L'entretien à commencé avec un test technique de une heure. J'avais accès à une IP publique: 15.237.216.194
 Dans le cadre d'un pentest, je commence par un scan réseau pour découvrir les différents services disponibles sur la machine.
-J'utilise donc le commande:
+J'utilise donc la commande:
 ```
 nmap -A 15.237.216.194
 ```
@@ -16,6 +16,12 @@ Le scan révèle 3 services importants:
 - Un service SSH qui tourne sur le port 22. La version de OpenSSH est stable, elle ne laisse aucune attaque directe possible sur le service. Dans le cadre d'un exercice technique, je devine qu'on pourra s'authentifier en SSH via des credentials récupérés après une potentielle RCE.
 - Un service web est exposé sur le port 80. On observe déjà une information importante : le site web donne accès à un dépôt GitHub, probablement le dépôt de l’application web qui tourne sur ce port.
 - Un service web est egalement disponible sur le port 8080. Cela donne l'accès à une page login intitulée “Testa Motors - Employees Listing”, ce qui suggère une application interne potentiellement destinée aux employés , probablement exposée via un reverse proxy.
+
+Dans le cadre d'un vrai pentest, j'aurais aussi du réalisé un scan sur l'ensemble des ports afin d’identifier d’éventuels services supplémentaires:
+```
+nmap -p- -Pn 15.237.216.194
+```
+Ce type de scan permet de détecter des services non standards ou déportés sur des ports atypiques, susceptibles d’introduire de nouvelles surfaces d’attaque. Cependant, au vu du temps limité qui m’était imparti pour le test technique (1 heure), j’ai privilégié une approche ciblée sur les services déjà identifiés.
 
 Je commence donc une analyse du site web sur le port 80. À première vue, aucun chemin ne suggère une exploitation directe. Je décide donc de fuzz les différent end point du site. Cela me permet de confirmer la présence d’un dépôt Git accessible via l’URL, déjà identifié lors du scan Nmap.
 Je décide donc de récupérer l'intégralité du repo avec la commande:
