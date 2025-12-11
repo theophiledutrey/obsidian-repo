@@ -129,3 +129,4 @@ curl -X POST "http://15.237.216.194/admin/ajax.php?action=save_user" \
 III. Questions technique
 
 La deuxième partie de l'entretien s'est tourné sur une série de questions techniques associées à mon parcours et mes conaissances. 
+3 personnes 
