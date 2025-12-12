@@ -1,3 +1,7 @@
+I. Introduction
+
+J'ai réalisé mon entretien technique avec 
+
 I. Test Technique:
 
 L'entretien à commencé avec un test technique de une heure. J'avais accès à une IP publique: 15.237.216.194
@@ -128,5 +132,43 @@ curl -X POST "http://15.237.216.194/admin/ajax.php?action=save_user" \
 
 III. Questions technique
 
-La deuxième partie de l'entretien s'est tourné sur une série de questions techniques associées à mon parcours et mes conaissances. 
+La deuxième partie de l’entretien s’est orientée vers une série de questions techniques en lien avec mon parcours et mes connaissances. Dans un premier temps, j’ai pu présenter mes dernières expériences professionnelles chez P4S, une startup française située à La Défense, à Paris.
+
+Cette startup a développé une suite de produits visant à sécuriser et filtrer les réseaux, dont un produit appelé SF-106-2. La particularité de ce produit est qu’il est softless, c’est-à-dire qu’il ne repose pas sur un système d’exploitation classique. En effet, il utilise une technologie FPGA.  
+L’avantage principal de cette approche est la robustesse du produit, car l’absence de système d’exploitation réduit considérablement la surface d’attaque logicielle. Un autre avantage important est la performance, notamment pour le chiffrement des données, car l’utilisation d’un FPGA permet d’effectuer des opérations cryptographiques sans perte significative de bande passante.
+
+Ma mission lors de ce stage consistait à réaliser des tests d’intrusion sur ce produit. Les questions posées lors de l’entretien portaient principalement sur le type de pentest que j’ai réalisé et sur la méthodologie employée. L’ensemble de mes attaques était orienté réseau, avec pour objectif de comprendre comment contourner le pare-feu du produit et comment tenter de compromettre la confidentialité des données transitant à travers celui-ci.
+
+L’attaque la plus représentative que j’ai présentée est une attaque de type Man-in-the-Middle. J’arrivais à me positionner comme intermédiaire sur le réseau entre deux équipements SF-106-2 : l’un chargé de chiffrer les données et l’autre de les déchiffrer. Dans cette configuration, je pouvais observer un flux de données chiffré par le produit.
+
+J’ai alors découvert une vulnérabilité sur le SF-106-2 : lorsqu’une attaque DoS était lancée contre le produit, celui-ci redémarrait automatiquement. À la suite de ce redémarrage, un nouvel échange de clés Diffie-Hellman avait lieu entre les deux équipements afin de rétablir un canal sécurisé. Cependant, un bug dans l’implémentation faisait que les clés générées lors de cet échange étaient mal vérifiées.
+
+Après avoir provoqué le redémarrage via une attaque DoS, j’étais en mesure d’intercepter sur le réseau les clés échangées et de les remplacer par mes propres clés. Cela me permettait ensuite de déchiffrer les communications, contournant ainsi les mécanismes de sécurité du produit et compromettant la confidentialité des données.
+
+Ce problème a été corrigé en empêchant qu’une attaque DoS puisse provoquer le redémarrage du produit. Cela permet d’éviter la relance automatique du processus d’échange de clés, qui était à l’origine de la vulnérabilité observée. En parallèle, un système de certificats plus robuste a été mis en place afin de renforcer la phase d’authentification lors des échanges cryptographiques. Les clés générées sont désormais uniques et systématiquement vérifiées, ce qui empêche un attaquant d’injecter ses propres clés et garantit l’intégrité du canal de communication.
+
+On m’a ensuite posé des questions techniques portant sur mes connaissances générales en cybersécurité. De nombreux sujets avaient déjà été abordés lors du premier entretien, notamment sur des thématiques variées telles que les injections SQL, les JWT, le chiffrement symétrique et asymétrique, les signatures et certificats, Kerberos, les attaques Pass The Hash ou encore l’authentification NTLM. Cependant, certains de ces sujets ont été évoqués à nouveau et approfondis lors de ce second entretien.
+
+Les premières questions portaient sur le pentest web. En effet, mon stage devant initialement se concentrer principalement sur des missions de pentest web, il était important de vérifier que je maîtrise les différents vecteurs d’attaque liés aux applications web.
+
+Le premier sujet abordé concernait les attaques XSS (Cross-Site Scripting). L’objectif était d’évaluer ma compréhension de ce type de vulnérabilité, des mécanismes de protection existants et des impacts potentiels qu’une telle attaque peut avoir. J’ai expliqué qu’une attaque XSS consiste à injecter du code JavaScript malveillant dans des entrées utilisateur insuffisamment filtrées. Ce code peut ensuite être interprété par le navigateur de la victime et exécuté côté client, dans le contexte du site vulnérable.
+
+J’ai également présenté les trois types de XSS que l’on rencontre le plus fréquemment : les XSS reflected, stored et DOM-based. Les questions ont ensuite porté sur les conséquences possibles d’une attaque XSS. J’ai évoqué le vol de cookies de session, mais sans détailler d’autres vecteurs d’attaque. Il m’a alors été expliqué qu’une XSS peut également permettre l’exécution d’actions arbitraires au nom de l’utilisateur, la redirection vers des sites malveillants, le keylogging, ou encore le contournement de mécanismes de sécurité côté client.
+
+Le sujet a ensuite été clôturé par une discussion sur les mécanismes de protection contre le vol de cookies. J’ai pu citer les attributs HttpOnly et Secure. Il me manquait cependant l’attribut SameSite, qui m’a alors été expliqué. Celui-ci permet de restreindre l’envoi des cookies lors de requêtes inter-sites, réduisant ainsi les risques liés aux attaques de type CSRF en empêchant le navigateur d’envoyer automatiquement les cookies dans certains contextes.
+
+Dans la continuité de cette explication, le second sujet technique abordé concernait logiquement les attaques CSRF (Cross-Site Request Forgery). J’ai pu expliquer qu’une attaque CSRF consiste à forcer un utilisateur authentifié à exécuter, à son insu, une requête malveillante sur une application de confiance. Les conséquences peuvent aller de la modification de paramètres sensibles à l’exécution d’actions critiques, selon les droits de l’utilisateur ciblé.
+
+J’ai également détaillé les principales méthodes de remédiation, notamment l’utilisation de tokens CSRF uniques, la vérification de l’origine des requêtes, ainsi que l’utilisation de l’attribut SameSite sur les cookies. Sur ce sujet, j’ai pu répondre correctement à l’ensemble des questions posées.
+
+Stage
+Beaucoup de sujet technique avait déjà été evoqué lors du premier entretien (SQLi, JWT, Chiffrement symétrique et asymétrique, signature, certificat, Kerberos,  Pass The Hash, NTLM auth)
+Certain sujet ont été évoqué à nouveau tel que SQLi et Kerberos 
+XSS
+CSRF
+SQLi
+
+Evocation de ADCS
+Kerberos et attaque AS REP et Kerberoasting
+
 3 personnes 
