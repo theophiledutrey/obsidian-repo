@@ -64,7 +64,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -265,12 +265,17 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "17ae3a4869cfcb0e",
+  "active": "aa6cbc6883478497",
   "lastOpenFiles": [
+    "Assets/CTF/Hack The Box/Write Up/Gavel/IMG-20251214003922760.png",
+    "Assets/CTF/Hack The Box/Write Up/Gavel/IMG-20251214003914916.png",
+    "Assets/CTF/Hack The Box/Write Up/Gavel/IMG-20251214003749687.png",
+    "Assets/CTF/Hack The Box/Write Up/Gavel/IMG-20251214003738176.png",
+    "Assets/CTF/Hack The Box/Write Up/Gavel/IMG-20251214003657731.png",
+    "CTF/Hack The Box/Write Up/MonitorsFour.md",
     "CTF/Hack The Box/Write Up/Gavel.md",
     "Web/Word List.md",
     "ECE/Stage/CTF OCD PENTEST.md",
-    "CTF/Hack The Box/Write Up/MonitorsFour.md",
     "Web/Tools.md",
     "Web/Vuln.md",
     "Linux/Capabilities.md",
@@ -295,10 +300,6 @@
     "Assets/CTF/Hack The Box/Write Up/MonitorsFour/IMG-20251210230254091.png",
     "Assets/CTF/Hack The Box/Write Up/MonitorsFour/IMG-20251210230254018.png",
     "Assets/CTF/Hack The Box/Write Up/MonitorsFour/IMG-20251210230253975.png",
-    "Assets/CTF/Hack The Box/Write Up/MonitorsFour/IMG-20251210230253910.png",
-    "Assets/CTF/Hack The Box/Write Up/MonitorsFour/IMG-20251210230253844.png",
-    "Assets/CTF/Hack The Box/Write Up/MonitorsFour/IMG-20251210230253801.png",
-    "Assets/CTF/Hack The Box/Write Up/MonitorsFour/IMG-20251210230253751.png",
     "Assets/ECE/Stage/Rapport OCD",
     "ECE/Stage/rapport_CTF_XMCO_Theophile_Dutrey .pdf",
     "Active Directory/Formation Tristan.md",
@@ -311,7 +312,6 @@
     "ECE/Stage/rapport.tex",
     "Linux/Hyprland .md",
     "Web/JWT.md",
-    "ECE/SOC/Cours 5.md",
     "Assets/SOC_Module5- Gestion de Crise - Réponse à Incident.pdf",
     "Assets/ECE/Stage/CTF XMCO",
     "Photos/INTERACTIVE-MAP.canvas",
