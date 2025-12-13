@@ -73,9 +73,9 @@
     "//CTF",
     "//ECE/ECE/Stage",
     "//Active Directory",
-    "//Pentest Tools",
-    "//Assets",
-    "//Assets/Assets/ECE"
+    "//Assets/Assets/ECE",
+    "//Linux",
+    "//Web"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
