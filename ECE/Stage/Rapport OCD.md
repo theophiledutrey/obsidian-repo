@@ -161,14 +161,6 @@ Dans la continuité de cette explication, le second sujet technique abordé conc
 
 J’ai également détaillé les principales méthodes de remédiation, notamment l’utilisation de tokens CSRF uniques, la vérification de l’origine des requêtes, ainsi que l’utilisation de l’attribut SameSite sur les cookies. Sur ce sujet, j’ai pu répondre correctement à l’ensemble des questions posées.
 
-Stage
-Beaucoup de sujet technique avait déjà été evoqué lors du premier entretien (SQLi, JWT, Chiffrement symétrique et asymétrique, signature, certificat, Kerberos,  Pass The Hash, NTLM auth)
-Certain sujet ont été évoqué à nouveau tel que SQLi et Kerberos 
-XSS
-CSRF
-SQLi
 
-Evocation de ADCS
-Kerberos et attaque AS REP et Kerberoasting
 
 3 personnes 
