@@ -42,3 +42,22 @@ try {
     $results = [];
 }
 ```
+
+Injection sql possible:
+```
+user_id=x` FROM (SELECT group_concat(username,password) AS `'x` FROM users)z;&sort=\?--
+```
+
+![[IMG-20251214024606708.png]]
+
+Pourquoi ça marche:
+
+En mettant \`\?\`, PDO ignore ce \`?\` comme placeholder, bind normalement \`user_id\`, puis MySQL transforme \`\\?\` en \`?\` dans une requête déjà cassée par le commentaire, ce qui permet au contenu de \`user_id\` d’être interprété comme du SQL et non comme une valeur.
+
+MySQL est dans un état **impossible** :
+
+- identifiant backtick **ouvert**
+- fin de ligne logique atteinte (commentaire)
+- requête **syntaxiquement incomplète**
+Le parseur **attend encore du SQL**
+
