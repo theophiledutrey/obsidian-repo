@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Web/Word List.md",
+                "file": "Pentest Tools/Link.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Word List"
+              "title": "Link"
             }
           },
           {
@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/Hack The Box/Write Up/Gavel.md",
+                "file": "Linux/Command.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Gavel"
+              "title": "Command"
             }
           },
           {
@@ -267,39 +267,40 @@
   },
   "active": "aa6cbc6883478497",
   "lastOpenFiles": [
+    "Linux/Analyse.md",
+    "CTF/Hack The Box/Write Up/Gavel.md",
+    "Assets/CTF/Hack The Box/Write Up/Gavel/IMG-20251214150054379.png",
+    "CTF/Hack The Box/Write Up/MonitorsFour.md",
+    "ECE/Stage/CTF OCD PENTEST.md",
+    "Assets/CTF/Hack The Box/Write Up/Gavel/IMG-20251214145837868.png",
+    "Pentest Tools/Link.md",
+    "ECE/Stage/Stage.md",
+    "ECE/Stage/List.md",
+    "Web/Word List.md",
+    "Assets/CTF/Hack The Box/Write Up/Gavel/IMG-20251214144313253.png",
+    "Assets/CTF/Hack The Box/Write Up/Gavel/IMG-20251214144151236.png",
+    "Assets/CTF/Hack The Box/Write Up/Gavel/IMG-20251214144122497.png",
     "Assets/CTF/Hack The Box/Write Up/Gavel/IMG-20251214024606708.png",
     "Assets/CTF/Hack The Box/Write Up/Gavel/IMG-20251214003922760.png",
     "Assets/CTF/Hack The Box/Write Up/Gavel/IMG-20251214003914916.png",
     "Assets/CTF/Hack The Box/Write Up/Gavel/IMG-20251214003749687.png",
     "Assets/CTF/Hack The Box/Write Up/Gavel/IMG-20251214003738176.png",
-    "Assets/CTF/Hack The Box/Write Up/Gavel/IMG-20251214003657731.png",
-    "CTF/Hack The Box/Write Up/MonitorsFour.md",
-    "CTF/Hack The Box/Write Up/Gavel.md",
-    "Web/Word List.md",
-    "ECE/Stage/CTF OCD PENTEST.md",
     "Web/Tools.md",
     "Web/Vuln.md",
     "Linux/Capabilities.md",
     "Linux/Command.md",
     "ECE/Stage/Questions Techniques stage.md",
     "Assets/CTF/Hack The Box/Write Up/Gavel",
-    "Assets/CTF/Hack The Box/Write Up/Gavel/IMG-20251213011002825.png",
     "CTF/Hack The Box/Write Up/GiveBack.md",
     "CTF/Hack The Box/Write Up/NanoCorp.md",
     "ECE/Stage/Rapport OCD.md",
-    "Assets/Pasted image 20251210235338.png",
     "ECE/Stage/CTF XMCO.md",
-    "Pentest Tools/Link.md",
     "ECE/Stage/CV.md",
     "ECE/Stage/Lettre de motivation.md",
-    "ECE/Stage/List.md",
     "ECE/Stage/Stage ITRACING.md",
     "ECE/Stage/Entretien SOC OCD.md",
     "ECE/Stage/CTF OCD.md",
     "conflict-files-obsidian-git.md",
-    "Assets/CTF/Hack The Box/Write Up/MonitorsFour/IMG-20251210230254153.png",
-    "Assets/CTF/Hack The Box/Write Up/MonitorsFour/IMG-20251210230254091.png",
-    "Assets/CTF/Hack The Box/Write Up/MonitorsFour/IMG-20251210230254018.png",
     "Assets/ECE/Stage/Rapport OCD",
     "ECE/Stage/rapport_CTF_XMCO_Theophile_Dutrey .pdf",
     "Active Directory/Formation Tristan.md",
@@ -311,7 +312,6 @@
     "Assets/2025-47757 - Ingénieur.e Analyste en Cyber Sécurité.pdf",
     "ECE/Stage/rapport.tex",
     "Linux/Hyprland .md",
-    "Web/JWT.md",
     "Assets/SOC_Module5- Gestion de Crise - Réponse à Incident.pdf",
     "Assets/ECE/Stage/CTF XMCO",
     "Photos/INTERACTIVE-MAP.canvas",

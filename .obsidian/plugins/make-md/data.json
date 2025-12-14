@@ -65,7 +65,6 @@
     "//ECE/ECE/Cloud/ECE/Cloud/Entra ID",
     "//Assets/Assets/Portswigger",
     "//Assets/Assets/Portswigger/Assets/Portswigger/SQLi",
-    "//ECE",
     "//ECE/ECE/llm/ECE/llm/llm-cybesecurity-labs-project",
     "//ECE/ECE/llm/ECE/llm/llm-cybesecurity-labs-project/ECE/llm/llm-cybesecurity-labs-project/starter-project/ECE/llm/llm-cybesecurity-labs-project/starter-project/llm-sec-final-project-starter",
     "//Web/Web/Portswigger",
@@ -75,7 +74,8 @@
     "//Active Directory",
     "//Assets/Assets/ECE",
     "//Linux",
-    "//Web"
+    "//Web",
+    "//Pentest Tools"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
