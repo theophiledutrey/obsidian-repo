@@ -118,3 +118,8 @@ Sur le reverse shell:
 export TERM=xterm
 ```
 
+```
+find / -type f -perm -010 -group gavel-seller 2>/dev/null
+```
+
+![[IMG-20251214170350377.png]]
