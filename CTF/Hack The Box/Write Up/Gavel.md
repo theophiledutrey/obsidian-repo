@@ -98,3 +98,15 @@ if (!$allowed) {
 ```
 
 ![[IMG-20251214150054379.png]]
+astuce pour avoir des options tel que clear dans le reverse shell:
+Sur la machine local:
+```bash
+stty raw -echo
+fg
+```
+
+Sur le reverse shell:
+```bash
+export TERM=xterm
+export SHELL=/bin/bash
+```
