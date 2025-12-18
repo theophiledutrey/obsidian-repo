@@ -73,7 +73,8 @@
     "//Assets/Assets/ECE",
     "//Linux",
     "//Web",
-    "//ECE"
+    "//ECE",
+    "//CTF"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
