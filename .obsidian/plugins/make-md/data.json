@@ -74,7 +74,8 @@
     "//Linux",
     "//Web",
     "//ECE",
-    "//CTF"
+    "//CTF",
+    "//ECE/ECE/Reverse"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",

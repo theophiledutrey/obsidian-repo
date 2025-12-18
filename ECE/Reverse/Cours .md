@@ -1,4 +1,7 @@
-![[IMG-20251029144023000.png]]
+
+![[ECE2025_released.pdf]]
+
+![[IMG-20251218193547942.png]]
 
 ## 🔹 Informations générales
 
@@ -141,7 +144,7 @@ int main(void) {
 
 
 
-![[IMG-20251029150758523.png]]
+![[IMG-20251218193547967.png]]
 
 Les **registres** sont de petites zones de mémoire **ultra-rapides** intégrées directement dans le processeur.  
 Ils servent à stocker temporairement des données pendant l’exécution des instructions machine (valeurs, adresses, résultats intermédiaires…).
@@ -441,4 +444,4 @@ Ensuite, deux instructions supplémentaires en rouge :
 | `CPUID`     | `CPUID` | Récupère infos processeur (vendor, features). |
 | `RDTSC`     | `RDTSC` | Lire time-stamp counter (cycle counter).      |
 
-![[IMG-20251106225948913.png]]
+![[IMG-20251218193548033.png]]
