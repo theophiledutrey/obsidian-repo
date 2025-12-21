@@ -58,7 +58,6 @@
     "//ECE/ECE/SecuSI/ECE/SecuSI/Lab",
     "//ECE/ECE/SecuSI/ECE/SecuSI/Lesson",
     "//CTF/CTF/Hack The Box/CTF/Hack The Box/Write Up",
-    "//CTF/CTF/Hack The Box",
     "//ECE/ECE/Cloud/ECE/Cloud/AWS",
     "//ECE/ECE/Forensic/ECE/Forensic/TP 2",
     "//ECE/ECE/Forensic/ECE/Forensic/TP ",
@@ -75,7 +74,8 @@
     "//Web",
     "//ECE",
     "//CTF",
-    "//ECE/ECE/Reverse"
+    "//ECE/ECE/Reverse",
+    "//CTF/CTF/Hackropole"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
@@ -90,6 +90,8 @@
     "_assets",
     "_blocks"
   ],
+  "newFileLocation": "root",
+  "newFileFolderPath": "",
   "inlineBacklinks": false,
   "inlineContext": true,
   "inlineBacklinksExpanded": false,
