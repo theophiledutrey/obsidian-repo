@@ -75,7 +75,8 @@
     "//ECE",
     "//CTF",
     "//ECE/ECE/Reverse",
-    "//CTF/CTF/Hackropole"
+    "//CTF/CTF/Hackropole",
+    "//CTF/CTF/Hack The Box"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
