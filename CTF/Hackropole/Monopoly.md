@@ -38,3 +38,4 @@ Cette payload force une erreur moteur, récupère l’erreur dans le `catch`, pu
 FCSC{2fdaccef0afb084f40c4bf38f681262141bcbabfbed0312725f59e40c54edb21}
 ```
 
+Salut frr, je viens de terminer monopoly et je suis un peu frustré car ap avoir galéré toute l'aprem, c'est chat qui m'a à moitié donné le solve en disant que l'utilsation de parent.postMessage.bind avec comme paramètre un objet "non clonable" génère une erreur en dehors de la sandboxe. C'est frustrant car c'est hyper spécifique comme cas, comment j'aurais pu le deviner autrement?
