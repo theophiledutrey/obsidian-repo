@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/Hackropole/meme-generator.md",
+                "file": "CTF/Hack The Box/Write Up/NanoCorp.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "meme-generator"
+              "title": "NanoCorp"
             }
           }
         ],
@@ -132,7 +132,7 @@
             }
           },
           {
-            "id": "192f137d4824d383",
+            "id": "9cf61efcc1cf8e21",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -282,8 +282,10 @@
   },
   "active": "7684218cd02459c9",
   "lastOpenFiles": [
-    "ECE/SOC/Cours 1.md",
+    "CTF/Hack The Box/Write Up/Guardian Hack The Box.md",
+    "CTF/Hack The Box/Write Up/GiveBack.md",
     "CTF/Hackropole/meme-generator.md",
+    "ECE/SOC/Cours 1.md",
     "Assets/CTF/Hackropole/meme-generator",
     "Assets/CTF/Hackropole",
     "ECE/Stage/CTF OCD PENTEST.md",
@@ -324,7 +326,6 @@
     "Untitled 1.base",
     "Active Directory/Command.md",
     "Active Directory/Privilege Escalation.md",
-    "Active Directory/Formation Tristan.md",
     "Assets/CTF/Hack The Box/Write Up/Gavel/IMG-20251214170350377.png",
     "Assets/CTF/Hack The Box/Write Up/Gavel/IMG-20251214150054379.png",
     "Web/Untitled.canvas",

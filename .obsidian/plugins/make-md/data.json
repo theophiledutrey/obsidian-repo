@@ -76,7 +76,8 @@
     "//CTF",
     "//ECE/ECE/Reverse",
     "//CTF/CTF/Hackropole",
-    "//ECE/ECE/SOC"
+    "//ECE/ECE/SOC",
+    "//CTF/CTF/Hack The Box"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
@@ -91,8 +92,6 @@
     "_assets",
     "_blocks"
   ],
-  "newFileLocation": "root",
-  "newFileFolderPath": "",
   "inlineBacklinks": false,
   "inlineContext": true,
   "inlineBacklinksExpanded": false,
