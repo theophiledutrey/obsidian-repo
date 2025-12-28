@@ -69,7 +69,6 @@ Résultat:
 ```
 ├── timeline_PC_baseline.csv
 │   └── Timeline DFIR générée par Hayabusa à partir des journaux des trois machines
-│
 ```
 ![[IMG-20251228024003084.png]]
 Explication:
@@ -80,6 +79,7 @@ Le résumé des résultats montre l’absence d’alertes de niveau « emergency
 Cette timeline constitue la base de l’analyse suivante et a été importée dans Timesketch afin de permettre une exploration chronologique détaillée et une corrélation inter-machines des différentes phases de l’attaque.
 
 ## Etape 3
+
 
 ![[IMG-20251228023735830.png]]
 
