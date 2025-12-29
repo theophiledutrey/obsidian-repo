@@ -153,3 +153,18 @@ Le journal indique le lancement du binaire `mz.exe`, identifié comme étant Mim
 
 Le processus est exécuté avec des privilèges élevés et a pour processus parent une instance de PowerShell associée au reverse shell précédemment identifié.
 
+L’analyse des journaux de sécurité du serveur SRV01 met en évidence plusieurs événements d’authentification survenus à 13:21:20, soit environ deux minutes après l’exécution de l’outil Mimikatz sur le poste du développeur.
+
+Un événement de type _Logon (Network)_ (Event ID 4624 – Logon Type 3) indique une connexion distante établie avec le compte `Administrateur` depuis l’adresse IP `192.168.206.25`. 
+![[IMG-20251229024803017.png]]
+
+L’authentification repose sur le protocole NTLM et s’accompagne de l’octroi d’un jeton élevé.
+
+![[IMG-20251229024818173.png]]
+
+Cette authentification est immédiatement suivie d’un événement _Admin Logon_ (Event ID 4672), confirmant l’attribution de privilèges administrateur étendus sur le serveur.
+
+![[IMG-20251229024836924.png]]
+
+La corrélation temporelle avec l’extraction préalable d’identifiants via Mimikatz, ainsi que l’utilisation d’un protocole d’authentification NTLM, permet d’interpréter ces événements comme la phase de mouvement latéral de l’attaque, durant laquelle l’attaquant réutilise des identifiants compromis afin d’accéder au serveur applicatif.
+
