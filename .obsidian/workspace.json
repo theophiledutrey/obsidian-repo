@@ -22,22 +22,6 @@
             }
           },
           {
-            "id": "31b235b688252bcb",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Assets/SOC_Module4- Techniques dattaques  Investigation.pdf",
-                "page": 23,
-                "left": -13,
-                "top": 114,
-                "zoom": 1.19375
-              },
-              "icon": "lucide-file-text",
-              "title": "SOC_Module4- Techniques dattaques  Investigation"
-            }
-          },
-          {
             "id": "82dda875abc8265f",
             "type": "leaf",
             "state": {
@@ -66,7 +50,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -269,25 +253,27 @@
   },
   "active": "c23ddbdb2b4a58ec",
   "lastOpenFiles": [
+    "Assets/ECE/SOC/Projet/IMG-20251229023044930.png",
+    "Assets/ECE/SOC/Projet/IMG-20251229022807714.png",
+    "Assets/ECE/SOC/Projet/IMG-20251229022412355.png",
+    "Assets/ECE/SOC/Projet/IMG-20251229021900107.png",
+    "Assets/ECE/SOC/Projet/IMG-20251229021140199.png",
+    "Assets/ECE/SOC/Projet/IMG-20251229020112507.png",
+    "Assets/ECE/SOC/Projet/IMG-20251229020033145.png",
+    "ECE/SOC/Cours 4.md",
+    "ECE/SOC/Cours 5.md",
+    "ECE/SOC/Projet.md",
+    "Assets/SOC_Module4- Techniques dattaques  Investigation.pdf",
     "Assets/ECE/SOC/Projet/IMG-20251228024003084.png",
     "Assets/ECE/SOC/Projet/IMG-20251228023922683.png",
     "Assets/ECE/SOC/Projet/IMG-20251228023908352.png",
     "Assets/ECE/SOC/Projet/IMG-20251228023735830.png",
-    "Assets/ECE/SOC/Projet/IMG-20251228023058693.png",
-    "Assets/ECE/SOC/Projet/IMG-20251228023036446.png",
-    "Assets/ECE/SOC/Projet/IMG-20251228023008497.png",
     "Assets/ECE/SOC/Projet",
-    "Assets/ECE/SOC/Projet/IMG-20251228022951726.png",
-    "ECE/SOC/Cours 4.md",
     "CTF/Hack The Box/Write Up/NanoCorp.md",
     "CTF/Hack The Box/Write Up/Imagery.md",
     "CTF/Hack The Box/Write Up/GiveBack.md",
     "ECE/Reverse/Cours .md",
     "CTF/Hackropole/meme-generator.md",
-    "ECE/SOC/Projet.md",
-    "Assets/CTF/Hackropole/meme-generator/IMG-20251228022145303.png",
-    "Assets/CTF/Hackropole/meme-generator/IMG-20251228022145220.png",
-    "Assets/CTF/Hackropole/meme-generator/IMG-20251228022145090.png",
     "Assets/CTF/Hackropole/meme-generator",
     "Assets/CTF/Hackropole",
     "CTF/Hack The Box/Write Up/Gavel.md",
@@ -295,8 +281,6 @@
     "ECE/Stage/CTF XMCO.md",
     "ECE/Stage/CTF OCD PENTEST.md",
     "ECE/SOC/TP 1.md",
-    "ECE/SOC/Cours 5.md",
-    "Assets/SOC_Module4- Techniques dattaques  Investigation.pdf",
     "CTF/Hack The Box/Write Up/MonitorsFour.md",
     "CTF/Hackropole/Monopoly.md",
     "Assets/SOC-Fundamentals_Projet.pdf",
