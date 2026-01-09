@@ -55,3 +55,6 @@ mysql -h beta-vino-wp-mariadb -u bn_wordpress -p'sW5sp4spa3u7RLyetrekE4oS' -D bi
 mysql -h beta-vino-wp-mariadb -u root -p'sW5sp4syetre32828383kE4oS' -D mysql -e "select * from global_priv;"
 
 User	Password
+
+
+nikto binaire pour footprinter un siteweb et vérifier plein de chose

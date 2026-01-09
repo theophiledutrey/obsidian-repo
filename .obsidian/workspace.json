@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/Hack The Box/Write Up/Gavel.md",
+                "file": "CTF/Hack The Box/Write Up/GiveBack.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Gavel"
+              "title": "GiveBack"
             }
           }
         ],
@@ -295,12 +295,14 @@
   },
   "active": "8d21f9a4b5958799",
   "lastOpenFiles": [
+    "CTF/Hack The Box/Write Up/Guardian Hack The Box.md",
+    "CTF/Hack The Box/Write Up/GiveBack.md",
+    "CTF/Hack The Box/Write Up/Gavel.md",
     "conflict-files-obsidian-git.md",
     "Assets/ECE/SOC/Projet/IMG-20251228023058693.png",
     "Assets/ECE/SOC/Projet/IMG-20251228023036446.png",
     "Assets/ECE/SOC/Projet/IMG-20251228023008497.png",
     "Assets/ECE/SOC/Projet/IMG-20251228022951726.png",
-    "CTF/Hack The Box/Write Up/Gavel.md",
     "ECE/SOC/Projet.md",
     "ECE/SOC/Cours 4.md",
     "Assets/ECE/SOC/Projet/IMG-20251229024836924.png",
@@ -315,8 +317,6 @@
     "ECE/Stage/rapport_CTF_XMCO_Theophile_Dutrey .pdf",
     "ECE/Stage/CTF XMCO.md",
     "CTF/Hack The Box/Write Up/NanoCorp.md",
-    "CTF/Hack The Box/Write Up/Guardian Hack The Box.md",
-    "CTF/Hack The Box/Write Up/GiveBack.md",
     "CTF/Hackropole/meme-generator.md",
     "Assets/CTF/Hackropole/meme-generator",
     "Assets/CTF/Hackropole",
