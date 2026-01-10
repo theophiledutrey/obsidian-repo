@@ -89,3 +89,8 @@
 
 
 `./.setwall.sh` = script pour changer le fond d'écran
+
+systemctl --user disable wallpaperengine.service
+systemctl --user enable wallpaperengine.service
+systemctl --user stop wallpaperengine.service
+systemctl --user start wallpaperengine.service
