@@ -94,3 +94,5 @@ systemctl --user disable wallpaperengine.service
 systemctl --user enable wallpaperengine.service
 systemctl --user stop wallpaperengine.service
 systemctl --user start wallpaperengine.service
+
+nano /home/theo/.config/hypr/keybindings.conf
