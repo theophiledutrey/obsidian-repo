@@ -64,7 +64,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -265,16 +265,17 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "c32b883926dab2f3",
+  "active": "d17d31db192ca521",
   "lastOpenFiles": [
-    "Web/Word List.md",
+    "CTF/Hack The Box/Write Up/GiveBack.md",
+    "CTF/Hack The Box/Write Up/Browsed.md",
+    "Assets/CTF/Hack The Box/Write Up/Browsed/IMG-20260111132014096.png",
     "Web/Tools.md",
+    "Web/Word List.md",
     "Web/Portswigger/SQLi.md",
     "Web/JWT.md",
     "Linux/Privilege Escalation.md",
     "Linux/Exegol.md",
-    "CTF/Hack The Box/Write Up/GiveBack.md",
-    "CTF/Hack The Box/Write Up/Browsed.md",
     "Assets/CTF/Hack The Box/Write Up/Browsed",
     "Assets/CTF/Hack The Box/Write Up/Browsed/IMG-20260111125221658.png",
     "Linux/Hyprland .md",
@@ -291,7 +292,6 @@
     "Assets/ECE/SOC/Projet/IMG-20251229024818173.png",
     "Assets/ECE/SOC/Projet/IMG-20251229024803017.png",
     "Assets/ECE/SOC/Projet/IMG-20251229023044930.png",
-    "Assets/ECE/SOC/Projet/IMG-20251229022807714.png",
     "Assets/ECE/SOC/Projet",
     "Assets/SOC_Module4- Techniques dattaques  Investigation.pdf",
     "ECE/SOC/Cours 1.md",
@@ -310,7 +310,6 @@
     "CTF/Hackropole/Hackropole.md",
     "CTF/Hackropole",
     "Assets/SOC-Fundamentals_Projet.pdf",
-    "ECE/SOC/Cours 2.md",
     "Assets/ECE/Reverse/Lab",
     "Assets/ECE2025_released.pdf",
     "Web/Untitled.canvas",
