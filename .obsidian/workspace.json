@@ -8,76 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "205942b8da826b52",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ECE/Stage/CTF OCD PENTEST.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "CTF OCD PENTEST"
-            }
-          },
-          {
-            "id": "7273b50c736a4088",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Pentest Tools/Link.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Link"
-            }
-          },
-          {
-            "id": "aa6cbc6883478497",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ECE/Reverse/Exo.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Exo"
-            }
-          },
-          {
-            "id": "1c09ba6be723add7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ECE/SOC/Cours 4.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Cours 4"
-            }
-          },
-          {
-            "id": "99c5facef405ab94",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ECE/SOC/Projet.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Projet"
-            }
-          },
-          {
             "id": "8d21f9a4b5958799",
             "type": "leaf",
             "state": {
@@ -92,21 +22,21 @@
             }
           },
           {
-            "id": "2345c23f291ee773",
+            "id": "d17d31db192ca521",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/Hyprland .md",
+                "file": "CTF/Hack The Box/Write Up/Browsed.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Hyprland"
+              "title": "Browsed"
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -307,9 +237,13 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "2345c23f291ee773",
+  "active": "d17d31db192ca521",
   "lastOpenFiles": [
+    "Assets/CTF/Hack The Box/Write Up/Browsed",
+    "Assets/CTF/Hack The Box/Write Up/Browsed/IMG-20260111125221658.png",
+    "CTF/Hack The Box/Write Up/Browsed.md",
     "CTF/Hack The Box/Write Up/GiveBack.md",
+    "Linux/Hyprland .md",
     "CTF/Hack The Box/Write Up/Guardian Hack The Box.md",
     "CTF/Hack The Box/Write Up/Gavel.md",
     "conflict-files-obsidian-git.md",
@@ -324,7 +258,6 @@
     "Assets/ECE/SOC/Projet/IMG-20251229024803017.png",
     "Assets/ECE/SOC/Projet/IMG-20251229023044930.png",
     "Assets/ECE/SOC/Projet/IMG-20251229022807714.png",
-    "Assets/ECE/SOC/Projet/IMG-20251229022412355.png",
     "Assets/ECE/SOC/Projet",
     "Assets/SOC_Module4- Techniques dattaques  Investigation.pdf",
     "ECE/SOC/Cours 1.md",
@@ -351,9 +284,7 @@
     "Assets/ECE/Reverse/Lab",
     "ECE/Reverse/Lab.md",
     "Assets/ECE2025_released.pdf",
-    "Linux/Analyse.md",
     "Assets/ECE/Reverse/Cours ",
-    "ECE/Stage/Questions Techniques stage.md",
     "Web/Untitled.canvas",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
