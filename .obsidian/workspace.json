@@ -64,7 +64,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -118,7 +118,7 @@
             }
           },
           {
-            "id": "02b2cc5d11e35cb6",
+            "id": "67e4278ef803b554",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -265,10 +265,10 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "d17d31db192ca521",
+  "active": "c32b883926dab2f3",
   "lastOpenFiles": [
-    "CTF/Hack The Box/Write Up/GiveBack.md",
     "CTF/Hack The Box/Write Up/Browsed.md",
+    "CTF/Hack The Box/Write Up/GiveBack.md",
     "Assets/CTF/Hack The Box/Write Up/Browsed/IMG-20260111132014096.png",
     "Web/Tools.md",
     "Web/Word List.md",
