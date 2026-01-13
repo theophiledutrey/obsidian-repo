@@ -27,7 +27,7 @@
 
 ### 🔹 LFI
 ```bash
-/opt/lists/seclists/Fuzzing/LFI/LFI-gracefulsecurity-linux.txt
+/opt/lists/seclists/Fuzzing/LFI/LFI-gracefulsecurity-linux.txt-taz
 ```
 
 ---

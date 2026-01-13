@@ -76,7 +76,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -130,7 +130,7 @@
             }
           },
           {
-            "id": "a6fcb024f5b269c2",
+            "id": "8e87928bf6232bc7",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -277,7 +277,7 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "4be4c3bf45ea173d",
+  "active": "a5ffc6bc57a78589",
   "lastOpenFiles": [
     "Web/Tools.md",
     "CTF/Hack The Box/Write Up/Browsed.md",
