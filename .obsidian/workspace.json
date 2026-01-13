@@ -36,6 +36,18 @@
             }
           },
           {
+            "id": "4be4c3bf45ea173d",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.11.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.11.4"
+            }
+          },
+          {
             "id": "c32b883926dab2f3",
             "type": "leaf",
             "state": {
@@ -64,7 +76,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -118,7 +130,7 @@
             }
           },
           {
-            "id": "67e4278ef803b554",
+            "id": "a6fcb024f5b269c2",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -265,7 +277,7 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "d17d31db192ca521",
+  "active": "4be4c3bf45ea173d",
   "lastOpenFiles": [
     "Web/Tools.md",
     "CTF/Hack The Box/Write Up/Browsed.md",
