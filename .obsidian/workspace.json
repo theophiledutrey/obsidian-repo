@@ -118,7 +118,7 @@
             }
           },
           {
-            "id": "8e87928bf6232bc7",
+            "id": "dccc3c8aec555b77",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -265,12 +265,12 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "e2aa3986dab62d71",
+  "active": "d17d31db192ca521",
   "lastOpenFiles": [
-    "CTF/Hack The Box/Write Up/Browsed.md",
-    "Web/Tools.md",
     "Web/Word List.md",
+    "Web/Tools.md",
     "CTF/Hack The Box/Write Up/GiveBack.md",
+    "CTF/Hack The Box/Write Up/Browsed.md",
     "Assets/CTF/Hack The Box/Write Up/Browsed/IMG-20260114014524334.png",
     "Assets/CTF/Hack The Box/Write Up/Browsed/IMG-20260114014511658.png",
     "Assets/CTF/Hack The Box/Write Up/Browsed/IMG-20260111132014096.png",
