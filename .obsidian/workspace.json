@@ -36,18 +36,6 @@
             }
           },
           {
-            "id": "4be4c3bf45ea173d",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.11.4"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.11.4"
-            }
-          },
-          {
             "id": "c32b883926dab2f3",
             "type": "leaf",
             "state": {
@@ -76,7 +64,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -258,7 +246,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 204.5
+    "width": 570.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -277,13 +265,15 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "a5ffc6bc57a78589",
+  "active": "e2aa3986dab62d71",
   "lastOpenFiles": [
-    "Web/Tools.md",
     "CTF/Hack The Box/Write Up/Browsed.md",
-    "CTF/Hack The Box/Write Up/GiveBack.md",
-    "Assets/CTF/Hack The Box/Write Up/Browsed/IMG-20260111132014096.png",
+    "Web/Tools.md",
     "Web/Word List.md",
+    "CTF/Hack The Box/Write Up/GiveBack.md",
+    "Assets/CTF/Hack The Box/Write Up/Browsed/IMG-20260114014524334.png",
+    "Assets/CTF/Hack The Box/Write Up/Browsed/IMG-20260114014511658.png",
+    "Assets/CTF/Hack The Box/Write Up/Browsed/IMG-20260111132014096.png",
     "Web/Portswigger/SQLi.md",
     "Web/JWT.md",
     "Linux/Privilege Escalation.md",
@@ -302,8 +292,6 @@
     "ECE/SOC/Cours 4.md",
     "Assets/ECE/SOC/Projet/IMG-20251229024836924.png",
     "Assets/ECE/SOC/Projet/IMG-20251229024818173.png",
-    "Assets/ECE/SOC/Projet/IMG-20251229024803017.png",
-    "Assets/ECE/SOC/Projet/IMG-20251229023044930.png",
     "Assets/ECE/SOC/Projet",
     "Assets/SOC_Module4- Techniques dattaques  Investigation.pdf",
     "ECE/SOC/Cours 1.md",
