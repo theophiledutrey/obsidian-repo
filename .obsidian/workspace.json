@@ -63,7 +63,8 @@
               "title": "Word List"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -117,7 +118,7 @@
             }
           },
           {
-            "id": "cd9d809911b00284",
+            "id": "6b9a90b077aee8a9",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -264,39 +265,40 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "8d21f9a4b5958799",
+  "active": "d17d31db192ca521",
   "lastOpenFiles": [
+    "Assets/CTF/Hack The Box/Write Up/Browsed/IMG-20260115004512846.png",
+    "Assets/CTF/Hack The Box/Write Up/Browsed/IMG-20260115004437383.png",
+    "Assets/CTF/Hack The Box/Write Up/Browsed/IMG-20260115004424242.png",
+    "Assets/CTF/Hack The Box/Write Up/Browsed/IMG-20260115004400334.png",
+    "Assets/CTF/Hack The Box/Write Up/Browsed/IMG-20260115004345840.png",
+    "Assets/CTF/Hack The Box/Write Up/Browsed/IMG-20260115004105079.png",
+    "Assets/CTF/Hack The Box/Write Up/Browsed/IMG-20260115002732252.png",
+    "Assets/CTF/Hack The Box/Write Up/Browsed/IMG-20260115002700446.png",
+    "Assets/CTF/Hack The Box/Write Up/Browsed/IMG-20260115002645465.png",
+    "CTF/Hack The Box/Write Up/NanoCorp.md",
     "CTF/Hack The Box/Write Up/GiveBack.md",
     "CTF/Hack The Box/Write Up/Browsed.md",
     "Web/Word List.md",
     "Web/Tools.md",
     "Assets/CTF/Hack The Box/Write Up/Browsed/IMG-20260114014524334.png",
     "Assets/CTF/Hack The Box/Write Up/Browsed/IMG-20260114014511658.png",
-    "Assets/CTF/Hack The Box/Write Up/Browsed/IMG-20260111132014096.png",
     "Web/Portswigger/SQLi.md",
     "Web/JWT.md",
     "Linux/Privilege Escalation.md",
     "Linux/Exegol.md",
     "Assets/CTF/Hack The Box/Write Up/Browsed",
-    "Assets/CTF/Hack The Box/Write Up/Browsed/IMG-20260111125221658.png",
     "Linux/Hyprland .md",
     "CTF/Hack The Box/Write Up/Guardian Hack The Box.md",
     "CTF/Hack The Box/Write Up/Gavel.md",
     "conflict-files-obsidian-git.md",
-    "Assets/ECE/SOC/Projet/IMG-20251228023058693.png",
-    "Assets/ECE/SOC/Projet/IMG-20251228023036446.png",
-    "Assets/ECE/SOC/Projet/IMG-20251228023008497.png",
-    "Assets/ECE/SOC/Projet/IMG-20251228022951726.png",
     "ECE/SOC/Projet.md",
     "ECE/SOC/Cours 4.md",
-    "Assets/ECE/SOC/Projet/IMG-20251229024836924.png",
-    "Assets/ECE/SOC/Projet/IMG-20251229024818173.png",
     "Assets/ECE/SOC/Projet",
     "Assets/SOC_Module4- Techniques dattaques  Investigation.pdf",
     "ECE/SOC/Cours 1.md",
     "ECE/Stage/rapport_CTF_XMCO_Theophile_Dutrey .pdf",
     "ECE/Stage/CTF XMCO.md",
-    "CTF/Hack The Box/Write Up/NanoCorp.md",
     "CTF/Hackropole/meme-generator.md",
     "Assets/CTF/Hackropole/meme-generator",
     "Assets/CTF/Hackropole",
