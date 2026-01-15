@@ -15,5 +15,11 @@ python3 CVE-2024-5932-rce.py \
 
 ![[IMG-20260115190900250.png]]
 
+![[IMG-20260115194320820.png]]
+
+![[IMG-20260115194345293.png]]
+
+![[IMG-20260115194433931.png]]
+
 
 nikto binaire pour footprinter un siteweb et vérifier plein de chose
