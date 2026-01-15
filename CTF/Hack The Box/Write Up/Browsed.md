@@ -101,6 +101,9 @@ On peut exécuter un script python en root qui télécharge des module dans exte
 On observer aussi que le dossier __pycache__ est writable. 
 `__pycache__` est un répertoire utilisé par Python pour stocker les fichiers **bytecode compilés** (`.pyc`).  
 Lorsqu’un module Python est importé, Python le compile en bytecode afin d’accélérer les imports suivants, puis enregistre ce bytecode dans `__pycache__`.
+https://realpython.com/python-pycache/
+![[IMG-20260115152236768.png]]
+
 
 Lors d’un import ultérieur, **si un fichier `.pyc` valide est présent**, Python peut l’exécuter directement **sans relire le fichier source `.py`**, à condition que ses métadonnées internes (timestamp et taille du fichier source) correspondent.
 Voici les metadonné du fichiers extension_utils.py:
