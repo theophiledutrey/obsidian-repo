@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/Hack The Box/Write Up/GiveBack.md",
+                "file": "Pentest Tools/Ligolo.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GiveBack"
+              "title": "Ligolo"
             }
           },
           {
@@ -55,16 +55,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/Hack The Box/Write Up/Gavel.md",
+                "file": "CTF/Hack The Box/Write Up/GiveBack.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Gavel"
+              "title": "GiveBack"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -265,24 +265,31 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "e77a0a6975e217c3",
+  "active": "256d773e7411605a",
   "lastOpenFiles": [
-    "Assets/CTF/Hack The Box/Write Up/GiveBack/IMG-20260115194433931.png",
-    "Assets/CTF/Hack The Box/Write Up/GiveBack/IMG-20260115194345293.png",
-    "Assets/CTF/Hack The Box/Write Up/GiveBack/IMG-20260115194320820.png",
-    "Assets/CTF/Hack The Box/Write Up/GiveBack/IMG-20260115190938163.png",
-    "Assets/CTF/Hack The Box/Write Up/GiveBack/IMG-20260115190900250.png",
-    "CTF/Hack The Box/Write Up/Gavel.md",
+    "Assets/CTF/Hack The Box/Write Up/GiveBack/IMG-20260116031357685.png",
+    "Assets/CTF/Hack The Box/Write Up/GiveBack/IMG-20260116031343651.png",
+    "Assets/CTF/Hack The Box/Write Up/GiveBack/IMG-20260116030630630.png",
+    "Assets/CTF/Hack The Box/Write Up/GiveBack/IMG-20260116030420077.png",
+    "Assets/CTF/Hack The Box/Write Up/GiveBack/IMG-20260116030342781.png",
+    "Assets/CTF/Hack The Box/Write Up/GiveBack/IMG-20260116030316748.png",
+    "Pentest Tools/Ligolo.md",
     "CTF/Hack The Box/Write Up/GiveBack.md",
+    "CTF/Hack The Box/Write Up/Gavel.md",
+    "Assets/Pentest Tools/Ligolo/IMG-20260116024455568.png",
+    "Assets/Pentest Tools/Ligolo/IMG-20260116024225006.png",
+    "Assets/Pentest Tools/Ligolo/IMG-20260116024154786.png",
+    "Assets/Pentest Tools/Ligolo/IMG-20260116023207217.png",
+    "Assets/Pentest Tools/Ligolo/IMG-20260116023135864.png",
+    "Assets/Pentest Tools/Ligolo",
+    "Assets/Pentest Tools",
+    "Pentest Tools/Nmap.md",
+    "Pentest Tools/Metasploit.md",
+    "Pentest Tools/Link.md",
+    "Pentest Tools/Crypto.md",
     "Assets/CTF/Hack The Box/Write Up/GiveBack",
-    "Assets/CTF/Hack The Box/Write Up/GiveBack/IMG-20260115182823570.png",
     "Web/Tools.md",
     "CTF/Hack The Box/Write Up/Browsed.md",
-    "Assets/CTF/Hack The Box/Write Up/Browsed/IMG-20260115152236768.png",
-    "Assets/CTF/Hack The Box/Write Up/Browsed/IMG-20260115152224168.png",
-    "Assets/CTF/Hack The Box/Write Up/Browsed/IMG-20260115133827978.png",
-    "Assets/CTF/Hack The Box/Write Up/Browsed/IMG-20260115133726301.png",
-    "Assets/CTF/Hack The Box/Write Up/Browsed/IMG-20260115133643808.png",
     "CTF/Hack The Box/Write Up/NanoCorp.md",
     "Web/Word List.md",
     "Web/Portswigger/SQLi.md",
@@ -305,14 +312,7 @@
     "Assets/CTF/Hackropole",
     "ECE/Stage/CTF OCD PENTEST.md",
     "CTF/Hackropole/Monopoly.md",
-    "CTF/Hack The Box/Write Up/Conversor.md",
-    "ECE/SOC/Cours 5.md",
-    "ECE/SOC/TP 1.md",
-    "ECE/Reverse/Exo.md",
-    "CTF/Hackropole/Hackropole.md",
     "CTF/Hackropole",
-    "Assets/SOC-Fundamentals_Projet.pdf",
-    "Assets/ECE/Reverse/Lab",
     "Web/Untitled.canvas",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",

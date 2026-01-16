@@ -17,9 +17,23 @@ python3 CVE-2024-5932-rce.py \
 
 ![[IMG-20260115194320820.png]]
 
+Machine Cible:
 ![[IMG-20260115194345293.png]]
 
+Machine atttaquante:
 ![[IMG-20260115194433931.png]]
+![[IMG-20260116030630630.png]]
+![[IMG-20260116030316748.png]]
 
+Variable environnement:
+![[IMG-20260116030342781.png]]
 
-nikto binaire pour footprinter un siteweb et vérifier plein de chose
+```
+LEGACY_INTRANET_SERVICE_PORT=tcp://10.43.2.241:5000
+```
+
+![[IMG-20260116030420077.png]]
+
+On utilise nikto pour footprinter les siteweb:
+![[IMG-20260116031357685.png]]
+

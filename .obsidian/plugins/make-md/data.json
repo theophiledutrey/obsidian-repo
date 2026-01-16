@@ -69,14 +69,11 @@
     "//Assets/Assets/ECE/Assets/ECE/Stage",
     "//ECE/ECE/Stage",
     "//Assets/Assets/ECE",
-    "//Linux",
-    "//Web",
-    "//ECE",
     "//CTF",
     "//ECE/ECE/Reverse",
     "//CTF/CTF/Hackropole",
-    "//ECE/ECE/SOC",
-    "//CTF/CTF/Hack The Box"
+    "//CTF/CTF/Hack The Box",
+    "//Pentest Tools"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
