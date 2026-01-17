@@ -41,3 +41,4 @@ LEGACY_INTRANET_SERVICE_PORT=tcp://10.43.2.241:5000
 On utilise nikto pour footprinter les siteweb:
 ![[IMG-20260116031357685.png]]
 
+/cgi-bin/php-cgi
