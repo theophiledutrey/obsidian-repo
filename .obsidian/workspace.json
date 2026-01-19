@@ -62,20 +62,6 @@
               "icon": "lucide-file",
               "title": "GiveBack"
             }
-          },
-          {
-            "id": "8143a2a9c8e74fb7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CTF/Hack The Box/Write Up/Browsed.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Browsed"
-            }
           }
         ],
         "currentTab": 3
@@ -282,6 +268,9 @@
   },
   "active": "256d773e7411605a",
   "lastOpenFiles": [
+    "Assets/CTF/Hack The Box/Write Up/GiveBack/IMG-20260119144347787.png",
+    "Pentest Tools/Ligolo.md",
+    "CTF/Hack The Box/Write Up/GiveBack.md",
     "CTF/Hack The Box/Write Up/Browsed.md",
     "Linux/Privilege Escalation.md",
     "Linux/Command.md",
@@ -290,8 +279,6 @@
     "Web/Tools.md",
     "Linux/Capabilities.md",
     "Linux/UID.md",
-    "Pentest Tools/Ligolo.md",
-    "CTF/Hack The Box/Write Up/GiveBack.md",
     "Assets/CTF/Hack The Box/Write Up/GiveBack/IMG-20260119004711181.png",
     "Assets/CTF/Hack The Box/Write Up/GiveBack/IMG-20260119004645953.png",
     "Assets/CTF/Hack The Box/Write Up/GiveBack/IMG-20260119004545787.png",
@@ -324,7 +311,6 @@
     "ECE/SOC/Cours 4.md",
     "Assets/ECE/SOC/Projet",
     "Assets/SOC_Module4- Techniques dattaques  Investigation.pdf",
-    "ECE/SOC/Cours 1.md",
     "Assets/CTF/Hackropole/meme-generator",
     "Assets/CTF/Hackropole",
     "CTF/Hackropole",
