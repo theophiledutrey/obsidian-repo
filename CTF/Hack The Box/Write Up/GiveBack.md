@@ -41,7 +41,7 @@ LEGACY_INTRANET_SERVICE_PORT=tcp://10.43.2.241:5000
 On utilise nikto pour footprinter les siteweb:
 ![[IMG-20260118160714840.png]]
 
-/cgi-bin/php-cgi
+
 [HackTricks](https://book.hacktricks.wiki/en/network-services-pentesting/pentesting-web/cgi.html#old-php--cgi--rce-cve-2012-1823-cve-2012-2311)
 
 
