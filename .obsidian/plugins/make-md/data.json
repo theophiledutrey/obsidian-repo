@@ -75,7 +75,8 @@
     "//Pentest Tools",
     "//Linux",
     "//Web",
-    "//Infra"
+    "//Infra",
+    "//Infra/Infra/terraform"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",

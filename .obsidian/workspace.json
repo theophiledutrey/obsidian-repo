@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Infra/Terraform.md",
+                "file": "Infra/terraform/Commandes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Terraform"
+              "title": "Commandes"
             }
           }
         ],
@@ -253,8 +253,12 @@
   },
   "active": "78d935e8874e3568",
   "lastOpenFiles": [
-    "CTF/Hack The Box/Write Up/GiveBack.md",
+    "Infra/terraform/Deploy.md",
+    "Infra/terraform/Commandes.md",
     "Infra/Terraform.md",
+    "Infra/terraform/terraform.md",
+    "Infra/terraform",
+    "CTF/Hack The Box/Write Up/GiveBack.md",
     "Web/Word List.md",
     "Pentest Tools/Ligolo.md",
     "Assets/CTF/Hack The Box/Write Up/GiveBack/IMG-20260119152347328.png",
@@ -291,14 +295,10 @@
     "Assets/CTF/Hack The Box/Write Up/Browsed",
     "Linux/Hyprland .md",
     "CTF/Hack The Box/Write Up/Guardian Hack The Box.md",
-    "conflict-files-obsidian-git.md",
-    "ECE/SOC/Projet.md",
-    "ECE/SOC/Cours 4.md",
     "Assets/ECE/SOC/Projet",
     "Assets/SOC_Module4- Techniques dattaques  Investigation.pdf",
     "Assets/CTF/Hackropole/meme-generator",
     "Assets/CTF/Hackropole",
-    "CTF/Hackropole",
     "Web/Untitled.canvas",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
