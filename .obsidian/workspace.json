@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Infra/Terraform/Commandes.md",
+                "file": "Linux/Privilege Escalation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Commandes"
+              "title": "Privilege Escalation"
             }
           }
         ],
@@ -253,8 +253,8 @@
   },
   "active": "78d935e8874e3568",
   "lastOpenFiles": [
-    "Infra/Terraform/Terraform.md",
     "Infra/Terraform/Commandes.md",
+    "Infra/Terraform/Terraform.md",
     "Infra/Terraform/Deploy.md",
     "Infra/Terraform.md",
     "Infra/Terraform",

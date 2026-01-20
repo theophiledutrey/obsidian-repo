@@ -109,6 +109,10 @@ virsh -c qemu:///system undefine ubuntu-tf
 ```bash
 virsh -c qemu:///system domifaddr ubuntu-tf
 ```
+ou 
+```
+virsh -c qemu:///system net-dhcp-leases default
+```
 
 ---
 
