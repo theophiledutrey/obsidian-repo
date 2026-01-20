@@ -199,35 +199,8 @@ scp -i ../key/terraform-key ubuntu@IP_DE_LA_VM:/home/ubuntu/log.txt .
 ssh -i ../key/terraform-key ubuntu@IP_DE_LA_VM "uptime"
 ```
 
----
 
-## 4) Règles d’usage importantes
-
-### Terraform vs virsh
-
-Créer ou modifier l’infrastructure : Terraform
-
-Détruire proprement l’infrastructure : Terraform
-
-Démarrer ou arrêter une VM : virsh
-
-Inspecter ou déboguer une VM : virsh
-
-Utiliser l’OS dans la VM : SSH
-
----
-
-### À ne pas faire
-
-Ne pas supprimer une VM avec `virsh undefine` si elle est gérée par Terraform.
-
-Ne pas modifier manuellement les disques de la VM.
-
-Ne pas changer le réseau dans virt-manager.
-
----
-
-## 5) Cheat-sheet minimal
+## 4) Cheat-sheet minimal
 
 ```bash
 # Terraform

@@ -41,7 +41,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Infra/terraform/Commandes.md",
+                "file": "Infra/Terraform/Commandes.md",
                 "mode": "source",
                 "source": false
               },
@@ -253,11 +253,11 @@
   },
   "active": "78d935e8874e3568",
   "lastOpenFiles": [
-    "Infra/terraform/Deploy.md",
-    "Infra/terraform/Commandes.md",
+    "Infra/Terraform/Terraform.md",
+    "Infra/Terraform/Commandes.md",
+    "Infra/Terraform/Deploy.md",
     "Infra/Terraform.md",
-    "Infra/terraform/terraform.md",
-    "Infra/terraform",
+    "Infra/Terraform",
     "CTF/Hack The Box/Write Up/GiveBack.md",
     "Web/Word List.md",
     "Pentest Tools/Ligolo.md",

@@ -76,7 +76,8 @@
     "//Linux",
     "//Web",
     "//Infra",
-    "//Infra/Infra/terraform"
+    "//Infra/Infra/terraform",
+    "//Infra/Infra/Terraform"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
