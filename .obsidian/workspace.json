@@ -48,21 +48,9 @@
               "icon": "lucide-file",
               "title": "Commandes"
             }
-          },
-          {
-            "id": "c1f983ef0197e100",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.11.5"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.11.5"
-            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -116,7 +104,7 @@
             }
           },
           {
-            "id": "e4b7a53e2581b1c7",
+            "id": "03afd834ce0cfe47",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -263,10 +251,10 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "c1f983ef0197e100",
+  "active": "e2aa3986dab62d71",
   "lastOpenFiles": [
-    "Infra/Terraform/Deploy.md",
     "Infra/Terraform/Commandes.md",
+    "Infra/Terraform/Deploy.md",
     "Linux/Privilege Escalation.md",
     "Web/Tools.md",
     "Web/Word List.md",
