@@ -25,7 +25,7 @@ ssh-keygen -R 192.168.122.100
 ## Chall 3
 
 ```
-USER: martin
+USER: chall3
 SSH PASSWORD: Th1s_Ch4ll_Is_N0t_S0_E4sy
 ```
 
