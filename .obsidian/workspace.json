@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CTF/Chall CTF ECE.md",
+                "file": "CTF/Hack The Box/Write Up/CodeTwo Hack The Box.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Chall CTF ECE"
+              "title": "CodeTwo Hack The Box"
             }
           }
         ],
@@ -118,7 +118,7 @@
             }
           },
           {
-            "id": "30b5c62440b32f60",
+            "id": "52f5715761efa67e",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -246,7 +246,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 564.5
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -267,16 +268,23 @@
   },
   "active": "d98e136340de0c45",
   "lastOpenFiles": [
+    "CTF/Hack The Box/Write Up/Browsed.md",
+    "CTF/Hack The Box/Write Up/Eighteen.md",
+    "CTF/Hack The Box/Write Up/GiveBack.md",
+    "CTF/Hack The Box/Write Up/Guardian Hack The Box.md",
+    "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
+    "CTF/Hack The Box/Write Up/Soulmate Hack The Box.md",
+    "CTF/Hack The Box/Write Up/Conversor.md",
+    "CTF/Hack The Box/Write Up/MonitorsFour.md",
+    "CTF/Chall CTF ECE.md",
     "Assets/Pasted image 20260122184756.png",
     "Assets/Pasted image 20260122184347.png",
     "Assets/Pasted image 20260122184216.png",
     "Assets/Pasted image 20260122184102.png",
-    "CTF/Chall CTF ECE.md",
     "CTF/Hack The Box/Hack The Box.md",
     "Infra/Terraform/Commandes.md",
     "Infra/Terraform/Deploy.md",
     "Infra/Terraform/Untitled.pdf",
-    "CTF/Hack The Box/Write Up/Browsed.md",
     "Web/Word List.md",
     "Web/Tools.md",
     "CTF/CTF.md",
@@ -284,7 +292,6 @@
     "Infra/Terraform/Terraform.md",
     "Infra/Terraform.md",
     "Infra/Terraform",
-    "CTF/Hack The Box/Write Up/GiveBack.md",
     "Pentest Tools/Ligolo.md",
     "Assets/CTF/Hack The Box/Write Up/GiveBack/IMG-20260119152347328.png",
     "Assets/CTF/Hack The Box/Write Up/GiveBack/IMG-20260119152253537.png",
@@ -297,18 +304,12 @@
     "Linux/Analyse.md",
     "Linux/Capabilities.md",
     "Linux/UID.md",
-    "Assets/CTF/Hack The Box/Write Up/GiveBack/IMG-20260119004711181.png",
     "ECE/Stage/rapport_CTF_XMCO_Theophile_Dutrey .pdf",
     "CTF/Hack The Box/Write Up/Gavel.md",
     "Assets/Pentest Tools/Ligolo",
     "Assets/Pentest Tools",
     "Pentest Tools/Nmap.md",
-    "Pentest Tools/Metasploit.md",
-    "Pentest Tools/Link.md",
-    "Pentest Tools/Crypto.md",
     "Assets/CTF/Hack The Box/Write Up/GiveBack",
-    "CTF/Hack The Box/Write Up/NanoCorp.md",
-    "Web/Portswigger/SQLi.md",
     "Assets/CTF/Hack The Box/Write Up/Browsed",
     "Assets/ECE/SOC/Projet",
     "Assets/SOC_Module4- Techniques dattaques  Investigation.pdf",

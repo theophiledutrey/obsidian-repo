@@ -76,7 +76,8 @@
     "//Infra",
     "//Infra/Infra/terraform",
     "//Infra/Infra/Terraform",
-    "//CTF"
+    "//CTF",
+    "//CTF/CTF/Hack The Box"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
