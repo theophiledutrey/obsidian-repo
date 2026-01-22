@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Infra/Terraform/Deploy.md",
+                "file": "CTF/Chall CTF ECE.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Deploy"
+              "title": "Chall CTF ECE"
             }
           }
         ],
@@ -267,9 +267,11 @@
   },
   "active": "d98e136340de0c45",
   "lastOpenFiles": [
-    "Infra/Terraform/Untitled.pdf",
-    "Infra/Terraform/Deploy.md",
+    "CTF/Chall CTF ECE.md",
+    "CTF/Hack The Box/Hack The Box.md",
     "Infra/Terraform/Commandes.md",
+    "Infra/Terraform/Deploy.md",
+    "Infra/Terraform/Untitled.pdf",
     "CTF/Hack The Box/Write Up/Browsed.md",
     "Web/Word List.md",
     "Web/Tools.md",
@@ -307,7 +309,6 @@
     "CTF/Hack The Box/Write Up/NanoCorp.md",
     "Web/Portswigger/SQLi.md",
     "Web/JWT.md",
-    "Linux/Exegol.md",
     "Assets/CTF/Hack The Box/Write Up/Browsed",
     "Assets/ECE/SOC/Projet",
     "Assets/SOC_Module4- Techniques dattaques  Investigation.pdf",
