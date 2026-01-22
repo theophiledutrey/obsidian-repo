@@ -77,7 +77,8 @@
     "//Web",
     "//Infra",
     "//Infra/Infra/terraform",
-    "//Infra/Infra/Terraform"
+    "//Infra/Infra/Terraform",
+    "//CTF"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
