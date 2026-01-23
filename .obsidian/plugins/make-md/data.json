@@ -66,9 +66,7 @@
     "//ECE/ECE/llm/ECE/llm/llm-cybesecurity-labs-project",
     "//ECE/ECE/llm/ECE/llm/llm-cybesecurity-labs-project/ECE/llm/llm-cybesecurity-labs-project/starter-project/ECE/llm/llm-cybesecurity-labs-project/starter-project/llm-sec-final-project-starter",
     "//Assets/Assets/ECE/Assets/ECE/Stage",
-    "//ECE/ECE/Stage",
     "//Assets/Assets/ECE",
-    "//ECE/ECE/Reverse",
     "//Pentest Tools",
     "//Linux",
     "//Web",
@@ -80,7 +78,8 @@
     "//Write up",
     "//Write up/Write up/Hack The Box",
     "//Write up/Write up/ECE",
-    "//Write up/Write up/Hack The Box/Write up/Hack The Box/Boxe"
+    "//Write up/Write up/Hack The Box/Write up/Hack The Box/Boxe",
+    "//ECE"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
