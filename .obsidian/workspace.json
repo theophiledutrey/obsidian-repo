@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Write up/ECE/Formation Privesc ECE.md",
+                "file": "Linux/Reverse Shell.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Formation Privesc ECE"
+              "title": "Reverse Shell"
             }
           },
           {
@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/Analyse.md",
+                "file": "Write up/Hack The Box/Boxe/Browsed.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Analyse"
+              "title": "Browsed"
             }
           }
         ],
@@ -293,9 +293,13 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "e2aa3986dab62d71",
+  "active": "5093656c75fb10be",
   "lastOpenFiles": [
     "Write up/ECE/Formation Privesc ECE.md",
+    "Linux/Reverse Shell.md",
+    "Write up/Hack The Box/Boxe/Browsed.md",
+    "Write up/Hack The Box/Boxe/CodeTwo Hack The Box.md",
+    "Linux/Analyse.md",
     "Assets/Write up/ECE/Formation Privesc ECE",
     "Assets/Write up/ECE/Formation ECE",
     "Write up/Hack The Box/Achievement.md",
@@ -321,16 +325,13 @@
     "Assets/Write up/ECE/Formation Privesc ECE/IMG-20260123023204719.png",
     "Assets/Write up/ECE/Formation Privesc ECE/IMG-20260123023204688.png",
     "Assets/Write up/ECE/Formation Privesc ECE/IMG-20260123023204646.png",
-    "Linux/Analyse.md",
     "Infra/Terraform/Commandes.md",
     "Linux/Privilege Escalation.md",
     "Write up/Hack The Box/Boxe/GiveBack.md",
     "Web/Tools.md",
     "Web/Word List.md",
-    "Write up/Hack The Box/Boxe/Browsed.md",
     "Infra/Terraform/Deploy.md",
     "Write up/Hack The Box/Boxe/NanoCorp.md",
-    "Write up/Hack The Box/Boxe/CodeTwo Hack The Box.md",
     "Write up/Hack The Box/Boxe/Eighteen.md",
     "Write up/Hack The Box/Boxe/Guardian Hack The Box.md",
     "Write up/Hack The Box/Boxe/Previous Hack The Box.md",
