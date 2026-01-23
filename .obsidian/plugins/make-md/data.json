@@ -44,7 +44,6 @@
     "//Photos/Photos/Write up/Photos/Write up/CodeTwo Hack The Box",
     "//Photos/Photos/Achievement",
     "//Tags",
-    "//Write up/Write up/Hack The Box",
     "//Assets/Assets/CTF/Assets/CTF/Hack The Box/Assets/CTF/Hack The Box/Write Up",
     "/",
     "//ECE/ECE/SecuSI/ECE/SecuSI/Stego/ECE/SecuSI/Stego/Lab",
@@ -76,8 +75,11 @@
     "//Infra",
     "//Infra/Infra/terraform",
     "//Infra/Infra/Terraform",
+    "//CTF/CTF/ECE",
     "//CTF",
-    "//CTF/CTF/Hack The Box"
+    "//Write up",
+    "//Write up/Write up/Hack The Box",
+    "//Write up/Write up/ECE"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
