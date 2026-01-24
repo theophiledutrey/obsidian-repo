@@ -1,38 +1,21 @@
-
-
-## 🧱 Architecture finale
-
-```
-CTFd (UI)
-  │
-  ├── Plugin ctfd-chall-manager
-  │       │
-  │       └── Chall-Manager (API)
-  │               ├── Terraform
-  │               ├── libvirt (socket host)
-  │               ├── mkisofs / cloud-init
-  │               └── Registry OCI
-  │
-  └── MySQL / Redis / Nginx
-
-VMs libvirt (sur le host)
-```
-
----
-
-## ⚙️ Prérequis host
+## Prérequis host
 
 Sur la machine hôte (Linux) :
 
 ```bash
-sudo apt install -y \
+sudo apt update && sudo apt install -y \
+  curl \
+  unzip \
+  kitty-terminfo \
   qemu-kvm \
   libvirt-daemon-system \
   libvirt-clients \
   virtinst \
-  bridge-utils
-
-sudo systemctl enable --now libvirtd
+  bridge-utils \
+  ca-certificates \
+  gnupg \
+  lsb-release \
+  genisoimage
 ```
 
 Vérification :
@@ -43,7 +26,7 @@ virsh list --all
 
 ---
 
-## 📦 Étape 1 — Installation du plugin CTFd
+## Étape 1 — Installation du plugin CTFd
 
 Dans le repo CTFd :
 
@@ -56,7 +39,7 @@ Penser à changer le nom du plugin: ctfd-chall-manager -> ctfd_chall_manager
 
 ---
 
-## 🧩 Étape 2 — Docker Compose principal (CTFd + Chall-Manager)
+## Étape 2 — Docker Compose principal (CTFd + Chall-Manager)
 
 ### docker-compose.yml (extrait clé)
 
@@ -102,11 +85,11 @@ Penser à changer le nom du plugin: ctfd-chall-manager -> ctfd_chall_manager
       - internal
 ```
 
-⚠️ **Important** : `PLUGIN_SETTINGS_CM_API_URL=http://chall-manager:8080` dans le service `ctfd`
+ **Important** : `PLUGIN_SETTINGS_CM_API_URL=http://chall-manager:8080` dans le service `ctfd`
 
 ---
 
-## 🐳 Étape 3 — Dockerfile chall-manager custom
+##  Étape 3 — Dockerfile chall-manager custom
 
 ### Dockerfile.chall-manager
 
@@ -138,7 +121,7 @@ RUN curl -fsSL https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/ter
 
 ---
 
-## 🔨 Étape 4 — Build & run
+##  Étape 4 — Build & run
 
 ```bash
 docker compose down
@@ -156,7 +139,7 @@ docker exec -it ctfd-chall-manager-1 virsh list --all
 
 ---
 
-## 🧪 Étape 5 — Création du scénario (docker-scenario)
+##  Étape 5 — Création du scénario (docker-scenario)
 
 ### Arborescence
 
@@ -407,7 +390,7 @@ bash build.sh
 
 ---
 
-## 🎮 Étape 6 — Création du challenge dans CTFd
+##  Étape 6 — Création du challenge dans CTFd
 
 - Type : **Dynamic / Chall-Manager**
 - Scenario :
@@ -417,6 +400,10 @@ registry:5000/examples/terraform-libvirt:latest
 ```
 
 ---
+
+## Étape 7 — Création des dépendances Terraform
+
+
 
 ## 🚀 Étape 9 — Lancement d’une instance
 
