@@ -18,11 +18,6 @@ sudo apt update && sudo apt install -y \
   genisoimage
 ```
 
-Vérification :
-
-```bash
-virsh list --all
-```
 
 ---
 
@@ -1079,18 +1074,6 @@ sudo systemctl enable --now libvirtd
 ##  Étape 8 — Lancement d’une instance
 
 Dans CTFd → **Launch instance**
-
-Sur le host :
-
-```bash
-virsh list --all
-```
-
-Résultat attendu :
-
-```
-chall1-<id>   running
-```
 
 ---
 
