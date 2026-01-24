@@ -1,26 +1,4 @@
-# 🧠 CTFd + Chall-Manager + Terraform + Libvirt (Guide complet)
 
-> Fiche **pas à pas**, reproductible à l’identique, basée sur une installation fonctionnelle validée.  
-> Formaté pour **Obsidian** (Markdown).
-
----
-
-## 🎯 Objectif
-
-Mettre en place une plateforme CTF capable de :
-
-- Déployer **dynamiquement des VM par joueur**
-    
-- Via **CTFd + CTFd-Chall-Manager**
-    
-- En utilisant **Terraform + libvirt/KVM**
-    
-- Avec **cloud-init** pour la configuration initiale
-    
-- Nettoyage automatique via **Janitor**
-    
-
----
 
 ## 🧱 Architecture finale
 
@@ -74,12 +52,7 @@ cd CTFd/CTFd/plugins
 git clone https://github.com/ctfer-io/ctfd-chall-manager.git
 ```
 
-Puis redémarrage :
-
-```bash
-docker compose down
-docker compose up -d
-```
+Penser à changer le nom du plugin: ctfd-chall-manager -> ctfd_chall_manager
 
 ---
 
@@ -88,6 +61,7 @@ docker compose up -d
 ### docker-compose.yml (extrait clé)
 
 ```yaml
+
   chall-manager:
     build:
       context: .
@@ -99,9 +73,11 @@ docker compose up -d
       - /var/run/docker.sock:/var/run/docker.sock
       - /var/run/libvirt/libvirt-sock:/var/run/libvirt/libvirt-sock
       - /dev/kvm:/dev/kvm
+
     networks:
       - default
       - internal
+
 
   chall-manager-janitor:
     image: ctferio/chall-manager-janitor:v0.6.1
@@ -109,6 +85,21 @@ docker compose up -d
     environment:
       URL: chall-manager:8080
       TICKER: 1m
+    depends_on:
+      - chall-manager
+    networks:
+      - default
+      - internal
+
+
+  registry:
+    image: registry:2
+    restart: always
+    ports:
+      - 5000:5000
+    networks:
+      - default
+      - internal
 ```
 
 ⚠️ **Important** : `PLUGIN_SETTINGS_CM_API_URL=http://chall-manager:8080` dans le service `ctfd`
@@ -124,6 +115,7 @@ FROM ctferio/chall-manager:v0.6.1
 
 USER root
 
+
 RUN apt-get update && apt-get install -y \
     libvirt-clients \
     libvirt-daemon-system \
@@ -136,10 +128,10 @@ RUN apt-get update && apt-get install -y \
     unzip \
     && rm -rf /var/lib/apt/lists/*
 
+
 ENV TERRAFORM_VERSION=1.7.5
 
-RUN curl -fsSL https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip \
-    -o /tmp/terraform.zip \
+RUN curl -fsSL https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip -o /tmp/terraform.zip \
     && unzip /tmp/terraform.zip -d /usr/local/bin \
     && rm /tmp/terraform.zip
 ```
@@ -164,26 +156,7 @@ docker exec -it ctfd-chall-manager-1 virsh list --all
 
 ---
 
-## 📦 Étape 5 — Registry OCI locale
-
-Dans docker-compose :
-
-```yaml
-  registry:
-    image: registry:2
-    ports:
-      - 5000:5000
-```
-
-Vérification :
-
-```bash
-curl http://localhost:5000/v2/_catalog
-```
-
----
-
-## 🧪 Étape 6 — Création du scénario (docker-scenario)
+## 🧪 Étape 5 — Création du scénario (docker-scenario)
 
 ### Arborescence
 
@@ -199,78 +172,233 @@ hack/docker-scenario/
 
 ---
 
-## 🧠 main.go (Pulumi / Chall-Manager)
+## main.go 
 
-- Utilise `command:local` pour lancer Terraform
-    
-- Copie les fichiers dans `/tmp/challmgr-<instance_id>`
-    
-- Exécute :
-    
+```go
+package main
 
-```bash
-terraform init
-terraform apply -auto-approve
+import (
+	"fmt"
+	"strings"
+
+	"github.com/ctfer-io/chall-manager/sdk"
+	localcmd "github.com/pulumi/pulumi-command/sdk/go/command/local"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	sdk.Run(func(req *sdk.Request, resp *sdk.Response, opts ...pulumi.ResourceOption) error {
+		identity := req.Config.Identity
+		workdir := fmt.Sprintf("/tmp/challmgr-%s", identity)
+
+		applyCmd := fmt.Sprintf(`set -euo pipefail
+WORK="%s"
+mkdir -p "$WORK"
+
+# Copy only what terraform needs into per-instance workdir
+cp -f ./main.tf "$WORK/main.tf"
+cp -f ./cloud_init.cfg "$WORK/cloud_init.cfg"
+cp -f ./terraform.tfvars "$WORK/terraform.tfvars"
+
+cd "$WORK"
+terraform init -input=false -no-color
+terraform apply -auto-approve -input=false -no-color \
+  -var "instance_id=%s" \
+  -var-file="terraform.tfvars"
+`, workdir, identity)
+
+		destroyCmd := fmt.Sprintf(`set -euo pipefail
+WORK="%s"
+cd "$WORK"
+terraform destroy -auto-approve -input=false -no-color \
+  -var "instance_id=%s" \
+  -var-file="terraform.tfvars"
+`, workdir, identity)
+
+		tfApply, err := localcmd.NewCommand(req.Ctx, "terraform-apply", &localcmd.CommandArgs{
+			Create:      pulumi.String(applyCmd),
+			Delete:      pulumi.String(destroyCmd),
+			Interpreter: pulumi.StringArray{pulumi.String("/bin/bash"), pulumi.String("-c")},
+		}, opts...)
+		if err != nil {
+			return err
+		}
+
+		sshOutCmd := fmt.Sprintf(`set -euo pipefail
+cd "%s"
+terraform output -raw ssh_command -no-color
+`, workdir)
+
+		tfOut, err := localcmd.NewCommand(req.Ctx, "terraform-output-ssh", &localcmd.CommandArgs{
+			Create:      pulumi.String(sshOutCmd),
+			Interpreter: pulumi.StringArray{pulumi.String("/bin/bash"), pulumi.String("-c")},
+		}, pulumi.DependsOn([]pulumi.Resource{tfApply}))
+		if err != nil {
+			return err
+		}
+
+		resp.ConnectionInfo = tfOut.Stdout.ApplyT(func(s string) string {
+			return strings.TrimSpace(s)
+		}).(pulumi.StringOutput)
+
+		return nil
+	})
+}
 ```
 
-- Récupère les outputs (`ip`, `ssh_command`)
-    
+## main.tf
 
----
+```terraform
+terraform {
+  required_providers {
+    libvirt = {
+      source  = "dmacvicar/libvirt"
+      version = "0.7.6"
+    }
+  }
+}
 
-## ☁️ cloud_init.cfg
+provider "libvirt" {
+  uri = "qemu:///system"
+}
 
-- Création utilisateur `chall1`
-    
-- Mot de passe hashé
-    
-- Installation de packages
-    
-- Dépôt du flag
-    
+variable "instance_id" {
+  type        = string
+  description = "Unique instance ID (provided by Chall-Manager)"
+}
 
----
+variable "chall1_passwd" {
+  type        = string
+  description = "Hashed password for chall1 (cloud-init compatible hash)"
+}
 
-## 🧱 main.tf (Terraform libvirt)
+locals {
+  vm_name      = "chall1-${var.instance_id}"
+  volume_name  = "ubuntu-22.04-${var.instance_id}.qcow2"
+  cloudinit_iso = "cloudinit-${var.instance_id}.iso"
+}
 
-- libvirt_volume (image Ubuntu cloud)
-    
-- libvirt_cloudinit_disk
-    
-- libvirt_domain
-    
-- network `default`
-    
-- outputs :
-    
+resource "libvirt_volume" "ubuntu_image" {
+  name   = local.volume_name
+  pool   = "default"
+  source = "https://cloud-images.ubuntu.com/jammy/current/jammy-server-cloudimg-amd64.img"
+  format = "qcow2"
+}
 
-```hcl
-output "ip" {}
-output "ssh_command" {}
+resource "libvirt_cloudinit_disk" "commoninit" {
+  name = local.cloudinit_iso
+  pool = "default"
+
+  user_data = templatefile("${path.module}/cloud_init.cfg", {
+    chall1_passwd = var.chall1_passwd
+  })
+}
+
+resource "libvirt_domain" "vm" {
+  name   = local.vm_name
+  memory = 2048
+  vcpu   = 2
+
+  disk {
+    volume_id = libvirt_volume.ubuntu_image.id
+  }
+
+  network_interface {
+    network_name   = "default"
+    wait_for_lease = true
+  }
+
+  cloudinit = libvirt_cloudinit_disk.commoninit.id
+}
+
+output "ip" {
+  value = libvirt_domain.vm.network_interface[0].addresses[0]
+}
+
+output "ssh_command" {
+  value = "ssh chall1@${libvirt_domain.vm.network_interface[0].addresses[0]}"
+}
 ```
 
----
+## cloud_init.cfg
 
-## 📤 Étape 7 — Build et push du scénario
+```
+#cloud-config
 
-### build.sh
+ssh_pwauth: true
+disable_root: true
+
+users:
+  - name: chall1
+    groups: users
+    shell: /bin/bash
+    lock_passwd: false
+    passwd: ${chall1_passwd}
+
+package_update: true
+packages:
+  - vim
+  - sudo
+  - kitty-terminfo
+
+write_files:
+  - path: /etc/sudoers.d/chall1
+    permissions: "0440"
+    content: |
+      chall1 ALL=(root) NOPASSWD:/usr/bin/vim
+
+  - path: /root/flag.txt
+    permissions: "0600"
+    content: |
+      0xECE{V1m_Pr1v3sc_1s_Tr1v14l}
+
+runcmd:
+  - systemctl restart ssh
+```
+
+## terraform.tfvars
+
+```
+chall1_passwd = "$6$x0XKGtUkYGmgT0oX$NtEUYDjwmZJizWtw.X97RthISFsKNF8g1hirmkqhsGQociJ3aOeDgshyCqwNtgwiPFwxGFW2QDUXmw.T5EX9O."
+```
+
+## build.sh
 
 ```bash
 #!/bin/bash
+set -euo pipefail
 
 CGO_ENABLED=0 go build -o main main.go
-REGISTRY=${REGISTRY:-"localhost:5000/"}
 
+REGISTRY=${REGISTRY:-"localhost:5000/"}
+SCENARIO_REF="${REGISTRY}examples/terraform-libvirt:latest"
+
+cp Pulumi.yaml Pulumi.yaml.bkp
 yq e -i '.runtime = {"name": "go", "options": {"binary": "./main"}}' Pulumi.yaml
 
 oras push --insecure \
-  "${REGISTRY}examples/terraform-libvirt:latest" \
+  "${SCENARIO_REF}" \
   --artifact-type application/vnd.ctfer-io.scenario \
   main:application/vnd.ctfer-io.file \
   Pulumi.yaml:application/vnd.ctfer-io.file \
   main.tf:application/vnd.ctfer-io.file \
   cloud_init.cfg:application/vnd.ctfer-io.file \
   terraform.tfvars:application/vnd.ctfer-io.file
+
+rm -f main
+mv Pulumi.yaml.bkp Pulumi.yaml
+
+echo "Pushed scenario: ${SCENARIO_REF}"
+```
+
+```
+curl -L -o oras.tar.gz https://github.com/oras-project/oras/releases/download/v1.1.0/oras_1.1.0_linux_amd64.tar.gz
+```
+
+```
+tar -xzf oras.tar.gz
+sudo mv oras /usr/local/bin/
+oras version
 ```
 
 ```bash
@@ -279,19 +407,14 @@ bash build.sh
 
 ---
 
-## 🎮 Étape 8 — Création du challenge dans CTFd
+## 🎮 Étape 6 — Création du challenge dans CTFd
 
 - Type : **Dynamic / Chall-Manager**
-    
 - Scenario :
-    
 
 ```
 registry:5000/examples/terraform-libvirt:latest
 ```
-
-- Timeout, until, destroy on flag selon besoin
-    
 
 ---
 
@@ -313,47 +436,4 @@ chall1-<id>   running
 
 ---
 
-## 🧹 Étape 10 — Cleanup automatique
 
-- Géré par `chall-manager-janitor`
-    
-- Timeout
-    
-- Until
-    
-- Destroy on flag
-    
-
----
-
-## ✅ État final
-
-✔ Infra fonctionnelle  
-✔ Multi-instances  
-✔ Cloud-init  
-✔ Terraform  
-✔ Libvirt/KVM  
-✔ Nettoyage auto
-
----
-
-## 🚀 Améliorations possibles
-
-- Mot de passe unique par instance
-    
-- Affichage IP + SSH dans CTFd
-    
-- Hardening VM
-    
-- Réseau isolé par challenge
-    
-- Export infra en Terraform pur
-    
-
----
-
-## 🏁 Conclusion
-
-Cette stack permet de déployer des **challenges CTF réalistes, isolés et scalables**, comparables aux plateformes professionnelles.
-
-🔥 **Validé et reproductible.**
