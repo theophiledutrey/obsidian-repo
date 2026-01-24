@@ -396,7 +396,7 @@ bash build.sh
 - Scenario :
 
 ```
-registry:5000/examples/terraform-libvirt:latest
+registry:5000/privesc/chall-<id>
 ```
 
 ---
