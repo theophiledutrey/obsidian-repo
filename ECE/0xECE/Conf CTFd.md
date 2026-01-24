@@ -403,9 +403,56 @@ registry:5000/examples/terraform-libvirt:latest
 
 ## Étape 7 — Création des dépendances Terraform
 
+```
+sudo mkdir -p /var/lib/libvirt/images
+```
+
+```
+sudo virsh -c qemu:///system pool-define-as default dir - - - - "/var/lib/libvirt/images"
+```
+
+```
+sudo virsh -c qemu:///system pool-start default
+```
+
+```
+sudo virsh -c qemu:///system pool-autostart default
+```
+
+```
+sudo virsh -c qemu:///system pool-list --all
+```
+
+```
+sudo virsh -c qemu:///system net-list --all
+```
+
+```
+ls /usr/share/libvirt/networks/default.xml
+```
+
+```
+sudo virsh -c qemu:///system net-define /usr/share/libvirt/networks/default.xml
+```
+
+```
+sudo virsh -c qemu:///system net-start default
+```
+
+```
+sudo virsh -c qemu:///system net-autostart default
+```
+
+```
+sudo virsh -c qemu:///system net-list --all
+```
+
+```
+sudo systemctl enable --now libvirtd
+```
 
 
-## 🚀 Étape 9 — Lancement d’une instance
+##  Étape 8 — Lancement d’une instance
 
 Dans CTFd → **Launch instance**
 
