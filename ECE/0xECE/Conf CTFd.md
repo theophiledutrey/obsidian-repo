@@ -4,8 +4,6 @@ Sur la machine hôte (Linux) :
 
 ```bash
 sudo apt update && sudo apt install -y \
-  curl \
-  unzip \
   qemu-kvm \
   libvirt-daemon-system \
   libvirt-clients \
