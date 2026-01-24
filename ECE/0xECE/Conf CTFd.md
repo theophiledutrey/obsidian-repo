@@ -6,7 +6,6 @@ Sur la machine hôte (Linux) :
 sudo apt update && sudo apt install -y \
   curl \
   unzip \
-  kitty-terminfo \
   qemu-kvm \
   libvirt-daemon-system \
   libvirt-clients \
