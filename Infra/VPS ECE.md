@@ -80,3 +80,13 @@ sudo usermod -aG libvirt $USER
 sudo usermod -aG kvm $USER
 ```
 
+```
+sudo nano /etc/libvirt/qemu.conf
+
+user = "libvirt-qemu"
+group = "kvm"
+dynamic_ownership = 1
+security_driver = "none"
+namespaces = []
+```
+
