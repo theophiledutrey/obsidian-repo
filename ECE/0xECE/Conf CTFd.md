@@ -124,9 +124,9 @@ docker compose up -d
 Vérifications :
 
 ```bash
-docker exec -it ctfd-chall-manager-1 terraform --version
-docker exec -it ctfd-chall-manager-1 mkisofs --version
-docker exec -it ctfd-chall-manager-1 virsh list --all
+docker exec -it 0xece-chall-manager-1 terraform --version
+docker exec -it 0xece-chall-manager-1 mkisofs --version
+docker exec -it 0xece-chall-manager-1 virsh list --all
 ```
 
 ---
@@ -965,7 +965,7 @@ echo "Pushed scenario: ${SCENARIO_REF}"
 ---
 ## build_all.sh
 
-```
+```bash
 #!/bin/bash
 set -euo pipefail
 
