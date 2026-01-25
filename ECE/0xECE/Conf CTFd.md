@@ -12,7 +12,8 @@ sudo apt update && sudo apt install -y \
   ca-certificates \
   gnupg \
   lsb-release \
-  genisoimage
+  genisoimage \
+  golang
 ```
 
 
@@ -1006,6 +1007,11 @@ curl -L -o oras.tar.gz https://github.com/oras-project/oras/releases/download/v1
 tar -xzf oras.tar.gz
 sudo mv oras /usr/local/bin/
 oras version
+```
+
+```
+sudo wget -O /usr/local/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
+sudo chmod +x /usr/local/bin/yq
 ```
 
 ```bash
