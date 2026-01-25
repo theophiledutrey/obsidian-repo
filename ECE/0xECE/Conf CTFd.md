@@ -297,7 +297,9 @@ resource "libvirt_domain" "vm" {
   name   = local.vm_name
   memory = 2048
   vcpu   = 2
-
+  type   = "qemu"
+  emulator = "/usr/bin/qemu-system-x86_64" 
+  
   disk {
     volume_id = libvirt_volume.ubuntu_image.id
   }
@@ -403,7 +405,9 @@ resource "libvirt_domain" "vm" {
   name   = local.vm_name
   memory = 2048
   vcpu   = 2
-
+  type   = "qemu"
+  emulator = "/usr/bin/qemu-system-x86_64" 
+  
   disk {
     volume_id = libvirt_volume.ubuntu_root.id
   }
@@ -513,7 +517,9 @@ resource "libvirt_domain" "vm" {
   name   = local.vm_name
   memory = 2048
   vcpu   = 2
-
+  type   = "qemu"
+  emulator = "/usr/bin/qemu-system-x86_64" 
+  
   disk {
     volume_id = libvirt_volume.ubuntu_root.id
   }
