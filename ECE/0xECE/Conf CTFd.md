@@ -1087,3 +1087,47 @@ Dans CTFd → **Launch instance**
 ---
 
 
+```
+  chall-manager:
+    build:
+      context: .
+      dockerfile: Dockerfile.chall-manager
+    restart: always
+    privileged: true
+    cap_add:
+      - SYS_ADMIN
+      - NET_ADMIN
+    devices:
+      - /dev/kvm:/dev/kvm
+    environment:
+      OCI_INSECURE: true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/run/libvirt/libvirt-sock:/var/run/libvirt/libvirt-sock
+    networks:
+      - default
+      - challenges_internal
+
+
+  chall-manager-janitor:
+    image: ctferio/chall-manager-janitor:v0.6.1
+    restart: always
+    environment:
+      URL: chall-manager:8080
+      TICKER: 1m
+    depends_on:
+      - chall-manager
+    networks:
+      - default
+      - challenges_internal
+
+
+  registry:
+    image: registry:2
+    restart: always
+    ports:
+      - 5000:5000
+    networks:
+      - default
+      - challenges_internal
+```
