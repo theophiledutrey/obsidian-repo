@@ -63,8 +63,7 @@
               "title": "VPS ECE"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -265,13 +264,13 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "c3508cc2d2ad66c8",
+  "active": "ed1442abb49f6994",
   "lastOpenFiles": [
-    "Infra/Terraform/Deploy.md",
-    "ECE/0xECE/Conf CTFd.md",
-    "Infra/Terraform/Commandes.md",
     "Write up/ECE/Formation Privesc ECE.md",
     "Infra/VPS ECE.md",
+    "Infra/Terraform/Commandes.md",
+    "ECE/0xECE/Conf CTFd.md",
+    "Infra/Terraform/Deploy.md",
     "Web/JWT.md",
     "Linux/Reverse Shell.md",
     "Linux/Privilege Escalation.md",

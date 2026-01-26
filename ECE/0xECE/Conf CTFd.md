@@ -37,23 +37,26 @@ Penser à changer le nom du plugin: ctfd-chall-manager -> ctfd_chall_manager
 ### docker-compose.yml (extrait clé)
 
 ```yaml
-
   chall-manager:
     build:
       context: .
       dockerfile: Dockerfile.chall-manager
     restart: always
+    privileged: true
+    pid: "host"           
+    cap_add:
+      - SYS_ADMIN
+      - NET_ADMIN
+    devices:
+      - /dev/kvm:/dev/kvm
     environment:
       OCI_INSECURE: true
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /var/run/libvirt/libvirt-sock:/var/run/libvirt/libvirt-sock
-      - /dev/kvm:/dev/kvm
-
     networks:
       - default
-      - internal
-
+      - challenges_internal
 
   chall-manager-janitor:
     image: ctferio/chall-manager-janitor:v0.6.1
@@ -65,7 +68,7 @@ Penser à changer le nom du plugin: ctfd-chall-manager -> ctfd_chall_manager
       - chall-manager
     networks:
       - default
-      - internal
+      - challenges_internal
 
 
   registry:
@@ -75,7 +78,25 @@ Penser à changer le nom du plugin: ctfd-chall-manager -> ctfd_chall_manager
       - 5000:5000
     networks:
       - default
-      - internal
+      - challenges_internal
+
+  scenario-builder:
+    image: golang:1.24-bookworm
+    depends_on:
+      - registry
+    environment:
+      REGISTRY: registry:5000/
+      GOMODCACHE: /go/pkg/mod
+      GOCACHE: /go/cache
+    volumes:
+      - ./.data/CTFd/plugins/ctfd_chall_manager/hack/docker-scenario:/scenarios
+      - ./.data/go/pkg/mod:/go/pkg/mod
+      - ./.data/go/cache:/go/cache
+    working_dir: /scenarios
+    entrypoint:
+      - /bin/bash
+      - /scenarios/build_all_container.sh
+    restart: "no"
 ```
 
  **Important** : `PLUGIN_SETTINGS_CM_API_URL=http://chall-manager:8080` dans le service `ctfd`
@@ -255,6 +276,14 @@ terraform {
       source  = "dmacvicar/libvirt"
       version = "0.7.6"
     }
+    random = {
+      source  = "hashicorp/random"
+      version = "~> 3.6"
+    }
+    null = {
+      source  = "hashicorp/null"
+      version = "~> 3.2"
+    }
   }
 }
 
@@ -272,9 +301,32 @@ variable "chall1_passwd" {
   description = "Hashed password for chall1 (cloud-init compatible hash)"
 }
 
+# IP publique du VPS (tu peux aussi la passer via terraform.tfvars si besoin)
+variable "public_ip" {
+  type    = string
+  default = "46.202.132.43"
+}
+
+# Interfaces côté hôte
+variable "public_iface" {
+  type    = string
+  default = "eth0"
+}
+
+variable "libvirt_bridge" {
+  type    = string
+  default = "virbr0"
+}
+
+# Port SSH aléatoire (aligné avec ta règle UFW 30000:40000)
+resource "random_integer" "ssh_port" {
+  min = 30000
+  max = 40000
+}
+
 locals {
-  vm_name      = "chall1-${var.instance_id}"
-  volume_name  = "ubuntu-22.04-${var.instance_id}.qcow2"
+  vm_name       = "chall1-${var.instance_id}"
+  volume_name   = "ubuntu-22.04-${var.instance_id}.qcow2"
   cloudinit_iso = "cloudinit-${var.instance_id}.iso"
 }
 
@@ -295,12 +347,12 @@ resource "libvirt_cloudinit_disk" "commoninit" {
 }
 
 resource "libvirt_domain" "vm" {
-  name   = local.vm_name
-  memory = 2048
-  vcpu   = 2
-  type   = "qemu"
-  emulator = "/usr/bin/qemu-system-x86_64" 
-  
+  name     = local.vm_name
+  memory   = 2048
+  vcpu     = 2
+  type     = "qemu"
+  emulator = "/usr/bin/qemu-system-x86_64"
+
   disk {
     volume_id = libvirt_volume.ubuntu_image.id
   }
@@ -313,12 +365,76 @@ resource "libvirt_domain" "vm" {
   cloudinit = libvirt_cloudinit_disk.commoninit.id
 }
 
+# NAT + FORWARD dans le netns de l'hôte via nsenter
+resource "null_resource" "ssh_nat" {
+  depends_on = [libvirt_domain.vm]
+
+  triggers = {
+    instance_id    = var.instance_id
+    public_ip      = var.public_ip
+    public_iface   = var.public_iface
+    libvirt_bridge = var.libvirt_bridge
+    port           = tostring(random_integer.ssh_port.result)
+    vm_ip          = element(libvirt_domain.vm.network_interface[0].addresses, 0)
+  }
+
+  provisioner "local-exec" {
+    when    = create
+    command = <<-EOT
+set -e
+
+PUBIP="${self.triggers.public_ip}"
+PUBIF="${self.triggers.public_iface}"
+BRIF="${self.triggers.libvirt_bridge}"
+PORT="${self.triggers.port}"
+VMIP="${self.triggers.vm_ip}"
+
+IPT="nsenter -t 1 -n iptables"
+
+# DNAT en PREROUTING (position 1 pour passer avant DOCKER)
+$IPT -t nat -C PREROUTING -p tcp -d "$PUBIP" --dport "$PORT" -j DNAT --to-destination "$VMIP:22" 2>/dev/null || \
+  $IPT -t nat -I PREROUTING 1 -p tcp -d "$PUBIP" --dport "$PORT" -j DNAT --to-destination "$VMIP:22"
+
+# Forward public -> virbr0
+$IPT -C FORWARD -i "$PUBIF" -o "$BRIF" -p tcp -d "$VMIP" --dport 22 -j ACCEPT 2>/dev/null || \
+  $IPT -I FORWARD 1 -i "$PUBIF" -o "$BRIF" -p tcp -d "$VMIP" --dport 22 -j ACCEPT
+
+# Forward virbr0 -> public (retour)
+$IPT -C FORWARD -i "$BRIF" -o "$PUBIF" -p tcp -s "$VMIP" --sport 22 -j ACCEPT 2>/dev/null || \
+  $IPT -I FORWARD 1 -i "$BRIF" -o "$PUBIF" -p tcp -s "$VMIP" --sport 22 -j ACCEPT
+EOT
+  }
+
+  provisioner "local-exec" {
+    when    = destroy
+    command = <<-EOT
+set -e
+
+PUBIP="${self.triggers.public_ip}"
+PUBIF="${self.triggers.public_iface}"
+BRIF="${self.triggers.libvirt_bridge}"
+PORT="${self.triggers.port}"
+VMIP="${self.triggers.vm_ip}"
+
+IPT="nsenter -t 1 -n iptables"
+
+$IPT -t nat -D PREROUTING -p tcp -d "$PUBIP" --dport "$PORT" -j DNAT --to-destination "$VMIP:22" 2>/dev/null || true
+$IPT -D FORWARD -i "$PUBIF" -o "$BRIF" -p tcp -d "$VMIP" --dport 22 -j ACCEPT 2>/dev/null || true
+$IPT -D FORWARD -i "$BRIF" -o "$PUBIF" -p tcp -s "$VMIP" --sport 22 -j ACCEPT 2>/dev/null || true
+EOT
+  }
+}
+
 output "ip" {
-  value = libvirt_domain.vm.network_interface[0].addresses[0]
+  value = element(libvirt_domain.vm.network_interface[0].addresses, 0)
+}
+
+output "ssh_port" {
+  value = random_integer.ssh_port.result
 }
 
 output "ssh_command" {
-  value = "ssh chall1@${libvirt_domain.vm.network_interface[0].addresses[0]}"
+  value = "ssh chall1@${var.public_ip} -p ${random_integer.ssh_port.result}"
 }
 ```
 
@@ -330,6 +446,14 @@ terraform {
     libvirt = {
       source  = "dmacvicar/libvirt"
       version = "0.7.6"
+    }
+    random = {
+      source  = "hashicorp/random"
+      version = "~> 3.6"
+    }
+    null = {
+      source  = "hashicorp/null"
+      version = "~> 3.2"
     }
   }
 }
@@ -350,6 +474,32 @@ variable "instance_id" {
 variable "chall2_passwd" {
   type        = string
   description = "Hashed password for chall2 (cloud-init compatible hash)"
+}
+
+# IP publique du VPS
+variable "public_ip" {
+  type    = string
+  default = "46.202.132.43"
+}
+
+# Interfaces côté hôte
+variable "public_iface" {
+  type    = string
+  default = "eth0"
+}
+
+variable "libvirt_bridge" {
+  type    = string
+  default = "virbr0"
+}
+
+############################
+# Port SSH aléatoire
+############################
+
+resource "random_integer" "ssh_port" {
+  min = 30000
+  max = 40000
 }
 
 ############################
@@ -403,10 +553,10 @@ resource "libvirt_cloudinit_disk" "commoninit" {
 ############################
 
 resource "libvirt_domain" "vm" {
-  name   = local.vm_name
-  memory = 2048
-  vcpu   = 2
-  type   = "qemu"
+  name     = local.vm_name
+  memory   = 2048
+  vcpu     = 2
+  type     = "qemu"
   emulator = "/usr/bin/qemu-system-x86_64" 
   
   disk {
@@ -422,15 +572,82 @@ resource "libvirt_domain" "vm" {
 }
 
 ############################
+# NAT + FORWARD via nsenter
+############################
+
+resource "null_resource" "ssh_nat" {
+  depends_on = [libvirt_domain.vm]
+
+  triggers = {
+    instance_id    = var.instance_id
+    public_ip      = var.public_ip
+    public_iface   = var.public_iface
+    libvirt_bridge = var.libvirt_bridge
+    port           = tostring(random_integer.ssh_port.result)
+    vm_ip          = element(libvirt_domain.vm.network_interface[0].addresses, 0)
+  }
+
+  provisioner "local-exec" {
+    when    = create
+    command = <<-EOT
+set -e
+
+PUBIP="${self.triggers.public_ip}"
+PUBIF="${self.triggers.public_iface}"
+BRIF="${self.triggers.libvirt_bridge}"
+PORT="${self.triggers.port}"
+VMIP="${self.triggers.vm_ip}"
+
+IPT="nsenter -t 1 -n iptables"
+
+# DNAT en PREROUTING (avant DOCKER)
+$IPT -t nat -C PREROUTING -p tcp -d "$PUBIP" --dport "$PORT" -j DNAT --to-destination "$VMIP:22" 2>/dev/null || \
+  $IPT -t nat -I PREROUTING 1 -p tcp -d "$PUBIP" --dport "$PORT" -j DNAT --to-destination "$VMIP:22"
+
+# Forward public -> virbr0
+$IPT -C FORWARD -i "$PUBIF" -o "$BRIF" -p tcp -d "$VMIP" --dport 22 -j ACCEPT 2>/dev/null || \
+  $IPT -I FORWARD 1 -i "$PUBIF" -o "$BRIF" -p tcp -d "$VMIP" --dport 22 -j ACCEPT
+
+# Forward virbr0 -> public (retour)
+$IPT -C FORWARD -i "$BRIF" -o "$PUBIF" -p tcp -s "$VMIP" --sport 22 -j ACCEPT 2>/dev/null || \
+  $IPT -I FORWARD 1 -i "$BRIF" -o "$PUBIF" -p tcp -s "$VMIP" --sport 22 -j ACCEPT
+EOT
+  }
+
+  provisioner "local-exec" {
+    when    = destroy
+    command = <<-EOT
+set -e
+
+PUBIP="${self.triggers.public_ip}"
+PUBIF="${self.triggers.public_iface}"
+BRIF="${self.triggers.libvirt_bridge}"
+PORT="${self.triggers.port}"
+VMIP="${self.triggers.vm_ip}"
+
+IPT="nsenter -t 1 -n iptables"
+
+$IPT -t nat -D PREROUTING -p tcp -d "$PUBIP" --dport "$PORT" -j DNAT --to-destination "$VMIP:22" 2>/dev/null || true
+$IPT -D FORWARD -i "$PUBIF" -o "$BRIF" -p tcp -d "$VMIP" --dport 22 -j ACCEPT 2>/dev/null || true
+$IPT -D FORWARD -i "$BRIF" -o "$PUBIF" -p tcp -s "$VMIP" --sport 22 -j ACCEPT 2>/dev/null || true
+EOT
+  }
+}
+
+############################
 # Outputs (CTFd display)
 ############################
 
 output "ip" {
-  value = libvirt_domain.vm.network_interface[0].addresses[0]
+  value = element(libvirt_domain.vm.network_interface[0].addresses, 0)
+}
+
+output "ssh_port" {
+  value = random_integer.ssh_port.result
 }
 
 output "ssh_command" {
-  value = "ssh chall2@${libvirt_domain.vm.network_interface[0].addresses[0]}"
+  value = "ssh chall2@${var.public_ip} -p ${random_integer.ssh_port.result}"
 }
 ```
 
@@ -442,6 +659,14 @@ terraform {
     libvirt = {
       source  = "dmacvicar/libvirt"
       version = "0.7.6"
+    }
+    random = {
+      source  = "hashicorp/random"
+      version = "~> 3.6"
+    }
+    null = {
+      source  = "hashicorp/null"
+      version = "~> 3.2"
     }
   }
 }
@@ -462,6 +687,32 @@ variable "instance_id" {
 variable "chall3_passwd" {
   type        = string
   description = "Hashed password for chall3 (cloud-init compatible hash)"
+}
+
+# IP publique du VPS
+variable "public_ip" {
+  type    = string
+  default = "46.202.132.43"
+}
+
+# Interfaces côté hôte
+variable "public_iface" {
+  type    = string
+  default = "eth0"
+}
+
+variable "libvirt_bridge" {
+  type    = string
+  default = "virbr0"
+}
+
+############################
+# Port SSH aléatoire
+############################
+
+resource "random_integer" "ssh_port" {
+  min = 30000
+  max = 40000
 }
 
 ############################
@@ -515,10 +766,10 @@ resource "libvirt_cloudinit_disk" "commoninit" {
 ############################
 
 resource "libvirt_domain" "vm" {
-  name   = local.vm_name
-  memory = 2048
-  vcpu   = 2
-  type   = "qemu"
+  name     = local.vm_name
+  memory   = 2048
+  vcpu     = 2
+  type     = "qemu"
   emulator = "/usr/bin/qemu-system-x86_64" 
   
   disk {
@@ -534,15 +785,82 @@ resource "libvirt_domain" "vm" {
 }
 
 ############################
+# NAT + FORWARD via nsenter
+############################
+
+resource "null_resource" "ssh_nat" {
+  depends_on = [libvirt_domain.vm]
+
+  triggers = {
+    instance_id    = var.instance_id
+    public_ip      = var.public_ip
+    public_iface   = var.public_iface
+    libvirt_bridge = var.libvirt_bridge
+    port           = tostring(random_integer.ssh_port.result)
+    vm_ip          = element(libvirt_domain.vm.network_interface[0].addresses, 0)
+  }
+
+  provisioner "local-exec" {
+    when    = create
+    command = <<-EOT
+set -e
+
+PUBIP="${self.triggers.public_ip}"
+PUBIF="${self.triggers.public_iface}"
+BRIF="${self.triggers.libvirt_bridge}"
+PORT="${self.triggers.port}"
+VMIP="${self.triggers.vm_ip}"
+
+IPT="nsenter -t 1 -n iptables"
+
+# DNAT en PREROUTING (avant DOCKER)
+$IPT -t nat -C PREROUTING -p tcp -d "$PUBIP" --dport "$PORT" -j DNAT --to-destination "$VMIP:22" 2>/dev/null || \
+  $IPT -t nat -I PREROUTING 1 -p tcp -d "$PUBIP" --dport "$PORT" -j DNAT --to-destination "$VMIP:22"
+
+# Forward public -> virbr0
+$IPT -C FORWARD -i "$PUBIF" -o "$BRIF" -p tcp -d "$VMIP" --dport 22 -j ACCEPT 2>/dev/null || \
+  $IPT -I FORWARD 1 -i "$PUBIF" -o "$BRIF" -p tcp -d "$VMIP" --dport 22 -j ACCEPT
+
+# Forward virbr0 -> public (retour)
+$IPT -C FORWARD -i "$BRIF" -o "$PUBIF" -p tcp -s "$VMIP" --sport 22 -j ACCEPT 2>/dev/null || \
+  $IPT -I FORWARD 1 -i "$BRIF" -o "$PUBIF" -p tcp -s "$VMIP" --sport 22 -j ACCEPT
+EOT
+  }
+
+  provisioner "local-exec" {
+    when    = destroy
+    command = <<-EOT
+set -e
+
+PUBIP="${self.triggers.public_ip}"
+PUBIF="${self.triggers.public_iface}"
+BRIF="${self.triggers.libvirt_bridge}"
+PORT="${self.triggers.port}"
+VMIP="${self.triggers.vm_ip}"
+
+IPT="nsenter -t 1 -n iptables"
+
+$IPT -t nat -D PREROUTING -p tcp -d "$PUBIP" --dport "$PORT" -j DNAT --to-destination "$VMIP:22" 2>/dev/null || true
+$IPT -D FORWARD -i "$PUBIF" -o "$BRIF" -p tcp -d "$VMIP" --dport 22 -j ACCEPT 2>/dev/null || true
+$IPT -D FORWARD -i "$BRIF" -o "$PUBIF" -p tcp -s "$VMIP" --sport 22 -j ACCEPT 2>/dev/null || true
+EOT
+  }
+}
+
+############################
 # Outputs (CTFd display)
 ############################
 
 output "ip" {
-  value = libvirt_domain.vm.network_interface[0].addresses[0]
+  value = element(libvirt_domain.vm.network_interface[0].addresses, 0)
+}
+
+output "ssh_port" {
+  value = random_integer.ssh_port.result
 }
 
 output "ssh_command" {
-  value = "ssh chall3@${libvirt_domain.vm.network_interface[0].addresses[0]}"
+  value = "ssh chall3@${var.public_ip} -p ${random_integer.ssh_port.result}"
 }
 ```
 ## cloud_init.cfg
@@ -1018,6 +1336,42 @@ sudo chmod +x /usr/local/bin/yq
 bash build_all.sh
 ```
 
+## build_all_container.sh
+
+```bash
+#!/bin/bash
+set -euo pipefail
+
+echo "[+] Installing tools"
+
+apt-get update
+apt-get install -y curl jq
+
+curl -LO https://github.com/oras-project/oras/releases/download/v1.1.0/oras_1.1.0_linux_amd64.tar.gz
+tar -xzf oras_1.1.0_linux_amd64.tar.gz
+mv oras /usr/local/bin/
+chmod +x /usr/local/bin/oras
+
+curl -L https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 \
+  -o /usr/local/bin/yq
+chmod +x /usr/local/bin/yq
+
+echo "[+] Building chall-1"
+cd /scenarios/chall-1
+bash build.sh
+
+echo "[+] Building chall-2"
+cd /scenarios/chall-2
+bash build.sh
+
+echo "[+] Building chall-3"
+cd /scenarios/chall-3
+bash build.sh
+
+echo "[+] All scenarios pushed"
+```
+
+
 ##  Étape 6 — Création du challenge dans CTFd
 
 - Type : **Dynamic / Chall-Manager**
@@ -1085,63 +1439,3 @@ sudo systemctl enable --now libvirtd
 Dans CTFd → **Launch instance**
 
 ---
-
-
-```
-  chall-manager:
-    build:
-      context: .
-      dockerfile: Dockerfile.chall-manager
-    restart: always
-    privileged: true
-    cap_add:
-      - SYS_ADMIN
-      - NET_ADMIN
-    devices:
-      - /dev/kvm:/dev/kvm
-    environment:
-      OCI_INSECURE: true
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - /var/run/libvirt/libvirt-sock:/var/run/libvirt/libvirt-sock
-    networks:
-      - default
-      - challenges_internal
-
-
-  chall-manager-janitor:
-    image: ctferio/chall-manager-janitor:v0.6.1
-    restart: always
-    environment:
-      URL: chall-manager:8080
-      TICKER: 1m
-    depends_on:
-      - chall-manager
-    networks:
-      - default
-      - challenges_internal
-
-
-  registry:
-    image: registry:2
-    restart: always
-    ports:
-      - 5000:5000
-    networks:
-      - default
-      - challenges_internal
-        
-  scenario-builder:
-    image: golang:1.24-bookworm
-    depends_on:
-      - registry
-    environment:
-      REGISTRY: registry:5000/
-    volumes:
-      - ./.data/CTFd/plugins/ctfd_chall_manager/hack/docker-scenario:/scenarios
-    working_dir: /scenarios
-    entrypoint:
-      - /bin/bash
-      - /scenarios/build_all_container.sh
-    restart: "no"
-```

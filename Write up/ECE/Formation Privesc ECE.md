@@ -17,9 +17,33 @@ Host key for 192.168.122.100 has changed and you have requested strict checking.
 Host key verification failed.
 ```
 
+
 Faire la commande:
 ```
 ssh-keygen -R 192.168.122.100
+```
+
+Quand il y a cette erreur:
+```
+ssh chall2@46.202.132.43 -p 34509
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that a host key has just been changed.
+The fingerprint for the ED25519 key sent by the remote host is
+SHA256:pAcjKRreuKhzJY36Vso7dBgbNy158sgq+1MwyH1inrw.
+Please contact your system administrator.
+Add correct host key in /home/theo/.ssh/known_hosts to get rid of this message.
+Offending ECDSA key in /home/theo/.ssh/known_hosts:167
+Host key for [46.202.132.43]:34509 has changed and you have requested strict checking.
+Host key verification failed.
+```
+
+Faire la commande:
+```
+ssh-keygen -R "[46.202.132.43]:34509"
 ```
 
 ## Chall 1
