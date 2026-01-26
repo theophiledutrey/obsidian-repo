@@ -1130,4 +1130,18 @@ Dans CTFd → **Launch instance**
     networks:
       - default
       - challenges_internal
+        
+  scenario-builder:
+    image: golang:1.24-bookworm
+    depends_on:
+      - registry
+    environment:
+      REGISTRY: registry:5000/
+    volumes:
+      - ./.data/CTFd/plugins/ctfd_chall_manager/hack/docker-scenario:/scenarios
+    working_dir: /scenarios
+    entrypoint:
+      - /bin/bash
+      - /scenarios/build_all_container.sh
+    restart: "no"
 ```
