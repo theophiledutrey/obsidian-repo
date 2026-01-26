@@ -90,3 +90,16 @@ security_driver = "none"
 namespaces = []
 ```
 
+```
+theo_admin@0xece:/var/www/0xece$ sudo ufw default allow routed
+Default routed policy changed to 'allow'
+(be sure to update your rules accordingly)
+theo_admin@0xece:/var/www/0xece$ sudo ufw reload
+Firewall reloaded
+
+theo_admin@0xece:/var/www/0xece$ sudo ufw allow 30000:40000/tcp
+Rule added
+Rule added (v6)
+theo_admin@0xece:/var/www/0xece$ sudo ufw reload
+Firewall reloaded
+```
