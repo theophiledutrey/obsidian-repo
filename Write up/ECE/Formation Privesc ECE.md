@@ -50,7 +50,7 @@ ssh-keygen -R "[46.202.132.43]:34509"
 
 ```
 USER: chall1
-SSH PASSWORD: Th1sCh4ll1sV3ryE4sy
+SSH PASSWORD: chall1
 ```
 
 ```
@@ -80,7 +80,7 @@ sudo /usr/bin/vim
 
 ```
 USER: chall2
-SSH PASSWORD: Ch4ll2_P4Th_H1j4ck_1s_FuN
+SSH PASSWORD: chall2
 ```
 
 ```
@@ -157,7 +157,7 @@ PATH=/tmp:$PATH
 
 ```
 USER: chall3
-SSH PASSWORD: Th1s_Ch4ll_Is_N0t_S0_E4sy
+SSH PASSWORD: chall3
 ```
 
 
