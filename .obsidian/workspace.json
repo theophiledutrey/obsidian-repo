@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/Analyse.md",
+                "file": "Write up/ECE/Formation Privesc ECE.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Analyse"
+              "title": "Formation Privesc ECE"
             }
           },
           {
@@ -267,14 +267,16 @@
   },
   "active": "2df8b239b594f2fe",
   "lastOpenFiles": [
-    "Write up/ECE/Formation Privesc ECE.md",
-    "ECE/0xECE/Conf CTFd.md",
-    "Infra/VPS ECE.md",
+    "Linux/UID.md",
     "Infra/Terraform/Commandes.md",
+    "ECE/0xECE/Conf CTFd.md",
+    "Write up/ECE/Formation Privesc ECE.md",
+    "Linux/Analyse.md",
+    "Linux/Privilege Escalation.md",
+    "Infra/VPS ECE.md",
     "Infra/Terraform/Deploy.md",
     "Web/JWT.md",
     "Linux/Reverse Shell.md",
-    "Linux/Privilege Escalation.md",
     "Untitled.md",
     "ECE/0xECE/0xECE.md",
     "Web/Tools.md",
@@ -285,7 +287,6 @@
     "ECE/0xECE.md",
     "Web/Word List.md",
     "Write up/Hack The Box/Boxe/CodeTwo Hack The Box.md",
-    "Linux/Analyse.md",
     "Assets/Write up/ECE/Formation Privesc ECE",
     "Assets/Write up/ECE/Formation ECE",
     "Write up/Hack The Box/Achievement.md",
@@ -312,7 +313,6 @@
     "Assets/Write up/ECE/Formation Privesc ECE/IMG-20260123023204646.png",
     "Write up/Hack The Box/Boxe/NanoCorp.md",
     "Write up/Hack The Box/Boxe/Eighteen.md",
-    "Write up/Hack The Box/Boxe/Guardian Hack The Box.md",
     "Web/Untitled.canvas",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",

