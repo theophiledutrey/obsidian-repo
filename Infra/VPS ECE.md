@@ -103,3 +103,8 @@ Rule added (v6)
 theo_admin@0xece:/var/www/0xece$ sudo ufw reload
 Firewall reloaded
 ```
+
+```
+sudo iptables -L FORWARD -n -v --line-numbers
+sudo iptables -t nat -L -n -v | grep 22
+```
