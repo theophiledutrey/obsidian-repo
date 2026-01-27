@@ -1058,9 +1058,6 @@ runcmd:
   - mkdir -p /home/chall2
   - chown -R chall2:chall2 /home/chall2
   - rm -f /opt/netdata/usr/libexec/netdata/plugins.d/ndsudo.c
-
-  # SSH
-  - systemctl restart ssh
 ```
 
 ### chall 3:
