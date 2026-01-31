@@ -25,3 +25,4 @@ password[role]=admin
 
 ![[IMG-20260131212159549.png]]
 
+https://github.com/vidura2/CVE-2024-46986/blob/main/exploit_camaleon.py
