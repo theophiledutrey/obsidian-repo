@@ -118,7 +118,7 @@
             }
           },
           {
-            "id": "4e1aea7f4e5061ee",
+            "id": "1bf4e5562b6b9e83",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -265,7 +265,7 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "4e1aea7f4e5061ee",
+  "active": "1bf4e5562b6b9e83",
   "lastOpenFiles": [
     "Assets/Write up/Hack The Box/Boxe/Overwatch",
     "Write up/ECE/Formation Privesc ECE.md",
