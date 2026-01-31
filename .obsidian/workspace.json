@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Write up/Hack The Box/Overwatch.md",
+                "file": "Write up/Hack The Box/Boxe/Overwatch.md",
                 "mode": "source",
                 "source": false
               },
@@ -55,7 +55,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Write up/Hack The Box/Overwatch.md",
+                "file": "Write up/Hack The Box/Boxe/Overwatch.md",
                 "mode": "source",
                 "source": false
               },
@@ -265,17 +265,18 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "d538b230d5ec27c5",
+  "active": "4e1aea7f4e5061ee",
   "lastOpenFiles": [
+    "Assets/Write up/Hack The Box/Boxe/Overwatch",
     "Write up/ECE/Formation Privesc ECE.md",
     "Infra/Terraform/Commandes.md",
-    "Write up/Hack The Box/Overwatch.md",
+    "Write up/Hack The Box/Boxe/Overwatch.md",
     "ECE/0xECE/Conf CTFd.md",
     "Infra/VPS ECE.md",
     "Write up/Hack The Box/Boxe/Previous Hack The Box.md",
     "Write up/Hack The Box/Boxe/NanoCorp.md",
     "Assets/Write up/Hack The Box/Overwatch",
-    "Assets/Write up/Hack The Box/Overwatch/IMG-20260129020601181.png",
+    "Assets/Write up/Hack The Box/Boxe/Overwatch/IMG-20260131151055917.png",
     "Linux/UID.md",
     "Linux/Analyse.md",
     "Linux/Privilege Escalation.md",
@@ -303,7 +304,6 @@
     "Assets/Write up/Hack The Box/Boxe/Previous Hack The Box",
     "Assets/Write up/Hack The Box/Boxe/Imagery",
     "Write up/Write up.md",
-    "Write up/ECE/ECE.md",
     "Assets/Write up/ECE/Formation Privesc ECE/IMG-20260123023204596.png",
     "Assets/Write up/ECE/Formation Privesc ECE/IMG-20260123023204547.png",
     "Assets/Write up/ECE/Formation Privesc ECE/IMG-20260123023204476.png",
