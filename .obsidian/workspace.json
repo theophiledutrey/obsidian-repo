@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Write up/Hack The Box/Boxe/Overwatch.md",
+                "file": "Write up/Hack The Box/Boxe/Facts.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Overwatch"
+              "title": "Facts"
             }
           }
         ],
@@ -265,12 +265,13 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "1bf4e5562b6b9e83",
+  "active": "d538b230d5ec27c5",
   "lastOpenFiles": [
+    "Write up/Hack The Box/Boxe/Overwatch.md",
+    "Write up/Hack The Box/Boxe/Facts.md",
     "Assets/Write up/Hack The Box/Boxe/Overwatch",
     "Write up/ECE/Formation Privesc ECE.md",
     "Infra/Terraform/Commandes.md",
-    "Write up/Hack The Box/Boxe/Overwatch.md",
     "ECE/0xECE/Conf CTFd.md",
     "Infra/VPS ECE.md",
     "Write up/Hack The Box/Boxe/Previous Hack The Box.md",
@@ -302,7 +303,6 @@
     "Assets/Write up/Hack The Box/Boxe/Expressway Hack The Box ",
     "Assets/Write up/Hack The Box/Boxe/Soulmate Hack The Box",
     "Assets/Write up/Hack The Box/Boxe/Previous Hack The Box",
-    "Assets/Write up/Hack The Box/Boxe/Imagery",
     "Write up/Write up.md",
     "Assets/Write up/ECE/Formation Privesc ECE/IMG-20260123023204596.png",
     "Assets/Write up/ECE/Formation Privesc ECE/IMG-20260123023204547.png",
