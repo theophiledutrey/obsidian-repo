@@ -11,7 +11,6 @@
 
 ![[IMG-20260201195831259.png]]
 
-
 ![[IMG-20260201195831303.png]]
 
 
@@ -50,6 +49,7 @@ passphrase: dragonballz
 ![[IMG-20260201195831700.png]]
 
 ![[IMG-20260201195831735.png]]
+
 A retenir:
 ```
 The first `.rb` file in the `/path/to/dir/` directory will be executed.

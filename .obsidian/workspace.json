@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Write up/Hack The Box/Boxe/Browsed.md",
+                "file": "Write up/Hack The Box/Boxe/Season 10/Facts.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Browsed"
+              "title": "Facts"
             }
           }
         ],
@@ -265,10 +265,12 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "d538b230d5ec27c5",
+  "active": "e2aa3986dab62d71",
   "lastOpenFiles": [
-    "Write up/Hack The Box/Boxe/GiveBack.md",
     "Write up/Hack The Box/Boxe/Season 10/Facts.md",
+    "Write up/Hack The Box/Boxe/Browsed.md",
+    "Write up/ECE/Formation Privesc ECE.md",
+    "Write up/Hack The Box/Boxe/GiveBack.md",
     "Write up/Hack The Box/Boxe/Season 10/Season 10.md",
     "Web/Tools.md",
     "Assets/Write up/Hack The Box/Boxe/Season 10/Facts",
@@ -289,7 +291,6 @@
     "Assets/Write up/Hack The Box/Boxe/Facts",
     "Write up/Hack The Box/Boxe/Overwatch.md",
     "Assets/Write up/Hack The Box/Boxe/Overwatch",
-    "Write up/ECE/Formation Privesc ECE.md",
     "Infra/Terraform/Commandes.md",
     "ECE/0xECE/Conf CTFd.md",
     "Infra/VPS ECE.md",
@@ -304,7 +305,6 @@
     "Linux/Reverse Shell.md",
     "Untitled.md",
     "ECE/0xECE/0xECE.md",
-    "Write up/Hack The Box/Boxe/Browsed.md",
     "ECE/0xECE/.md",
     "ECE/0xECE",
     "ECE/0xECE.md",
