@@ -25,4 +25,22 @@ password[role]=admin
 
 ![[IMG-20260131212159549.png]]
 
-https://github.com/vidura2/CVE-2024-46986/blob/main/exploit_camaleon.py
+## [CVE-2024-46987](https://nvd.nist.gov/vuln/detail/CVE-2024-46987)
+
+![[IMG-20260201190714207.png]]
+
+2 users:
+```
+william et trivia
+```
+
+![[IMG-20260201190925754.png]]
+
+![[IMG-20260201191051889.png]]
+
+```
+passphrase: dragonballz
+```
+
+![[IMG-20260201191150039.png]]
+
