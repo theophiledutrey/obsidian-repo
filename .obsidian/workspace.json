@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Write up/Hack The Box/Boxe/Season 10/Facts.md",
+                "file": "Write up/Hack The Box/Boxe/Browsed.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Facts"
+              "title": "Browsed"
             }
           }
         ],
@@ -267,13 +267,14 @@
   },
   "active": "d538b230d5ec27c5",
   "lastOpenFiles": [
+    "Write up/Hack The Box/Boxe/GiveBack.md",
+    "Write up/Hack The Box/Boxe/Season 10/Facts.md",
     "Write up/Hack The Box/Boxe/Season 10/Season 10.md",
     "Web/Tools.md",
     "Assets/Write up/Hack The Box/Boxe/Season 10/Facts",
     "Assets/Write up/Hack The Box/Boxe/Season 10",
     "Write up/Hack The Box/Boxe/Season 10",
     "Write up/Hack The Box/Boxe/Untitled.md",
-    "Write up/Hack The Box/Boxe/Season 10/Facts.md",
     "Assets/Write up/Hack The Box/Boxe/Season 10/Facts/IMG-20260201195831825.png",
     "Assets/Write up/Hack The Box/Boxe/Season 10/Facts/IMG-20260201195831770.png",
     "Assets/Write up/Hack The Box/Boxe/Facts/IMG-20260201195132127.png",
@@ -304,7 +305,6 @@
     "Untitled.md",
     "ECE/0xECE/0xECE.md",
     "Write up/Hack The Box/Boxe/Browsed.md",
-    "Write up/Hack The Box/Boxe/GiveBack.md",
     "ECE/0xECE/.md",
     "ECE/0xECE",
     "ECE/0xECE.md",
