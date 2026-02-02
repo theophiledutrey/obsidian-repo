@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Write up/Hack The Box/Boxe/Browsed.md",
+                "file": "Write up/RootMe/Bash - unquoted expression injection.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Browsed"
+              "title": "Bash - unquoted expression injection"
             }
           }
         ],
@@ -281,11 +281,15 @@
   },
   "active": "e790e8a6df6064b5",
   "lastOpenFiles": [
-    "Infra/Terraform/Commandes.md",
+    "Assets/Write up/RootMe/Bash - unquoted expression injection",
+    "Assets/Write up/RootMe",
+    "Assets/Write up/RootMe/Bash - unquoted expression injection/IMG-20260202134133162.png",
     "Write up/RootMe/RootMe.md",
+    "Write up/RootMe/Bash - unquoted expression injection.md",
+    "Write up/Hack The Box/Boxe/Browsed.md",
+    "Infra/Terraform/Commandes.md",
     "Write up/RootMe",
     "Write up/Rootme.md",
-    "Write up/Hack The Box/Boxe/Browsed.md",
     "Write up/ECE/Formation Privesc ECE.md",
     "Write up/Hack The Box/Boxe/Season 10/Facts.md",
     "Write up/Hack The Box/Boxe/GiveBack.md",
@@ -304,7 +308,6 @@
     "Assets/Write up/Hack The Box/Boxe/Season 10/Facts/IMG-20260201195831933.png",
     "Assets/Write up/Hack The Box/Boxe/Season 10/Facts/IMG-20260201195831655.png",
     "Assets/Write up/Hack The Box/Boxe/Season 10/Facts/IMG-20260201195831583.png",
-    "Assets/Write up/Hack The Box/Boxe/Season 10/Facts/IMG-20260201195831540.png",
     "Web/Word List.md",
     "Assets/Write up/Hack The Box/Boxe/Facts",
     "Write up/Hack The Box/Boxe/Overwatch.md",
@@ -322,11 +325,8 @@
     "Linux/Reverse Shell.md",
     "Untitled.md",
     "ECE/0xECE/0xECE.md",
-    "ECE/0xECE/.md",
     "ECE/0xECE",
-    "ECE/0xECE.md",
     "Assets/Write up/ECE/Formation Privesc ECE",
-    "Assets/Write up/ECE/Formation ECE",
     "Web/Untitled.canvas",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
