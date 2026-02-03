@@ -67,3 +67,25 @@ aircrack-ng -w /root/eaphammer/wordlists/rockyou.txt scan-03.cap
 Mdp: challenge
 ```
 
+On set up une nouvelle interface client:
+```bash
+ip link set wlan3 down
+iw dev wlan3 set type managed
+ip link set wlan3 up
+```
+
+Config WPA2:
+```
+wpa_passphrase "AirTouch-Internet" "challenge" > /tmp/wifi.conf
+```
+
+On se connecte au wifi:
+```
+wpa_supplicant -B -i wlan3 -c /tmp/wifi.conf
+```
+
+On s'attribue une IP:
+```
+dhclient wlan3
+```
+
