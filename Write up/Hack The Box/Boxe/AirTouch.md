@@ -13,3 +13,9 @@ Config Réseau:
 
 ![[IMG-20260203192704712.png]]
 
+On retrouve aussi deux schéma dans le home directory:
+
+![[IMG-20260203194454309.png]]
+
+![[IMG-20260203194523666.png]]
+
