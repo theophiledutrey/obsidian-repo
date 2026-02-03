@@ -76,20 +76,6 @@
               "icon": "lucide-file",
               "title": "Bash - quoted expression injection"
             }
-          },
-          {
-            "id": "45c5f4819629d788",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Write up/RootMe/Bash - unquoted expression injection.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Bash - unquoted expression injection"
-            }
           }
         ],
         "currentTab": 4
@@ -146,7 +132,7 @@
             }
           },
           {
-            "id": "a85d90f71f90a1bd",
+            "id": "bf2c10dc26f61da8",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -295,12 +281,13 @@
   },
   "active": "e790e8a6df6064b5",
   "lastOpenFiles": [
-    "Write up/RootMe/Bash - unquoted expression injection.md",
+    "Write up/ECE/Formation Privesc ECE.md",
+    "Write up/Hack The Box/Boxe/Browsed.md",
     "Write up/RootMe/Bash - quoted expression injection.md",
+    "Write up/RootMe/Bash - unquoted expression injection.md",
     "Assets/Write up/RootMe/Bash - quoted expression injection",
     "Assets/Write up/RootMe/Bash - quoted expression injection/IMG-20260202144025474.png",
     "Untitled.md",
-    "Write up/Hack The Box/Boxe/Browsed.md",
     "Write up/Hack The Box/Boxe/Season 10/Facts.md",
     "Assets/Write up/RootMe/Bash - unquoted expression injection",
     "Assets/Write up/RootMe",
@@ -309,7 +296,6 @@
     "Infra/Terraform/Commandes.md",
     "Write up/RootMe",
     "Write up/Rootme.md",
-    "Write up/ECE/Formation Privesc ECE.md",
     "Write up/Hack The Box/Boxe/GiveBack.md",
     "Write up/Hack The Box/Boxe/Season 10/Season 10.md",
     "Web/Tools.md",
