@@ -13,9 +13,19 @@ Config Réseau:
 
 ![[IMG-20260203192704712.png]]
 
-On retrouve aussi deux schéma dans le home directory:
+On retrouve aussi ce schéma dans le home directory:
 
 ![[IMG-20260203194454309.png]]
 
-![[IMG-20260203194523666.png]]
+On active l'interface wlan0:
+```
+ip link set wlan0 up
+```
+
+Et on liste tous les points d’accès Wi-Fi:
+```
+iw dev wlan0 scan
+```
+
+![[IMG-20260203205702924.png]]
 
