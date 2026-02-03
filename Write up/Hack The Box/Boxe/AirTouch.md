@@ -36,3 +36,9 @@ On se met en mode monitor:
 sudo airmon-ng start wlan0
 ```
 
+Puis on écoute ce qui se passe sur le réseau:
+```bash
+airodump-ng wlan0mon -w scan --manufacturer --wps -c6
+```
+
+![[IMG-20260203233232883.png]]
