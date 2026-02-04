@@ -89,3 +89,16 @@ On s'attribue une IP:
 dhclient wlan3
 ```
 
+On scan le réseau:
+![[IMG-20260204004350264.png]]
+
+Et on découvre l'IP 192.168.3.46 qu'on peut scanner:
+![[IMG-20260204004601603.png]]
+
+On port forward le port 80 pour acceder au site:
+```
+ssh -L 8080:192.168.3.1:80 consultant@10.129.17.36 
+```
+
+![[IMG-20260204005045033.png]]
+
