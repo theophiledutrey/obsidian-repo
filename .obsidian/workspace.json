@@ -31,29 +31,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e43ade40ea0bfc9b",
-            "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {
-                "sortOrder": "alphabetical",
-                "autoReveal": false
-              },
-              "icon": "lucide-folder-closed",
-              "title": "Files"
-            }
-          },
-          {
-            "id": "67468257131ad139",
-            "type": "leaf",
-            "state": {
-              "type": "bookmarks",
-              "state": {},
-              "icon": "lucide-bookmark",
-              "title": "Bookmarks"
-            }
-          },
-          {
             "id": "34c3eab5039f8088",
             "type": "leaf",
             "state": {
@@ -81,7 +58,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -131,13 +108,13 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "oz-clear-unused-images:Clear Unused Images": false,
       "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "canvas:Create new canvas": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "obsidian-git:Open Git source control": false,
-      "oz-clear-unused-images:Clear Unused Images": false,
       "obsidian-excalidraw-plugin:New drawing": false,
       "pdf-plus:PDF++: Toggle auto-copy": false,
       "pdf-plus:PDF++: Toggle auto-focus": false,
@@ -146,8 +123,10 @@
       "graph:Open graph view": false
     }
   },
-  "active": "b2df2f989f0d244a",
+  "active": "fec72819739f8428",
   "lastOpenFiles": [
+    "Untitled.base",
+    "Untitled.canvas",
     "2026-02-11.md",
     "Web/Word List.md",
     "Write up/Hack The Box/Boxe/Season 10/Pterodactyl.md",
@@ -178,7 +157,6 @@
     "Assets/Write up/Hack The Box/Boxe/Season 9/Guardian Hack The Box",
     "Assets/Write up/Hack The Box/Boxe/Season 9/GiveBack",
     "Assets/Write up/Hack The Box/Boxe/Season 9/MonitorsFour",
-    "Assets/Write up/Hack The Box/Boxe/Season 9/Imagery",
     "Write up/Hack The Box/Boxe/Season 10/Facts.md",
     "Assets/Write up/Hack The Box/Boxe/Season 10/Pterodactyl/IMG-20260211173625127.png",
     "Assets/Write up/Hack The Box/Boxe/Season 10/Pterodactyl/IMG-20260211173148093.png",
@@ -193,7 +171,6 @@
     "Assets/Write up/Hack The Box/Boxe/Season 10/Pterodactyl/IMG-20260211024111533.png",
     "Write up/Hack The Box/Boxe/Season 9/AirTouch.md",
     "Infra/Terraform/Commandes.md",
-    "Write up/RootMe/RootMe.md",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",
@@ -201,7 +178,6 @@
     "//Untitled 1.canvas",
     "Untitled 1.canvas",
     "//Untitled.canvas",
-    "Untitled.canvas",
     "Active Directory/ADMR/INTERACTIVE-MAP.canvas",
     "Active Directory/ADMR/ANNEXE.canvas"
   ]
