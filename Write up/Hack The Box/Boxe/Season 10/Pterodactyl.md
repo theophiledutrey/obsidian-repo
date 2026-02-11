@@ -202,14 +202,18 @@ Important:
 “SECURITY NOTICE — Unusual udisksd activity”
 ```
 
-Identifier udisksd et sa version:
+Identifier l'os sur lequel on est:
 ```bash
-ps aux | grep udisksd
-busctl --system introspect org.freedesktop.UDisks2 /org/freedesktop/UDisks2/Manager
-systemctl status udisks2
+cat /etc/os-release
 ```
 
-![[IMG-20260211145430674.png]]
+![[IMG-20260211210826136.png]]
+
+Sur openSUSE / SUSE Linux, le système de packages est basé sur **RPM**, on identifie à présent udisksd et sa version:
+```
+rpm -qi udisks2
+```
+![[IMG-20260211210950180.png]]
 
 ```
 Version = "2.9.2"
