@@ -4,49 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "a04286aa44c54ba3",
+        "id": "0a01e395afd73c30",
         "type": "tabs",
         "children": [
           {
-            "id": "db7d5de517a356b6",
+            "id": "b0186558f29086c1",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Write up/Hack The Box/Boxe/Season 10/Pterodactyl.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Pterodactyl"
-            }
-          },
-          {
-            "id": "52de312aa3f4e11e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Linux/Analyse.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Analyse"
-            }
-          },
-          {
-            "id": "19ae00adba637143",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Web/Word List.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Word List"
+              "title": "New tab"
             }
           }
         ]
@@ -126,7 +94,7 @@
       {
         "id": "9a3a8fb4c104de22",
         "type": "tabs",
-        "dimension": 38.07251908396946,
+        "dimension": 62.45173745173746,
         "children": [
           {
             "id": "b2df2f989f0d244a",
@@ -137,94 +105,22 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
-          },
+          }
+        ]
+      },
+      {
+        "id": "687a762cbc244225",
+        "type": "tabs",
+        "dimension": 37.54826254826255,
+        "children": [
           {
             "id": "8f01d0e0fde1edd5",
             "type": "leaf",
             "state": {
               "type": "calendar",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "calendar"
-            }
-          },
-          {
-            "id": "33ee360992d886d3",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-coming-in",
-              "title": "Backlinks for Previous Hack The Box"
-            }
-          },
-          {
-            "id": "6e637d2d734a85fa",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-going-out",
-              "title": "Outgoing links"
-            }
-          },
-          {
-            "id": "4a7da6dbe8f30743",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-tags",
-              "title": "Tags"
-            }
-          },
-          {
-            "id": "6e4486050b197c36",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "Outline of Previous Hack The Box"
-            }
-          }
-        ]
-      },
-      {
-        "id": "eb0479b9bf7b888d",
-        "type": "tabs",
-        "dimension": 61.92748091603053,
-        "children": [
-          {
-            "id": "e2aa3986dab62d71",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
             }
           }
         ]
@@ -240,64 +136,64 @@
       "canvas:Create new canvas": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "daily-notes:Open today's daily note": false,
-      "graph:Open graph view": false,
       "obsidian-git:Open Git source control": false,
       "oz-clear-unused-images:Clear Unused Images": false,
       "obsidian-excalidraw-plugin:New drawing": false,
       "pdf-plus:PDF++: Toggle auto-copy": false,
       "pdf-plus:PDF++: Toggle auto-focus": false,
-      "pdf-plus:PDF++: Toggle auto-paste": false
+      "pdf-plus:PDF++: Toggle auto-paste": false,
+      "daily-notes:Open today's daily note": false,
+      "graph:Open graph view": false
     }
   },
-  "active": "db7d5de517a356b6",
+  "active": "b2df2f989f0d244a",
   "lastOpenFiles": [
+    "2026-02-11.md",
+    "Web/Word List.md",
+    "Write up/Hack The Box/Boxe/Season 10/Pterodactyl.md",
+    "Write up/Hack The Box/Boxe/Season 10/Season 10.md",
+    "XMCO/XMCO.md",
+    "XMCO",
+    "Write up/Write up.md",
+    "Untitled.md",
+    "IA/Source.md",
+    "Write up/RootMe/Bash - quoted expression injection.md",
+    "Write up/RootMe/Bash - unquoted expression injection.md",
+    "Write up/ECE/Formation Privesc ECE.md",
+    "Write up/Hackropole/Monopoly.md",
+    "Write up/Hackropole/meme-generator.md",
+    "Write up/Hack The Box/Boxe/Season 9/Previous Hack The Box.md",
+    "Write up/Hack The Box/Achievement.md",
+    "Write up/Hack The Box/Boxe/Season 9/CodeTwo Hack The Box.md",
+    "Write up/Hack The Box/Boxe/Season 9/Environment Hack The Box.md",
+    "Linux/Analyse.md",
+    "Write up/Hack The Box/Boxe/Season 9/Season 9.md",
+    "Write up/Hack The Box/Boxe/Boxe.md",
+    "Write up/Hack The Box/Boxe/Season 9/GiveBack.md",
+    "Assets/Write up/Hack The Box/Boxe/Season 9/CodeTwo Hack The Box",
+    "Assets/Write up/Hack The Box/Boxe/Season 9/Conversor",
+    "Assets/Write up/Hack The Box/Boxe/Season 9/Environment Hack The Box",
+    "Assets/Write up/Hack The Box/Boxe/Season 9/Browsed",
+    "Assets/Write up/Hack The Box/Boxe/Season 9/Eighteen",
+    "Assets/Write up/Hack The Box/Boxe/Season 9/Guardian Hack The Box",
+    "Assets/Write up/Hack The Box/Boxe/Season 9/GiveBack",
+    "Assets/Write up/Hack The Box/Boxe/Season 9/MonitorsFour",
+    "Assets/Write up/Hack The Box/Boxe/Season 9/Imagery",
+    "Write up/Hack The Box/Boxe/Season 10/Facts.md",
+    "Assets/Write up/Hack The Box/Boxe/Season 10/Pterodactyl/IMG-20260211173625127.png",
+    "Assets/Write up/Hack The Box/Boxe/Season 10/Pterodactyl/IMG-20260211173148093.png",
+    "Assets/Write up/Hack The Box/Boxe/Season 10/Pterodactyl/IMG-20260211173050740.png",
+    "Assets/Write up/Hack The Box/Boxe/Season 10/Pterodactyl/IMG-20260211171753275.png",
     "Assets/Write up/Hack The Box/Boxe/Season 10/Pterodactyl/IMG-20260211150356960.png",
     "Assets/Write up/Hack The Box/Boxe/Season 10/Pterodactyl/IMG-20260211150001384.png",
     "Assets/Write up/Hack The Box/Boxe/Season 10/Pterodactyl/IMG-20260211145430674.png",
     "Assets/Write up/Hack The Box/Boxe/Season 10/Pterodactyl/IMG-20260211144247163.png",
-    "Linux/Analyse.md",
     "Web/Tools.md",
-    "Write up/Hack The Box/Boxe/Season 10/Pterodactyl.md",
     "Assets/Write up/Hack The Box/Boxe/Season 10/Pterodactyl/IMG-20260211024242947.png",
     "Assets/Write up/Hack The Box/Boxe/Season 10/Pterodactyl/IMG-20260211024111533.png",
-    "Assets/Pasted image 20260211020133.png",
-    "Assets/Pasted image 20260211020023.png",
-    "Assets/Pasted image 20260211012004.png",
-    "Assets/Pasted image 20260211010522.png",
-    "Assets/Pasted image 20260211005600.png",
-    "Web/Word List.md",
-    "Assets/Write up/Hack The Box/Boxe/Season 10/Pterodactyl",
-    "Write up/Hack The Box/Boxe/AirTouch.md",
+    "Write up/Hack The Box/Boxe/Season 9/AirTouch.md",
     "Infra/Terraform/Commandes.md",
     "Write up/RootMe/RootMe.md",
-    "Write up/RootMe/Bash - unquoted expression injection.md",
-    "Write up/RootMe/Bash - quoted expression injection.md",
-    "Write up/RootMe",
-    "Write up/Hack The Box/Boxe/Season 10/Season 10.md",
-    "Write up/Hack The Box/Boxe/Season 10/Facts.md",
-    "Write up/Hack The Box/Boxe/Season 10",
-    "Write up/Hack The Box/Boxe/Overwatch.md",
-    "Assets/Write up/RootMe/Bash - unquoted expression injection",
-    "Assets/Write up/RootMe/Bash - quoted expression injection",
-    "Assets/Write up/RootMe",
-    "Assets/Write up/Hack The Box/Boxe/Season 10/Facts",
-    "Assets/Write up/Hack The Box/Boxe/Season 10",
-    "Assets/Write up/Hack The Box/Boxe/Overwatch",
-    "Assets/Write up/Hack The Box/Boxe/Facts",
-    "ECE/0xECE/Conf CTFd.md",
-    "Write up/ECE/Formation Privesc ECE.md",
-    "Infra/VPS ECE.md",
-    "Write up/CTF jeanne-hack.md",
-    "Write up/Hack The Box/Boxe/Browsed.md",
-    "Infra/Terraform/Deploy.md",
-    "Linux/Command.md",
-    "Write up/Hack The Box/Boxe/Soulmate Hack The Box.md",
-    "Write up/Hack The Box/Boxe/Previous Hack The Box.md",
-    "Write up/Hack The Box/Boxe/NanoCorp.md",
-    "Write up/Hack The Box/Boxe/MonitorsFour.md",
-    "Write up/Hack The Box/Boxe/Imagery.md",
-    "Write up/Hack The Box/Boxe/Guardian Hack The Box.md",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
     "Assets/INTERACTIVE-MAP 1.canvas",

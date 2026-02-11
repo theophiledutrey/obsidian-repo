@@ -1,1 +1,0 @@
-![[Assets/Write up/Hack The Box/Boxe/Soulmate Hack The Box/IMG-20260123023119445.png]]

