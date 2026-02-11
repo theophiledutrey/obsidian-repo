@@ -102,3 +102,39 @@ ssh -L 8080:192.168.3.1:80 consultant@10.129.17.36
 
 ![[IMG-20260211174757949.png]]
 
+On arrive sur une page de login mais on ne dispose pas des identifiants.
+
+L’idée est donc d’analyser la capture réseau `.cap` réalisée précédemment. Comme on a forcé un client à se déconnecter puis se reconnecter (deauth), il est possible qu’il ait ensuite accédé au routeur **en étant déjà authentifié**.
+
+```
+scp consultant@10.129.25.38:/home/consultant/scan-02.cap . 
+```
+
+En déchiffrant le trafic WiFi dans Wireshark grâce à la clé WPA2-PSK:
+**Edit → Preferences → Protocols → IEEE 802.11 → Decryption Keys**
+![[IMG-20260211194945640.png]]
+
+On peut inspecter les flux HTTP et potentiellement récupérer une session valide (cookies type `PHPSESSID`, `UserRole`) permettant d’accéder à l’interface sans connaître le mot de passe.
+![[IMG-20260211195121279.png]]
+
+```
+Frame 1333: 243 bytes on wire (1944 bits), 243 bytes captured (1944 bits)
+IEEE 802.11 Data, Flags: .p.....T
+Logical-Link Control
+Internet Protocol Version 4, Src: 192.168.3.74, Dst: 192.168.3.1
+Transmission Control Protocol, Src Port: 52812, Dst Port: 80, Seq: 1, Ack: 1, Len: 143
+Hypertext Transfer Protocol
+    GET /lab.php HTTP/1.1\r\n
+    Host: 192.168.3.1\r\n
+    User-Agent: curl/7.88.1\r\n
+    Accept: */*\r\n
+    Cookie: PHPSESSID=bts4i0slpt999k2j78gjv07eqg; UserRole=user\r\n
+    \r\n
+    [Full request URI: http://192.168.3.1/lab.php]
+    [HTTP request 1/1]
+    [Response in frame: 1335]
+```
+
+En utilisant ce cookie on arrive sur cette page:
+![[IMG-20260211195554950.png]]
+
