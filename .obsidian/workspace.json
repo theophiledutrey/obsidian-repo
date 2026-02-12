@@ -80,19 +80,6 @@
             }
           },
           {
-            "id": "fec72819739f8428",
-            "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {
-                "sortOrder": "alphabetical",
-                "autoReveal": false
-              },
-              "icon": "lucide-folder-closed",
-              "title": "Files"
-            }
-          },
-          {
             "id": "0e41e33ae9ef64f8",
             "type": "leaf",
             "state": {
@@ -113,7 +100,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -241,7 +228,7 @@
       "graph:Open graph view": false
     }
   },
-  "active": "c4bc4ff081214d87",
+  "active": "49f13425e5647cc9",
   "lastOpenFiles": [
     "Write up/Hack The Box/Boxe/Season 10/Pterodactyl.md",
     "Assets/Write up/Hack The Box/Boxe/Season 10/Pterodactyl/IMG-20260211210950180.png",

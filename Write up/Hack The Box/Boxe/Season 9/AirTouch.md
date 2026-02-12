@@ -169,5 +169,4 @@ user:JunDRDZKHDnpkpDDvay
 
 ![[IMG-20260211205527276.png]]
 
-https://github.com/snovvcrash/PPN/blob/master/pentest/wi-fi/wpa-wpa2/enterprise.md
-
+https://virtualsamuraii.github.io/network/retex-pentest-wifi-wpa2-enterprise/
