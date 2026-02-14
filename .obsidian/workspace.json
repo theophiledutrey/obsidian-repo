@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Write up/Hack The Box/Boxe/Season 9/AirTouch.md",
+                "file": "Write up/Hackropole/Monopoly.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "AirTouch"
+              "title": "Monopoly"
             }
           },
           {
@@ -93,6 +93,19 @@
             "id": "49f13425e5647cc9",
             "type": "leaf",
             "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "594ee520c3fa2521",
+            "type": "leaf",
+            "state": {
               "type": "mk-path-view",
               "state": {},
               "icon": "layout-grid",
@@ -100,7 +113,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -131,7 +144,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Write up/Hack The Box/Boxe/Season 9/AirTouch.md",
+                "file": "Write up/Hackropole/Monopoly.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +154,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for AirTouch"
+              "title": "Backlinks for Monopoly"
             }
           },
           {
@@ -150,12 +163,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Write up/Hack The Box/Boxe/Season 9/AirTouch.md",
+                "file": "Write up/Hackropole/Monopoly.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from AirTouch"
+              "title": "Outgoing links from Monopoly"
             }
           },
           {
@@ -179,13 +192,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Write up/Hack The Box/Boxe/Season 9/AirTouch.md",
+                "file": "Write up/Hackropole/Monopoly.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of AirTouch"
+              "title": "Outline of Monopoly"
             }
           }
         ]
@@ -228,14 +241,17 @@
       "graph:Open graph view": false
     }
   },
-  "active": "49f13425e5647cc9",
+  "active": "c4bc4ff081214d87",
   "lastOpenFiles": [
+    "Write up/Hackropole/meme-generator.md",
+    "Write up/Hackropole/Monopoly.md",
+    "Write up/Hackropole/Hackropole.md",
+    "Write up/Hack The Box/Boxe/Season 9/AirTouch.md",
     "Write up/Hack The Box/Boxe/Season 10/Pterodactyl.md",
     "Assets/Write up/Hack The Box/Boxe/Season 10/Pterodactyl/IMG-20260211210950180.png",
     "Assets/Write up/Hack The Box/Boxe/Season 10/Pterodactyl/IMG-20260211210826136.png",
     "Assets/Write up/Hack The Box/Boxe/Season 10/Pterodactyl/IMG-20260211210725317.png",
     "Pentest Tools/Link.md",
-    "Write up/Hack The Box/Boxe/Season 9/AirTouch.md",
     "Assets/Write up/Hack The Box/Boxe/Season 9/AirTouch/IMG-20260211205527276.png",
     "Assets/Write up/Hack The Box/Boxe/Season 9/AirTouch/IMG-20260211205111046.png",
     "Assets/Write up/Hack The Box/Boxe/Season 9/AirTouch/IMG-20260211203743648.png",
@@ -257,8 +273,6 @@
     "Write up/RootMe/Bash - quoted expression injection.md",
     "Write up/RootMe/Bash - unquoted expression injection.md",
     "Write up/ECE/Formation Privesc ECE.md",
-    "Write up/Hackropole/Monopoly.md",
-    "Write up/Hackropole/meme-generator.md",
     "Write up/Hack The Box/Boxe/Season 9/Previous Hack The Box.md",
     "Write up/Hack The Box/Achievement.md",
     "Write up/Hack The Box/Boxe/Season 9/CodeTwo Hack The Box.md",
