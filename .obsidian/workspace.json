@@ -63,8 +63,7 @@
               "title": "Pterodactyl"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -256,8 +255,12 @@
       "graph:Open graph view": false
     }
   },
-  "active": "578642a029d4aa28",
+  "active": "c4bc4ff081214d87",
   "lastOpenFiles": [
+    "Assets/Write up/Hack The Box/Boxe/Season 10/WingData/IMG-20260215001500951.png",
+    "Assets/Write up/Hack The Box/Boxe/Season 10/WingData/IMG-20260215001439199.png",
+    "Assets/Write up/Hack The Box/Boxe/Season 10/WingData/IMG-20260215000647247.png",
+    "Write up/Hack The Box/Boxe/Season 10/Pterodactyl.md",
     "Write up/Hack The Box/Boxe/Season 10/Facts.md",
     "Write up/Hack The Box/Boxe/Season 10/WingData.md",
     "Assets/Write up/Hack The Box/Boxe/Season 10/WingData/IMG-20260214235520349.png",
@@ -269,7 +272,6 @@
     "Write up/Hackropole/meme-generator.md",
     "Write up/Hackropole/Hackropole.md",
     "Write up/Hack The Box/Boxe/Season 9/AirTouch.md",
-    "Write up/Hack The Box/Boxe/Season 10/Pterodactyl.md",
     "Assets/Write up/Hack The Box/Boxe/Season 10/Pterodactyl/IMG-20260211210950180.png",
     "Assets/Write up/Hack The Box/Boxe/Season 10/Pterodactyl/IMG-20260211210826136.png",
     "Assets/Write up/Hack The Box/Boxe/Season 10/Pterodactyl/IMG-20260211210725317.png",
@@ -278,8 +280,6 @@
     "Assets/Write up/Hack The Box/Boxe/Season 9/AirTouch/IMG-20260211205111046.png",
     "Assets/Write up/Hack The Box/Boxe/Season 9/AirTouch/IMG-20260211203743648.png",
     "ECE/Stage/CTF XMCO.md",
-    "Assets/Write up/Hack The Box/Boxe/Season 9/AirTouch/IMG-20260211202508913.png",
-    "Assets/Write up/Hack The Box/Boxe/Season 9/AirTouch/IMG-20260211202154981.png",
     "2026-02-11.md",
     "Untitled.canvas",
     "Untitled.base",
@@ -297,7 +297,6 @@
     "Write up/Hack The Box/Boxe/Season 9/CodeTwo Hack The Box.md",
     "Write up/Hack The Box/Boxe/Season 9/Environment Hack The Box.md",
     "Linux/Analyse.md",
-    "Write up/Hack The Box/Boxe/Season 9/Season 9.md",
     "Assets/Write up/Hack The Box/Boxe/Season 9/CodeTwo Hack The Box",
     "Assets/Write up/Hack The Box/Boxe/Season 9/Conversor",
     "Assets/Write up/Hack The Box/Boxe/Season 9/Environment Hack The Box",
