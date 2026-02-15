@@ -58,4 +58,14 @@ wacky:!#7Blushing^*Bride5
 
 ![[IMG-20260215004507026.png]]
 
+![[IMG-20260215021129585.png]]
+
+![[IMG-20260215021148065.png]]
+
+
+![[IMG-20260215021112829.png]]
+
+https://github.com/python/cpython/issues/127987
+
+
 ![[IMG-20260215014201690.png]]
