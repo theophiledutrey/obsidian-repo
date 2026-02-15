@@ -41,26 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Web/Word List.md",
+                "file": "Linux/Analyse.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Word List"
-            }
-          },
-          {
-            "id": "578642a029d4aa28",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Write up/Hack The Box/Boxe/Season 10/Pterodactyl.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Pterodactyl"
+              "title": "Analyse"
             }
           }
         ]
@@ -257,6 +243,14 @@
   },
   "active": "c4bc4ff081214d87",
   "lastOpenFiles": [
+    "Assets/Write up/Hack The Box/Boxe/Season 10/WingData/IMG-20260215014201690.png",
+    "Linux/Analyse.md",
+    "Write up/Hack The Box/Boxe/Season 10/Pterodactyl.md",
+    "Write up/Hack The Box/Boxe/Season 10/WingData.md",
+    "Web/Tools.md",
+    "Linux/UID.md",
+    "Web/Vuln.md",
+    "Web/Word List.md",
     "Assets/Write up/Hack The Box/Boxe/Season 10/WingData/IMG-20260215004507026.png",
     "Assets/Write up/Hack The Box/Boxe/Season 10/WingData/IMG-20260215004423130.png",
     "Assets/Write up/Hack The Box/Boxe/Season 10/WingData/IMG-20260215004253856.png",
@@ -264,12 +258,8 @@
     "Assets/Write up/Hack The Box/Boxe/Season 10/WingData/IMG-20260215001500951.png",
     "Assets/Write up/Hack The Box/Boxe/Season 10/WingData/IMG-20260215001439199.png",
     "Assets/Write up/Hack The Box/Boxe/Season 10/WingData/IMG-20260215000647247.png",
-    "Write up/Hack The Box/Boxe/Season 10/Pterodactyl.md",
     "Write up/Hack The Box/Boxe/Season 10/Facts.md",
-    "Write up/Hack The Box/Boxe/Season 10/WingData.md",
     "Assets/Write up/Hack The Box/Boxe/Season 10/WingData/IMG-20260214235520349.png",
-    "Web/Word List.md",
-    "Web/Tools.md",
     "Assets/Write up/Hack The Box/Boxe/Season 10/WingData",
     "Assets/Write up/Hack The Box/Boxe/Season 10/WingData/IMG-20260214235118941.png",
     "Write up/Hackropole/Monopoly.md",
@@ -277,7 +267,6 @@
     "Write up/Hackropole/Hackropole.md",
     "Write up/Hack The Box/Boxe/Season 9/AirTouch.md",
     "Assets/Write up/Hack The Box/Boxe/Season 10/Pterodactyl/IMG-20260211210950180.png",
-    "Assets/Write up/Hack The Box/Boxe/Season 10/Pterodactyl/IMG-20260211210826136.png",
     "Pentest Tools/Link.md",
     "ECE/Stage/CTF XMCO.md",
     "2026-02-11.md",
@@ -294,9 +283,6 @@
     "Write up/ECE/Formation Privesc ECE.md",
     "Write up/Hack The Box/Boxe/Season 9/Previous Hack The Box.md",
     "Write up/Hack The Box/Achievement.md",
-    "Write up/Hack The Box/Boxe/Season 9/CodeTwo Hack The Box.md",
-    "Write up/Hack The Box/Boxe/Season 9/Environment Hack The Box.md",
-    "Linux/Analyse.md",
     "Assets/Write up/Hack The Box/Boxe/Season 9/CodeTwo Hack The Box",
     "Assets/Write up/Hack The Box/Boxe/Season 9/Conversor",
     "Assets/Write up/Hack The Box/Boxe/Season 9/Environment Hack The Box",
