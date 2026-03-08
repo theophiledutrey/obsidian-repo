@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Web/Tools.md",
+                "file": "Web/Word List.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tools"
+              "title": "Word List"
             }
           },
           {
@@ -239,11 +239,13 @@
   },
   "active": "2a2b0aafbb7eb0c8",
   "lastOpenFiles": [
-    "Write up/Hack The Box/Boxe/Season 10/Pterodactyl.md",
-    "Write up/Hack The Box/Boxe/Season 10/CCTV.md",
-    "Write up/Hack The Box/Boxe/Season 9/GiveBack.md",
-    "Web/Tools.md",
+    "Assets/Write up/Hack The Box/Boxe/Season 10/CCTV/IMG-20260308173336222.png",
+    "Assets/Write up/Hack The Box/Boxe/Season 10/CCTV/IMG-20260308173231070.png",
     "Web/Word List.md",
+    "Web/Tools.md",
+    "Write up/Hack The Box/Boxe/Season 10/CCTV.md",
+    "Write up/Hack The Box/Boxe/Season 10/Pterodactyl.md",
+    "Write up/Hack The Box/Boxe/Season 9/GiveBack.md",
     "Assets/Write up/Hack The Box/Boxe/Season 10/CCTV",
     "Assets/Write up/Hack The Box/Boxe/Season 10/CCTV/IMG-20260308154114369.png",
     "Write up/Hack The Box/Boxe/Season 9/Soulmate Hack The Box.md",
@@ -268,7 +270,6 @@
     "Write up/Hack The Box/Boxe/Season 9/Gavel.md",
     "Write up/Hack The Box/Boxe/Season 9/Expressway Hack The Box .md",
     "Write up/Hack The Box/Boxe/Season 9/Eighteen.md",
-    "Write up/Hack The Box/Boxe/Season 9/AirTouch.md",
     "Write up/Hack The Box/Boxe/Season 9",
     "Assets/Write up/Hack The Box/Boxe/Season 9/Soulmate Hack The Box/IMG-20260211174808018.png",
     "Assets/Write up/Hack The Box/Boxe/Season 9/Previous Hack The Box/IMG-20260211174814438.png",
@@ -278,7 +279,6 @@
     "Assets/Write up/Hack The Box/Boxe/Season 9/Previous Hack The Box/IMG-20260211174812905.png",
     "Assets/Write up/Hack The Box/Boxe/Season 9/Previous Hack The Box/IMG-20260211174812420.png",
     "Assets/Write up/Hack The Box/Boxe/Season 9/Previous Hack The Box/IMG-20260211174811963.png",
-    "Assets/Write up/Hack The Box/Boxe/Season 9/Previous Hack The Box/IMG-20260211174811174.png",
     "Assets/Write up/Hack The Box/Boxe/Season 9/Soulmate Hack The Box",
     "Assets/Write up/Hack The Box/Boxe/Season 9/Previous Hack The Box",
     "Assets/Write up/Hack The Box/Boxe/Season 9/Overwatch",
