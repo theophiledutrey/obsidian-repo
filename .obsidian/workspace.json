@@ -4,35 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "941e35087c2f58fb",
+        "id": "5112bb6a62833d40",
         "type": "tabs",
         "children": [
           {
-            "id": "7ae4b4a6cad4c639",
+            "id": "b55f549de609d972",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "ECE/Stage/rapport_CTF_XMCO_Theophile_Dutrey .pdf"
+                "file": "Write up/Hack The Box/Boxe/Season 10/CCTV.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "rapport_CTF_XMCO_Theophile_Dutrey"
-            }
-          },
-          {
-            "id": "0e0686454b9604e3",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.12.4"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.12.4"
+              "icon": "lucide-file",
+              "title": "CCTV"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -233,28 +222,30 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "0e0686454b9604e3",
+  "active": "b55f549de609d972",
   "lastOpenFiles": [
+    "Write up/Hack The Box/Boxe/Season 10/Pterodactyl.md",
+    "Write up/Hack The Box/Boxe/Season 10/CCTV.md",
+    "Write up/Hack The Box/Boxe/Season 9/GiveBack.md",
+    "Write up/Hack The Box/Boxe/Season 9/Soulmate Hack The Box.md",
+    "ECE/Stage/rapport_CTF_XMCO_Theophile_Dutrey .pdf",
     "Write up/Hack The Box/Boxe/Season 9/Browsed.md",
     "Write up/Hack The Box/Boxe/Season 9/CodeTwo Hack The Box.md",
     "Write up/Hack The Box/Boxe/Season 9/Conversor.md",
     "Write up/Hack The Box/Boxe/Season 9/Environment Hack The Box.md",
     "Write up/Hack The Box/Boxe/Season 9/NanoCorp.md",
     "Write up/Hack The Box/Boxe/Season 9/Previous Hack The Box.md",
-    "Write up/Hack The Box/Boxe/Season 10/Pterodactyl.md",
     "Write up/Hack The Box/Boxe/Season 10/WingData.md",
     "ECE/Stage/CTF XMCO.md",
     "Write up/RootMe/Bash - quoted expression injection.md",
     "Write up/Hack The Box/Boxe/AirTouch.md",
     "XMCO/XMCO.md",
     "XMCO",
-    "Write up/Hack The Box/Boxe/Season 9/Soulmate Hack The Box.md",
     "Write up/Hack The Box/Boxe/Season 9/Season 9.md",
     "Write up/Hack The Box/Boxe/Season 9/Overwatch.md",
     "Write up/Hack The Box/Boxe/Season 9/MonitorsFour.md",
     "Write up/Hack The Box/Boxe/Season 9/Imagery.md",
     "Write up/Hack The Box/Boxe/Season 9/Guardian Hack The Box.md",
-    "Write up/Hack The Box/Boxe/Season 9/GiveBack.md",
     "Write up/Hack The Box/Boxe/Season 9/Gavel.md",
     "Write up/Hack The Box/Boxe/Season 9/Expressway Hack The Box .md",
     "Write up/Hack The Box/Boxe/Season 9/Eighteen.md",
@@ -277,10 +268,8 @@
     "Assets/Write up/Hack The Box/Boxe/Season 9/MonitorsFour",
     "Assets/Write up/Hack The Box/Boxe/Season 9/Imagery",
     "Assets/Write up/Hack The Box/Boxe/Season 9/Guardian Hack The Box",
-    "Assets/Write up/Hack The Box/Boxe/Season 9/GiveBack",
     "Write up/Hack The Box/Boxe/Browsed.md",
     "Write up/ECE/Formation Privesc ECE.md",
-    "Write up/Hack The Box/Boxe/Eighteen.md",
     "Web/Untitled.canvas",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
