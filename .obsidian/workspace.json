@@ -11,13 +11,28 @@
             "id": "7ae4b4a6cad4c639",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "type": "pdf",
+              "state": {
+                "file": "ECE/Stage/rapport_CTF_XMCO_Theophile_Dutrey .pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "rapport_CTF_XMCO_Theophile_Dutrey"
+            }
+          },
+          {
+            "id": "0e0686454b9604e3",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.12.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.12.4"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -71,7 +86,7 @@
             }
           },
           {
-            "id": "d302442fcade9cea",
+            "id": "861bdebdb3402f63",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -218,32 +233,33 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "7ae4b4a6cad4c639",
+  "active": "0e0686454b9604e3",
   "lastOpenFiles": [
+    "Write up/Hack The Box/Boxe/Season 9/Browsed.md",
+    "Write up/Hack The Box/Boxe/Season 9/CodeTwo Hack The Box.md",
+    "Write up/Hack The Box/Boxe/Season 9/Conversor.md",
+    "Write up/Hack The Box/Boxe/Season 9/Environment Hack The Box.md",
+    "Write up/Hack The Box/Boxe/Season 9/NanoCorp.md",
+    "Write up/Hack The Box/Boxe/Season 9/Previous Hack The Box.md",
+    "Write up/Hack The Box/Boxe/Season 10/Pterodactyl.md",
     "Write up/Hack The Box/Boxe/Season 10/WingData.md",
+    "ECE/Stage/CTF XMCO.md",
     "Write up/RootMe/Bash - quoted expression injection.md",
     "Write up/Hack The Box/Boxe/AirTouch.md",
     "XMCO/XMCO.md",
     "XMCO",
     "Write up/Hack The Box/Boxe/Season 9/Soulmate Hack The Box.md",
     "Write up/Hack The Box/Boxe/Season 9/Season 9.md",
-    "Write up/Hack The Box/Boxe/Season 9/Previous Hack The Box.md",
     "Write up/Hack The Box/Boxe/Season 9/Overwatch.md",
-    "Write up/Hack The Box/Boxe/Season 9/NanoCorp.md",
     "Write up/Hack The Box/Boxe/Season 9/MonitorsFour.md",
     "Write up/Hack The Box/Boxe/Season 9/Imagery.md",
     "Write up/Hack The Box/Boxe/Season 9/Guardian Hack The Box.md",
     "Write up/Hack The Box/Boxe/Season 9/GiveBack.md",
     "Write up/Hack The Box/Boxe/Season 9/Gavel.md",
     "Write up/Hack The Box/Boxe/Season 9/Expressway Hack The Box .md",
-    "Write up/Hack The Box/Boxe/Season 9/Environment Hack The Box.md",
     "Write up/Hack The Box/Boxe/Season 9/Eighteen.md",
-    "Write up/Hack The Box/Boxe/Season 9/Conversor.md",
-    "Write up/Hack The Box/Boxe/Season 9/CodeTwo Hack The Box.md",
-    "Write up/Hack The Box/Boxe/Season 9/Browsed.md",
     "Write up/Hack The Box/Boxe/Season 9/AirTouch.md",
     "Write up/Hack The Box/Boxe/Season 9",
-    "Write up/Hack The Box/Boxe/Season 10/Pterodactyl.md",
     "Assets/Write up/Hack The Box/Boxe/Season 9/Soulmate Hack The Box/IMG-20260211174808018.png",
     "Assets/Write up/Hack The Box/Boxe/Season 9/Previous Hack The Box/IMG-20260211174814438.png",
     "Assets/Write up/Hack The Box/Boxe/Season 9/Previous Hack The Box/IMG-20260211174813732.png",
@@ -265,7 +281,6 @@
     "Write up/Hack The Box/Boxe/Browsed.md",
     "Write up/ECE/Formation Privesc ECE.md",
     "Write up/Hack The Box/Boxe/Eighteen.md",
-    "Linux/Privilege Escalation.md",
     "Web/Untitled.canvas",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
