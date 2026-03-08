@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Write up/Hack The Box/Boxe/Season 10/CCTV.md",
+                "file": "Web/Word List.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CCTV"
+              "title": "Word List"
             }
           }
         ]
@@ -224,8 +224,12 @@
   },
   "active": "b55f549de609d972",
   "lastOpenFiles": [
-    "Write up/Hack The Box/Boxe/Season 10/Pterodactyl.md",
+    "Web/Tools.md",
+    "Web/Word List.md",
     "Write up/Hack The Box/Boxe/Season 10/CCTV.md",
+    "Assets/Write up/Hack The Box/Boxe/Season 10/CCTV",
+    "Assets/Write up/Hack The Box/Boxe/Season 10/CCTV/IMG-20260308154114369.png",
+    "Write up/Hack The Box/Boxe/Season 10/Pterodactyl.md",
     "Write up/Hack The Box/Boxe/Season 9/GiveBack.md",
     "Write up/Hack The Box/Boxe/Season 9/Soulmate Hack The Box.md",
     "ECE/Stage/rapport_CTF_XMCO_Theophile_Dutrey .pdf",
@@ -260,16 +264,12 @@
     "Assets/Write up/Hack The Box/Boxe/Season 9/Previous Hack The Box/IMG-20260211174812420.png",
     "Assets/Write up/Hack The Box/Boxe/Season 9/Previous Hack The Box/IMG-20260211174811963.png",
     "Assets/Write up/Hack The Box/Boxe/Season 9/Previous Hack The Box/IMG-20260211174811174.png",
-    "Assets/Write up/Hack The Box/Boxe/Season 9/Previous Hack The Box/IMG-20260211174810908.png",
     "Assets/Write up/Hack The Box/Boxe/Season 9/Soulmate Hack The Box",
     "Assets/Write up/Hack The Box/Boxe/Season 9/Previous Hack The Box",
     "Assets/Write up/Hack The Box/Boxe/Season 9/Overwatch",
     "Assets/Write up/Hack The Box/Boxe/Season 9/NanoCorp",
     "Assets/Write up/Hack The Box/Boxe/Season 9/MonitorsFour",
     "Assets/Write up/Hack The Box/Boxe/Season 9/Imagery",
-    "Assets/Write up/Hack The Box/Boxe/Season 9/Guardian Hack The Box",
-    "Write up/Hack The Box/Boxe/Browsed.md",
-    "Write up/ECE/Formation Privesc ECE.md",
     "Web/Untitled.canvas",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",

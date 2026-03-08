@@ -81,7 +81,9 @@
     "//ECE/ECE/Stage",
     "//Pentest Tools",
     "//Write up/Write up/Hackropole",
-    "//Linux"
+    "//Linux",
+    "//Web",
+    "//Web/Web/Portswigger"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
