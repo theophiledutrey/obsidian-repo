@@ -24,6 +24,9 @@ ffuf -w usernames.txt:USERNAME -w passwords.txt:PASSWORD -X POST \
 ffuf -w subdomains.txt -u http://target.com/ -H "Host: FUZZ.target.com" -fs 0
 ```
 
+```bash
+ffuf -u http://target/FUZZ -w /usr/share/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-2.3-medium.txt -e .php,.txt -mc 200,204,301,302,307,401,403 -t 50
+```
 ### 🔹 Gobuster
 ```bash
 gobuster dir -u http://target.com/ -w wordlist.txt -x php,html,txt -t 50 --exclude-length 53
