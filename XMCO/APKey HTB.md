@@ -1,0 +1,5 @@
+```
+apktool d apkey.apk
+```
+
+
