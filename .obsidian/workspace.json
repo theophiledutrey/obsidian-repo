@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "XMCO/Mobile (APK).md",
+                "file": "XMCO/Mobile/Mobile (APK).md",
                 "mode": "source",
                 "source": false
               },
@@ -224,8 +224,12 @@
   },
   "active": "7ae4b4a6cad4c639",
   "lastOpenFiles": [
-    "XMCO/APKey HTB.md",
-    "XMCO/Mobile (APK).md",
+    "XMCO/Mobile/Frida.md",
+    "XMCO/Mobile/APKey HTB.md",
+    "XMCO/Mobile/Mobile (APK).md",
+    "XMCO/Mobile/Mobile.md",
+    "XMCO/Mobile",
+    "XMCO/Untitled.md",
     "XMCO/XMCO.md",
     "ECE/ECE.md",
     "ECE/Stage/Key Vocabulary English.md",
@@ -253,9 +257,6 @@
     "Write up/Hack The Box/Boxe/Season 9/GiveBack.md",
     "Write up/Hack The Box/Boxe/Season 9/Gavel.md",
     "Write up/Hack The Box/Boxe/Season 9/Expressway Hack The Box .md",
-    "Write up/Hack The Box/Boxe/Season 9/Environment Hack The Box.md",
-    "Write up/Hack The Box/Boxe/Season 9/Eighteen.md",
-    "Write up/Hack The Box/Boxe/Season 9/Conversor.md",
     "Write up/Hack The Box/Boxe/Season 9",
     "Assets/Write up/Hack The Box/Boxe/Season 9/Soulmate Hack The Box/IMG-20260211174808018.png",
     "Assets/Write up/Hack The Box/Boxe/Season 9/Previous Hack The Box/IMG-20260211174814438.png",
@@ -269,7 +270,6 @@
     "Assets/Write up/Hack The Box/Boxe/Season 9/Overwatch",
     "Assets/Write up/Hack The Box/Boxe/Season 9/NanoCorp",
     "Assets/Write up/Hack The Box/Boxe/Season 9/MonitorsFour",
-    "Assets/Write up/Hack The Box/Boxe/Season 9/Imagery",
     "Web/Untitled.canvas",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",

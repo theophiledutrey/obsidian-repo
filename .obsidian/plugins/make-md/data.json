@@ -81,7 +81,8 @@
     "//Pentest Tools",
     "//Write up/Write up/Hackropole",
     "//Web/Web/Portswigger",
-    "//XMCO"
+    "//XMCO",
+    "//XMCO/XMCO/Mobile"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
