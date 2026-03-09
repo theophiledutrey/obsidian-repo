@@ -229,15 +229,3 @@ Android Emulator
 ```
 
 ---
-
-# Résumé rapide
-
-1. Installer `frida-tools`
-2. Télécharger `frida-server`
-3. `adb push` vers l’émulateur
-4. `chmod +x`
-5. lancer `/data/local/tmp/frida-server`
-6. utiliser `frida-ps -U` pour vérifier
-7. hooker l’app
-
----
