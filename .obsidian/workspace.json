@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ECE/Stage/Key Vocabulary English.md",
+                "file": "XMCO/Mobile (APK).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Key Vocabulary English"
+              "title": "Mobile (APK)"
             }
           }
         ]
@@ -224,8 +224,11 @@
   },
   "active": "7ae4b4a6cad4c639",
   "lastOpenFiles": [
-    "ECE/Stage/CV.md",
+    "XMCO/XMCO.md",
+    "XMCO/Mobile (APK).md",
     "ECE/ECE.md",
+    "ECE/Stage/Key Vocabulary English.md",
+    "ECE/Stage/CV.md",
     "Write up/Hack The Box/Boxe/Season 10/WingData.md",
     "Write up/Hack The Box/Boxe/Season 10/CCTV.md",
     "Assets/Write up/Hack The Box/Boxe/Season 10/CCTV/IMG-20260308173231070.png",
@@ -237,7 +240,6 @@
     "Tags",
     "Write up/RootMe/Bash - quoted expression injection.md",
     "Write up/Hack The Box/Boxe/AirTouch.md",
-    "XMCO/XMCO.md",
     "XMCO",
     "Write up/Hack The Box/Boxe/Season 9/Soulmate Hack The Box.md",
     "Write up/Hack The Box/Boxe/Season 9/Season 9.md",
@@ -254,8 +256,6 @@
     "Write up/Hack The Box/Boxe/Season 9/Eighteen.md",
     "Write up/Hack The Box/Boxe/Season 9/Conversor.md",
     "Write up/Hack The Box/Boxe/Season 9/CodeTwo Hack The Box.md",
-    "Write up/Hack The Box/Boxe/Season 9/Browsed.md",
-    "Write up/Hack The Box/Boxe/Season 9/AirTouch.md",
     "Write up/Hack The Box/Boxe/Season 9",
     "Assets/Write up/Hack The Box/Boxe/Season 9/Soulmate Hack The Box/IMG-20260211174808018.png",
     "Assets/Write up/Hack The Box/Boxe/Season 9/Previous Hack The Box/IMG-20260211174814438.png",
