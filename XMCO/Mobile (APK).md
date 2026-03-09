@@ -289,7 +289,7 @@ flag
 
 ---
 
-# Analyse dynamique (optionnel)
+# Analyse dynamique 
 
 frida-ps -U
 
