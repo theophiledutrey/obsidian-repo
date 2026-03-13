@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Web/Portswigger/SQLi.md",
+                "file": "Web/Portswigger/File Upload.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SQLi"
+              "title": "File Upload"
             }
           },
           {
@@ -253,6 +253,8 @@
   },
   "active": "7ae4b4a6cad4c639",
   "lastOpenFiles": [
+    "Web/Portswigger/SQLi.md",
+    "Web/Portswigger/File Upload.md",
     "Web/Portswigger/Portswigger.md",
     "XMCO/Mobile/XMDROID.md",
     "Assets/XMCO/Mobile/XMDROID/IMG-20260313173112537.png",
@@ -284,7 +286,6 @@
     "ECE/Stage/CV.md",
     "Write up/Hack The Box/Boxe/Season 10/WingData.md",
     "Assets/Write up/Hack The Box/Boxe/Season 10/CCTV",
-    "Web/Portswigger/SQLi.md",
     "Tags",
     "Write up/RootMe/Bash - quoted expression injection.md",
     "Write up/Hack The Box/Boxe/AirTouch.md",
