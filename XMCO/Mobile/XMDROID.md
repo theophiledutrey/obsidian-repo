@@ -125,6 +125,11 @@ Le compte associé au champ `password/username` doit être diffénrent du compte
 ![[IMG-20260313154559733.png]]
 
 
-![[IMG-20260313163625294.png]]
+### Le compte admin:admin existe
 
+![[IMG-20260313171330944.png]]
+
+### IDOR possible sur le champ username 
+
+![[IMG-20260313171740664.png]]
 
