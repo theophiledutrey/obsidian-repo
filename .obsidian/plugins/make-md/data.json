@@ -82,7 +82,8 @@
     "//Write up/Write up/Hackropole",
     "//Web/Web/Portswigger",
     "//XMCO",
-    "//XMCO/XMCO/Mobile"
+    "//XMCO/XMCO/Mobile",
+    "//Web"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",

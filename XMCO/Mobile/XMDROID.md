@@ -132,4 +132,15 @@ Le compte associé au champ `password/username` doit être diffénrent du compte
 ### IDOR possible sur le champ username 
 
 ![[IMG-20260313171740664.png]]
+![[IMG-20260313173112537.png]]
+```
+ffuf -w /Users/tdutrey/Documents/tools/Wordlist/SecLists/Usernames/top-usernames-shortlist.txt \
+-u https://3.64.133.246/login \
+-X POST \
+-H "Content-Type: application/x-www-form-urlencoded" \
+-d "password=@Test1234&username=FUZZ" \
+-fr '"account_number": null' \
+-k
+```
 
+###
