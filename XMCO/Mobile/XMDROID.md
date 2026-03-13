@@ -106,3 +106,24 @@ if (DoLogin.this.username.equals("devadmin") || (DoLogin.this.username.equals("t
 ```
 ![[IMG-20260313144850272.png]]
 
+### Transfer d'argent à volonté  
+```
+password=@Test1234&amount=41000&to_acc=5555555555554444&from_acc=371449635398431&label=Shopping&username=test
+```
+
+![[IMG-20260313153227268.png]]
+
+Condition:
+Le compte associé au champ `password/username` doit être diffénrent du compte associé à l'id dans le champ `to_acc`. Sinon:
+![[IMG-20260313153716211.png]]
+
+### Changement du mdp d'un autre compte que le sien 
+
+![[IMG-20260313154432060.png]]
+
+![[IMG-20260313154559733.png]]
+
+
+
+
+
