@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "XMCO/Mobile/APKey HTB.md",
+                "file": "XMCO/Mobile/XMDROID.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "APKey HTB"
+              "title": "XMDROID"
             }
           },
           {
@@ -49,8 +49,7 @@
               "title": "APKey HTB"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -252,10 +251,14 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "67447c6035e596e4",
+  "active": "7ae4b4a6cad4c639",
   "lastOpenFiles": [
-    "XMCO/Mobile/Mobile (APK).md",
+    "Assets/XMCO/Mobile/XMDROID/IMG-20260313114941226.png",
+    "Assets/XMCO/Mobile/XMDROID",
+    "Assets/XMCO/Mobile/XMDROID/IMG-20260313114856722.png",
     "XMCO/Mobile/APKey HTB.md",
+    "XMCO/Mobile/XMDROID.md",
+    "XMCO/Mobile/Mobile (APK).md",
     "XMCO/Mobile/Frida.md",
     "Assets/XMCO/Mobile/APKey HTB/IMG-20260309171542725.png",
     "Assets/XMCO/Mobile/APKey HTB/IMG-20260309162630146.png",
@@ -291,14 +294,11 @@
     "Write up/Hack The Box/Boxe/Season 9/Imagery.md",
     "Write up/Hack The Box/Boxe/Season 9/Guardian Hack The Box.md",
     "Write up/Hack The Box/Boxe/Season 9/GiveBack.md",
-    "Write up/Hack The Box/Boxe/Season 9/Gavel.md",
     "Write up/Hack The Box/Boxe/Season 9",
     "Assets/Write up/Hack The Box/Boxe/Season 9/Soulmate Hack The Box/IMG-20260211174808018.png",
     "Assets/Write up/Hack The Box/Boxe/Season 9/Previous Hack The Box/IMG-20260211174814438.png",
     "Assets/Write up/Hack The Box/Boxe/Season 9/Previous Hack The Box/IMG-20260211174813732.png",
-    "Assets/Write up/Hack The Box/Boxe/Season 9/Previous Hack The Box/IMG-20260211174813457.png",
     "Assets/Write up/Hack The Box/Boxe/Season 9/Soulmate Hack The Box",
-    "Assets/Write up/Hack The Box/Boxe/Season 9/Previous Hack The Box",
     "Web/Untitled.canvas",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
