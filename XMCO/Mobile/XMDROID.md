@@ -104,6 +104,7 @@ Account:
 ```
 if (DoLogin.this.username.equals("devadmin") || (DoLogin.this.username.equals("test") && DoLogin.this.password.equals("test")))
 ```
+
 ![[IMG-20260313144850272.png]]
 
 ### Transfer d'argent à volonté  
@@ -124,6 +125,6 @@ Le compte associé au champ `password/username` doit être diffénrent du compte
 ![[IMG-20260313154559733.png]]
 
 
-
+![[IMG-20260313163625294.png]]
 
 
