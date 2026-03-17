@@ -108,7 +108,7 @@ if (DoLogin.this.username.equals("devadmin") || (DoLogin.this.username.equals("t
 
 ![[IMG-20260313144850272.png]]
 
-### Transfer d'argent à volonté  
+### Modification de l'émetteur d'un virement 
 ```
 password=@Test1234&amount=41000&to_acc=5555555555554444&from_acc=371449635398431&label=Shopping&username=test
 ```
@@ -144,4 +144,6 @@ ffuf -w /Users/tdutrey/Documents/tools/Wordlist/SecLists/Usernames/top-usernames
 -k
 ```
 
-###
+### Transaction inversé dans le cham "amount"
+
+![[Pasted image 20260317095415.png]]
