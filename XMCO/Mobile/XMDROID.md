@@ -99,16 +99,9 @@ Account:
 371449635398431
 ```
 
-## Vuln
+## Pentest API
 
-### Compte Hard codé dans l'app
-```
-if (DoLogin.this.username.equals("devadmin") || (DoLogin.this.username.equals("test") && DoLogin.this.password.equals("test")))
-```
-
-![[IMG-20260313144850272.png]]
-
-### Modification de l'émetteur d'un virement 
+### Modification de l'émetteur d'un virement (ACL)
 ```
 password=@Test1234&amount=41000&to_acc=5555555555554444&from_acc=371449635398431&label=Shopping&username=test
 ```
@@ -119,7 +112,7 @@ Condition:
 Le compte associé au champ `password/username` doit être diffénrent du compte associé à l'id dans le champ `to_acc`. Sinon:
 ![[IMG-20260313153716211.png]]
 
-### Changement du mdp d'un autre compte que le sien 
+### Changement du mdp d'un autre compte que le sien (ACL)
 
 ![[IMG-20260313154432060.png]]
 
@@ -130,9 +123,12 @@ Le compte associé au champ `password/username` doit être diffénrent du compte
 
 ![[IMG-20260313171330944.png]]
 
-### IDOR possible sur le champ username 
+### Mauvaise Gestion des erreurs dans la requête login
 
 ![[IMG-20260313171740664.png]]
+![[Pasted image 20260317101849.png]]
+
+
 ![[IMG-20260313173112537.png]]
 ```
 ffuf -w /Users/tdutrey/Documents/tools/Wordlist/SecLists/Usernames/top-usernames-shortlist.txt \
@@ -144,6 +140,37 @@ ffuf -w /Users/tdutrey/Documents/tools/Wordlist/SecLists/Usernames/top-usernames
 -k
 ```
 
+#### IDOR Champ account (ACL)
+
+![[Pasted image 20260317101341.png]]
+
 ### Transaction inversé dans le cham "amount"
 
 ![[Pasted image 20260317095415.png]]
+
+## Pentest APK
+
+### Manifest.xml mal configuré:
+
+#### Mode debug activé
+
+![[Pasted image 20260317103940.png]]
+![[Pasted image 20260317103949.png]]
+
+#### Mode backup activé
+
+![[Pasted image 20260317104446.png]]
+![[Pasted image 20260317104457.png]]
+
+#### Trop de permission sont données à l'app
+
+![[Pasted image 20260317105008.png]]
+
+### Compte Hard codé dans l'app
+
+```
+if (DoLogin.this.username.equals("devadmin") || (DoLogin.this.username.equals("test") && DoLogin.this.password.equals("test")))
+```
+
+![[IMG-20260313144850272.png]]
+
