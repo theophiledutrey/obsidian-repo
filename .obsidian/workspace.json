@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "XMCO/Pentest echo.md",
+                "file": "XMCO/XMSHOP.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Pentest echo"
+              "title": "XMSHOP"
             }
           },
           {
@@ -252,12 +252,17 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "5cfff60f08e5104b",
+  "active": "70072440ebe60962",
   "lastOpenFiles": [
+    "XMCO/Untitled 1.md",
+    "XMCO/XMSHOP.md",
+    "XMCO/Mobile/Mobile.md",
+    "XMCO/Pentest echo.md",
+    "XMCO/XMSHOP/XMSHOP.md",
+    "XMCO/XMSHOP",
     "Assets/Pasted image 20260318155708.png",
     "Web/Portswigger/File Upload.md",
     "XMCO/Mobile/APKey HTB.md",
-    "XMCO/Pentest echo.md",
     "Assets/Pasted image 20260318115135.png",
     "XMCO/Mobile/XMDROID.md",
     "ECE/Stage/CTF OCD.md",
@@ -271,7 +276,6 @@
     "Assets/Pasted image 20260317103940.png",
     "Assets/Pasted image 20260317101849.png",
     "Assets/Pasted image 20260317101341.png",
-    "Assets/Pasted image 20260317095415.png",
     "XMCO/Tools XMCO.md",
     "Assets/XMCO/Tools XMCO",
     "XMCO/Mobile/Mobile (APK).md",
@@ -285,7 +289,6 @@
     "Assets/XMCO/Mobile/APKey HTB",
     "Assets/XMCO/Mobile",
     "Assets/XMCO",
-    "XMCO/Mobile/Mobile.md",
     "XMCO/Mobile",
     "XMCO/XMCO.md",
     "ECE/ECE.md",
@@ -297,9 +300,6 @@
     "Write up/RootMe/Bash - quoted expression injection.md",
     "Write up/Hack The Box/Boxe/AirTouch.md",
     "XMCO",
-    "Write up/Hack The Box/Boxe/Season 9/Soulmate Hack The Box.md",
-    "Write up/Hack The Box/Boxe/Season 9/Season 9.md",
-    "Write up/Hack The Box/Boxe/Season 9",
     "Web/Untitled.canvas",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
