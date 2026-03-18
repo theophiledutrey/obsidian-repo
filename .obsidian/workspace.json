@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "XMCO/Mobile/XMDROID.md",
+                "file": "XMCO/Pentest echo.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "XMDROID"
+              "title": "Pentest echo"
             }
           },
           {
@@ -254,10 +254,12 @@
   },
   "active": "5cfff60f08e5104b",
   "lastOpenFiles": [
+    "Assets/Pasted image 20260318115135.png",
+    "XMCO/Mobile/XMDROID.md",
+    "XMCO/Pentest echo.md",
     "ECE/Stage/CTF OCD.md",
     "ECE/Stage/CTF OCD PENTEST.md",
     "ECE/Stage/Questions Techniques stage.md",
-    "XMCO/Mobile/XMDROID.md",
     "Assets/Pasted image 20260317105008.png",
     "Assets/Pasted image 20260317104457.png",
     "Assets/Pasted image 20260317104446.png",
@@ -297,8 +299,6 @@
     "XMCO",
     "Write up/Hack The Box/Boxe/Season 9/Soulmate Hack The Box.md",
     "Write up/Hack The Box/Boxe/Season 9/Season 9.md",
-    "Write up/Hack The Box/Boxe/Season 9/Previous Hack The Box.md",
-    "Write up/Hack The Box/Boxe/Season 9/Overwatch.md",
     "Write up/Hack The Box/Boxe/Season 9",
     "Web/Untitled.canvas",
     "Photos/INTERACTIVE-MAP.canvas",
