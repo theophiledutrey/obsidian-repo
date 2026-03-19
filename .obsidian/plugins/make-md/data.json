@@ -82,7 +82,8 @@
     "//Web/Web/Portswigger",
     "//XMCO",
     "//Web",
-    "//ECE"
+    "//ECE",
+    "//XMCO/XMCO/Mobile"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
