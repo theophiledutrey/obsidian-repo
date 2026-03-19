@@ -220,3 +220,7 @@ Java.perform(function () {
 
 ![[Pasted image 20260319165228.png]]
 
+Puis il y a pas de controle de l'utilisateur:
+![[Pasted image 20260319170545.png]]
+
+N importe qui peut donc créer un compte
