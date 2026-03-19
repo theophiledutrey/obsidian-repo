@@ -168,11 +168,55 @@ ffuf -w /Users/tdutrey/Documents/tools/Wordlist/SecLists/Usernames/top-usernames
 
 
 
-### Compte Hard codé dans l'app
+### Compte Hard codé dans l'app (DoLogin)
 
 ```
 if (DoLogin.this.username.equals("devadmin") || (DoLogin.this.username.equals("test") && DoLogin.this.password.equals("test")))
 ```
 
 ![[IMG-20260313144850272.png]]
+
+
+### Clé Hard Codé dans l app (CryptoClass)
+
+![[Pasted image 20260319162842.png]]
+
+### Mdps stockés en base 64 dans la BDD (DoLogin)
+![[Pasted image 20260319163008.png]]
+
+![[Pasted image 20260319163403.png]]
+
+
+### Fuite du nouveau mot de passe via broadcast implicite
+
+![[Pasted image 20260319163549.png]]
+
+Le mot de passe est envoyé dans un **broadcast implicite** avec une action custom.  
+Si une autre app peut écouter cette action, elle peut intercepter :
+- le numéro de téléphone,
+- le nouveau mot de passe.
+
+### Fonctionnalité admin caché dans le front de l'application
+
+![[Pasted image 20260319165103.png]]
+
+On peut afficher la page avec frida de cette facon:
+
+```js
+Java.perform(function () {
+    var Resources = Java.use("android.content.res.Resources");
+    Resources.getString.overload('int').implementation = function (id) {
+        var result = this.getString(id);
+        if (result === "no") {
+            console.log("[+] Replacing is_admin value");
+            return "yes";
+        }
+        return result;
+    };
+});
+```
+
+![[Pasted image 20260319165219.png]]
+
+![[Pasted image 20260319165228.png]]
 
