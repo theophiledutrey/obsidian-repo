@@ -337,7 +337,7 @@ Solutions de chiffrement faibles Fait
 Manipulation de la chaine `is_admin` Fait 
 ```
 
-BroadcastReceiver Manipulation evoqué à la fin du rapport mais difficile de faire un POC car ça se fait via l'envoie d'un SMS, sinon ça reprend exactement le même concept de vuln que ContentProvider expliqué à la fin
+BroadcastReceiver Manipulation evoqué à la fin du rapport mais difficile de faire un POC car ça se fait via l'envoie d'un SMS, sinon ça reprend exactement le même concept de vuln que ContentProvider expliqué à la fin. Est ce que une note suffit pour cette vuln?
 
 Android debuggable et backup -> scénario de compromission compliqué 
 Scénario imagineé:
@@ -346,11 +346,12 @@ Scénario imagineé:
 
 Solution de chiffrement faible évoquué dans la première vuln mobile avec la clé AES, faut il en faire une vuln a part ?
 
-Manipulation de la chaine is_admin est évoqué dans la vuln ACL de l'API, faut il la séparé et en faire une a part aussi 
+Manipulation de la chaine is_admin est évoqué dans la vuln ACL de l'API, faut il la séparé et en faire une a part aussi ?
 
 ## ADB debbugable 
 
-![[Pasted image 20260325112027.png]]
+![[Pasted image 20260325175227.png]]
+
 
 ## ADB backup
 
