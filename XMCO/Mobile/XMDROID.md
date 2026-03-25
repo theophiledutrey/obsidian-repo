@@ -318,9 +318,9 @@ BroadcastReceiver Manipulation Fait
 
 ContentProvider qui garde toutes les authentifications Fait 
 
-Dump Mémoire du processus 
+Dump Mémoire du processus Fait  
 
-Intent Sniffing
+Intent Sniffing 
 
 Local Storage avec DB sqlite non chiffrée Fait 
 
@@ -436,4 +436,10 @@ class MainActivity : ComponentActivity() {
 ```
 
 ![[Pasted image 20260325154610.png]]
+
+## Dump Mémoire du processus
+
+![[Pasted image 20260325172427.png]]
+
+![[Pasted image 20260325172626.png]]
 
