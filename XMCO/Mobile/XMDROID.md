@@ -275,7 +275,7 @@ Dump Mémoire du processus
 
 Intent Sniffing
 
-Local Storage avec DB sqlite non chiffrée 
+Local Storage avec DB sqlite non chiffrée Fait 
 
 Logs verbeux Fait 
 
@@ -345,4 +345,12 @@ cd backup_extract
 ![[Pasted image 20260325115935.png]]
 
 ## Local Storage avec DB sqlite non chiffrée 
+
+![[Pasted image 20260325141814.png]]
+
+## Solutions de chiffrement faibles
+
+![[Pasted image 20260325141939.png]]
+
+![[Pasted image 20260325141954.png]]
 
