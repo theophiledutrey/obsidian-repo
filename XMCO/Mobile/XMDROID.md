@@ -271,15 +271,15 @@ BroadcastReceiver Manipulation Fait
 
 ContentProvider qui garde toutes les authentifications Fait 
 
-Dump Mémoire du processus
+Dump Mémoire du processus 
 
 Intent Sniffing
 
-Local Storage avec DB sqlite non chiffrée
+Local Storage avec DB sqlite non chiffrée 
 
-Logs verbeux
+Logs verbeux Fait 
 
-XSS Mobile
+XSS Mobile Fait 
 
 Android allowBackup Fait 
 
@@ -332,7 +332,17 @@ cd backup_extract
 
 ![[Pasted image 20260325113027.png]]
 
+## XSS strored
 
+![[Pasted image 20260325115317.png]]
 
+![[Pasted image 20260325115348.png]]
 
+![[Pasted image 20260325115328.png]]
+
+## Logs verbeux
+
+![[Pasted image 20260325115935.png]]
+
+## Local Storage avec DB sqlite non chiffrée 
 
