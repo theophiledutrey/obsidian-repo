@@ -269,4 +269,8 @@ N importe qui peut donc créer un compte
 
 BroadcastReceiver Manipulation evoqué à la fin du rapport mais difficile de faire un POC car ça se fait via l'envoie d'un SMS, sinon ça reprend exactement le même concept de vuln que ContentProvider expliqué à la fin
 
-Android debuggable est lié avec 
+Android debuggable et backup -> scénario de compromission compliqué 
+
+Solution de chiffrement faible évoquué dans la première vuln mobile avec la clé AES, faut il en faire une vuln a part ?
+
+Manipulation de la chaine is_admin est évoqué dans la vuln ACL de l'API, faut il la séparé et en faire une a part aussi 
