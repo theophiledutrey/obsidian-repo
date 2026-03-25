@@ -266,3 +266,7 @@ Puis il y a pas de controle de l'utilisateur:
 
 N importe qui peut donc créer un compte
 
+
+BroadcastReceiver Manipulation evoqué à la fin du rapport mais difficile de faire un POC car ça se fait via l'envoie d'un SMS, sinon ça reprend exactement le même concept de vuln que ContentProvider expliqué à la fin
+
+Android debuggable est lié avec 
