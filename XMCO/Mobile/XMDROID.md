@@ -444,3 +444,10 @@ class MainActivity : ComponentActivity() {
 
 ![[Pasted image 20260325172626.png]]
 
+Local Storage avec DB sqlite non chiffrée inclusion dans V2 
+
+XSS Mobile
+
+Logs verbeux
+
+Shared preferences Fait
