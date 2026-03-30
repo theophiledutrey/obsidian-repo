@@ -28,3 +28,4 @@
 
 find /home /root -maxdepth 2 \( -name .rhosts -o -name .netrc \) 2>/dev/null -> Fichier sensible 
 
+9ccioRccuyo3go4v55Xih2aGgJB8
