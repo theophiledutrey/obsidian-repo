@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "XMCO/Mobile/XMDROID.md",
+                "file": "Linux/Analyse.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "XMDROID"
+              "title": "Analyse"
             }
           },
           {
@@ -253,8 +253,16 @@
   },
   "active": "7ae4b4a6cad4c639",
   "lastOpenFiles": [
-    "Write up/Hack The Box/Boxe/Season 9/Environment Hack The Box.md",
+    "XMCO/Mobile/APKey HTB.md",
+    "Linux/Analyse.md",
     "XMCO/Conf/Step 1.md",
+    "Linux/Capabilities.md",
+    "Linux/UID.md",
+    "Linux/Bug.md",
+    "Linux/Privilege Escalation.md",
+    "Linux/Hyprland .md",
+    "XMCO/Mobile/XMDROID.md",
+    "Write up/Hack The Box/Boxe/Season 9/Environment Hack The Box.md",
     "XMCO/Conf/Conf.md",
     "XMCO/Conf",
     "Write up/Hack The Box/Boxe/Season 9/Gavel.md",
@@ -266,7 +274,6 @@
     "XMCO/Pentest echo.md",
     "XMCO/XMSHOP.md",
     "Web/Portswigger/File Upload.md",
-    "XMCO/Mobile/XMDROID.md",
     "Assets/Pasted image 20260325175227.png",
     "Assets/Pasted image 20260325172626.png",
     "Assets/Pasted image 20260325172427.png",
@@ -277,7 +284,6 @@
     "Assets/Pasted image 20260325141939.png",
     "Assets/Pasted image 20260325141814.png",
     "Assets/Pasted image 20260325115935.png",
-    "XMCO/Mobile/APKey HTB.md",
     "XMCO/Mobile/Mobile (APK).md",
     "XMCO/Mobile/Frida.md",
     "XMCO/Mobile/Mobile.md",
@@ -285,13 +291,7 @@
     "XMCO/XMSHOP/XMSHOP.md",
     "XMCO/XMSHOP",
     "ECE/Stage/CTF OCD.md",
-    "ECE/Stage/CTF OCD PENTEST.md",
-    "ECE/Stage/Questions Techniques stage.md",
     "Assets/XMCO/Tools XMCO",
-    "Web/Portswigger/SQLi.md",
-    "Web/Portswigger/Portswigger.md",
-    "Write up/Hack The Box/Boxe/Season 10/CCTV.md",
-    "Write up/Hack The Box/Boxe/Season 10/Facts.md",
     "Assets/XMCO/Mobile/XMDROID",
     "Assets/XMCO/Mobile/APKey HTB",
     "Assets/XMCO/Mobile",
