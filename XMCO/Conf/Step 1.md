@@ -6,11 +6,11 @@
 - SUID
 - Capabilities
 - SSH config 
-- Password policies
 - Fichier sensibe
 - Dossier sensible
 - Version des binaires sensibles
 - AppArmor 
+
 
 
 ### Network:
@@ -19,6 +19,8 @@
 - Route réseau
 
 ### Users:
+- Password policies
+- /etc/shadow
 - Liste Utilisateurs - Groupe - Shell - UID = 0 ?
 - Droit Sudo 
 - Info Mot de passe 
