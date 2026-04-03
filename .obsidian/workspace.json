@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "XMCO/Conf/Step 1.md",
+                "file": "XMCO/Conf/Rapport.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Step 1"
+              "title": "Rapport"
             }
           },
           {
@@ -253,8 +253,10 @@
   },
   "active": "7ae4b4a6cad4c639",
   "lastOpenFiles": [
-    "Linux/Analyse.md",
     "XMCO/Conf/Step 1.md",
+    "XMCO/Conf/Rapport.md",
+    "XMCO/Conf/Conf.md",
+    "Linux/Analyse.md",
     "XMCO/Mobile/APKey HTB.md",
     "Linux/Privilege Escalation.md",
     "Linux/Capabilities.md",
@@ -263,7 +265,6 @@
     "Linux/Hyprland .md",
     "XMCO/Mobile/XMDROID.md",
     "Write up/Hack The Box/Boxe/Season 9/Environment Hack The Box.md",
-    "XMCO/Conf/Conf.md",
     "XMCO/Conf",
     "Write up/Hack The Box/Boxe/Season 9/Gavel.md",
     "Write up/Hack The Box/Boxe/Season 9/GiveBack.md",
@@ -290,7 +291,6 @@
     "XMCO/Untitled 1.md",
     "XMCO/XMSHOP/XMSHOP.md",
     "XMCO/XMSHOP",
-    "ECE/Stage/CTF OCD.md",
     "Assets/XMCO/Tools XMCO",
     "Assets/XMCO/Mobile/XMDROID",
     "Assets/XMCO/Mobile/APKey HTB",

@@ -82,7 +82,8 @@
     "//XMCO",
     "//Web",
     "//ECE",
-    "//Linux"
+    "//Linux",
+    "//XMCO/XMCO/Conf"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
