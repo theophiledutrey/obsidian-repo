@@ -83,7 +83,8 @@
     "//ECE",
     "//Linux",
     "//XMCO/XMCO/Conf",
-    "//Web/Web/Portswigger"
+    "//Web/Web/Portswigger",
+    "//XMCO"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
