@@ -1,6 +1,8 @@
 
 ![[Pasted image 20260403153715.png]]
 
+![[Pasted image 20260409101836.png]]
+
 ###  Critiques
 
 1. **Utilisation d’un système d’exploitation obsolète et non maintenu exposant le serveur à des vulnérabilités connues**  
