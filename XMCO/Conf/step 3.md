@@ -244,3 +244,9 @@ admin:admin
 
 ![[Pasted image 20260410155748.png]]
 
+### [JexBoss](https://github.com/joaomatosf/jexboss)
+
+![[Pasted image 20260410171232.png]]
+
+![[Pasted image 20260410171244.png]]
+
