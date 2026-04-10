@@ -50,7 +50,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -155,7 +155,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "XMCO/Conf/step 2.md",
+                "file": "XMCO/Conf/step 3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,7 +165,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Rétrolien pour step 2"
+              "title": "Rétrolien pour step 3"
             }
           },
           {
@@ -251,8 +251,10 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "e3fb02d729cdf99e",
+  "active": "a45bd60690e58c52",
   "lastOpenFiles": [
+    "Assets/Pasted image 20260410151752.png",
+    "XMCO/Conf/step 2.md",
     "XMCO/Conf/step 3.md",
     "Pentest Tools/John & Hashcat .md",
     "Assets/Pasted image 20260410145621.png",
@@ -268,7 +270,6 @@
     "Assets/Pasted image 20260409172457.png",
     "Assets/Pentest Tools/John & Hashcat ",
     "Pentest Tools/Nmap.md",
-    "XMCO/Conf/step 2.md",
     "XMCO/Mobile/APKey HTB.md",
     "Write up/Hack The Box/Boxe/Season 10/Pterodactyl.md",
     "Assets/Linux security_part 4_v1.0.pdf",
