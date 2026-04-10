@@ -41,16 +41,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pentest Tools/John & Hashcat .md",
+                "file": "XMCO/Conf/step 2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "John & Hashcat"
+              "title": "step 2"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -155,7 +155,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "XMCO/Conf/step 3.md",
+                "file": "XMCO/Conf/step 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,7 +165,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Rétrolien pour step 3"
+              "title": "Rétrolien pour step 2"
             }
           },
           {
@@ -251,9 +251,11 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "a45bd60690e58c52",
+  "active": "e3fb02d729cdf99e",
   "lastOpenFiles": [
+    "XMCO/Conf/step 3.md",
     "Pentest Tools/John & Hashcat .md",
+    "Assets/Pasted image 20260410145621.png",
     "Assets/XMLAB-CASSAGE_MDP.pdf",
     "Assets/Pasted image 20260409174049.png",
     "Assets/Pasted image 20260409174014.png",
@@ -264,10 +266,8 @@
     "Assets/Pasted image 20260409172753.png",
     "Assets/Pasted image 20260409172730.png",
     "Assets/Pasted image 20260409172457.png",
-    "Assets/Pasted image 20260409172344.png",
     "Assets/Pentest Tools/John & Hashcat ",
     "Pentest Tools/Nmap.md",
-    "XMCO/Conf/step 3.md",
     "XMCO/Conf/step 2.md",
     "XMCO/Mobile/APKey HTB.md",
     "Write up/Hack The Box/Boxe/Season 10/Pterodactyl.md",
