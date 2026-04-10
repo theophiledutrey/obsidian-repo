@@ -236,3 +236,11 @@ gcc pwnkit.c -o poc
 
 ![[Pasted image 20260410151752.png]]
 
+## Port 9080
+
+```
+admin:admin
+```
+
+![[Pasted image 20260410155748.png]]
+
