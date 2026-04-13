@@ -276,3 +276,7 @@ exploit
 
 ![[Pasted image 20260410181616.png]]
 
+## Telnet 
+
+![[Pasted image 20260413110538.png]]
+
