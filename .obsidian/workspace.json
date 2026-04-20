@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "XMCO/Intrusif/Step 1/Analyse code src.md",
+                "file": "XMCO/Intrusif/Méthodologie .md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Analyse code src"
+              "title": "Méthodologie"
             }
           },
           {
@@ -169,7 +169,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "XMCO/Intrusif/Step 1/Analyse code src.md",
+                "file": "XMCO/Intrusif/Méthodologie .md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -179,7 +179,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Rétrolien pour Analyse code src"
+              "title": "Rétrolien pour Méthodologie"
             }
           },
           {
@@ -267,12 +267,21 @@
   },
   "active": "a45bd60690e58c52",
   "lastOpenFiles": [
+    "Assets/Pasted image 20260420150628.png",
+    "Assets/Pasted image 20260420150552.png",
+    "Assets/Pasted image 20260420150542.png",
+    "Assets/Pasted image 20260420150424.png",
+    "Assets/Pasted image 20260420150301.png",
+    "Assets/Pasted image 20260420150229.png",
+    "Assets/Pasted image 20260420150206.png",
+    "Assets/Pasted image 20260420150158.png",
+    "Assets/Pasted image 20260420150035.png",
+    "XMCO/Intrusif/Step 1/Analyse code src.md",
+    "XMCO/Intrusif/Méthodologie .md",
     "Assets/Pasted image 20260420143948.png",
     "ECE/Stage/CTF XMCO.md",
     "XMCO/Conf/step 2.md",
-    "XMCO/Intrusif/Step 1/Analyse code src.md",
     "Assets/Pasted image 20260420143508.png",
-    "Assets/screenshot_84.png",
     "XMCO/Intrusif/Step 1/Step 1.md",
     "XMCO/Intrusif/Step 1",
     "XMCO/Conf/Conf.md",
@@ -281,15 +290,7 @@
     "XMCO/Untitled.md",
     "XMCO/Conf/step 3.md",
     "XMCO/Tools XMCO.md",
-    "Assets/Pasted image 20260414173124.png",
-    "Assets/Pasted image 20260414164949.png",
-    "Assets/Pasted image 20260414164611.png",
-    "Assets/Pasted image 20260414164335.png",
-    "Assets/Pasted image 20260414164130.png",
-    "Assets/Pasted image 20260414164002.png",
-    "Assets/Pasted image 20260414163020.png",
     "Write up/Hack The Box/Boxe/Season 9/AirTouch.md",
-    "Assets/Pasted image 20260414151608.png",
     "Pentest Tools/John & Hashcat .md",
     "Pentest Tools/Nmap.md",
     "Write up/Hack The Box/Boxe/Season 9/Browsed.md",
@@ -311,7 +312,6 @@
     "XMCO/XMCO.md",
     "Linux/Command.md",
     "Linux/Analyse.md",
-    "Linux/Hyprland .md",
     "XMCO/Conf",
     "Web/Untitled.canvas",
     "Photos/INTERACTIVE-MAP.canvas",
