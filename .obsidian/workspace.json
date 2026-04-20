@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "XMCO/Conf/step 2.md",
+                "file": "ECE/Stage/CTF XMCO.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "step 2"
+              "title": "CTF XMCO"
             }
           },
           {
@@ -267,15 +267,19 @@
   },
   "active": "a45bd60690e58c52",
   "lastOpenFiles": [
-    "XMCO/Intrusif/Step 1/Step 1.md",
+    "Assets/Pasted image 20260420143948.png",
+    "ECE/Stage/CTF XMCO.md",
+    "XMCO/Conf/step 2.md",
     "XMCO/Intrusif/Step 1/Analyse code src.md",
+    "Assets/Pasted image 20260420143508.png",
+    "Assets/screenshot_84.png",
+    "XMCO/Intrusif/Step 1/Step 1.md",
     "XMCO/Intrusif/Step 1",
     "XMCO/Conf/Conf.md",
     "XMCO/Intrusif/Intrusif.md",
     "XMCO/Intrusif",
     "XMCO/Untitled.md",
     "XMCO/Conf/step 3.md",
-    "XMCO/Conf/step 2.md",
     "XMCO/Tools XMCO.md",
     "Assets/Pasted image 20260414173124.png",
     "Assets/Pasted image 20260414164949.png",
@@ -286,10 +290,8 @@
     "Assets/Pasted image 20260414163020.png",
     "Write up/Hack The Box/Boxe/Season 9/AirTouch.md",
     "Assets/Pasted image 20260414151608.png",
-    "Assets/Pasted image 20260414111957.png",
     "Pentest Tools/John & Hashcat .md",
     "Pentest Tools/Nmap.md",
-    "Assets/Pasted image 20260413155134.png",
     "Write up/Hack The Box/Boxe/Season 9/Browsed.md",
     "XMCO/Conf/step 1.md",
     "Assets/XMLAB-CASSAGE_MDP.pdf",
@@ -310,8 +312,6 @@
     "Linux/Command.md",
     "Linux/Analyse.md",
     "Linux/Hyprland .md",
-    "Linux/Privilege Escalation.md",
-    "Linux/Capabilities.md",
     "XMCO/Conf",
     "Web/Untitled.canvas",
     "Photos/INTERACTIVE-MAP.canvas",
