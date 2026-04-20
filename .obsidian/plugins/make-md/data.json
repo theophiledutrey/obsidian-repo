@@ -81,11 +81,12 @@
     "//Web",
     "//ECE",
     "//Linux",
-    "//XMCO/XMCO/Conf",
     "//Web/Web/Portswigger",
     "//XMCO",
     "//Excalidraw",
-    "//Write up"
+    "//Write up",
+    "//XMCO/XMCO/Intrusif",
+    "//XMCO/XMCO/Intrusif/XMCO/Intrusif/Step 1"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",

