@@ -20,6 +20,9 @@ $d[nom_fichier] peut contenir du code javascript
 
 Cet élément est ajouté en BDD par la méthode `addConstatCabine` dans le fichier `mdl_materiel.php` et est ajoutable depuis le site via la page `ajoutConstatCabine.php`
 
+## SQLi
 
+Fichier: cronMatriceFormations.php
 
+![[Pasted image 20260420165238.png]]
 
