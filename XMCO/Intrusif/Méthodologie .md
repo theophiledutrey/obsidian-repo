@@ -30,4 +30,4 @@ On cherche la définition de `genToken` et `exten`
 
 ![[Pasted image 20260420150628.png]]
 
-Ces valeurs ne sont 
+Ces valeurs ne sont pas modifiable par un utilisateur, donc pas exploitable
