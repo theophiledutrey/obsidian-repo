@@ -30,3 +30,5 @@ Fichier: cronMatriceFormations.php
 
 Le fichier `adminer1.php` est accessible directement et embarque sa propre gestion de session (`adminer_sid`), indépendante de l’authentification de l’application métier. Ainsi, le contrôle d’accès applicatif reposant sur `$_SESSION['droit']` ne protège pas cette interface. Un utilisateur non autorisé peut donc atteindre l’interface Adminer et tenter une authentification directe à la base de données.
 
+## RCE
+
