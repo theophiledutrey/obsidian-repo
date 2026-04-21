@@ -46,6 +46,19 @@ Fichier: matriceRechercheFormations.php (appelé par le fichier resultatRecherch
 
 Le fichier `adminer1.php` est accessible directement et embarque sa propre gestion de session (`adminer_sid`), indépendante de l’authentification de l’application métier. Ainsi, le contrôle d’accès applicatif reposant sur `$_SESSION['droit']` ne protège pas cette interface. Un utilisateur non autorisé peut donc atteindre l’interface Adminer et tenter une authentification directe à la base de données.
 
+fichier: recup_ajax.php
+![[Pasted image 20260421151335.png]]
+
+Toute les fonctions sont appelable depuis une requête côté client. ça laisse accès à des fonctions critiques tel que
+![[Pasted image 20260421151605.png]]
+Ici on peut créer une requête en spécifiant fonction=connexionAdmin&&idUser=1 et on peut devenir admin de cette façon
+
+![[Pasted image 20260421151725.png]]
+On peut aussi bypass la connexion en spécifiant palpatine dans la requête ce qui nous permet d'avoir la session id=1
+
+
+
+
 ## RCE
 
 Fichier: consulterEvenement.php
