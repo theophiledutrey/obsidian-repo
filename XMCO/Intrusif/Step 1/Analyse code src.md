@@ -61,7 +61,13 @@ Fichier: genererFormulaireAccueilChantier2.php
 ![[Pasted image 20260421102430.png]]
 ![[Pasted image 20260421102449.png]]
 
+fichier genererCauserie.php 
 
+Appelé par les fichiers suivants:
+![[Pasted image 20260421115202.png]]
+
+![[Pasted image 20260421114700.png]]
+![[Pasted image 20260421114620.png]]
 ## Creds admin FTP
 
 Fichier: consulterEvenement.php
