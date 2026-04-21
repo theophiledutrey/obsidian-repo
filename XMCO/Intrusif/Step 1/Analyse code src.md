@@ -80,7 +80,7 @@ Fichier: consulterEvenement.php
 
 ## Path traversal
 
-fichier: zipCatalogueTotal.php (appelé par le fichier choixFichiersZipCatalogueTotal.php)
+fichier: cpns (appelé par le fichier choixFichiersZipCatalogueTotal.php)
 
 ![[Pasted image 20260421105239.png]]
 
