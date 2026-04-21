@@ -106,3 +106,30 @@ Peut permettre d'écrire un fichier zip dans un autre dossier -> RCE potentiel
 ![[Pasted image 20260421105604.png]]
 Si on maitrise la valeur de $doc, on peut récupérer d'autres dossier sur le serveur via path traversal
 
+
+## Chemin de compromission
+
+Dans le fichier consulterEvenement.php il y a un exec qui est effectué:
+```php
+exec('convert "upload/'.$plan['chemin'].'.'.$plan['extension'].'" -alpha off -colorspace RGB -page a4 -quality 80 "upload/tmp/'.$tmp.'/img.jpg"', $output, $return_var);
+```
+
+Cette exec appel plusieurs variable dont `$plan['chemin']` et `$plan['extension']`
+
+![[Pasted image 20260421153553.png]]
+
+Donc la variable `$plan` agit comme une fome de structure. Il s'agit du dernier document à avoir le `type = PLAN`
+Les documents sont récupérés via le méthode `Chantier::getFichiersEvenementChantier`. Voici sa définition:
+![[Pasted image 20260421153950.png]]
+
+On voit aussi dans la class `Chantier` qu'il existe une méthode `addFichiersEvenementChantier`
+![[Pasted image 20260421154106.png]]
+
+Cette méthode peut être appelé côté client grace à une requête POST sur la route `/recup_ajax.php` en exploitant l'ACL qui permet d'appeler toutes les fonctions backend de ce fichier:
+
+```
+fonction=addFichiersEvenementChantier&&type=PLAN
+```
+
+![[Pasted image 20260421154427.png]]
+
