@@ -4,6 +4,22 @@
 rg -n '(SELECT.*\$|INSERT.*\$|DELETE.*\$|UPDATE.*\$)'
 ```
 
+```shell
+rg -U -n '(SELECT[\s\S]*?\$[\S]*?\))' ### Bcp de faux positifs  
+```
+
+```shell
+rg -U -n '(INSERT[\s\S]*?\$[\S]*?\))' ### Bcp de faux positifs  
+```
+
+```shell
+rg -U -n '(DELETE[\s\S]*?\$[\S]*?\))' ### Bcp de faux positifs  
+```
+
+```shell
+rg -U -n '(UPDATE[\s\S]*?\$[\S]*?\))' ### Bcp de faux positifs  
+```
+
 ## Recherche de RCE 
 
 ```bash
