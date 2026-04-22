@@ -15,3 +15,7 @@ rg -n 'exec('
 ```bash
 rg -n '(element.innerHTML|document.write\(.*\)|eval\(.*\)|echo \$_GET\[.*\])'
 ```
+
+```bash
+rg -n "echo .*\$" ### Bcp de faux positifs
+```
