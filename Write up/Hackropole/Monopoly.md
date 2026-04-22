@@ -22,7 +22,7 @@ La payload finale utilisée est la suivante :
 
 ```js
 try {
-    print(sonsole);
+    print(console);
 } catch (e) {
     e.constructor.constructor(
         'eval("alert(\'[GET OUT OF JAIL]\')")'
