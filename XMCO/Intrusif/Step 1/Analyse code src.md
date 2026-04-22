@@ -216,3 +216,4 @@ for ($i = 0; $i < count($_FILES['fichiers']['name']); $i++) {
 ![[Pasted image 20260422112255.png]]
 
 ![[screenshot_85.png]]
+
