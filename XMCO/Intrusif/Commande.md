@@ -23,7 +23,13 @@ rg -U -n '(UPDATE[\s\S]*?\$[\S]*?\))' ### Bcp de faux positifs
 ## Recherche de RCE 
 
 ```bash
-rg -n 'exec('
+rg -n 'exec\(|shell_exec\(|system\(|popen\('
+```
+
+### FIle Upload
+
+```bash
+rg -n 'move_uploaded_file\(|file_put_contents\(|fwrite\(|fputs\(|include\(|require\(|include_once\(|require_once\('
 ```
 
 ## Recherche de XSS
