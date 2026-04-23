@@ -64,7 +64,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -169,7 +169,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "XMCO/Intrusif/Commande.md",
+                "file": "XMCO/Intrusif/Step 1/Analyse code src.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -179,7 +179,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Rétrolien pour Commande"
+              "title": "Rétrolien pour Analyse code src"
             }
           },
           {
@@ -265,11 +265,14 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "c180343d6cbed957",
+  "active": "0a60173ec1c2df7f",
   "lastOpenFiles": [
+    "Assets/Pasted image 20260423120453.png",
+    "Assets/Pasted image 20260423120439.png",
+    "Assets/Pasted image 20260423115339.png",
+    "XMCO/Intrusif/Commande.md",
     "XMCO/Intrusif/Step 1/Analyse code src.md",
     "XMCO/Conf/step 3.md",
-    "XMCO/Intrusif/Commande.md",
     "XMCO/Conf/step 2.md",
     "Write up/RootMe/Bash - quoted expression injection.md",
     "Write up/Hackropole/meme-generator.md",
@@ -290,8 +293,6 @@
     "Assets/Pasted image 20260421154106.png",
     "Assets/Pasted image 20260421153950.png",
     "Assets/Pasted image 20260421153553.png",
-    "Assets/Pasted image 20260421151725.png",
-    "Assets/Pasted image 20260421151605.png",
     "XMCO/Conf/step 1.md",
     "XMCO/Intrusif/Step 1/Step 1.md",
     "XMCO/Intrusif/Step 1",
@@ -307,7 +308,6 @@
     "XMCO/Mobile/APKey HTB.md",
     "Write up/Hack The Box/Boxe/Season 10/Pterodactyl.md",
     "Assets/Linux security_part 4_v1.0.pdf",
-    "Linux/Exegol.md",
     "Assets/XMCO/fiche-nmap.excalidraw",
     "Excalidraw",
     "Assets/XMCO/Conf/step 2",

