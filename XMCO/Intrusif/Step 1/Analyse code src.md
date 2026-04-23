@@ -81,6 +81,11 @@ Appelé par les fichiers suivants:
 
 ![[Pasted image 20260421114700.png]]
 ![[Pasted image 20260421114620.png]]
+
+fichier recup_ajax.php
+![[Pasted image 20260423173304.png]]
+
+Upload d un fichier sans restriction côté serveur -> RCE via file upload
 ## Creds admin FTP
 
 Fichier: consulterEvenement.php
