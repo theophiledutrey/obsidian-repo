@@ -1,3 +1,4 @@
+```bash
 #!/usr/bin/env bash
 
 #PATH=$(/usr/bin/getconf PATH || /bin/kill $$)
