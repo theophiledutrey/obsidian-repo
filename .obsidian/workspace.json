@@ -48,9 +48,25 @@
               "icon": "lucide-file",
               "title": "Analyse code src"
             }
+          },
+          {
+            "id": "08b24242907d618c",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "ECE/Stage/rapport_CTF_XMCO_Theophile_Dutrey .pdf",
+                "page": 22,
+                "left": -11,
+                "top": 809,
+                "zoom": 1.3418145532492494
+              },
+              "icon": "lucide-file-text",
+              "title": "rapport_CTF_XMCO_Theophile_Dutrey"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -114,7 +130,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -155,7 +171,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "XMCO/Intrusif/Step2/Pentest.md",
+                "file": "ECE/Stage/rapport_CTF_XMCO_Theophile_Dutrey .pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,7 +181,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Rétrolien pour Pentest"
+              "title": "Rétrolien pour rapport_CTF_XMCO_Theophile_Dutrey"
             }
           },
           {
@@ -251,11 +267,15 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "0a60173ec1c2df7f",
+  "active": "70072440ebe60962",
   "lastOpenFiles": [
-    "Write up/Hack The Box/Boxe/Season 9/AirTouch.md",
     "XMCO/Intrusif/Step2/Pentest.md",
+    "Assets/Pasted image 20260424152229.png",
+    "Assets/Pasted image 20260424152040.png",
+    "Assets/Pasted image 20260424151826.png",
+    "Assets/Pasted image 20260424151759.png",
     "XMCO/Intrusif/Step 1/Analyse code src.md",
+    "Write up/Hack The Box/Boxe/Season 9/AirTouch.md",
     "XMCO/Intrusif/Commande.md",
     "Assets/Pasted image 20260424105537.png",
     "Assets/Pasted image 20260424105526.png",
@@ -269,7 +289,6 @@
     "XMCO/Intrusif/Step2",
     "XMCO/Conf/step 3.md",
     "XMCO/Conf/step 2.md",
-    "Assets/Pasted image 20260423173304.png",
     "Write up/RootMe/Bash - unquoted expression injection.md",
     "Write up/Hack The Box/Boxe/Season 9/Browsed.md",
     "ECE/Stage/CTF OCD PENTEST.md",
@@ -281,9 +300,6 @@
     "Write up/RootMe/Bash - quoted expression injection.md",
     "Write up/Hackropole/meme-generator.md",
     "Write up/Hack The Box/Boxe/Season 9/GiveBack.md",
-    "Assets/Pasted image 20260423120453.png",
-    "Assets/Pasted image 20260423120439.png",
-    "Assets/Pasted image 20260423115339.png",
     "Write up/RootMe/RootMe.md",
     "Write up/Hackropole/Monopoly.md",
     "Write up/Hack The Box/Boxe/Season 9/MonitorsFour.md",
