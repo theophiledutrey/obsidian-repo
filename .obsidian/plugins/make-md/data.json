@@ -87,9 +87,9 @@
     "//Write up",
     "//XMCO/XMCO/Intrusif",
     "//XMCO/XMCO/Intrusif/XMCO/Intrusif/Step 1",
-    "//ECE/ECE/Stage",
     "//XMCO/XMCO/Conf",
-    "//Write up/Write up/RootMe"
+    "//Write up/Write up/RootMe",
+    "//XMCO/XMCO/Intrusif/XMCO/Intrusif/Step2"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
