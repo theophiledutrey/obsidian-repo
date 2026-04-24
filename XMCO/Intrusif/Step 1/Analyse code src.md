@@ -84,6 +84,8 @@ Appelé par les fichiers suivants:
 
 fichier recup_ajax.php
 ![[Pasted image 20260423173304.png]]
+et
+![[Pasted image 20260424101521.png]]
 
 Upload d un fichier sans restriction côté serveur -> RCE via file upload
 ## Creds admin FTP
