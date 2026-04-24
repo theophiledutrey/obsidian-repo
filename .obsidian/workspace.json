@@ -92,7 +92,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "quoted",
+                "query": "bash",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -114,7 +114,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -253,10 +253,17 @@
   },
   "active": "fbd38cd751618b96",
   "lastOpenFiles": [
-    "Assets/Pasted image 20260424101521.png",
-    "XMCO/Intrusif/Commande.md",
     "XMCO/Intrusif/Step2/Pentest.md",
+    "XMCO/Intrusif/Commande.md",
     "XMCO/Intrusif/Step 1/Analyse code src.md",
+    "Assets/Pasted image 20260424105537.png",
+    "Assets/Pasted image 20260424105526.png",
+    "Write up/Hack The Box/Boxe/Season 9/AirTouch.md",
+    "Assets/Pasted image 20260424105250.png",
+    "Assets/Pasted image 20260424105031.png",
+    "Assets/Pasted image 20260424104830.png",
+    "XMCO/Conf/step 1.md",
+    "Assets/Pasted image 20260424101521.png",
     "ECE/Stage/rapport_CTF_XMCO_Theophile_Dutrey .pdf",
     "XMCO/Intrusif/Step2/Step2.md",
     "XMCO/Intrusif/Step2",
@@ -282,15 +289,7 @@
     "Write up/Hack The Box/Boxe/Season 9/MonitorsFour.md",
     "ECE/Stage/CTF XMCO.md",
     "XMCO/Intrusif/Méthodologie .md",
-    "Assets/Pasted image 20260422112626.png",
-    "Assets/screenshot_85.png",
-    "Assets/Pasted image 20260422112255.png",
     "Write up/Hack The Box/Boxe/Season 9/Gavel.md",
-    "Assets/Pasted image 20260421154427.png",
-    "Assets/Pasted image 20260421154422.png",
-    "Assets/Pasted image 20260421154106.png",
-    "XMCO/Conf/step 1.md",
-    "XMCO/Intrusif/Step 1/Step 1.md",
     "XMCO/Intrusif/Step 1",
     "XMCO/Intrusif",
     "Assets/XMLAB-CASSAGE_MDP.pdf",
