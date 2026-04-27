@@ -41,7 +41,8 @@ Fichier: matriceRechercheFormations.php (appelé par le fichier resultatRecherch
 ![[Pasted image 20260421103726.png]]
 ```
 SELECT DISTINCT s.idSalarie FROM SALARIE s, FORMATION f WHERE s.idSalarie = f.employe AND s.archive = 0
-  AND (f.employe IN (SELECT employe FROM FORMATION WHERE archive = 0 AND nom_formation = 10)) OR ELECT
+  AND (f.employe IN (SELECT employe FROM FORMATION WHERE archive = 0 AND nom_formation = 10))
+  AND (s.fonction_fiche = 1) 
   
   
   
