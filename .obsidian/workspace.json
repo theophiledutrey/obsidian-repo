@@ -78,7 +78,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -183,7 +183,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "XMCO/Intrusif/Step2/Pentest.md",
+                "file": "ECE/Stage/CTF XMCO.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -193,7 +193,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Rétrolien pour Pentest"
+              "title": "Rétrolien pour CTF XMCO"
             }
           },
           {
@@ -279,12 +279,16 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "0a60173ec1c2df7f",
+  "active": "04773f2e0dbafdd0",
   "lastOpenFiles": [
+    "XMCO/Intrusif/Step2/Pentest.md",
+    "Assets/Pasted image 20260428150218.png",
+    "Assets/screenshot_88.png",
+    "Assets/screenshot_87.png",
+    "Assets/screenshot_86.png",
     "Assets/Pasted image 20260428141719.png",
     "XMCO/Intrusif/Step 1/Analyse code src.md",
     "XMCO/Intrusif/Commande.md",
-    "XMCO/Intrusif/Step2/Pentest.md",
     "ECE/Stage/CTF XMCO.md",
     "Assets/Pasted image 20260428120044.png",
     "Assets/Pasted image 20260428115041.png",
@@ -294,12 +298,7 @@
     "Web/Portswigger/SQLi.md",
     "Linux/Analyse.md",
     "Assets/Pasted image 20260424152229.png",
-    "Assets/Pasted image 20260424152040.png",
-    "Assets/Pasted image 20260424151826.png",
-    "Assets/Pasted image 20260424151759.png",
     "Write up/Hack The Box/Boxe/Season 9/AirTouch.md",
-    "Assets/Pasted image 20260424105537.png",
-    "Assets/Pasted image 20260424105526.png",
     "XMCO/Conf/step 1.md",
     "XMCO/Intrusif/Step2/Step2.md",
     "XMCO/Intrusif/Step2",
