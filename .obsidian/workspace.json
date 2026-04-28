@@ -64,19 +64,17 @@
             }
           },
           {
-            "id": "5ad9b2c2fcc5ed2e",
+            "id": "04773f2e0dbafdd0",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "ECE/Stage/rapport_CTF_XMCO_Theophile_Dutrey .pdf",
-                "page": 21,
-                "left": -11,
-                "top": 598,
-                "zoom": 1.3418145532492494
+                "file": "ECE/Stage/CTF XMCO.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "rapport_CTF_XMCO_Theophile_Dutrey"
+              "icon": "lucide-file",
+              "title": "CTF XMCO"
             }
           }
         ],
@@ -283,13 +281,17 @@
   },
   "active": "0a60173ec1c2df7f",
   "lastOpenFiles": [
+    "Assets/Pasted image 20260428120044.png",
+    "Assets/Pasted image 20260428115041.png",
+    "Assets/Pasted image 20260428115005.png",
+    "Assets/Pasted image 20260428114727.png",
+    "ECE/Stage/CTF XMCO.md",
+    "ECE/Stage/rapport_CTF_XMCO_Theophile_Dutrey .pdf",
     "XMCO/Intrusif/Step 1/Analyse code src.md",
     "XMCO/Intrusif/Step2/Pentest.md",
     "XMCO/Intrusif/Commande.md",
-    "ECE/Stage/rapport_CTF_XMCO_Theophile_Dutrey .pdf",
     "Web/Portswigger/SQLi.md",
     "Linux/Analyse.md",
-    "ECE/Stage/CTF XMCO.md",
     "Assets/Pasted image 20260424152229.png",
     "Assets/Pasted image 20260424152040.png",
     "Assets/Pasted image 20260424151826.png",
@@ -298,10 +300,7 @@
     "Assets/Pasted image 20260424105537.png",
     "Assets/Pasted image 20260424105526.png",
     "Assets/Pasted image 20260424105250.png",
-    "Assets/Pasted image 20260424105031.png",
-    "Assets/Pasted image 20260424104830.png",
     "XMCO/Conf/step 1.md",
-    "Assets/Pasted image 20260424101521.png",
     "XMCO/Intrusif/Step2/Step2.md",
     "XMCO/Intrusif/Step2",
     "XMCO/Conf/step 3.md",
