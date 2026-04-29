@@ -64,7 +64,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -265,8 +265,9 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "d0fac255f3a0f3b9",
+  "active": "300763215ec8b5d6",
   "lastOpenFiles": [
+    "XMCO/Intrusif/Step 1/Analyse code src.md",
     "XMCO/Intrusif/Step2/Pentest.md",
     "XMCO/Intrusif/Commande.md",
     "ECE/Stage/rapport_CTF_XMCO_Theophile_Dutrey .pdf",
@@ -274,7 +275,6 @@
     "ECE/Stage/CTF XMCO.md",
     "Assets/Pasted image 20260428175858.png",
     "Assets/Pasted image 20260428172618.png",
-    "XMCO/Intrusif/Step 1/Analyse code src.md",
     "Assets/Pasted image 20260428150218.png",
     "Assets/screenshot_88.png",
     "Assets/screenshot_87.png",
