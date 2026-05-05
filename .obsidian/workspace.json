@@ -92,7 +92,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -293,16 +293,16 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "48a0b7783fb1a41b",
+  "active": "4f1fb808fa988434",
   "lastOpenFiles": [
-    "XMCO/AD/Set up.md",
     "XMCO/AD/Pentest.md",
-    "Active Directory/Command.md",
+    "XMCO/AD/Set up.md",
     "Write up/Hack The Box/Boxe/Season 9/NanoCorp.md",
+    "Active Directory/Command.md",
+    "Pentest Tools/Ligolo.md",
     "Active Directory/Privilege Escalation.md",
     "Active Directory/Formation Tristan.md",
     "Linux/Exegol.md",
-    "Pentest Tools/Ligolo.md",
     "XMCO/AD/AD.md",
     "XMCO/Intrusif/Commande.md",
     "ECE/ECE.md",
