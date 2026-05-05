@@ -92,7 +92,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -293,11 +293,11 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "8cf0a7646a118794",
+  "active": "8356b36682771a51",
   "lastOpenFiles": [
-    "Write up/Hack The Box/Boxe/Season 9/NanoCorp.md",
     "Active Directory/Command.md",
     "XMCO/AD/Pentest.md",
+    "Write up/Hack The Box/Boxe/Season 9/NanoCorp.md",
     "XMCO/AD/Set up.md",
     "Linux/Exegol.md",
     "Assets/XMCO/AD/Pentest/IMG-20260505150530628.png",
