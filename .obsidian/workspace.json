@@ -78,7 +78,7 @@
             }
           },
           {
-            "id": "48a0b7783fb1a41b",
+            "id": "30504ac370eeef06",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -92,7 +92,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -293,16 +293,21 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "8356b36682771a51",
+  "active": "6e3677772eb5b980",
   "lastOpenFiles": [
-    "XMCO/AD/Set up.md",
     "XMCO/AD/Pentest.md",
     "Write up/Hack The Box/Boxe/Season 9/NanoCorp.md",
     "Active Directory/Command.md",
+    "Linux/Exegol.md",
+    "XMCO/AD/Set up.md",
+    "Assets/XMCO/AD/Pentest/IMG-20260505150530628.png",
+    "Assets/XMCO/AD/Pentest/IMG-20260505150259645.png",
+    "Assets/XMCO/AD/Pentest",
+    "Assets/XMCO/AD",
+    "Assets/XMCO/AD/Pentest/IMG-20260505145519891.png",
     "Pentest Tools/Ligolo.md",
     "Active Directory/Privilege Escalation.md",
     "Active Directory/Formation Tristan.md",
-    "Linux/Exegol.md",
     "XMCO/AD/AD.md",
     "XMCO/Intrusif/Commande.md",
     "ECE/ECE.md",
@@ -322,9 +327,6 @@
     "Assets/Pasted image 20260428150218.png",
     "Assets/screenshot_88.png",
     "Assets/screenshot_87.png",
-    "Assets/screenshot_86.png",
-    "Assets/Pasted image 20260428141719.png",
-    "Assets/Pasted image 20260428120044.png",
     "Web/Portswigger/SQLi.md",
     "Linux/Analyse.md",
     "Write up/Hack The Box/Boxe/Season 9/AirTouch.md",
@@ -336,11 +338,8 @@
     "Write up/RootMe/Bash - unquoted expression injection.md",
     "Write up/Hack The Box/Boxe/Season 9/Browsed.md",
     "ECE/Stage/CTF OCD PENTEST.md",
-    "Pentest Tools/John & Hashcat .md",
     "XMCO/Intrusif/Step 1",
     "XMCO/Intrusif",
-    "Assets/XMLAB-CASSAGE_MDP.pdf",
-    "Assets/Pentest Tools/John & Hashcat ",
     "Web/Untitled.canvas",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
