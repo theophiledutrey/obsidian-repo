@@ -20,8 +20,37 @@
               "icon": "lucide-file",
               "title": "Commande"
             }
+          },
+          {
+            "id": "2f67ef7cdad8fe9e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Pentest Tools/Ligolo.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Ligolo"
+            }
+          },
+          {
+            "id": "6e3677772eb5b980",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "XMCO/AD/Pentest.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Pentest"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -63,7 +92,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "400",
+                "query": "ligolo",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -222,8 +251,14 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "c180343d6cbed957",
+  "active": "6e3677772eb5b980",
   "lastOpenFiles": [
+    "Pentest Tools/Ligolo.md",
+    "XMCO/AD/Pentest.md",
+    "XMCO/AD/AD.md",
+    "XMCO/Intrusif/Commande.md",
+    "ECE/ECE.md",
+    "XMCO/AD",
     "XMCO/Intrusif/Step 1/Analyse code src.md",
     "XMCO/Intrusif/Step2/Pentest.md",
     "Assets/XMCO/Intrusif/Step2/Pentest/IMG-20260430152123779.png",
@@ -231,7 +266,6 @@
     "Assets/XMCO/Intrusif/Step2",
     "Assets/XMCO/Intrusif",
     "Assets/XMCO/Intrusif/Step2/Pentest/IMG-20260430152104702.png",
-    "XMCO/Intrusif/Commande.md",
     "ECE/Stage/rapport_CTF_XMCO_Theophile_Dutrey .pdf",
     "ECE/Stage/Questions Techniques stage.md",
     "ECE/Stage/CTF XMCO.md",
@@ -257,18 +291,14 @@
     "Pentest Tools/John & Hashcat .md",
     "Pentest Tools/Metasploit.md",
     "Pentest Tools/Link.md",
-    "Pentest Tools/Ligolo.md",
     "Pentest Tools/Nmap.md",
     "Write up/RootMe/Bash - quoted expression injection.md",
     "Write up/Hackropole/meme-generator.md",
     "Write up/Hack The Box/Boxe/Season 9/GiveBack.md",
-    "Write up/RootMe/RootMe.md",
-    "Write up/Hackropole/Monopoly.md",
     "XMCO/Intrusif/Step 1",
     "XMCO/Intrusif",
     "Assets/XMLAB-CASSAGE_MDP.pdf",
     "Assets/Pentest Tools/John & Hashcat ",
-    "Assets/Linux security_part 4_v1.0.pdf",
     "Web/Untitled.canvas",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
