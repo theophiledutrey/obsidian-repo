@@ -1,21 +1,21 @@
 ## NXC
 
 ```bash
-nxc smb <IP> ## Check domain info
+nxc smb $IP $ ## Check domain info
 
-nxc smb <IP> -u "<USER>" -p "<PASSWORD>" ## Auth SMB 
+nxc smb $IP -u $USER -p $PASSWORD ## Auth SMB 
 
-nxc smb <IP> -u "<USER>" -p "<PASSWORD>" --shares ## Liste share smb
+nxc smb $IP -u $USER -p $PASSWORD --shares ## Liste share smb
 
-nxc ldap <IP> -u "<USER>" -p "" -d <DOMAIN> --asreproast <file> ## AS-REP roasting 
+nxc ldap $IP -u $USER -p "" -d $DOMAIN --asreproast <file> ## AS-REP roasting 
 
-nxc ldap <IP> -u "<USER>" -p "<PASSWORD>" -d <DOMAIN> --users ## enum user LDAP
+nxc ldap $IP -u $USER -p $PASSWORD -d $DOMAIN --users ## enum user LDAP
 
-nxc ldap <IP> -u "<USER>" -p "<PASSWORD>" -d <DOMAIN> --groups ## enum groupe LDAP
+nxc ldap $IP -u $USER -p $PASSWORD -d $DOMAIN --groups ## enum groupe LDAP
 
-nxc ldap <IP> -u "<USER>" -p "<PASSWORD>" -d <DOMAIN> --user <USER> ## Info user LDAP
+nxc ldap $IP -u $USER -p $PASSWORD -d $DOMAIN --user <USER> ## Info user LDAP
 
-nxc winrm <IP> -u "<USER>" -p "<PASSWORD>" ## Connexion WinRM
+nxc winrm $IP -u $USER -p $PASSWORD ## Connexion WinRM
 ```
 
 ## SMB
