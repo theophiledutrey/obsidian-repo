@@ -92,7 +92,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -293,10 +293,10 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "4f1fb808fa988434",
+  "active": "8356b36682771a51",
   "lastOpenFiles": [
-    "XMCO/AD/Pentest.md",
     "XMCO/AD/Set up.md",
+    "XMCO/AD/Pentest.md",
     "Write up/Hack The Box/Boxe/Season 9/NanoCorp.md",
     "Active Directory/Command.md",
     "Pentest Tools/Ligolo.md",

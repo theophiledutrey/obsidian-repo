@@ -23,3 +23,8 @@ tunnel_start --tun ligolo
 socat TCP-LISTEN:6666,fork TCP:<ip machine>:80
 
 ```
+
+```
+Port forward un port exegol vers ma machine:
+socat TCP-LISTEN:9999,fork,reuseaddr TCP:10.2.62.235:80
+```
