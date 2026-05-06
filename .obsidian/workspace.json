@@ -50,20 +50,6 @@
             }
           },
           {
-            "id": "4f1fb808fa988434",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "XMCO/AD/Set up.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Set up"
-            }
-          },
-          {
             "id": "61f2bc61a085bce5",
             "type": "leaf",
             "state": {
@@ -89,6 +75,20 @@
               },
               "icon": "lucide-file",
               "title": "Privilege Escalation"
+            }
+          },
+          {
+            "id": "4f1fb808fa988434",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "XMCO/AD/Set up.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Set up"
             }
           }
         ],
@@ -293,10 +293,11 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "61f2bc61a085bce5",
+  "active": "cab707a0880f6150",
   "lastOpenFiles": [
-    "Active Directory/Privilege Escalation.md",
+    "XMCO/AD/Set up.md",
     "XMCO/AD/Pentest.md",
+    "Active Directory/Privilege Escalation.md",
     "Assets/XMCO/AD/Pentest/IMG-20260506113516986.png",
     "Assets/XMCO/AD/Pentest/IMG-20260506111414821.png",
     "Assets/XMCO/AD/Pentest/IMG-20260506111021623.png",
@@ -312,7 +313,6 @@
     "Assets/Active Directory",
     "Pentest Tools/Nmap.md",
     "Active Directory/Command.md",
-    "XMCO/AD/Set up.md",
     "Active Directory/Active Directory.md",
     "Linux/Sans titre.md",
     "Write up/Hack The Box/Boxe/Season 9/NanoCorp.md",
