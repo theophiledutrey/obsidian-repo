@@ -92,7 +92,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -293,10 +293,11 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "cab707a0880f6150",
+  "active": "61f2bc61a085bce5",
   "lastOpenFiles": [
-    "XMCO/AD/Pentest.md",
     "Active Directory/Privilege Escalation.md",
+    "XMCO/AD/Pentest.md",
+    "Assets/XMCO/AD/Pentest/IMG-20260506113516986.png",
     "Assets/XMCO/AD/Pentest/IMG-20260506111414821.png",
     "Assets/XMCO/AD/Pentest/IMG-20260506111021623.png",
     "Assets/XMCO/AD/Pentest/IMG-20260506110227265.png",
@@ -307,7 +308,6 @@
     "Assets/Active Directory/Privilege Escalation/IMG-20260506104934204.png",
     "Active Directory/ACL.md",
     "Assets/Active Directory/Privilege Escalation/IMG-20260506104514552.png",
-    "Assets/Active Directory/Privilege Escalation/IMG-20260506104452053.png",
     "Assets/Active Directory/Privilege Escalation",
     "Assets/Active Directory",
     "Pentest Tools/Nmap.md",
