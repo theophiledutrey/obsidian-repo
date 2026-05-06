@@ -17,7 +17,7 @@ exegol start pentest-xmco free -p 6666:6666
 certificate_fingerprint
 
 ifcreate --name ligolo
-route_add --name ligolo --route $IP/$MASK
+route_add --name ligolo --route 10.2.62.224/28
 tunnel_start --tun ligolo
 
 ```

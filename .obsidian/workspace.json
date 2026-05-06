@@ -92,7 +92,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -293,11 +293,13 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "cab707a0880f6150",
+  "active": "4f1fb808fa988434",
   "lastOpenFiles": [
+    "Pentest Tools/Ligolo.md",
+    "XMCO/AD/Set up.md",
     "XMCO/AD/Pentest.md",
     "Active Directory/Privilege Escalation.md",
-    "XMCO/AD/Set up.md",
+    "Active Directory/Kerberos.md",
     "Assets/XMCO/AD/Pentest/IMG-20260506113516986.png",
     "Assets/XMCO/AD/Pentest/IMG-20260506111414821.png",
     "Assets/XMCO/AD/Pentest/IMG-20260506111021623.png",
@@ -318,11 +320,9 @@
     "Write up/Hack The Box/Boxe/Season 9/NanoCorp.md",
     "ECE/ECE.md",
     "ECE/Stage/Questions Techniques stage.md",
-    "Active Directory/Kerberos.md",
     "Linux/Exegol.md",
     "Assets/XMCO/AD/Pentest",
     "Assets/XMCO/AD",
-    "Pentest Tools/Ligolo.md",
     "Active Directory/Formation Tristan.md",
     "XMCO/AD/AD.md",
     "XMCO/Intrusif/Commande.md",
