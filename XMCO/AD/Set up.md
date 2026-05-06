@@ -3,7 +3,7 @@ Récupérer les réseaux de la kali sur son container:
 Kali:
 ```bash
 scp /opt/tools/ligolo-ng/agent kali@15.188.194.116:/tmp/agent
-ssh -J echo kali@15.188.194.116 -R 11601:localhost:11601
+ssh kali@15.188.194.116 -R 11601:localhost:11601
 
 ./agent -connect 127.0.0.1:11601 -accept-fingerprint D5AEA6D8795181B310DBFBA25D0CCB86FD8409793CFC4F8C5452BDF3068B89DB
 ```
