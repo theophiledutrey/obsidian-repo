@@ -19,9 +19,6 @@ ifcreate --name ligolo
 route_add --name ligolo --route $IP/$MASK
 tunnel_start --tun ligolo
 
-## Pour forward un port Web sur mon host local:
-socat TCP-LISTEN:6666,fork TCP:<ip machine>:80
-
 ```
 
 ```
