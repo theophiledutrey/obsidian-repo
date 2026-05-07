@@ -92,7 +92,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -134,7 +134,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "bash",
+                "query": "tag:#pentest",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -156,7 +156,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -274,7 +274,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 397.5
+    "width": 399.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -293,15 +293,19 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "6e3677772eb5b980",
+  "active": "61f2bc61a085bce5",
   "lastOpenFiles": [
+    "XMCO/AD/Machine.md",
+    "Active Directory/Privilege Escalation.md",
+    "XMCO/AD/Pentest.md",
+    "XMCO/AD/Set up.md",
     "Active Directory/Command.md",
     "XMCO/AD/Users.md",
-    "XMCO/AD/Machine.md",
-    "XMCO/AD/Pentest.md",
+    "Assets/XMCO/AD/Pentest/IMG-20260507115812971.png",
+    "Assets/XMCO/AD/Pentest/IMG-20260507115741330.png",
+    "Assets/XMCO/AD/Pentest/IMG-20260507115640239.png",
     "Assets/XMCO/AD/Pentest/IMG-20260507112251442.png",
     "Assets/XMCO/AD/Pentest/IMG-20260507112211423.png",
-    "Active Directory/Privilege Escalation.md",
     "Write up/Hack The Box/Boxe/Season 9/AirTouch.md",
     "Assets/XMCO/AD/Machine/IMG-20260507103748262.png",
     "Assets/XMCO/AD/Machine/IMG-20260507103733107.png",
@@ -309,11 +313,7 @@
     "Assets/XMCO/AD/Machine/IMG-20260507103222516.png",
     "Assets/XMCO/AD/Machine/IMG-20260507103112966.png",
     "Assets/XMCO/AD/Machine",
-    "Assets/XMCO/AD/Machine/IMG-20260507103012128.png",
     "Pentest Tools/Ligolo.md",
-    "XMCO/AD/Set up.md",
-    "Assets/XMCO/AD/Users/IMG-20260507100537940.png",
-    "Assets/XMCO/AD/Users/IMG-20260507100506844.png",
     "Assets/XMCO/AD/Users",
     "Linux/Exegol.md",
     "XMCO/AD/AD.md",
