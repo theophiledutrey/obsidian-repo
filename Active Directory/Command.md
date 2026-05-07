@@ -21,11 +21,13 @@ nxc winrm $IP -u $USER -p $PASSWORD ## Connexion WinRM
 ## SMB
 
 ```bash
-smbclient.py "$DOMAIN"/"$USER":"$PASSWORD"@"$IP" ## Connexion au serveur SMB
+smbclient //$IP/NAME-SHARE$ -U "$DOMAIN/$USER%$PASSWORD" ## Connexion share SMB
 
-shares ## List des shares
+## Pour tout récupérer 
+smb: \> recurse ON  
+smb: \> prompt OFF  
+smb: \> mget *
 
-use <share> ## Se connecter à un share 
 ```
 
 ## Hashcat
