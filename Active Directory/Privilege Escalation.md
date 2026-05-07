@@ -192,21 +192,6 @@ Même logique que Shadow Credentials : `ARRAKIS$` est un DC avec les droits de r
 |Prérequis|Impact AD|Détection|Réversible|
 |---|---|---|---|
 |Aucun|Élevé|Très haute|Difficile|
-
----
-
-## Comparatif des 3 attaques
-
-||RBCD|Shadow Credentials ⭐|Reset Password|
-|---|---|---|---|
-|**Prérequis**|MachineQuota > 0|PKINIT actif|Aucun|
-|**Impact AD**|Faible|Minimal|Élevé|
-|**Détection**|Modérée|Faible|Très haute|
-|**Réversible**|Oui|Oui|Difficile|
-|**Outil principal**|impacket / rbcd.py|Whisker / pywhisker|net rpc / PowerView|
-
----
-
 ## Outils de référence
 
 |Outil|Usage|
