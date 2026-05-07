@@ -42,7 +42,7 @@ hashcat -m 13100 hash.txt /opt/lists/rockyou.txt ## Crack le hash Kerberos
 ## Bloodhound
 
 ```bash
-bloodhound-python -u $USER -p $PASSWORD -d $DOMAIN -ns $IP -c All ## Récupération des éléments de l'AD
+bloodhound-python -u $USER -p $PASSWORD -d $DOMAIN -ns $IP -c All --zip ## Récupération des éléments de l'AD
 
 bloodhound-ce &>/dev/null & ## Interface Web
 user: admin
