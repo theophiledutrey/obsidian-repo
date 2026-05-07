@@ -13,26 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pentest Tools/Ligolo.md",
+                "file": "XMCO/AD/Users.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Ligolo"
-            }
-          },
-          {
-            "id": "6e3677772eb5b980",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Linux/Exegol.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Exegol"
+              "title": "Users"
             }
           },
           {
@@ -50,6 +36,20 @@
             }
           },
           {
+            "id": "6e3677772eb5b980",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "XMCO/AD/Machine.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Machine"
+            }
+          },
+          {
             "id": "61f2bc61a085bce5",
             "type": "leaf",
             "state": {
@@ -61,20 +61,6 @@
               },
               "icon": "lucide-file",
               "title": "Pentest"
-            }
-          },
-          {
-            "id": "cab707a0880f6150",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Active Directory/Privilege Escalation.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Privilege Escalation"
             }
           },
           {
@@ -90,9 +76,22 @@
               "icon": "lucide-file",
               "title": "Set up"
             }
+          },
+          {
+            "id": "cab707a0880f6150",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Active Directory/Privilege Escalation.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Privilege Escalation"
+            }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "vertical"
@@ -293,12 +292,23 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "4f1fb808fa988434",
+  "active": "2f67ef7cdad8fe9e",
   "lastOpenFiles": [
     "Pentest Tools/Ligolo.md",
+    "Active Directory/Command.md",
+    "Active Directory/Privilege Escalation.md",
     "XMCO/AD/Set up.md",
     "XMCO/AD/Pentest.md",
-    "Active Directory/Privilege Escalation.md",
+    "XMCO/AD/Machine.md",
+    "XMCO/AD/Users.md",
+    "Assets/XMCO/AD/Users/IMG-20260507100537940.png",
+    "Assets/XMCO/AD/Users/IMG-20260507100506844.png",
+    "Assets/XMCO/AD/Users/IMG-20260507100248007.png",
+    "Assets/XMCO/AD/Users",
+    "Assets/XMCO/AD/Users/IMG-20260507095843998.png",
+    "Linux/Exegol.md",
+    "XMCO/AD/AD.md",
+    "Web/Word List.md",
     "Active Directory/Kerberos.md",
     "Assets/XMCO/AD/Pentest/IMG-20260506113516986.png",
     "Assets/XMCO/AD/Pentest/IMG-20260506111414821.png",
@@ -306,25 +316,18 @@
     "Assets/XMCO/AD/Pentest/IMG-20260506110227265.png",
     "Assets/XMCO/AD/Pentest/IMG-20260506110148855.png",
     "Assets/XMCO/AD/Pentest/IMG-20260506110124950.png",
-    "Assets/Active Directory/Privilege Escalation/IMG-20260506105052495.png",
-    "Assets/Active Directory/Privilege Escalation/IMG-20260506105023235.png",
-    "Assets/Active Directory/Privilege Escalation/IMG-20260506104934204.png",
     "Active Directory/ACL.md",
-    "Assets/Active Directory/Privilege Escalation/IMG-20260506104514552.png",
     "Assets/Active Directory/Privilege Escalation",
     "Assets/Active Directory",
     "Pentest Tools/Nmap.md",
-    "Active Directory/Command.md",
     "Active Directory/Active Directory.md",
     "Linux/Sans titre.md",
     "Write up/Hack The Box/Boxe/Season 9/NanoCorp.md",
     "ECE/ECE.md",
     "ECE/Stage/Questions Techniques stage.md",
-    "Linux/Exegol.md",
     "Assets/XMCO/AD/Pentest",
     "Assets/XMCO/AD",
     "Active Directory/Formation Tristan.md",
-    "XMCO/AD/AD.md",
     "XMCO/Intrusif/Commande.md",
     "XMCO/AD",
     "XMCO/Intrusif/Step 1/Analyse code src.md",
@@ -337,9 +340,6 @@
     "Web/Portswigger/SQLi.md",
     "Linux/Analyse.md",
     "Write up/Hack The Box/Boxe/Season 9/AirTouch.md",
-    "XMCO/Conf/step 1.md",
-    "XMCO/Intrusif/Step2/Step2.md",
-    "XMCO/Intrusif/Step2",
     "Web/Untitled.canvas",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
