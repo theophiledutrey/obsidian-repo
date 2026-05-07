@@ -83,7 +83,8 @@
     "//ECE/ECE/Stage",
     "//XMCO/XMCO/AD",
     "//Pentest Tools",
-    "//Web"
+    "//Web",
+    "//Write up"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",

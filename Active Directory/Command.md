@@ -36,6 +36,7 @@ smb: \> mget *
 hashcat -m 18200 asrep.txt /opt/lists/rockyou.txt ## Crack le hash AS-REP
 hashcat -m 13100 hash.txt /opt/lists/rockyou.txt ## Crack le hash Kerberos
 
+
 ```
 
 ## Bloodhound
