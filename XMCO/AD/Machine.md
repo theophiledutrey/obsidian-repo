@@ -2,7 +2,7 @@
 
 ## SMB
 
-### FEYDRAUTHA.HARKONNEN / GAIUS.MOHIAM / yueh.wellington/leto.atreides
+### FEYDRAUTHA.HARKONNEN / GAIUS.MOHIAM / yueh.wellington/leto.atreides/chani/JESSICA.ATREIDES
 ![[IMG-20260507103012128.png]]
 
 # 10.2.62.235 CALADAN
@@ -19,7 +19,7 @@
 
 ## SMB 
 
-### GAIUS.MOHIAM / yueh.wellington / leto.atreides
+### GAIUS.MOHIAM / yueh.wellington / leto.atreides / chani / JESSICA.ATREIDES
 
 ![[IMG-20260507103733107.png]]
 

