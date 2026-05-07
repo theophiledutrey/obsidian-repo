@@ -106,7 +106,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -307,11 +307,11 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "a8d0d7fd88abc1b4",
+  "active": "6e3677772eb5b980",
   "lastOpenFiles": [
-    "Active Directory/Privilege Escalation.md",
-    "Active Directory/ADCS.md",
     "XMCO/AD/Owned.md",
+    "Active Directory/ADCS.md",
+    "Active Directory/Privilege Escalation.md",
     "Active Directory/ACL.md",
     "Active Directory/Command.md",
     "XMCO/AD/Pentest.md",
