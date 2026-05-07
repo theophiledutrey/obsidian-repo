@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "XMCO/AD/Users.md",
+                "file": "XMCO/AD/Owned.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Users"
+              "title": "Owned"
             }
           },
           {
@@ -294,14 +294,16 @@
   },
   "active": "2f67ef7cdad8fe9e",
   "lastOpenFiles": [
-    "Assets/XMCO/AD/Users/IMG-20260507141509917.png",
-    "Pentest Tools/Ligolo.md",
-    "XMCO/AD/Users.md",
-    "Write up/Hack The Box/Boxe/Season 9/NanoCorp.md",
-    "Assets/XMCO/AD/Users/IMG-20260507140510464.png",
-    "Active Directory/Command.md",
-    "XMCO/AD/Set up.md",
     "XMCO/AD/Pentest.md",
+    "Active Directory/Command.md",
+    "XMCO/AD/Owned.md",
+    "Assets/XMCO/AD/Owned/IMG-20260507143124042.png",
+    "Assets/XMCO/AD/Owned",
+    "Assets/XMCO/AD/Owned/IMG-20260507143007291.png",
+    "Pentest Tools/Ligolo.md",
+    "Write up/Hack The Box/Boxe/Season 9/NanoCorp.md",
+    "Assets/XMCO/AD/Owned/IMG-20260507143007186.png",
+    "XMCO/AD/Set up.md",
     "XMCO/AD/Machine.md",
     "Active Directory/Privilege Escalation.md",
     "Assets/XMCO/AD/Pentest/IMG-20260507115812971.png",
@@ -312,8 +314,6 @@
     "Write up/Hack The Box/Boxe/Season 9/AirTouch.md",
     "Assets/XMCO/AD/Machine/IMG-20260507103748262.png",
     "Assets/XMCO/AD/Machine/IMG-20260507103733107.png",
-    "Assets/XMCO/AD/Machine/IMG-20260507103305880.png",
-    "Assets/XMCO/AD/Machine/IMG-20260507103222516.png",
     "Assets/XMCO/AD/Machine",
     "Assets/XMCO/AD/Users",
     "Linux/Exegol.md",
@@ -337,7 +337,6 @@
     "XMCO/Intrusif/Step2/Pentest.md",
     "Assets/XMCO/Intrusif/Step2/Pentest",
     "Assets/XMCO/Intrusif/Step2",
-    "Assets/XMCO/Intrusif",
     "ECE/Stage/CTF XMCO.md",
     "Web/Portswigger/SQLi.md",
     "Web/Untitled.canvas",
