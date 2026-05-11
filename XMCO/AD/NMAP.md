@@ -2,7 +2,7 @@
 ## NMAP
 
 ```bash
-# Nmap 7.95 scan initiated Tue May  5 11:56:33 2026 as: /usr/lib/nmap/nmap --privileged -sT -T3 -p- -sV -oA scan-nmap 10.2.62.224/28
+# Nmap 7.95 scan initiated Tue May  5 11:56:33 2026 as: /usr/lib/nmap/nmap --privileged -sT -T3 -p- -sV -oA scan-nmap 10.2.62.80/28
 Nmap scan report for ip-10-2-62-225.eu-west-3.compute.internal (10.2.62.225)
 Host is up (0.00027s latency).
 All 65535 scanned ports on ip-10-2-62-225.eu-west-3.compute.internal (10.2.62.225) are in ignored states.
