@@ -120,7 +120,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -321,14 +321,15 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "5e547726f60a7d81",
+  "active": "4f1fb808fa988434",
   "lastOpenFiles": [
-    "Assets/XMCO/AD/Pentest/IMG-20260511163549361.png",
-    "Active Directory/ADCS.md",
     "XMCO/AD/Pentest.md",
+    "Active Directory/ADCS.md",
+    "XMCO/AD/Set up.md",
+    "Assets/XMCO/AD/Pentest/IMG-20260511165119450.png",
+    "Assets/XMCO/AD/Pentest/IMG-20260511163549361.png",
     "Assets/XMCO/AD/Pentest/IMG-20260511162815011.png",
     "Assets/XMCO/AD/Pentest/IMG-20260511162733062.png",
-    "XMCO/AD/Set up.md",
     "XMCO/AD/NMAP.md",
     "Active Directory/Kerberos.md",
     "XMCO/AD/Machine.md",
@@ -342,9 +343,7 @@
     "Assets/XMCO/AD/Pentest/IMG-20260507151304856.png",
     "Assets/XMCO/AD/Pentest/IMG-20260507151252015.png",
     "Assets/XMCO/AD/Pentest/IMG-20260507150516359.png",
-    "Assets/XMCO/AD/Owned/IMG-20260507143124042.png",
     "Assets/XMCO/AD/Owned",
-    "Assets/XMCO/AD/Owned/IMG-20260507143007291.png",
     "Pentest Tools/Ligolo.md",
     "Write up/Hack The Box/Boxe/Season 9/NanoCorp.md",
     "Write up/Hack The Box/Boxe/Season 9/AirTouch.md",

