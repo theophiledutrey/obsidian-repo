@@ -120,7 +120,7 @@
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -321,14 +321,17 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "4f1fb808fa988434",
+  "active": "5e547726f60a7d81",
   "lastOpenFiles": [
-    "XMCO/AD/Pentest.md",
-    "XMCO/AD/NMAP.md",
-    "XMCO/AD/Set up.md",
-    "XMCO/AD/Machine.md",
-    "Active Directory/Kerberos.md",
+    "Assets/XMCO/AD/Pentest/IMG-20260511163549361.png",
     "Active Directory/ADCS.md",
+    "XMCO/AD/Pentest.md",
+    "Assets/XMCO/AD/Pentest/IMG-20260511162815011.png",
+    "Assets/XMCO/AD/Pentest/IMG-20260511162733062.png",
+    "XMCO/AD/Set up.md",
+    "XMCO/AD/NMAP.md",
+    "Active Directory/Kerberos.md",
+    "XMCO/AD/Machine.md",
     "Active Directory/Privilege Escalation.md",
     "XMCO/AD/Owned.md",
     "Active Directory/Command.md",
@@ -344,8 +347,6 @@
     "Assets/XMCO/AD/Owned/IMG-20260507143007291.png",
     "Pentest Tools/Ligolo.md",
     "Write up/Hack The Box/Boxe/Season 9/NanoCorp.md",
-    "Assets/XMCO/AD/Owned/IMG-20260507143007186.png",
-    "Assets/XMCO/AD/Pentest/IMG-20260507115812971.png",
     "Write up/Hack The Box/Boxe/Season 9/AirTouch.md",
     "Assets/XMCO/AD/Machine",
     "Assets/XMCO/AD/Users",
@@ -368,7 +369,6 @@
     "XMCO/Intrusif/Step2/Pentest.md",
     "Assets/XMCO/Intrusif/Step2/Pentest",
     "Assets/XMCO/Intrusif/Step2",
-    "ECE/Stage/CTF XMCO.md",
     "Web/Untitled.canvas",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
