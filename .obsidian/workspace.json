@@ -120,7 +120,7 @@
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -162,7 +162,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#pentest",
+                "query": "DCSync",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -321,28 +321,28 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "4f1fb808fa988434",
+  "active": "ea101e8e241ad129",
   "lastOpenFiles": [
-    "XMCO/AD/Pentest.md",
+    "XMCO/AD/NMAP.md",
+    "Active Directory/Kerberos.md",
     "Active Directory/ADCS.md",
+    "XMCO/AD/Pentest.md",
+    "Assets/XMCO/AD/Pentest/IMG-20260511173849980.png",
     "XMCO/AD/Set up.md",
+    "Assets/XMCO/AD/Pentest/IMG-20260511173559028.png",
+    "Assets/XMCO/AD/Pentest/IMG-20260511173547384.png",
+    "Active Directory/Privilege Escalation.md",
     "Assets/XMCO/AD/Pentest/IMG-20260511165119450.png",
     "Assets/XMCO/AD/Pentest/IMG-20260511163549361.png",
     "Assets/XMCO/AD/Pentest/IMG-20260511162815011.png",
     "Assets/XMCO/AD/Pentest/IMG-20260511162733062.png",
-    "XMCO/AD/NMAP.md",
-    "Active Directory/Kerberos.md",
     "XMCO/AD/Machine.md",
-    "Active Directory/Privilege Escalation.md",
     "XMCO/AD/Owned.md",
     "Active Directory/Command.md",
     "Active Directory/ACL.md",
     "Assets/XMCO/AD/Pentest/IMG-20260507155919648.png",
     "Assets/XMCO/AD/Owned/IMG-20260507155429252.png",
     "Assets/XMCO/AD/Machine/IMG-20260507151903289.png",
-    "Assets/XMCO/AD/Pentest/IMG-20260507151304856.png",
-    "Assets/XMCO/AD/Pentest/IMG-20260507151252015.png",
-    "Assets/XMCO/AD/Pentest/IMG-20260507150516359.png",
     "Assets/XMCO/AD/Owned",
     "Pentest Tools/Ligolo.md",
     "Write up/Hack The Box/Boxe/Season 9/NanoCorp.md",
