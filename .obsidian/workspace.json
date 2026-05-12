@@ -119,7 +119,8 @@
               "title": "Owned"
             }
           }
-        ]
+        ],
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -320,25 +321,25 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "2f67ef7cdad8fe9e",
+  "active": "4f1fb808fa988434",
   "lastOpenFiles": [
-    "XMCO/AD/NMAP.md",
     "XMCO/AD/Pentest.md",
+    "XMCO/AD/Owned.md",
+    "Assets/XMCO/AD/Owned/IMG-20260512141723476.png",
     "Active Directory/Command.md",
+    "XMCO/AD/Machine.md",
+    "Active Directory/Kerberos.md",
+    "Active Directory/ADCS.md",
+    "XMCO/AD/NMAP.md",
     "Assets/XMCO/AD/Pentest/IMG-20260512112916684.png",
     "Assets/XMCO/AD/Pentest/IMG-20260512112715024.png",
     "Assets/XMCO/AD/Pentest/IMG-20260512112545367.png",
     "Assets/XMCO/AD/Pentest/IMG-20260512111937609.png",
-    "Active Directory/ADCS.md",
-    "XMCO/AD/Machine.md",
     "Assets/XMCO/AD/Pentest/IMG-20260512110122607.png",
-    "XMCO/AD/Owned.md",
     "Assets/XMCO/AD/Owned/IMG-20260512104045345.png",
     "Assets/XMCO/AD/Pentest/IMG-20260512103931924.png",
     "Assets/XMCO/AD/Pentest/IMG-20260512103913888.png",
     "Assets/XMCO/AD/Pentest/IMG-20260512103838530.png",
-    "Assets/XMCO/AD/Pentest/IMG-20260512103136835.png",
-    "Active Directory/Kerberos.md",
     "XMCO/AD/Set up.md",
     "Active Directory/Privilege Escalation.md",
     "Active Directory/ACL.md",

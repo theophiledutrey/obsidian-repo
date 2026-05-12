@@ -29,3 +29,8 @@
 ## vladimir.harkonnen:dbb1f773ca77dc535cf8382fac852fdb
 
 ![[IMG-20260512104045345.png]]
+## GEIDIPRIME$:27827f9f69108b37e5cd6df13bb279e7
+
+![[IMG-20260512141723476.png]]
+## Compte admin local GEIDIPRIME Administrator:4ef687238907fa12b4addeae4466235e
+
