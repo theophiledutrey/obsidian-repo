@@ -105,7 +105,8 @@
               "title": "Set up"
             }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -306,11 +307,11 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "2f67ef7cdad8fe9e",
+  "active": "5e547726f60a7d81",
   "lastOpenFiles": [
+    "Active Directory/Command.md",
     "XMCO/AD/NMAP.md",
     "XMCO/AD/Machine.md",
-    "Active Directory/Command.md",
     "XMCO/AD/Pentest.md",
     "Active Directory/ADCS.md",
     "XMCO/AD/Set up.md",
