@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "XMCO/AD/Pentest.md",
+                "file": "Active Directory/Edges/AllowedToDelegate.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Pentest"
+              "title": "AllowedToDelegate"
             }
           },
           {
@@ -120,7 +120,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -321,9 +321,17 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "4f1fb808fa988434",
+  "active": "e2aa3986dab62d71",
   "lastOpenFiles": [
+    "Active Directory/Edges/AllowedToDelegate.md",
+    "Active Directory/Edges/GenericAll.md",
+    "Assets/Active Directory/Edges/GenericAll",
+    "Active Directory/Edges/Edges.md",
+    "Assets/Active Directory/Edges/Privilege Escalation",
+    "Assets/Active Directory/Edges",
+    "Active Directory/Edges",
     "XMCO/AD/Pentest.md",
+    "XMCO/AD/Set up.md",
     "XMCO/AD/Owned.md",
     "Assets/XMCO/AD/Owned/IMG-20260512141723476.png",
     "Active Directory/Command.md",
@@ -340,8 +348,6 @@
     "Assets/XMCO/AD/Pentest/IMG-20260512103931924.png",
     "Assets/XMCO/AD/Pentest/IMG-20260512103913888.png",
     "Assets/XMCO/AD/Pentest/IMG-20260512103838530.png",
-    "XMCO/AD/Set up.md",
-    "Active Directory/Privilege Escalation.md",
     "Active Directory/ACL.md",
     "Assets/XMCO/AD/Owned",
     "Pentest Tools/Ligolo.md",
@@ -360,14 +366,9 @@
     "ECE/ECE.md",
     "ECE/Stage/Questions Techniques stage.md",
     "Assets/XMCO/AD/Pentest",
-    "Assets/XMCO/AD",
     "Active Directory/Formation Tristan.md",
     "XMCO/Intrusif/Commande.md",
-    "XMCO/AD",
     "XMCO/Intrusif/Step 1/Analyse code src.md",
-    "XMCO/Intrusif/Step2/Pentest.md",
-    "Assets/XMCO/Intrusif/Step2/Pentest",
-    "Assets/XMCO/Intrusif/Step2",
     "Web/Untitled.canvas",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",

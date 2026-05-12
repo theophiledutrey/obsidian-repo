@@ -1,9 +1,7 @@
-# Exploitation de GenericAll sur un DC 
-
 > **Contexte** : compte SPN compromis → membre du groupe `BENE GESSERIT` → `GenericAll` sur `ARRAKIS.IMPERIUM.LOCAL` (DC)
 
 
-![[IMG-20260506103311848.png]]
+![[IMG-20260512152506240.png]]
 
 ---
 
@@ -29,7 +27,7 @@ Convaincre le DC qu'une machine qu'on contrôle (`FAKE$`) est autorisée à s'im
 
 ### Schéma
 
-![[IMG-20260506104934204.png]]
+![[IMG-20260512152506677.png]]
 
 ### Étapes
 
@@ -92,7 +90,7 @@ Ajouter une clé cryptographique (certificat) dans l'attribut `msDS-KeyCredentia
 ### Schéma
 
 
-![[IMG-20260506105023235.png]]
+![[IMG-20260512152506888.png]]
 
 ### Étapes
 
@@ -159,7 +157,7 @@ secretsdump.py \
 
 ### Schéma
 
-![[IMG-20260506105052495.png]]
+![[IMG-20260512152507092.png]]
 
 ### Étapes
 
@@ -341,12 +339,5 @@ export KRB5CCNAME=Administrator.ccache
 impacket-psexec -k -no-pass <domain>/Administrator@<DC_hostname>
 ```
 
----
 
-## Références
 
-- [PrintSpoofer — itm4n](https://github.com/itm4n/PrintSpoofer)
-- [GodPotato](https://github.com/BeichenDream/GodPotato)
-- [Mimikatz — gentilkiwi](https://github.com/gentilkiwi/mimikatz)
-- [Impacket](https://github.com/fortra/impacket)
-- [HackTricks — SeImpersonatePrivilege](https://book.hacktricks.xyz/windows-hardening/privilege-escalation/privilege-escalation-abusing-tokens)

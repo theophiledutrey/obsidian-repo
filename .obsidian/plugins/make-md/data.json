@@ -83,7 +83,8 @@
     "//ECE/ECE/Stage",
     "//XMCO/XMCO/AD",
     "//Pentest Tools",
-    "//Web"
+    "//Web",
+    "//Active Directory/Active Directory/Edges"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
