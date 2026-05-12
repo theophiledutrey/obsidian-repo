@@ -26,3 +26,6 @@
 
 ![[IMG-20260507155429252.png]]
 
+## vladimir.harkonnen:dbb1f773ca77dc535cf8382fac852fdb
+
+![[IMG-20260512104045345.png]]

