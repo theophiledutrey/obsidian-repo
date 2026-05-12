@@ -84,7 +84,8 @@
     "//XMCO/XMCO/AD",
     "//Pentest Tools",
     "//Web",
-    "//Active Directory/Active Directory/Edges"
+    "//Active Directory/Active Directory/Edges",
+    "//Active Directory/Active Directory/ACL"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",

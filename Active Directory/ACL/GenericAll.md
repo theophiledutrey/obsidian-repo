@@ -1,7 +1,10 @@
+![[IMG-20260512155454123.png]]
+
+
 > **Contexte** : compte SPN compromis → membre du groupe `BENE GESSERIT` → `GenericAll` sur `ARRAKIS.IMPERIUM.LOCAL` (DC)
 
 
-![[IMG-20260512152506240.png]]
+![[IMG-20260512155454789.png]]
 
 ---
 
@@ -27,7 +30,7 @@ Convaincre le DC qu'une machine qu'on contrôle (`FAKE$`) est autorisée à s'im
 
 ### Schéma
 
-![[IMG-20260512152506677.png]]
+![[IMG-20260512155455799.png]]
 
 ### Étapes
 
@@ -90,7 +93,7 @@ Ajouter une clé cryptographique (certificat) dans l'attribut `msDS-KeyCredentia
 ### Schéma
 
 
-![[IMG-20260512152506888.png]]
+![[IMG-20260512155455850.png]]
 
 ### Étapes
 
@@ -157,7 +160,7 @@ secretsdump.py \
 
 ### Schéma
 
-![[IMG-20260512152507092.png]]
+![[IMG-20260512155455992.png]]
 
 ### Étapes
 

