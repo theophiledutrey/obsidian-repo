@@ -105,8 +105,7 @@
               "title": "Set up"
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "vertical"
@@ -148,7 +147,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "DCSync",
+                "query": "reverse",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -307,13 +306,15 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "5e547726f60a7d81",
+  "active": "2f67ef7cdad8fe9e",
   "lastOpenFiles": [
-    "Active Directory/Command.md",
-    "XMCO/AD/NMAP.md",
     "XMCO/AD/Machine.md",
     "XMCO/AD/Pentest.md",
+    "Active Directory/Command.md",
+    "Assets/XMCO/AD/Pentest/IMG-20260512101040570.png",
+    "Assets/XMCO/AD/Pentest/IMG-20260512101020547.png",
     "Active Directory/ADCS.md",
+    "XMCO/AD/NMAP.md",
     "XMCO/AD/Set up.md",
     "XMCO/AD/Owned.md",
     "Active Directory/Kerberos.md",
@@ -327,8 +328,6 @@
     "Assets/XMCO/AD/Pentest/IMG-20260511162733062.png",
     "Active Directory/ACL.md",
     "Assets/XMCO/AD/Pentest/IMG-20260507155919648.png",
-    "Assets/XMCO/AD/Owned/IMG-20260507155429252.png",
-    "Assets/XMCO/AD/Machine/IMG-20260507151903289.png",
     "Assets/XMCO/AD/Owned",
     "Pentest Tools/Ligolo.md",
     "Write up/Hack The Box/Boxe/Season 9/NanoCorp.md",
