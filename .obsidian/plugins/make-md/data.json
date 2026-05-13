@@ -86,7 +86,8 @@
     "//Web",
     "//Active Directory/Active Directory/Edges",
     "//Active Directory/Active Directory/privesc",
-    "//Active Directory/Active Directory/ACL"
+    "//Active Directory/Active Directory/ACL",
+    "//Active Directory/Active Directory/Windows"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
