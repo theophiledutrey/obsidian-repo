@@ -4,39 +4,123 @@
     "type": "split",
     "children": [
       {
-        "id": "5112bb6a62833d40",
+        "id": "941e35087c2f58fb",
         "type": "tabs",
         "children": [
           {
-            "id": "b55f549de609d972",
+            "id": "2f67ef7cdad8fe9e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Web/Word List.md",
+                "file": "Active Directory/Command.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Word List"
+              "title": "Command"
             }
           },
           {
-            "id": "2a2b0aafbb7eb0c8",
+            "id": "6e3677772eb5b980",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux/Bug.md",
+                "file": "XMCO/AD/Machine.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Bug"
+              "title": "Machine"
+            }
+          },
+          {
+            "id": "cab707a0880f6150",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Active Directory/Kerberos.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Kerberos"
+            }
+          },
+          {
+            "id": "a8d0d7fd88abc1b4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "XMCO/AD/NMAP.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "NMAP"
+            }
+          },
+          {
+            "id": "4f1fb808fa988434",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "XMCO/AD/Pentest.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Pentest"
+            }
+          },
+          {
+            "id": "e05280999baef87a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "XMCO/AD/Owned.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Owned"
+            }
+          },
+          {
+            "id": "ea101e8e241ad129",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Active Directory/ACL/AllowedToDelegate.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "AllowedToDelegate"
+            }
+          },
+          {
+            "id": "9f45c91e539592d6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "XMCO/AD/Set up.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Set up"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -78,7 +162,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "reverse",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,11 +170,11 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "Search"
+              "title": "Rechercher"
             }
           },
           {
-            "id": "cbe9058b7d2471c6",
+            "id": "30329f3bcedf34ef",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -104,7 +188,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 441.5
+    "width": 364.5
   },
   "right": {
     "id": "e4e6a1b5b121b38c",
@@ -141,7 +225,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
+                "file": "XMCO/Intrusif/Step2/Pentest.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +235,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Previous Hack The Box"
+              "title": "Rétrolien pour Pentest"
             }
           },
           {
@@ -211,24 +295,24 @@
               "type": "graph",
               "state": {},
               "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "title": "Vue graphique"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 425.5
+    "width": 399.5
   },
   "left-ribbon": {
     "hiddenItems": {
-      "bases:Create new base": false,
-      "switcher:Open quick switcher": false,
-      "templates:Insert template": false,
-      "canvas:Create new canvas": false,
-      "command-palette:Open command palette": false,
-      "daily-notes:Open today's daily note": false,
-      "graph:Open graph view": false,
+      "switcher:Ouvrir le sélecteur rapide": false,
+      "graph:Ouvrir la vue graphique": false,
+      "canvas:Créer une nouvelle toile": false,
+      "daily-notes:Ouvrir la note quotidienne": false,
+      "templates:Insérer le modèle": false,
+      "command-palette:Ouvrir la palette de commandes": false,
+      "bases:Créer une nouvelle base": false,
       "obsidian-git:Open Git source control": false,
       "oz-clear-unused-images:Clear Unused Images": false,
       "obsidian-excalidraw-plugin:New drawing": false,
@@ -237,53 +321,54 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "2a2b0aafbb7eb0c8",
+  "active": "ea101e8e241ad129",
   "lastOpenFiles": [
-    "XMCO/AD/Pentest.md",
-    "Active Directory/ACL/AllowedToDelegate.md",
     "XMCO/AD/Set up.md",
     "conflict-files-obsidian-git.md",
+    "Active Directory/ACL/AllowedToDelegate.md",
+    "Assets/Active Directory/ACL/AllowedToDelegate/IMG-20260513103221468.png",
+    "Assets/Active Directory/ACL/AllowedToDelegate/IMG-20260513103120133.png",
+    "Assets/Active Directory/ACL/AllowedToDelegate/IMG-20260513103032663.png",
+    "Assets/Active Directory/ACL/AllowedToDelegate/IMG-20260513103004698.png",
+    "Assets/Active Directory/ACL/AllowedToDelegate/IMG-20260513102935903.png",
+    "Assets/Active Directory/ACL/AllowedToDelegate",
+    "Assets/Active Directory/ACL/AllowedToDelegate/IMG-20260513102838294.png",
+    "Active Directory/Command.md",
+    "XMCO/AD/Owned.md",
+    "XMCO/AD/Pentest.md",
+    "Active Directory/Kerberos.md",
+    "XMCO/AD/NMAP.md",
+    "XMCO/AD/Machine.md",
+    "Active Directory/ADCS.md",
+    "Active Directory/ACL/GenericAll.md",
+    "Assets/Active Directory/ACL/GenericAll",
+    "Assets/Active Directory/ACL",
+    "Active Directory/ACL/ACL.md",
+    "Active Directory/ACL.md",
+    "Assets/Active Directory/Edges/GenericAll",
+    "Assets/Active Directory/Edges/Privilege Escalation",
+    "Assets/Active Directory/Edges",
+    "Active Directory/ACL",
+    "Assets/XMCO/AD/Owned/IMG-20260512141723476.png",
     "Assets/XMCO/AD/Pentest/IMG-20260512112916684.png",
     "Assets/XMCO/AD/Pentest/IMG-20260512112715024.png",
     "Assets/XMCO/AD/Pentest/IMG-20260512112545367.png",
-    "Assets/XMCO/AD/Pentest/IMG-20260512111937609.png",
-    "Assets/XMCO/AD/Pentest/IMG-20260512110122607.png",
-    "Assets/XMCO/AD/Pentest/IMG-20260512103931924.png",
-    "Assets/XMCO/AD/Pentest/IMG-20260512103913888.png",
-    "Assets/XMCO/AD/Pentest/IMG-20260512103838530.png",
-    "Assets/XMCO/AD/Pentest/IMG-20260512103136835.png",
-    "Assets/XMCO/AD/Pentest/IMG-20260512102641760.png",
-    "Assets/Active Directory/ACL/GenericAll",
-    "Assets/Active Directory/ACL",
-    "Active Directory/ACL/GenericAll.md",
-    "Active Directory/ACL/ACL.md",
-    "Active Directory/ACL",
-    "XMCO/XMSHOP.md",
-    "XMCO/Tools XMCO.md",
-    "XMCO/Pentest echo.md",
-    "XMCO/Mobile/XMDROID.md",
-    "XMCO/Mobile/Mobile.md",
-    "XMCO/Mobile/Mobile (APK).md",
-    "XMCO/Mobile/Frida.md",
-    "XMCO/Mobile/APKey HTB.md",
-    "XMCO/Mobile",
-    "XMCO/Intrusif/Step2/Step2.md",
-    "XMCO/Intrusif/Step2/Pentest.md",
-    "XMCO/Intrusif/Step 1/Step 1.md",
-    "XMCO/Intrusif/Step 1/Analyse code src.md",
-    "XMCO/Intrusif/Step2",
-    "XMCO/Intrusif/Step 1",
-    "XMCO/Intrusif/Méthodologie .md",
-    "XMCO/Intrusif/Intrusif.md",
+    "Assets/XMCO/AD/Owned",
+    "Pentest Tools/Ligolo.md",
+    "Write up/Hack The Box/Boxe/Season 9/NanoCorp.md",
+    "Write up/Hack The Box/Boxe/Season 9/AirTouch.md",
+    "Assets/XMCO/AD/Machine",
+    "Assets/XMCO/AD/Users",
+    "Linux/Exegol.md",
+    "XMCO/AD/AD.md",
+    "Web/Word List.md",
+    "Pentest Tools/Nmap.md",
+    "Active Directory/Active Directory.md",
+    "Linux/Sans titre.md",
+    "ECE/ECE.md",
+    "ECE/Stage/Questions Techniques stage.md",
+    "Active Directory/Formation Tristan.md",
     "XMCO/Intrusif/Commande.md",
-    "XMCO/Intrusif",
-    "XMCO/Conf/step 3.md",
-    "XMCO/Conf/step 2.md",
-    "XMCO/Conf/Step 1.md",
-    "XMCO/Conf/Conf.md",
-    "XMCO/Conf",
-    "XMCO/AD",
-    "Assets/XMLAB-CASSAGE_MDP.pdf",
     "Web/Untitled.canvas",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
