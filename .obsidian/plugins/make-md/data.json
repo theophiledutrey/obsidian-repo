@@ -85,6 +85,7 @@
     "//Pentest Tools",
     "//Web",
     "//Active Directory/Active Directory/Edges",
+    "//Active Directory/Active Directory/privesc",
     "//Active Directory/Active Directory/ACL"
   ],
   "expandFolderOnClick": true,

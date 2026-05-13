@@ -81,28 +81,24 @@
             "id": "e05280999baef87a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "mk-space",
               "state": {
-                "file": "XMCO/AD/Owned.md",
-                "mode": "source",
-                "source": false
+                "path": "Active Directory/privesc"
               },
               "icon": "lucide-file",
-              "title": "Owned"
+              "title": "privesc"
             }
           },
           {
             "id": "ea101e8e241ad129",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "mk-space",
               "state": {
-                "file": "Active Directory/ACL/AllowedToDelegate.md",
-                "mode": "source",
-                "source": false
+                "path": "Active Directory/ACL"
               },
               "icon": "lucide-file",
-              "title": "AllowedToDelegate"
+              "title": "ACL"
             }
           },
           {
@@ -119,7 +115,8 @@
               "title": "Set up"
             }
           }
-        ]
+        ],
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -320,16 +317,19 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "2f67ef7cdad8fe9e",
+  "active": "ea101e8e241ad129",
   "lastOpenFiles": [
-    "XMCO/AD/Set up.md",
-    "Active Directory/ACL/AllowedToDelegate.md",
-    "XMCO/AD/Owned.md",
-    "XMCO/AD/Pentest.md",
-    "XMCO/AD/Machine.md",
+    "Active Directory/ADCS.md",
     "Active Directory/Kerberos.md",
-    "XMCO/AD/NMAP.md",
     "Active Directory/Command.md",
+    "Active Directory/ACL/AllowedToDelegate.md",
+    "Active Directory/privesc/privesc.md",
+    "XMCO/AD/Owned.md",
+    "Active Directory/privesc",
+    "XMCO/AD/Machine.md",
+    "XMCO/AD/Set up.md",
+    "XMCO/AD/Pentest.md",
+    "XMCO/AD/NMAP.md",
     "Assets/Pasted image 20260513112202.png",
     "conflict-files-obsidian-git.md",
     "Assets/Active Directory/ACL/AllowedToDelegate/IMG-20260513103221468.png",
@@ -339,7 +339,6 @@
     "Assets/Active Directory/ACL/AllowedToDelegate/IMG-20260513102935903.png",
     "Assets/Active Directory/ACL/AllowedToDelegate",
     "Assets/Active Directory/ACL/AllowedToDelegate/IMG-20260513102838294.png",
-    "Active Directory/ADCS.md",
     "Active Directory/ACL/GenericAll.md",
     "Assets/Active Directory/ACL/GenericAll",
     "Assets/Active Directory/ACL",
@@ -357,7 +356,6 @@
     "Write up/Hack The Box/Boxe/Season 9/NanoCorp.md",
     "Write up/Hack The Box/Boxe/Season 9/AirTouch.md",
     "Assets/XMCO/AD/Machine",
-    "Assets/XMCO/AD/Users",
     "Linux/Exegol.md",
     "XMCO/AD/AD.md",
     "Web/Word List.md",
