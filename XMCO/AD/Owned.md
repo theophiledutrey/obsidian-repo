@@ -11,7 +11,7 @@
 
 ![[IMG-20260507143007066.png]]
 
-## leto.atreides:00f93b8e3908027492ef01ba0a9bb5ee
+## leto.atreides:00f93b8e3908027492ef01ba0a9bb5ee:C@l@d@nRul3r!
 
 ![[IMG-20260507143007186.png]]
 ## JESSICA.ATREIDES:@Password1234

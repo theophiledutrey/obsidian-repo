@@ -88,6 +88,29 @@ getST.py -spn 'cifs/arrakis.imperium.local' -impersonate 'ADMINISTRATOR' -k -no-
 [*] Saving ticket in ADMINISTRATOR@cifs_arrakis.imperium.local@IMPERIUM.LOCAL.ccache
 ```
 
+A noté qu'un bypass est possible afin de courtourner la restriction sur le service restreint par la contrainte
+Source: https://bloodhound.specterops.io/resources/edges/allowed-to-delegate#abuse-info
+
+![[Pasted image 20260513151644.png]]
+
+Voici un exemple où la machine GEIDIPRIME a les droits de délégation sur le DC
+![[IMG-20260512141723476.png]]
+
+Et la délégation est contrainte au service cifs:
+![[Pasted image 20260513151815.png]]
+
+Avec l'outil getSt.py il y a le flag -altservice qui vient modifier le sname du ticket ST une fois reçu
+![[Pasted image 20260513151846.png]]
+
+Il est ainsi possible de demander un ST avec cette commande:
+![[Pasted image 20260513151956.png]]
+
+Ici on demande un ticket service pour accéder au service cifs de arrakis entant qu'administrateur et on vient modifier le sname du ticket en local avec '-altservice ldap'
+
+On peut ainsi utiliser ce ticket pour faire des requêtes ldap sur le DC mais on ne peut plus faire de requête smb
+![[Pasted image 20260513152322.png]]
+
+
 ---
 
 ### Étape 4 — Dump du NTDS via le ticket Kerberos
