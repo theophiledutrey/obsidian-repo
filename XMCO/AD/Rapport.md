@@ -1,13 +1,9 @@
 Vuln:
 
-1) Kerberoasting
-2) FTP 
-3) AS-REP roasting
-4) CALADAN -> wwwroot write + Guest 
-5) Mdp faible
-6) Dump LSASS -> RDP
-7) Groupe  BENE GESSERIT GENERIC ALL sur le DC
-8) GAIUS.MOHIAM GetChangeALl sur le DC
-9) LETO GenericALL su Jessica 
-10) ADCS ESC1, 4, 8
-11) Prives via PrintSpoofer64.exe
+1) ADCS ESC 1, 4, 8
+2) CALADAN -> wwwroot write + Guest 
+3) ACL
+4) Mdp faible
+5) AS-REP roasting
+6) Kerberoasting
+7) Prives via PrintSpoofer64.exe
