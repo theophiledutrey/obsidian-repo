@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "XMCO/AD/Rapport.md",
+                "file": "XMCO/AD/Pentest.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Rapport"
+              "title": "Pentest"
             }
           },
           {
@@ -174,13 +174,13 @@
             }
           },
           {
-            "id": "7851840c33f8f1c0",
+            "id": "a54a4ac16a999b8e",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "mk-path-view"
+              "icon": "layout-grid",
+              "title": "Navigator"
             }
           }
         ],
@@ -188,7 +188,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 364.5
+    "width": 226.5
   },
   "right": {
     "id": "e4e6a1b5b121b38c",
@@ -302,7 +302,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 399.5
+    "width": 306.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -315,14 +315,18 @@
       "bases:Créer une nouvelle base": false,
       "obsidian-git:Open Git source control": false,
       "oz-clear-unused-images:Clear Unused Images": false,
-      "obsidian-excalidraw-plugin:New drawing": false
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "pdf-plus:PDF++: Toggle auto-copy": false,
+      "pdf-plus:PDF++: Toggle auto-focus": false,
+      "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "0d8531e45c15dc6e",
+  "active": "b2df2f989f0d244a",
   "lastOpenFiles": [
     "XMCO/AD/Pentest.md",
-    "Active Directory/ACL/AllowedToDelegate.md",
     "XMCO/AD/Rapport.md",
+    "Tags",
+    "Active Directory/ACL/AllowedToDelegate.md",
     "XMCO/AD/Owned.md",
     "Active Directory/Command.md",
     "Pentest Tools/tun2socks.md",
@@ -362,10 +366,8 @@
     "Pentest Tools/Ligolo.md",
     "Write up/Hack The Box/Boxe/Season 9/NanoCorp.md",
     "Write up/Hack The Box/Boxe/Season 9/AirTouch.md",
-    "Assets/XMCO/AD/Machine",
     "Linux/Exegol.md",
     "XMCO/AD/AD.md",
-    "Web/Word List.md",
     "Web/Untitled.canvas",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
