@@ -134,7 +134,7 @@
             }
           }
         ],
-        "currentTab": 8
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -188,7 +188,7 @@
             }
           },
           {
-            "id": "30329f3bcedf34ef",
+            "id": "0ce0ebd88267d179",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -335,17 +335,17 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "2d8c9292e5c55034",
+  "active": "9f45c91e539592d6",
   "lastOpenFiles": [
+    "Active Directory/ACL/AllowedToDelegate.md",
+    "Active Directory/ACL/GenericAll.md",
     "XMCO/AD/NMAP.md",
+    "Active Directory/Windows/Post-Exploitation .md",
+    "XMCO/AD/Machine.md",
     "Active Directory/Command.md",
     "XMCO/AD/Owned.md",
-    "Active Directory/Windows/Post-Exploitation .md",
     "XMCO/AD/Set up.md",
-    "Active Directory/ACL/AllowedToDelegate.md",
     "XMCO/AD/Pentest.md",
-    "XMCO/AD/Machine.md",
-    "Active Directory/ACL/GenericAll.md",
     "Active Directory/Kerberos.md",
     "Assets/Pasted image 20260513152547.png",
     "Assets/Pasted image 20260513152536.png",
