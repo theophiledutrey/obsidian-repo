@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "XMCO/AD/Pentest.md",
+                "file": "Pentest Tools/Nmap.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Pentest"
+              "title": "Nmap"
             }
           },
           {
@@ -177,10 +177,13 @@
             "id": "6ec32af0174915c2",
             "type": "leaf",
             "state": {
-              "type": "mk-path-view",
-              "state": {},
-              "icon": "layout-grid",
-              "title": "Navigator"
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorateur de fichiers"
             }
           }
         ],
@@ -321,8 +324,9 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "e2aa3986dab62d71",
+  "active": "0d8531e45c15dc6e",
   "lastOpenFiles": [
+    "XMCO/AD/NMAP.md",
     "XMCO/AD/Pentest.md",
     "XMCO/AD/Rapport.md",
     "Tags",
@@ -331,7 +335,6 @@
     "Active Directory/Command.md",
     "Pentest Tools/tun2socks.md",
     "Active Directory/Windows/Post-Exploitation .md",
-    "XMCO/AD/NMAP.md",
     "XMCO/AD/Set up.md",
     "Active Directory/ACL/GenericAll.md",
     "XMCO/AD/Machine.md",

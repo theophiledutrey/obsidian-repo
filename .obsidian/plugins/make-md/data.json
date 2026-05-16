@@ -82,11 +82,11 @@
     "//Write up/Write up/Hack The Box/Write up/Hack The Box/Boxe/Write up/Hack The Box/Boxe/Season 9",
     "//ECE/ECE/Stage",
     "//XMCO/XMCO/AD",
-    "//Pentest Tools",
     "//Active Directory/Active Directory/Edges",
     "//Active Directory/Active Directory/privesc",
     "//Active Directory/Active Directory/ACL",
-    "//Active Directory/Active Directory/Windows"
+    "//Active Directory/Active Directory/Windows",
+    "//Pentest Tools"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
