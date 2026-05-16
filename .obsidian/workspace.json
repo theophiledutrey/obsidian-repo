@@ -174,7 +174,7 @@
             }
           },
           {
-            "id": "6ec32af0174915c2",
+            "id": "1a7da7617d7fd554",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -324,8 +324,9 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "0d8531e45c15dc6e",
+  "active": "e2aa3986dab62d71",
   "lastOpenFiles": [
+    "Pentest Tools/Nmap.md",
     "XMCO/AD/NMAP.md",
     "XMCO/AD/Pentest.md",
     "XMCO/AD/Rapport.md",
