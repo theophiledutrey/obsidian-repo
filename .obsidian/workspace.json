@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Active Directory/ACL/AllowedToDelegate.md",
+                "file": "Active Directory/ADCS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "AllowedToDelegate"
+              "title": "ADCS"
             }
           },
           {
@@ -120,7 +120,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -321,14 +321,15 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "0d8531e45c15dc6e",
+  "active": "4f1fb808fa988434",
   "lastOpenFiles": [
+    "Active Directory/ACL/AllowedToDelegate.md",
+    "XMCO/AD/Rapport.md",
+    "Active Directory/ADCS.md",
     "Active Directory/Windows/Privesc.md",
     "XMCO/AD/Pentest.md",
-    "XMCO/AD/Rapport.md",
     "Active Directory/Command.md",
     "conflict-files-obsidian-git.md",
-    "Active Directory/ACL/AllowedToDelegate.md",
     "XMCO/AD/Owned.md",
     "Pentest Tools/tun2socks.md",
     "Active Directory/Windows/Post-Exploitation .md",
@@ -348,7 +349,6 @@
     "XMCO/Mobile/XMDROID.md",
     "ECE/Stage/Questions Techniques stage.md",
     "Active Directory/Windows/Windows.md",
-    "Active Directory/ADCS.md",
     "Active Directory/Windows",
     "Assets/Pasted image 20260513112202.png",
     "Assets/Active Directory/ACL/AllowedToDelegate/IMG-20260513103221468.png",

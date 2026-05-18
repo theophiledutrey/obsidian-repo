@@ -303,6 +303,7 @@ Normalement :
 3. Le service accepte ou refuse
 
 Dans un **NTLM relay attack** :
+
 - Tu ne déchiffres pas le mot de passe
 - Tu ne le voles pas directement
 - Tu fais juste un “proxy malveillant”
