@@ -22,3 +22,4 @@ La présence d'au moins quatre comptes avec l'attribut SPN activé permet à un 
 
 La présence de privilèges d'usurpation d'identité (SeImpersonatePrivilege) sur au moins deux serveurs permet à un attaquant d'élever ses privilèges jusqu'au niveau SYSTEM, entraînant la compromission complète des serveurs concernés. Modérée 
 
+![[IMG-20260518150454899.png]]
