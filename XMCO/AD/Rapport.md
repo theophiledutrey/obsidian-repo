@@ -10,4 +10,6 @@ Vuln:
 
 Au moins 3 défauts de configuration au sein du module ADCS de l'Active Directory permettent à un attaquant d'élever ses privilèges et de prendre le contôle du domaien
 
-Au moins 2 défaut de configuration au sein du serveur CALADAN 
+Au moins 2 défauts de configuration sur le serveur CALADAN permettent à un attaquant non authentifié de manipuler les fichiers du serveur web et d'exécuter du code arbitraire, aboutissant à la compromission du système
+
+Au moins 4 défauts de contôle d'accès entre les objets de l'active directory permettent à un attaquant d'élever ses privilèges et de prendre le contôle du domaien
