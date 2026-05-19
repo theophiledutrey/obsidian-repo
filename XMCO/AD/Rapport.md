@@ -23,3 +23,11 @@ La présence d'au moins quatre comptes avec l'attribut SPN activé permet à un 
 La présence de privilèges d'usurpation d'identité (SeImpersonatePrivilege) sur au moins deux serveurs permet à un attaquant d'élever ses privilèges jusqu'au niveau SYSTEM, entraînant la compromission complète des serveurs concernés. Modérée 
 
 ![[IMG-20260518150454899.png]]
+
+**R1 — Renforcer la politique de mots de passe du domaine**
+
+Il est recommandé de mettre en place une politique de mots de passe stricte au niveau du domaine Active Directory, imposant une longueur minimale de 12 caractères, l'utilisation de majuscules, minuscules, chiffres et caractères spéciaux, ainsi qu'un historique de mots de passe et un délai d'expiration régulier. L'activation du verrouillage de compte après un nombre défini de tentatives échouées permet également de limiter les attaques par force brute et par _password spraying_.
+
+**R2 — Procéder au renouvellement immédiat des mots de passe de l'ensemble des comptes utilisateurs**
+
+Les comptes identifiés comme disposant d'identifiants faibles doivent faire l'objet d'une réinitialisation immédiate de leur mot de passe. Plus largement, il est recommandé de procéder au renouvellement des mots de passe de l'ensemble des comptes du domaine afin d'éliminer tout credential potentiellement compromis, en s'assurant que les nouveaux mots de passe respectent la politique renforcée définie en R1.
