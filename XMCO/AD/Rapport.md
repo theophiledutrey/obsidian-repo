@@ -16,7 +16,7 @@ Au moins quatre défauts de contrôle d'accès sur les objets Active Directory p
 
 La présence d'au moins trois comptes avec des identifiants faibles permet à un attaquant de compromettre ces comptes, entraînant un accès non autorisé aux ressources de l'environnement Active Directory. Majeure (mettre un point positi sur le ban du comptes au bout d un certain nombre de tentative)
 
-La présence d'au moins un compte avec la pré-authentification Kerberos désactivée permet à un attaquant de récupérer un hash d'authentification sans interaction avec la cible (AS-REP Roasting), entraînant une exposition des credentials du compte à des tentatives de cassage hors ligne. Majeure
+La présence d'au moins un compte avec la pré-authentification Kerberos désactivée permet à un attaquant de récupérer un hash d'authentification sans interaction avec la cible, entraînant une exposition des credentials du compte à des tentatives de cassage hors ligne. Majeure
 
 La présence d'au moins quatre comptes avec l'attribut SPN activé permet à un attaquant de récupérer des tickets de service Kerberos chiffrés (Kerberoasting), entraînant une exposition des identifiants de service à des tentatives de cassage hors ligne. Majeure 
 
