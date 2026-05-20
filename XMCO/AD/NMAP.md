@@ -110,3 +110,6 @@ Service detection performed. Please report any incorrect results at https://nmap
  
 ```
 
+![[Pasted image 20260520175748.png]]
+
+![[Pasted image 20260520175805.png]]
