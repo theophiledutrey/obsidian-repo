@@ -111,12 +111,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Active Directory/Command.md",
+                "file": "Pentest Tools/tun2socks.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Command"
+              "title": "tun2socks"
             }
           },
           {
@@ -134,7 +134,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -198,7 +198,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -335,19 +335,22 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "b1a1712708460d9a",
+  "active": "2d8c9292e5c55034",
   "lastOpenFiles": [
-    "XMCO/AD/Pentest.md",
-    "XMCO/AD/Rapport.md",
-    "Assets/Pasted image 20260521101351.png",
+    "Active Directory/Command.md",
+    "Active Directory/Kerberos.md",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab1-starter/llm-sec-lab1/reports/validation-notes.md",
     "XMCO/AD/NMAP.md",
+    "Active Directory/Windows/Post-Exploitation .md",
+    "Active Directory/ADCS.md",
+    "XMCO/AD/Rapport.md",
+    "XMCO/AD/Pentest.md",
+    "Assets/Pasted image 20260521101351.png",
     "Assets/Pasted image 20260520175805.png",
     "Assets/Pasted image 20260520175748.png",
     "Assets/Pasted image 20260520175742.png",
     "XMCO/AD/Machine.md",
     "XMCO/AD/Set up.md",
-    "Active Directory/Command.md",
-    "Active Directory/ADCS.md",
     "Active Directory/ACL/AllowedToDelegate.md",
     "Assets/XMCO/AD/Rapport",
     "Assets/XMCO/AD/Rapport/IMG-20260518150454899.png",
@@ -355,9 +358,7 @@
     "conflict-files-obsidian-git.md",
     "XMCO/AD/Owned.md",
     "Pentest Tools/tun2socks.md",
-    "Active Directory/Windows/Post-Exploitation .md",
     "Active Directory/ACL/GenericAll.md",
-    "Active Directory/Kerberos.md",
     "Assets/Pasted image 20260513152547.png",
     "Assets/Pasted image 20260513152536.png",
     "Assets/Pasted image 20260513152523.png",
