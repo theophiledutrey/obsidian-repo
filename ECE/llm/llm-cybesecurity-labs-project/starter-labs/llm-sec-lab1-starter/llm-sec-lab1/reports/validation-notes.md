@@ -34,7 +34,6 @@
 - Verified both notebooks with `nbclient`; the live run regenerates `reports/baseline.json` using the active `.env`.
 
 ## Environment + Ops
-- Virtualenv `.venv` contains runtime deps plus notebook stack (`nbformat`, `nbclient`, `ipykernel`).
 - `.env` lists the active Gemini key and optional model variants; keys remain git-ignored.
 - Reports remain ignored (`reports/*.json`) to avoid committing API outputs.
 

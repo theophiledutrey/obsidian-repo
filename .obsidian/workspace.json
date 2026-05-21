@@ -97,12 +97,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "XMCO/AD/Pentest.md",
+                "file": "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab1-starter/llm-sec-lab1/reports/validation-notes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Pentest"
+              "title": "validation-notes"
             }
           },
           {
@@ -176,7 +176,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "find",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -198,7 +198,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -337,8 +337,8 @@
   },
   "active": "b1a1712708460d9a",
   "lastOpenFiles": [
-    "XMCO/AD/Rapport.md",
     "XMCO/AD/Pentest.md",
+    "XMCO/AD/Rapport.md",
     "Assets/Pasted image 20260521101351.png",
     "XMCO/AD/NMAP.md",
     "Assets/Pasted image 20260520175805.png",
