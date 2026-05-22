@@ -1,18 +1,5 @@
 [
 
-  
-![black friday text](https://pentesterlab.com/svgs/black_friday_text.svg)
-
-
-
-](https://pentesterlab.com/pro)[It's that time again! Check out our best deals and go PRO today **>>**](https://pentesterlab.com/pro)
-
-[![ptlab logo](https://assets.pentesterlab.com/svgs/ptlab_logo_light.svg)](https://pentesterlab.com/)
-
-[Home](https://pentesterlab.com/)[Go Pro](https://pentesterlab.com/pro)[Training](https://pentesterlab.com/live-training/)[Exercises](https://pentesterlab.com/exercises)[Blog](https://pentesterlab.com/blog/)[Bootcamp](https://pentesterlab.com/bootcamp)[AppSecSchool](https://pentesterlab.com/appsecschool)
-
-[Login](https://pentesterlab.com/users/login)|[Sign up](https://pentesterlab.com/users/register)
-
 # The Ultimate Guide to JWT Vulnerabilities and Attacks (with Exploitation Examples)
 
 ###### Published: **05 May 2025**

@@ -86,7 +86,9 @@
     "//Active Directory/Active Directory/privesc",
     "//Active Directory/Active Directory/ACL",
     "//Active Directory/Active Directory/Windows",
-    "//Pentest Tools"
+    "//Pentest Tools",
+    "//Linux",
+    "//Web"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
