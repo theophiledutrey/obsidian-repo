@@ -8,133 +8,45 @@
         "type": "tabs",
         "children": [
           {
-            "id": "2f67ef7cdad8fe9e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Active Directory/ACL/GenericAll.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "GenericAll"
-            }
-          },
-          {
-            "id": "6e3677772eb5b980",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "XMCO/AD/Machine.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Machine"
-            }
-          },
-          {
-            "id": "cab707a0880f6150",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Active Directory/Windows/Post-Exploitation .md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Post-Exploitation"
-            }
-          },
-          {
-            "id": "a8d0d7fd88abc1b4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "XMCO/AD/NMAP.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "NMAP"
-            }
-          },
-          {
-            "id": "4f1fb808fa988434",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Web/JWT.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "JWT"
-            }
-          },
-          {
-            "id": "0d8531e45c15dc6e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "XMCO/AD/Rapport.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Rapport"
-            }
-          },
-          {
-            "id": "b1a1712708460d9a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab1-starter/llm-sec-lab1/reports/validation-notes.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "validation-notes"
-            }
-          },
-          {
-            "id": "2d8c9292e5c55034",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "XMCO/AD/Set up.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Set up"
-            }
-          },
-          {
             "id": "26760f317ab35541",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "XMCO/AD/NMAP.md",
+                "file": "Pentest Tools/tun2socks.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "NMAP"
+              "title": "tun2socks"
+            }
+          },
+          {
+            "id": "14932736f2f0b6f3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "XMCO/AD/Pentest.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Pentest"
+            }
+          },
+          {
+            "id": "564ae132c2919424",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nouvel onglet"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -335,20 +247,24 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "4f1fb808fa988434",
+  "active": "564ae132c2919424",
   "lastOpenFiles": [
-    "Active Directory/ADCS.md",
+    "XMCO/AD/Pentest.md",
+    "Pentest Tools/tun2socks.md",
+    "Write up/Hack The Box/Boxe/Season 9/AirTouch.md",
+    "XMCO/AD/Set up.md",
+    "Pentest Tools/Link.md",
+    "Linux/Sans titre.md",
     "XMCO/AD/NMAP.md",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab1-starter/llm-sec-lab1/reports/validation-notes.md",
+    "XMCO/AD/Rapport.md",
+    "Web/JWT.md",
+    "Active Directory/ADCS.md",
     "Active Directory/Windows/Post-Exploitation .md",
     "Linux/Command.md",
     "Active Directory/Command.md",
-    "XMCO/AD/Set up.md",
     "XMCO/AD/Owned.md",
-    "Pentest Tools/tun2socks.md",
     "Active Directory/Kerberos.md",
-    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab1-starter/llm-sec-lab1/reports/validation-notes.md",
-    "XMCO/AD/Rapport.md",
-    "XMCO/AD/Pentest.md",
     "Assets/Pasted image 20260521101351.png",
     "Assets/Pasted image 20260520175805.png",
     "Assets/Pasted image 20260520175748.png",
@@ -379,10 +295,6 @@
     "Assets/Active Directory/Edges",
     "Active Directory/ACL",
     "Assets/XMCO/AD/Owned",
-    "Pentest Tools/Ligolo.md",
-    "Write up/Hack The Box/Boxe/Season 9/NanoCorp.md",
-    "Write up/Hack The Box/Boxe/Season 9/AirTouch.md",
-    "Linux/Exegol.md",
     "Web/Untitled.canvas",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
