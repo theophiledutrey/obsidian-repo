@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "f8175e6d4a7045fb",
+        "id": "292ea12038f0e064",
         "type": "tabs",
         "children": [
           {
-            "id": "720a5c592bf50516",
+            "id": "e64f79d0721a20ae",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Active Directory/Command.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nouvel onglet"
+              "title": "Command"
             }
           }
         ]
@@ -71,7 +75,7 @@
             }
           },
           {
-            "id": "b5e985e407cbd269",
+            "id": "16ff3cc256d9bcef",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -85,7 +89,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 641.5
   },
   "right": {
     "id": "a829c023d1166065",
@@ -101,6 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Active Directory/ACL/GenericAll.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +115,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Rétroliens"
+              "title": "Rétrolien pour GenericAll"
             }
           },
           {
@@ -142,6 +147,21 @@
             }
           },
           {
+            "id": "3a44381ba7dcea6a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Active Directory/ACL/GenericAll.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Plan de GenericAll"
+            }
+          },
+          {
             "id": "51f7994d73af30e8",
             "type": "leaf",
             "state": {
@@ -156,20 +176,6 @@
             }
           },
           {
-            "id": "3a44381ba7dcea6a",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "Plan"
-            }
-          },
-          {
             "id": "75abf64f93f14be7",
             "type": "leaf",
             "state": {
@@ -178,13 +184,39 @@
               "icon": "calendar-with-checkmark",
               "title": "Calendar"
             }
+          },
+          {
+            "id": "247e1ceb6fcca769",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 6
+      },
+      {
+        "id": "05a9754ede901df1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "720a5c592bf50516",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Vue graphique"
+            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 688.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -203,8 +235,16 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "720a5c592bf50516",
+  "active": "e64f79d0721a20ae",
   "lastOpenFiles": [
+    "Active Directory/ACL/AllowedToDelegate.md",
+    "XMCO/AD/Machine.md",
+    "Active Directory/ACL/GenericAll.md",
+    "Active Directory/Windows/Privesc.md",
+    "Active Directory/Windows/Post-Exploitation .md",
+    "XMCO/AD/Owned.md",
+    "XMCO/AD/Pentest.md",
+    "Active Directory/Kerberos.md",
     "Tags",
     "pull.sh",
     "XMCO/Intrusif/Step2/Step2.md",
@@ -227,20 +267,12 @@
     "XMCO/Conf/Conf.md",
     "XMCO/AD/Set up.md",
     "XMCO/AD/Rapport.md",
-    "XMCO/AD/Pentest.md",
-    "XMCO/AD/Owned.md",
-    "XMCO/AD/NMAP.md",
-    "XMCO/AD/Machine.md",
-    "XMCO/AD/AD.md",
-    "XMCO/XMSHOP.md",
-    "XMCO/XMCO.md",
     "XMCO/Mobile",
     "XMCO/Intrusif",
     "XMCO/Conf",
     "XMCO/AD",
     "XMCO",
     "Write up/Hack The Box/Boxe/Season 9",
-    "Write up/Hack The Box/Boxe/Season 10",
     "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab1-starter/llm-sec-lab1/docs/images/redarena-home.png",
     "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab1-starter/llm-sec-lab1/docs/images/gandalf-agent-breaker.png",
     "Assets/screenshot_88.png",
