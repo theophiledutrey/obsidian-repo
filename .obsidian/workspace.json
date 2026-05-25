@@ -1,28 +1,42 @@
 {
   "main": {
-    "id": "1f4f886df6a57fa6",
+    "id": "ac05e4538ce6c5a4",
     "type": "split",
     "children": [
       {
-        "id": "292ea12038f0e064",
+        "id": "941e35087c2f58fb",
         "type": "tabs",
         "children": [
           {
-            "id": "e64f79d0721a20ae",
+            "id": "26760f317ab35541",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Write up/Hack The Box/Boxe/Season 10/Logging.md",
+                "file": "Pentest Tools/tun2socks.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Logging"
+              "title": "tun2socks"
             }
           },
           {
-            "id": "f98cae883506f0ca",
+            "id": "14932736f2f0b6f3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "XMCO/AD/Pentest.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Pentest"
+            }
+          },
+          {
+            "id": "564ae132c2919424",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -34,6 +48,20 @@
               "icon": "lucide-file",
               "title": "Command"
             }
+          },
+          {
+            "id": "868e30ae88cd081c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "XMCO/AD/Owned.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Owned"
+            }
           }
         ],
         "currentTab": 1
@@ -42,15 +70,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "fdaf80055a3e10d7",
+    "id": "e6ffffcaf6ea3f71",
     "type": "split",
     "children": [
       {
-        "id": "a80a181ee1aa498e",
+        "id": "fcb597aa82170664",
         "type": "tabs",
         "children": [
           {
-            "id": "3f092faf5119fc82",
+            "id": "e43ade40ea0bfc9b",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -59,16 +87,26 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Explorateur de fichiers"
+              "title": "Files"
             }
           },
           {
-            "id": "28182b2a37f2c160",
+            "id": "67468257131ad139",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          },
+          {
+            "id": "34c3eab5039f8088",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tmux",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -80,17 +118,7 @@
             }
           },
           {
-            "id": "f8f94f53ec3e3c28",
-            "type": "leaf",
-            "state": {
-              "type": "bookmarks",
-              "state": {},
-              "icon": "lucide-bookmark",
-              "title": "Signets"
-            }
-          },
-          {
-            "id": "16ff3cc256d9bcef",
+            "id": "a22b7a6eb2ee67b8",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -104,23 +132,44 @@
       }
     ],
     "direction": "horizontal",
-    "width": 641.5
+    "width": 364.5
   },
   "right": {
-    "id": "a829c023d1166065",
+    "id": "e4e6a1b5b121b38c",
     "type": "split",
     "children": [
       {
-        "id": "3b4778806805819d",
+        "id": "9a3a8fb4c104de22",
         "type": "tabs",
+        "dimension": 38.07251908396946,
         "children": [
           {
-            "id": "5dbb2553182a2be9",
+            "id": "b2df2f989f0d244a",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          },
+          {
+            "id": "8f01d0e0fde1edd5",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "calendar"
+            }
+          },
+          {
+            "id": "33ee360992d886d3",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Active Directory/ACL/GenericAll.md",
+                "file": "XMCO/Intrusif/Step2/Pentest.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -130,11 +179,11 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Rétrolien pour GenericAll"
+              "title": "Rétrolien pour Pentest"
             }
           },
           {
-            "id": "2eabb4a40f895d0d",
+            "id": "6e637d2d734a85fa",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
@@ -143,11 +192,11 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Liens sortants"
+              "title": "Outgoing links"
             }
           },
           {
-            "id": "da5ffa73d75d84fd",
+            "id": "4a7da6dbe8f30743",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -158,67 +207,33 @@
                 "searchQuery": ""
               },
               "icon": "lucide-tags",
-              "title": "Mots-clés"
+              "title": "Tags"
             }
           },
           {
-            "id": "3a44381ba7dcea6a",
+            "id": "6e4486050b197c36",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Active Directory/ACL/GenericAll.md",
+                "file": "CTF/Hack The Box/Write Up/Previous Hack The Box.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Plan de GenericAll"
-            }
-          },
-          {
-            "id": "51f7994d73af30e8",
-            "type": "leaf",
-            "state": {
-              "type": "all-properties",
-              "state": {
-                "sortOrder": "frequency",
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-ghost",
-              "title": "all-properties"
-            }
-          },
-          {
-            "id": "75abf64f93f14be7",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
-            }
-          },
-          {
-            "id": "247e1ceb6fcca769",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "title": "Outline of Previous Hack The Box"
             }
           }
-        ],
-        "currentTab": 6
+        ]
       },
       {
-        "id": "05a9754ede901df1",
+        "id": "eb0479b9bf7b888d",
         "type": "tabs",
+        "dimension": 61.92748091603053,
         "children": [
           {
-            "id": "720a5c592bf50516",
+            "id": "e2aa3986dab62d71",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -231,7 +246,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 688.5
+    "width": 399.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -250,52 +265,63 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "f98cae883506f0ca",
+  "active": "14932736f2f0b6f3",
   "lastOpenFiles": [
     "Write up/Hack The Box/Boxe/Season 10/Logging.md",
-    "Active Directory/Command.md",
-    "Assets/Write up/Hack The Box/Boxe/Season 10/Logging",
     "Assets/Write up/Hack The Box/Boxe/Season 10/Logging/IMG-20260525004149572.png",
-    "XMCO/AD/NMAP.md",
-    "Active Directory/ACL/AllowedToDelegate.md",
-    "XMCO/AD/Machine.md",
-    "Active Directory/ACL/GenericAll.md",
-    "Active Directory/Windows/Privesc.md",
-    "Active Directory/Windows/Post-Exploitation .md",
+    "Assets/Write up/Hack The Box/Boxe/Season 10/Logging",
     "XMCO/AD/Owned.md",
     "XMCO/AD/Pentest.md",
+    "Active Directory/Command.md",
+    "Pentest Tools/tun2socks.md",
+    "Linux/Command.md",
+    "Write up/Hack The Box/Boxe/Season 9/AirTouch.md",
+    "XMCO/AD/Set up.md",
+    "Pentest Tools/Link.md",
+    "Linux/Sans titre.md",
+    "XMCO/AD/NMAP.md",
+    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab1-starter/llm-sec-lab1/reports/validation-notes.md",
+    "XMCO/AD/Rapport.md",
+    "Web/JWT.md",
+    "Active Directory/ADCS.md",
+    "Active Directory/Windows/Post-Exploitation .md",
     "Active Directory/Kerberos.md",
-    "Tags",
-    "pull.sh",
-    "XMCO/Intrusif/Step2/Step2.md",
-    "XMCO/Intrusif/Step2/Pentest.md",
-    "XMCO/Intrusif/Step 1/Step 1.md",
-    "XMCO/Intrusif/Step 1/Analyse code src.md",
+    "Assets/Pasted image 20260521101351.png",
+    "Assets/Pasted image 20260520175805.png",
+    "Assets/Pasted image 20260520175748.png",
+    "Assets/Pasted image 20260520175742.png",
+    "XMCO/AD/Machine.md",
+    "Active Directory/ACL/AllowedToDelegate.md",
+    "Assets/XMCO/AD/Rapport",
+    "Assets/XMCO/AD/Rapport/IMG-20260518150454899.png",
+    "Active Directory/Windows/Privesc.md",
+    "conflict-files-obsidian-git.md",
+    "Active Directory/ACL/GenericAll.md",
+    "Assets/Pasted image 20260513152547.png",
+    "Assets/Pasted image 20260513152536.png",
+    "Assets/Pasted image 20260513152523.png",
+    "Assets/Pasted image 20260513152322.png",
     "XMCO/Mobile/XMDROID.md",
-    "XMCO/Mobile/Mobile.md",
-    "XMCO/Mobile/Mobile (APK).md",
-    "XMCO/Mobile/Frida.md",
-    "XMCO/Mobile/APKey HTB.md",
-    "XMCO/Intrusif/Step2",
-    "XMCO/Intrusif/Step 1",
-    "XMCO/Intrusif/Méthodologie .md",
-    "XMCO/Intrusif/Intrusif.md",
-    "XMCO/Intrusif/Commande.md",
-    "XMCO/Conf/step 3.md",
-    "XMCO/Conf/step 2.md",
-    "XMCO/Mobile",
-    "XMCO/Intrusif",
-    "XMCO/Conf",
-    "XMCO/AD",
-    "XMCO",
-    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab1-starter/llm-sec-lab1/docs/images/redarena-home.png",
-    "ECE/llm/llm-cybesecurity-labs-project/starter-labs/llm-sec-lab1-starter/llm-sec-lab1/docs/images/gandalf-agent-breaker.png",
-    "Assets/screenshot_88.png",
-    "Assets/screenshot_87.png",
-    "Assets/screenshot_86.png",
-    "Assets/screenshot_85.png",
-    "Assets/screenshot_84.png",
-    "Assets/XMCO/Tools XMCO/IMG-20260316154752023.png",
-    "Assets/XMCO/Tools XMCO/IMG-20260316154720114.png"
+    "ECE/Stage/Questions Techniques stage.md",
+    "Active Directory/Windows/Windows.md",
+    "Active Directory/Windows",
+    "Assets/Active Directory/ACL/AllowedToDelegate",
+    "Assets/Active Directory/ACL/GenericAll",
+    "Assets/Active Directory/ACL",
+    "Active Directory/ACL/ACL.md",
+    "Assets/Active Directory/Edges/GenericAll",
+    "Assets/Active Directory/Edges/Privilege Escalation",
+    "Assets/Active Directory/Edges",
+    "Active Directory/ACL",
+    "Web/Untitled.canvas",
+    "Photos/INTERACTIVE-MAP.canvas",
+    "Photos/ANNEXE.canvas",
+    "Assets/INTERACTIVE-MAP 1.canvas",
+    "Assets/INTERACTIVE-MAP 2.canvas",
+    "//Untitled 1.canvas",
+    "Untitled 1.canvas",
+    "//Untitled.canvas",
+    "Untitled.canvas",
+    "Active Directory/ADMR/INTERACTIVE-MAP.canvas"
   ]
 }
