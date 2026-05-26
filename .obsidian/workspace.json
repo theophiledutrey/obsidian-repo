@@ -118,7 +118,7 @@
             }
           },
           {
-            "id": "d8c80cb74761b372",
+            "id": "179cac4dd172ccae",
             "type": "leaf",
             "state": {
               "type": "mk-path-view",
@@ -267,6 +267,8 @@
   },
   "active": "564ae132c2919424",
   "lastOpenFiles": [
+    "XMCO/AD/Owned.md",
+    "Web/Portswigger/SQLi.md",
     "Web/Portswigger/Race Condition.md",
     "Active Directory/Command.md",
     "XMCO/Intrusif/Step2/Pentest.md",
@@ -274,7 +276,6 @@
     "Write up/Hack The Box/Boxe/Season 10/Logging.md",
     "Assets/Write up/Hack The Box/Boxe/Season 10/Logging/IMG-20260525004149572.png",
     "Assets/Write up/Hack The Box/Boxe/Season 10/Logging",
-    "XMCO/AD/Owned.md",
     "Pentest Tools/tun2socks.md",
     "Linux/Command.md",
     "Write up/Hack The Box/Boxe/Season 9/AirTouch.md",
@@ -304,7 +305,6 @@
     "Assets/Pasted image 20260513152523.png",
     "Assets/Pasted image 20260513152322.png",
     "XMCO/Mobile/XMDROID.md",
-    "ECE/Stage/Questions Techniques stage.md",
     "Active Directory/Windows",
     "Assets/Active Directory/ACL/AllowedToDelegate",
     "Assets/Active Directory/ACL/GenericAll",
