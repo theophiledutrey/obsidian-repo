@@ -10,6 +10,9 @@ Pour raccourcir une liste en retirant N ligne:
 tail -n +N wordlist.txt > wordlist_resume.txt
 ```
 
+```bash
+ffuf -u https://<url>/index.php?r=FUZZ \ -w /usr/share/wordlists/dirb/common.txt \ -fc 404
+```
 
 
 
