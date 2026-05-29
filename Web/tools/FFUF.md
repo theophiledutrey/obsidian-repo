@@ -14,5 +14,5 @@ tail -n +N wordlist.txt > wordlist_resume.txt
 ffuf -u https://<url>/index.php?r=FUZZ \ -w /usr/share/wordlists/dirb/common.txt \ -fc 404
 ```
 
-
+### [CVE-2023-26750](https://www.cvedetails.com/cve/CVE-2023-26750/ "CVE-2023-26750 security vulnerability details")
 
