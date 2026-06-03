@@ -1,0 +1,28 @@
+# 10.2.62.171 ARRAKIS
+
+## SMB
+
+### FEYDRAUTHA.HARKONNEN / GAIUS.MOHIAM / yueh.wellington/leto.atreides/chani/JESSICA.ATREIDES
+![[IMG-20260603160340966.png]]
+
+# 10.2.62.169 CALADAN
+
+## SMB
+### FEYDRAUTHA.HARKONNEN / GAIUS.MOHIAM / yueh.wellington
+![[IMG-20260603160341198.png]]
+
+### leto.atreides
+![[IMG-20260603160344650.png]]
+
+
+# 10.2.62.174 GEIDIPRIME
+
+## SMB 
+
+### GAIUS.MOHIAM / yueh.wellington / leto.atreides / chani / JESSICA.ATREIDES
+
+![[IMG-20260603160345908.png]]
+
+### FEYDRAUTHA.HARKONNEN
+
+![[IMG-20260603160347663.png]]

@@ -94,7 +94,7 @@ Source: https://bloodhound.specterops.io/resources/edges/allowed-to-delegate#abu
 ![[Pasted image 20260513151644.png]]
 
 Voici un exemple où la machine GEIDIPRIME a les droits de délégation sur le DC
-![[IMG-20260512141723476.png]]
+![[IMG-20260603160412024.png]]
 
 Et la délégation est contrainte au service cifs:
 ![[Pasted image 20260513151815.png]]

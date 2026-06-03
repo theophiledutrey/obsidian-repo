@@ -1,12 +1,12 @@
 ## Accéder au share SMB 
 
-![[IMG-20260316154720114.png]]
+![[IMG-20260603160353535.png]]
 
 Aller sur "Se connecter au serveur..."
 
-![[IMG-20260316154752023.png]]
+![[IMG-20260603160353916.png]]
 
 Utiliser les creds `office`
 
-![[Pasted image 20260316154859.png]]
+![[IMG-20260603160354702.png]]
 

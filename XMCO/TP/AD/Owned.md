@@ -1,0 +1,36 @@
+## yueh.wellington:password1
+
+![[IMG-20260603160340964.png]]
+
+## FEYDRAUTHA.HARKONNEN:schrauth101
+
+![[IMG-20260603160341195.png]]
+
+## GAIUS.MOHIAM:(benegesserit4)
+
+
+![[IMG-20260603160344500.png]]
+
+## leto.atreides:00f93b8e3908027492ef01ba0a9bb5ee:C@l@d@nRul3r!
+
+![[IMG-20260603160345728.png]]
+## JESSICA.ATREIDES:@Password1234
+
+
+![[IMG-20260603160345789.png]]
+
+## CALADAN:73eb80acb95de94da77e71f05022ae7f (Computer)
+
+![[IMG-20260603160347515.png]]
+## CHANI:d1951e9de6f538032e5e5483d7111856
+
+![[IMG-20260603160348566.png]]
+
+## vladimir.harkonnen:dbb1f773ca77dc535cf8382fac852fdb
+
+![[IMG-20260512104045345.png]]
+## GEIDIPRIME$:27827f9f69108b37e5cd6df13bb279e7
+
+![[IMG-20260603160412024.png]]
+## Compte admin local GEIDIPRIME Administrator:4ef687238907fa12b4addeae4466235e
+
