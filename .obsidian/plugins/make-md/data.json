@@ -83,7 +83,12 @@
     "//Write up/Write up/Hack The Box/Write up/Hack The Box/Boxe/Write up/Hack The Box/Boxe/Season 9",
     "//ECE",
     "//Pentest Tools",
-    "//XMCO"
+    "//XMCO",
+    "//XMCO/XMCO/TP/XMCO/TP/Intrusif",
+    "//XMCO/XMCO/TP/XMCO/TP/AD",
+    "//Active Directory",
+    "//Active Directory/Active Directory/Windows",
+    "//ECE/ECE/Reverse"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
