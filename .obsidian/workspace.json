@@ -27,16 +27,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "XMCO/TP/Kub/LFIAAS.md",
+                "file": "XMCO/TP/Kub/RCEAAS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "LFIAAS"
+              "title": "RCEAAS"
+            }
+          },
+          {
+            "id": "bbeff58791a6a4ca",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Write up/Hack The Box/Boxe/Season 9/GiveBack.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "GiveBack"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -237,10 +251,12 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "4c0ae3d848c86bbd",
+  "active": "bbeff58791a6a4ca",
   "lastOpenFiles": [
-    "XMCO/TP/Kub/Nmap.md",
+    "XMCO/TP/Kub/RCEAAS.md",
     "XMCO/TP/Kub/LFIAAS.md",
+    "XMCO/TP/Kub/Flag.md",
+    "XMCO/TP/Kub/Nmap.md",
     "Assets/XMCO/TP/Kub/LFIAAS",
     "Assets/XMCO/TP/Kub",
     "Assets/XMCO/TP/Kub/LFIAAS/IMG-20260629145303423.png",
@@ -268,7 +284,6 @@
     "Active Directory/Command.md",
     "XMCO/TP/AD/Set up.md",
     "XMCO/TP/AD/Rapport.md",
-    "XMCO/TP/AD/Pentest.md",
     "Assets/XMCO/Pentest echo",
     "Assets/XMCO/Tools XMCO",
     "Assets/XMCO/TP/Pentest echo",
