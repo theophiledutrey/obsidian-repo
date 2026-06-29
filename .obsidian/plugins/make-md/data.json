@@ -85,7 +85,8 @@
     "//XMCO",
     "//Active Directory/Active Directory/Windows",
     "//XMCO/XMCO/TP",
-    "//XMCO/XMCO/TP/XMCO/TP/Kub"
+    "//XMCO/XMCO/TP/XMCO/TP/Kub",
+    "//Pentest Tools"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",

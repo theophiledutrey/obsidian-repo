@@ -65,10 +65,7 @@ roles.rbac.authorization.k8s.io                 []                              
 ```
 
 ```bash
-kubectl --token="$TOKEN" \                                                                         16:05 29/06/2026
-  --server=https://13.37.251.78:6443 \
-  --certificate-authority="$CACERT" \
-  get rolebindings -n $NAMESPACE
+kubectl --token="$TOKEN" --server=https://13.37.251.78:6443 --certificate-authority="$CACERT" get rolebindings -n $NAMESPACE
 NAME                ROLE                AGE
 admin-ns-services   ClusterRole/admin   6h3m
 ```

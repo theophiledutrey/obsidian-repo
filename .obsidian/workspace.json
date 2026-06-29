@@ -50,7 +50,7 @@
             }
           },
           {
-            "id": "e9f2c92d7c1ef023",
+            "id": "11cfb0e77ac7eb9d",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -61,6 +61,20 @@
               },
               "icon": "lucide-file",
               "title": "LFIAAS"
+            }
+          },
+          {
+            "id": "e9f2c92d7c1ef023",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Pentest Tools/kubectl.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "kubectl"
             }
           },
           {
@@ -78,7 +92,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -279,13 +293,14 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "8fae723d13a3c0fa",
+  "active": "4c0ae3d848c86bbd",
   "lastOpenFiles": [
-    "Write up/Hack The Box/Boxe/Season 9/GiveBack.md",
     "XMCO/TP/Kub/LFIAAS.md",
+    "Pentest Tools/kubectl.md",
     "XMCO/TP/Kub/RCEAAS.md",
-    "XMCO/TP/Kub/Nmap.md",
     "XMCO/TP/Kub/Flag.md",
+    "Write up/Hack The Box/Boxe/Season 9/GiveBack.md",
+    "XMCO/TP/Kub/Nmap.md",
     "Assets/XMCO/TP/Kub/LFIAAS",
     "Assets/XMCO/TP/Kub",
     "Assets/XMCO/TP/Kub/LFIAAS/IMG-20260629145303423.png",
@@ -311,7 +326,6 @@
     "Active Directory/ADCS.md",
     "Active Directory/Command.md",
     "XMCO/TP/AD/Set up.md",
-    "XMCO/TP/AD/Rapport.md",
     "Assets/XMCO/Pentest echo",
     "Assets/XMCO/Tools XMCO",
     "Assets/XMCO/TP/Pentest echo",
