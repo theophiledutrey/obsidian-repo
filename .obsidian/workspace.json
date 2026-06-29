@@ -11,14 +11,12 @@
             "id": "26760f317ab35541",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "mk-space",
               "state": {
-                "file": "XMCO/Tools XMCO.md",
-                "mode": "source",
-                "source": false
+                "path": "XMCO/TP/Kub"
               },
               "icon": "lucide-file",
-              "title": "Tools XMCO"
+              "title": "Kub"
             }
           }
         ]
@@ -222,12 +220,16 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "e2aa3986dab62d71",
+  "active": "cc9f578ae6658236",
   "lastOpenFiles": [
-    "XMCO/Tools XMCO.md",
     "XMCO/Commande Pentest.md",
+    "XMCO/Tools XMCO.md",
     "XMCO/Pentest echo.md",
     "XMCO/Shell tips.md",
+    "Pentest Tools/Nmap.md",
+    "XMCO/TP/Kub/Kub.md",
+    "XMCO/TP/Kub",
+    "XMCO/TP/TP.md",
     "Assets/Shell TIPS _ Yoda.pdf",
     "ECE/Reverse/Reverse.md",
     "Active Directory/ACL/AllowedToDelegate.md",
@@ -248,8 +250,6 @@
     "XMCO/TP/Intrusif/Commande.md",
     "XMCO/TP/Intrusif/Méthodologie .md",
     "XMCO/TP/Mobile/Mobile.md",
-    "ECE/Stage/Stage.md",
-    "ECE/Stage/CTF XMCO.md",
     "Assets/XMCO/Pentest echo",
     "Assets/XMCO/Tools XMCO",
     "Assets/XMCO/TP/Pentest echo",
@@ -258,7 +258,6 @@
     "Assets/XMCO/TP/AD/Owned",
     "Assets/XMCO/TP/AD/Rapport",
     "Assets/XMCO/TP/AD/Pentest",
-    "Assets/XMCO/TP/AD/NMAP",
     "Assets/Write up/Hack The Box/Boxe/Season 10/Logging/IMG-20260525004149572.png",
     "Assets/XMCO/TP/AD/Pentest/IMG-20260603160413751.png",
     "Assets/XMCO/TP/AD/NMAP/IMG-20260603160341188.png",
