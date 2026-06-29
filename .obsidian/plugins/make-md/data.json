@@ -84,8 +84,7 @@
     "//ECE",
     "//XMCO",
     "//Active Directory/Active Directory/Windows",
-    "//XMCO/XMCO/TP",
-    "//XMCO/XMCO/TP/XMCO/TP/Kub"
+    "//XMCO/XMCO/TP"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
