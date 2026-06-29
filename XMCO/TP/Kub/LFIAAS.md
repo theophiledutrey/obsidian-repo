@@ -50,5 +50,30 @@ Ubwtex5oN1jdQwIhAJF/5k2YiUxqTgZvzHG6FhntDAaeZG/VK6phIAdC3AOV
 -----END CERTIFICATE-----
 ```
 
+```
+# Extract the token
+TOKEN=$(cat /var/run/secrets/kubernetes.io/serviceaccount/token)
 
+# Extract namespace and CA
+NAMESPACE=$(cat /var/run/secrets/kubernetes.io/serviceaccount/namespace)
+CACERT=/var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+```
+
+```bash
+curl -s --cacert "$CACERT" \                                                                       15:26 29/06/2026
+  -H "Authorization: Bearer $TOKEN" \
+  "https://13.37.251.78:6443/api/v1/namespaces/$NAMESPACE/secrets" | jq
+{
+  "kind": "Status",
+  "apiVersion": "v1",
+  "metadata": {},
+  "status": "Failure",
+  "message": "secrets is forbidden: User \"system:serviceaccount:services:lfiaas\" cannot list resource \"secrets\" in API group \"\" in the namespace \"services\"",
+  "reason": "Forbidden",
+  "details": {
+    "kind": "secrets"
+  },
+  "code": 403
+}
+```
 
