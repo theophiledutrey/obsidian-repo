@@ -129,3 +129,26 @@ Error from server (Forbidden): clusterrolebindings.rbac.authorization.k8s.io is 
 
 ```
 
+```
+kubectl get ingress --all-namespaces \                                                                 16:49 29/06/2026
+  --server=https://13.37.251.78:6443 \
+  --token="$TOKEN" \
+  --certificate-authority="$CACERT"
+NAMESPACE   NAME                           CLASS    HOSTS                            ADDRESS                            PORTS     AGE
+devops      gitlabkub-kas                  nginx    kas.gitlab.xmlab                 10.2.42.86,10.2.42.91,10.2.42.92   80, 443   6h48m
+devops      gitlabkub-minio                nginx    minio.gitlab.xmlab               10.2.42.86,10.2.42.91,10.2.42.92   80, 443   6h48m
+devops      gitlabkub-registry             nginx    registry.gitlab.xmlab            10.2.42.86,10.2.42.91,10.2.42.92   80, 443   6h48m
+devops      gitlabkub-webservice-default   nginx    gitlab.gitlab.xmlab              10.2.42.86,10.2.42.91,10.2.42.92   80, 443   6h48m
+devops      harborkub-ingress              <none>   registry.xmlab                   10.2.42.86,10.2.42.91,10.2.42.92   80, 443   6h49m
+secret      back-flagaas-ingress           <none>   flagaas-back.xmlab               10.2.42.86,10.2.42.91,10.2.42.92   80, 443   6h17m
+secret      front-ingress                  <none>   flagaas.xmlab                    10.2.42.86,10.2.42.91,10.2.42.92   80, 443   6h17m
+secret      runjob-back-ingress            <none>   runjob-back.xmlab                10.2.42.86,10.2.42.91,10.2.42.92   80, 443   6h17m
+secret      runjob-front-ingress           <none>   runjob.xmlab                     10.2.42.86,10.2.42.91,10.2.42.92   80, 443   6h17m
+secret      secret-flag                    <none>   secret-flag-getme-please.xmlab   10.2.42.86,10.2.42.91,10.2.42.92   80, 443   6h14m
+services    back-ingress                   <none>   lfiaas-back.xmlab                10.2.42.86,10.2.42.91,10.2.42.92   80, 443   6h17m
+services    back-ingress-rceaas            <none>   rceaas-back.xmlab                10.2.42.86,10.2.42.91,10.2.42.92   80, 443   6h17m
+services    front-ingress                  <none>   lfiaas.xmlab                     10.2.42.86,10.2.42.91,10.2.42.92   80, 443   6h17m
+services    front-ingress-rceaas           <none>   rceaas.xmlab                     10.2.42.86,10.2.42.91,10.2.42.92   80, 443   6h17m
+
+```
+
