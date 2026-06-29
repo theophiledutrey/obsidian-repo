@@ -77,3 +77,55 @@ curl -s --cacert "$CACERT" \                                                    
 }
 ```
 
+```bash
+ kubectl --token="$TOKEN" \                                                                         16:08 29/06/2026
+  --server=https://13.37.251.78:6443 \
+  --certificate-authority="$CACERT" \
+  auth can-i --list
+Resources                                       Non-Resource URLs                      Resource Names   Verbs
+selfsubjectreviews.authentication.k8s.io        []                                     []               [create]
+selfsubjectaccessreviews.authorization.k8s.io   []                                     []               [create]
+selfsubjectrulesreviews.authorization.k8s.io    []                                     []               [create]
+namespaces                                      []                                     []               [get list watch]
+pods/log                                        []                                     []               [get list watch]
+pods                                            []                                     []               [get list watch]
+ingresses.networking.k8s.io                     []                                     []               [get list watch]
+                                                [/.well-known/openid-configuration/]   []               [get]
+                                                [/.well-known/openid-configuration]    []               [get]
+                                                [/api/*]                               []               [get]
+                                                [/api]                                 []               [get]
+                                                [/apis/*]                              []               [get]
+                                                [/apis]                                []               [get]
+                                                [/healthz]                             []               [get]
+                                                [/healthz]                             []               [get]
+                                                [/livez]                               []               [get]
+                                                [/livez]                               []               [get]
+                                                [/openapi/*]                           []               [get]
+                                                [/openapi]                             []               [get]
+                                                [/openid/v1/jwks/]                     []               [get]
+                                                [/openid/v1/jwks]                      []               [get]
+                                                [/readyz]                              []               [get]
+                                                [/readyz]                              []               [get]
+                                                [/version/]                            []               [get]
+                                                [/version/]                            []               [get]
+                                                [/version]                             []               [get]
+                                                [/version]                             []               [get]
+```
+
+```bash
+kubectl --token="$TOKEN" \                                                                             16:08 29/06/2026
+  --server=https://13.37.251.78:6443 \
+  --certificate-authority="$CACERT" \
+  get rolebindings -n $NAMESPACE
+Error from server (Forbidden): rolebindings.rbac.authorization.k8s.io is forbidden: User "system:serviceaccount:services:lfiaas" cannot list resource "rolebindings" in API group "rbac.authorization.k8s.io" in the namespace "services"
+```
+
+```bash
+kubectl --token="$TOKEN" \                                                                             16:09 29/06/2026
+  --server=https://13.37.251.78:6443 \
+  --certificate-authority="$CACERT" \
+  get clusterrolebindings
+Error from server (Forbidden): clusterrolebindings.rbac.authorization.k8s.io is forbidden: User "system:serviceaccount:services:lfiaas" cannot list resource "clusterrolebindings" in API group "rbac.authorization.k8s.io" at the cluster scope
+
+```
+
