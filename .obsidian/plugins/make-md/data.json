@@ -87,8 +87,7 @@
     "//XMCO/XMCO/TP/XMCO/TP/Intrusif",
     "//XMCO/XMCO/TP/XMCO/TP/AD",
     "//Active Directory",
-    "//Active Directory/Active Directory/Windows",
-    "//ECE/ECE/Reverse"
+    "//Active Directory/Active Directory/Windows"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
