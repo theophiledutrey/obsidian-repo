@@ -170,10 +170,8 @@ secret            Active   7h24m
 services          Active   7h24m
 
 ~/Documents/XMCO/Labs/Kub/lfiaas
-❯ kubectl get pods --all-namespaces \                                                                                    17:19 29/06/2026
-  --server=https://13.37.251.78:6443 \
-  --token="$TOKEN" \
-  --certificate-authority="$CACERT"
+❯ kubectl get pods --all-namespaces 
+   
 NAMESPACE      NAME                                                      READY   STATUS             RESTARTS        AGE
 cert-manager   certmgrkub-cert-manager-5c66767cc7-bcz2d                  1/1     Running            0               7h23m
 cert-manager   certmgrkub-cert-manager-cainjector-79765856b7-ncsxq       1/1     Running            0               7h23m
