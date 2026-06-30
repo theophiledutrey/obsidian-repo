@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "XMCO/TP/Kub/Configmap.md",
+                "file": "XMCO/TP/Kub/GitLab.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Configmap"
+              "title": "GitLab"
             }
           },
           {
@@ -281,11 +281,12 @@
   },
   "active": "de2577154746265a",
   "lastOpenFiles": [
-    "Kubernetes /Fonctionnement.md",
     "XMCO/TP/Kub/Configmap.md",
+    "XMCO/TP/Kub/GitLab.md",
+    "Kubernetes /Fonctionnement.md",
+    "XMCO/TP/Kub/Flag.md",
     "Pentest Tools/kubectl.md",
     "XMCO/TP/Kub/LFIAAS.md",
-    "XMCO/TP/Kub/Flag.md",
     "Assets/Kubernetes /Fonctionnement/IMG-20260630114323532.png",
     "Assets/Kubernetes /Fonctionnement",
     "Assets/Kubernetes ",
@@ -316,7 +317,6 @@
     "Active Directory/ACL/AllowedToDelegate.md",
     "Active Directory/ACL/GenericAll.md",
     "Active Directory/Windows/Post-Exploitation .md",
-    "Active Directory/Windows/Privesc.md",
     "Assets/XMCO/Pentest echo",
     "Assets/XMCO/Tools XMCO",
     "Assets/XMCO/TP/Pentest echo",
