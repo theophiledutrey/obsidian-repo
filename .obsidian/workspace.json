@@ -8,34 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "26760f317ab35541",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "XMCO/TP/Kub/Nmap.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Nmap"
-            }
-          },
-          {
-            "id": "bbeff58791a6a4ca",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Write up/Hack The Box/Boxe/Season 9/GiveBack.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "GiveBack"
-            }
-          },
-          {
             "id": "4c0ae3d848c86bbd",
             "type": "leaf",
             "state": {
@@ -69,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pentest Tools/kubectl.md",
+                "file": "Kubernetes /Fonctionnement.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "kubectl"
+              "title": "Fonctionnement"
             }
           },
           {
@@ -90,9 +62,23 @@
               "icon": "lucide-file",
               "title": "Flag"
             }
+          },
+          {
+            "id": "de2577154746265a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Pentest Tools/kubectl.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "kubectl"
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -296,9 +282,18 @@
   "active": "e9f2c92d7c1ef023",
   "lastOpenFiles": [
     "XMCO/TP/Kub/LFIAAS.md",
-    "XMCO/TP/Kub/RCEAAS.md",
+    "Kubernetes /Fonctionnement.md",
     "Pentest Tools/kubectl.md",
     "XMCO/TP/Kub/Flag.md",
+    "Assets/Kubernetes /Fonctionnement/IMG-20260630114323532.png",
+    "Assets/Kubernetes /Fonctionnement",
+    "Assets/Kubernetes ",
+    "Assets/Kubernetes /Fonctionnement/IMG-20260630112741656.png",
+    "Kubernetes /Kubernetes.md",
+    "Kubernetes ",
+    "Active Directory/Active Directory.md",
+    "Active Directory/Command.md",
+    "XMCO/TP/Kub/RCEAAS.md",
     "Write up/Hack The Box/Boxe/Season 9/GiveBack.md",
     "XMCO/TP/Kub/Nmap.md",
     "Assets/XMCO/TP/Kub/LFIAAS",
@@ -321,17 +316,9 @@
     "Active Directory/ACL/GenericAll.md",
     "Active Directory/Windows/Post-Exploitation .md",
     "Active Directory/Windows/Privesc.md",
-    "Active Directory/Windows/Windows.md",
-    "Active Directory/Kerberos.md",
-    "Active Directory/ADCS.md",
-    "Active Directory/Command.md",
-    "XMCO/TP/AD/Set up.md",
     "Assets/XMCO/Pentest echo",
     "Assets/XMCO/Tools XMCO",
     "Assets/XMCO/TP/Pentest echo",
-    "Assets/XMCO/TP/Tools XMCO",
-    "Assets/XMCO/TP/AD/Machine",
-    "Assets/XMCO/TP/AD/Owned",
     "Assets/Write up/Hack The Box/Boxe/Season 10/Logging/IMG-20260525004149572.png",
     "Assets/XMCO/TP/AD/Pentest/IMG-20260603160413751.png",
     "Assets/XMCO/TP/AD/NMAP/IMG-20260603160341188.png",
@@ -339,8 +326,6 @@
     "Assets/Pasted image 20260520175742.png",
     "Assets/XMCO/TP/AD/Rapport/IMG-20260603160340963.png",
     "Assets/XMCO/TP/AD/Pentest/IMG-20260603160413408.png",
-    "Assets/XMCO/TP/AD/Pentest/IMG-20260603160413045.png",
-    "Assets/XMCO/TP/AD/Pentest/IMG-20260603160412540.png",
     "Web/Untitled.canvas",
     "Photos/INTERACTIVE-MAP.canvas",
     "Photos/ANNEXE.canvas",
