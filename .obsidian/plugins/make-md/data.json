@@ -85,7 +85,8 @@
     "//XMCO/XMCO/TP",
     "//Pentest Tools",
     "//Active Directory",
-    "//Kubernetes "
+    "//Kubernetes ",
+    "//XMCO/XMCO/TP/XMCO/TP/Kub"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
