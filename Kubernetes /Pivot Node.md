@@ -171,6 +171,3 @@ flowchart TD
 
 
 
-kubectl auth can-i --list --token=$(cat /var/lib/kubelet/pods/76381170-a534-461f-9a52-e62520a6f0e7/volumes/kubernetes.io~projected/kube-api-access-ks2r5/token) --server=https://10.43.0.1:443 --certificate-authority=/ca.crt
-
-kubectl auth can-i create secrets -n kube-system --token=$(cat /var/lib/kubelet/pods/76381170-a534-461f-9a52-e62520a6f0e7/volumes/kubernetes.io~projected/kube-api-access-ks2r5/token) --server=https://10.43.0.1:443 --certificate-authority=/ca.crt

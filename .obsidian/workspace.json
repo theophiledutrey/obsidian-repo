@@ -53,14 +53,12 @@
             "id": "de2577154746265a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "mk-space",
               "state": {
-                "file": "Pentest Tools/kubectl.md",
-                "mode": "source",
-                "source": false
+                "path": "XMCO/TP/Kub"
               },
               "icon": "lucide-file",
-              "title": "kubectl"
+              "title": "Kub"
             }
           },
           {
@@ -92,7 +90,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -293,14 +291,15 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "e9f2c92d7c1ef023",
+  "active": "f0d5c4b91485aa2e",
   "lastOpenFiles": [
+    "Kubernetes /Pivot Node.md",
+    "Kubernetes /Fonctionnement.md",
+    "XMCO/TP/Kub/LFIAAS.md",
+    "XMCO/TP/Kub/Kub.md",
     "Pentest Tools/kubectl.md",
     "XMCO/TP/Kub/Flag.md",
-    "Kubernetes /Fonctionnement.md",
-    "Kubernetes /Pivot Node.md",
     "XMCO/TP/Kub/RCEAAS.md",
-    "XMCO/TP/Kub/LFIAAS.md",
     "XMCO/TP/Kub/Configmap.md",
     "Write up/Hack The Box/Boxe/Season 9/AirTouch.md",
     "XMCO/TP/Kub/GitLab.md",
@@ -316,7 +315,6 @@
     "Assets/XMCO/TP/Kub/LFIAAS",
     "Assets/XMCO/TP/Kub",
     "Assets/XMCO/TP/Kub/LFIAAS/IMG-20260629145303423.png",
-    "XMCO/TP/Kub/Kub.md",
     "XMCO/TP/Intrusif/Step 1/Analyse code src.md",
     "Write up/Hack The Box/Boxe/Season 9/Browsed.md",
     "XMCO/Commande Pentest.md",
