@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Kubernetes /Fonctionnement.md",
+                "file": "Kubernetes /Pivot Node.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Fonctionnement"
+              "title": "Pivot Node"
             }
           },
           {
@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "XMCO/TP/Kub/GitLab.md",
+                "file": "Pentest Tools/kubectl.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GitLab"
+              "title": "kubectl"
             }
           },
           {
@@ -120,7 +120,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "base",
+                "query": "dev",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -281,28 +281,28 @@
   },
   "active": "de2577154746265a",
   "lastOpenFiles": [
-    "XMCO/TP/Kub/Configmap.md",
-    "XMCO/TP/Kub/GitLab.md",
+    "Kubernetes /Pivot Node.md",
     "Kubernetes /Fonctionnement.md",
-    "XMCO/TP/Kub/Flag.md",
+    "XMCO/TP/Kub/RCEAAS.md",
     "Pentest Tools/kubectl.md",
     "XMCO/TP/Kub/LFIAAS.md",
+    "XMCO/TP/Kub/Flag.md",
+    "XMCO/TP/Kub/Configmap.md",
+    "Write up/Hack The Box/Boxe/Season 9/AirTouch.md",
+    "XMCO/TP/Kub/GitLab.md",
     "Assets/Kubernetes /Fonctionnement/IMG-20260630114323532.png",
     "Assets/Kubernetes /Fonctionnement",
     "Assets/Kubernetes ",
     "Assets/Kubernetes /Fonctionnement/IMG-20260630112741656.png",
-    "Kubernetes /Kubernetes.md",
     "Kubernetes ",
     "Active Directory/Active Directory.md",
     "Active Directory/Command.md",
-    "XMCO/TP/Kub/RCEAAS.md",
     "Write up/Hack The Box/Boxe/Season 9/GiveBack.md",
     "XMCO/TP/Kub/Nmap.md",
     "Assets/XMCO/TP/Kub/LFIAAS",
     "Assets/XMCO/TP/Kub",
     "Assets/XMCO/TP/Kub/LFIAAS/IMG-20260629145303423.png",
     "XMCO/TP/Kub/Kub.md",
-    "Write up/Hack The Box/Boxe/Season 9/AirTouch.md",
     "XMCO/TP/Intrusif/Step 1/Analyse code src.md",
     "Write up/Hack The Box/Boxe/Season 9/Browsed.md",
     "XMCO/Commande Pentest.md",
