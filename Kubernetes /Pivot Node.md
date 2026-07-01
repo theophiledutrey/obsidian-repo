@@ -126,6 +126,19 @@ find / -name "*.kubeconfig" 2>/dev/null
 cat /root/.kube/config 2>/dev/null
 ```
 
+### 8. Post Exploitation 
+
+Si on peut récupérer tous les token des SA présent dans le Node, on peut utiliser cette commande pour lister le droit de chacun
+
+```bash
+kubectl auth can-i --list --token=$(cat chemin-token) --server=https://<IP-PRIVE-API-KUB>:443 --certificate-authority=/ca.crt
+```
+
+Pour récupérer l'IP privé de l'API kub, faire la commande suivante:
+```bash
+kubectl get svc kubernetes -n default -o jsonpath='{.spec.clusterIP}' 
+```
+
 ## Schéma
 
 ```mermaid
