@@ -77,16 +77,14 @@
     "//XMCO/XMCO/Intrusif/XMCO/Intrusif/Step2",
     "//Active Directory/Active Directory/Edges",
     "//Active Directory/Active Directory/privesc",
-    "//Write up",
     "//Write up/Write up/Hack The Box/Write up/Hack The Box/Boxe/Write up/Hack The Box/Boxe/Season 10",
     "//Write up/Write up/Hack The Box/Write up/Hack The Box/Boxe/Write up/Hack The Box/Boxe/Season 9",
     "//ECE",
-    "//XMCO",
     "//XMCO/XMCO/TP",
     "//Pentest Tools",
     "//Kubernetes ",
-    "//XMCO/XMCO/TP/XMCO/TP/AD",
-    "//XMCO/XMCO/TP/XMCO/TP/Kub"
+    "//XMCO/XMCO/TP/XMCO/TP/Kub",
+    "//XMCO"
   ],
   "expandFolderOnClick": true,
   "spacesFolder": "Tags",
