@@ -133,14 +133,6 @@ kubectl auth whoami
 - `system:masters` est un **groupe hardcodé dans le code du kube-apiserver**, bindé implicitement à `cluster-admin`. Ce n'est pas un ClusterRoleBinding listable, RBAC est **bypassé entièrement** (pas juste "autorisé par une règle très permissive").
 - Contrairement à un token de SA (révocable en supprimant le Secret), un cert client compromis n'est révocable qu'en régénérant le CA du cluster ou via CRL — quasi jamais fait en pratique.
 
-### Vecteurs d'accès à documenter (c'est ça la vraie vuln, pas le fichier en soi)
-
-- Pod avec `hostPath` mount sur `/var/lib/rancher/rke2/server/cred/` ou `/etc/kubernetes/`
-- Container `privileged: true` + `nsenter` vers le namespace du host
-- DaemonSet malveillant déployé sur un node control-plane
-- Accès SSH/shell direct au node control-plane (souvent via une autre vuln : RCE, creds réutilisés, etc.)
-- kubelet API exposée sans auth permettant `exec` dans un pod avec accès hostPath
-
 ### Vérif rapide des droits obtenus
 
 ```bash
