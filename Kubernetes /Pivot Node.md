@@ -113,6 +113,8 @@ cat /etc/kubernetes/admin.conf
 
 # k3s
 cat /etc/rancher/k3s/k3s.yaml
+
+
 ```
 
 ### Exploitation
