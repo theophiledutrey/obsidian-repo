@@ -182,7 +182,7 @@ devops         gitlabkub-gitaly-0                                        1/1    
 devops         gitlabkub-gitlab-exporter-75c9976686-vzz8r                1/1     Running            0               7h17m
 devops         gitlabkub-gitlab-runner-754dbb8489-ksl29                  1/1     Running            1 (7h15m ago)   7h17m
 devops         gitlabkub-gitlab-shell-779f48dcf5-s4gg4                   1/1     Running            0               7h17m
-devops         gitlabkub-gitlab-shell-779f48dcf5-t5dm7                   1/1     Running            0               7h17m
+devops         gitlabkub-gitlab-shell-779f48dcf5-t5dm7                   1/1  p   Running            0               7h17m
 devops         gitlabkub-kas-6d64f8845b-lwvzx                            1/1     Running            0               7h17m
 devops         gitlabkub-kas-6d64f8845b-vhx52                            1/1     Running            0               7h17m
 devops         gitlabkub-migrations-1-4pcwb                              0/1     Completed          0               7h17m
